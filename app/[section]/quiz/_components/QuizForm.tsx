@@ -25,43 +25,49 @@ const formSchema = z.object({
 
 type QuizFormValues = z.infer<typeof formSchema>;
 
-// pretty sure you could use next.js pages with this project if you used zustand to preserve state. like i wrote earlier, you reset all state when the current section route is no longer the current section route
-
 const QuizForm = () => {
   const section = useParams().section as string;
   const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
-  const [answered, setAnswered] = useState<string[]>([]);
-  const [answeredCorrectly, setAnsweredCorrectly] = useState<number>(0);
-  const incorrectAnswerId = answered[answered.length - 1];
+  const [answersRecord, setAnswersRecord] = useState<string[][]>([]);
+  const [submittedAnswer, setSubmittedAnswered] = useState<string | null>(null);
+  const [progress, setProgress] = useState<number>(0);
   const [qNum, setQNum] = useState(0);
   const question = questions[qNum];
   const { answers } = question;
-  // const question = quizData[section].questions.find((i) => i.image);
-  const isAnsweredCorrectly = answered[qNum] === question.correctAnswer;
-  const isAnsweredIncorrectly = answered[qNum] && answered[qNum] !== question.correctAnswer;
-  const isAtCurrentQuestion = answered.length === qNum;
+  const isAnsweredCorrectly = submittedAnswer === question.correctAnswer;
+  const isAnsweredIncorrectly = submittedAnswer && submittedAnswer !== question.correctAnswer;
+  const isAtCurrentQuestion = answersRecord.length === qNum;
   const form = useForm<QuizFormValues>({
     resolver: zodResolver(formSchema),
   });
   const formAnswer = form.watch('answer');
   const handleChangeAnswer = (val: string) => {
     form.setValue('answer', val);
+    setSubmittedAnswered(null);
   };
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    const newAnswered = [...answered];
-    if (newAnswered[qNum]) {
-      newAnswered[qNum] = values.answer;
+    setSubmittedAnswered(values.answer);
+    const newAnswersRecord = [...answersRecord];
+    if (newAnswersRecord[qNum]) {
+      newAnswersRecord[qNum] = [...newAnswersRecord[qNum], values.answer];
     } else {
-      newAnswered.push(values.answer);
+      newAnswersRecord.push([values.answer]);
     }
-    setAnswered(newAnswered);
+    setAnswersRecord(newAnswersRecord);
     if (question.correctAnswer === values.answer) {
-      setAnsweredCorrectly(answeredCorrectly + 1);
+      setProgress(progress + 1);
     }
   };
   useEffect(() => {
-    form.reset({ answer: answered[qNum] || undefined });
-  }, [qNum, form, answered]);
+    if (answersRecord[qNum]?.find((a) => a === question.correctAnswer)) {
+      form.reset({ answer: question.correctAnswer });
+      setSubmittedAnswered(question.correctAnswer || null);
+    } else {
+      form.reset({ answer: undefined });
+      setSubmittedAnswered(null);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [qNum]);
   return (
     <div className="flex flex-col">
       <div className="flex justify-between">
@@ -85,19 +91,19 @@ const QuizForm = () => {
         </div>
         <div className="flex gap-1">
           <span className={cn({
-            'text-green-700': answeredCorrectly,
+            'text-green-700': progress,
           })}
           >
-            {`${answeredCorrectly}/${questions.length}`}
+            {`${progress}/${questions.length}`}
           </span>
           <span>
             passed
           </span>
           <span className={cn({
-            'text-green-700': answeredCorrectly,
+            'text-green-700': progress,
           })}
           >
-            {`(${(100 * (answeredCorrectly / questions.length)).toFixed(2)}%)`}
+            {`(${(100 * (progress / questions.length)).toFixed(2)}%)`}
           </span>
         </div>
       </div>
@@ -126,7 +132,7 @@ const QuizForm = () => {
                       className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-2 border-2 border-black/5 px-4 py-10 cursor-pointer group' }), {
                         'bg-accent': answer.id === formAnswer,
                         'bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
-                        'bg-red-100': answer.id === incorrectAnswerId && isAnsweredIncorrectly && !isAnsweredCorrectly,
+                        'bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
                       })}
                       key={answer.id}
                     >
@@ -170,7 +176,6 @@ const QuizForm = () => {
         </form>
       </Form>
     </div>
-
   );
 };
 
