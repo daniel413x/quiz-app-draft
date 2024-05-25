@@ -1,37 +1,58 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { create } from 'zustand';
+import { timerStartMs } from '../_consts';
 
-interface UseTimerToggleStore {
-  handleStart: () => void;
+interface UseTimerStore {
+  timer: number;
+  setTimer: (ms: number) => void;
+  timerId: NodeJS.Timeout | undefined;
+  setTimerId: (id: NodeJS.Timeout) => void;
+  handleStartTimer: () => void;
+  handleStopTimer: () => void;
   isStarted: boolean;
+  resetTimer: () => void;
 }
 
-const useTimerToggle = create<UseTimerToggleStore>((set) => ({
-  handleStart: () => set({ isStarted: true }),
+const useTimer = create<UseTimerStore>((set, get) => ({
+  timer: timerStartMs,
+  setTimer: (ms: number) => set({ timer: ms }),
+  timerId: undefined,
+  setTimerId: (id: NodeJS.Timeout) => set({ timerId: id }),
+  handleStartTimer: () => set({ isStarted: true }),
+  handleStopTimer: () => set({ isStarted: false }),
   isStarted: false,
+  resetTimer: () => {
+    clearTimeout(get().timerId);
+    set({ timerId: undefined, timer: timerStartMs, isStarted: false });
+  },
 }));
 
-const useTimer = () => {
+const useTimerOnInterval = () => {
+  const timerToggle = useTimer();
   const {
     isStarted,
-  } = useTimerToggle();
-  const [timer, setTimer] = useState<number>(6000);
+    setTimer,
+    timer,
+    setTimerId,
+    timerId,
+  } = timerToggle;
   useEffect(() => {
     if (isStarted) {
       const increment = () => {
         setTimer(timer - 1);
       };
       const id = setInterval(increment, 1000);
+      setTimerId(id);
       return () => {
-        clearInterval(id);
+        clearInterval(timerId);
       };
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isStarted, timer]);
-  return { timer };
+  return { isStarted: timerToggle.isStarted, timer: timerToggle.timer };
 };
 
 export {
-  useTimerToggle,
   useTimer,
+  useTimerOnInterval,
 };

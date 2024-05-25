@@ -1,22 +1,30 @@
 'use client';
 
-import { formatTime } from '@/lib/utils';
-import { useTimer, useTimerToggle } from './_hooks/useTimer';
+import { useEffect } from 'react';
+import { useTimer, useTimerOnInterval } from './_hooks/useTimer';
 import QuizForm from './_components/QuizForm';
 import QuizPrompt from './_components/QuizPrompt';
+import Timer from './_components/Timer';
+import useUserQuizData from './_hooks/useUserQuizData';
 
 const QuizPage = () => {
   const {
+    isStarted,
     timer,
+  } = useTimerOnInterval();
+  const {
+    resetTimer,
   } = useTimer();
   const {
-    isStarted,
-  } = useTimerToggle();
+    setAnswersRecord,
+  } = useUserQuizData();
+  useEffect(() => {
+    setAnswersRecord([]);
+    resetTimer();
+  }, []);
   return (
-    <main className="flexflex-col items-center justify-between">
-      <div className="flex text-3xl text-stone-500">
-        {formatTime(timer)}
-      </div>
+    <main>
+      <Timer timer={timer} />
       {!isStarted ? <QuizPrompt /> : null}
       {!isStarted ? null : <QuizForm />}
     </main>

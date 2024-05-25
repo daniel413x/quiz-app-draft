@@ -4,11 +4,11 @@ import {
   Form, FormDescription, FormField, FormItem,
 } from '@/components/ui/common/shadcn/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/common/shadcn/radio-group';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import quizData, { Question } from '@/lib/quiz-data';
 import { Button, buttonVariants } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
@@ -18,6 +18,8 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { shuffleQuestions } from './_utils';
+import useUserQuizData from '../_hooks/useUserQuizData';
+import { useTimer } from '../_hooks/useTimer';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -26,11 +28,18 @@ const formSchema = z.object({
 type QuizFormValues = z.infer<typeof formSchema>;
 
 const QuizForm = () => {
-  const section = useParams().section as string;
-  const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
-  const [answersRecord, setAnswersRecord] = useState<string[][]>([]);
+  const {
+    handleStopTimer,
+    timer,
+  } = useTimer();
+  const {
+    answersRecord, setAnswersRecord, setFinalTime, setQuestions,
+  } = useUserQuizData();
   const [submittedAnswer, setSubmittedAnswered] = useState<string | null>(null);
   const [progress, setProgress] = useState<number>(0);
+  const router = useRouter();
+  const section = useParams().section as string;
+  const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
   const [qNum, setQNum] = useState(0);
   const question = questions[qNum];
   const { answers } = question;
@@ -58,6 +67,18 @@ const QuizForm = () => {
       setProgress(progress + 1);
     }
   };
+  const handlePressNextButton = () => {
+    if (!isAnsweredCorrectly) {
+      return null;
+    }
+    if (qNum === questions.length - 1) {
+      setFinalTime(timer);
+      setQuestions(questions);
+      router.push(`/${section}/quiz/results`);
+      return;
+    }
+    setQNum(qNum + 1);
+  };
   useEffect(() => {
     if (answersRecord[qNum]?.find((a) => a === question.correctAnswer)) {
       form.reset({ answer: question.correctAnswer });
@@ -68,6 +89,13 @@ const QuizForm = () => {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qNum]);
+  const isFirstRender = useRef(true);
+  useEffect(() => () => {
+    if (!isFirstRender.current) {
+      handleStopTimer();
+    }
+    isFirstRender.current = false;
+  }, []);
   return (
     <div className="flex flex-col">
       <div className="flex justify-between">
@@ -126,18 +154,26 @@ const QuizForm = () => {
             control={form.control}
             render={() => (
               <FormItem>
-                <RadioGroup className="p-4" onValueChange={(val) => handleChangeAnswer(val)} value="">
+                <RadioGroup
+                  className={cn('p-4', {
+                    'bg-green-50/50': isAnsweredCorrectly,
+                    'bg-red-50': isAnsweredIncorrectly,
+                  })}
+                  onValueChange={(val) => handleChangeAnswer(val)}
+                  value=""
+                >
                   {answers.map((answer) => (
                     <div
-                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-2 border-2 border-black/5 px-4 py-10 cursor-pointer group' }), {
+                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 px-4 py-10 cursor-pointer group' }), {
                         'bg-accent': answer.id === formAnswer,
                         'bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
                         'bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
+                        'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
                       })}
                       key={answer.id}
                     >
                       <RadioGroupItem checked={answer.id === form.watch('answer')} value={answer.id} id={answer.id} />
-                      <Label className="w-full py-9 cursor-pointer" htmlFor={answer.id}>{answer.answer}</Label>
+                      <Label className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]" htmlFor={answer.id}>{answer.answer}</Label>
                     </div>
                   ))}
                 </RadioGroup>
@@ -148,9 +184,8 @@ const QuizForm = () => {
             <Button
               className={cn({
                 'pointer-events-none opacity-25': (isAtCurrentQuestion && !isAnsweredCorrectly) && !form.watch().answer,
-                'hover:bg-green-100/50': isAnsweredCorrectly,
               })}
-              onClick={() => (!isAnsweredCorrectly ? null : setQNum(qNum + 1))}
+              onClick={handlePressNextButton}
               type={!isAnsweredCorrectly ? 'submit' : 'button'}
               variant="outline"
             >

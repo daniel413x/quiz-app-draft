@@ -22,6 +22,7 @@ const rootLayout = ({
   <html lang="en">
     <body className={cn(inter.className, 'flex flex-col')}>
       <Navbar />
+      {/* useRootLayoutClasses */}
       <div className="p-8 md:p-24 lg:p-32">
         {children}
       </div>

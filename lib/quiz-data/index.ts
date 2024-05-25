@@ -117,9 +117,8 @@ const quizData: QuizData = {
           { id: '0', answer: 'After coming to a full stop and ensuring the way is clear' },
           { id: '1', answer: 'Only from a one-way street onto another one-way street' },
           { id: '2', answer: 'When directed by a police officer' },
-          { id: '3', answer: 'Both B and C' },
         ],
-        correctAnswer: '3',
+        correctAnswer: '2',
       },
       {
         question: 'If you are under age 18, you must participate in the Gradual Rearing of Adult Drivers (GRAD) program without exception.',
@@ -438,15 +437,15 @@ const quizData: QuizData = {
         ],
         correctAnswer: '2',
       },
-      {
-        question: 'When on a short entrance to an interstate where there is no merge area or lane:',
-        answers: [
-          { id: '0', answer: 'Enter the far right traffic lane and speed up to the flow of traffic' },
-          { id: '1', answer: 'Use the shoulder of the main road to get up to the speed of the traffic' },
-          { id: '2', answer: 'Speed up on the entrance only after you have found a gap in traffic' },
-        ],
-        correctAnswer: '0',
-      },
+      // {
+      //   question: 'When on a short entrance to an interstate where there is no merge area or lane:',
+      //   answers: [
+      //     { id: '0', answer: 'Enter the far right traffic lane and speed up to the flow of traffic' },
+      //     { id: '1', answer: 'Use the shoulder of the main road to get up to the speed of the traffic' },
+      //     { id: '2', answer: 'Speed up on the entrance only after you have found a gap in traffic' },
+      //   ],
+      //   correctAnswer: '0',
+      // },
       {
         question: 'You have a valid District of Columbia learner permit. To drive a vehicle you must:',
         answers: [
@@ -623,6 +622,16 @@ const quizData: QuizData = {
           { id: '3', answer: '30mph' },
         ],
         correctAnswer: '3',
+      },
+      {
+        question: 'Shape of a traffic sign can tell you about the sign\'s message: A diamond sign means:',
+        answers: [
+          { id: '0', answer: 'Regulatory or Guide' },
+          { id: '1', answer: 'Warning' },
+          { id: '2', answer: 'Stop' },
+          { id: '3', answer: 'Yield' },
+        ],
+        correctAnswer: '1',
       },
       {
         question: 'Shape of a traffic sign can tell you about the sign\'s message: A diamond sign means:',
@@ -858,17 +867,6 @@ const quizData: QuizData = {
         correctAnswer: '2',
       },
       {
-        question: 'To which gear does N refer?',
-        answers: [
-          { id: '0', answer: 'Park' },
-          { id: '1', answer: 'Drive' },
-          { id: '2', answer: 'Neutral' },
-          { id: '3', answer: 'Reverse' },
-        ],
-        image: neutralGear,
-        correctAnswer: '2',
-      },
-      {
         question: 'The sign means',
         answers: [
           { id: '0', answer: 'The same as a stop sign' },
@@ -882,8 +880,9 @@ const quizData: QuizData = {
         question: 'The sign means',
         answers: [
           { id: '0', answer: 'Yield sign ahead' },
-          { id: '1', answer: 'Keep right' },
+          { id: '1', answer: 'The road pivots right sharply' },
           { id: '2', answer: 'Construction ahead' },
+          { id: '3', answer: 'Stay in the right lane' },
         ],
         image: chevronRight,
         correctAnswer: '1',
@@ -892,11 +891,12 @@ const quizData: QuizData = {
         question: 'The sign means',
         answers: [
           { id: '0', answer: 'Yield sign ahead' },
-          { id: '1', answer: 'Keep right' },
+          { id: '1', answer: 'The road pivots left sharply' },
           { id: '2', answer: 'Keep left' },
+          { id: '3', answer: 'Stay in the left lane' },
         ],
         image: chevronLeft,
-        correctAnswer: '2',
+        correctAnswer: '1',
       },
       {
         question: 'The sign means',
@@ -921,7 +921,7 @@ const quizData: QuizData = {
       {
         question: 'The sign means',
         answers: [
-          { id: '0', answer: 'Expected rain in the locality measured in inches' },
+          { id: '0', answer: 'Expected rain measured in feet and inches' },
           { id: '1', answer: 'Maximum clearance of a vehicle' },
           { id: '2', answer: 'An incoming change in surface elevation' },
           { id: '3', answer: 'Recommended wheel size' },
@@ -935,7 +935,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'Vehicles will turn onto your lane' },
           { id: '1', answer: 'Curving road' },
           { id: '2', answer: 'Added lane' },
-          { id: '3', answer: 'Traffic must merge ahead' },
+          { id: '3', answer: 'Traffic will merge ahead' },
         ],
         image: merge,
         correctAnswer: '3',
@@ -944,7 +944,7 @@ const quizData: QuizData = {
         question: 'The sign means',
         answers: [
           { id: '0', answer: 'Passing other vehicles will be possible' },
-          { id: '1', answer: 'Traffic must merge ahead' },
+          { id: '1', answer: 'Traffic will merge ahead' },
           { id: '2', answer: 'Added lane' },
           { id: '3', answer: 'Vehicles will turn onto your lane' },
         ],
@@ -1032,7 +1032,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'Before a highway' },
           { id: '1', answer: 'Before a school zone' },
           { id: '2', answer: 'At a roundabout' },
-          { id: '3', answer: 'At a T-intersection' },
+          { id: '3', answer: 'Before a T-intersection' },
         ],
         image: leftOrRightSign,
         correctAnswer: '3',

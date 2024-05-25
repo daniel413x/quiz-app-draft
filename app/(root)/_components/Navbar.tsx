@@ -11,7 +11,7 @@ const Navbar = () => (
         width={96}
         height={40}
       />
-      <Link href="/learners-permit" className="text-sm uppercase">
+      <Link href="/learners-permit" className="text-sm">
         Learner&apos;s Permit
       </Link>
       <div className="flex gap-1.5 text-black/50">
