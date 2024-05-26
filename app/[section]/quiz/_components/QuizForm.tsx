@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import quizData, { Question } from '@/lib/quiz-data';
 import { Button, buttonVariants } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
@@ -17,6 +17,7 @@ import {
   ArrowLeft, ArrowRight, CheckCircle, XCircle,
 } from 'lucide-react';
 import Image from 'next/image';
+import qs from 'query-string';
 import { shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
@@ -35,30 +36,27 @@ const QuizForm = () => {
   const {
     answersRecord, setAnswersRecord, setFinalTime, setQuestions,
   } = useUserQuizData();
-  const [submittedAnswer, setSubmittedAnswered] = useState<string | null>(null);
+  const [submittedAnswer, setSubmittedAnswer] = useState<string | null>(null);
   const [progress, setProgress] = useState<number>(0);
   const router = useRouter();
   const section = useParams().section as string;
   const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
-  const [qNum, setQNum] = useState(0);
-  const question = questions[qNum];
+  const searchParams = useSearchParams();
+  const page = Number(searchParams.get('page')) || 0;
+  const question = questions[page];
   const { answers } = question;
   const isAnsweredCorrectly = submittedAnswer === question.correctAnswer;
   const isAnsweredIncorrectly = submittedAnswer && submittedAnswer !== question.correctAnswer;
-  const isAtCurrentQuestion = answersRecord.length === qNum;
+  const isAtCurrentQuestion = answersRecord.length === page;
   const form = useForm<QuizFormValues>({
     resolver: zodResolver(formSchema),
   });
   const formAnswer = form.watch('answer');
-  const handleChangeAnswer = (val: string) => {
-    form.setValue('answer', val);
-    setSubmittedAnswered(null);
-  };
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    setSubmittedAnswered(values.answer);
+    setSubmittedAnswer(values.answer);
     const newAnswersRecord = [...answersRecord];
-    if (newAnswersRecord[qNum]) {
-      newAnswersRecord[qNum] = [...newAnswersRecord[qNum], values.answer];
+    if (newAnswersRecord[page]) {
+      newAnswersRecord[page] = [...newAnswersRecord[page], values.answer];
     } else {
       newAnswersRecord.push([values.answer]);
     }
@@ -67,28 +65,40 @@ const QuizForm = () => {
       setProgress(progress + 1);
     }
   };
+  const getNextUrl = (p: number) => qs.stringifyUrl({
+    url: window.location.href,
+    query: {
+      page: p,
+    },
+  });
+  const handleChangeAnswer = (val: string) => {
+    form.setValue('answer', val);
+    setSubmittedAnswer(null);
+  };
   const handlePressNextButton = () => {
     if (!isAnsweredCorrectly) {
       return null;
     }
-    if (qNum === questions.length - 1) {
+    if (page === questions.length - 1) {
       setFinalTime(timer);
       setQuestions(questions);
       router.push(`/${section}/quiz/results`);
       return;
     }
-    setQNum(qNum + 1);
+    router.push(getNextUrl(page + 1));
+    form.reset({ answer: undefined });
+    setSubmittedAnswer(null);
   };
   useEffect(() => {
-    if (answersRecord[qNum]?.find((a) => a === question.correctAnswer)) {
+    if (answersRecord[page]?.find((a) => a === question.correctAnswer)) {
       form.reset({ answer: question.correctAnswer });
-      setSubmittedAnswered(question.correctAnswer || null);
+      setSubmittedAnswer(question.correctAnswer || null);
     } else {
       form.reset({ answer: undefined });
-      setSubmittedAnswered(null);
+      setSubmittedAnswer(null);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [qNum]);
+  }, [page]);
   const isFirstRender = useRef(true);
   useEffect(() => () => {
     if (!isFirstRender.current) {
@@ -96,7 +106,7 @@ const QuizForm = () => {
     }
     isFirstRender.current = false;
   }, []);
-  return (
+  return page > answersRecord.length ? null : (
     <div className="flex flex-col">
       <div className="flex justify-between">
         <div className={cn('flex h-[24px]', {
@@ -201,9 +211,9 @@ const QuizForm = () => {
             </Button>
             <Button
               className={cn({
-                'pointer-events-none opacity-25': qNum === 0,
+                'pointer-events-none opacity-25': page === 0,
               })}
-              onClick={() => setQNum(qNum - 1)}
+              onClick={() => router.push(getNextUrl(page - 1))}
               type="button"
               variant="outline"
             >

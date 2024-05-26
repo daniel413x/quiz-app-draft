@@ -525,14 +525,6 @@ const quizData: QuizData = {
         correctAnswer: '3',
       },
       {
-        question: 'Highways and roads freeze before ramps and bridges:',
-        answers: [
-          { id: '0', answer: 'True' },
-          { id: '1', answer: 'False' },
-        ],
-        correctAnswer: '1',
-      },
-      {
         question: 'If a traffic signal light is green and a police officer signals you to stop, you should:',
         answers: [
           { id: '0', answer: 'Obey the traffic officer' },
