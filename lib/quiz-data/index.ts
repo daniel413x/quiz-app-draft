@@ -14,6 +14,9 @@ import slipperyRoad from '@/public/slippery-road-sign.png';
 import turnsAndCurvesSign from '@/public/turns-and-curves-signs.png';
 import turnsAndCurvesSignTwo from '@/public/turns-and-curves-signs-2.png';
 import leftOrRightSign from '@/public/left-or-right-sign.jpg';
+import leftTurnHandSignal from '@/public/left-turn-hand-signal.jpg';
+import parkingOnHill from '@/public/parking-on-hill.jpg';
+import constructionSignTriangle from '@/public/construction-sign-triangle.jpg';
 
 import leftCurveAhead from '@/public/left-curve-ahead.png';
 import trafficSignalAhead from '@/public/traffic-signal-ahead.png';
@@ -178,15 +181,24 @@ const quizData: QuizData = {
         ],
         correctAnswer: '1',
       },
+      // {
+      //   question: 'When merging onto a highway from a short entrance ramp, you should:',
+      //   answers: [
+      //     { id: '0', answer: 'Wait until you find a gap in traffic to speed up' },
+      //     { id: '1', answer: 'Enter the far right lane immediately' },
+      //     { id: '2', answer: 'Use the shoulder to gain speed' },
+      //     { id: '3', answer: 'Merge at a slower speed and then accelerate' },
+      //   ],
+      //   correctAnswer: '0',
+      // },
       {
-        question: 'When merging onto a highway from a short entrance ramp, you should:',
+        question: 'When on a short entrance to an interstate where there is no merge area or lane:',
         answers: [
-          { id: '0', answer: 'Wait until you find a gap in traffic to speed up' },
-          { id: '1', answer: 'Enter the far right lane immediately' },
-          { id: '2', answer: 'Use the shoulder to gain speed' },
-          { id: '3', answer: 'Merge at a slower speed and then accelerate' },
+          { id: '0', answer: 'Enter the far right traffic lane and speed up to the flow of traffic' },
+          { id: '1', answer: 'Use the shoulder of the main road to get up to the speed of the traffic' },
+          { id: '2', answer: 'Speed up on the entrance only after you have found a gap in traffic' },
         ],
-        correctAnswer: '0',
+        correctAnswer: '2',
       },
       {
         question: 'With a valid learner\'s permit in the District of Columbia, you are allowed to drive:',
@@ -621,7 +633,7 @@ const quizData: QuizData = {
           { id: '2', answer: '40mph' },
           { id: '3', answer: '30mph' },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
       {
         question: 'Shape of a traffic sign can tell you about the sign\'s message: A diamond sign means:',
@@ -1035,6 +1047,122 @@ const quizData: QuizData = {
           { id: '3', answer: 'Before a T-intersection' },
         ],
         image: leftOrRightSign,
+        correctAnswer: '3',
+      },
+      {
+        question: 'A flashing red traffic light at an intersection means the same as a:',
+        answers: [
+          { id: '0', answer: 'Light is about to turn green' },
+          { id: '1', answer: 'Stop sign' },
+          { id: '2', answer: 'Stop light' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'If you are ______________, you must operate under the Gradual Rearing of Adult Drivers (GRAD) Program.',
+        answers: [
+          { id: '0', answer: 'Over the age of 21' },
+          { id: '1', answer: 'Under the age of 16' },
+          { id: '2', answer: 'Under the age of 21' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'This hand signal means',
+        answers: [
+          { id: '0', answer: 'Left turn' },
+          { id: '1', answer: 'Right turn' },
+          { id: '2', answer: 'Stopping or slowing down' },
+        ],
+        image: leftTurnHandSignal,
+        correctAnswer: '0',
+      },
+      {
+        question: 'You must make a full stop',
+        answers: [
+          { id: '0', answer: 'When there is a stop sign', order: 0 },
+          { id: '1', answer: 'When emerging from an alley, driveway or private road into a street', order: 1 },
+          { id: '2', answer: 'When there is a flashing red traffic light', order: 2 },
+          { id: '3', answer: 'All of the above', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'When parking on a hill, you must turn your front wheels away from the curb and bring the near side front wheel into contact with the curb',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'The panel in the middle depicts',
+        answers: [
+          { id: '0', answer: 'How to park up hill with a curb' },
+          { id: '1', answer: 'How to park down hill with a curb' },
+          { id: '2', answer: 'How to park up hill with no curb' },
+          { id: '3', answer: 'How to park down hill with no curb' },
+        ],
+        image: parkingOnHill,
+        correctAnswer: '0',
+      },
+      {
+        question: 'The panel on the left depicts',
+        answers: [
+          { id: '0', answer: 'How to park up hill with a curb' },
+          { id: '1', answer: 'How to park down hill with a curb' },
+          { id: '2', answer: 'How to park up hill with no curb' },
+          { id: '3', answer: 'How to park down hill with no curb' },
+        ],
+        image: parkingOnHill,
+        correctAnswer: '1',
+      },
+      {
+        question: 'The panel on the right depicts',
+        answers: [
+          { id: '0', answer: 'How to park up hill with a curb' },
+          { id: '1', answer: 'How to park down hill with a curb' },
+          { id: '2', answer: 'How to park up hill with no curb' },
+          { id: '3', answer: 'How to park down hill with no curb' },
+        ],
+        image: parkingOnHill,
+        correctAnswer: '2',
+      },
+      {
+        question: 'U-turns are allowed at intersections controlled by a traffic light unless there is a sign prohibiting the U-turn',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How close can you park to the entrance of an alley or private driveway?',
+        answers: [
+          { id: '0', answer: '10 feet' },
+          { id: '1', answer: '20 feet' },
+          { id: '2', answer: '5 feet' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Color of roadway signs tell you what kind of information it has to offer: An orange sign means',
+        answers: [
+          { id: '0', answer: 'Stop, yield, do not enter or wrong way' },
+          { id: '1', answer: 'Construction and maintenance work area warning' },
+          { id: '2', answer: 'General warning of what to expect ahead' },
+        ],
+        image: constructionSignTriangle,
+        correctAnswer: '1',
+      },
+      {
+        question: 'While obtaining your DC driver license, you may',
+        answers: [
+          { id: '0', answer: 'Register to vote', order: 0 },
+          { id: '1', answer: 'Register for selective service', order: 1 },
+          { id: '2', answer: 'Choose to become an organ and tissue donor', order: 2 },
+          { id: '3', answer: 'All of the above', order: 3 },
+        ],
         correctAnswer: '3',
       },
     ],

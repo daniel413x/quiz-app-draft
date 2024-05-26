@@ -39,7 +39,7 @@ const useTimerOnInterval = () => {
   useEffect(() => {
     if (isStarted) {
       const increment = () => {
-        setTimer(timer - 1);
+        setTimer(timer - 1000);
       };
       const id = setInterval(increment, 1000);
       setTimerId(id);

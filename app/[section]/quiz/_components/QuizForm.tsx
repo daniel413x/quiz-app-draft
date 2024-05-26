@@ -173,7 +173,12 @@ const QuizForm = () => {
                       key={answer.id}
                     >
                       <RadioGroupItem checked={answer.id === form.watch('answer')} value={answer.id} id={answer.id} />
-                      <Label className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]" htmlFor={answer.id}>{answer.answer}</Label>
+                      <Label
+                        className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]"
+                        htmlFor={answer.id}
+                      >
+                        {answer.answer}
+                      </Label>
                     </div>
                   ))}
                 </RadioGroup>
