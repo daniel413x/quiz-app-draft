@@ -14,7 +14,7 @@ const QuizPrompt = () => {
     handleStartTimer,
   } = useTimer();
   const handlePressStart = () => {
-    router.replace(`/${section}/quiz?page=0`);
+    router.replace(`/${section}/quiz?qNum=0`);
     handleStartTimer();
   };
   return (

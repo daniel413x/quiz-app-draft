@@ -42,12 +42,12 @@ const QuizForm = () => {
   const section = useParams().section as string;
   const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
   const searchParams = useSearchParams();
-  const page = Number(searchParams.get('page')) || 0;
-  const question = questions[page];
+  const qNum = Number(searchParams.get('qNum')) || 0;
+  const question = questions[qNum];
   const { answers } = question;
   const isAnsweredCorrectly = submittedAnswer === question.correctAnswer;
   const isAnsweredIncorrectly = submittedAnswer && submittedAnswer !== question.correctAnswer;
-  const isAtCurrentQuestion = answersRecord.length === page;
+  const isAtCurrentQuestion = answersRecord.length === qNum;
   const form = useForm<QuizFormValues>({
     resolver: zodResolver(formSchema),
   });
@@ -55,8 +55,8 @@ const QuizForm = () => {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     setSubmittedAnswer(values.answer);
     const newAnswersRecord = [...answersRecord];
-    if (newAnswersRecord[page]) {
-      newAnswersRecord[page] = [...newAnswersRecord[page], values.answer];
+    if (newAnswersRecord[qNum]) {
+      newAnswersRecord[qNum] = [...newAnswersRecord[qNum], values.answer];
     } else {
       newAnswersRecord.push([values.answer]);
     }
@@ -68,7 +68,7 @@ const QuizForm = () => {
   const getNextUrl = (p: number) => qs.stringifyUrl({
     url: window.location.href,
     query: {
-      page: p,
+      qNum: p,
     },
   });
   const handleChangeAnswer = (val: string) => {
@@ -79,18 +79,18 @@ const QuizForm = () => {
     if (!isAnsweredCorrectly) {
       return null;
     }
-    if (page === questions.length - 1) {
+    if (qNum === questions.length - 1) {
       setFinalTime(timer);
       setQuestions(questions);
       router.push(`/${section}/quiz/results`);
       return;
     }
-    router.push(getNextUrl(page + 1));
+    router.push(getNextUrl(qNum + 1));
     form.reset({ answer: undefined });
     setSubmittedAnswer(null);
   };
   useEffect(() => {
-    if (answersRecord[page]?.find((a) => a === question.correctAnswer)) {
+    if (answersRecord[qNum]?.find((a) => a === question.correctAnswer)) {
       form.reset({ answer: question.correctAnswer });
       setSubmittedAnswer(question.correctAnswer || null);
     } else {
@@ -98,7 +98,7 @@ const QuizForm = () => {
       setSubmittedAnswer(null);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [qNum]);
   const isFirstRender = useRef(true);
   useEffect(() => () => {
     if (!isFirstRender.current) {
@@ -106,7 +106,7 @@ const QuizForm = () => {
     }
     isFirstRender.current = false;
   }, []);
-  return page > answersRecord.length ? null : (
+  return qNum > answersRecord.length ? null : (
     <div className="flex flex-col">
       <div className="flex justify-between">
         <div className={cn('flex h-[24px]', {
@@ -211,9 +211,9 @@ const QuizForm = () => {
             </Button>
             <Button
               className={cn({
-                'pointer-events-none opacity-25': page === 0,
+                'pointer-events-none opacity-25': qNum === 0,
               })}
-              onClick={() => router.push(getNextUrl(page - 1))}
+              onClick={() => router.push(getNextUrl(qNum - 1))}
               type="button"
               variant="outline"
             >

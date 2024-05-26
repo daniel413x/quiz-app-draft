@@ -158,7 +158,7 @@ const ResultsPage = () => {
       </div>
       <Link
         href={`/${section}/quiz`}
-        className={buttonVariants({ variant: 'outline', className: 'mt-10 h-[unset]' })}
+        className={buttonVariants({ variant: 'outline', className: 'mt-8 h-[unset]' })}
       >
         <div className="flex items-center px-8 py-12">
           <ChevronLeft className="text-purple-600" />
