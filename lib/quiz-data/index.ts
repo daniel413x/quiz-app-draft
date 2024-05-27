@@ -31,6 +31,7 @@ export type Answer = {
 export type Question = {
   question: string;
   image?: string | StaticImageData;
+  code?: string,
   answers: Answer[];
   correctAnswer: string;
 };
@@ -1156,6 +1157,674 @@ const quizData: QuizData = {
           { id: '3', answer: 'All of the above', order: 3 },
         ],
         correctAnswer: '3',
+      },
+    ],
+  },
+  javascript: {
+    name: 'JavaScript Principles',
+    questions: [
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log([] + []);
+        `,
+        answers: [
+          { id: '0', answer: '""' },
+          { id: '1', answer: '"[]"' },
+          { id: '2', answer: '"[object Object]"' },
+          { id: '3', answer: 'undefined' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following correctly describes the behavior of "let" and "var"?',
+        answers: [
+          { id: '0', answer: '"let" is block-scoped, while "var" is function-scoped' },
+          { id: '1', answer: '"let" is function-scoped, while "var" is block-scoped' },
+          { id: '2', answer: 'Both "let" and "var" are block-scoped' },
+          { id: '3', answer: 'Both "let" and "var" are function-scoped' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a valid way to create an object in JavaScript?',
+        answers: [
+          { id: '0', answer: 'let obj = {};' },
+          { id: '1', answer: 'let obj = Object.create();' },
+          { id: '2', answer: 'let obj = newObject();' },
+          { id: '3', answer: 'let obj = Object.createObject();' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(typeof NaN);
+        `,
+        answers: [
+          { id: '0', answer: '"number"' },
+          { id: '1', answer: '"NaN"' },
+          { id: '2', answer: '"undefined"' },
+          { id: '3', answer: '"object"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the "map" method do in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It creates a new array with the results of calling a function for every array element' },
+          { id: '1', answer: 'It creates a new array with all elements that pass a test implemented by a function' },
+          { id: '2', answer: 'It changes the original array' },
+          { id: '3', answer: 'It returns the first element that passes a test implemented by a function' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about arrow functions?',
+        answers: [
+          { id: '0', answer: 'They do not have their own "this" context' },
+          { id: '1', answer: 'They are always anonymous' },
+          { id: '2', answer: 'They cannot be used as constructors' },
+          { id: '3', answer: 'All of the above', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the purpose of the "Promise" object in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It represents the eventual completion (or failure) of an asynchronous operation and its resulting value' },
+          { id: '1', answer: 'It ensures synchronous code execution' },
+          { id: '2', answer: 'It allows the use of global variables' },
+          { id: '3', answer: 'It delays the execution of code' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following statements is true about "strict mode"?',
+        answers: [
+          { id: '0', answer: 'It helps catch common coding errors and prevents the use of certain unsafe features' },
+          { id: '1', answer: 'It makes JavaScript code run faster' },
+          { id: '2', answer: 'It allows the use of deprecated features' },
+          { id: '3', answer: 'It automatically fixes common bugs in the code' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is not a feature of ES6?',
+        answers: [
+          { id: '0', answer: 'Callback functions' },
+          { id: '1', answer: 'Arrow functions' },
+          { id: '2', answer: 'Template literals' },
+          { id: '3', answer: 'Default parameters' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the main purpose of the "async/await" syntax?',
+        answers: [
+          { id: '0', answer: 'To handle asynchronous code in a synchronous manner' },
+          { id: '1', answer: 'To create new promises' },
+          { id: '2', answer: 'To pause the execution of synchronous code' },
+          { id: '3', answer: 'To declare functions that do not return a value' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(0.1 + 0.2 === 0.3);
+        `,
+        answers: [
+          { id: '0', answer: 'false' },
+          { id: '1', answer: 'true' },
+          { id: '2', answer: 'undefined' },
+          { id: '3', answer: '"0.3"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the difference between "==" and "===" in JavaScript?',
+        answers: [
+          { id: '0', answer: '"==" compares values after type conversion, while "===" compares values without type conversion' },
+          { id: '1', answer: '"==" is used for strict equality, while "===" is used for loose equality' },
+          { id: '2', answer: 'Both are used for strict equality' },
+          { id: '3', answer: 'Both are used for loose equality' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a method for adding properties to all objects created by a constructor?',
+        answers: [
+          { id: '0', answer: 'Constructor.prototype.method' },
+          { id: '1', answer: 'Object.method' },
+          { id: '2', answer: 'Function.method' },
+          { id: '3', answer: 'Object.prototype.method' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(typeof []);
+        `,
+        answers: [
+          { id: '0', answer: '"object"' },
+          { id: '1', answer: '"array"' },
+          { id: '2', answer: '"undefined"' },
+          { id: '3', answer: '"null"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is not a valid way to define a function in JavaScript?',
+        answers: [
+          { id: '0', answer: 'function myFunction() {}' },
+          { id: '1', answer: 'let myFunction = function() {}' },
+          { id: '2', answer: 'let myFunction = new Function()' },
+          { id: '3', answer: 'function:myFunction() {}' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What does the "reduce" method do in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It executes a reducer function on each element of the array, resulting in a single output value' },
+          { id: '1', answer: 'It creates a new array with the results of calling a function for every array element' },
+          { id: '2', answer: 'It filters the elements of an array based on a function' },
+          { id: '3', answer: 'It sorts the elements of an array in place' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes the "event loop" in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It handles asynchronous operations by continuously checking the call stack and the callback queue' },
+          { id: '1', answer: 'It is a way to loop through arrays' },
+          { id: '2', answer: 'It loops through all events attached to the DOM' },
+          { id: '3', answer: 'It is used to handle synchronous code' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the difference between "call" and "apply" methods in JavaScript?',
+        answers: [
+          { id: '0', answer: 'Both methods call a function with a given "this" value, but "apply" accepts arguments as an array' },
+          { id: '1', answer: '"call" binds a function to a given context, while "apply" does not' },
+          { id: '2', answer: '"apply" binds a function to a given context, while "call" does not' },
+          { id: '3', answer: 'Both methods are used to create new functions' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the "Symbol" type in JavaScript?',
+        answers: [
+          { id: '0', answer: 'To create unique identifiers for object properties' },
+          { id: '1', answer: 'To define constants' },
+          { id: '2', answer: 'To represent large numbers' },
+          { id: '3', answer: 'To create functions' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log("5" - 2);
+        `,
+        answers: [
+          { id: '0', answer: '3' },
+          { id: '1', answer: '"52"' },
+          { id: '2', answer: 'NaN' },
+          { id: '3', answer: '"3"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about closures in JavaScript?',
+        answers: [
+          { id: '0', answer: 'A closure is a function combined with its lexical environment' },
+          { id: '1', answer: 'A closure is a function that can be used only once' },
+          { id: '2', answer: 'A closure is a function that has no access to its outer scope' },
+          { id: '3', answer: 'Closures do not exist in JavaScript' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the "use strict" directive in JavaScript?',
+        answers: [
+          { id: '0', answer: 'To enable strict mode, which catches common coding errors and “unsafe” actions' },
+          { id: '1', answer: 'To allow the use of experimental features' },
+          { id: '2', answer: 'To disable deprecated features' },
+          { id: '3', answer: 'To automatically fix common bugs in the code' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which statement best describes "hoisting" in JavaScript?',
+        answers: [
+          { id: '0', answer: 'Variables and function declarations are moved to the top of their scope before code execution' },
+          { id: '1', answer: 'Functions are executed before any other code' },
+          { id: '2', answer: 'Variables and functions are hoisted to the bottom of their scope' },
+          { id: '3', answer: 'Only variables are hoisted to the top of their scope' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In JavaScript, which of the following methods can be used to find the largest number in an array?',
+        answers: [
+          { id: '0', answer: 'Math.max.apply(null, array)' },
+          { id: '1', answer: 'array.reduce(Math.max)' },
+          { id: '2', answer: 'Math.max(array)' },
+          { id: '3', answer: 'array.reduce((a, b) => a > b ? a : b)' },
+          { id: '4', answer: 'Either Math.max.apply(null, array) OR array.reduce((a, b) => a > b ? a : b)', order: 4 },
+        ],
+        correctAnswer: '4',
+      },
+      {
+        question: 'What does the "this" keyword refer to in a method of an object?',
+        answers: [
+          { id: '0', answer: 'The object itself' },
+          { id: '1', answer: 'The global object' },
+          { id: '2', answer: 'The closest parent object' },
+          { id: '3', answer: 'The window object' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a feature of JavaScript’s prototype-based inheritance?',
+        answers: [
+          { id: '0', answer: 'Objects can inherit properties from other objects' },
+          { id: '1', answer: 'Classes can inherit properties from other classes' },
+          { id: '2', answer: 'Properties can only be inherited from a prototype object' },
+          { id: '3', answer: 'Inheritance is not supported in JavaScript' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is not a JavaScript data type?',
+        answers: [
+          { id: '0', answer: 'Float' },
+          { id: '1', answer: 'Undefined' },
+          { id: '2', answer: 'Symbol' },
+          { id: '3', answer: 'Boolean' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(typeof null);
+        `,
+        answers: [
+          { id: '0', answer: '"object"' },
+          { id: '1', answer: '"null"' },
+          { id: '2', answer: '"undefined"' },
+          { id: '3', answer: '"boolean"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about the "bind" method in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It creates a new function with a specified "this" value and arguments' },
+          { id: '1', answer: 'It permanently sets the "this" value of a function' },
+          { id: '2', answer: 'It prevents the function from being called' },
+          { id: '3', answer: 'It creates a copy of an object' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the "async" keyword do when added to a function?',
+        answers: [
+          { id: '0', answer: 'It allows the function to return a promise' },
+          { id: '1', answer: 'It allows the function to run synchronously' },
+          { id: '2', answer: 'It prevents the function from returning a value' },
+          { id: '3', answer: 'It ensures the function runs immediately' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(1 + "1");
+        `,
+        answers: [
+          { id: '0', answer: '"2"' },
+          { id: '1', answer: '"11"' },
+          { id: '2', answer: '2' },
+          { id: '3', answer: '"3"' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which method is used to remove the last element from an array?',
+        answers: [
+          { id: '0', answer: 'shift' },
+          { id: '1', answer: 'pop' },
+          { id: '2', answer: 'slice' },
+          { id: '3', answer: 'splice' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the value of "this" in a regular function (not an arrow function) in the global scope?',
+        answers: [
+          { id: '0', answer: 'null' },
+          { id: '1', answer: 'undefined' },
+          { id: '2', answer: 'window' },
+          { id: '3', answer: 'global' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which operator is used to check for both value and type equality?',
+        answers: [
+          { id: '0', answer: '==' },
+          { id: '1', answer: '===' },
+          { id: '2', answer: '!=' },
+          { id: '3', answer: '!==' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(typeof function(){});
+        `,
+        answers: [
+          { id: '0', answer: '"function"' },
+          { id: '1', answer: '"object"' },
+          { id: '2', answer: '"undefined"' },
+          { id: '3', answer: '"null"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is not a valid loop construct in JavaScript?',
+        answers: [
+          { id: '0', answer: 'for' },
+          { id: '1', answer: 'while' },
+          { id: '2', answer: 'do-while' },
+          { id: '3', answer: 'for-while' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What does the "filter" method do in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It creates a new array with all elements that pass the test implemented by the provided function' },
+          { id: '1', answer: 'It modifies the original array' },
+          { id: '2', answer: 'It removes elements from the original array' },
+          { id: '3', answer: 'It sorts the elements of an array' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(0 == "0");
+        `,
+        answers: [
+          { id: '0', answer: 'false' },
+          { id: '1', answer: 'true' },
+          { id: '2', answer: 'undefined' },
+          { id: '3', answer: 'null' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a way to create a new object that inherits from a prototype?',
+        answers: [
+          { id: '0', answer: 'Object.create()' },
+          { id: '1', answer: 'new Object()' },
+          { id: '2', answer: 'Object()' },
+          { id: '3', answer: 'Object.assign()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log(typeof NaN);
+        `,
+        answers: [
+          { id: '0', answer: '"number"' },
+          { id: '1', answer: '"NaN"' },
+          { id: '2', answer: '"undefined"' },
+          { id: '3', answer: '"object"' },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: 'What is a closure in JavaScript?',
+        answers: [
+          { id: '0', answer: 'A function having access to the parent scope, even after the parent function has closed' },
+          { id: '1', answer: 'A function that returns another function' },
+          { id: '2', answer: 'A function that can be called only once' },
+          { id: '3', answer: 'A function that has no parameters' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following scenarios best demonstrates a closure?',
+        answers: [
+          { id: '0', answer: 'A function accessing a global variable' },
+          { id: '1', answer: 'A function that returns another function with access to the outer function’s variables' },
+          { id: '2', answer: 'A function that calls itself' },
+          { id: '3', answer: 'A function with no parameters' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Why are closures useful in JavaScript?',
+        answers: [
+          { id: '0', answer: 'They allow a function to have "private" variables' },
+          { id: '1', answer: 'They enable synchronous execution of code' },
+          { id: '2', answer: 'They help in defining global variables' },
+          { id: '3', answer: 'They prevent code execution' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In which of the following cases is a closure created?',
+        answers: [
+          { id: '0', answer: 'When a function is defined inside another function and the inner function is returned or assigned to a variable' },
+          { id: '1', answer: 'When a function calls another function' },
+          { id: '2', answer: 'When a function has no return statement' },
+          { id: '3', answer: 'When a function is called with the "new" keyword' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      function outer() {
+        let counter = 0;
+        return function() {
+          counter++;
+          return counter;
+        };
+      }
+      const increment = outer();
+      console.log(increment());
+      console.log(increment());
+        `,
+        answers: [
+          { id: '0', answer: '1 and 1' },
+          { id: '1', answer: '1 and 2' },
+          { id: '2', answer: '2 and 2' },
+          { id: '3', answer: '0 and 1' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is true about null?',
+        answers: [
+          { id: '0', answer: 'It is a boolean' },
+          { id: '1', answer: 'It is passed in to certain methods to signify where no context or prototype is necessary' },
+          { id: '2', answer: 'Variables assigned "null" do not occupy memory' },
+          { id: '3', answer: 'Null is the same as "undefined"' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary role of the event loop in JavaScript?',
+        answers: [
+          { id: '0', answer: 'To handle asynchronous operations by continuously checking the call stack and the callback queue' },
+          { id: '1', answer: 'To manage memory allocation' },
+          { id: '2', answer: 'To execute synchronous code' },
+          { id: '3', answer: 'To optimize code execution' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log('start');
+      setTimeout(() => {
+        console.log('middle');
+      }, 0);
+      console.log('end');
+        `,
+        answers: [
+          { id: '0', answer: 'start, end, middle' },
+          { id: '1', answer: 'start, middle, end' },
+          { id: '2', answer: 'middle, start, end' },
+          { id: '3', answer: 'end, start, middle' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which statement accurately describes the "call stack" in the context of the event loop?',
+        answers: [
+          { id: '0', answer: 'The call stack is a data structure that keeps track of function calls in the order they need to be executed' },
+          { id: '1', answer: 'The call stack is a queue where functions are stored before they are executed' },
+          { id: '2', answer: 'The call stack manages asynchronous tasks' },
+          { id: '3', answer: 'The call stack is responsible for memory allocation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      setTimeout(() => {
+        console.log('timeout');
+      }, 0);
+      Promise.resolve().then(() => {
+        console.log('promise');
+      });
+      console.log('log');
+        `,
+        answers: [
+          { id: '0', answer: 'log, promise, timeout' },
+          { id: '1', answer: 'timeout, promise, log' },
+          { id: '2', answer: 'promise, log, timeout' },
+          { id: '3', answer: 'log, timeout, promise' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes the "callback queue" in JavaScript?',
+        answers: [
+          { id: '0', answer: 'A queue where callback functions are held until the call stack is empty' },
+          { id: '1', answer: 'A queue for synchronous functions waiting to be executed' },
+          { id: '2', answer: 'A queue for functions that are being executed' },
+          { id: '3', answer: 'A queue that manages memory allocation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log('first');
+      setTimeout(() => console.log('second'), 0);
+      console.log('third');
+        `,
+        answers: [
+          { id: '0', answer: 'first, third, second' },
+          { id: '1', answer: 'first, second, third' },
+          { id: '2', answer: 'second, first, third' },
+          { id: '3', answer: 'third, first, second' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In the context of the event loop, what is a "task" in JavaScript?',
+        answers: [
+          { id: '0', answer: 'A piece of code that runs to completion before other code can run' },
+          { id: '1', answer: 'A function that is waiting to be executed' },
+          { id: '2', answer: 'A variable that holds data' },
+          { id: '3', answer: 'An event that triggers a function call' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log('script start');
+
+      setTimeout(function() {
+        console.log('setTimeout');
+      }, 0);
+
+      Promise.resolve().then(function() {
+        console.log('promise1');
+      }).then(function() {
+        console.log('promise2');
+      });
+
+      console.log('script end');
+        `,
+        answers: [
+          { id: '0', answer: 'script start, script end, promise1, promise2, setTimeout' },
+          { id: '1', answer: 'script start, promise1, script end, promise2, setTimeout' },
+          { id: '2', answer: 'script start, promise1, promise2, script end, setTimeout' },
+          { id: '3', answer: 'script start, setTimeout, script end, promise1, promise2' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does JavaScript handle blocking operations?',
+        answers: [
+          { id: '0', answer: 'JavaScript uses the event loop to handle blocking operations asynchronously' },
+          { id: '1', answer: 'JavaScript pauses execution until the operation is complete' },
+          { id: '2', answer: 'JavaScript uses multiple threads to handle blocking operations' },
+          { id: '3', answer: 'JavaScript does not handle blocking operations' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      function task(message) {
+        console.log(message);
+      }
+
+      console.log('Start');
+
+      setTimeout(task, 0, 'Timeout task');
+
+      Promise.resolve().then(() => task('Promise task'));
+
+      console.log('End');
+        `,
+        answers: [
+          { id: '0', answer: 'Start, End, Promise task, Timeout task' },
+          { id: '1', answer: 'Start, Timeout task, End, Promise task' },
+          { id: '2', answer: 'Promise task, Start, End, Timeout task' },
+          { id: '3', answer: 'Start, End, Timeout task, Promise task' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following statements is true about microtasks in JavaScript?',
+        answers: [
+          { id: '0', answer: 'Microtasks are tasks that are executed immediately after the currently executing script' },
+          { id: '1', answer: 'Microtasks are tasks that are executed before any other tasks' },
+          { id: '2', answer: 'Microtasks are the same as macrotasks' },
+          { id: '3', answer: 'Microtasks are executed in parallel with the current script' },
+        ],
+        correctAnswer: '0',
       },
     ],
   },

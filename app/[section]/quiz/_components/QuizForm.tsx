@@ -21,6 +21,7 @@ import qs from 'query-string';
 import { shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
+import Progress from './Progress';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -127,23 +128,7 @@ const QuizForm = () => {
             </>
           ) : null}
         </div>
-        <div className="flex gap-1">
-          <span className={cn({
-            'text-green-700': progress,
-          })}
-          >
-            {`${progress}/${questions.length}`}
-          </span>
-          <span>
-            passed
-          </span>
-          <span className={cn({
-            'text-green-700': progress,
-          })}
-          >
-            {`(${(100 * (progress / questions.length)).toFixed(2)}%)`}
-          </span>
-        </div>
+        <Progress progress={progress} questions={questions} />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -158,6 +143,13 @@ const QuizForm = () => {
               />
             ) : null}
           </FormDescription>
+          {question.code ? (
+            <code className="text-sm text-emerald-800">
+              <pre className="text-sm bg-stone-50 text-emerald-800 mt-4 mb-1">
+                {question.code}
+              </pre>
+            </code>
+          ) : null}
           <FormField
             key="answer"
             name="answer"
@@ -176,9 +168,10 @@ const QuizForm = () => {
                     <div
                       className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 px-4 py-10 cursor-pointer group' }), {
                         'bg-accent': answer.id === formAnswer,
-                        'bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
+                        'bg-green-100 hover:bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
                         'bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
                         'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
+                        'pointer-events-none': isAnsweredCorrectly,
                       })}
                       key={answer.id}
                     >
