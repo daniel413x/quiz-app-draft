@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Navbar = () => (
   <div className=" p-8 shadow-md bg-white ">
     <div className="flex container justify-between items-center">
-      <Link href="/">
+      <Link href="/" className="shrink-0">
         <Image
           src="/navbar-logo.png"
           alt="Logo"

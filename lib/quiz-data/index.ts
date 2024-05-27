@@ -1526,6 +1526,17 @@ const quizData: QuizData = {
         correctAnswer: '1',
       },
       {
+        question: 'The statement below checks for value and type equality',
+        code: `
+      console.log(0 == "0");
+        `,
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
         question: 'What will be the output of the following code?',
         code: `
       console.log(typeof function(){});
@@ -1580,6 +1591,25 @@ const quizData: QuizData = {
           { id: '3', answer: 'Object.assign()' },
         ],
         correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a way to create a new object that is a shallow copy of another object?',
+        answers: [
+          { id: '0', answer: 'Object.create()' },
+          { id: '1', answer: 'new Object()' },
+          { id: '2', answer: 'Object()' },
+          { id: '3', answer: 'Object.assign()' },
+        ],
+        correctAnswer: '3',
+      },
+      // https://chatgpt.com/c/024d9b70-5afe-41e5-89ae-b410fb3f6bc5
+      {
+        question: 'When you use Object.assign() to create a shallow copy of another object, the original object\'s fields cannot be mutated',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
       },
       {
         question: 'What will be the output of the following code?',
@@ -1656,6 +1686,28 @@ const quizData: QuizData = {
           { id: '3', answer: '0 and 1' },
         ],
         correctAnswer: '1',
+      },
+      {
+        question: 'What principle is best illustrated by the code below?',
+        code: `
+      function outer() {
+        let counter = 0;
+        return function() {
+          counter++;
+          return counter;
+        };
+      }
+      const increment = outer();
+      console.log(increment());
+      console.log(increment());
+        `,
+        answers: [
+          { id: '0', answer: 'React Context' },
+          { id: '1', answer: 'Inheritance' },
+          { id: '2', answer: 'React functional components' },
+          { id: '3', answer: 'Closure' },
+        ],
+        correctAnswer: '3',
       },
       {
         question: 'Which of the following is true about null?',
@@ -1819,10 +1871,481 @@ const quizData: QuizData = {
       {
         question: 'Which of the following statements is true about microtasks in JavaScript?',
         answers: [
-          { id: '0', answer: 'Microtasks are tasks that are executed immediately after the currently executing script' },
-          { id: '1', answer: 'Microtasks are tasks that are executed before any other tasks' },
-          { id: '2', answer: 'Microtasks are the same as macrotasks' },
-          { id: '3', answer: 'Microtasks are executed in parallel with the current script' },
+          { id: '0', answer: 'Microtasks are tasks that are executed before any macrotasks' },
+          { id: '1', answer: 'Microtasks are tasks that are executed immediately after the currently executing script' },
+          { id: '2', answer: 'Microtasks are executed in parallel with the current script' },
+          { id: '3', answer: 'Microtasks are the same as macrotasks' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following statements is true about setTimeout?',
+        answers: [
+          { id: '0', answer: 'setTimeout is a microtask' },
+          { id: '1', answer: 'setTimeout is a macrotask' },
+          { id: '2', answer: 'setTimeout is executed immediately after the currently executing script ' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log('script start');
+      setTimeout(function() {
+        console.log('setTimeout');
+      }, 0);
+      Promise.resolve().then(function() {
+        console.log('promise1');
+      }).then(function() {
+        console.log('promise2');
+      }).then(function() {
+        console.log('promise3');
+      }).then(function() {
+        console.log('promise4');
+      });
+      console.log('script end');
+        `,
+        answers: [
+          { id: '0', answer: 'script start, script end, promise1, promise2, promise3, promise4' },
+          { id: '1', answer: 'script start, promise1, promise2, promise3, promise4, script end' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary purpose of React?',
+        answers: [
+          { id: '0', answer: 'To build user interfaces' },
+          { id: '1', answer: 'To manage server-side operations' },
+          { id: '2', answer: 'To handle database connections' },
+          { id: '3', answer: 'To create mobile applications' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a React component?',
+        answers: [
+          { id: '0', answer: 'A JavaScript function or class that optionally accepts inputs and returns a React element' },
+          { id: '1', answer: 'A function that directly manipulates the DOM' },
+          { id: '2', answer: 'A method to handle state management' },
+          { id: '3', answer: 'A styling library for React applications' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the use of the "useState" hook in React?',
+        answers: [
+          { id: '0', answer: 'To add state to functional components' },
+          { id: '1', answer: 'To manage side effects in functional components' },
+          { id: '2', answer: 'To replace class components' },
+          { id: '3', answer: 'To handle event listeners' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about props in React?',
+        answers: [
+          { id: '0', answer: 'Props are read-only' },
+          { id: '1', answer: 'Props are used to manage state' },
+          { id: '2', answer: 'Props cannot be passed to class components' },
+          { id: '3', answer: 'Props are mutable' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the "useEffect" hook in React?',
+        answers: [
+          { id: '0', answer: 'To perform side effects in functional components' },
+          { id: '1', answer: 'To handle form submissions' },
+          { id: '2', answer: 'To manage component state' },
+          { id: '3', answer: 'To create a new context' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      function Counter() {
+        const [count, setCount] = React.useState(0);
+        return (
+          <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+              Click me
+            </button>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Counter />, document.getElementById('root'));
+        `,
+        answers: [
+          { id: '0', answer: 'A button that increments the count each time it is clicked' },
+          { id: '1', answer: 'A button that does nothing' },
+          { id: '2', answer: 'An error, because setCount is not a function' },
+          { id: '3', answer: 'A paragraph that displays the count but no button' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the virtual DOM in React?',
+        answers: [
+          { id: '0', answer: 'An in-memory representation of the real DOM elements generated by React components' },
+          { id: '1', answer: 'The original DOM' },
+          { id: '2', answer: 'A way to directly manipulate the real DOM' },
+          { id: '3', answer: 'A special DOM for managing forms' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How do you create a context in React?',
+        answers: [
+          { id: '0', answer: 'By using React.createContext()' },
+          { id: '1', answer: 'By using React.useContext()' },
+          { id: '2', answer: 'By using React.createContextProvider()' },
+          { id: '3', answer: 'By using React.createProvider()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of "keys" in React?',
+        answers: [
+          { id: '0', answer: 'To help React identify which items have changed, are added, or are removed' },
+          { id: '1', answer: 'To uniquely identify components' },
+          { id: '2', answer: 'To bind event handlers to components' },
+          { id: '3', answer: 'To handle form input' },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: 'What is the Virtual DOM in the context of JavaScript libraries like React?',
+        answers: [
+          { id: '0', answer: 'A lightweight copy of the actual DOM that allows for efficient updates and rendering' },
+          { id: '1', answer: 'A separate HTML document that mirrors the actual DOM' },
+          { id: '2', answer: 'A part of the browser\'s rendering engine' },
+          { id: '3', answer: 'A debugging tool for developers' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does the Virtual DOM improve performance?',
+        answers: [
+          { id: '0', answer: 'By minimizing direct manipulations to the actual DOM, thus reducing the number of costly DOM operations' },
+          { id: '1', answer: 'By using Web Workers to offload calculations to background threads' },
+          { id: '2', answer: 'By pre-rendering all possible states of the UI' },
+          { id: '3', answer: 'By eliminating the need for server-side rendering' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code when using React and the Virtual DOM?',
+        code: `
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = { count: 0 };
+        }
+
+        increment() {
+          this.setState({ count: this.state.count + 1 });
+        }
+
+        render() {
+          return (
+            <div>
+              <p>{this.state.count}</p>
+              <button onClick={() => this.increment()}>Increment</button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+        `,
+        answers: [
+          { id: '0', answer: 'The count will increase by 1 every time the button is clicked, updating the displayed number' },
+          { id: '1', answer: 'The count will remain 0 even when the button is clicked' },
+          { id: '2', answer: 'The count will increase by 2 every time the button is clicked' },
+          { id: '3', answer: 'The button will not respond to clicks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes how the Virtual DOM updates the actual DOM?',
+        answers: [
+          { id: '0', answer: 'It calculates the difference between the new Virtual DOM and the previous one, then updates only the changed parts in the actual DOM' },
+          { id: '1', answer: 'It completely replaces the actual DOM with the new Virtual DOM' },
+          { id: '2', answer: 'It updates the actual DOM only when the browser is idle' },
+          { id: '3', answer: 'It does not update the actual DOM directly but sends update instructions to the server' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What problem does the Virtual DOM help solve in web development?',
+        answers: [
+          { id: '0', answer: 'It helps solve performance issues by reducing the number of direct DOM manipulations' },
+          { id: '1', answer: 'It eliminates the need for responsive design' },
+          { id: '2', answer: 'It allows for multi-threaded JavaScript execution' },
+          { id: '3', answer: 'It ensures backward compatibility with older browsers' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true?',
+        answers: [
+          { id: '0', answer: 'There is no need to call "call," "apply," or "bind" on functions that do not use "this"' },
+          { id: '1', answer: 'In React, keys are used for debugging purposes' },
+          { id: '2', answer: 'The job queue is executed before the task queue' },
+          { id: '3', answer: 'It ensures backward compatibility with older browsers' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true?',
+        answers: [
+          { id: '0', answer: 'There is no need to call "call," "apply," or "bind" on functions that use "this"' },
+          { id: '1', answer: 'Calling a function creates a new stack frame for that function\'s use' },
+          { id: '2', answer: 'The macrotask queue has priority over the microtask queue' },
+          { id: '3', answer: 'React guarantees backward compatibility with older browsers' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the output of the code below?',
+        code: `
+      var promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('promise win')
+        }, 4000)
+      })
+      promise.then((result) => {
+          console.log(result)
+      })
+      setTimeout(() => {
+          console.log('setTimeout win')
+      }, 4000)
+        `,
+        answers: [
+          { id: '0', answer: 'setTimeout win, promise win' },
+          { id: '1', answer: 'Promise<pending>, setTimeout win' },
+          { id: '2', answer: 'promise win, setTimeout win' },
+          { id: '3', answer: 'setTimeout win, Promise<pending>' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A Promise is a',
+        answers: [
+          { id: '0', answer: 'Macrotask' },
+          { id: '1', answer: 'Synchronous job' },
+          { id: '2', answer: 'Microtask' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'setTimeout is a',
+        answers: [
+          { id: '0', answer: 'Macrotask' },
+          { id: '1', answer: 'Synchronous job' },
+          { id: '2', answer: 'Microtask' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the Virtual DOM in the context of JavaScript libraries like React?',
+        answers: [
+          { id: '0', answer: 'A lightweight copy of the actual DOM that allows for efficient updates and rendering' },
+          { id: '1', answer: 'A separate HTML document that mirrors the actual DOM' },
+          { id: '2', answer: 'A part of the browser\'s rendering engine' },
+          { id: '3', answer: 'A debugging tool for developers' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does the Virtual DOM improve performance?',
+        answers: [
+          { id: '0', answer: 'By minimizing direct manipulations to the actual DOM, thus reducing the number of costly DOM operations' },
+          { id: '1', answer: 'By using Web Workers to offload calculations to background threads' },
+          { id: '2', answer: 'By pre-rendering all possible states of the UI' },
+          { id: '3', answer: 'By eliminating the need for server-side rendering' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code when using React and the Virtual DOM?',
+        code: `
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = { count: 0 };
+        }
+
+        increment() {
+          this.setState({ count: this.state.count + 1 });
+        }
+
+        render() {
+          return (
+            <div>
+              <p>{this.state.count}</p>
+              <button onClick={() => this.increment()}>Increment</button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+        `,
+        answers: [
+          { id: '0', answer: 'The count will increase by 1 every time the button is clicked, updating the displayed number' },
+          { id: '1', answer: 'The count will remain 0 even when the button is clicked' },
+          { id: '2', answer: 'The count will increase by 2 every time the button is clicked' },
+          { id: '3', answer: 'The button will not respond to clicks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes how the Virtual DOM updates the actual DOM?',
+        answers: [
+          { id: '0', answer: 'It calculates the difference between the new Virtual DOM and the previous one, then updates only the changed parts in the actual DOM' },
+          { id: '1', answer: 'It completely replaces the actual DOM with the new Virtual DOM' },
+          { id: '2', answer: 'It updates the actual DOM only when the browser is idle' },
+          { id: '3', answer: 'It does not update the actual DOM directly but sends update instructions to the server' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What problem does the Virtual DOM help solve in web development?',
+        answers: [
+          { id: '0', answer: 'It helps solve performance issues by reducing the number of direct DOM manipulations' },
+          { id: '1', answer: 'It eliminates the need for responsive design' },
+          { id: '2', answer: 'It allows for multi-threaded JavaScript execution' },
+          { id: '3', answer: 'It ensures backward compatibility with older browsers' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary difference between the Job Queue and the Task Queue in JavaScript?',
+        answers: [
+          { id: '0', answer: 'The Job Queue handles microtasks, while the Task Queue handles macrotasks' },
+          { id: '1', answer: 'The Job Queue handles tasks scheduled with setTimeout, while the Task Queue handles promises' },
+          { id: '2', answer: 'The Task Queue has higher priority over the Job Queue' },
+          { id: '3', answer: 'The Job Queue is for synchronous tasks, and the Task Queue is for asynchronous tasks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which type of tasks are placed in the Job Queue?',
+        answers: [
+          { id: '0', answer: 'Microtasks such as promises and process.nextTick' },
+          { id: '1', answer: 'Tasks scheduled with setTimeout' },
+          { id: '2', answer: 'Tasks scheduled with setInterval' },
+          { id: '3', answer: 'Event handler callbacks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which type of tasks are placed in the Task Queue?',
+        answers: [
+          { id: '0', answer: 'Macrotasks such as setTimeout and setInterval callbacks' },
+          { id: '1', answer: 'Microtasks such as promises' },
+          { id: '2', answer: 'Synchronous code' },
+          { id: '3', answer: 'Immediate code execution' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log('start');
+      
+      setTimeout(() => {
+        console.log('setTimeout');
+      }, 0);
+      
+      Promise.resolve().then(() => {
+        console.log('promise');
+      });
+      
+      console.log('end');
+        `,
+        answers: [
+          { id: '0', answer: 'start, end, promise, setTimeout' },
+          { id: '1', answer: 'start, promise, end, setTimeout' },
+          { id: '2', answer: 'start, setTimeout, promise, end' },
+          { id: '3', answer: 'start, end, setTimeout, promise' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why are promises executed before setTimeout callbacks when scheduled to run at the same time?',
+        answers: [
+          { id: '0', answer: 'Because promises are placed in the Job Queue, which has higher priority over the Task Queue' },
+          { id: '1', answer: 'Because setTimeout callbacks have a built-in delay' },
+          { id: '2', answer: 'Because promises run synchronously' },
+          { id: '3', answer: 'Because setTimeout is deprecated' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In the context of the event loop, what happens after the call stack is empty?',
+        answers: [
+          { id: '0', answer: 'The event loop first processes all tasks in the Job Queue' },
+          { id: '1', answer: 'The event loop processes all tasks in the Task Queue' },
+          { id: '2', answer: 'The event loop stops' },
+          { id: '3', answer: 'The event loop processes synchronous code' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What kind of tasks are added to the Job Queue in Node.js?',
+        answers: [
+          { id: '0', answer: 'Tasks scheduled with process.nextTick' },
+          { id: '1', answer: 'setTimeout callbacks' },
+          { id: '2', answer: 'setInterval callbacks' },
+          { id: '3', answer: 'Event handler callbacks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the Job Queue in JavaScript?',
+        answers: [
+          { id: '0', answer: 'To handle microtasks like promises and process.nextTick' },
+          { id: '1', answer: 'To handle macrotasks like setTimeout' },
+          { id: '2', answer: 'To manage synchronous code execution' },
+          { id: '3', answer: 'To handle network requests' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following statements is true?',
+        answers: [
+          { id: '0', answer: 'Microtasks are executed before the next macrotask' },
+          { id: '1', answer: 'Macrotasks are executed before the next microtask' },
+          { id: '2', answer: 'Microtasks and macrotasks are executed in the same order' },
+          { id: '3', answer: 'Microtasks are executed only after all macrotasks are done' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      console.log('A');
+      setTimeout(() => {
+        console.log('B');
+      }, 0);
+      Promise.resolve().then(() => {
+        console.log('C');
+      }).then(() => {
+        console.log('D');
+      });
+      console.log('E');
+        `,
+        answers: [
+          { id: '0', answer: 'A, E, C, D, B' },
+          { id: '1', answer: 'A, C, D, E, B' },
+          { id: '2', answer: 'A, B, C, D, E' },
+          { id: '3', answer: 'A, E, B, C, D' },
         ],
         correctAnswer: '0',
       },

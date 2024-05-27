@@ -14,6 +14,7 @@ import Timer from '../_components/Timer';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
 import { timerStartMs } from '../_consts';
+import Code from '../_components/Code';
 
 const ResultsPage = () => {
   const section = useParams().section;
@@ -130,6 +131,9 @@ const ResultsPage = () => {
                     {!q.image ? null : (
                       <Image src={q.image} width={200} height={200} alt="" />
                     )}
+                    {q.code ? (
+                      <Code code={q.code} />
+                    ) : null}
                     <div className="flex flex-col gap-2">
                       {q.answers.map((a) => (
                         <div className="flex relative gap-4" key={a.answer}>
@@ -144,7 +148,7 @@ const ResultsPage = () => {
                           })}
                           >
                             {a.answer}
-                            {answersRecord[i].includes(a.id) && a.id === q.correctAnswer ? <CheckCircle /> : null}
+                            {answersRecord[i].includes(a.id) && a.id === q.correctAnswer ? <CheckCircle className="shrink-0" /> : null}
                           </div>
                         </div>
                       ))}

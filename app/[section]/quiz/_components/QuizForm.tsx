@@ -22,6 +22,7 @@ import { shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
 import Progress from './Progress';
+import Code from './Code';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -144,11 +145,7 @@ const QuizForm = () => {
             ) : null}
           </FormDescription>
           {question.code ? (
-            <code className="text-sm text-emerald-800">
-              <pre className="text-sm bg-stone-50 text-emerald-800 mt-4 mb-1">
-                {question.code}
-              </pre>
-            </code>
+            <Code code={question.code} />
           ) : null}
           <FormField
             key="answer"
