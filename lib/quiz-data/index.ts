@@ -2349,6 +2349,309 @@ const quizData: QuizData = {
         ],
         correctAnswer: '0',
       },
+      {
+        question: 'What is the call stack in JavaScript?',
+        answers: [
+          { id: '0', answer: 'A stack data structure that keeps track of function calls' },
+          { id: '1', answer: 'A queue for handling asynchronous callbacks' },
+          { id: '2', answer: 'A memory heap for dynamic allocation' },
+          { id: '3', answer: 'A set of APIs for manipulating the DOM' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes how the call stack operates?',
+        answers: [
+          { id: '0', answer: 'LIFO (Last In, First Out)' },
+          { id: '1', answer: 'FIFO (First In, First Out)' },
+          { id: '2', answer: 'Round-robin scheduling' },
+          { id: '3', answer: 'Random access' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What happens when a function is called in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It is pushed onto the call stack' },
+          { id: '1', answer: 'It is pushed onto the callback queue' },
+          { id: '2', answer: 'It is added to the job queue' },
+          { id: '3', answer: 'It is executed immediately, bypassing the stack' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+        function first() {
+          console.log('first');
+        }
+        function second() {
+          first();
+          console.log('second');
+        }
+        second();
+        `,
+        answers: [
+          { id: '0', answer: 'first, second' },
+          { id: '1', answer: 'second, first' },
+          { id: '2', answer: 'first, first, second' },
+          { id: '3', answer: 'second, first, second' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will happen if a function calls itself recursively without an exit condition?',
+        answers: [
+          { id: '0', answer: 'A stack overflow error will occur' },
+          { id: '1', answer: 'The function will execute indefinitely' },
+          { id: '2', answer: 'The browser will crash' },
+          { id: '3', answer: 'Nothing, the function will handle recursion internally' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about the call stack in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It only tracks the current function calls in execution' },
+          { id: '1', answer: 'It handles asynchronous events and callbacks' },
+          { id: '2', answer: 'It manages memory allocation' },
+          { id: '3', answer: 'It executes microtasks before macrotasks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the call stack do when a function returns a value?',
+        answers: [
+          { id: '0', answer: 'It pops the function off the stack' },
+          { id: '1', answer: 'It pushes the return value onto the stack' },
+          { id: '2', answer: 'It moves the function to the callback queue' },
+          { id: '3', answer: 'It restarts the function execution' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does the call stack handle nested function calls?',
+        answers: [
+          { id: '0', answer: 'It pushes each nested function call onto the stack' },
+          { id: '1', answer: 'It creates a separate stack for each function' },
+          { id: '2', answer: 'It executes them in parallel' },
+          { id: '3', answer: 'It ignores nested function calls' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the maximum size of the call stack in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It depends on the implementation and available memory' },
+          { id: '1', answer: 'There is no limit' },
+          { id: '2', answer: '1024 function calls' },
+          { id: '3', answer: '64KB' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+        function a() {
+          b();
+          console.log('a');
+        }
+        function b() {
+          console.log('b');
+        }
+        a();
+        `,
+        answers: [
+          { id: '0', answer: 'b, a' },
+          { id: '1', answer: 'a, b' },
+          { id: '2', answer: 'b, b, a' },
+          { id: '3', answer: 'a, a, b' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'The terms "callback queue" and "task queue" are interchangeable',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'The terms "callback queue" and "call stack" are interchangeable',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'The terms "event loop" and "call stack" are interchangeable',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is Just-In-Time (JIT) compilation?',
+        answers: [
+          { id: '0', answer: 'A technique where code is compiled during execution rather than before execution' },
+          { id: '1', answer: 'A method of compiling code ahead of time before execution' },
+          { id: '2', answer: 'A process of interpreting code without any compilation' },
+          { id: '3', answer: 'A technique used only in statically-typed languages' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a key benefit of JIT compilation?',
+        answers: [
+          { id: '0', answer: 'Improved runtime performance' },
+          { id: '1', answer: 'Simplified debugging process' },
+          { id: '2', answer: 'Reduced memory usage' },
+          { id: '3', answer: 'Faster initial startup time' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which JavaScript engine is known for using JIT compilation?',
+        answers: [
+          { id: '0', answer: 'V8' },
+          { id: '1', answer: 'Nashorn' },
+          { id: '2', answer: 'Chakra' },
+          { id: '3', answer: 'SpiderMonkey' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary difference between JIT compilation and AOT (Ahead-Of-Time) compilation?',
+        answers: [
+          { id: '0', answer: 'JIT compilation happens during execution, while AOT compilation happens before execution' },
+          { id: '1', answer: 'AOT compilation is slower than JIT compilation' },
+          { id: '2', answer: 'JIT compilation is used only in interpreted languages' },
+          { id: '3', answer: 'AOT compilation does not produce machine code' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a disadvantage of JIT compilation?',
+        answers: [
+          { id: '0', answer: 'Potential for increased startup time' },
+          { id: '1', answer: 'Lower runtime performance' },
+          { id: '2', answer: 'Increased memory usage' },
+          { id: '3', answer: 'Difficulty in cross-platform compatibility' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What role does the JIT compiler play in the performance of modern JavaScript applications?',
+        answers: [
+          { id: '0', answer: 'It optimizes code execution by compiling hot code paths at runtime' },
+          { id: '1', answer: 'It interprets JavaScript code line-by-line' },
+          { id: '2', answer: 'It only compiles code ahead of time before execution' },
+          { id: '3', answer: 'It handles garbage collection for JavaScript applications' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which phase of execution does JIT compilation occur?',
+        answers: [
+          { id: '0', answer: 'During the execution phase of the application' },
+          { id: '1', answer: 'Before the execution phase of the application' },
+          { id: '2', answer: 'During the initial loading of the application' },
+          { id: '3', answer: 'After the application has finished executing' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does JIT compilation improve performance over traditional interpretation?',
+        answers: [
+          { id: '0', answer: 'By compiling frequently executed code to machine code' },
+          { id: '1', answer: 'By caching interpreted bytecode for reuse' },
+          { id: '2', answer: 'By optimizing source code directly' },
+          { id: '3', answer: 'By reducing the need for memory allocation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is one of the challenges associated with JIT compilation?',
+        answers: [
+          { id: '0', answer: 'Balancing the overhead of compilation with runtime performance gains' },
+          { id: '1', answer: 'Ensuring code compatibility across different browsers' },
+          { id: '2', answer: 'Writing platform-specific machine code' },
+          { id: '3', answer: 'Managing memory allocation and garbage collection' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What technique is often used by JIT compilers to identify hot code paths?',
+        answers: [
+          { id: '0', answer: 'Profiling' },
+          { id: '1', answer: 'Syntax analysis' },
+          { id: '2', answer: 'Static code analysis' },
+          { id: '3', answer: 'Lexical analysis' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does the event loop contribute to JavaScript’s non-blocking paradigm?',
+        answers: [
+          { id: '0', answer: 'By allowing asynchronous operations to be executed without blocking the main thread' },
+          { id: '1', answer: 'By ensuring all tasks are executed synchronously' },
+          { id: '2', answer: 'By prioritizing long-running tasks over short tasks' },
+          { id: '3', answer: 'By directly handling memory management and garbage collection' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes the role of the event loop in JavaScript?',
+        answers: [
+          { id: '0', answer: 'It continuously checks the call stack and task queues to execute code, handle events, and process callbacks' },
+          { id: '1', answer: 'It compiles JavaScript code into machine code at runtime' },
+          { id: '2', answer: 'It manages synchronous function calls only' },
+          { id: '3', answer: 'It executes code in parallel using multiple threads' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code, and how does it demonstrate the non-blocking nature of JavaScript?',
+        code: `
+        console.log('start');
+
+        setTimeout(() => {
+          console.log('setTimeout');
+        }, 0);
+
+        console.log('end');
+        `,
+        answers: [
+          { id: '0', answer: '"start", "end", "setTimeout" - demonstrates that the main thread is not blocked by the asynchronous setTimeout' },
+          { id: '1', answer: '"start", "setTimeout", "end" - demonstrates that the main thread waits for the setTimeout to complete' },
+          { id: '2', answer: '"setTimeout", "start", "end" - demonstrates that asynchronous tasks are executed immediately' },
+          { id: '3', answer: '"end", "start", "setTimeout" - demonstrates that tasks are executed in the order they are scheduled' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does the event loop handle long-running operations to prevent blocking in JavaScript?',
+        answers: [
+          { id: '0', answer: 'By offloading long-running operations to Web APIs or worker threads and processing the results asynchronously' },
+          { id: '1', answer: 'By pausing all other operations until the long-running task is completed' },
+          { id: '2', answer: 'By executing long-running tasks with higher priority' },
+          { id: '3', answer: 'By dividing the long-running task into smaller synchronous tasks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why is non-blocking I/O important in JavaScript, and how does the event loop facilitate this?',
+        answers: [
+          { id: '0', answer: 'Non-blocking I/O allows the application to remain responsive, and the event loop facilitates this by handling I/O operations asynchronously' },
+          { id: '1', answer: 'Non-blocking I/O is not important in JavaScript as it is single-threaded' },
+          { id: '2', answer: 'Non-blocking I/O ensures that all operations are executed in parallel, and the event loop supports this by using multiple threads' },
+          { id: '3', answer: 'Non-blocking I/O is handled synchronously by the event loop to ensure quick execution' },
+        ],
+        correctAnswer: '0',
+      },
     ],
   },
 };
