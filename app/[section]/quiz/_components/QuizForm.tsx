@@ -4,7 +4,9 @@ import {
   Form, FormDescription, FormField, FormItem,
 } from '@/components/ui/common/shadcn/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/common/shadcn/radio-group';
-import { useEffect, useRef, useState } from 'react';
+import {
+  useEffect, useRef, useState,
+} from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -18,6 +20,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import qs from 'query-string';
+import { useEventListener } from 'usehooks-ts';
 import { shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
@@ -91,6 +94,33 @@ const QuizForm = () => {
     form.reset({ answer: undefined });
     setSubmittedAnswer(null);
   };
+  const radioGroupRef = useRef<HTMLDivElement>(null);
+  const firstRadioButtonRef = useRef<HTMLButtonElement>(null);
+  const submitRef = useRef<HTMLButtonElement>(null);
+  useEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      console.log('Enter');
+      submitRef.current?.click();
+    }
+  });
+  useEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!radioGroupRef.current?.contains(document.activeElement)) {
+        console.log('!radioGroupRef.current?.contains(document.activeElement)');
+        firstRadioButtonRef.current?.focus();
+      }
+    }
+  });
+  useEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (!radioGroupRef.current?.contains(document.activeElement)) {
+        console.log('!radioGroupRef.current?.contains(document.activeElement)');
+        firstRadioButtonRef.current?.focus();
+      }
+    }
+  });
   useEffect(() => {
     if (answersRecord[qNum]?.find((a) => a === question.correctAnswer)) {
       form.reset({ answer: question.correctAnswer });
@@ -160,19 +190,25 @@ const QuizForm = () => {
                   })}
                   onValueChange={(val) => handleChangeAnswer(val)}
                   value=""
+                  ref={radioGroupRef}
                 >
-                  {answers.map((answer) => (
+                  {answers.map((answer, i) => (
                     <div
                       className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 px-4 py-10 cursor-pointer group' }), {
                         'bg-accent': answer.id === formAnswer,
                         'bg-green-100 hover:bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
-                        'bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
+                        'bg-red-100 hover:bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
                         'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
                         'pointer-events-none': isAnsweredCorrectly,
                       })}
                       key={answer.id}
                     >
-                      <RadioGroupItem checked={answer.id === form.watch('answer')} value={answer.id} id={answer.id} />
+                      <RadioGroupItem
+                        checked={answer.id === form.watch('answer')}
+                        value={answer.id}
+                        id={answer.id}
+                        ref={i === 0 ? firstRadioButtonRef : undefined}
+                      />
                       <Label
                         className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]"
                         htmlFor={answer.id}
@@ -193,6 +229,7 @@ const QuizForm = () => {
               onClick={handlePressNextButton}
               type={!isAnsweredCorrectly ? 'submit' : 'button'}
               variant="outline"
+              ref={submitRef}
             >
               <span className="flex items-center relative left-2.5">
                 Next

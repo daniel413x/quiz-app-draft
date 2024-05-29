@@ -145,6 +145,7 @@ const ResultsPage = () => {
                           <div className={cn('flex gap-1', {
                             'text-green-700': answersRecord[i].includes(a.id),
                             'text-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
+                            '[word-break:break-all]': a.answer.split(' ')[0].length > 25,
                           })}
                           >
                             {a.answer}

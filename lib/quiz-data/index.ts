@@ -1161,7 +1161,7 @@ const quizData: QuizData = {
     ],
   },
   javascript: {
-    name: 'JavaScript Principles',
+    name: 'JavaScript',
     questions: [
       {
         question: 'What will be the output of the following code?',
@@ -1602,6 +1602,16 @@ const quizData: QuizData = {
         ],
         correctAnswer: '3',
       },
+      {
+        question: 'A shallow copy created with Object.assign()',
+        answers: [
+          { id: '0', answer: 'will have fields that are immutable with regards to the copied object' },
+          { id: '1', answer: 'creates references to fields that are objects or arrays in the copied object' },
+          { id: '2', answer: 'creates references to fields that are objects in the copied object' },
+          { id: '3', answer: 'creates references to fields that are arrays in the copied object' },
+        ],
+        correctAnswer: '1',
+      },
       // https://chatgpt.com/c/024d9b70-5afe-41e5-89ae-b410fb3f6bc5
       {
         question: 'When you use Object.assign() to create a shallow copy of another object, the original object\'s fields cannot be mutated',
@@ -1624,7 +1634,6 @@ const quizData: QuizData = {
         ],
         correctAnswer: '0',
       },
-
       {
         question: 'What is a closure in JavaScript?',
         answers: [
@@ -1636,14 +1645,14 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
-        question: 'Which of the following scenarios best demonstrates a closure?',
+        question: 'Which of the following scenarios best describes closure?',
         answers: [
-          { id: '0', answer: 'A function accessing a global variable' },
+          { id: '0', answer: 'A function that is defined within another function and is a private method of its parent function' },
           { id: '1', answer: 'A function that returns another function with access to the outer function’s variables' },
-          { id: '2', answer: 'A function that calls itself' },
+          { id: '2', answer: 'A function that is defined within another function and has access to the parent function’s variables' },
           { id: '3', answer: 'A function with no parameters' },
         ],
-        correctAnswer: '1',
+        correctAnswer: '2',
       },
       {
         question: 'Why are closures useful in JavaScript?',
@@ -1888,30 +1897,6 @@ const quizData: QuizData = {
         correctAnswer: '1',
       },
       {
-        question: 'What will be the output of the following code?',
-        code: `
-      console.log('script start');
-      setTimeout(function() {
-        console.log('setTimeout');
-      }, 0);
-      Promise.resolve().then(function() {
-        console.log('promise1');
-      }).then(function() {
-        console.log('promise2');
-      }).then(function() {
-        console.log('promise3');
-      }).then(function() {
-        console.log('promise4');
-      });
-      console.log('script end');
-        `,
-        answers: [
-          { id: '0', answer: 'script start, script end, promise1, promise2, promise3, promise4' },
-          { id: '1', answer: 'script start, promise1, promise2, promise3, promise4, script end' },
-        ],
-        correctAnswer: '1',
-      },
-      {
         question: 'What is the primary purpose of React?',
         answers: [
           { id: '0', answer: 'To build user interfaces' },
@@ -2095,8 +2080,8 @@ const quizData: QuizData = {
         answers: [
           { id: '0', answer: 'There is no need to call "call," "apply," or "bind" on functions that do not use "this"' },
           { id: '1', answer: 'In React, keys are used for debugging purposes' },
-          { id: '2', answer: 'The job queue is executed before the task queue' },
-          { id: '3', answer: 'It ensures backward compatibility with older browsers' },
+          { id: '2', answer: 'The task queue is executed before the job queue' },
+          { id: '3', answer: 'React guarantees backwards compatibility with older browsers' },
         ],
         correctAnswer: '0',
       },
@@ -2652,6 +2637,1605 @@ const quizData: QuizData = {
         ],
         correctAnswer: '0',
       },
+      {
+        question: 'Which of the following is not true?',
+        answers: [
+          { id: '0', answer: 'The call stack holds the currently executing script and function calls' },
+          { id: '1', answer: 'Microtasks are executed before any task from the task queue whenever the call stack is empty' },
+          { id: '2', answer: 'When the call stack is empty, the event loop picks the first task from the task queue and pushes it onto the call stack for execution.' },
+          { id: '3', answer: 'I/O callbacks belong to the job queue' },
+        ],
+        correctAnswer: '3',
+      },
+      // {
+      //   question: 'During the initial render of a web application',
+      //   answers: [
+      //     { id: '0', answer: 'Synchronous code (such as initial component renders in React) runs to build the initial UI.' },
+      //     { id: '1', answer: 'Microtasks are executed before any task from the task queue whenever the call stack is empty' },
+      //     { id: '2', answer: 'When the call stack is empty, the event loop picks the first task from the task queue and pushes it onto the call stack for execution.' },
+      //     { id: '3', answer: 'I/O callbacks belong to the job queue' },
+      //   ],
+      //   correctAnswer: '3',
+      // },
+      {
+        question: 'What is true of the increment function in the component below?',
+        code: `
+      function Counter() {
+        const [count, setCount] = useState(0);
+
+        const increment = () => {
+          setCount(count + 1);
+        };
+
+        return (
+          <div>
+            <p>{count}</p>
+            <button onClick={increment}>Increment</button>
+          </div>
+        );
+      }
+        `,
+        answers: [
+          { id: '0', answer: 'It is added to the job queue when called' },
+          { id: '1', answer: 'It is a microtask' },
+          { id: '2', answer: 'It causes state mutation' },
+          { id: '3', answer: 'It causes a synchronous state update' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is true of how React leverages state?',
+        answers: [
+          { id: '0', answer: 'State persists through components being unmounted from the DOM' },
+          { id: '1', answer: 'State does not persist through rerenders' },
+          { id: '2', answer: 'When a component\'s state or props change, React triggers a rerender of that component' },
+          { id: '3', answer: 'When the DOM is mutated directly, React uses the virtual DOM to rerender affected components' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What triggers a rerender in a React component?',
+        answers: [
+          { id: '0', answer: 'Changes in state or props' },
+          { id: '1', answer: 'Changes in the URL' },
+          { id: '2', answer: 'Page refresh' },
+          { id: '3', answer: 'Adding event listeners' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which React hook can be used to prevent unnecessary rerenders of a functional component?',
+        answers: [
+          { id: '0', answer: 'React.memo' },
+          { id: '1', answer: 'useCallback' },
+          { id: '2', answer: 'useState' },
+          { id: '3', answer: 'useEffect' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does React handle multiple state updates in a single event handler to optimize rerenders?',
+        answers: [
+          { id: '0', answer: 'React batches multiple state updates into a single rerender' },
+          { id: '1', answer: 'React processes each state update sequentially with separate rerenders' },
+          { id: '2', answer: 'React ignores multiple state updates' },
+          { id: '3', answer: 'React defers state updates until the component unmounts' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the React hook `useMemo`?',
+        answers: [
+          { id: '0', answer: 'To memoize the result of a calculation and prevent recalculations on rerenders' },
+          { id: '1', answer: 'To handle side effects in functional components' },
+          { id: '2', answer: 'To manage component state' },
+          { id: '3', answer: 'To update the DOM directly' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which lifecycle method in class components is similar to `useEffect` in functional components for handling side effects?',
+        answers: [
+          { id: '0', answer: 'componentDidMount' },
+          { id: '1', answer: 'shouldComponentUpdate' },
+          { id: '2', answer: 'componentWillUnmount' },
+          { id: '3', answer: 'getDerivedStateFromProps' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is not a microtask?',
+        answers: [
+          { id: '0', answer: 'A promise' },
+          { id: '1', answer: 'A callback following the keyword "await"' },
+          { id: '2', answer: 'An I/O event listener callback' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which answer best represents the call stack for executing the following lines of code?',
+        code: `
+      function a() {
+        b();
+        console.log('a');
+      }
+      function b() {
+        console.log('b');
+      }
+      a();
+        `,
+        answers: [
+          { id: '0', answer: '<a /><b /><console.log /><console.log />' },
+          { id: '1', answer: '<a /><b /><console.log /><b /><console.log /><b /><a />' },
+          { id: '2', answer: '<a><b><console.log /><console.log /></b></a>' },
+          { id: '3', answer: '<a><b><console.log /></b><console.log /></a>' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which answer best represents the call stack for executing the following lines of code?',
+        code: `
+      function x() {
+        y();
+        console.log('x');
+      }
+      function y() {
+        z();
+        console.log('y');
+      }
+      function z() {
+        console.log('z');
+      }
+      x();
+        `,
+        answers: [
+          { id: '0', answer: '<x /><y /><z /><console.log /><console.log /><console.log />' },
+          { id: '1', answer: '<x><y><z><console.log /></z><console.log /></y></x>' },
+          { id: '2', answer: '<x><y><z /></y><console.log /></x><console.log /></x>' },
+          { id: '3', answer: '<x><y><z><console.log /></z><console.log /></y><console.log /></x>' },
+        ],
+        correctAnswer: '3',
+      }, {
+        question: 'Which answer best represents the call stack for executing the following lines of code?',
+        code: `
+      function a() {
+        c();
+        console.log('a');
+      }
+      function b() {
+        console.log('b');
+      }
+      function c() {
+        b();
+        console.log('c');
+      }
+      a();
+        `,
+        answers: [
+          { id: '0', answer: '<a><c><b><console.log /></b><console.log /></c><console.log /></a>' },
+          { id: '1', answer: '<a /><c /><b /><console.log /><console.log /><console.log />' },
+          { id: '2', answer: '<a><c><console.log /></c><console.log /></a><console.log /></a>' },
+          { id: '3', answer: '<a><b /><c /><console.log /><console.log /><console.log />' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which answer best represents the call stack for executing the following lines of code?',
+        code: `
+      function start() {
+        middle();
+        console.log('start');
+      }
+      function middle() {
+        end();
+        console.log('middle');
+      }
+      function end() {
+        console.log('end');
+      }
+      start();
+        `,
+        answers: [
+          { id: '0', answer: '<start /><middle /><end /><console.log /><console.log /><console.log />' },
+          { id: '1', answer: '<start><middle><end><console.log /></end><console.log /></middle><console.log /></start>' },
+          { id: '2', answer: '<start><middle><end /></middle><console.log /></start><console.log /></start>' },
+          { id: '3', answer: '<start><middle><end><console.log /><console.log /></end></middle></start>' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which answer best represents the call stack for executing the following lines of code?',
+        code: `
+      function first() {
+        second();
+        console.log('first');
+      }
+      function second() {
+        third();
+        console.log('second');
+      }
+      function third() {
+        fourth();
+        console.log('third');
+      }
+      function fourth() {
+        console.log('fourth');
+      }
+      first();
+        `,
+        answers: [
+          { id: '0', answer: '<first><second><third><fourth><console.log /></fourth><console.log /></third><console.log /></second><console.log /></first>' },
+          { id: '1', answer: '<first><second /><third /><fourth /><console.log /><console.log /><console.log /><console.log />' },
+          { id: '2', answer: '<first><second><third /><fourth /><console.log /><console.log /><console.log /><console.log />' },
+          { id: '3', answer: '<first /><second /><third /><fourth /><console.log /><console.log /><console.log /><console.log />' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which answer best represents the call stack for executing the following lines of code?',
+        code: `
+      function alpha() {
+        beta();
+        console.log('alpha');
+      }
+      function beta() {
+        gamma();
+        console.log('beta');
+      }
+      function gamma() {
+        delta();
+        console.log('gamma');
+      }
+      function delta() {
+        console.log('delta');
+      }
+      alpha();
+        `,
+        answers: [
+          { id: '0', answer: '<alpha><beta><gamma><delta><console.log /><console.log /><console.log /><console.log /><delta><gamma></beta></alpha>' },
+          { id: '1', answer: '<alpha><beta><gamma><delta><console.log /></delta><console.log /></gamma><console.log /></beta><console.log /></alpha>' },
+          { id: '2', answer: '<alpha><beta><gamma><delta><console.log /></delta></gamma></beta /><console.log /></alpha>' },
+          { id: '3', answer: '<alpha /><beta /><gamma /><delta /><console.log /><console.log /><console.log /><console.log />' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Given the following code, is `b` a closure of `a`?',
+        code: `
+      function a() {
+        const x = 10;
+        function b() {
+          console.log(x);
+        }
+        return b;
+      }
+      const closure = a();
+      closure();
+        `,
+        answers: [
+          { id: '0', answer: 'Yes, `b` is a closure of `a` because it accesses `a`\'s variable `x`' },
+          { id: '1', answer: 'No, `b` is not a closure of `a` because it does not modify `x`' },
+          { id: '2', answer: 'Yes, `b` is a closure of `a` because it is defined inside `a`' },
+          { id: '3', answer: 'No, `b` is not a closure of `a` because it is returned by `a`' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which functions are closures in the following code?',
+        code: `
+      function outer() {
+        const y = 20;
+        function inner1() {
+          console.log(y);
+        }
+        function inner2() {
+          const z = 30;
+          function inner3() {
+            console.log(z);
+          }
+          return inner3;
+        }
+        return { inner1, inner2 };
+      }
+      const { inner1, inner2 } = outer();
+      const inner3 = inner2();
+      inner1();
+      inner3();
+        `,
+        answers: [
+          { id: '0', answer: 'inner1 and inner3 are closures' },
+          { id: '1', answer: 'inner1 is a closure, but inner3 is not' },
+          { id: '2', answer: 'inner3 is a closure, but inner1 is not' },
+          { id: '3', answer: 'Neither inner1 nor inner3 are closures' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In the following code, does `d` form a closure?',
+        code: `
+      function a() {
+        const val = 100;
+        function b() {
+          const innerVal = 200;
+          function c() {
+            console.log(val);
+          }
+          function d() {
+            console.log(innerVal);
+          }
+          return { c, d };
+        }
+        return b();
+      }
+      const { c, d } = a();
+      c();
+      d();
+        `,
+        answers: [
+          { id: '0', answer: 'Yes, `d` forms a closure because it accesses `innerVal` from `b`\'s scope' },
+          { id: '1', answer: 'No, `d` does not form a closure because it does not access `val` from `a`\'s scope' },
+          { id: '2', answer: 'Yes, `d` forms a closure because it is defined inside `b`' },
+          { id: '3', answer: 'No, `d` does not form a closure because it does not return anything' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In the following code, which function(s) form a closure?',
+        code: `
+      function outerFunction() {
+        const outerVariable = 'I am outside!';
+        
+        function innerFunction() {
+          console.log(outerVariable);
+        }
+        
+        return innerFunction;
+      }
+      const myFunction = outerFunction();
+      myFunction();
+        `,
+        answers: [
+          { id: '0', answer: 'innerFunction forms a closure' },
+          { id: '1', answer: 'outerFunction forms a closure' },
+          { id: '2', answer: 'Both outerFunction and innerFunction form closures' },
+          { id: '3', answer: 'Neither outerFunction nor innerFunction form closures' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Given the following code, which function(s) are closures?',
+        code: `
+      function createCounter() {
+        let count = 0;
+        return {
+          increment: function() {
+            count++;
+            return count;
+          },
+          decrement: function() {
+            count--;
+            return count;
+          }
+        };
+      }
+      const counter = createCounter();
+      console.log(counter.increment());
+      console.log(counter.decrement());
+        `,
+        answers: [
+          { id: '0', answer: 'Both increment and decrement are closures' },
+          { id: '1', answer: 'Only increment is a closure' },
+          { id: '2', answer: 'Only decrement is a closure' },
+          { id: '3', answer: 'Neither increment nor decrement are closures' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is JSX in React?',
+        answers: [
+          { id: '0', answer: 'A syntax extension that allows writing HTML directly within JavaScript' },
+          { id: '1', answer: 'A function to make AJAX requests' },
+          { id: '2', answer: 'A library for managing forms' },
+          { id: '3', answer: 'A testing framework for React applications' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which hook is used to add state to a functional component in React?',
+        answers: [
+          { id: '0', answer: 'useState' },
+          { id: '1', answer: 'useEffect' },
+          { id: '2', answer: 'useContext' },
+          { id: '3', answer: 'useReducer' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the useEffect hook do in a React functional component?',
+        answers: [
+          { id: '0', answer: 'It performs side effects in the component, such as fetching data or subscribing to events' },
+          { id: '1', answer: 'It manages the state of the component' },
+          { id: '2', answer: 'It provides a context for the component' },
+          { id: '3', answer: 'It replaces the render method of the component' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a core principle of React?',
+        answers: [
+          { id: '0', answer: 'Component-based architecture' },
+          { id: '1', answer: 'Object-oriented programming' },
+          { id: '2', answer: 'Server-side rendering only' },
+          { id: '3', answer: 'Global state management' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the "Virtual DOM" in React do?',
+        answers: [
+          { id: '0', answer: 'It is an in-memory representation of the real DOM that allows React to efficiently update the UI' },
+          { id: '1', answer: 'It is a physical DOM used for server-side rendering' },
+          { id: '2', answer: 'It is a new standard for DOM manipulation' },
+          { id: '3', answer: 'It is a library for accessing the DOM directly' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following statements is true about props in React?',
+        answers: [
+          { id: '0', answer: 'Props are read-only and used to pass data from parent to child components' },
+          { id: '1', answer: 'Props are used to manage component state' },
+          { id: '2', answer: 'Props can be modified directly within a component' },
+          { id: '3', answer: 'Props are used to manage global state' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following hooks is used to access the value of a context in a functional component?',
+        answers: [
+          { id: '0', answer: 'useContext' },
+          { id: '1', answer: 'useReducer' },
+          { id: '2', answer: 'useEffect' },
+          { id: '3', answer: 'useState' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In JavaScript, how can encapsulation be achieved?',
+        answers: [
+          { id: '0', answer: 'By using closures and modules to create private variables and methods' },
+          { id: '1', answer: 'By defining all variables and methods as global' },
+          { id: '2', answer: 'By using the `eval` function' },
+          { id: '3', answer: 'By using public properties only' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does encapsulation promote modularity in software design?',
+        answers: [
+          { id: '0', answer: 'By keeping related data and methods together, encapsulation makes it easier to understand and manage individual modules of a program' },
+          { id: '1', answer: 'By allowing the use of multiple inheritance' },
+          { id: '2', answer: 'By enabling the use of global variables throughout the program' },
+          { id: '3', answer: 'By reducing the need for private methods and properties' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why is encapsulation important in software development?',
+        answers: [
+          { id: '0', answer: 'It helps to protect the internal state of an object from unintended or harmful modifications' },
+          { id: '1', answer: 'It allows multiple classes to inherit properties from a parent class' },
+          { id: '2', answer: 'It enables defining multiple functions with the same name' },
+          { id: '3', answer: 'It provides a way to perform multiple operations in parallel' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best demonstrates encapsulation?',
+        code: `
+        class Person {
+          constructor(name, age) {
+            this._name = name;
+            this._age = age;
+          }
+
+          getName() {
+            return this._name;
+          }
+
+          getAge() {
+            return this._age;
+          }
+
+          setName(name) {
+            this._name = name;
+          }
+
+          setAge(age) {
+            if (age > 0) {
+              this._age = age;
+            }
+          }
+        }
+        `,
+        answers: [
+          { id: '0', answer: 'The use of private fields and methods to restrict direct access to the data' },
+          { id: '1', answer: 'The ability to inherit methods from another class' },
+          { id: '2', answer: 'The definition of multiple methods with the same name' },
+          { id: '3', answer: 'The use of public fields and methods' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is encapsulation in object-oriented programming?',
+        answers: [
+          { id: '0', answer: 'Encapsulation is the concept of bundling data and methods that operate on that data within a single unit or class' },
+          { id: '1', answer: 'Encapsulation is the process of inheriting properties from another class' },
+          { id: '2', answer: 'Encapsulation is the method of defining multiple functions with the same name' },
+          { id: '3', answer: 'Encapsulation is a way to implement polymorphism' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a major feature of React?',
+        answers: [
+          { id: '0', answer: 'Mobile-first architectural philosophy' },
+          { id: '1', answer: 'The virtual DOM as a means of dealing with state mutation' },
+          { id: '2', answer: 'Writing HTML directly in JavaScript' },
+          { id: '3', answer: 'Combining JIT and AOT compiling techiques' },
+        ],
+        correctAnswer: '2',
+      },
+    ],
+  },
+  python: {
+    name: 'Python',
+    questions: [
+      {
+        question: 'Which Python library is known for its powerful data structures and data analysis tools?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'Scikit-learn' },
+          { id: '3', answer: 'TensorFlow' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which library is primarily used for deep learning in Python and was developed by Google?',
+        answers: [
+          { id: '0', answer: 'PyTorch' },
+          { id: '1', answer: 'Keras' },
+          { id: '2', answer: 'TensorFlow' },
+          { id: '3', answer: 'Theano' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the main advantage of using the Keras library?',
+        answers: [
+          { id: '0', answer: 'It is highly scalable' },
+          { id: '1', answer: 'It provides an easy-to-use API for building neural networks' },
+          { id: '2', answer: 'It is developed by Facebook' },
+          { id: '3', answer: 'It is designed for reinforcement learning' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library is known for its array manipulation capabilities and is often used as the foundation for other libraries?',
+        answers: [
+          { id: '0', answer: 'SciPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'NumPy' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the primary use of the Scikit-learn library in Python?',
+        answers: [
+          { id: '0', answer: 'Data visualization' },
+          { id: '1', answer: 'Deep learning' },
+          { id: '2', answer: 'Statistical modeling' },
+          { id: '3', answer: 'Machine learning' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which library is known for providing a flexible platform for training deep learning models and is developed by Facebook?',
+        answers: [
+          { id: '0', answer: 'Keras' },
+          { id: '1', answer: 'TensorFlow' },
+          { id: '2', answer: 'PyTorch' },
+          { id: '3', answer: 'Caffe' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which library would you use for scientific computing and technical computing in Python?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'SciPy' },
+          { id: '2', answer: 'Pandas' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which library is often used for creating plots and visualizations in Python?',
+        answers: [
+          { id: '0', answer: 'Seaborn' },
+          { id: '1', answer: 'Matplotlib' },
+          { id: '2', answer: 'Plotly' },
+          { id: '3', answer: 'Bokeh' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library provides tools for working with large data sets and includes functionality for both data manipulation and visualization?',
+        answers: [
+          { id: '0', answer: 'Pandas' },
+          { id: '1', answer: 'SciPy' },
+          { id: '2', answer: 'NumPy' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary function of the library TensorFlow?',
+        answers: [
+          { id: '0', answer: 'To perform numerical computations' },
+          { id: '1', answer: 'To build and train deep learning models' },
+          { id: '2', answer: 'To analyze and manipulate data' },
+          { id: '3', answer: 'To create interactive visualizations' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library is specifically designed for symbolic mathematics and computer algebra?',
+        answers: [
+          { id: '0', answer: 'SymPy' },
+          { id: '1', answer: 'NumPy' },
+          { id: '2', answer: 'SciPy' },
+          { id: '3', answer: 'Pandas' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which library provides high-level building blocks for developing complex machine learning workflows?',
+        answers: [
+          { id: '0', answer: 'Scikit-learn' },
+          { id: '1', answer: 'TensorFlow' },
+          { id: '2', answer: 'PyTorch' },
+          { id: '3', answer: 'Keras' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary focus of the library Theano?',
+        answers: [
+          { id: '0', answer: 'Reinforcement learning' },
+          { id: '1', answer: 'Deep learning' },
+          { id: '2', answer: 'Statistical analysis' },
+          { id: '3', answer: 'Probabilistic programming' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library is known for its high-performance data structures and tools for data analysis?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'SciPy' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
+        answers: [
+          { id: '0', answer: 'Scikit-learn' },
+          { id: '1', answer: 'Keras' },
+          { id: '2', answer: 'PyTorch' },
+          { id: '3', answer: 'Theano' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the output of the following code: `print("hello".capitalize())`?',
+        answers: [
+          { id: '0', answer: 'Hello' },
+          { id: '1', answer: 'HELLO' },
+          { id: '2', answer: 'hello' },
+          { id: '3', answer: 'HeLLo' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following methods can be used to add an element to a list in Python?',
+        answers: [
+          { id: '0', answer: 'append()' },
+          { id: '1', answer: 'add()' },
+          { id: '2', answer: 'insert()' },
+          { id: '3', answer: 'Both append() and insert()' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'How can you retrieve the keys from a dictionary in Python?',
+        answers: [
+          { id: '0', answer: 'dict.keys()' },
+          { id: '1', answer: 'dict.values()' },
+          { id: '2', answer: 'dict.items()' },
+          { id: '3', answer: 'dict.get_keys()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the "random" module in Python provide?',
+        answers: [
+          { id: '0', answer: 'Functions for generating random numbers' },
+          { id: '1', answer: 'Functions for working with arrays' },
+          { id: '2', answer: 'Functions for file I/O' },
+          { id: '3', answer: 'Functions for mathematical operations' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which keyword is used to begin a class definition in Python?',
+        answers: [
+          { id: '0', answer: 'function' },
+          { id: '1', answer: 'class' },
+          { id: '2', answer: 'def' },
+          { id: '3', answer: 'object' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How do you create a tuple in Python?',
+        answers: [
+          { id: '0', answer: 'Using square brackets []' },
+          { id: '1', answer: 'Using curly braces {}' },
+          { id: '2', answer: 'Using parentheses ()' },
+          { id: '3', answer: 'Using angle brackets <>' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What will be the output of the following code: `print(type([]))`?',
+        answers: [
+          { id: '0', answer: '<class \'list\'>' },
+          { id: '1', answer: '<class \'tuple\'>' },
+          { id: '2', answer: '<class \'dict\'>' },
+          { id: '3', answer: '<class \'set\'>' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a correct way to create a set in Python?',
+        answers: [
+          { id: '0', answer: 'set = {1, 2, 3}' },
+          { id: '1', answer: 'set = [1, 2, 3]' },
+          { id: '2', answer: 'set = (1, 2, 3)' },
+          { id: '3', answer: 'set = <1, 2, 3>' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How do you start a multi-line comment in Python?',
+        answers: [
+          { id: '0', answer: 'Using /* and */' },
+          { id: '1', answer: 'Using // and //' },
+          { id: '2', answer: 'Using """ or \'\'\'' },
+          { id: '3', answer: 'Using # and #' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What does the "len()" function do in Python?',
+        answers: [
+          { id: '0', answer: 'Returns the length of an object' },
+          { id: '1', answer: 'Returns the type of an object' },
+          { id: '2', answer: 'Returns the memory address of an object' },
+          { id: '3', answer: 'Returns the id of an object' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which method is used to convert a string to lowercase in Python?',
+        answers: [
+          { id: '0', answer: 'lowercase()' },
+          { id: '1', answer: 'tolower()' },
+          { id: '2', answer: 'lower()' },
+          { id: '3', answer: 'str.lower()' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the output of the following code: `print(3 == 3.0)`?',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+          { id: '2', answer: 'Error' },
+          { id: '3', answer: 'None' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is not a valid way to import a module in Python?',
+        answers: [
+          { id: '0', answer: 'import module' },
+          { id: '1', answer: 'import module as alias' },
+          { id: '2', answer: 'from module import *' },
+          { id: '3', answer: 'include module' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'How do you define a variable in Python?',
+        answers: [
+          { id: '0', answer: 'var variableName = value' },
+          { id: '1', answer: 'let variableName = value' },
+          { id: '2', answer: 'variableName = value' },
+          { id: '3', answer: 'define variableName = value' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is true about Python lists?',
+        answers: [
+          { id: '0', answer: 'Lists are immutable' },
+          { id: '1', answer: 'Lists can contain elements of different types' },
+          { id: '2', answer: 'Lists are created using parentheses ()' },
+          { id: '3', answer: 'Lists are a form of dictionary' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Python is an object-oriented language',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a mutable data type in Python?',
+        answers: [
+          { id: '0', answer: 'Tuple' },
+          { id: '1', answer: 'String' },
+          { id: '2', answer: 'List' },
+          { id: '3', answer: 'Integer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What does the "self" keyword in Python represent?',
+        answers: [
+          { id: '0', answer: 'The current class' },
+          { id: '1', answer: 'The current method' },
+          { id: '2', answer: 'The current instance of the class' },
+          { id: '3', answer: 'A global variable' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is not a built-in data type in Python?',
+        answers: [
+          { id: '0', answer: 'Set' },
+          { id: '1', answer: 'Dictionary' },
+          { id: '2', answer: 'Array' },
+          { id: '3', answer: 'List' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'How do you define a private method in a Python class?',
+        answers: [
+          { id: '0', answer: 'By prefixing the method name with a single underscore' },
+          { id: '1', answer: 'By prefixing the method name with a double underscore' },
+          { id: '2', answer: 'By suffixing the method name with a single underscore' },
+          { id: '3', answer: 'By suffixing the method name with a double underscore' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is used to handle exceptions in Python?',
+        answers: [
+          { id: '0', answer: 'try-except block' },
+          { id: '1', answer: 'try-catch block' },
+          { id: '2', answer: 'catch-except block' },
+          { id: '3', answer: 'try-finally block' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about Python decorators?',
+        answers: [
+          { id: '0', answer: 'Decorators are a form of metaprogramming' },
+          { id: '1', answer: 'Decorators can modify the behavior of a function' },
+          { id: '2', answer: 'Decorators can be stacked' },
+          { id: '3', answer: 'All of the above' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the purpose of the "with" statement in Python?',
+        answers: [
+          { id: '0', answer: 'To create a new scope' },
+          { id: '1', answer: 'To simplify exception handling' },
+          { id: '2', answer: 'To ensure proper resource management' },
+          { id: '3', answer: 'To define anonymous functions' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a feature of Python’s list comprehensions?',
+        answers: [
+          { id: '0', answer: 'They provide a concise way to create lists' },
+          { id: '1', answer: 'They can include conditionals' },
+          { id: '2', answer: 'They are more readable than for-loops for creating lists' },
+          { id: '3', answer: 'All of the above' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What does the built-in function "zip()" do in Python?',
+        answers: [
+          { id: '0', answer: 'Combines two or more iterables into a single iterable' },
+          { id: '1', answer: 'Compresses data into a zip file' },
+          { id: '2', answer: 'Sorts multiple iterables' },
+          { id: '3', answer: 'Splits a string into a list' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a lambda function in Python?',
+        answers: [
+          { id: '0', answer: 'A function that can take any number of arguments' },
+          { id: '1', answer: 'A function defined using the "def" keyword' },
+          { id: '2', answer: 'An anonymous function expressed as a single statement' },
+          { id: '3', answer: 'A recursive function' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which method can be used to convert a string into a list in Python?',
+        answers: [
+          { id: '0', answer: 'split()' },
+          { id: '1', answer: 'join()' },
+          { id: '2', answer: 'append()' },
+          { id: '3', answer: 'extend()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the output of the expression `2 ** 3` in Python?',
+        answers: [
+          { id: '0', answer: '5' },
+          { id: '1', answer: '6' },
+          { id: '2', answer: '8' },
+          { id: '3', answer: '9' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a Python library for data manipulation and analysis?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'Matplotlib' },
+          { id: '3', answer: 'SciPy' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the purpose of the "__init__" method in a Python class?',
+        answers: [
+          { id: '0', answer: 'To initialize an instance of the class' },
+          { id: '1', answer: 'To define a class-level method' },
+          { id: '2', answer: 'To destroy an instance of the class' },
+          { id: '3', answer: 'To define a static method' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary difference between "deepcopy" and "copy" in the copy module?',
+        answers: [
+          { id: '0', answer: 'deepcopy copies only the top-level objects, while copy copies all nested objects' },
+          { id: '1', answer: 'copy copies only the top-level objects, while deepcopy copies all nested objects' },
+          { id: '2', answer: 'There is no difference' },
+          { id: '3', answer: 'copy is faster than deepcopy' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is used to define a block of code in Python?',
+        answers: [
+          { id: '0', answer: 'Curly braces {}' },
+          { id: '1', answer: 'Indentation' },
+          { id: '2', answer: 'Parentheses ()' },
+          { id: '3', answer: 'Square brackets []' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the use of the "pass" statement in Python?',
+        answers: [
+          { id: '0', answer: 'To create a placeholder for future code' },
+          { id: '1', answer: 'To end a loop' },
+          { id: '2', answer: 'To raise an exception' },
+          { id: '3', answer: 'To break out of a function' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is used to define a generator function in Python?',
+        answers: [
+          { id: '0', answer: 'return' },
+          { id: '1', answer: 'yield' },
+          { id: '2', answer: 'generate' },
+          { id: '3', answer: 'yield return' },
+        ],
+        correctAnswer: '1',
+      },
+    ],
+  },
+  // ===========
+  'machine-learning-advanced': {
+    name: 'Advanced Machine Learning',
+    questions: [
+      {
+        question: 'Which Python library is known for its powerful data structures and data analysis tools?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'Scikit-learn' },
+          { id: '3', answer: 'TensorFlow' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which library is primarily used for deep learning in Python and was developed by Google?',
+        answers: [
+          { id: '0', answer: 'PyTorch' },
+          { id: '1', answer: 'Keras' },
+          { id: '2', answer: 'TensorFlow' },
+          { id: '3', answer: 'Theano' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the main advantage of using the Keras library?',
+        answers: [
+          { id: '0', answer: 'It is highly scalable' },
+          { id: '1', answer: 'It provides an easy-to-use API for building neural networks' },
+          { id: '2', answer: 'It is developed by Facebook' },
+          { id: '3', answer: 'It is designed for reinforcement learning' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library is known for its array manipulation capabilities and is often used as the foundation for other libraries?',
+        answers: [
+          { id: '0', answer: 'SciPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'NumPy' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the primary use of the Scikit-learn library in Python?',
+        answers: [
+          { id: '0', answer: 'Data visualization' },
+          { id: '1', answer: 'Deep learning' },
+          { id: '2', answer: 'Statistical modeling' },
+          { id: '3', answer: 'Machine learning' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which library is known for providing a flexible platform for training deep learning models and is developed by Facebook?',
+        answers: [
+          { id: '0', answer: 'Keras' },
+          { id: '1', answer: 'TensorFlow' },
+          { id: '2', answer: 'PyTorch' },
+          { id: '3', answer: 'Caffe' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which library would you use for scientific computing and technical computing in Python?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'SciPy' },
+          { id: '2', answer: 'Pandas' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which library is often used for creating plots and visualizations in Python?',
+        answers: [
+          { id: '0', answer: 'Seaborn' },
+          { id: '1', answer: 'Matplotlib' },
+          { id: '2', answer: 'Plotly' },
+          { id: '3', answer: 'Bokeh' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library provides tools for working with large data sets and includes functionality for both data manipulation and visualization?',
+        answers: [
+          { id: '0', answer: 'Pandas' },
+          { id: '1', answer: 'SciPy' },
+          { id: '2', answer: 'NumPy' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary function of the library TensorFlow?',
+        answers: [
+          { id: '0', answer: 'To perform numerical computations' },
+          { id: '1', answer: 'To build and train deep learning models' },
+          { id: '2', answer: 'To analyze and manipulate data' },
+          { id: '3', answer: 'To create interactive visualizations' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library is specifically designed for symbolic mathematics and computer algebra?',
+        answers: [
+          { id: '0', answer: 'SymPy' },
+          { id: '1', answer: 'NumPy' },
+          { id: '2', answer: 'SciPy' },
+          { id: '3', answer: 'Pandas' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which library provides high-level building blocks for developing complex machine learning workflows?',
+        answers: [
+          { id: '0', answer: 'Scikit-learn' },
+          { id: '1', answer: 'TensorFlow' },
+          { id: '2', answer: 'PyTorch' },
+          { id: '3', answer: 'Keras' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary focus of the library Theano?',
+        answers: [
+          { id: '0', answer: 'Reinforcement learning' },
+          { id: '1', answer: 'Deep learning' },
+          { id: '2', answer: 'Statistical analysis' },
+          { id: '3', answer: 'Probabilistic programming' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which Python library is known for its high-performance data structures and tools for data analysis?',
+        answers: [
+          { id: '0', answer: 'NumPy' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'SciPy' },
+          { id: '3', answer: 'Matplotlib' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
+        answers: [
+          { id: '0', answer: 'Scikit-learn' },
+          { id: '1', answer: 'Keras' },
+          { id: '2', answer: 'PyTorch' },
+          { id: '3', answer: 'Theano' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the purpose of the bias term in a linear regression model?',
+        answers: [
+          { id: '0', answer: 'To adjust the slope of the regression line' },
+          { id: '1', answer: 'To shift the regression line up or down' },
+          { id: '2', answer: 'To measure the accuracy of the model' },
+          { id: '3', answer: 'To increase the model complexity' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a method to prevent overfitting in a machine learning model?',
+        answers: [
+          { id: '0', answer: 'Increasing the number of layers in a neural network' },
+          { id: '1', answer: 'Using dropout regularization' },
+          { id: '2', answer: 'Reducing the size of the training dataset' },
+          { id: '3', answer: 'Increasing the learning rate' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In the context of support vector machines, what is a kernel trick?',
+        answers: [
+          { id: '0', answer: 'A technique to increase the dataset size' },
+          { id: '1', answer: 'A method to transform data into higher dimensions' },
+          { id: '2', answer: 'A way to reduce the dimensionality of data' },
+          { id: '3', answer: 'A preprocessing step to normalize data' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary difference between bagging and boosting?',
+        answers: [
+          { id: '0', answer: 'Bagging focuses on variance reduction, while boosting focuses on bias reduction' },
+          { id: '1', answer: 'Boosting focuses on variance reduction, while bagging focuses on bias reduction' },
+          { id: '2', answer: 'Bagging uses sequential learning, while boosting uses parallel learning' },
+          { id: '3', answer: 'There is no difference; they are the same technique' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary goal of the Expectation-Maximization (EM) algorithm?',
+        answers: [
+          { id: '0', answer: 'To maximize the likelihood function of observed data' },
+          { id: '1', answer: 'To find the principal components of the data' },
+          { id: '2', answer: 'To cluster data into groups' },
+          { id: '3', answer: 'To reduce the dimensionality of the data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In reinforcement learning, what does the term "policy" refer to?',
+        answers: [
+          { id: '0', answer: 'A function that maps states to actions' },
+          { id: '1', answer: 'A measure of the goodness of a state-action pair' },
+          { id: '2', answer: 'A reward function for the agent' },
+          { id: '3', answer: 'A set of actions the agent can take' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the main purpose of using dropout in neural networks?',
+        answers: [
+          { id: '0', answer: 'To increase the model complexity' },
+          { id: '1', answer: 'To prevent overfitting' },
+          { id: '2', answer: 'To reduce the training time' },
+          { id: '3', answer: 'To make the model invariant to input changes' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the curse of dimensionality in machine learning?',
+        answers: [
+          { id: '0', answer: 'The difficulty of visualizing data in high dimensions' },
+          { id: '1', answer: 'The exponential increase in volume associated with adding extra dimensions to Euclidean space' },
+          { id: '2', answer: 'The increase in computational complexity with higher dimensions' },
+          { id: '3', answer: 'The reduction in model performance with higher dimensions' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the purpose of using a validation set in machine learning?',
+        answers: [
+          { id: '0', answer: 'To adjust the hyperparameters of the model' },
+          { id: '1', answer: 'To train the model' },
+          { id: '2', answer: 'To test the final model performance' },
+          { id: '3', answer: 'To reduce the dataset size' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In a neural network, what is backpropagation used for?',
+        answers: [
+          { id: '0', answer: 'To initialize the network weights' },
+          { id: '1', answer: 'To compute the output of the network' },
+          { id: '2', answer: 'To update the weights based on the error' },
+          { id: '3', answer: 'To add more layers to the network' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a common activation function used in neural networks?',
+        answers: [
+          { id: '0', answer: 'Linear' },
+          { id: '1', answer: 'ReLU (Rectified Linear Unit)' },
+          { id: '2', answer: 'Gaussian' },
+          { id: '3', answer: 'Sigmoid' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the main advantage of using convolutional layers in a neural network for image processing?',
+        answers: [
+          { id: '0', answer: 'They reduce the number of parameters' },
+          { id: '1', answer: 'They increase the number of parameters' },
+          { id: '2', answer: 'They improve the interpretability of the model' },
+          { id: '3', answer: 'They make the model faster' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of using an autoencoder in unsupervised learning?',
+        answers: [
+          { id: '0', answer: 'To perform classification tasks' },
+          { id: '1', answer: 'To learn a compressed representation of the input data' },
+          { id: '2', answer: 'To perform regression tasks' },
+          { id: '3', answer: 'To increase the dimensionality of the input data' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In the context of clustering, what is the main difference between K-means and DBSCAN?',
+        answers: [
+          { id: '0', answer: 'K-means is a density-based algorithm, while DBSCAN is not' },
+          { id: '1', answer: 'DBSCAN can find clusters of arbitrary shape, while K-means cannot' },
+          { id: '2', answer: 'K-means requires the number of clusters to be specified, while DBSCAN does not' },
+          { id: '3', answer: 'DBSCAN is a partitioning method, while K-means is not' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a disadvantage of using decision trees?',
+        answers: [
+          { id: '0', answer: 'They are prone to overfitting' },
+          { id: '1', answer: 'They require a lot of computational resources' },
+          { id: '2', answer: 'They cannot handle categorical data' },
+          { id: '3', answer: 'They are difficult to interpret' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the term "batch normalization" refer to in the context of neural networks?',
+        answers: [
+          { id: '0', answer: 'Normalizing the input data to the network' },
+          { id: '1', answer: 'Normalizing the output data of the network' },
+          { id: '2', answer: 'Normalizing the activations of the layers during training' },
+          { id: '3', answer: 'Normalizing the weights of the network during training' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following describes the vanishing gradient problem in deep learning?',
+        answers: [
+          { id: '0', answer: 'Gradients become very large, causing instability in training' },
+          { id: '1', answer: 'Gradients become very small, slowing down the training process' },
+          { id: '2', answer: 'Gradients oscillate between large and small values' },
+          { id: '3', answer: 'Gradients remain constant, preventing learning' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the role of the learning rate in training a neural network?',
+        answers: [
+          { id: '0', answer: 'To determine the size of the steps taken in the weight space during optimization' },
+          { id: '1', answer: 'To control the number of layers in the network' },
+          { id: '2', answer: 'To determine the number of epochs' },
+          { id: '3', answer: 'To specify the batch size' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a hyperparameter in machine learning?',
+        answers: [
+          { id: '0', answer: 'A parameter that is learned from the training data' },
+          { id: '1', answer: 'A parameter that is set before the learning process begins' },
+          { id: '2', answer: 'A parameter that adjusts automatically during training' },
+          { id: '3', answer: 'A parameter that is fixed and does not change' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In the context of ensemble learning, what is stacking?',
+        answers: [
+          { id: '0', answer: 'Combining multiple models to correct the errors of one another' },
+          { id: '1', answer: 'Training multiple models in parallel and averaging their predictions' },
+          { id: '2', answer: 'Training a sequence of models where each model corrects the errors of the previous one' },
+          { id: '3', answer: 'Training multiple models and combining their predictions using another model' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is tokenization in the context of natural language processing?',
+        answers: [
+          { id: '0', answer: 'The process of splitting text into individual words or phrases' },
+          { id: '1', answer: 'The process of converting text into lowercase' },
+          { id: '2', answer: 'The process of removing punctuation from text' },
+          { id: '3', answer: 'The process of translating text into another language' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a common method of tokenization?',
+        answers: [
+          { id: '0', answer: 'Character-level tokenization' },
+          { id: '1', answer: 'Word-level tokenization' },
+          { id: '2', answer: 'Subword tokenization' },
+          { id: '3', answer: 'All of the above' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the main challenge of word-level tokenization?',
+        answers: [
+          { id: '0', answer: 'Handling punctuation' },
+          { id: '1', answer: 'Dealing with out-of-vocabulary words' },
+          { id: '2', answer: 'Converting text to lowercase' },
+          { id: '3', answer: 'Removing stopwords' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which tokenization method is commonly used in transformer models like BERT?',
+        answers: [
+          { id: '0', answer: 'Word-level tokenization' },
+          { id: '1', answer: 'Character-level tokenization' },
+          { id: '2', answer: 'Subword tokenization' },
+          { id: '3', answer: 'Sentence-level tokenization' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is a benefit of subword tokenization?',
+        answers: [
+          { id: '0', answer: 'It simplifies the tokenization process' },
+          { id: '1', answer: 'It handles out-of-vocabulary words effectively' },
+          { id: '2', answer: 'It reduces the size of the vocabulary' },
+          { id: '3', answer: 'Both 1 and 2' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which of the following algorithms is used for subword tokenization?',
+        answers: [
+          { id: '0', answer: 'WordPiece' },
+          { id: '1', answer: 'Byte-Pair Encoding (BPE)' },
+          { id: '2', answer: 'Unigram Language Model' },
+          { id: '3', answer: 'All of the above' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'In tokenization, what is the purpose of using a delimiter?',
+        answers: [
+          { id: '0', answer: 'To join tokens together' },
+          { id: '1', answer: 'To split text into tokens' },
+          { id: '2', answer: 'To remove special characters from text' },
+          { id: '3', answer: 'To identify named entities in text' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How does character-level tokenization differ from word-level tokenization?',
+        answers: [
+          { id: '0', answer: 'Character-level tokenization splits text into individual characters' },
+          { id: '1', answer: 'Word-level tokenization splits text into individual words' },
+          { id: '2', answer: 'Character-level tokenization is faster than word-level tokenization' },
+          { id: '3', answer: 'Both 0 and 1' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which tokenization method is likely to result in the smallest vocabulary size?',
+        answers: [
+          { id: '0', answer: 'Character-level tokenization' },
+          { id: '1', answer: 'Word-level tokenization' },
+          { id: '2', answer: 'Subword tokenization' },
+          { id: '3', answer: 'Sentence-level tokenization' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary purpose of tokenization in text processing?',
+        answers: [
+          { id: '0', answer: 'To preprocess text for analysis and modeling' },
+          { id: '1', answer: 'To remove irrelevant information from text' },
+          { id: '2', answer: 'To convert text into numerical data' },
+          { id: '3', answer: 'To translate text into different languages' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is overfitting in the context of machine learning?',
+        answers: [
+          { id: '0', answer: 'When a model performs well on training data but poorly on new, unseen data' },
+          { id: '1', answer: 'When a model performs well on both training and test data' },
+          { id: '2', answer: 'When a model performs poorly on both training and test data' },
+          { id: '3', answer: 'When a model underfits the training data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which technique is commonly used to prevent overfitting in neural networks?',
+        answers: [
+          { id: '0', answer: 'Increasing the number of hidden layers' },
+          { id: '1', answer: 'Decreasing the learning rate' },
+          { id: '2', answer: 'Using dropout regularization' },
+          { id: '3', answer: 'Removing features from the dataset' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the role of cross-validation in preventing overfitting?',
+        answers: [
+          { id: '0', answer: 'To ensure the model is trained on more data' },
+          { id: '1', answer: 'To assess the model’s performance on unseen data' },
+          { id: '2', answer: 'To increase the complexity of the model' },
+          { id: '3', answer: 'To reduce the dimensionality of the data' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a symptom of overfitting?',
+        answers: [
+          { id: '0', answer: 'High training accuracy and high test accuracy' },
+          { id: '1', answer: 'Low training accuracy and low test accuracy' },
+          { id: '2', answer: 'High training accuracy and low test accuracy' },
+          { id: '3', answer: 'Low training accuracy and high test accuracy' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the purpose of using a validation set in machine learning?',
+        answers: [
+          { id: '0', answer: 'To train the model' },
+          { id: '1', answer: 'To test the model’s performance' },
+          { id: '2', answer: 'To fine-tune the model’s hyperparameters' },
+          { id: '3', answer: 'To reduce the size of the training dataset' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which regularization technique adds a penalty equal to the absolute value of the magnitude of coefficients to the loss function?',
+        answers: [
+          { id: '0', answer: 'L1 regularization' },
+          { id: '1', answer: 'L2 regularization' },
+          { id: '2', answer: 'Dropout regularization' },
+          { id: '3', answer: 'Early stopping' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does increasing the amount of training data help in reducing overfitting?',
+        answers: [
+          { id: '0', answer: 'It makes the model simpler' },
+          { id: '1', answer: 'It reduces the noise in the data' },
+          { id: '2', answer: 'It helps the model generalize better' },
+          { id: '3', answer: 'It decreases the computational cost' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which method involves using a subset of the training data to stop training early to prevent overfitting?',
+        answers: [
+          { id: '0', answer: 'Cross-validation' },
+          { id: '1', answer: 'Early stopping' },
+          { id: '2', answer: 'Batch normalization' },
+          { id: '3', answer: 'Data augmentation' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Why is it important to have a balance between bias and variance in a machine learning model?',
+        answers: [
+          { id: '0', answer: 'To ensure the model is neither too simple nor too complex' },
+          { id: '1', answer: 'To maximize the training accuracy' },
+          { id: '2', answer: 'To minimize the test accuracy' },
+          { id: '3', answer: 'To avoid using regularization techniques' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which technique involves generating additional training examples through random transformations of the existing data?',
+        answers: [
+          { id: '0', answer: 'Cross-validation' },
+          { id: '1', answer: 'Early stopping' },
+          { id: '2', answer: 'Data augmentation' },
+          { id: '3', answer: 'Regularization' },
+        ],
+        correctAnswer: '2',
+      },
+
     ],
   },
 };

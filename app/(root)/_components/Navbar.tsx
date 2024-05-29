@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import routes from '@/lib/data/routes';
 import MobileNav from './MobileNav';
 
 const Navbar = () => (
@@ -18,12 +19,11 @@ const Navbar = () => (
         <MobileNav />
       </div>
       <div className="gap-2 text-sm hidden md:flex">
-        <Link href="/learners-permit" className="text-sm">
-          Learner&apos;s Permit
-        </Link>
-        <Link href="/javascript" className="text-sm">
-          JavaScript
-        </Link>
+        {routes.map((r) => (
+          <Link href={r.href} className="text-sm" key={r.href}>
+            {r.name}
+          </Link>
+        ))}
       </div>
       <div className="flex items-center gap-1.5 text-black/50 hidden md:flex">
         <Facebook size={20} />
