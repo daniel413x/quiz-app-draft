@@ -20,12 +20,12 @@ const Navbar = () => (
       </div>
       <div className="gap-2 text-sm hidden md:flex">
         {routes.map((r) => (
-          <Link href={r.href} className="text-sm" key={r.href}>
+          <Link href={r.href} className="text-sm border-0 border-b-2 border-b-purple-400" key={r.href}>
             {r.name}
           </Link>
         ))}
       </div>
-      <div className="flex items-center gap-1.5 text-black/50 hidden md:flex">
+      <div className="items-center gap-1.5 text-black/50 hidden md:flex">
         <Facebook size={20} />
         <Twitter size={20} />
         <Instagram size={20} />

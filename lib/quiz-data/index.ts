@@ -1160,6 +1160,7 @@ const quizData: QuizData = {
       },
     ],
   },
+  // ===========
   javascript: {
     name: 'JavaScript',
     questions: [
@@ -1652,7 +1653,7 @@ const quizData: QuizData = {
           { id: '2', answer: 'A function that is defined within another function and has access to the parent function’s variables' },
           { id: '3', answer: 'A function with no parameters' },
         ],
-        correctAnswer: '2',
+        correctAnswer: '1',
       },
       {
         question: 'Why are closures useful in JavaScript?',
@@ -1714,7 +1715,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'React Context' },
           { id: '1', answer: 'Inheritance' },
           { id: '2', answer: 'React functional components' },
-          { id: '3', answer: 'Closure' },
+          { id: '3', answer: 'Closures' },
         ],
         correctAnswer: '3',
       },
@@ -1855,6 +1856,27 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
+        question: 'Which answer best illustrates the process of "LIFO"?',
+        answers: [
+          { id: '0', answer: '[], [0], [0, 1], [0, 1, 2], [1, 2], [1], []' },
+          { id: '1', answer: '[], [0], [0, 1], [0, 1, 2], [0, 1], [0], []' },
+          { id: '2', answer: '[], [0], [0, 2], [0, 1, 2], [0, 1], [0], []' },
+          { id: '3', answer: '[], [0], [0, 1], [0, 0, 1], [0, 1], [0], []' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is true?',
+        answers: [
+          { id: '0', answer: 'The event loop is essentially the main thread in JavaScript runtimes' },
+          { id: '1', answer: 'JavaScript is a multi-threaded programming language' },
+          { id: '2', answer: 'JavaScript uses multiple threads to handle blocking operations' },
+          { id: '3', answer: 'JavaScript is a single-threaded programming language' },
+        ],
+        correctAnswer: '3',
+      },
+
+      {
         question: 'What will be the output of the following code?',
         code: `
       function task(message) {
@@ -1883,7 +1905,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'Microtasks are tasks that are executed before any macrotasks' },
           { id: '1', answer: 'Microtasks are tasks that are executed immediately after the currently executing script' },
           { id: '2', answer: 'Microtasks are executed in parallel with the current script' },
-          { id: '3', answer: 'Microtasks are the same as macrotasks' },
+          { id: '3', answer: 'Microtasks are the same as macrotasks in terms of call stack priority' },
         ],
         correctAnswer: '1',
       },
@@ -2059,8 +2081,8 @@ const quizData: QuizData = {
         question: 'Which of the following best describes how the Virtual DOM updates the actual DOM?',
         answers: [
           { id: '0', answer: 'It calculates the difference between the new Virtual DOM and the previous one, then updates only the changed parts in the actual DOM' },
-          { id: '1', answer: 'It completely replaces the actual DOM with the new Virtual DOM' },
-          { id: '2', answer: 'It updates the actual DOM only when the browser is idle' },
+          { id: '1', answer: 'It calculates the difference between the new Virtual DOM and the Shadow DOM, then updates only the changed parts in the actual DOM' },
+          { id: '2', answer: 'It completely replaces the actual DOM with the new Virtual DOM' },
           { id: '3', answer: 'It does not update the actual DOM directly but sends update instructions to the server' },
         ],
         correctAnswer: '0',
@@ -2140,9 +2162,9 @@ const quizData: QuizData = {
         question: 'What is the Virtual DOM in the context of JavaScript libraries like React?',
         answers: [
           { id: '0', answer: 'A lightweight copy of the actual DOM that allows for efficient updates and rendering' },
-          { id: '1', answer: 'A separate HTML document that mirrors the actual DOM' },
-          { id: '2', answer: 'A part of the browser\'s rendering engine' },
-          { id: '3', answer: 'A debugging tool for developers' },
+          { id: '1', answer: 'A separate HTML document that mirrors the actual DOM but does not attach event listeners' },
+          { id: '2', answer: 'A part of the browser\'s rendering engine together with the Shadow DOM' },
+          { id: '3', answer: 'A debugging tool for developers that is accessed in the browser developer tools' },
         ],
         correctAnswer: '0',
       },
@@ -2203,7 +2225,7 @@ const quizData: QuizData = {
         question: 'What problem does the Virtual DOM help solve in web development?',
         answers: [
           { id: '0', answer: 'It helps solve performance issues by reducing the number of direct DOM manipulations' },
-          { id: '1', answer: 'It eliminates the need for responsive design' },
+          { id: '1', answer: 'It helps solve the problem of mutation by providing an environment where state can be mutated' },
           { id: '2', answer: 'It allows for multi-threaded JavaScript execution' },
           { id: '3', answer: 'It ensures backward compatibility with older browsers' },
         ],
@@ -2268,7 +2290,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'Because promises are placed in the Job Queue, which has higher priority over the Task Queue' },
           { id: '1', answer: 'Because setTimeout callbacks have a built-in delay' },
           { id: '2', answer: 'Because promises run synchronously' },
-          { id: '3', answer: 'Because setTimeout is deprecated' },
+          { id: '3', answer: 'Because setTimeout is a promise but is nonetheless placed on the Task Queue' },
         ],
         correctAnswer: '0',
       },
@@ -2276,9 +2298,9 @@ const quizData: QuizData = {
         question: 'In the context of the event loop, what happens after the call stack is empty?',
         answers: [
           { id: '0', answer: 'The event loop first processes all tasks in the Job Queue' },
-          { id: '1', answer: 'The event loop processes all tasks in the Task Queue' },
+          { id: '1', answer: 'The event loop first processes all tasks in the Task Queue' },
           { id: '2', answer: 'The event loop stops' },
-          { id: '3', answer: 'The event loop processes synchronous code' },
+          { id: '3', answer: 'The event loop first processes all synchronous tasks' },
         ],
         correctAnswer: '0',
       },
@@ -2296,7 +2318,7 @@ const quizData: QuizData = {
         question: 'What is the purpose of the Job Queue in JavaScript?',
         answers: [
           { id: '0', answer: 'To handle microtasks like promises and process.nextTick' },
-          { id: '1', answer: 'To handle macrotasks like setTimeout' },
+          { id: '1', answer: 'To handle macrotasks like setTimeout and I/O callbacks' },
           { id: '2', answer: 'To manage synchronous code execution' },
           { id: '3', answer: 'To handle network requests' },
         ],
@@ -2338,9 +2360,9 @@ const quizData: QuizData = {
         question: 'What is the call stack in JavaScript?',
         answers: [
           { id: '0', answer: 'A stack data structure that keeps track of function calls' },
-          { id: '1', answer: 'A queue for handling asynchronous callbacks' },
-          { id: '2', answer: 'A memory heap for dynamic allocation' },
-          { id: '3', answer: 'A set of APIs for manipulating the DOM' },
+          { id: '1', answer: 'A stack data structure that iterates through function calls synchronously' },
+          { id: '2', answer: 'A queue for handling asynchronous callbacks' },
+          { id: '3', answer: 'A memory heap for dynamic allocation' },
         ],
         correctAnswer: '0',
       },
@@ -2420,7 +2442,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'It pushes each nested function call onto the stack' },
           { id: '1', answer: 'It creates a separate stack for each function' },
           { id: '2', answer: 'It executes them in parallel' },
-          { id: '3', answer: 'It ignores nested function calls' },
+          { id: '3', answer: 'It iterates through them in-memory' },
         ],
         correctAnswer: '0',
       },
@@ -2482,7 +2504,7 @@ const quizData: QuizData = {
         question: 'What is Just-In-Time (JIT) compilation?',
         answers: [
           { id: '0', answer: 'A technique where code is compiled during execution rather than before execution' },
-          { id: '1', answer: 'A method of compiling code ahead of time before execution' },
+          { id: '1', answer: 'A method of compiling code ahead of time before execution or rendering' },
           { id: '2', answer: 'A process of interpreting code without any compilation' },
           { id: '3', answer: 'A technique used only in statically-typed languages' },
         ],
@@ -2512,8 +2534,8 @@ const quizData: QuizData = {
         question: 'What is the primary difference between JIT compilation and AOT (Ahead-Of-Time) compilation?',
         answers: [
           { id: '0', answer: 'JIT compilation happens during execution, while AOT compilation happens before execution' },
-          { id: '1', answer: 'AOT compilation is slower than JIT compilation' },
-          { id: '2', answer: 'JIT compilation is used only in interpreted languages' },
+          { id: '1', answer: 'AOT compilation is slower than JIT compilation, but is less prone to crashing' },
+          { id: '2', answer: 'JIT compilation is used only in interpreted languages while AOT compilation is only used in compiled languages' },
           { id: '3', answer: 'AOT compilation does not produce machine code' },
         ],
         correctAnswer: '0',
@@ -2592,9 +2614,9 @@ const quizData: QuizData = {
         question: 'Which of the following best describes the role of the event loop in JavaScript?',
         answers: [
           { id: '0', answer: 'It continuously checks the call stack and task queues to execute code, handle events, and process callbacks' },
-          { id: '1', answer: 'It compiles JavaScript code into machine code at runtime' },
-          { id: '2', answer: 'It manages synchronous function calls only' },
-          { id: '3', answer: 'It executes code in parallel using multiple threads' },
+          { id: '1', answer: 'It compiles JavaScript code into machine code at runtime without blocking the main thread' },
+          { id: '2', answer: 'It manages synchronous function calls only and offloads computationally expensive operations to worker threads' },
+          { id: '3', answer: 'It executes code in parallel using multiple threads to provide a non-blocking interface' },
         ],
         correctAnswer: '0',
       },
@@ -2913,7 +2935,7 @@ const quizData: QuizData = {
       closure();
         `,
         answers: [
-          { id: '0', answer: 'Yes, `b` is a closure of `a` because it accesses `a`\'s variable `x`' },
+          { id: '0', answer: 'Yes, `b` is a closure of `a` because it accesses `a`\'s variables' },
           { id: '1', answer: 'No, `b` is not a closure of `a` because it does not modify `x`' },
           { id: '2', answer: 'Yes, `b` is a closure of `a` because it is defined inside `a`' },
           { id: '3', answer: 'No, `b` is not a closure of `a` because it is returned by `a`' },
@@ -3035,8 +3057,8 @@ const quizData: QuizData = {
         answers: [
           { id: '0', answer: 'A syntax extension that allows writing HTML directly within JavaScript' },
           { id: '1', answer: 'A function to make AJAX requests' },
-          { id: '2', answer: 'A library for managing forms' },
-          { id: '3', answer: 'A testing framework for React applications' },
+          { id: '2', answer: 'A syntax extention that adds the attributes "key" and "className"' },
+          { id: '3', answer: 'A syntax extention that enables higher-order functions to act as HTML' },
         ],
         correctAnswer: '0',
       },
@@ -3056,7 +3078,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'It performs side effects in the component, such as fetching data or subscribing to events' },
           { id: '1', answer: 'It manages the state of the component' },
           { id: '2', answer: 'It provides a context for the component' },
-          { id: '3', answer: 'It replaces the render method of the component' },
+          { id: '3', answer: 'It performs side effects in the component, such as performing state mutation' },
         ],
         correctAnswer: '0',
       },
@@ -3074,8 +3096,8 @@ const quizData: QuizData = {
         question: 'What does the "Virtual DOM" in React do?',
         answers: [
           { id: '0', answer: 'It is an in-memory representation of the real DOM that allows React to efficiently update the UI' },
-          { id: '1', answer: 'It is a physical DOM used for server-side rendering' },
-          { id: '2', answer: 'It is a new standard for DOM manipulation' },
+          { id: '1', answer: 'It is an in-memory representation of the shadow DOM that allows React to efficiently update the UI' },
+          { id: '2', answer: 'It is a new standard developed by Facebook for DOM manipulation' },
           { id: '3', answer: 'It is a library for accessing the DOM directly' },
         ],
         correctAnswer: '0',
@@ -3083,7 +3105,7 @@ const quizData: QuizData = {
       {
         question: 'Which of the following statements is true about props in React?',
         answers: [
-          { id: '0', answer: 'Props are read-only and used to pass data from parent to child components' },
+          { id: '0', answer: 'Props are used to pass data from parent to child components' },
           { id: '1', answer: 'Props are used to manage component state' },
           { id: '2', answer: 'Props can be modified directly within a component' },
           { id: '3', answer: 'Props are used to manage global state' },
@@ -3101,12 +3123,37 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
+        question: 'If you wanted the program below to print 1, 2, 3 to the console, what is a possible solution?',
+        code: `
+      function funcOne() {
+        console.log(1)
+      }
+
+      function funcTwo() {
+        setTimeout(() => {
+          console.log(2)
+        }, 0)
+      }
+
+      function funcThree() {
+        console.log(3)
+      }
+        `,
+        answers: [
+          { id: '0', answer: 'Ensure the main thread is an asynchronous function' },
+          { id: '1', answer: 'Make funcOne a higher-order function, pass in funcTwo and call it at the end of the function body' },
+          { id: '2', answer: 'Make funcTwo a higher-order function, pass in funcThree and call it at the end of the setTimeout block' },
+          { id: '3', answer: 'Make funcThree a higher-order function, pass in both funcOne and funcThree and call them sequentially' },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: 'In JavaScript, how can encapsulation be achieved?',
         answers: [
           { id: '0', answer: 'By using closures and modules to create private variables and methods' },
-          { id: '1', answer: 'By defining all variables and methods as global' },
-          { id: '2', answer: 'By using the `eval` function' },
-          { id: '3', answer: 'By using public properties only' },
+          { id: '1', answer: 'By using higher-order functions to set object properties' },
+          { id: '2', answer: 'By defining all of an object\'s methods and properties as private functions' },
+          { id: '3', answer: 'By using private properties only' },
         ],
         correctAnswer: '0',
       },
@@ -3123,10 +3170,10 @@ const quizData: QuizData = {
       {
         question: 'Why is encapsulation important in software development?',
         answers: [
-          { id: '0', answer: 'It helps to protect the internal state of an object from unintended or harmful modifications' },
+          { id: '0', answer: 'It helps to protect the internal state of an object from modifications' },
           { id: '1', answer: 'It allows multiple classes to inherit properties from a parent class' },
-          { id: '2', answer: 'It enables defining multiple functions with the same name' },
-          { id: '3', answer: 'It provides a way to perform multiple operations in parallel' },
+          { id: '2', answer: 'It enables directly setting an object\'s properties, such as assigning an array to a number field' },
+          { id: '3', answer: 'It details how a function returned by another function can have access to a nested function\'s private variables' },
         ],
         correctAnswer: '0',
       },
@@ -3161,8 +3208,8 @@ const quizData: QuizData = {
         answers: [
           { id: '0', answer: 'The use of private fields and methods to restrict direct access to the data' },
           { id: '1', answer: 'The ability to inherit methods from another class' },
-          { id: '2', answer: 'The definition of multiple methods with the same name' },
-          { id: '3', answer: 'The use of public fields and methods' },
+          { id: '2', answer: 'The ability to directly assign new values to an object\'s private variables' },
+          { id: '3', answer: 'The use of public fields and methods to restrict direct access to the data' },
         ],
         correctAnswer: '0',
       },
@@ -3170,8 +3217,8 @@ const quizData: QuizData = {
         question: 'What is encapsulation in object-oriented programming?',
         answers: [
           { id: '0', answer: 'Encapsulation is the concept of bundling data and methods that operate on that data within a single unit or class' },
-          { id: '1', answer: 'Encapsulation is the process of inheriting properties from another class' },
-          { id: '2', answer: 'Encapsulation is the method of defining multiple functions with the same name' },
+          { id: '1', answer: 'Encapsulation is the process of inheriting properties from another class where all methods remain private' },
+          { id: '2', answer: 'Encapsulation is the principle that classes should only declare private variables so as to not compromise validation' },
           { id: '3', answer: 'Encapsulation is a way to implement polymorphism' },
         ],
         correctAnswer: '0',
@@ -3186,6 +3233,189 @@ const quizData: QuizData = {
         ],
         correctAnswer: '2',
       },
+      {
+        question: 'What is a race condition?',
+        answers: [
+          { id: '0', answer: 'A situation where the behavior of software depends on the timing or sequence of uncontrollable events' },
+          { id: '1', answer: 'A condition where two functions execute in parallel without dependencies' },
+          { id: '2', answer: 'A scenario where two promises output different results even when executed simultaneously' },
+          { id: '3', answer: 'A situation where multiple users access a resource simultaneously' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes how to avoid race conditions?',
+        answers: [
+          { id: '0', answer: 'By using synchronization mechanisms like locks, semaphores, or atomic operations' },
+          { id: '1', answer: 'By chaining promises in a synchronous, sequential manner' },
+          { id: '2', answer: 'By running code sequentially without any concurrency' },
+          { id: '3', answer: 'By using methods such as setTimeout in tandem with promises so as to create check-gaps' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which scenario could potentially cause a race condition?',
+        answers: [
+          { id: '0', answer: 'Two threads updating the same shared variable simultaneously' },
+          { id: '1', answer: 'Two independent processes running on different machines' },
+          { id: '2', answer: 'A single-threaded program executing sequentially' },
+          { id: '3', answer: 'A program reading a constant value multiple times' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary consequence of a race condition?',
+        answers: [
+          { id: '0', answer: 'Unpredictable behavior and incorrect results due to timing issues' },
+          { id: '1', answer: 'A promise failing to resolve because of lack of memory allocation' },
+          { id: '2', answer: 'A program running out of memory' },
+          { id: '3', answer: 'A single-threaded application experiencing delays' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can race conditions be detected during development?',
+        answers: [
+          { id: '0', answer: 'By using tools like thread sanitizers and race condition detectors' },
+          { id: '1', answer: 'By measuring the execution time of functions' },
+          { id: '2', answer: 'By monitoring memory usage' },
+          { id: '3', answer: 'By checking for syntax errors' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can you create a higher-order function in JavaScript?',
+        answers: [
+          { id: '0', answer: 'By writing a function that accepts another function as an argument or returns a function' },
+          { id: '1', answer: 'By using global variables inside a function' },
+          { id: '2', answer: 'By writing a function that contains nested loops' },
+          { id: '3', answer: 'By creating an immediately invoked function expression (IIFE)' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of these is NOT a higher-order function?',
+        answers: [
+          { id: '0', answer: 'setTimeout()' },
+          { id: '1', answer: 'filter()' },
+          { id: '2', answer: 'map()' },
+          { id: '3', answer: 'alert()' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Why are higher-order functions useful?',
+        answers: [
+          { id: '0', answer: 'They allow for more abstract and reusable code by handling functions as first-class citizens' },
+          { id: '1', answer: 'They execute faster than regular functions' },
+          { id: '2', answer: 'They can only be used in asynchronous programming' },
+          { id: '3', answer: 'They are required for error handling' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is an example of a higher-order function?',
+        answers: [
+          { id: '0', answer: 'Array.prototype.map()' },
+          { id: '1', answer: 'console.log()' },
+          { id: '2', answer: 'Math.random()' },
+          { id: '3', answer: 'parseInt()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a higher-order function in JavaScript?',
+        answers: [
+          { id: '0', answer: 'A function that takes another function as an argument or returns a function as a result' },
+          { id: '1', answer: 'A function that returns a string' },
+          { id: '2', answer: 'A function that runs only once' },
+          { id: '3', answer: 'A function that is called immediately after it is defined' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the Shadow DOM in web development?',
+        answers: [
+          { id: '0', answer: 'A separate, encapsulated DOM tree that is isolated from the main DOM' },
+          { id: '1', answer: 'A separate, encapsulated DOM tree for directly styling elements' },
+          { id: '2', answer: 'A separate, encapsulated DOM tree for imperatively styling elements' },
+          { id: '3', answer: 'A separate, encapsulated DOM tree for styling elements with JavaScript' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes the purpose of the Shadow DOM?',
+        answers: [
+          { id: '0', answer: 'To encapsulate styles and markup, preventing them from affecting the rest of the document' },
+          { id: '1', answer: 'To encapsulate styles and markup in compliance with object-oriented programming principles' },
+          { id: '2', answer: 'To encapsulate styles and markup, preventing developers from changing certain styling' },
+          { id: '3', answer: 'To encapsulate styles and markup and optimize the initial page rendering' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How do you create a Shadow DOM in JavaScript?',
+        answers: [
+          { id: '0', answer: 'Using the attachShadow method on an element' },
+          { id: '1', answer: 'Using the createShadow method on an element' },
+          { id: '2', answer: 'Using the shadowRoot property directly' },
+          { id: '3', answer: 'Using the new Shadow() constructor' },
+        ],
+        correctAnswer: '0',
+      }, {
+        question: 'Which of the following can be encapsulated within the Shadow DOM?',
+        answers: [
+          { id: '0', answer: 'Styles and markup' },
+          { id: '1', answer: 'Only markup' },
+          { id: '2', answer: 'Only JavaScript code' },
+          { id: '3', answer: 'Global variables' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the advantage of using the Shadow DOM?',
+        answers: [
+          { id: '0', answer: 'It prevents style and markup conflicts by encapsulating them within a separate DOM tree' },
+          { id: '1', answer: 'It improves server-side rendering performance' },
+          { id: '2', answer: 'It allows JavaScript to run in a separate thread' },
+          { id: '3', answer: 'It enables the use of deprecated HTML tags' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What can cause long initial page loading (i.e. blocked UI)?',
+        answers: [
+          { id: '0', answer: 'Long, complex style sheets' },
+          { id: '1', answer: 'Large images or text files in the bundle' },
+          { id: '2', answer: 'A slow initial data fetch from the server' },
+          { id: '3', answer: 'Code that attaches too many event listeners' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Where are you likely to encounter UI blocking?',
+        answers: [
+          { id: '0', answer: 'Using a Software as a Service (SAAS) application without a subscription' },
+          { id: '1', answer: 'Loading a page with lazy loaded images' },
+          { id: '2', answer: 'Loading an AI chat with many chat messages' },
+          { id: '3', answer: 'It enables the use of deprecated HTML tags' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the correct inference from the line of code below?',
+        code: `
+      Array.prototype.map()
+        `,
+        answers: [
+          { id: '0', answer: '"Map" is a method of "prototype"' },
+          { id: '1', answer: '"prototype" is a method of "Array"' },
+          { id: '2', answer: 'Arrays belong to a class of objects "prototype"' },
+          { id: '3', answer: 'All arrays have a method "map"' },
+        ],
+        correctAnswer: '1',
+      },
+
     ],
   },
   python: {
@@ -3552,10 +3782,10 @@ const quizData: QuizData = {
       {
         question: 'Which of the following is true about Python decorators?',
         answers: [
-          { id: '0', answer: 'Decorators are a form of metaprogramming' },
-          { id: '1', answer: 'Decorators can modify the behavior of a function' },
-          { id: '2', answer: 'Decorators can be stacked' },
-          { id: '3', answer: 'All of the above' },
+          { id: '0', answer: 'Decorators are a form of metaprogramming', order: 0 },
+          { id: '1', answer: 'Decorators can modify the behavior of a function', order: 1 },
+          { id: '2', answer: 'Decorators can be stacked', order: 2 },
+          { id: '3', answer: 'All of the above', order: 3 },
         ],
         correctAnswer: '3',
       },
@@ -3575,7 +3805,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'They provide a concise way to create lists' },
           { id: '1', answer: 'They can include conditionals' },
           { id: '2', answer: 'They are more readable than for-loops for creating lists' },
-          { id: '3', answer: 'All of the above' },
+          { id: '3', answer: 'All of the above', order: 3 },
         ],
         correctAnswer: '3',
       },
@@ -3679,11 +3909,141 @@ const quizData: QuizData = {
         ],
         correctAnswer: '1',
       },
+
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      numbers = [1, 2, 3, 4, 5]
+      squares = [n**2 for n in numbers]
+      print(squares)
+        `,
+        answers: [
+          { id: '0', answer: '[1, 4, 9, 16, 25]' },
+          { id: '1', answer: '[1, 2, 3, 4, 5]' },
+          { id: '2', answer: '[2, 3, 4, 5, 6]' },
+          { id: '3', answer: '[1, 8, 27, 64, 125]' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can you create a list of even numbers from 0 to 20 using list comprehension?',
+        answers: [
+          { id: '0', answer: '[x for x in range(21) if x % 2 == 0]' },
+          { id: '1', answer: '[x for x in range(21) if x % 2 != 0]' },
+          { id: '2', answer: '[x for x in range(20) if x % 2 == 0]' },
+          { id: '3', answer: '[x for x in range(20) if x % 2 != 0]' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the following list comprehension do?',
+        code: `
+      [n for n in range(10) if n % 2 == 0]
+        `,
+        answers: [
+          { id: '0', answer: 'Creates a list of even numbers from 0 to 9' },
+          { id: '1', answer: 'Creates a list of odd numbers from 0 to 9' },
+          { id: '2', answer: 'Creates a list of numbers from 0 to 9' },
+          { id: '3', answer: 'Creates a list of numbers from 2 to 10' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      words = ['hello', 'world']
+      capitalized = [word.upper() for word in words]
+      print(capitalized)
+        `,
+        answers: [
+          { id: '0', answer: '[\'HELLO\', \'WORLD\']' },
+          { id: '1', answer: '[\'hello\', \'world\']' },
+          { id: '2', answer: '[\'Hello\', \'World\']' },
+          { id: '3', answer: '[\'HELLO\', \'WORLD\', \'HELLO\', \'WORLD\']' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can you create a list of the squares of even numbers from 0 to 10 using list comprehension?',
+        answers: [
+          { id: '0', answer: '[x**2 for x in range(11) if x % 2 == 0]' },
+          { id: '1', answer: '[x**2 for x in range(10) if x % 2 == 0]' },
+          { id: '2', answer: '[x**2 for x in range(11) if x % 2 != 0]' },
+          { id: '3', answer: '[x**2 for x in range(10) if x % 2 != 0]' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the following list comprehension do?',
+        code: `
+      [letter for letter in 'hello']
+        `,
+        answers: [
+          { id: '0', answer: 'Creates a list of characters in the string "hello"' },
+          { id: '1', answer: 'Creates a list of words in the string "hello"' },
+          { id: '2', answer: 'Creates a list of strings "hello"' },
+          { id: '3', answer: 'Creates a list of integers from the string "hello"' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can you filter out negative numbers from a list using list comprehension?',
+        answers: [
+          { id: '0', answer: '[x for x in numbers if x >= 0]' },
+          { id: '1', answer: '[x for x in numbers if x < 0]' },
+          { id: '2', answer: '[x for x in numbers if x == 0]' },
+          { id: '3', answer: '[x for x in numbers if x != 0]' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      matrix = [[1, 2], [3, 4]]
+      flat = [num for row in matrix for num in row]
+      print(flat)
+        `,
+        answers: [
+          { id: '0', answer: '[1, 2, 3, 4]' },
+          { id: '1', answer: '[1, 2], [3, 4]' },
+          { id: '2', answer: '[[1, 2, 3, 4]]' },
+          { id: '3', answer: '[1], [2], [3], [4]' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the following list comprehension?',
+        code: `
+      [x if x % 2 == 0 else -x for x in range(10)]
+        `,
+        answers: [
+          { id: '0', answer: 'Creates a list of numbers from 0 to 9 where even numbers are positive and odd numbers are negative' },
+          { id: '1', answer: 'Creates a list of numbers from 0 to 9 where even numbers are negative and odd numbers are positive' },
+          { id: '2', answer: 'Creates a list of numbers from 0 to 9 where all numbers are positive' },
+          { id: '3', answer: 'Creates a list of numbers from 0 to 9 where all numbers are negative' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      nums = [1, 2, 3, 4]
+      result = [x * y for x in nums for y in nums]
+      print(result)
+    `,
+        answers: [
+          { id: '0', answer: '[1, 2, 3, 4, 2, 4, 6, 8, 3, 6, 9, 12, 4, 8, 12, 16]' },
+          { id: '1', answer: '[1, 4, 9, 16]' },
+          { id: '2', answer: '[2, 4, 6, 8]' },
+          { id: '3', answer: '[1, 2, 3, 4]' },
+        ],
+        correctAnswer: '0',
+      },
     ],
   },
   // ===========
-  'machine-learning-advanced': {
-    name: 'Advanced Machine Learning',
+  'machine-learning': {
+    name: 'Machine Learning',
     questions: [
       {
         question: 'Which Python library is known for its powerful data structures and data analysis tools?',
@@ -4048,10 +4408,10 @@ const quizData: QuizData = {
       {
         question: 'Which of the following is a common method of tokenization?',
         answers: [
-          { id: '0', answer: 'Character-level tokenization' },
-          { id: '1', answer: 'Word-level tokenization' },
-          { id: '2', answer: 'Subword tokenization' },
-          { id: '3', answer: 'All of the above' },
+          { id: '0', answer: 'Character-level tokenization', order: 0 },
+          { id: '1', answer: 'Word-level tokenization', order: 1 },
+          { id: '2', answer: 'Subword tokenization', order: 2 },
+          { id: '3', answer: 'All of the above', order: 3 },
         ],
         correctAnswer: '3',
       },
@@ -4078,20 +4438,20 @@ const quizData: QuizData = {
       {
         question: 'What is a benefit of subword tokenization?',
         answers: [
-          { id: '0', answer: 'It simplifies the tokenization process' },
-          { id: '1', answer: 'It handles out-of-vocabulary words effectively' },
-          { id: '2', answer: 'It reduces the size of the vocabulary' },
-          { id: '3', answer: 'Both 1 and 2' },
+          { id: '0', answer: 'It simplifies the tokenization process', order: 0 },
+          { id: '1', answer: 'It handles out-of-vocabulary words effectively', order: 1 },
+          { id: '2', answer: 'It reduces the size of the vocabulary', order: 2 },
+          { id: '3', answer: 'Both 1 and 2', order: 3 },
         ],
         correctAnswer: '3',
       },
       {
         question: 'Which of the following algorithms is used for subword tokenization?',
         answers: [
-          { id: '0', answer: 'WordPiece' },
-          { id: '1', answer: 'Byte-Pair Encoding (BPE)' },
-          { id: '2', answer: 'Unigram Language Model' },
-          { id: '3', answer: 'All of the above' },
+          { id: '0', answer: 'WordPiece', order: 0 },
+          { id: '1', answer: 'Byte-Pair Encoding (BPE)', order: 1 },
+          { id: '2', answer: 'Unigram Language Model', order: 2 },
+          { id: '3', answer: 'All of the above', order: 3 },
         ],
         correctAnswer: '3',
       },
@@ -4235,7 +4595,876 @@ const quizData: QuizData = {
         ],
         correctAnswer: '2',
       },
-
+      {
+        question: 'What is the primary goal of clustering in machine learning?',
+        answers: [
+          { id: '0', answer: 'To classify data points into predefined categories' },
+          { id: '1', answer: 'To group similar data points together based on their features' },
+          { id: '2', answer: 'To reduce the dimensionality of the data' },
+          { id: '3', answer: 'To improve the accuracy of supervised learning models' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Clustering is comparable to which concept?',
+        answers: [
+          { id: '0', answer: 'Optimization' },
+          { id: '1', answer: 'Data validation' },
+          { id: '2', answer: 'Vector database logic' },
+          { id: '3', answer: 'Scalability' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which clustering algorithm is based on minimizing the sum of squared distances between data points and their corresponding cluster centroid?',
+        answers: [
+          { id: '0', answer: 'K-means' },
+          { id: '1', answer: 'DBSCAN' },
+          { id: '2', answer: 'Agglomerative clustering' },
+          { id: '3', answer: 'Gaussian Mixture Models' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which clustering algorithm is best suited for discovering clusters of varying shapes and densities?',
+        answers: [
+          { id: '0', answer: 'K-means' },
+          { id: '1', answer: 'DBSCAN' },
+          { id: '2', answer: 'Agglomerative clustering' },
+          { id: '3', answer: 'K-medoids' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a common method for evaluating the quality of clustering results?',
+        answers: [
+          { id: '0', answer: 'Accuracy' },
+          { id: '1', answer: 'Precision' },
+          { id: '2', answer: 'Silhouette score' },
+          { id: '3', answer: 'F1-score' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a hierarchical clustering method?',
+        answers: [
+          { id: '0', answer: 'K-means' },
+          { id: '1', answer: 'DBSCAN' },
+          { id: '2', answer: 'Agglomerative clustering' },
+          { id: '3', answer: 'Mean Shift' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is a neural network in the context of machine learning?',
+        answers: [
+          { id: '0', answer: 'A network of biological neurons in the brain' },
+          { id: '1', answer: 'A computational model inspired by the way biological neural networks in the brain process information' },
+          { id: '2', answer: 'A network of interconnected computers' },
+          { id: '3', answer: 'A model used for clustering data' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a neuron (or node) in a neural network?',
+        answers: [
+          { id: '0', answer: 'A computational unit that processes input data and generates an output' },
+          { id: '1', answer: 'A type of machine learning algorithm' },
+          { id: '2', answer: 'A method for dimensionality reduction' },
+          { id: '3', answer: 'A data preprocessing technique' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of an activation function in a neural network?',
+        answers: [
+          { id: '0', answer: 'To initialize the weights of the network' },
+          { id: '1', answer: 'To introduce non-linearity into the model' },
+          { id: '2', answer: 'To cluster data points' },
+          { id: '3', answer: 'To reduce the dimensionality of the data' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a commonly used activation function?',
+        answers: [
+          { id: '0', answer: 'ReLU (Rectified Linear Unit)' },
+          { id: '1', answer: 'Principal Component Analysis' },
+          { id: '2', answer: 'K-means' },
+          { id: '3', answer: 'Gradient Descent' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a feedforward neural network?',
+        answers: [
+          { id: '0', answer: 'A neural network where connections between the nodes do not form a cycle' },
+          { id: '1', answer: 'A neural network that includes loops' },
+          { id: '2', answer: 'A neural network used for unsupervised learning' },
+          { id: '3', answer: 'A type of clustering algorithm' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary function of the backpropagation algorithm?',
+        answers: [
+          { id: '0', answer: 'To preprocess the input data' },
+          { id: '1', answer: 'To optimize the weights of the network by minimizing the error' },
+          { id: '2', answer: 'To cluster the data' },
+          { id: '3', answer: 'To reduce the dimensionality of the data' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is an epoch in the context of training a neural network?',
+        answers: [
+          { id: '0', answer: 'One complete forward and backward pass of all the training examples' },
+          { id: '1', answer: 'The initialization of weights' },
+          { id: '2', answer: 'A single iteration of the gradient descent algorithm' },
+          { id: '3', answer: 'The splitting of data into training and testing sets' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is overfitting in neural networks?',
+        answers: [
+          { id: '0', answer: 'When the model performs well on training data but poorly on unseen data' },
+          { id: '1', answer: 'When the model performs well on both training and unseen data' },
+          { id: '2', answer: 'When the model has too few parameters to capture the underlying trend' },
+          { id: '3', answer: 'When the model does not perform well on training data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the role of the learning rate in training a neural network?',
+        answers: [
+          { id: '0', answer: 'To determine the size of the steps taken to reach the minimum of the loss function' },
+          { id: '1', answer: 'To determine the number of neurons in each layer' },
+          { id: '2', answer: 'To preprocess the input data' },
+          { id: '3', answer: 'To cluster the data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which technique is used to prevent overfitting in neural networks?',
+        answers: [
+          { id: '0', answer: 'Increasing the learning rate' },
+          { id: '1', answer: 'Using dropout regularization' },
+          { id: '2', answer: 'Decreasing the number of hidden layers' },
+          { id: '3', answer: 'Using the entire dataset as a training set' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does NLP stand for?',
+        answers: [
+          { id: '0', answer: 'Natural Language Processing' },
+          { id: '1', answer: 'Neural Language Processing' },
+          { id: '2', answer: 'Natural Logic Programming' },
+          { id: '3', answer: 'Neural Logic Programming' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary goal of NLP?',
+        answers: [
+          { id: '0', answer: 'To enable computers to understand and process human languages' },
+          { id: '1', answer: 'To translate human languages to binary code' },
+          { id: '2', answer: 'To develop new programming languages' },
+          { id: '3', answer: 'To create human-like robots' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a common application of NLP?',
+        answers: [
+          { id: '0', answer: 'Sentiment Analysis' },
+          { id: '1', answer: 'Web Development' },
+          { id: '2', answer: 'Image Recognition' },
+          { id: '3', answer: 'Cryptography' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is tokenization in NLP?',
+        answers: [
+          { id: '0', answer: 'Breaking down text into individual words or phrases' },
+          { id: '1', answer: 'Combining multiple texts into one' },
+          { id: '2', answer: 'Encrypting text data' },
+          { id: '3', answer: 'Translating text from one language to another' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which library is commonly used for NLP tasks in Python?',
+        answers: [
+          { id: '0', answer: 'NLTK' },
+          { id: '1', answer: 'Pandas' },
+          { id: '2', answer: 'Matplotlib' },
+          { id: '3', answer: 'TensorFlow' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the term "stemming" refer to in NLP?',
+        answers: [
+          { id: '0', answer: 'Reducing words to their base or root form' },
+          { id: '1', answer: 'Classifying text into categories' },
+          { id: '2', answer: 'Translating text from one language to another' },
+          { id: '3', answer: 'Generating new sentences from given words' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of a stop word list in NLP?',
+        answers: [
+          { id: '0', answer: 'To remove common words that do not contribute much meaning' },
+          { id: '1', answer: 'To highlight important words' },
+          { id: '2', answer: 'To categorize words into parts of speech' },
+          { id: '3', answer: 'To translate text' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is an example of a stop word?',
+        answers: [
+          { id: '0', answer: 'The' },
+          { id: '1', answer: 'Computer' },
+          { id: '2', answer: 'Machine' },
+          { id: '3', answer: 'Learning' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the Bag of Words model used for in NLP?',
+        answers: [
+          { id: '0', answer: 'Text representation' },
+          { id: '1', answer: 'Speech recognition' },
+          { id: '2', answer: 'Machine translation' },
+          { id: '3', answer: 'Image classification' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is lemmatization?',
+        answers: [
+          { id: '0', answer: 'Reducing words to their dictionary form' },
+          { id: '1', answer: 'Removing punctuation from text' },
+          { id: '2', answer: 'Counting the frequency of words' },
+          { id: '3', answer: 'Tokenizing text into sentences' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a unigram in NLP?',
+        answers: [
+          { id: '0', answer: 'A single word or token' },
+          { id: '1', answer: 'A pair of words' },
+          { id: '2', answer: 'A sequence of three words' },
+          { id: '3', answer: 'A sequence of four words' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a bigram?',
+        answers: [
+          { id: '0', answer: 'A pair of consecutive words' },
+          { id: '1', answer: 'A single word' },
+          { id: '2', answer: 'A sequence of three words' },
+          { id: '3', answer: 'A sequence of four words' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does Named Entity Recognition (NER) do?',
+        answers: [
+          { id: '0', answer: 'Identifies and classifies named entities in text' },
+          { id: '1', answer: 'Counts the number of words in a text' },
+          { id: '2', answer: 'Translates text from one language to another' },
+          { id: '3', answer: 'Generates new text' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is an example of a named entity?',
+        answers: [
+          { id: '0', answer: 'New York City' },
+          { id: '1', answer: 'Run' },
+          { id: '2', answer: 'Quickly' },
+          { id: '3', answer: 'The' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does POS tagging stand for?',
+        answers: [
+          { id: '0', answer: 'Part of Speech tagging' },
+          { id: '1', answer: 'Point of Sale tagging' },
+          { id: '2', answer: 'Position of Sentence tagging' },
+          { id: '3', answer: 'Portion of Speech tagging' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is sentiment analysis?',
+        answers: [
+          { id: '0', answer: 'Determining the sentiment or emotion expressed in text' },
+          { id: '1', answer: 'Identifying the main topics in a text' },
+          { id: '2', answer: 'Translating text from one language to another' },
+          { id: '3', answer: 'Classifying text into different genres' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a common method for vectorizing text?',
+        answers: [
+          { id: '0', answer: 'TF-IDF' },
+          { id: '1', answer: 'RGB' },
+          { id: '2', answer: 'JPEG' },
+          { id: '3', answer: 'GIF' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of word embeddings?',
+        answers: [
+          { id: '0', answer: 'To represent words in continuous vector space' },
+          { id: '1', answer: 'To translate words from one language to another' },
+          { id: '2', answer: 'To count the frequency of words' },
+          { id: '3', answer: 'To identify the part of speech of words' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a popular word embedding model?',
+        answers: [
+          { id: '0', answer: 'Word2Vec' },
+          { id: '1', answer: 'Word3Vec' },
+          { id: '2', answer: 'Word4Vec' },
+          { id: '3', answer: 'Word5Vec' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a corpus in NLP?',
+        answers: [
+          { id: '0', answer: 'A large collection of texts used for training NLP models' },
+          { id: '1', answer: 'A small paragraph of text' },
+          { id: '2', answer: 'A single sentence' },
+          { id: '3', answer: 'A specific word' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the main goal of stemming in NLP?',
+        answers: [
+          { id: '0', answer: 'To reduce words to their base or root form' },
+          { id: '1', answer: 'To translate text into another language' },
+          { id: '2', answer: 'To count the frequency of words in a text' },
+          { id: '3', answer: 'To identify named entities in a text' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following words is the stem of "running"?',
+        answers: [
+          { id: '0', answer: 'run' },
+          { id: '1', answer: 'runner' },
+          { id: '2', answer: 'runs' },
+          { id: '3', answer: 'ran' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which algorithm is commonly used for stemming in NLP?',
+        answers: [
+          { id: '0', answer: 'Porter Stemmer' },
+          { id: '1', answer: 'Word2Vec' },
+          { id: '2', answer: 'K-means Clustering' },
+          { id: '3', answer: 'Latent Dirichlet Allocation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a potential drawback of stemming?',
+        answers: [
+          { id: '0', answer: 'It may cut off meaningful parts of words, reducing accuracy' },
+          { id: '1', answer: 'It increases the length of the text' },
+          { id: '2', answer: 'It is only applicable to English texts' },
+          { id: '3', answer: 'It cannot be automated' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the difference between stemming and lemmatization?',
+        answers: [
+          { id: '0', answer: 'Stemming cuts off word endings, while lemmatization uses the word\'s dictionary form' },
+          { id: '1', answer: 'Stemming adds suffixes to words, while lemmatization removes them' },
+          { id: '2', answer: 'Stemming translates text, while lemmatization tokenizes it' },
+          { id: '3', answer: 'There is no difference' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Who developed the Porter Stemmer algorithm?',
+        answers: [
+          { id: '0', answer: 'Martin Porter' },
+          { id: '1', answer: 'Alan Turing' },
+          { id: '2', answer: 'Geoffrey Hinton' },
+          { id: '3', answer: 'Andrew Ng' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In what year was the Porter Stemmer algorithm first published?',
+        answers: [
+          { id: '0', answer: '1980' },
+          { id: '1', answer: '1975' },
+          { id: '2', answer: '1995' },
+          { id: '3', answer: '2000' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a primary characteristic of the Porter Stemmer algorithm?',
+        answers: [
+          { id: '0', answer: 'It applies a series of rules to iteratively reduce words to their stems' },
+          { id: '1', answer: 'It uses machine learning models to identify stems' },
+          { id: '2', answer: 'It translates text into another language' },
+          { id: '3', answer: 'It counts the frequency of words in a text' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a notable advantage of using the Porter Stemmer?',
+        answers: [
+          { id: '0', answer: 'It is computationally efficient and simple to implement' },
+          { id: '1', answer: 'It produces highly accurate translations' },
+          { id: '2', answer: 'It can understand context and semantics' },
+          { id: '3', answer: 'It can handle multiple languages simultaneously' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a potential limitation of the Porter Stemmer algorithm?',
+        answers: [
+          { id: '0', answer: 'It may produce stems that are not actual words' },
+          { id: '1', answer: 'It is too slow for real-time applications' },
+          { id: '2', answer: 'It requires large amounts of labeled data' },
+          { id: '3', answer: 'It can only process text in English' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Evaluate: The Porter Stemmer can be used for words in languages other than English, such as Russian or Arabic',
+        answers: [
+          { id: '0', answer: 'No, it is primarily designed for the English language and may not perform well on other languages' },
+          { id: '1', answer: 'Yes, it works equally well for all languages' },
+          { id: '2', answer: 'Yes, but with significant modifications' },
+          { id: '3', answer: 'No, stemming is only useful for English text' },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+  },
+  // ===========
+  java: {
+    name: 'Java',
+    questions: [
+      {
+        question: 'Which of the following is not a Java feature?',
+        answers: [
+          { id: '0', answer: 'Object-oriented' },
+          { id: '1', answer: 'Use of pointers' },
+          { id: '2', answer: 'Portable' },
+          { id: '3', answer: 'Dynamic' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which memory area is not directly managed by the JVM?',
+        answers: [
+          { id: '0', answer: 'Heap' },
+          { id: '1', answer: 'Stack' },
+          { id: '2', answer: 'Native Method Stack' },
+          { id: '3', answer: 'Register' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Java achieves platform independence through which mechanism?',
+        answers: [
+          { id: '0', answer: 'Bytecode' },
+          { id: '1', answer: 'Java Compiler' },
+          { id: '2', answer: 'Just-In-Time Compiler' },
+          { id: '3', answer: 'Java Virtual Machine' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a valid declaration of a char?',
+        answers: [
+          { id: '0', answer: 'char ch = "Z";' },
+          { id: '1', answer: 'char ch = Z;' },
+          { id: '2', answer: 'char ch = \'Z\';' },
+          { id: '3', answer: 'char ch = 7;' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which keyword is used to prevent inheritance of a class in Java?',
+        answers: [
+          { id: '0', answer: 'static' },
+          { id: '1', answer: 'final' },
+          { id: '2', answer: 'abstract' },
+          { id: '3', answer: 'extends' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which exception is thrown when Java cannot allocate an object because it is out of memory?',
+        answers: [
+          { id: '0', answer: 'MemoryError' },
+          { id: '1', answer: 'OutOfMemoryError' },
+          { id: '2', answer: 'MemoryAllocationException' },
+          { id: '3', answer: 'MemoryAccessException' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is not a wrapper class in Java?',
+        answers: [
+          { id: '0', answer: 'Byte' },
+          { id: '1', answer: 'Integer' },
+          { id: '2', answer: 'Character' },
+          { id: '3', answer: 'String' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which method must be defined by a Java class implementing the java.lang.Runnable interface?',
+        answers: [
+          { id: '0', answer: 'void run()' },
+          { id: '1', answer: 'void start()' },
+          { id: '2', answer: 'void main()' },
+          { id: '3', answer: 'void execute()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which package is imported by default in every Java program?',
+        answers: [
+          { id: '0', answer: 'java.util' },
+          { id: '1', answer: 'java.lang' },
+          { id: '2', answer: 'java.io' },
+          { id: '3', answer: 'java.net' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is the correct way to declare an abstract class?',
+        answers: [
+          { id: '0', answer: 'public class MyClass abstract' },
+          { id: '1', answer: 'abstract public class MyClass' },
+          { id: '2', answer: 'abstract class MyClass' },
+          { id: '3', answer: 'abstract MyClass class' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which method is called when an object is made available for garbage collection?',
+        answers: [
+          { id: '0', answer: 'finalize()' },
+          { id: '1', answer: 'garbageCollect()' },
+          { id: '2', answer: 'destruct()' },
+          { id: '3', answer: 'clean()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      public class Test {
+        public static void main(String[] args) {
+          System.out.println("Hello, World!");
+        }
+      }
+        `,
+        answers: [
+          { id: '0', answer: 'Hello, World!' },
+          { id: '1', answer: 'hello, world!' },
+          { id: '2', answer: 'HELLO, WORLD!' },
+          { id: '3', answer: 'None of the above' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of these cannot be used for a variable name in Java?',
+        answers: [
+          { id: '0', answer: 'identifier' },
+          { id: '1', answer: 'keyword' },
+          { id: '2', answer: 'name' },
+          { id: '3', answer: 'string' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which statement is true about Java bytecode?',
+        answers: [
+          { id: '0', answer: 'It can be directly executed by the JVM.' },
+          { id: '1', answer: 'It is platform-independent.' },
+          { id: '2', answer: 'It is the source code of a Java program.' },
+          { id: '3', answer: 'It is written in binary code.' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the result of compiling and running the following code?',
+        code: `
+      public class Test {
+        public static void main(String[] args) {
+          int x = 5;
+          System.out.println(x++);
+        }
+      }
+        `,
+        answers: [
+          { id: '0', answer: '6' },
+          { id: '1', answer: '5' },
+          { id: '2', answer: 'Compilation error' },
+          { id: '3', answer: 'Runtime error' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is not a Java access modifier?',
+        answers: [
+          { id: '0', answer: 'private' },
+          { id: '1', answer: 'protected' },
+          { id: '2', answer: 'public' },
+          { id: '3', answer: 'internal' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'In Java, which operator is used to concatenate two strings?',
+        answers: [
+          { id: '0', answer: '+' },
+          { id: '1', answer: '&' },
+          { id: '2', answer: '||' },
+          { id: '3', answer: '==' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which method is used to convert an object into a byte stream in Java?',
+        answers: [
+          { id: '0', answer: 'serialize()' },
+          { id: '1', answer: 'marshal()' },
+          { id: '2', answer: 'deserialize()' },
+          { id: '3', answer: 'stream()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is used to find and fix bugs in the Java programs?',
+        answers: [
+          { id: '0', answer: 'JVM' },
+          { id: '1', answer: 'JRE' },
+          { id: '2', answer: 'JDK' },
+          { id: '3', answer: 'JDB' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the extension of compiled Java classes?',
+        answers: [
+          { id: '0', answer: '.java' },
+          { id: '1', answer: '.class' },
+          { id: '2', answer: '.txt' },
+          { id: '3', answer: '.exe' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does the expression 5 & 1 evaluate to in Java?',
+        answers: [
+          { id: '0', answer: '1' },
+          { id: '1', answer: '0' },
+          { id: '2', answer: '5' },
+          { id: '3', answer: '4' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which method in Java is used to compare two strings lexicographically?',
+        answers: [
+          { id: '0', answer: 'equals()' },
+          { id: '1', answer: 'compare()' },
+          { id: '2', answer: 'compareTo()' },
+          { id: '3', answer: 'equalsIgnoreCase()' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      public class Test {
+        public static void main(String[] args) {
+          String s1 = "hello";
+          String s2 = "hello";
+          System.out.println(s1 == s2);
+        }
+      }
+        `,
+        answers: [
+          { id: '0', answer: 'true' },
+          { id: '1', answer: 'false' },
+          { id: '2', answer: 'Compilation error' },
+          { id: '3', answer: 'Runtime error' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a marker interface?',
+        answers: [
+          { id: '0', answer: 'Serializable' },
+          { id: '1', answer: 'Comparable' },
+          { id: '2', answer: 'Cloneable' },
+          { id: '3', answer: 'Runnable' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the output of the following code?',
+        code: `
+      public class Test {
+        public static void main(String[] args) {
+          int a = 10;
+          int b = 20;
+          int c = a + b;
+          System.out.println(c);
+        }
+      }
+        `,
+        answers: [
+          { id: '0', answer: '10' },
+          { id: '1', answer: '20' },
+          { id: '2', answer: '30' },
+          { id: '3', answer: '40' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which exception is thrown when an array is accessed with an illegal index?',
+        answers: [
+          { id: '0', answer: 'ArrayIndexOutOfBoundsException' },
+          { id: '1', answer: 'IndexOutOfBoundsException' },
+          { id: '2', answer: 'NullPointerException' },
+          { id: '3', answer: 'IllegalArgumentException' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary programming paradigm used by WebFlux?',
+        answers: [
+          { id: '0', answer: 'Procedural Programming' },
+          { id: '1', answer: 'Object-Oriented Programming' },
+          { id: '2', answer: 'Reactive Programming' },
+          { id: '3', answer: 'Functional Programming' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which Project Reactor class is used to represent a sequence of 0..N items?',
+        answers: [
+          { id: '0', answer: 'Mono' },
+          { id: '1', answer: 'Flux' },
+          { id: '2', answer: 'Stream' },
+          { id: '3', answer: 'Observable' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In WebFlux, which class represents a single value or an empty value?',
+        answers: [
+          { id: '0', answer: 'Mono' },
+          { id: '1', answer: 'Flux' },
+          { id: '2', answer: 'Optional' },
+          { id: '3', answer: 'Single' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a key benefit of using WebFlux over traditional Spring MVC?',
+        answers: [
+          { id: '0', answer: 'Better support for microservices' },
+          { id: '1', answer: 'Improved UI design' },
+          { id: '2', answer: 'Higher performance and scalability with asynchronous processing' },
+          { id: '3', answer: 'Easier to write synchronous code' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the purpose of the @EnableWebFlux annotation in a Spring application?',
+        answers: [
+          { id: '0', answer: 'To enable WebFlux support in the application' },
+          { id: '1', answer: 'To configure the data source' },
+          { id: '2', answer: 'To enable Spring Boot auto-configuration' },
+          { id: '3', answer: 'To enable transaction management' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which method is used to subscribe to a Mono or Flux?',
+        answers: [
+          { id: '0', answer: 'register()' },
+          { id: '1', answer: 'execute()' },
+          { id: '2', answer: 'subscribe()' },
+          { id: '3', answer: 'run()' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'In the context of WebFlux, what does backpressure refer to?',
+        answers: [
+          { id: '0', answer: 'A mechanism to control the flow of data and prevent overwhelming the consumer' },
+          { id: '1', answer: 'A way to cache data' },
+          { id: '2', answer: 'A method to handle exceptions' },
+          { id: '3', answer: 'A feature to optimize memory usage' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which operator in Project Reactor is used to transform the items emitted by a Flux?',
+        answers: [
+          { id: '0', answer: 'map()' },
+          { id: '1', answer: 'filter()' },
+          { id: '2', answer: 'reduce()' },
+          { id: '3', answer: 'collect()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In WebFlux, how do you handle errors in a reactive stream?',
+        answers: [
+          { id: '0', answer: 'Using the catch() method' },
+          { id: '1', answer: 'Using the onError() method' },
+          { id: '2', answer: 'Using the onErrorResume() method' },
+          { id: '3', answer: 'Using the handleError() method' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the purpose of the @RestController annotation in a WebFlux application?',
+        answers: [
+          { id: '0', answer: 'To mark a class as a Spring MVC controller' },
+          { id: '1', answer: 'To enable REST API handling with WebFlux' },
+          { id: '2', answer: 'To inject dependencies into the class' },
+          { id: '3', answer: 'To configure WebFlux routes' },
+        ],
+        correctAnswer: '1',
+      },
     ],
   },
 };

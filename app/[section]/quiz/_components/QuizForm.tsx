@@ -99,7 +99,6 @@ const QuizForm = () => {
   const submitRef = useRef<HTMLButtonElement>(null);
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
-      console.log('Enter');
       submitRef.current?.click();
     }
   });
@@ -107,7 +106,6 @@ const QuizForm = () => {
     if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (!radioGroupRef.current?.contains(document.activeElement)) {
-        console.log('!radioGroupRef.current?.contains(document.activeElement)');
         firstRadioButtonRef.current?.focus();
       }
     }
@@ -116,7 +114,6 @@ const QuizForm = () => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       if (!radioGroupRef.current?.contains(document.activeElement)) {
-        console.log('!radioGroupRef.current?.contains(document.activeElement)');
         firstRadioButtonRef.current?.focus();
       }
     }
@@ -194,7 +191,7 @@ const QuizForm = () => {
                 >
                   {answers.map((answer, i) => (
                     <div
-                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 px-4 py-10 cursor-pointer group' }), {
+                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 shadow-sm px-4 py-10 cursor-pointer group' }), {
                         'bg-accent': answer.id === formAnswer,
                         'bg-green-100 hover:bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
                         'bg-red-100 hover:bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,

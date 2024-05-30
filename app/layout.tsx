@@ -9,7 +9,10 @@ import Footer from './(root)/_components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Quiz App',
+  title: {
+    default: 'Quiz App',
+    template: '%s | Quiz App',
+  },
 };
 
 interface RootLayoutProps {
