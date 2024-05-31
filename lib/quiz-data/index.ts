@@ -17,6 +17,8 @@ import leftOrRightSign from '@/public/left-or-right-sign.jpg';
 import leftTurnHandSignal from '@/public/left-turn-hand-signal.jpg';
 import parkingOnHill from '@/public/parking-on-hill.jpg';
 import constructionSignTriangle from '@/public/construction-sign-triangle.jpg';
+import bridge from '@/public/bridge.png';
+import switchImg from '@/public/switch.png';
 
 import leftCurveAhead from '@/public/left-curve-ahead.png';
 import trafficSignalAhead from '@/public/traffic-signal-ahead.png';
@@ -1164,6 +1166,106 @@ const quizData: QuizData = {
   javascript: {
     name: 'JavaScript',
     questions: [
+      {
+        question: 'What is the primary goal of an SQL injection attack?',
+        answers: [
+          { id: '0', answer: 'To cause a denial of service' },
+          { id: '1', answer: 'To gain unauthorized access to a database' },
+          { id: '2', answer: 'To install malware on a server' },
+          { id: '3', answer: 'To redirect users to a malicious website' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a common indication that a web application might be vulnerable to SQL injection?',
+        answers: [
+          { id: '0', answer: 'Frequent server crashes' },
+          { id: '1', answer: 'Slow website performance' },
+          { id: '2', answer: 'Error messages displaying SQL syntax errors' },
+          { id: '3', answer: 'Increased spam emails' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which SQL clause is most commonly exploited in an SQL injection attack?',
+        answers: [
+          { id: '0', answer: 'WHERE' },
+          { id: '1', answer: 'ORDER BY' },
+          { id: '2', answer: 'GROUP BY' },
+          { id: '3', answer: 'HAVING' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following techniques can help prevent SQL injection attacks?',
+        answers: [
+          { id: '0', answer: 'Using parameterized queries' },
+          { id: '1', answer: 'Disabling error messages' },
+          { id: '2', answer: 'Using complex passwords' },
+          { id: '3', answer: 'Implementing a CAPTCHA' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of using parameterized queries in preventing SQL injections?',
+        answers: [
+          { id: '0', answer: 'To speed up database queries' },
+          { id: '1', answer: 'To separate SQL code from user input' },
+          { id: '2', answer: 'To encrypt database connections' },
+          { id: '3', answer: 'To log all database activities' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a direct consequence of a successful SQL injection attack?',
+        answers: [
+          { id: '0', answer: 'Data leakage' },
+          { id: '1', answer: 'Website defacement' },
+          { id: '2', answer: 'Service unavailability' },
+          { id: '3', answer: 'Increased traffic' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What role does input validation play in preventing SQL injection attacks?',
+        answers: [
+          { id: '0', answer: 'It blocks malicious IP addresses' },
+          { id: '1', answer: 'It ensures that user input conforms to expected formats' },
+          { id: '2', answer: 'It encrypts user input' },
+          { id: '3', answer: 'It logs user input for auditing' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which web application vulnerability is exploited in SQL injection attacks?',
+        answers: [
+          { id: '0', answer: 'Cross-Site Scripting (XSS)' },
+          { id: '1', answer: 'Buffer Overflow' },
+          { id: '2', answer: 'Improper input handling' },
+          { id: '3', answer: 'Denial of Service (DoS)' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'How can web application firewalls (WAFs) help in mitigating SQL injection attacks?',
+        answers: [
+          { id: '0', answer: 'By blocking traffic from known malicious IP addresses' },
+          { id: '1', answer: 'By analyzing and filtering out malicious SQL queries' },
+          { id: '2', answer: 'By encrypting all database communications' },
+          { id: '3', answer: 'By logging all user activities for later review' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which method is NOT effective in preventing SQL injection attacks?',
+        answers: [
+          { id: '0', answer: 'Parameterized queries' },
+          { id: '1', answer: 'Stored procedures' },
+          { id: '2', answer: 'Client-side validation' },
+          { id: '3', answer: 'Web application firewalls' },
+        ],
+        correctAnswer: '2',
+      },
       {
         question: 'What will be the output of the following code?',
         code: `
@@ -3395,12 +3497,12 @@ const quizData: QuizData = {
       {
         question: 'Where are you likely to encounter UI blocking?',
         answers: [
-          { id: '0', answer: 'Using a Software as a Service (SAAS) application without a subscription' },
+          { id: '0', answer: 'Using a Software as a Service (SaaS) application without a subscription' },
           { id: '1', answer: 'Loading a page with lazy loaded images' },
           { id: '2', answer: 'Loading an AI chat with many chat messages' },
           { id: '3', answer: 'It enables the use of deprecated HTML tags' },
         ],
-        correctAnswer: '1',
+        correctAnswer: '2',
       },
       {
         question: 'What is the correct inference from the line of code below?',
@@ -3412,6 +3514,46 @@ const quizData: QuizData = {
           { id: '1', answer: '"prototype" is a method of "Array"' },
           { id: '2', answer: 'Arrays belong to a class of objects "prototype"' },
           { id: '3', answer: 'All arrays have a method "map"' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is a correct inference from the snippet of code below?',
+        code: `
+      function a(param: string) {
+        console.log('a');
+        console.log(param);
+      }
+
+      function b(param: string) {
+        console.log('b');
+        console.log(param);
+      }
+
+      function c(param: string) {
+        console.log('c');
+        console.log(param);
+      }
+
+      function d(cb: (params: any[]) => void) {
+        console.log('d');
+        console.log(cb('d'));
+      }
+
+      function e(cb: (params: any[]) => void) {
+        console.log('e');
+        console.log(cb('e'));
+      }
+
+      function f(param: string) {
+        console.log('f');
+      }
+        `,
+        answers: [
+          { id: '0', answer: 'There are closures defined in the snippet', order: 0 },
+          { id: '1', answer: 'There are higher-order functions defined in the snippet', order: 1 },
+          { id: '2', answer: 'There are violations of encapsulation defined in the snippet', order: 2 },
+          { id: '3', answer: 'There are examples of encapsulation defined in the snippet', order: 3 },
         ],
         correctAnswer: '1',
       },
@@ -4046,6 +4188,56 @@ const quizData: QuizData = {
     name: 'Machine Learning',
     questions: [
       {
+        question: 'You are working on a text analysis project and need to extract individual words from sentences in a paragraph. Which delimiter would you use?',
+        answers: [
+          { id: '0', answer: 'Comma (,)' },
+          { id: '1', answer: 'Space ( )' },
+          { id: '2', answer: 'Semicolon (;)' },
+          { id: '3', answer: 'Period (.)' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In a CSV file, data is organized into rows and columns. What delimiter is typically used to separate the columns?',
+        answers: [
+          { id: '0', answer: 'Tab (\t)' },
+          { id: '1', answer: 'Pipe (|)' },
+          { id: '2', answer: 'Comma (,)' },
+          { id: '3', answer: 'Space ( )' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'You are parsing a log file where each entry is on a new line and fields within an entry are separated by colons. What delimiter should you use to split the fields within an entry?',
+        answers: [
+          { id: '0', answer: 'Newline (\n)' },
+          { id: '1', answer: 'Comma (,)' },
+          { id: '2', answer: 'Space ( )' },
+          { id: '3', answer: 'Colon (:)' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'In a URL query string, parameters and their values are typically separated by what delimiter?',
+        answers: [
+          { id: '0', answer: 'Ampersand (&)' },
+          { id: '1', answer: 'Equal sign (=)' },
+          { id: '2', answer: 'Question mark (?)' },
+          { id: '3', answer: 'Hash (#)' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'You are writing a script to tokenize a sentence into words but want to ensure punctuation marks like periods and commas are not included in the tokens. Which of the following is a correct approach?',
+        answers: [
+          { id: '0', answer: 'Split the sentence using spaces and then remove punctuation from each token.' },
+          { id: '1', answer: 'Split the sentence using punctuation marks only.' },
+          { id: '2', answer: 'Split the sentence using commas and periods.' },
+          { id: '3', answer: 'Do not split the sentence and keep punctuation.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: 'Which Python library is known for its powerful data structures and data analysis tools?',
         answers: [
           { id: '0', answer: 'NumPy' },
@@ -4468,10 +4660,10 @@ const quizData: QuizData = {
       {
         question: 'How does character-level tokenization differ from word-level tokenization?',
         answers: [
-          { id: '0', answer: 'Character-level tokenization splits text into individual characters' },
-          { id: '1', answer: 'Word-level tokenization splits text into individual words' },
-          { id: '2', answer: 'Character-level tokenization is faster than word-level tokenization' },
-          { id: '3', answer: 'Both 0 and 1' },
+          { id: '0', answer: 'Character-level tokenization splits text into individual characters', order: 0 },
+          { id: '1', answer: 'Word-level tokenization splits text into individual words', order: 1 },
+          { id: '2', answer: 'Character-level tokenization is faster than word-level tokenization', order: 2 },
+          { id: '3', answer: 'Both 0 and 1', order: 3 },
         ],
         correctAnswer: '3',
       },
@@ -5465,11 +5657,1353 @@ const quizData: QuizData = {
         ],
         correctAnswer: '1',
       },
+      {
+        question: 'What is the size of a char in Java?',
+        answers: [
+          { id: '0', answer: '1 byte' },
+          { id: '1', answer: '2 bytes' },
+          { id: '2', answer: '4 bytes' },
+          { id: '3', answer: '8 bytes' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the range of a char in Java?',
+        answers: [
+          { id: '0', answer: '0 to 255' },
+          { id: '1', answer: '0 to 65535' },
+          { id: '2', answer: '-128 to 127' },
+          { id: '3', answer: '0 to 32767' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the output of the following code?',
+        code: `
+      public class Test {
+        public static void main(String[] args) {
+          char c = 65;
+          System.out.println(c);
+        }
+      }
+        `,
+        answers: [
+          { id: '0', answer: 'A' },
+          { id: '1', answer: '65' },
+          { id: '2', answer: 'a' },
+          { id: '3', answer: 'Error' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is true about the char data type in Java?',
+        answers: [
+          { id: '0', answer: 'It is signed' },
+          { id: '1', answer: 'It is unsigned' },
+          { id: '2', answer: 'It is always null-terminated' },
+          { id: '3', answer: 'It can store ASCII values only' },
+        ],
+        correctAnswer: '1',
+      },
     ],
   },
+  'comptia-network-plus': {
+    name: 'CompTIA Network+',
+    questions: [
+      {
+        question: 'Which layer of the OSI model is responsible for establishing, managing, and terminating connections between applications?',
+        answers: [
+          { id: '0', answer: 'Session Layer' },
+          { id: '1', answer: 'Transport Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Presentation Layer' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'At which layer of the OSI model does routing occur?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Transport Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which layer of the OSI model converts data into signals appropriate for the transmission medium?',
+        answers: [
+          { id: '0', answer: 'Physical Layer' },
+          { id: '1', answer: 'Data Link Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Presentation Layer' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'At which layer of the OSI model does data encapsulation start?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Transport Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which layer of the OSI model ensures that data is in a readable format and is often responsible for encryption and decryption?',
+        answers: [
+          { id: '0', answer: 'Session Layer' },
+          { id: '1', answer: 'Transport Layer' },
+          { id: '2', answer: 'Presentation Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following protocols is used for email transmission?',
+        answers: [
+          { id: '0', answer: 'FTP' },
+          { id: '1', answer: 'SMTP' },
+          { id: '2', answer: 'HTTP' },
+          { id: '3', answer: 'SNMP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary function of a router in a network?',
+        answers: [
+          { id: '0', answer: 'To connect devices within a local network' },
+          { id: '1', answer: 'To provide IP addresses to devices' },
+          { id: '2', answer: 'To route traffic between different networks' },
+          { id: '3', answer: 'To filter and block unwanted traffic' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which layer of the OSI model is responsible for data encryption?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Transport Layer' },
+          { id: '3', answer: 'Presentation Layer' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the function of a subnet mask in a network?',
+        answers: [
+          { id: '0', answer: 'To divide an IP address into network and host portions' },
+          { id: '1', answer: 'To encrypt data during transmission' },
+          { id: '2', answer: 'To assign IP addresses to devices' },
+          { id: '3', answer: 'To route data between networks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a characteristic of TCP?',
+        answers: [
+          { id: '0', answer: 'Connectionless communication' },
+          { id: '1', answer: 'No error checking' },
+          { id: '2', answer: 'Reliable data transfer' },
+          { id: '3', answer: 'Faster than UDP' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What does the acronym DHCP stand for?',
+        answers: [
+          { id: '0', answer: 'Dynamic Host Configuration Protocol' },
+          { id: '1', answer: 'Dynamic Hypertext Configuration Protocol' },
+          { id: '2', answer: 'Domain Host Configuration Protocol' },
+          { id: '3', answer: 'Dynamic Host Control Protocol' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which protocol is used to securely transfer files over the Internet?',
+        answers: [
+          { id: '0', answer: 'HTTP' },
+          { id: '1', answer: 'FTP' },
+          { id: '2', answer: 'SFTP' },
+          { id: '3', answer: 'SMTP' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the default port number for HTTPS?',
+        answers: [
+          { id: '0', answer: '80' },
+          { id: '1', answer: '443' },
+          { id: '2', answer: '21' },
+          { id: '3', answer: '25' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is an example of a private IP address?',
+        answers: [
+          { id: '0', answer: '192.168.1.1' },
+          { id: '1', answer: '8.8.8.8' },
+          { id: '2', answer: '172.16.0.1' },
+          { id: '3', answer: '10.0.0.1' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What type of device uses a MAC address to forward data to the correct destination?',
+        answers: [
+          { id: '0', answer: 'Router' },
+          { id: '1', answer: 'Switch' },
+          { id: '2', answer: 'Firewall' },
+          { id: '3', answer: 'Modem' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following tools can be used to troubleshoot network connectivity issues?',
+        answers: [
+          { id: '0', answer: 'Ping' },
+          { id: '1', answer: 'Traceroute' },
+          { id: '2', answer: 'Netstat' },
+          { id: '3', answer: 'All of the above', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which wireless standard operates on the 2.4 GHz frequency band and provides a maximum data rate of 11 Mbps?',
+        answers: [
+          { id: '0', answer: '802.11a' },
+          { id: '1', answer: '802.11b' },
+          { id: '2', answer: '802.11g' },
+          { id: '3', answer: '802.11n' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the purpose of a VLAN in a network?',
+        answers: [
+          { id: '0', answer: 'To create a virtual private network' },
+          { id: '1', answer: 'To group devices into a single broadcast domain' },
+          { id: '2', answer: 'To provide network security' },
+          { id: '3', answer: 'To connect different networks together' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which protocol is used for network device management and monitoring?',
+        answers: [
+          { id: '0', answer: 'FTP' },
+          { id: '1', answer: 'SNMP' },
+          { id: '2', answer: 'SMTP' },
+          { id: '3', answer: 'HTTP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does the acronym DNS stand for?',
+        answers: [
+          { id: '0', answer: 'Domain Network Service' },
+          { id: '1', answer: 'Domain Name System' },
+          { id: '2', answer: 'Digital Network System' },
+          { id: '3', answer: 'Data Name Service' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary purpose of a firewall in a network?',
+        answers: [
+          { id: '0', answer: 'To provide wireless connectivity' },
+          { id: '1', answer: 'To filter and control incoming and outgoing network traffic' },
+          { id: '2', answer: 'To route data between networks' },
+          { id: '3', answer: 'To assign IP addresses to devices' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which type of network topology features a central hub that connects all devices?',
+        answers: [
+          { id: '0', answer: 'Bus' },
+          { id: '1', answer: 'Ring' },
+          { id: '2', answer: 'Star' },
+          { id: '3', answer: 'Mesh' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What command can be used to display the routing table on a Windows machine?',
+        // code: `
+        // route print
+        // `,
+        answers: [
+          { id: '0', answer: 'ipconfig' },
+          { id: '1', answer: 'route print' },
+          { id: '2', answer: 'netstat' },
+          { id: '3', answer: 'tracert' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which layer of the OSI model is responsible for establishing, managing, and terminating connections?',
+        answers: [
+          { id: '0', answer: 'Session Layer' },
+          { id: '1', answer: 'Transport Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Data Link Layer' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What protocol is commonly used for secure remote administration of network devices?',
+        answers: [
+          { id: '0', answer: 'Telnet' },
+          { id: '1', answer: 'SSH' },
+          { id: '2', answer: 'RDP' },
+          { id: '3', answer: 'FTP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a characteristic of the UDP protocol?',
+        answers: [
+          { id: '0', answer: 'Connection-oriented' },
+          { id: '1', answer: 'Guaranteed delivery' },
+          { id: '2', answer: 'Low latency' },
+          { id: '3', answer: 'Error checking' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which command can be used to display all active network connections on a Linux machine?',
+        // code: `
+        // netstat -an
+        // `,
+        answers: [
+          { id: '0', answer: 'ifconfig' },
+          { id: '1', answer: 'netstat -an' },
+          { id: '2', answer: 'traceroute' },
+          { id: '3', answer: 'ping' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a function of the ARP protocol?',
+        answers: [
+          { id: '0', answer: 'To map IP addresses to MAC addresses' },
+          { id: '1', answer: 'To assign IP addresses to devices' },
+          { id: '2', answer: 'To route data between networks' },
+          { id: '3', answer: 'To encrypt data during transmission' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which type of cable is typically used for high-speed network connections and is known as "fiber optic"?',
+        answers: [
+          { id: '0', answer: 'Coaxial cable' },
+          { id: '1', answer: 'Twisted pair cable' },
+          { id: '2', answer: 'Fiber optic cable' },
+          { id: '3', answer: 'Ethernet cable' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the purpose of a DMZ in a network architecture?',
+        answers: [
+          { id: '0', answer: 'To create a secure subnet for internal users' },
+          { id: '1', answer: 'To isolate public-facing servers from the internal network' },
+          { id: '2', answer: 'To provide a backup network for redundancy' },
+          { id: '3', answer: 'To enhance wireless network coverage' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is a characteristic of a mesh network topology?',
+        answers: [
+          { id: '0', answer: 'All devices are connected to a central hub' },
+          { id: '1', answer: 'Devices are connected in a linear sequence' },
+          { id: '2', answer: 'Devices are interconnected, providing multiple paths for data' },
+          { id: '3', answer: 'Devices are connected in a circular manner' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the function of a load balancer in a network?',
+        answers: [
+          { id: '0', answer: 'To distribute network traffic evenly across multiple servers' },
+          { id: '1', answer: 'To provide IP addresses to devices' },
+          { id: '2', answer: 'To route traffic between different networks' },
+          { id: '3', answer: 'To encrypt data during transmission' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which command is used to test the reachability of a host on an IP network?',
+        // code: `
+        // ping google.com
+        // `,
+        answers: [
+          { id: '0', answer: 'ping' },
+          { id: '1', answer: 'traceroute' },
+          { id: '2', answer: 'netstat' },
+          { id: '3', answer: 'route' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the NAT (Network Address Translation) protocol?',
+        answers: [
+          { id: '0', answer: 'To assign IP addresses to devices' },
+          { id: '1', answer: 'To translate private IP addresses to a public IP address' },
+          { id: '2', answer: 'To route data between networks' },
+          { id: '3', answer: 'To encrypt data during transmission' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which type of attack involves overwhelming a network resource with excessive traffic?',
+        answers: [
+          { id: '0', answer: 'Phishing' },
+          { id: '1', answer: 'Man-in-the-middle' },
+          { id: '2', answer: 'Denial of Service (DoS)' },
+          { id: '3', answer: 'SQL Injection' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the primary purpose of a proxy server in a network?',
+        answers: [
+          { id: '0', answer: 'To encrypt data during transmission' },
+          { id: '1', answer: 'To route data between different networks' },
+          { id: '2', answer: 'To provide anonymity and caching' },
+          { id: '3', answer: 'To assign IP addresses to devices' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a common use of a VPN?',
+        answers: [
+          { id: '0', answer: 'To increase network speed' },
+          { id: '1', answer: 'To securely connect remote users to a private network' },
+          { id: '2', answer: 'To distribute network traffic' },
+          { id: '3', answer: 'To filter unwanted traffic' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which protocol is used for querying and modifying directory services?',
+        answers: [
+          { id: '0', answer: 'LDAP' },
+          { id: '1', answer: 'DHCP' },
+          { id: '2', answer: 'SNMP' },
+          { id: '3', answer: 'NTP' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the acronym IP stand for in networking?',
+        answers: [
+          { id: '0', answer: 'Internet Protocol' },
+          { id: '1', answer: 'Internet Program' },
+          { id: '2', answer: 'Internal Protocol' },
+          { id: '3', answer: 'Internet Process' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which command can be used to display the IP address configuration on a Windows machine?',
+        answers: [
+          { id: '0', answer: 'ipconfig' },
+          { id: '1', answer: 'ifconfig' },
+          { id: '2', answer: 'route' },
+          { id: '3', answer: 'netstat' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the function of a network bridge?',
+        answers: [
+          { id: '0', answer: 'To connect two or more network segments' },
+          { id: '1', answer: 'To provide wireless connectivity' },
+          { id: '2', answer: 'To filter unwanted traffic' },
+          { id: '3', answer: 'To assign IP addresses to devices' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which protocol is used for dynamically assigning IP addresses to devices on a network?',
+        answers: [
+          { id: '0', answer: 'DNS' },
+          { id: '1', answer: 'DHCP' },
+          { id: '2', answer: 'SMTP' },
+          { id: '3', answer: 'FTP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the purpose of port forwarding in a network?',
+        answers: [
+          { id: '0', answer: 'To encrypt data during transmission' },
+          { id: '1', answer: 'To route external traffic to a specific internal IP address' },
+          { id: '2', answer: 'To assign IP addresses to devices' },
+          { id: '3', answer: 'To filter and block unwanted traffic' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following describes the function of a network firewall?',
+        answers: [
+          { id: '0', answer: 'To connect devices within a local network' },
+          { id: '1', answer: 'To filter and control incoming and outgoing network traffic' },
+          { id: '2', answer: 'To route data between networks' },
+          { id: '3', answer: 'To provide wireless connectivity' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What type of network uses radio waves to connect devices without physical cables?',
+        answers: [
+          { id: '0', answer: 'Wired network' },
+          { id: '1', answer: 'Wireless network' },
+          { id: '2', answer: 'Fiber optic network' },
+          { id: '3', answer: 'Coaxial network' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the maximum data rate of a CAT5e Ethernet cable?',
+        answers: [
+          { id: '0', answer: '100 Mbps' },
+          { id: '1', answer: '1 Gbps' },
+          { id: '2', answer: '10 Gbps' },
+          { id: '3', answer: '100 Gbps' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which command is used to view the current IP routing table on a Linux machine?',
+        //     code: `
+        // netstat -r
+        // `,
+        answers: [
+          { id: '0', answer: 'ifconfig' },
+          { id: '1', answer: 'netstat -r' },
+          { id: '2', answer: 'traceroute' },
+          { id: '3', answer: 'ping' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary purpose of a network switch?',
+        answers: [
+          { id: '0', answer: 'To route data between different networks' },
+          { id: '1', answer: 'To filter and control incoming and outgoing network traffic' },
+          { id: '2', answer: 'To connect devices within a local network and forward data based on MAC addresses' },
+          { id: '3', answer: 'To provide wireless connectivity' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'If you manually change the MAC address of a router in your network,',
+        answers: [
+          { id: '0', answer: 'you may have to reconfigure your DHCP' },
+          { id: '1', answer: 'you may have to reconfigure your LDAP' },
+          { id: '2', answer: 'you may have to reconfigure any switches' },
+          { id: '3', answer: 'you may have to reconfigure the bridge' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following IP address ranges is reserved for private networks?',
+        answers: [
+          { id: '0', answer: '192.0.0.0 to 192.255.255.255' },
+          { id: '1', answer: '192.168.0.0 to 192.168.255.255' },
+          { id: '2', answer: '10.0.0.0 to 10.255.255.255' },
+          { id: '3', answer: '172.16.0.0 to 172.31.255.255' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary function of a DHCP server?',
+        answers: [
+          { id: '0', answer: 'To assign IP addresses to devices' },
+          { id: '1', answer: 'To filter and control network traffic' },
+          { id: '2', answer: 'To provide wireless connectivity' },
+          { id: '3', answer: 'To route data between networks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which protocol is used to synchronize clocks on computers over a network?',
+        answers: [
+          { id: '0', answer: 'DNS' },
+          { id: '1', answer: 'NTP' },
+          { id: '2', answer: 'SNMP' },
+          { id: '3', answer: 'DHCP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following commands can be used to test the reachability of a host on an IP network from a Linux terminal?',
+        answers: [
+          { id: '0', answer: 'ping' },
+          { id: '1', answer: 'traceroute' },
+          { id: '2', answer: 'netstat' },
+          { id: '3', answer: 'route' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the function of the DNS (Domain Name System) in a network?',
+        answers: [
+          { id: '0', answer: 'To translate IP addresses into MAC addresses' },
+          { id: '1', answer: 'To assign IP addresses to devices' },
+          { id: '2', answer: 'To translate domain names into IP addresses' },
+          { id: '3', answer: 'To route data between networks' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the primary purpose of a network gateway?',
+        answers: [
+          { id: '0', answer: 'To connect two different networks and enable communication between them' },
+          { id: '1', answer: 'To provide wireless connectivity' },
+          { id: '2', answer: 'To assign IP addresses to devices' },
+          { id: '3', answer: 'To filter and control network traffic' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following protocols is used to retrieve emails from a mail server?',
+        answers: [
+          { id: '0', answer: 'SMTP' },
+          { id: '1', answer: 'IMAP' },
+          { id: '2', answer: 'FTP' },
+          { id: '3', answer: 'HTTP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the maximum data rate of the 802.11ac wireless standard?',
+        answers: [
+          { id: '0', answer: '54 Mbps' },
+          { id: '1', answer: '600 Mbps' },
+          { id: '2', answer: '1.3 Gbps' },
+          { id: '3', answer: '3.2 Gbps' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following tools can be used to capture and analyze network traffic?',
+        answers: [
+          { id: '0', answer: 'Wireshark' },
+          { id: '1', answer: 'Nmap' },
+          { id: '2', answer: 'Ping' },
+          { id: '3', answer: 'Traceroute' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which command can be used to display the IP address configuration on a macOS machine?',
+        //     code: `
+        // ifconfig
+        // `,
+        answers: [
+          { id: '0', answer: 'ipconfig' },
+          { id: '1', answer: 'ifconfig' },
+          { id: '2', answer: 'route' },
+          { id: '3', answer: 'netstat' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which protocol is used to send error messages and operational information indicating success or failure when communicating with another IP address?',
+        answers: [
+          { id: '0', answer: 'ICMP' },
+          { id: '1', answer: 'IP' },
+          { id: '2', answer: 'TCP' },
+          { id: '3', answer: 'UDP' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of a NAT gateway in a network?',
+        answers: [
+          { id: '0', answer: 'To assign IP addresses to devices' },
+          { id: '1', answer: 'To filter and block unwanted traffic' },
+          { id: '2', answer: 'To translate private IP addresses to public IP addresses' },
+          { id: '3', answer: 'To route data between networks' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which command can be used to determine the path taken by packets across an IP network?',
+        //     code: `
+        // tracert google.com
+        // `,
+        answers: [
+          { id: '0', answer: 'ping' },
+          { id: '1', answer: 'tracert' },
+          { id: '2', answer: 'netstat' },
+          { id: '3', answer: 'route' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What type of address is used to uniquely identify devices on a local network at the data link layer?',
+        answers: [
+          { id: '0', answer: 'IP address' },
+          { id: '1', answer: 'MAC address' },
+          { id: '2', answer: 'Port number' },
+          { id: '3', answer: 'Subnet mask' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which layer of the OSI model is responsible for end-to-end communication and error detection?',
+        answers: [
+          { id: '0', answer: 'Application Layer' },
+          { id: '1', answer: 'Transport Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Data Link Layer' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which wireless standard operates on both the 2.4 GHz and 5 GHz frequency bands and provides a maximum data rate of 600 Mbps?',
+        answers: [
+          { id: '0', answer: '802.11a' },
+          { id: '1', answer: '802.11b' },
+          { id: '2', answer: '802.11g' },
+          { id: '3', answer: '802.11n' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which command is used to display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships on Unix-like operating systems?',
+        answers: [
+          { id: '0', answer: 'Ping' },
+          { id: '1', answer: 'Traceroute' },
+          { id: '2', answer: 'Netstat' },
+          { id: '3', answer: 'Ifconfig' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What command can be used to check listening ports and active connections on a networked system?',
+        answers: [
+          { id: '0', answer: 'Nslookup' },
+          { id: '1', answer: 'Netstat' },
+          { id: '2', answer: 'Nmap' },
+          { id: '3', answer: 'Traceroute' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which command is used to display the routing table on a Unix-like system?',
+        answers: [
+          { id: '0', answer: 'Ifconfig' },
+          { id: '1', answer: 'Route' },
+          { id: '2', answer: 'Netstat' },
+          { id: '3', answer: 'Ping' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What command can be used to display protocol statistics and current TCP/IP network connections?',
+        answers: [
+          { id: '0', answer: 'Ping' },
+          { id: '1', answer: 'Netstat' },
+          { id: '2', answer: 'Traceroute' },
+          { id: '3', answer: 'Nslookup' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which command can be used to display active TCP connections and the ports on which the computer is listening?',
+        //     code: `
+        // netstat -an
+        // `,
+        answers: [
+          { id: '0', answer: 'Ping' },
+          { id: '1', answer: 'Traceroute' },
+          { id: '2', answer: 'Netstat' },
+          { id: '3', answer: 'Ifconfig' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which command is used to test the reachability of a host on an IP network and measure the round-trip time for messages sent to the destination?',
+        answers: [
+          { id: '0', answer: 'Traceroute' },
+          { id: '1', answer: 'Ping' },
+          { id: '2', answer: 'Netstat' },
+          { id: '3', answer: 'Nslookup' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What command is typically used to verify that a computer can communicate over the network with another device?',
+        // code: `
+        // ping 8.8.8.8
+        // `,
+        answers: [
+          { id: '0', answer: 'Traceroute' },
+          { id: '1', answer: 'Ping' },
+          { id: '2', answer: 'Netstat' },
+          { id: '3', answer: 'Ifconfig' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which command can be used to check if a specific IP address is accessible from the current system?',
+        answers: [
+          { id: '0', answer: 'Netstat' },
+          { id: '1', answer: 'Ping' },
+          { id: '2', answer: 'Traceroute' },
+          { id: '3', answer: 'Nslookup' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A fiber optic cable is the same as an Ethernet cable',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'LDAP is to computers in a network what OAuth is to users of web applications ',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A firewall is to computers in a network what OAuth is to users of web applications ',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A company needs to host a public-facing web server that allows customers to access their services online, while keeping their internal network secure. Which solution should the company implement to ensure this separation?',
+        answers: [
+          { id: '0', answer: 'VPN' },
+          { id: '1', answer: 'Firewall' },
+          { id: '2', answer: 'DMZ' },
+          { id: '3', answer: 'Proxy Server' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'An organization wants to provide email access to its employees from outside the corporate network without exposing the internal email server directly to the internet. What network architecture should they use?',
+        answers: [
+          { id: '0', answer: 'Network Address Translation (NAT)' },
+          { id: '1', answer: 'Intrusion Detection System (IDS)' },
+          { id: '2', answer: 'DMZ' },
+          { id: '3', answer: 'Virtual LAN (VLAN)' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A financial institution needs to ensure that their online banking system is accessible to customers while keeping their internal systems protected from direct internet exposure. What should they implement?',
+        answers: [
+          { id: '0', answer: 'Load Balancer' },
+          { id: '1', answer: 'DMZ' },
+          { id: '2', answer: 'SSL VPN' },
+          { id: '3', answer: 'Content Delivery Network (CDN)' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A healthcare provider wants to allow patients to access their medical records online. To secure their internal database, which solution should they deploy to host the web application?',
+        answers: [
+          { id: '0', answer: 'DNS Server' },
+          { id: '1', answer: 'DMZ' },
+          { id: '2', answer: 'Router' },
+          { id: '3', answer: 'Remote Access Server' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'An e-commerce site needs to ensure that their payment processing system is secure while still allowing customers to make purchases online. Which network architecture will best achieve this goal?',
+        answers: [
+          { id: '0', answer: 'DMZ' },
+          { id: '1', answer: 'Proxy Server' },
+          { id: '2', answer: 'Firewall' },
+          { id: '3', answer: 'Content Filter' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A large corporation needs to manage and authenticate user access to multiple applications and services across its network. Which solution should they implement for centralized authentication?',
+        answers: [
+          { id: '0', answer: 'RADIUS' },
+          { id: '1', answer: 'Kerberos' },
+          { id: '2', answer: 'LDAP' },
+          { id: '3', answer: 'OAuth' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'An organization wants to provide a single sign-on (SSO) experience for its employees, allowing them to use the same credentials across various systems and applications. What technology should they use?',
+        answers: [
+          { id: '0', answer: 'SAML' },
+          { id: '1', answer: 'OpenID' },
+          { id: '2', answer: 'LDAP' },
+          { id: '3', answer: 'OAuth' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A university needs to manage a directory of students, faculty, and staff for accessing email, library resources, and other campus services. What directory service is most suitable for this purpose?',
+        answers: [
+          { id: '0', answer: 'DNS' },
+          { id: '1', answer: 'LDAP' },
+          { id: '2', answer: 'Active Directory' },
+          { id: '3', answer: 'RADIUS' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A software company needs a centralized directory to store user information, including usernames, passwords, email addresses, and department details. What should they implement?',
+        answers: [
+          { id: '0', answer: 'DHCP' },
+          { id: '1', answer: 'LDAP' },
+          { id: '2', answer: 'DNS' },
+          { id: '3', answer: 'NTP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'An IT department needs to set up a directory service that can be used by various network devices and applications for authentication and directory lookups. What technology is best suited for this?',
+        answers: [
+          { id: '0', answer: 'Kerberos' },
+          { id: '1', answer: 'RADIUS' },
+          { id: '2', answer: 'LDAP' },
+          { id: '3', answer: 'TACACS+' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Why does changing the MAC address of a router sometimes help "bypass IP bans?"',
+        answers: [
+          { id: '0', answer: 'It changes the physical location of the router.' },
+          { id: '1', answer: 'It causes the ISP to assign a new IP address' },
+          { id: '2', answer: 'It alters the DNS settings of the router' },
+          { id: '3', answer: 'It reset the router\'s configuration to default' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which technology is commonly used by ISPs to manage the limited availability of IPv4 addresses?',
+        answers: [
+          { id: '0', answer: 'Dynamic DNS' },
+          { id: '1', answer: 'Carrier-Grade Network Address Translation (CGNAT)' },
+          { id: '2', answer: 'Network Time Protocol (NTP)' },
+          { id: '3', answer: 'Simple Network Management Protocol (SNMP)' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What has reduced the need for dynamic IP reassignment and CGNAT, due to its larger pool of available IP addresses?',
+        answers: [
+          { id: '0', answer: 'IPv4' },
+          { id: '1', answer: 'IPv6' },
+          { id: '2', answer: 'DNSSEC' },
+          { id: '3', answer: 'DHCP' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Why might changing your router\'s MAC address to get a new IP address be less effective in 2024 compared to 2010?',
+        answers: [
+          { id: '0', answer: 'ISPs no longer use MAC addresses.' },
+          { id: '1', answer: 'ISPs have changed DHCP lease policies and use CGNAT.' },
+          { id: '2', answer: 'Websites no longer use IP bans.' },
+          { id: '3', answer: 'MAC addresses are now static.' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In addition to IP addresses, what other methods might websites use to enforce bans in 2024?',
+        answers: [
+          { id: '0', answer: 'Only IP address bans' },
+          { id: '1', answer: 'Cookies, account information, device fingerprints, and IP address ranges' },
+          { id: '2', answer: 'DNS filtering' },
+          { id: '3', answer: 'Port blocking' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a MAC address?',
+        answers: [
+          { id: '0', answer: 'The address assigned to the customer\'s router by the DHCP' },
+          { id: '1', answer: 'The address associated with the customer\'s internet provider' },
+          { id: '2', answer: 'The address assigned to a customer\'s PC by the DHCP' },
+          { id: '3', answer: 'The address associated with a particular device' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What happens when a device attempts to connect to a network?',
+        answers: [
+          { id: '0', answer: 'The address is mapped via ARP to the MAC address of the device to which it needs to connect' },
+          { id: '1', answer: 'The address is mapped via FTP to the MAC address of the device to which it needs to connect' },
+          { id: '2', answer: 'The address is mapped via LDAP to the MAC address of the device to which it needs to connect' },
+          { id: '3', answer: 'The address is mapped via DHCP to the MAC address of the device to which it needs to connect' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What happens if a device attempts to connect to a device in a network and ARP is not supported?',
+        answers: [
+          { id: '0', answer: 'The address is mapped via TCP to the MAC address of the device to which it needs to connect' },
+          { id: '1', answer: 'The address must be manually mapped to the MAC address of the device to which it needs to connect' },
+          { id: '2', answer: 'The address must be mapped via the DHCP to the MAC address of the device to which it needs to connect' },
+          { id: '3', answer: 'The address cannot be mapped to the MAC address of the device to which it needs to connect' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A company is experiencing frequent disconnections and slow network performance in a section of their office. Upon inspection, they find that the network cables are damaged. Which layer of the OSI model is directly affected in this scenario?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Physical Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'An IT technician is setting up a new office and needs to ensure that all devices are connected to the network using the appropriate cables and switches. Which layer of the OSI model is the technician primarily working with?',
+        answers: [
+          { id: '0', answer: 'Application Layer' },
+          { id: '1', answer: 'Session Layer' },
+          { id: '2', answer: 'Physical Layer' },
+          { id: '3', answer: 'Presentation Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A network administrator notices that one of the switches in the server room has failed, causing several computers to lose connectivity. Which layer of the OSI model does this issue pertain to?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Physical Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'During a network upgrade, a technician replaces old copper cables with new fiber optic cables to improve bandwidth and reduce interference. Which layer of the OSI model is being upgraded?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Physical Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A business is setting up a wireless network and must choose the correct type of wireless access points and antennas to cover the entire building. Which layer of the OSI model is being addressed in this scenario?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Physical Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A small business is experiencing network congestion and slow internet speeds due to multiple devices streaming video simultaneously. What can be implemented to manage traffic more effectively and prioritize business-critical applications?',
+        answers: [
+          { id: '0', answer: 'Upgrading to a higher bandwidth internet plan' },
+          { id: '1', answer: 'Implementing Quality of Service (QoS) on the router' },
+          { id: '2', answer: 'Adding more WiFi access points' },
+          { id: '3', answer: 'Using wired connections instead of wireless' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'An office network is having issues with IP address conflicts, causing some devices to lose connectivity. What is the best solution to manage IP addresses efficiently?',
+        answers: [
+          { id: '0', answer: 'Manually assign IP addresses to each device' },
+          { id: '1', answer: 'Set up a DHCP server on the router' },
+          { id: '2', answer: 'Switch to static IP addressing' },
+          { id: '3', answer: 'Reboot all devices on the network' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A company wants to allow remote employees to securely access the internal network as if they were on-site. Which router feature should be configured?',
+        answers: [
+          { id: '0', answer: 'Port forwarding' },
+          { id: '1', answer: 'VPN (Virtual Private Network)' },
+          { id: '2', answer: 'Firewall' },
+          { id: '3', answer: 'NAT (Network Address Translation)' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A home user finds that their internet connection drops frequently, especially when multiple devices are connected. What is a likely solution?',
+        answers: [
+          { id: '0', answer: 'Restarting the modem and router daily' },
+          { id: '1', answer: 'Replacing the router with a more powerful model' },
+          { id: '2', answer: 'Limiting the number of connected devices' },
+          { id: '3', answer: 'Using a WiFi extender' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A network administrator needs to isolate guest WiFi traffic from the company’s internal network to enhance security. What should be configured on the router?',
+        answers: [
+          { id: '0', answer: 'Setting up VLANs' },
+          { id: '1', answer: 'Disabling SSID broadcast' },
+          { id: '2', answer: 'Enabling MAC address filtering' },
+          { id: '3', answer: 'Using WPA3 encryption' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company wants to separate its finance department’s network traffic from the rest of the organization to enhance security and reduce broadcast traffic. What network solution should they implement?',
+        answers: [
+          { id: '0', answer: 'Implementing a DMZ' },
+          { id: '1', answer: 'Setting up VLANs' },
+          { id: '2', answer: 'Installing a new firewall' },
+          { id: '3', answer: 'Using NAT' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'An educational institution needs to create separate networks for students and staff to ensure that student activities do not interfere with administrative functions. What is the most efficient way to achieve this?',
+        answers: [
+          { id: '0', answer: 'Installing separate physical networks' },
+          { id: '1', answer: 'Setting up VLANs' },
+          { id: '2', answer: 'Using different WiFi SSIDs' },
+          { id: '3', answer: 'Implementing QoS' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A company has multiple departments that frequently move around the office. They need a flexible solution to manage network configurations without re-cabling every time. What network solution should they use?',
+        answers: [
+          { id: '0', answer: 'Static IP addressing' },
+          { id: '1', answer: 'VLANs' },
+          { id: '2', answer: 'VPN' },
+          { id: '3', answer: 'Subnets' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'To improve network performance, a company wants to limit broadcast traffic within its network by segmenting it logically. What should they implement?',
+        answers: [
+          { id: '0', answer: 'Increasing bandwidth' },
+          { id: '1', answer: 'Installing additional routers' },
+          { id: '2', answer: 'Setting up VLANs' },
+          { id: '3', answer: 'Using static routes' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A company wants to ensure that guest devices connected to their network cannot access internal resources while still providing internet access. What network configuration should they use?',
+        answers: [
+          { id: '0', answer: 'DMZ' },
+          { id: '1', answer: 'Firewall rules' },
+          { id: '2', answer: 'VLANs' },
+          { id: '3', answer: 'NAT' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which layer of the OSI model is responsible for logical addressing and routing?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Transport Layer' },
+          { id: '3', answer: 'Physical Layer' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In which OSI layer do switches primarily operate to forward frames based on MAC addresses?',
+        answers: [
+          { id: '0', answer: 'Physical Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Data Link Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which OSI layer is responsible for establishing, managing, and terminating connections between applications?',
+        answers: [
+          { id: '0', answer: 'Session Layer' },
+          { id: '1', answer: 'Presentation Layer' },
+          { id: '2', answer: 'Application Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A network administrator is configuring IP routing on a router. Which OSI layer is this task associated with?',
+        answers: [
+          { id: '0', answer: 'Data Link Layer' },
+          { id: '1', answer: 'Network Layer' },
+          { id: '2', answer: 'Transport Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which OSI layer provides error detection and flow control to ensure reliable data transmission between nodes?',
+        answers: [
+          { id: '0', answer: 'Physical Layer' },
+          { id: '1', answer: 'Transport Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Data Link Layer' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What device is illustrated in the middle of the picture?',
+        answers: [
+          { id: '0', answer: 'Bridge' },
+          { id: '1', answer: 'Router' },
+          { id: '2', answer: 'VLAN' },
+          { id: '3', answer: 'Switch' },
+        ],
+        image: bridge,
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the third device from the left in the picture?',
+        answers: [
+          { id: '0', answer: 'Bridge' },
+          { id: '1', answer: 'Switch' },
+          { id: '2', answer: 'VLAN' },
+          { id: '3', answer: 'LDAP' },
+        ],
+        image: switchImg,
+        correctAnswer: '1',
+      },
+      {
+        question: 'A user is unable to access a website. After verifying the network connection, the IT team checks if the web server is reachable by sending a ping request. At which OSI layer does this troubleshooting occur?',
+        answers: [
+          { id: '0', answer: 'Physical Layer' },
+          { id: '1', answer: 'Data Link Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A company experiences frequent data corruption during transmission. They decide to implement a protocol that ensures data integrity by retransmitting lost packets. Which OSI layer is involved in this solution?',
+        answers: [
+          { id: '0', answer: 'Network Layer' },
+          { id: '1', answer: 'Data Link Layer' },
+          { id: '2', answer: 'Transport Layer' },
+          { id: '3', answer: 'Session Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'An organization needs to encrypt data to ensure secure communication between its web server and clients. Which OSI layer handles encryption?',
+        answers: [
+          { id: '0', answer: 'Network Layer' },
+          { id: '1', answer: 'Transport Layer' },
+          { id: '2', answer: 'Presentation Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A network engineer configures VLANs to segment the network into different broadcast domains. At which OSI layer is this segmentation applied?',
+        answers: [
+          { id: '0', answer: 'Physical Layer' },
+          { id: '1', answer: 'Data Link Layer' },
+          { id: '2', answer: 'Network Layer' },
+          { id: '3', answer: 'Transport Layer' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A user is unable to log in to a remote server because the username and password are not being accepted. Troubleshooting reveals that the session is not being established properly. Which OSI layer should be checked for issues?',
+        answers: [
+          { id: '0', answer: 'Transport Layer' },
+          { id: '1', answer: 'Session Layer' },
+          { id: '2', answer: 'Presentation Layer' },
+          { id: '3', answer: 'Application Layer' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A small business has multiple devices that need to access the internet, but they only have a single public IP address from their ISP. What network solution should they implement to allow all devices to share this public IP address?',
+        answers: [
+          { id: '0', answer: 'VLAN' },
+          { id: '1', answer: 'DMZ' },
+          { id: '2', answer: 'NAT' },
+          { id: '3', answer: 'VPN' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'An organization wants to hide its internal IP addresses from the external network for security reasons. Which technology can achieve this by translating internal IP addresses to a public IP address when accessing the internet?',
+        answers: [
+          { id: '0', answer: 'Firewall' },
+          { id: '1', answer: 'NAT' },
+          { id: '2', answer: 'Subnetting' },
+          { id: '3', answer: 'DNS' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A network administrator needs to allow remote users to access a web server located on a private IP address within the company’s network. Which NAT configuration should be used to forward requests from a public IP to the private IP of the web server?',
+        answers: [
+          { id: '0', answer: 'Static NAT' },
+          { id: '1', answer: 'Dynamic NAT' },
+          { id: '2', answer: 'PAT (Port Address Translation)' },
+          { id: '3', answer: 'Overlapping NAT' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company is expanding its network and adding more devices, but it is running out of available public IP addresses. Which NAT technique allows multiple devices on a local network to be mapped to a single public IP address, conserving public IP addresses?',
+        answers: [
+          { id: '0', answer: 'Static NAT' },
+          { id: '1', answer: 'Dynamic NAT' },
+          { id: '2', answer: 'PAT (Port Address Translation)' },
+          { id: '3', answer: 'NAT overloading' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'An IT department is configuring a home router to allow multiple family members to access the internet simultaneously. Which NAT method is commonly used in this scenario to manage multiple private IP addresses with a single public IP address?',
+        answers: [
+          { id: '0', answer: 'Static NAT' },
+          { id: '1', answer: 'Dynamic NAT' },
+          { id: '2', answer: 'PAT (Port Address Translation)' },
+          { id: '3', answer: 'NAT-T' },
+        ],
+        correctAnswer: '2',
+      },
+    ],
+  },
+
 };
 
 export default quizData;
 
 // (?<=\s)(?<!(answer|question).*)\d
 // "$0"
+
+// new prompt meta
+// generate questions which describe real-world scenarios and an applied LDAP solution is the answer
+// output:
+// A large corporation needs to manage and authenticate user access to multiple applications and services across its network. Which solution should they implement for centralized authentication?
+
+// generate questions which describe real-world scenarios and an applied physical layer (of the OSI model) explanation is the answer
+// generate questions which describe real-world scenarios and an applied router solution or explanation is the answer

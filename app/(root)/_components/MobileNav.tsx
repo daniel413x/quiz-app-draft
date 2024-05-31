@@ -5,9 +5,9 @@ import {
   Sheet, SheetContent, SheetTrigger,
 } from '@/components/ui/common/shadcn/sheet';
 import { Separator } from '@/components/ui/common/shadcn/separator';
-import Link from 'next/link';
 import Image from 'next/image';
 import routes from '@/lib/data/routes';
+import Link from '@/components/ui/common/Link';
 
 const MobileNav = () => (
   <Sheet>
@@ -22,11 +22,9 @@ const MobileNav = () => (
         height={40}
       />
       <Separator />
-      <div className="flex flex-col gap-2 text-sm">
+      <div className="flex flex-col text-sm">
         {routes.map((r) => (
-          <Link href={r.href} className="text-sm" key={r.href}>
-            {r.name}
-          </Link>
+          <Link href={r.href} key={r.href} name={r.name} className="pt-6" />
         ))}
       </div>
     </SheetContent>

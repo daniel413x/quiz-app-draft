@@ -16,7 +16,7 @@ import { useTimer } from '../../_hooks/useTimer';
 import { timerStartMs } from '../../_consts';
 import Code from '../../_components/Code';
 
-const ResultsPage = () => {
+const ResultsPageContent = () => {
   const section = useParams().section;
   const router = useRouter();
   const {
@@ -88,7 +88,7 @@ const ResultsPage = () => {
             <span className="mb-2">
               {`Your answers included errors in ${questions.length - answeredCorrectly} out of ${questions.length} questions.`}
             </span>
-            <span className="">
+            <span>
               You answered without error
               {' '}
               <span className={cn('text-red-600', {
@@ -177,4 +177,4 @@ const ResultsPage = () => {
   );
 };
 
-export default ResultsPage;
+export default ResultsPageContent;
