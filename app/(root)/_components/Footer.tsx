@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="p-6 mt-auto">
     <Separator />
     <div className="container flex justify-center">
-      <span className="mt-6">
+      <span className="mt-6 opacity-60">
         &copy;QuizTime
       </span>
     </div>

@@ -56,41 +56,25 @@ const ResultsPageContent = () => {
         <h1 className="text-3xl">
           Your quiz results:
         </h1>
-        {' '}
-        <div className="flex flex-col">
-          <h2 className="text-2xl mb-1">
-            Time taken:
-          </h2>
-          <Timer timer={timerStartMs - finalTime} />
-        </div>
-        <div className="flex flex-col">
-          <h2 className="text-2xl mb-1">
-            Time remaining:
-          </h2>
-          <Timer timer={finalTime} />
-        </div>
-        <div className="flex flex-col">
-          <h2 className="text-2xl mb-1">
-            Grade:
-          </h2>
-          <span className={cn('text-red-600', {
-            'text-amber-600': grade > 60,
-            'text-green-500 font-semibold': grade > 80,
-          })}
-          >
-            {grade.toFixed(1)}
-            %
-          </span>
-          <div className="flex flex-col mt-2">
-            <span className="text-purple-600">
-              Explanation:
-            </span>
-            <span className="mb-2">
-              {`Your answers included errors in ${questions.length - answeredCorrectly} out of ${questions.length} questions.`}
-            </span>
-            <span>
-              You answered without error
-              {' '}
+        <Card>
+          <CardContent className="flex flex-col gap-6 pt-6 shadow-md">
+            {' '}
+            <div className="flex flex-col">
+              <h2 className="text-2xl mb-1">
+                Time taken:
+              </h2>
+              <Timer timer={timerStartMs - finalTime} />
+            </div>
+            <div className="flex flex-col">
+              <h2 className="text-2xl mb-1">
+                Time remaining:
+              </h2>
+              <Timer timer={finalTime} />
+            </div>
+            <div className="flex flex-col">
+              <h2 className="text-2xl mb-1">
+                Grade:
+              </h2>
               <span className={cn('text-red-600', {
                 'text-amber-600': grade > 60,
                 'text-green-500 font-semibold': grade > 80,
@@ -99,16 +83,36 @@ const ResultsPageContent = () => {
                 {grade.toFixed(1)}
                 %
               </span>
-              {' '}
-              of the time.
-            </span>
-          </div>
-        </div>
+              <div className="flex flex-col mt-2">
+                <span className="text-purple-600">
+                  Explanation:
+                </span>
+                <span className="mb-2">
+                  {`Your answers included errors in ${questions.length - answeredCorrectly} out of ${questions.length} questions.`}
+                </span>
+                <span>
+                  You answered without error
+                  {' '}
+                  <span className={cn('text-red-600', {
+                    'text-amber-600': grade > 60,
+                    'text-green-500 font-semibold': grade > 80,
+                  })}
+                  >
+                    {grade.toFixed(1)}
+                    %
+                  </span>
+                  {' '}
+                  of the time.
+                </span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
         <div className="flex flex-col">
           <h2 className="text-2xl mb-3">
             Answers:
           </h2>
-          <ul className="grid md:grid-cols-2 2xl:grid-cols-3 gap-8">
+          <ul className="grid md:grid-cols-2 2xl:grid-cols-2 gap-8">
             {questions.map((q, i) => (
               <li key={i}>
                 <Card className={cn('shadow-md pt-2 pb-5', {

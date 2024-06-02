@@ -182,8 +182,8 @@ const QuizForm = () => {
               <FormItem>
                 <RadioGroup
                   className={cn('p-4', {
-                    'bg-green-50/50': isAnsweredCorrectly,
-                    'bg-red-50': isAnsweredIncorrectly,
+                    'bg-green-50/50 dark:bg-green-50/25': isAnsweredCorrectly,
+                    'bg-red-50 dark:bg-red-400': isAnsweredIncorrectly,
                   })}
                   onValueChange={(val) => handleChangeAnswer(val)}
                   value=""
@@ -191,10 +191,10 @@ const QuizForm = () => {
                 >
                   {answers.map((answer, i) => (
                     <div
-                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 shadow-sm px-4 py-10 cursor-pointer group' }), {
+                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 dark:border-gray-800 shadow-sm px-4 py-10 cursor-pointer group' }), {
                         'bg-accent': answer.id === formAnswer,
-                        'bg-green-100 hover:bg-green-100': answer.id === formAnswer && isAnsweredCorrectly,
-                        'bg-red-100 hover:bg-red-100': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
+                        'bg-green-100 hover:bg-green-100 dark:text-black': answer.id === formAnswer && isAnsweredCorrectly,
+                        'bg-red-100 hover:bg-red-100 dark:bg-red-300 dark:text-red-800': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
                         'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
                         'pointer-events-none': isAnsweredCorrectly,
                       })}
@@ -205,6 +205,7 @@ const QuizForm = () => {
                         value={answer.id}
                         id={answer.id}
                         ref={i === 0 ? firstRadioButtonRef : undefined}
+                        className={answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly ? 'dark:border-red-800 dark:group-hover:bg-red-300' : ''}
                       />
                       <Label
                         className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]"

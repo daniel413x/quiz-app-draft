@@ -5,9 +5,9 @@ import {
   Sheet, SheetContent, SheetTrigger,
 } from '@/components/ui/common/shadcn/sheet';
 import { Separator } from '@/components/ui/common/shadcn/separator';
-import Image from 'next/image';
 import routes from '@/lib/data/routes';
 import Link from '@/components/ui/common/Link';
+import Logo from './Logo';
 
 const MobileNav = () => (
   <Sheet>
@@ -15,12 +15,7 @@ const MobileNav = () => (
       <Menu className="text-stone-500" />
     </SheetTrigger>
     <SheetContent className="space-y-3">
-      <Image
-        src="/navbar-logo.png"
-        alt="Logo"
-        width={96}
-        height={40}
-      />
+      <Logo />
       <Separator />
       <div className="flex flex-col text-sm">
         {routes.map((r) => (

@@ -23,6 +23,8 @@ import switchImg from '@/public/switch.png';
 import leftCurveAhead from '@/public/left-curve-ahead.png';
 import trafficSignalAhead from '@/public/traffic-signal-ahead.png';
 import yieldAhead from '@/public/yield-ahead.png';
+import dropoutRegularization from '@/public/dropout-regularization.png';
+import identityMatrix from '@/public/identity-matrix.png';
 
 export type Answer = {
   answer: string;
@@ -1167,6 +1169,19 @@ const quizData: QuizData = {
     name: 'JavaScript',
     questions: [
       {
+        question: 'What is the purpose of the following HTML?',
+        code: `
+      <span className="sr-only">Toggle theme</span>
+        `,
+        answers: [
+          { id: '0', answer: 'To add a span with the class "sr-only"' },
+          { id: '1', answer: 'To add a label to a toggle button' },
+          { id: '2', answer: 'To add screen reader support' },
+          { id: '3', answer: 'To add a testing element' },
+        ],
+        correctAnswer: '2',
+      },
+      {
         question: 'What is the primary goal of an SQL injection attack?',
         answers: [
           { id: '0', answer: 'To cause a denial of service' },
@@ -1751,7 +1766,7 @@ const quizData: QuizData = {
         question: 'Which of the following scenarios best describes closure?',
         answers: [
           { id: '0', answer: 'A function that is defined within another function and is a private method of its parent function' },
-          { id: '1', answer: 'A function that returns another function with access to the outer function’s variables' },
+          { id: '1', answer: 'A function that returns another function that has access to the returner function’s variables' },
           { id: '2', answer: 'A function that is defined within another function and has access to the parent function’s variables' },
           { id: '3', answer: 'A function with no parameters' },
         ],
@@ -1764,16 +1779,6 @@ const quizData: QuizData = {
           { id: '1', answer: 'They enable synchronous execution of code' },
           { id: '2', answer: 'They help in defining global variables' },
           { id: '3', answer: 'They prevent code execution' },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: 'In which of the following cases is a closure created?',
-        answers: [
-          { id: '0', answer: 'When a function is defined inside another function and the inner function is returned or assigned to a variable' },
-          { id: '1', answer: 'When a function calls another function' },
-          { id: '2', answer: 'When a function has no return statement' },
-          { id: '3', answer: 'When a function is called with the "new" keyword' },
         ],
         correctAnswer: '0',
       },
@@ -1958,7 +1963,7 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
-        question: 'Which answer best illustrates the process of "LIFO"?',
+        question: 'Which answer best illustrates the "LIFO"?',
         answers: [
           { id: '0', answer: '[], [0], [0, 1], [0, 1, 2], [1, 2], [1], []' },
           { id: '1', answer: '[], [0], [0, 1], [0, 1, 2], [0, 1], [0], []' },
@@ -2723,7 +2728,7 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
-        question: 'What will be the output of the following code, and how does it demonstrate the non-blocking nature of JavaScript?',
+        question: 'How does the console output of following code demonstrate the non-blocking nature of JavaScript?',
         code: `
         console.log('start');
 
@@ -2734,10 +2739,10 @@ const quizData: QuizData = {
         console.log('end');
         `,
         answers: [
-          { id: '0', answer: '"start", "end", "setTimeout" - demonstrates that the main thread is not blocked by the asynchronous setTimeout' },
-          { id: '1', answer: '"start", "setTimeout", "end" - demonstrates that the main thread waits for the setTimeout to complete' },
-          { id: '2', answer: '"setTimeout", "start", "end" - demonstrates that asynchronous tasks are executed immediately' },
-          { id: '3', answer: '"end", "start", "setTimeout" - demonstrates that tasks are executed in the order they are scheduled' },
+          { id: '0', answer: 'It demonstrates that the main thread is not blocked by the asynchronous setTimeout' },
+          { id: '1', answer: 'It demonstrates that the main thread waits for the setTimeout to complete' },
+          { id: '2', answer: 'It demonstrates that asynchronous tasks are executed immediately' },
+          { id: '3', answer: 'It demonstrates that tasks are executed in the order they are scheduled' },
         ],
         correctAnswer: '0',
       },
@@ -3247,7 +3252,7 @@ const quizData: QuizData = {
           { id: '2', answer: 'Make funcTwo a higher-order function, pass in funcThree and call it at the end of the setTimeout block' },
           { id: '3', answer: 'Make funcThree a higher-order function, pass in both funcOne and funcThree and call them sequentially' },
         ],
-        correctAnswer: '0',
+        correctAnswer: '2',
       },
       {
         question: 'In JavaScript, how can encapsulation be achieved?',
@@ -3498,9 +3503,9 @@ const quizData: QuizData = {
         question: 'Where are you likely to encounter UI blocking?',
         answers: [
           { id: '0', answer: 'Using a Software as a Service (SaaS) application without a subscription' },
-          { id: '1', answer: 'Loading a page with lazy loaded images' },
-          { id: '2', answer: 'Loading an AI chat with many chat messages' },
-          { id: '3', answer: 'It enables the use of deprecated HTML tags' },
+          { id: '1', answer: 'Loading a page with many lazy loaded images' },
+          { id: '2', answer: 'Loading a chat page that fetches many messages and does not use lazy loading' },
+          { id: '3', answer: 'Browsing a web page with slow GET requests because the server must populate fetched object fields' },
         ],
         correctAnswer: '2',
       },
@@ -3557,7 +3562,272 @@ const quizData: QuizData = {
         ],
         correctAnswer: '1',
       },
+      {
+        question: 'The browser\'s Web APIs',
+        answers: [
+          { id: '0', answer: 'are leveraged by JavaScript to communicate with web workers' },
+          { id: '1', answer: 'are leveraged by JavaScript to perform low-level operations' },
+          { id: '2', answer: 'are leveraged by JavaScript to remain non-blocking' },
+          { id: '3', answer: 'are leveraged by JavaScript to process macrotasks before microtasks' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is a Web API in the context of web development?',
+        answers: [
+          { id: '0', answer: 'An interface to interact with browser features and services' },
+          { id: '1', answer: 'A library of third-party services such as Google Maps API' },
+          { id: '2', answer: 'A resource for communicating with browser development teams' },
+          { id: '3', answer: 'A library for dealing with asynchronous operations only' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which Web API would you use to manipulate the DOM?',
+        answers: [
+          { id: '0', answer: 'Document Object Model (DOM) API' },
+          { id: '1', answer: 'Web Storage API' },
+          { id: '2', answer: 'Geolocation API' },
+          { id: '3', answer: 'Service Worker API' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the Geolocation API provide?',
+        answers: [
+          { id: '0', answer: 'Access to the geographical location of the user' },
+          { id: '1', answer: 'Access to device sensors' },
+          { id: '2', answer: 'Access to offline storage' },
+          { id: '3', answer: 'Access to camera and microphone' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which is true?',
+        answers: [
+          { id: '0', answer: 'Web Workers run on background threads' },
+          { id: '1', answer: 'JavaScript is single-threaded' },
+          { id: '2', answer: 'JavaScript and Web Workers run on the same thread' },
+          { id: '3', answer: 'Both 1 and 2', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which of the following is a real application of the event "onmessage"?',
+        answers: [
+          { id: '0', answer: 'onmessage is used by Web Workers to communicate to the main thread' },
+          { id: '1', answer: 'onmessage is used by the main thread to communicate to Web Workers' },
+          { id: '2', answer: 'onmessage is used by developers to add accessibility to applications' },
+          { id: '3', answer: 'Both 1 and 2', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which of the following is an application of the method "postMessage"?',
+        answers: [
+          { id: '0', answer: 'postMessage is used by Web Workers to communicate to the main thread' },
+          { id: '1', answer: 'postMessage is used by the main thread to communicate to Web Workers' },
+          { id: '2', answer: 'postMessage is used by developers to add accessibility to applications' },
+          { id: '3', answer: 'Both 1 and 2', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the primary purpose of a Web Worker in web development?',
+        answers: [
+          { id: '0', answer: 'To run JavaScript code in the background without blocking the main thread' },
+          { id: '1', answer: 'To assist the main thread in running synchronous code' },
+          { id: '2', answer: 'To work with the event loop to run asynchronous code in the main thread in an optimized way' },
+          { id: '3', answer: 'To rerender the application when a promise is fulfilled' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How do Web Workers communicate with the main thread?',
+        answers: [
+          { id: '0', answer: 'Using message passing with postMessage and onmessage' },
+          { id: '1', answer: 'Through shared variables' },
+          { id: '2', answer: 'By manipulating the DOM directly' },
+          { id: '3', answer: 'Using WebSockets' },
+        ],
+        correctAnswer: '0',
+      },
+      // {
+      //   question: 'In which situation can a Web Worker serve as a solution?',
+      //   answers: [
+      //     { id: '0', answer: 'A computationally heavy page of a ' },
+      //     { id: '1', answer: 'Through shared variables' },
+      //     { id: '2', answer: 'By manipulating the DOM directly' },
+      //     { id: '3', answer: 'Using WebSockets' },
+      //   ],
+      //   correctAnswer: '0',
+      // },
+      {
+        question: 'Which of the following operations can a Web Worker perform?',
+        answers: [
+          { id: '0', answer: 'Perform calculations and data processing without accessing the DOM' },
+          { id: '1', answer: 'Perform garbage collection' },
+          { id: '2', answer: 'Perform profiling to identify hot code paths to optimize JIT compilation' },
+          { id: '3', answer: 'Perform promises and rerender the application if they resolve successfully' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a limitation of Web Workers?',
+        answers: [
+          { id: '0', answer: 'They cannot directly access the DOM' },
+          { id: '1', answer: 'They cannot run in the background' },
+          { id: '2', answer: 'They cannot perform network requests' },
+          { id: '3', answer: 'They cannot use JavaScript' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a limitation of Web Workers?',
+        answers: [
+          { id: '0', answer: 'They cannot directly access the DOM' },
+          { id: '1', answer: 'They cannot run in the background' },
+          { id: '2', answer: 'They cannot perform network requests' },
+          { id: '3', answer: 'They cannot use JavaScript' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How do you create a new Web Worker in JavaScript?',
+        answers: [
+          { id: '0', answer: 'By instantiating a new Worker object with the script file' },
+          { id: '1', answer: 'By calling the createWorker function' },
+          { id: '2', answer: 'By using the WebWorker constructor' },
+          { id: '3', answer: 'By defining a worker function' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Keyboard event objects in a web application are initially propagated by',
+        answers: [
+          { id: '0', answer: 'JavaScript' },
+          { id: '1', answer: 'the browser' },
+          { id: '2', answer: 'the user\'s devices' },
+          { id: '3', answer: 'event listeners' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Keyboard event objects in a web application are initially propagated by',
+        answers: [
+          { id: '0', answer: 'JavaScript' },
+          { id: '1', answer: 'the browser' },
+          { id: '2', answer: 'the user\'s device' },
+          { id: '3', answer: 'event listeners' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Click event objects in a web application are initially propagated by',
+        answers: [
+          { id: '0', answer: 'JavaScript' },
+          { id: '1', answer: 'the browser' },
+          { id: '2', answer: 'the user\'s device' },
+          { id: '3', answer: 'event listeners' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which is the most accurate assessment of the following JavaScript program?',
+        code: `
+      // main.js
+      const worker = new Worker('worker.js');
 
+      worker.postMessage('Hello, worker!');
+
+      worker.onmessage = function(event) {
+        console.log('Received from worker:', event.data);
+      };
+
+      // worker.js
+      onmessage = function(event) {
+        let result = event.data + ' - processed by worker';
+    
+        postMessage(result);
+      };
+        `,
+        answers: [
+          { id: '0', answer: 'Running the program will result in a completely synchronous runtime with no background thread work' },
+          { id: '1', answer: 'Running the program will result in a completely synchronous runtime with background thread work' },
+          { id: '2', answer: 'Running the program will result in a single-threaded runtime with no background thread work' },
+          { id: '3', answer: 'Running the program will result in a single-threaded runtime with asynchronous background thread work' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which ES6 method is used to copy all enumerable own properties from one or more source objects to a target object?',
+        answers: [
+          { id: '0', answer: 'Object.assign()' },
+          { id: '1', answer: 'Object.copy()' },
+          { id: '2', answer: 'Object.clone()' },
+          { id: '3', answer: 'Object.merge()' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a major advantage of using arrow functions in ES6?',
+        answers: [
+          { id: '0', answer: 'They do not have their own this context' },
+          { id: '1', answer: 'They allow multiple inheritance' },
+          { id: '2', answer: 'They enable synchronous code execution' },
+          { id: '3', answer: 'They automatically bind to the global object' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How do you define a default parameter in an ES6 function?',
+        answers: [
+          { id: '0', answer: 'function foo(a = 10) {}' },
+          { id: '1', answer: 'function foo(a : 10) {}' },
+          { id: '2', answer: 'function foo(a => 10) {}' },
+          { id: '3', answer: 'function foo(a = default) {}' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following keywords is used to declare a block-scoped variable in ES6?',
+        answers: [
+          { id: '0', answer: 'let' },
+          { id: '1', answer: 'var' },
+          { id: '2', answer: 'const' },
+          { id: '3', answer: 'static' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following was NOT introduced in ES6?',
+        answers: [
+          { id: '0', answer: 'Spread operator' },
+          { id: '1', answer: 'Recursion' },
+          { id: '2', answer: 'Symbols' },
+          { id: '3', answer: 'Template literals' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a new feature introduced in ES6?',
+        answers: [
+          { id: '0', answer: 'Arrow functions' },
+          { id: '1', answer: 'Prototype-based inheritance' },
+          { id: '2', answer: 'Hoisting' },
+          { id: '3', answer: 'Global object' },
+        ],
+        correctAnswer: '0',
+      }, {
+        question: 'How can you create a class in ES6?',
+        answers: [
+          { id: '0', answer: 'Using the class keyword' },
+          { id: '1', answer: 'Using the constructor function' },
+          { id: '2', answer: 'Using the function keyword' },
+          { id: '3', answer: 'Using the object keyword' },
+        ],
+        correctAnswer: '0',
+      },
     ],
   },
   python: {
@@ -4091,6 +4361,19 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
+        question: 'What does the following list comprehension do?',
+        code: `
+      [n for n in range(10) if n % 2 == 0]
+        `,
+        answers: [
+          { id: '0', answer: 'Creates a list of even numbers from 0 to 9' },
+          { id: '1', answer: 'Creates a list of odd numbers from 0 to 9' },
+          { id: '2', answer: 'Creates a list of even numbers from 0 to 10' },
+          { id: '3', answer: 'Creates a list of odd numbers from 0 to 10' },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: 'What will be the output of the following code?',
         code: `
       words = ['hello', 'world']
@@ -4177,7 +4460,7 @@ const quizData: QuizData = {
           { id: '0', answer: '[1, 2, 3, 4, 2, 4, 6, 8, 3, 6, 9, 12, 4, 8, 12, 16]' },
           { id: '1', answer: '[1, 4, 9, 16]' },
           { id: '2', answer: '[2, 4, 6, 8]' },
-          { id: '3', answer: '[1, 2, 3, 4]' },
+          { id: '3', answer: '[16, 12, 8, 4, 12, 9, 6, 3, 8, 6, 4, 2, 4, 3, 2,1' },
         ],
         correctAnswer: '0',
       },
@@ -4187,6 +4470,227 @@ const quizData: QuizData = {
   'machine-learning': {
     name: 'Machine Learning',
     questions: [
+      {
+        question: 'Which process is illustrated?',
+        image: dropoutRegularization,
+        answers: [
+          { id: '0', answer: 'Dropout regularization' },
+          { id: '1', answer: 'Underfitting' },
+          { id: '2', answer: 'Backpropagation' },
+          { id: '3', answer: 'NLP Corpus Training' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does high bias in a machine learning model typically indicate?',
+        answers: [
+          { id: '0', answer: 'The model is too simple and underfits the data' },
+          { id: '1', answer: 'The model is too complex and overfits the data' },
+          { id: '2', answer: 'The model has a perfect fit to the data' },
+          { id: '3', answer: 'The model generalizes well to new data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes variance in a machine learning context?',
+        answers: [
+          { id: '0', answer: 'The model\'s sensitivity to fluctuations in the training data' },
+          { id: '1', answer: 'The difference between the training error and test error' },
+          { id: '2', answer: 'The amount of noise in the dataset' },
+          { id: '3', answer: 'The accuracy of the model on the training data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the trade-off between bias and variance in machine learning known as?',
+        answers: [
+          { id: '0', answer: 'Bias-variance trade-off' },
+          { id: '1', answer: 'Overfitting-Underfitting trade-off' },
+          { id: '2', answer: 'Precision-Recall trade-off' },
+          { id: '3', answer: 'Accuracy-Complexity trade-off' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a common symptom of a model with high variance?',
+        answers: [
+          { id: '0', answer: 'The model performs well on training data but poorly on test data' },
+          { id: '1', answer: 'The model performs poorly on both training and test data' },
+          { id: '2', answer: 'The model performs well on both training and test data' },
+          { id: '3', answer: 'The model has a low training error' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can high bias in a model typically be reduced?',
+        answers: [
+          { id: '0', answer: 'By increasing the complexity of the model' },
+          { id: '1', answer: 'By reducing the amount of training data' },
+          { id: '2', answer: 'By decreasing the complexity of the model' },
+          { id: '3', answer: 'By increasing the amount of noise in the data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which technique can help reduce high variance in a machine learning model?',
+        answers: [
+          { id: '0', answer: 'Using more training data' },
+          { id: '1', answer: 'Using a simpler model' },
+          { id: '2', answer: 'Reducing the number of features' },
+          { id: '3', answer: 'Increasing the learning rate' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What happens to bias and variance as the model complexity increases?',
+        answers: [
+          { id: '0', answer: 'Bias decreases and variance increases' },
+          { id: '1', answer: 'Bias increases and variance decreases' },
+          { id: '2', answer: 'Both bias and variance decrease' },
+          { id: '3', answer: 'Both bias and variance increase' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'High bias in a machine learning model is a consequence of',
+        answers: [
+          { id: '0', answer: 'Underfitting' },
+          { id: '1', answer: 'Overfitting' },
+          { id: '2', answer: 'Convolution' },
+          { id: '3', answer: 'High variance' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a result of underfitting in a machine learning model?',
+        answers: [
+          { id: '0', answer: 'High bias' },
+          { id: '1', answer: 'High variance' },
+          { id: '2', answer: 'Low bias' },
+          { id: '3', answer: 'Low variance' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a potential drawback of increasing the model complexity to reduce bias?',
+        answers: [
+          { id: '0', answer: 'It can increase the variance and lead to overfitting' },
+          { id: '1', answer: 'It can reduce the model\'s accuracy' },
+          { id: '2', answer: 'It can decrease the training time' },
+          { id: '3', answer: 'It can simplify the model too much' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the ideal balance in the bias-variance trade-off for a model?',
+        answers: [
+          { id: '0', answer: 'Low bias and low variance' },
+          { id: '1', answer: 'High bias and high variance' },
+          { id: '2', answer: 'Low bias and high variance' },
+          { id: '3', answer: 'High bias and low variance' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What are weights in the context of a neural network?',
+        answers: [
+          { id: '0', answer: 'Parameters that are learned during training to minimize the error' },
+          { id: '1', answer: 'Predefined constants that do not change' },
+          { id: '2', answer: 'The amount of memory used by the network' },
+          { id: '3', answer: 'The number of neurons in the network' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'During which phase of neural network training are weights updated?',
+        answers: [
+          { id: '0', answer: 'During the backward pass' },
+          { id: '1', answer: 'During the forward pass' },
+          { id: '2', answer: 'During the data preprocessing stage' },
+          { id: '3', answer: 'During the evaluation phase' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of initializing weights in a neural network?',
+        answers: [
+          { id: '0', answer: 'To start the training process with initial parameter values' },
+          { id: '1', answer: 'To set the learning rate' },
+          { id: '2', answer: 'To normalize the input data' },
+          { id: '3', answer: 'To determine the batch size' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What might happen if weights are initialized to zero in a neural network?',
+        answers: [
+          { id: '0', answer: 'The neurons may learn the same features' },
+          { id: '1', answer: 'The training process will be faster' },
+          { id: '2', answer: 'The network will achieve higher accuracy' },
+          { id: '3', answer: 'The network will be more robust to overfitting' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the term "weight decay" refer to in neural network training?',
+        answers: [
+          { id: '0', answer: 'A regularization technique to prevent overfitting' },
+          { id: '1', answer: 'The process of reducing the learning rate over time' },
+          { id: '2', answer: 'The gradual decrease in network performance' },
+          { id: '3', answer: 'The initialization of weights to small random values' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How are weights typically initialized in deep neural networks?',
+        answers: [
+          { id: '0', answer: 'With small random values' },
+          { id: '1', answer: 'All weights are set to one' },
+          { id: '2', answer: 'All weights are set to zero' },
+          { id: '3', answer: 'With values from the training data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the role of the learning rate in updating weights during training?',
+        answers: [
+          { id: '0', answer: 'To determine the size of the steps taken in the weight space' },
+          { id: '1', answer: 'To determine the number of neurons in each layer' },
+          { id: '2', answer: 'To set the number of training epochs' },
+          { id: '3', answer: 'To select the activation function' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which optimization algorithm is commonly used to update weights in a neural network?',
+        answers: [
+          { id: '0', answer: 'Stochastic Gradient Descent (SGD)' },
+          { id: '1', answer: 'Principal Component Analysis (PCA)' },
+          { id: '2', answer: 'K-means Clustering' },
+          { id: '3', answer: 'Decision Trees' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the effect of a very high learning rate on the weight updates?',
+        answers: [
+          { id: '0', answer: 'It can cause the weights to oscillate and fail to converge' },
+          { id: '1', answer: 'It ensures faster convergence to the global minimum' },
+          { id: '2', answer: 'It prevents overfitting by regularizing the weights' },
+          { id: '3', answer: 'It has no effect on the training process' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In neural networks, in which phase of training are weights adjusted based on the error calculated from the output?',
+        answers: [
+          { id: '0', answer: 'During the backpropagation phase' },
+          { id: '1', answer: 'During the forward pass phase' },
+          { id: '2', answer: 'During the data augmentation phase' },
+          { id: '3', answer: 'During the validation phase' },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: 'You are working on a text analysis project and need to extract individual words from sentences in a paragraph. Which delimiter would you use?',
         answers: [
@@ -4368,16 +4872,6 @@ const quizData: QuizData = {
         correctAnswer: '1',
       },
       {
-        question: 'Which Python library is known for its high-performance data structures and tools for data analysis?',
-        answers: [
-          { id: '0', answer: 'NumPy' },
-          { id: '1', answer: 'Pandas' },
-          { id: '2', answer: 'SciPy' },
-          { id: '3', answer: 'Matplotlib' },
-        ],
-        correctAnswer: '1',
-      },
-      {
         question: 'Which machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
         answers: [
           { id: '0', answer: 'Scikit-learn' },
@@ -4486,6 +4980,86 @@ const quizData: QuizData = {
           { id: '3', answer: 'To add more layers to the network' },
         ],
         correctAnswer: '2',
+      },
+      {
+        question: 'What is an "input layer" in a neural network?',
+        answers: [
+          { id: '0', answer: 'The first layer that receives the raw input data' },
+          { id: '1', answer: 'The layer that outputs the final prediction' },
+          { id: '2', answer: 'A layer that normalizes the input data' },
+          { id: '3', answer: 'A layer that performs backpropagation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In a neural network, what is a "layer"?',
+        answers: [
+          { id: '0', answer: 'A collection of neurons that process data simultaneously' },
+          { id: '1', answer: 'A single neuron that processes input data' },
+          { id: '2', answer: 'A function that computes the error of the network' },
+          { id: '3', answer: 'A dataset used to train the model' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of a "hidden layer" in a neural network?',
+        answers: [
+          { id: '0', answer: 'To perform intermediate processing and feature extraction' },
+          { id: '1', answer: 'To receive raw input data' },
+          { id: '2', answer: 'To produce the final output of the network' },
+          { id: '3', answer: 'To store the training data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following activation functions is used to produce probabilities in classification tasks?',
+        answers: [
+          { id: '0', answer: 'Softmax' },
+          { id: '1', answer: 'ReLU' },
+          { id: '2', answer: 'Tanh' },
+          { id: '3', answer: 'Sigmoid' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why are non-linear activation functions important in neural networks?',
+        answers: [
+          { id: '0', answer: 'They enable the network to learn complex patterns and relationships' },
+          { id: '1', answer: 'They reduce the training time of the network' },
+          { id: '2', answer: 'They initialize the weights of the network' },
+          { id: '3', answer: 'They store the training data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What happens if you use a linear activation function in all layers of a neural network?',
+        answers: [
+          { id: '0', answer: 'The network will behave like a linear model regardless of the number of layers' },
+          { id: '1', answer: 'The network will learn complex non-linear patterns' },
+          { id: '2', answer: 'The network will not be able to train' },
+          { id: '3', answer: 'The network will produce binary outputs' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is an "output layer" in a neural network?',
+        answers: [
+          { id: '0', answer: 'The final layer that produces the output of the network' },
+          { id: '1', answer: 'The first layer that receives the raw input data' },
+          { id: '2', answer: 'A layer that performs intermediate processing' },
+          { id: '3', answer: 'A layer that normalizes the data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How does the ReLU (Rectified Linear Unit) activation function work?',
+        answers: [
+          { id: '0', answer: 'It outputs the input directly if it is positive; otherwise, it outputs zero' },
+          { id: '1', answer: 'It outputs a value between 0 and 1' },
+          { id: '2', answer: 'It normalizes the input to have zero mean and unit variance' },
+          { id: '3', answer: 'It computes the derivative of the loss function' },
+        ],
+        correctAnswer: '0',
       },
       {
         question: 'Which of the following is a common activation function used in neural networks?',
@@ -4893,7 +5467,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'A neural network where connections between the nodes do not form a cycle' },
           { id: '1', answer: 'A neural network that includes loops' },
           { id: '2', answer: 'A neural network used for unsupervised learning' },
-          { id: '3', answer: 'A type of clustering algorithm' },
+          { id: '3', answer: 'A neural network where connections between the nodes form a cycle' },
         ],
         correctAnswer: '0',
       },
@@ -5263,6 +5837,62 @@ const quizData: QuizData = {
   java: {
     name: 'Java',
     questions: [
+      {
+        question: 'What is Java bytecode?',
+        answers: [
+          { id: '0', answer: 'Machine code that can be directly executed by the JVM' },
+          { id: '1', answer: 'Intermediate code generated by the Java compiler' },
+          { id: '2', answer: 'Source code written in Java' },
+          { id: '3', answer: 'Assembly language code' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which file extension is used for Java bytecode files?',
+        answers: [
+          { id: '0', answer: '.java' },
+          { id: '1', answer: '.class' },
+          { id: '2', answer: '.bytecode' },
+          { id: '3', answer: '.jbc' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which tool is used to generate Java bytecode from Java source code?',
+        answers: [
+          { id: '0', answer: 'javac' },
+          { id: '1', answer: 'java' },
+          { id: '2', answer: 'javadoc' },
+          { id: '3', answer: 'javap' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of the Java Virtual Machine (JVM) concerning bytecode?',
+        answers: [
+          { id: '0', answer: 'To compile bytecode into machine code' },
+          { id: '1', answer: 'To interpret and execute Java bytecode' },
+          { id: '2', answer: 'To convert bytecode to source code' },
+          { id: '3', answer: 'To optimize bytecode for better performance' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What will be the output of the following Java bytecode instruction?',
+        code: `
+      iconst_1
+      iconst_2
+      iadd
+      invokestatic java/io/PrintStream.println(I)V
+        `,
+        answers: [
+          { id: '0', answer: '1' },
+          { id: '1', answer: '2' },
+          { id: '2', answer: '3' },
+          { id: '3', answer: 'Compilation error' },
+        ],
+        correctAnswer: '2',
+      },
       {
         question: 'Which of the following is not a Java feature?',
         answers: [
@@ -5707,9 +6337,211 @@ const quizData: QuizData = {
       },
     ],
   },
+  // ===========
   'comptia-network-plus': {
     name: 'CompTIA Network+',
     questions: [
+      {
+        question: 'Your router is assigned a ________ by the ISP, while devices connected to it are assigned ________ by the DHCP/router',
+        answers: [
+          { id: '0', answer: 'DHCP, public IPs' },
+          { id: '1', answer: 'public IP, public IPs' },
+          { id: '2', answer: 'public IP, private IPs' },
+          { id: '3', answer: 'private IP, public IPs' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'In most local network settings where a router is used,',
+        answers: [
+          { id: '0', answer: 'DHCP is performed by the ISP' },
+          { id: '1', answer: 'DHCP is performed by the router' },
+          { id: '2', answer: 'DHCP is performed by reverse proxy' },
+          { id: '3', answer: 'DHCP is performed by the government' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'When you add a new device to your local network that connects to the Internet through a router,',
+        answers: [
+          { id: '0', answer: 'It is assigned an IP address by DHCP' },
+          { id: '1', answer: 'It is assigned an IP address by your ISP' },
+          { id: '2', answer: 'It is assigned an IP address by reverse proxy' },
+          { id: '3', answer: 'It is assigned an IP address by the government' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'The IP addresses assigned to machines within a home network are',
+        answers: [
+          { id: '0', answer: 'Public IP addresses' },
+          { id: '1', answer: 'Private IP addresses' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In a local network, IP addresses assigned to devices connected to a router occupy address space in the global pool of IP addresses',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'The router in your home network',
+        answers: [
+          { id: '0', answer: 'Has a MAC address, a private IP address and a public IP address' },
+          { id: '1', answer: 'Has a MAC address and a private IP address' },
+          { id: '2', answer: 'Has a MAC address and a public IP address' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What type of IP address is assigned to a router by an Internet Service Provider (ISP)?',
+        answers: [
+          { id: '0', answer: 'Private IP address' },
+          { id: '1', answer: 'Public IP address' },
+          { id: '2', answer: 'Local IP address' },
+          { id: '3', answer: 'Static IP address' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the role of a router in subnetting?',
+        answers: [
+          { id: '0', answer: 'To serve as a logical or physical boundary between the subnets' },
+          { id: '1', answer: 'To provide IP addresses to devices' },
+          { id: '2', answer: 'To encrypt data for secure transmission' },
+          { id: '3', answer: 'To manage network switches' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the IPv6 address specification 2001:db8::/32 represent?',
+        answers: [
+          { id: '0', answer: 'A small address block with 64 addresses' },
+          { id: '1', answer: 'A large address block with 2^96 addresses' },
+          { id: '2', answer: 'A medium address block with 2^64 addresses' },
+          { id: '3', answer: 'A small address block with 32 addresses' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How is traffic exchanged between subnets?',
+        answers: [
+          { id: '0', answer: 'Through direct device-to-device communication' },
+          { id: '1', answer: 'Through switches' },
+          { id: '2', answer: 'Through routers' },
+          { id: '3', answer: 'Through access points' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'You can determine whether or not address 192.168.1.0/24 is an IPv4 or IPv6 address',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Is the address 2001:0db8::/32 an IPv4 or IPv6 address?',
+        answers: [
+          { id: '0', answer: 'IPv4' },
+          { id: '1', answer: 'IPv6' },
+          { id: '2', answer: 'Both' },
+          { id: '3', answer: 'Neither' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following CIDR notations represents an IPv6 address?',
+        answers: [
+          { id: '0', answer: '192.168.0.0/16' },
+          { id: '1', answer: '10.0.0.0/8' },
+          { id: '2', answer: '2001:0db8::/48' },
+          { id: '3', answer: '172.16.0.0/12' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following CIDR notations represents an IPv4 address?',
+        answers: [
+          { id: '0', answer: '2001:0db8::/32' },
+          { id: '1', answer: '192.0.2.0/24' },
+          { id: '2', answer: 'fe80::/10' },
+          { id: '3', answer: '2001:0db8:85a3::8a2e:0370:7334/64' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary visual difference between IPv4 and IPv6 addresses in CIDR notation?',
+        answers: [
+          { id: '0', answer: 'IPv4 addresses use colons, while IPv6 addresses use periods.' },
+          { id: '1', answer: 'IPv4 addresses use hexadecimal digits, while IPv6 addresses use decimal digits.' },
+          { id: '2', answer: 'IPv4 addresses use periods, while IPv6 addresses use colons.' },
+          { id: '3', answer: 'IPv4 addresses are longer than IPv6 addresses.' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the purpose of DNS records in a domain name system?',
+        answers: [
+          { id: '0', answer: 'To store email messages' },
+          { id: '1', answer: 'To map domain names to IP addresses' },
+          { id: '2', answer: 'To create a backup of the DNS server' },
+          { id: '3', answer: 'To encrypt network traffic' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which type of DNS record is used to map a domain name to an IPv4 address?',
+        answers: [
+          { id: '0', answer: 'MX record' },
+          { id: '1', answer: 'A record' },
+          { id: '2', answer: 'CNAME record' },
+          { id: '3', answer: 'AAAA record' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which DNS record type specifies the mail servers responsible for receiving email on behalf of a domain?',
+        answers: [
+          { id: '0', answer: 'A record' },
+          { id: '1', answer: 'CNAME record' },
+          { id: '2', answer: 'MX record' },
+          { id: '3', answer: 'TXT record' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What DNS record type is used to alias one domain name to another domain name?',
+        answers: [
+          { id: '0', answer: 'A record' },
+          { id: '1', answer: 'CNAME record' },
+          { id: '2', answer: 'MX record' },
+          { id: '3', answer: 'SRV record' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which DNS record type maps a domain name to an IPv6 address?',
+        answers: [
+          { id: '0', answer: 'AAAA record' },
+          { id: '1', answer: 'A record' },
+          { id: '2', answer: 'CNAME record' },
+          { id: '3', answer: 'PTR record' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Your PC has a MAC address',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
       {
         question: 'Which layer of the OSI model is responsible for establishing, managing, and terminating connections between applications?',
         answers: [
@@ -5763,12 +6595,22 @@ const quizData: QuizData = {
       {
         question: 'Which of the following protocols is used for email transmission?',
         answers: [
-          { id: '0', answer: 'FTP' },
+          { id: '0', answer: 'IMAP' },
           { id: '1', answer: 'SMTP' },
           { id: '2', answer: 'HTTP' },
           { id: '3', answer: 'SNMP' },
         ],
         correctAnswer: '1',
+      },
+      {
+        question: 'SNMP stands for',
+        answers: [
+          { id: '0', answer: 'Simple Network Multitasking Protocol' },
+          { id: '1', answer: 'Simple Network Maverick Protocol' },
+          { id: '2', answer: 'Simple Network Management Protocol' },
+          { id: '3', answer: 'Simple Network Message Protocol' },
+        ],
+        correctAnswer: '2',
       },
       {
         question: 'What is the primary function of a router in a network?',
@@ -5851,7 +6693,7 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
-        question: 'What type of device uses a MAC address to forward data to the correct destination?',
+        question: 'What type of device uses MAC addresses to forward data to the correct destination?',
         answers: [
           { id: '0', answer: 'Router' },
           { id: '1', answer: 'Switch' },
@@ -6207,7 +7049,7 @@ const quizData: QuizData = {
         answers: [
           { id: '0', answer: 'you may have to reconfigure your DHCP' },
           { id: '1', answer: 'you may have to reconfigure your LDAP' },
-          { id: '2', answer: 'you may have to reconfigure any switches' },
+          { id: '2', answer: 'you may have to reconfigure switches' },
           { id: '3', answer: 'you may have to reconfigure the bridge' },
         ],
         correctAnswer: '2',
@@ -6281,6 +7123,16 @@ const quizData: QuizData = {
           { id: '3', answer: 'HTTP' },
         ],
         correctAnswer: '1',
+      },
+      {
+        question: '____ is used to to retrieve emails from a mail server and ____ is used to send emails to a server',
+        answers: [
+          { id: '0', answer: 'IMAP, SMTP' },
+          { id: '1', answer: 'SMTP, IMAP' },
+          { id: '2', answer: 'ICMP, SMTP' },
+          { id: '3', answer: 'SMTP, ICMP' },
+        ],
+        correctAnswer: '0',
       },
       {
         question: 'What is the maximum data rate of the 802.11ac wireless standard?',
@@ -6622,7 +7474,7 @@ const quizData: QuizData = {
         question: 'Why might changing your router\'s MAC address to get a new IP address be less effective in 2024 compared to 2010?',
         answers: [
           { id: '0', answer: 'ISPs no longer use MAC addresses.' },
-          { id: '1', answer: 'ISPs have changed DHCP lease policies and use CGNAT.' },
+          { id: '1', answer: 'ISPs use CGNAT.' },
           { id: '2', answer: 'Websites no longer use IP bans.' },
           { id: '3', answer: 'MAC addresses are now static.' },
         ],
@@ -6743,7 +7595,7 @@ const quizData: QuizData = {
         answers: [
           { id: '0', answer: 'Port forwarding' },
           { id: '1', answer: 'VPN (Virtual Private Network)' },
-          { id: '2', answer: 'Firewall' },
+          { id: '2', answer: 'VLAN (Virtual Local Area Network)' },
           { id: '3', answer: 'NAT (Network Address Translation)' },
         ],
         correctAnswer: '1',
@@ -6990,9 +7842,1740 @@ const quizData: QuizData = {
         ],
         correctAnswer: '2',
       },
+      {
+        question: 'In the CIDR block 192.168.0.15/24',
+        answers: [
+          { id: '0', answer: 'the bits represented by 192, 168 and 0 are significant for routing' },
+          { id: '1', answer: 'the bits represented by 192 and 168 are significant for routing' },
+          { id: '2', answer: 'the bits represented by 168, 0 and 15 are significant for routing' },
+          { id: '3', answer: 'the bits represented by 0, and 15 are significant for routing' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In the CIDR block 10.123.0.0/16',
+        answers: [
+          { id: '0', answer: 'the bits represented by 10, 123 and 0 are significant for routing' },
+          { id: '1', answer: 'the bits represented by 10 and 123 are significant for routing' },
+          { id: '2', answer: 'the bits represented by 123 and 0 are significant for routing' },
+          { id: '3', answer: 'the bits represented by 0 are significant for routing' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does CIDR stand for in networking?',
+        answers: [
+          { id: '0', answer: 'Classful Inter-Domain Routing' },
+          { id: '1', answer: 'Classless Inter-Domain Routing' },
+          { id: '2', answer: 'Classful Intra-Domain Routing' },
+          { id: '3', answer: 'Classless Intra-Domain Routing' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In CIDR notation, what does the prefix length indicate?',
+        answers: [
+          { id: '0', answer: 'The number of bits used to identify the network segment' },
+          { id: '1', answer: 'The number of bits used to identify individual hosts' },
+          { id: '2', answer: 'The total number of IP addresses in the network' },
+          { id: '3', answer: 'The broadcast address of the network' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Given the CIDR block 192.168.1.0/24, how many IP addresses are available for assignment to devices within the network?',
+        answers: [
+          { id: '0', answer: '256' },
+          { id: '1', answer: '254' },
+          { id: '2', answer: '255' },
+          { id: '3', answer: '253' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which two IP addresses in a CIDR block are typically reserved and not available for assignment to devices?',
+        answers: [
+          { id: '0', answer: 'The first and the second addresses' },
+          { id: '1', answer: 'The first and the last addresses' },
+          { id: '2', answer: 'The second and the last addresses' },
+          { id: '3', answer: 'The last two addresses' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How does CIDR provide more flexibility compared to the older classful addressing system?',
+        answers: [
+          { id: '0', answer: 'By using fixed classes for IP address allocation' },
+          { id: '1', answer: 'By allowing variable-length subnet masking' },
+          { id: '2', answer: 'By increasing the number of available IP addresses' },
+          { id: '3', answer: 'By dividing the IP address space into more classes' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In a cloud computing environment, such as AWS, what are CIDR blocks used for?',
+        answers: [
+          { id: '0', answer: 'Defining physical hardware configurations' },
+          { id: '1', answer: 'Defining virtual networks (VPCs) and subnets' },
+          { id: '2', answer: 'Encrypting data in transit' },
+          { id: '3', answer: 'Managing user authentication' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the range of IP addresses represented by the CIDR block 10.0.0.0/8?',
+        answers: [
+          { id: '0', answer: '10.0.0.0 to 10.0.0.255' },
+          { id: '1', answer: '10.0.0.0 to 10.0.255.255' },
+          { id: '2', answer: '10.0.0.0 to 10.255.255.255' },
+          { id: '3', answer: '10.0.0.0 to 10.255.0.0' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the main advantage of using CIDR over classful addressing?',
+        answers: [
+          { id: '0', answer: 'Fixed class boundaries for IP allocation' },
+          { id: '1', answer: 'Reduced waste of IP addresses' },
+          { id: '2', answer: 'Simpler routing protocols' },
+          { id: '3', answer: 'Static IP addresses for all devices' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is an example of valid CIDR notation?',
+        answers: [
+          { id: '0', answer: '192.168.1.0/24' },
+          { id: '1', answer: '192.168.1.0.255' },
+          { id: '2', answer: '192.168.1.0/255.255.255.0' },
+          { id: '3', answer: '192.168.1.0-192.168.1.255' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In the CIDR block 172.16.0.0/16, how many bits are used to identify individual hosts?',
+        answers: [
+          { id: '0', answer: '8' },
+          { id: '1', answer: '16' },
+          { id: '2', answer: '24' },
+          { id: '3', answer: '32' },
+        ],
+        correctAnswer: '1',
+      },
+
+      {
+        question: 'What is the significance of the first sixteen bits in the CIDR block 10.123.0.0/16?',
+        answers: [
+          { id: '0', answer: 'They are significant for DHCP policies' },
+          { id: '1', answer: 'They are significant for network routing' },
+          { id: '2', answer: 'They are significant for identifying a specific host' },
+          { id: '3', answer: 'They are significant for identifying network routers' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How many IP addresses can the CIDR block 10.123.1.0/24 accommodate?',
+        answers: [
+          { id: '0', answer: '256' },
+          { id: '1', answer: '254' },
+          { id: '2', answer: '255' },
+          { id: '3', answer: '512' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What makes CIDR Block B (10.123.1.0/24) a subnet of CIDR Block A (10.123.0.0/16)?',
+        answers: [
+          { id: '0', answer: 'It shares the first 8 bytes (10) with CIDR Block A' },
+          { id: '1', answer: 'It has a prefix matching that of CIDR Block A' },
+          { id: '2', answer: 'It is in a different IP range' },
+          { id: '3', answer: 'It has a different network prefix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Why can’t there be a CIDR block like 10.123.1.0/32?',
+        answers: [
+          { id: '0', answer: 'Because it leaves no room to write the address' },
+          { id: '1', answer: 'Because it is reserved for broadcast addresses' },
+          { id: '2', answer: 'Because it only represents a single IP address' },
+          { id: '3', answer: 'Because it is invalid in IPv4 addressing' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'If the first twenty-four bits are significant for network routing in CIDR Block B (10.123.1.0/24), what is the role of the next eight bits?',
+        answers: [
+          { id: '0', answer: 'They define the network prefix' },
+          { id: '1', answer: 'They identify individual hosts within the subnet' },
+          { id: '2', answer: 'They determine the broadcast address' },
+          { id: '3', answer: 'They are used for routing outside the network' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does the /16 in the CIDR block 10.123.0.0/16 represent?',
+        answers: [
+          { id: '0', answer: 'The number of significant bits per subnet for the network prefix' },
+          { id: '1', answer: 'The number of significant bits for the network prefix' },
+          { id: '2', answer: 'The number of hosts per subnet for the network prefix' },
+          { id: '3', answer: 'The number of subnets for the network prefix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'In the context of CIDR blocks, what is meant by the term "prefix length"?',
+        answers: [
+          { id: '0', answer: 'The length of the entire IP address' },
+          { id: '1', answer: 'The number of bits used to identify the network portion of the address' },
+          { id: '2', answer: 'The number of bits used to identify individual hosts' },
+          { id: '3', answer: 'The total number of subnets created' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How does the prefix length affect the number of hosts in a CIDR block?',
+        answers: [
+          { id: '0', answer: 'A longer prefix length allows more hosts' },
+          { id: '1', answer: 'A shorter prefix length allows more hosts' },
+          { id: '2', answer: 'It does not affect the number of hosts' },
+          { id: '3', answer: 'A longer prefix length always allows 256 hosts' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the range of IP addresses represented by the CIDR block 10.123.0.0/16?',
+        answers: [
+          { id: '0', answer: '10.123.0.0 to 10.123.255.255' },
+          { id: '1', answer: '10.123.0.0 to 10.123.0.255' },
+          { id: '2', answer: '10.123.0.0 to 10.123.1.255' },
+          { id: '3', answer: '10.123.0.0 to 10.123.255.0' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the CIDR notation 10.123.1.0/24 indicate about the network?',
+        answers: [
+          { id: '0', answer: 'It includes all addresses from 10.123.1.0 to 10.123.1.255' },
+          { id: '1', answer: 'It includes all addresses from 10.123.0.0 to 10.123.1.255' },
+          { id: '2', answer: 'It includes all addresses from 10.123.0.0 to 10.123.255.255' },
+          { id: '3', answer: 'It includes all addresses from 10.123.1.0 to 10.123.255.255' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the CIDR notation 10.123.1.0/24 indicate about the network?',
+        answers: [
+          { id: '0', answer: 'It includes all addresses from 10.123.1.0 to 10.123.1.255' },
+          { id: '1', answer: 'It includes all addresses from 10.123.0.0 to 10.123.1.255' },
+          { id: '2', answer: 'It includes all addresses from 10.123.0.0 to 10.123.255.255' },
+          { id: '3', answer: 'It includes all addresses from 10.123.1.0 to 10.123.255.255' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is true of CIDR blocks?',
+        answers: [
+          { id: '0', answer: 'A CIDR block can be a MAC address' },
+          { id: '1', answer: 'A CIDR block represents a router address' },
+          { id: '2', answer: 'A CIDR block represents an octet' },
+          { id: '3', answer: 'A CIDR block represents addresses in a NAT' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following best describes the function of a CIDR block?',
+        answers: [
+          { id: '0', answer: 'It provides a unique identifier for network interfaces' },
+          { id: '1', answer: 'It allocates a range of IP addresses and aids in routing' },
+          { id: '2', answer: 'It defines the hardware address of a device' },
+          { id: '3', answer: 'It translates domain names to IP addresses' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'If 192.168.123.0 is a subnet where the bits 192.168.123 are significant for routing,',
+        answers: [
+          { id: '0', answer: 'it would be written in CIDR notation as 192.168.123.0/24' },
+          { id: '1', answer: 'it would be written in CIDR notation as 192.168.123.0/16' },
+          { id: '2', answer: 'it would be written in CIDR notation as 192.168.123.0/32' },
+          { id: '3', answer: 'it would be written in CIDR notation as 192.168.123.0/8' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How many possible host addresses are there in the CIDR block 192.168.123.0/24?',
+        answers: [
+          { id: '0', answer: 'There are 256 possible host addresses' },
+          { id: '1', answer: 'There are 255 possible host addresses' },
+          { id: '2', answer: 'There are 254 possible host addresses' },
+          { id: '3', answer: 'There are 65535 possible host addresses' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'In any given CIDR block x.x.x.x/24, the network and broadcast addresses (where the last byte is 0 and 255, respectively) are considered host addresses',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'If you read a CIDR notation written x.x.x.x/32, you would be correct to conclude',
+        answers: [
+          { id: '0', answer: 'The first 32 bits of the address are significant for routing' },
+          { id: '1', answer: 'There must be a mistake' },
+          { id: '2', answer: 'There are 254 possible addresses' },
+          { id: '3', answer: 'There are 64 possible addresses' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is true of a certain CIDR block x.x.x.0/24?',
+        answers: [
+          { id: '0', answer: 'The address x.x.x.0/24 is a host address', order: 0 },
+          { id: '1', answer: 'The address x.x.x.0/24 is the CIDR block\'s network address', order: 1 },
+          { id: '2', answer: 'There are 255 possible addresses', order: 2 },
+          { id: '3', answer: '1 and 2 are true', order: 3 },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which of the following is true of a certain CIDR block x.x.x.0/24?',
+        answers: [
+          { id: '0', answer: 'Two addresses are reserved and cannot be assigned to devices' },
+          { id: '1', answer: 'The address x.x.x.0/24 is the CIDR block\'s network address' },
+          { id: '2', answer: 'There are 255 possible addresses' },
+          { id: '3', answer: '1 and 2 are true', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which of the following is a valid host address within the CIDR block 192.168.1.0/24?',
+        answers: [
+          { id: '0', answer: '192.168.1.0' },
+          { id: '1', answer: '192.168.1.1' },
+          { id: '2', answer: '192.168.1.255' },
+          { id: '3', answer: '192.168.2.1' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Why is the IP address 192.168.1.0 not available for assignment to a device in the CIDR block 192.168.1.0/24?',
+        answers: [
+          { id: '0', answer: 'It is the network address' },
+          { id: '1', answer: 'It is the broadcast address' },
+          { id: '2', answer: 'It is reserved for the router' },
+          { id: '3', answer: 'It is outside the valid range' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the broadcast address for the CIDR block 192.168.1.0/24?',
+        answers: [
+          { id: '0', answer: '192.168.1.254' },
+          { id: '1', answer: '192.168.1.255' },
+          { id: '2', answer: '192.168.1.1' },
+          { id: '3', answer: '192.168.1.0' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the range of usable host addresses in a CIDR block 192.168.123.0/24?',
+        answers: [
+          { id: '0', answer: '192.168.123.1 to 192.168.123.254' },
+          { id: '1', answer: '192.168.123.1 to 192.168.123.255' },
+          { id: '2', answer: '192.168.123.0 to 192.168.123.255' },
+          { id: '3', answer: '192.168.123.0 to 192.168.123.254' },
+        ],
+        correctAnswer: '0',
+      },
+      /*
+        need to check above quesiton w/
+      How many IP addresses can the CIDR block 10.123.1.0/24 accommodate?
+512
+255
+256
+254<-correct
+      */
     ],
   },
-
+  'aws-cloud-practitioner': {
+    name: 'AWS Certified Cloud Practitioner Certification',
+    questions: [
+      {
+        question: 'Which of the following is an example of an AWS managed service?',
+        answers: [
+          { id: '0', answer: 'Amazon Elastic Compute Cloud (EC2)' },
+          { id: '1', answer: 'Amazon Relational Database Service (RDS)' },
+          { id: '2', answer: 'Amazon Simple Storage Service (S3)' },
+          { id: '3', answer: 'AWS Identity and Access Management (IAM)' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does the AWS Well-Architected Framework provide?',
+        answers: [
+          { id: '0', answer: 'Guidance on best practices to design cloud architectures' },
+          { id: '1', answer: 'A tool to monitor AWS spending' },
+          { id: '2', answer: 'An API for deploying AWS resources' },
+          { id: '3', answer: 'A service for managing user identities' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which AWS service is used for object storage?',
+        answers: [
+          { id: '0', answer: 'Amazon RDS' },
+          { id: '1', answer: 'Amazon EC2' },
+          { id: '2', answer: 'Amazon S3' },
+          { id: '3', answer: 'Amazon Redshift' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the main benefit of Amazon CloudFront?',
+        answers: [
+          { id: '0', answer: 'Improves security of your content' },
+          { id: '1', answer: 'Scales compute resources automatically' },
+          { id: '2', answer: 'Provides content delivery with low latency and high transfer speeds' },
+          { id: '3', answer: 'Monitors application performance' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which AWS service is used for monitoring and logging AWS resources?',
+        answers: [
+          { id: '0', answer: 'AWS CloudTrail' },
+          { id: '1', answer: 'AWS Config' },
+          { id: '2', answer: 'Amazon CloudWatch' },
+          { id: '3', answer: 'AWS X-Ray' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following is a benefit of using AWS Lambda?',
+        answers: [
+          { id: '0', answer: 'Automatic scaling' },
+          { id: '1', answer: 'Lower cost' },
+          { id: '2', answer: 'No server management' },
+          { id: '3', answer: 'All of the above', order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the main purpose of Amazon VPC?',
+        answers: [
+          { id: '0', answer: 'To create isolated networks within the AWS cloud' },
+          { id: '1', answer: 'To provide a scalable database service' },
+          { id: '2', answer: 'To manage identities and access' },
+          { id: '3', answer: 'To monitor resource usage' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which AWS service is used for data warehousing?',
+        answers: [
+          { id: '0', answer: 'Amazon DynamoDB' },
+          { id: '1', answer: 'Amazon Redshift' },
+          { id: '2', answer: 'Amazon RDS' },
+          { id: '3', answer: 'Amazon Aurora' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the primary benefit of using Amazon S3?',
+        answers: [
+          { id: '0', answer: 'High availability and durability' },
+          { id: '1', answer: 'Managed relational databases' },
+          { id: '2', answer: 'Scalable compute power' },
+          { id: '3', answer: 'Identity and access management' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which AWS service can be used to run containerized applications?',
+        answers: [
+          { id: '0', answer: 'Amazon ECS' },
+          { id: '1', answer: 'Amazon S3' },
+          { id: '2', answer: 'AWS Lambda' },
+          { id: '3', answer: 'AWS CloudFormation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is AWS CloudFormation used for?',
+        answers: [
+          { id: '0', answer: 'Managing cloud costs' },
+          { id: '1', answer: 'Running serverless functions' },
+          { id: '2', answer: 'Automating the deployment of AWS resources' },
+          { id: '3', answer: 'Monitoring cloud resources' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which AWS service is used for managed NoSQL databases?',
+        answers: [
+          { id: '0', answer: 'Amazon Aurora' },
+          { id: '1', answer: 'Amazon RDS' },
+          { id: '2', answer: 'Amazon DynamoDB' },
+          { id: '3', answer: 'Amazon Redshift' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the primary function of AWS IAM?',
+        answers: [
+          { id: '0', answer: 'Managing user access and permissions' },
+          { id: '1', answer: 'Storing objects in the cloud' },
+          { id: '2', answer: 'Providing virtual servers' },
+          { id: '3', answer: 'Deploying containerized applications' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which AWS service helps you centrally manage and govern your environment as you grow and scale your AWS resources?',
+        answers: [
+          { id: '0', answer: 'AWS CloudFormation' },
+          { id: '1', answer: 'AWS Organizations' },
+          { id: '2', answer: 'AWS CloudTrail' },
+          { id: '3', answer: 'AWS Config' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What does Amazon CloudWatch Logs enable you to do?',
+        answers: [
+          { id: '0', answer: 'Store and monitor log files from AWS resources' },
+          { id: '1', answer: 'Stream real-time data' },
+          { id: '2', answer: 'Manage NoSQL databases' },
+          { id: '3', answer: 'Provision virtual networks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which service can you use to create a Virtual Private Network (VPN) connection between your corporate data center and your VPC?',
+        answers: [
+          { id: '0', answer: 'Amazon CloudFront' },
+          { id: '1', answer: 'Amazon VPC' },
+          { id: '2', answer: 'AWS Direct Connect' },
+          { id: '3', answer: 'AWS VPN' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which AWS service enables you to quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications?',
+        answers: [
+          { id: '0', answer: 'Amazon EC2' },
+          { id: '1', answer: 'AWS Lambda' },
+          { id: '2', answer: 'Amazon RDS' },
+          { id: '3', answer: 'AWS Elastic Beanstalk' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which service is used to manage DNS records for domain names?',
+        answers: [
+          { id: '0', answer: 'Amazon Route 53' },
+          { id: '1', answer: 'Amazon CloudFront' },
+          { id: '2', answer: 'Amazon VPC' },
+          { id: '3', answer: 'Amazon EC2' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does AWS CloudTrail record?',
+        answers: [
+          { id: '0', answer: 'AWS resource configurations' },
+          { id: '1', answer: 'API calls made to AWS services' },
+          { id: '2', answer: 'Cloud resource monitoring data' },
+          { id: '3', answer: 'Cost and usage reports' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which AWS service can you use to deploy and manage a Kubernetes cluster?',
+        answers: [
+          { id: '0', answer: 'Amazon EC2' },
+          { id: '1', answer: 'Amazon ECS' },
+          { id: '2', answer: 'AWS Lambda' },
+          { id: '3', answer: 'Amazon EKS' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Which service allows you to run code without provisioning or managing servers?',
+        answers: [
+          { id: '0', answer: 'Amazon EC2' },
+          { id: '1', answer: 'AWS Lambda' },
+          { id: '2', answer: 'Amazon RDS' },
+          { id: '3', answer: 'Amazon S3' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which AWS service provides a fully managed message queue service?',
+        answers: [
+          { id: '0', answer: 'Amazon SNS' },
+          { id: '1', answer: 'Amazon SQS' },
+          { id: '2', answer: 'Amazon MQ' },
+          { id: '3', answer: 'AWS Step Functions' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is Amazon Cognito used for?',
+        answers: [
+          { id: '0', answer: 'Hosting static websites' },
+          { id: '1', answer: 'Provisioning virtual machines' },
+          { id: '2', answer: 'Managing user sign-up and sign-in' },
+          { id: '3', answer: 'Monitoring application performance' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which AWS service is best suited for real-time data processing?',
+        answers: [
+          { id: '0', answer: 'Amazon RDS' },
+          { id: '1', answer: 'Amazon Kinesis' },
+          { id: '2', answer: 'Amazon S3' },
+          { id: '3', answer: 'Amazon Redshift' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which service allows you to run applications without provisioning and managing servers?',
+        answers: [
+          { id: '0', answer: 'Amazon EC2' },
+          { id: '1', answer: 'AWS Fargate' },
+          { id: '2', answer: 'AWS Lambda' },
+          { id: '3', answer: 'Amazon Lightsail' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the main function of AWS CloudTrail?',
+        answers: [
+          { id: '0', answer: 'Monitor AWS resource utilization' },
+          { id: '1', answer: 'Store objects in the cloud' },
+          { id: '2', answer: 'Record API calls and deliver log files' },
+          { id: '3', answer: 'Manage NoSQL databases' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Your company wants to host a multi-tier web application on AWS. The application requires a public-facing web server and a database server that should not be accessible from the internet. Which configuration should you use?',
+        answers: [
+          { id: '0', answer: 'Deploy the web server in a public subnet and the database server in a private subnet within a VPC.' },
+          { id: '1', answer: 'Deploy both the web server and database server in the same public subnet within a VPC.' },
+          { id: '2', answer: 'Deploy the web server in a private subnet and the database server in a public subnet within a VPC.' },
+          { id: '3', answer: 'Deploy both the web server and database server in a private subnet within a VPC.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company needs to establish a secure connection between its on-premises network and AWS to ensure data is encrypted in transit. Which AWS service should they use?',
+        answers: [
+          { id: '0', answer: 'AWS Direct Connect' },
+          { id: '1', answer: 'AWS VPN' },
+          { id: '2', answer: 'Amazon CloudFront' },
+          { id: '3', answer: 'AWS IAM' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Your development team needs to access an RDS instance hosted in a private subnet for testing purposes. What should you do to securely grant them access?',
+        answers: [
+          { id: '0', answer: 'Create a bastion host in a public subnet and use it to access the RDS instance in the private subnet.' },
+          { id: '1', answer: 'Open the private subnet to the internet.' },
+          { id: '2', answer: 'Move the RDS instance to a public subnet.' },
+          { id: '3', answer: 'Use AWS Direct Connect to access the RDS instance.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company wants to ensure their application servers in a VPC can communicate with the internet for software updates, but they should not accept inbound connections from the internet. What solution should they implement?',
+        answers: [
+          { id: '0', answer: 'Configure a NAT gateway in a public subnet and route traffic from the application servers through the NAT gateway.' },
+          { id: '1', answer: 'Place the application servers in a public subnet with a security group blocking inbound connections.' },
+          { id: '2', answer: 'Deploy the application servers in a private subnet without any internet connectivity.' },
+          { id: '3', answer: 'Use an internet gateway to provide internet access to the application servers.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Your company wants to restrict access to its VPC to only known IP addresses for security reasons. Which AWS service can help achieve this?',
+        answers: [
+          { id: '0', answer: 'AWS WAF' },
+          { id: '1', answer: 'AWS Shield' },
+          { id: '2', answer: 'AWS Security Groups' },
+          { id: '3', answer: 'AWS Network ACLs' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'A client has deployed a web application in a VPC. They want to ensure high availability and fault tolerance by distributing traffic across multiple Availability Zones. Which AWS service should they use?',
+        answers: [
+          { id: '0', answer: 'AWS Route 53' },
+          { id: '1', answer: 'AWS Load Balancer' },
+          { id: '2', answer: 'AWS Elastic Beanstalk' },
+          { id: '3', answer: 'AWS Auto Scaling' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'An organization needs to allow communication between instances in two different VPCs they own. What AWS feature should they implement?',
+        answers: [
+          { id: '0', answer: 'VPC Peering' },
+          { id: '1', answer: 'AWS Direct Connect' },
+          { id: '2', answer: 'AWS VPN' },
+          { id: '3', answer: 'AWS Transit Gateway' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company needs to isolate the environment for their testing, development, and production workloads within the same VPC. What AWS feature should they use?',
+        answers: [
+          { id: '0', answer: 'Security Groups' },
+          { id: '1', answer: 'NAT Gateway' },
+          { id: '2', answer: 'Subnets' },
+          { id: '3', answer: 'Network ACLs' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Your company wants to monitor and analyze network traffic within a VPC to identify potential security threats. Which AWS service should you use?',
+        answers: [
+          { id: '0', answer: 'AWS CloudTrail' },
+          { id: '1', answer: 'VPC Flow Logs' },
+          { id: '2', answer: 'AWS Config' },
+          { id: '3', answer: 'Amazon CloudWatch' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A company wants to set up a hybrid cloud architecture. They need a high-bandwidth, dedicated connection between their on-premises data center and AWS. Which service should they use?',
+        answers: [
+          { id: '0', answer: 'AWS VPN' },
+          { id: '1', answer: 'AWS Direct Connect' },
+          { id: '2', answer: 'AWS CloudFormation' },
+          { id: '3', answer: 'AWS Snowball' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Your organization requires all internet-bound traffic from their VPC to pass through a security appliance for inspection. Which AWS feature can help achieve this?',
+        answers: [
+          { id: '0', answer: 'AWS Transit Gateway' },
+          { id: '1', answer: 'VPC Peering' },
+          { id: '2', answer: 'NAT Gateway' },
+          { id: '3', answer: 'AWS Network Firewall' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'A company needs to ensure that their AWS resources are compliant with internal security policies. Which AWS service can they use to monitor and audit configuration changes?',
+        answers: [
+          { id: '0', answer: 'AWS CloudTrail' },
+          { id: '1', answer: 'AWS Config' },
+          { id: '2', answer: 'Amazon GuardDuty' },
+          { id: '3', answer: 'AWS Security Hub' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'An organization wants to establish a private, secure connection to an AWS VPC from multiple on-premises locations. What should they implement?',
+        answers: [
+          { id: '0', answer: 'AWS VPN' },
+          { id: '1', answer: 'VPC Peering' },
+          { id: '2', answer: 'AWS Direct Connect' },
+          { id: '3', answer: 'AWS Transit Gateway' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'You need to provide developers with secure, temporary access to your VPC resources for a project. Which AWS feature should you use?',
+        answers: [
+          { id: '0', answer: 'IAM Roles' },
+          { id: '1', answer: 'Security Groups' },
+          { id: '2', answer: 'Network ACLs' },
+          { id: '3', answer: 'VPC Endpoints' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company is migrating their web application to AWS and wants to ensure low latency and high availability. Which AWS service should they leverage for this?',
+        answers: [
+          { id: '0', answer: 'Amazon S3' },
+          { id: '1', answer: 'AWS Global Accelerator' },
+          { id: '2', answer: 'Amazon CloudFront' },
+          { id: '3', answer: 'AWS Route 53' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A company has deployed a web server on an EC2 instance. They want to ensure that only HTTP and HTTPS traffic is allowed to the server. How should they configure the security group?',
+        answers: [
+          { id: '0', answer: 'Allow inbound traffic on port 80 (HTTP) and port 443 (HTTPS).' },
+          { id: '1', answer: 'Allow outbound traffic on port 80 (HTTP) and port 443 (HTTPS).' },
+          { id: '2', answer: 'Block inbound traffic on all ports.' },
+          { id: '3', answer: 'Allow inbound traffic on port 22 (SSH) only.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Your development team needs to access a MySQL database on an EC2 instance. The database is hosted in a private subnet. Which security group configuration should you use?',
+        answers: [
+          { id: '0', answer: 'Allow inbound traffic on port 3306 from the development team’s IP addresses.' },
+          { id: '1', answer: 'Allow outbound traffic on port 3306 to the development team’s IP addresses.' },
+          { id: '2', answer: 'Allow inbound traffic on port 22 for SSH access.' },
+          { id: '3', answer: 'Block all traffic to the EC2 instance.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company wants to allow SSH access to their EC2 instances only from a specific IP address. What should they do?',
+        answers: [
+          { id: '0', answer: 'Configure the security group to allow inbound traffic on port 22 from the specific IP address.' },
+          { id: '1', answer: 'Configure the security group to allow outbound traffic on port 22 to the specific IP address.' },
+          { id: '2', answer: 'Configure the security group to allow inbound traffic on port 80 from the specific IP address.' },
+          { id: '3', answer: 'Block all inbound traffic to the EC2 instances.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'An application server needs to communicate with a database server within the same VPC. How should you configure the security groups to allow this communication?',
+        answers: [
+          { id: '0', answer: 'Allow inbound traffic from the application server’s security group to the database server’s security group on the database port.' },
+          { id: '1', answer: 'Allow outbound traffic from the application server’s security group to the database server’s security group on the database port.' },
+          { id: '2', answer: 'Allow inbound traffic from the database server’s security group to the application server’s security group on the database port.' },
+          { id: '3', answer: 'Block all traffic between the application server and the database server.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A web application needs to connect to an external API over HTTPS. How should the security group be configured?',
+        answers: [
+          { id: '0', answer: 'Allow outbound traffic on port 443 (HTTPS).' },
+          { id: '1', answer: 'Allow inbound traffic on port 443 (HTTPS).' },
+          { id: '2', answer: 'Allow inbound traffic on port 80 (HTTP).' },
+          { id: '3', answer: 'Block all outbound traffic.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company wants to ensure their application servers can communicate with each other while blocking all other inbound traffic. What should they do?',
+        answers: [
+          { id: '0', answer: 'Configure the security group to allow inbound traffic from instances assigned to the same security group.' },
+          { id: '1', answer: 'Configure the security group to allow inbound traffic on all ports from all IP addresses.' },
+          { id: '2', answer: 'Block all outbound traffic from the application servers.' },
+          { id: '3', answer: 'Allow inbound traffic on port 80 (HTTP) and port 443 (HTTPS) from all IP addresses.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A database server should only accept connections from the application server within the same VPC. How should you configure the security group?',
+        answers: [
+          { id: '0', answer: 'Allow inbound traffic on the database port from the application server’s security group.' },
+          { id: '1', answer: 'Allow outbound traffic on the database port to the application server’s security group.' },
+          { id: '2', answer: 'Allow inbound traffic on the database port from all IP addresses.' },
+          { id: '3', answer: 'Block all inbound traffic to the database server.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company needs to temporarily allow SSH access to an EC2 instance from a developer’s home IP address. What is the best practice for configuring this access?',
+        answers: [
+          { id: '0', answer: 'Add a temporary rule to the security group to allow inbound traffic on port 22 from the developer’s home IP address and remove it after use.' },
+          { id: '1', answer: 'Allow inbound traffic on port 22 from all IP addresses.' },
+          { id: '2', answer: 'Allow outbound traffic on port 22 to the developer’s home IP address.' },
+          { id: '3', answer: 'Block all inbound traffic to the EC2 instance.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'An organization wants to restrict access to their application servers to only their internal network. What is the logical course of action?',
+        answers: [
+          { id: '0', answer: 'Allow inbound traffic on the required ports from the internal network’s IP address range.' },
+          { id: '1', answer: 'Allow inbound traffic on all ports from the internal network’s IP address range.' },
+          { id: '2', answer: 'Allow inbound traffic on ports 80 and 443 from the internal network’s IP address range.' },
+          { id: '3', answer: 'Allow outbound traffic on the required ports to the internal network’s IP address range.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A company’s security policy requires that only HTTPS traffic is allowed to their web servers. How should the security group be configured?',
+        answers: [
+          { id: '0', answer: 'Allow inbound traffic on port 443 (HTTPS) and block all other inbound traffic.' },
+          { id: '1', answer: 'Allow inbound traffic on port 80 (HTTP) and port 443 (HTTPS).' },
+          { id: '2', answer: 'Allow outbound traffic on port 443 (HTTPS).' },
+          { id: '3', answer: 'Allow inbound traffic on all ports from all IP addresses.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Your application server needs to connect to a third-party service over HTTPS. How should you configure the security group?',
+        answers: [
+          { id: '0', answer: 'Allow outbound traffic on port 443 (HTTPS).' },
+          { id: '1', answer: 'Allow inbound traffic on port 443 (HTTPS).' },
+          { id: '2', answer: 'Block all outbound traffic.' },
+          { id: '3', answer: 'Allow outbound traffic on port 80 (HTTP).' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'AWS Cloudfront is a',
+        answers: [
+          { id: '0', answer: 'CDN' },
+          { id: '1', answer: 'Logging service' },
+          { id: '2', answer: 'IaS service' },
+          { id: '3', answer: 'Weather service' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a recommended best practice when creating security groups for your AWS resources?',
+        answers: [
+          { id: '0', answer: 'Create specific security groups for each type of resource.' },
+          { id: '1', answer: 'Use a single security group for all resources in your VPC.' },
+          { id: '2', answer: 'Allow all inbound traffic and restrict outbound traffic.' },
+          { id: '3', answer: 'Disable all security groups for better performance.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why is it important to regularly review and update security group rules?',
+        answers: [
+          { id: '0', answer: 'To ensure they align with the principle of least privilege.' },
+          { id: '1', answer: 'To allow unrestricted access to all IP addresses.' },
+          { id: '2', answer: 'To disable all inbound traffic rules.' },
+          { id: '3', answer: 'To increase the number of open ports for better connectivity.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a best practice for configuring inbound rules in a security group?',
+        answers: [
+          { id: '0', answer: 'Allow only the minimum required ports and IP addresses.' },
+          { id: '1', answer: 'Allow all inbound traffic by default.' },
+          { id: '2', answer: 'Disable all inbound traffic rules.' },
+          { id: '3', answer: 'Enable inbound traffic on all ports for faster access.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the recommended way to manage access to your EC2 instances using security groups?',
+        answers: [
+          { id: '0', answer: 'Allow access only from specific IP addresses or CIDR blocks.' },
+          { id: '1', answer: 'Allow access from all IP addresses.' },
+          { id: '2', answer: 'Disable all inbound traffic rules.' },
+          { id: '3', answer: 'Enable inbound traffic on port 22 from all IP addresses.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can you ensure that only necessary traffic is allowed to your database server?',
+        answers: [
+          { id: '0', answer: 'Create security group rules that allow only the specific application servers to connect on the database port.' },
+          { id: '1', answer: 'Allow all inbound traffic to the database server.' },
+          { id: '2', answer: 'Disable all outbound traffic from the database server.' },
+          { id: '3', answer: 'Enable inbound traffic on all ports for better connectivity.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is a best practice for setting up security groups in a production environment?',
+        answers: [
+          { id: '0', answer: 'Use least privilege principles to restrict access as much as possible.' },
+          { id: '1', answer: 'Allow all outbound traffic to simplify connectivity.' },
+          { id: '2', answer: 'Disable security groups to improve performance.' },
+          { id: '3', answer: 'Enable all inbound and outbound traffic for all IP addresses.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'When configuring security groups, why is it recommended to avoid using 0.0.0.0/0 in inbound rules?',
+        answers: [
+          { id: '0', answer: 'Because it allows traffic from any IP address, posing a security risk.' },
+          { id: '1', answer: 'Because it restricts access to all IP addresses, increasing security.' },
+          { id: '2', answer: 'Because it only allows internal traffic.' },
+          { id: '3', answer: 'Because it disables all inbound traffic.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Your service needs to make requests to Google Maps API. ',
+        answers: [
+          { id: '0', answer: 'Add a security group rule allowing outbound traffic' },
+          { id: '1', answer: 'Add a security group rule allowing inbound traffic' },
+          { id: '2', answer: 'Add a security group rule blocking outbound traffic.' },
+          { id: '3', answer: 'Add a security group rule blocking inbound traffic.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the benefit of using security groups in combination with Network ACLs (NACLs)?',
+        answers: [
+          { id: '0', answer: 'They provide an additional layer of security by allowing fine-grained control over traffic.' },
+          { id: '1', answer: 'They replace the need for encryption.' },
+          { id: '2', answer: 'They improve the performance of the network.' },
+          { id: '3', answer: 'They reduce the cost of managing security.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How should security groups be configured to comply with the principle of least privilege?',
+        answers: [
+          { id: '0', answer: 'Allow only necessary traffic and deny all other traffic.' },
+          { id: '1', answer: 'Allow all traffic by default and restrict specific traffic as needed.' },
+          { id: '2', answer: 'Disable all security groups.' },
+          { id: '3', answer: 'Enable all inbound and outbound traffic.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of creating separate security groups for different tiers of an application (e.g., web, app, database)?',
+        answers: [
+          { id: '0', answer: 'To apply specific rules and better manage access control for each tier.' },
+          { id: '1', answer: 'To allow all tiers to use the same security rules.' },
+          { id: '2', answer: 'To disable traffic between tiers.' },
+          { id: '3', answer: 'To simplify security group management by using one group for all tiers.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why is it important to monitor and audit security group changes?',
+        answers: [
+          { id: '0', answer: 'To ensure compliance with security policies and identify any unauthorized changes.' },
+          { id: '1', answer: 'To allow unrestricted access to resources.' },
+          { id: '2', answer: 'To disable security group rules periodically.' },
+          { id: '3', answer: 'To increase the number of open ports for better connectivity.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How can you restrict access to specific services on your AWS resources using security groups?',
+        answers: [
+          { id: '0', answer: 'By creating inbound rules that allow traffic only on the specific ports used by those services.' },
+          { id: '1', answer: 'By allowing all inbound traffic.' },
+          { id: '2', answer: 'By disabling all security group rules.' },
+          { id: '3', answer: 'By enabling outbound traffic on all ports.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What should you do if you need to temporarily allow access to your EC2 instance from a specific IP address?',
+        answers: [
+          { id: '0', answer: 'Add a temporary security group rule and remove it after access is no longer needed.' },
+          { id: '1', answer: 'Allow access from all IP addresses.' },
+          { id: '2', answer: 'Disable all inbound traffic.' },
+          { id: '3', answer: 'Enable all outbound traffic.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why should you avoid using the default security group for your resources?',
+        answers: [
+          { id: '0', answer: 'Because it allows all inbound and outbound traffic by default, which is not secure.' },
+          { id: '1', answer: 'Because it blocks all traffic by default.' },
+          { id: '2', answer: 'Because it improves performance.' },
+          { id: '3', answer: 'Because it is costlier to use.' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the recommended approach for handling security group rules that are no longer needed?',
+        answers: [
+          { id: '0', answer: 'Remove or disable them to reduce the attack surface.' },
+          { id: '1', answer: 'Leave them in place for future use.' },
+          { id: '2', answer: 'Expand them to cover more IP addresses.' },
+          { id: '3', answer: 'Convert them into outbound rules.' },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+  },
+  'linear-algebra': {
+    name: 'Linear Algebra',
+    questions: [
+      {
+        question: 'What is a scalar?',
+        answers: [
+          { id: '0', answer: 'A matrix' },
+          { id: '1', answer: 'A single number' },
+          { id: '2', answer: 'A vector' },
+          { id: '3', answer: 'A determinant' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a vector?',
+        answers: [
+          { id: '0', answer: 'A single number' },
+          { id: '1', answer: 'A row or column of numbers' },
+          { id: '2', answer: 'A matrix' },
+          { id: '3', answer: 'A scalar' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a matrix?',
+        answers: [
+          { id: '0', answer: 'A scalar' },
+          { id: '1', answer: 'A vector' },
+          { id: '2', answer: 'A rectangular array of numbers' },
+          { id: '3', answer: 'A determinant' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is the determinant of a matrix?',
+        answers: [
+          { id: '0', answer: 'The sum of all elements in the matrix' },
+          { id: '1', answer: 'A scalar value that can be computed from the elements of a square matrix' },
+          { id: '2', answer: 'A vector derived from the matrix' },
+          { id: '3', answer: 'The product of the diagonal elements' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the identity matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix with all elements zero' },
+          { id: '1', answer: 'A square matrix with ones on the diagonal and zeros elsewhere' },
+          { id: '2', answer: 'A matrix with ones on the diagonal and non-zero elements elsewhere' },
+          { id: '3', answer: 'A matrix with all elements equal to one' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a transpose of a matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix with rows and columns swapped' },
+          { id: '1', answer: 'A matrix with all elements negated' },
+          { id: '2', answer: 'A matrix with diagonal elements zeroed' },
+          { id: '3', answer: 'A matrix with the same elements' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does it mean for two matrices to be equal?',
+        answers: [
+          { id: '0', answer: 'They have the same number of elements' },
+          { id: '1', answer: 'They have the same dimensions and identical elements' },
+          { id: '2', answer: 'They have the same number of rows' },
+          { id: '3', answer: 'They have the same number of columns' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How do you multiply two matrices?',
+        answers: [
+          { id: '0', answer: 'Element-wise multiplication' },
+          { id: '1', answer: 'Add corresponding elements' },
+          { id: '2', answer: 'Take the dot product of rows and columns' },
+          { id: '3', answer: 'Transpose the first matrix and then multiply' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is a row vector?',
+        answers: [
+          { id: '0', answer: 'A single number' },
+          { id: '1', answer: 'A matrix' },
+          { id: '2', answer: 'A vector with multiple columns' },
+          { id: '3', answer: 'A vector with multiple rows' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is a column vector?',
+        answers: [
+          { id: '0', answer: 'A single number' },
+          { id: '1', answer: 'A vector with multiple columns' },
+          { id: '2', answer: 'A vector with multiple rows' },
+          { id: '3', answer: 'A vector that forms a single column' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'What is the dot product of two vectors?',
+        answers: [
+          { id: '0', answer: 'The sum of their elements' },
+          { id: '1', answer: 'The product of their magnitudes' },
+          { id: '2', answer: 'The sum of the products of their corresponding elements' },
+          { id: '3', answer: 'The difference of their elements' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is a linear combination?',
+        answers: [
+          { id: '0', answer: 'A sum of scalar multiples of vectors' },
+          { id: '1', answer: 'A product of vectors' },
+          { id: '2', answer: 'A matrix multiplication' },
+          { id: '3', answer: 'A determinant calculation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a span of a set of vectors?',
+        answers: [
+          { id: '0', answer: 'The set of all linear combinations of those vectors' },
+          { id: '1', answer: 'The sum of those vectors' },
+          { id: '2', answer: 'The product of those vectors' },
+          { id: '3', answer: 'The intersection of those vectors' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the rank of a matrix?',
+        answers: [
+          { id: '0', answer: 'The number of rows in the matrix' },
+          { id: '1', answer: 'The number of columns in the matrix' },
+          { id: '2', answer: 'The dimension of the vector space generated by its rows or columns' },
+          { id: '3', answer: 'The determinant of the matrix' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is an eigenvector?',
+        answers: [
+          { id: '0', answer: 'A vector that does not change direction under a linear transformation' },
+          { id: '1', answer: 'A vector that changes direction under a linear transformation' },
+          { id: '2', answer: 'A vector that becomes zero under a linear transformation' },
+          { id: '3', answer: 'A vector that becomes infinite under a linear transformation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is an eigenvalue?',
+        answers: [
+          { id: '0', answer: 'A scalar that is a solution to the characteristic equation of a matrix' },
+          { id: '1', answer: 'A vector that does not change direction under a linear transformation' },
+          { id: '2', answer: 'A vector that changes direction under a linear transformation' },
+          { id: '3', answer: 'A scalar that is the determinant of a matrix' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is a diagonal matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix with all elements zero' },
+          { id: '1', answer: 'A square matrix with non-zero elements only on the main diagonal' },
+          { id: '2', answer: 'A matrix with all elements equal to one' },
+          { id: '3', answer: 'A rectangular array of numbers' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is a singular matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix that is not invertible' },
+          { id: '1', answer: 'A matrix with all elements zero' },
+          { id: '2', answer: 'A matrix with all elements one' },
+          { id: '3', answer: 'A matrix with equal rows and columns' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the trace of a matrix?',
+        answers: [
+          { id: '0', answer: 'The product of the diagonal elements' },
+          { id: '1', answer: 'The sum of the diagonal elements' },
+          { id: '2', answer: 'The sum of all elements in the matrix' },
+          { id: '3', answer: 'The difference of the diagonal elements' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is an orthogonal matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix with all elements zero' },
+          { id: '1', answer: 'A matrix with orthogonal rows and columns' },
+          { id: '2', answer: 'A matrix with all elements equal to one' },
+          { id: '3', answer: 'A matrix with equal rows and columns' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is an invertible matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix that cannot be multiplied' },
+          { id: '1', answer: 'A matrix that has an inverse' },
+          { id: '2', answer: 'A matrix with all elements zero' },
+          { id: '3', answer: 'A matrix with equal rows and columns' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the inverse of a matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix that has all elements one' },
+          { id: '1', answer: 'A matrix that when multiplied by the original matrix results in the identity matrix' },
+          { id: '2', answer: 'A matrix with the same determinant as the original matrix' },
+          { id: '3', answer: 'A matrix that has all elements zero' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which matrix is always invertible?',
+        answers: [
+          { id: '0', answer: 'Any square matrix' },
+          { id: '1', answer: 'Any diagonal matrix' },
+          { id: '2', answer: 'Any non-singular square matrix' },
+          { id: '3', answer: 'Any zero matrix' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What condition must a square matrix meet to be invertible?',
+        answers: [
+          { id: '0', answer: 'It must have a determinant of zero' },
+          { id: '1', answer: 'It must have a non-zero determinant' },
+          { id: '2', answer: 'It must be a diagonal matrix' },
+          { id: '3', answer: 'It must be a zero matrix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the inverse of the identity matrix?',
+        answers: [
+          { id: '0', answer: 'A matrix with all elements zero' },
+          { id: '1', answer: 'A matrix with all elements one' },
+          { id: '2', answer: 'The identity matrix itself' },
+          { id: '3', answer: 'A matrix with the same elements as the original' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'If a 2x2 matrix A has elements a, b, c, d, what is the formula for its inverse?',
+        answers: [
+          { id: '0', answer: '1/(ad - bc) * [d, -b; -c, a]' },
+          { id: '1', answer: '1/(ad + bc) * [d, b; c, a]' },
+          { id: '2', answer: '1/(ab - cd) * [d, -b; -c, a]' },
+          { id: '3', answer: '1/(ab + cd) * [d, b; c, a]' },
+        ],
+        correctAnswer: '0',
+        code: '1/(ad - bc) * [[d, -b], [-c, a]]',
+      },
+      {
+        question: 'What does it mean if the determinant of a matrix is zero?',
+        answers: [
+          { id: '0', answer: 'The matrix is invertible' },
+          { id: '1', answer: 'The matrix is not invertible' },
+          { id: '2', answer: 'The matrix is a zero matrix' },
+          { id: '3', answer: 'The matrix is the identity matrix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'How do you check if a matrix is invertible?',
+        answers: [
+          { id: '0', answer: 'Calculate its determinant; if it is non-zero, the matrix is invertible' },
+          { id: '1', answer: 'Check if all elements are non-zero' },
+          { id: '2', answer: 'Check if it is a square matrix' },
+          { id: '3', answer: 'Calculate its trace; if it is zero, the matrix is invertible' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the result of multiplying a matrix by its inverse?',
+        answers: [
+          { id: '0', answer: 'A zero matrix' },
+          { id: '1', answer: 'An identity matrix' },
+          { id: '2', answer: 'A diagonal matrix' },
+          { id: '3', answer: 'A matrix with all elements doubled' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Can a non-square matrix have an inverse?',
+        answers: [
+          { id: '0', answer: 'Yes' },
+          { id: '1', answer: 'No' },
+          { id: '2', answer: 'Sometimes' },
+          { id: '3', answer: 'Depends on the determinant' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is pictured below?',
+        answers: [
+          { id: '0', answer: 'Transposed matrices' },
+          { id: '1', answer: 'Non-square matrices' },
+          { id: '2', answer: 'Orthogonal matrices' },
+          { id: '3', answer: 'Identity matrices' },
+        ],
+        image: identityMatrix,
+        correctAnswer: '3',
+      },
+      {
+        question: 'The matrix shown is a',
+        code: `
+      var matrix = [
+        1, 0, 0,
+        0, 1, 0,
+        0, 0, 1,
+      ];
+      `,
+        answers: [
+          { id: '0', answer: 'Transposed matrix' },
+          { id: '1', answer: 'Non-square matrix' },
+          { id: '2', answer: 'Orthogonal matrix' },
+          { id: '3', answer: 'Diagonal matrix' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'The matrix shown is a',
+        code: `
+      var matrix = [
+        1, 2, 1,
+        0, 4, 5,
+        0, 0, 1,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Upper triangular matrix' },
+          { id: '1', answer: 'Lower triangular matrix' },
+          { id: '2', answer: 'Orthogonal matrix' },
+          { id: '3', answer: 'Diagonal matrix' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Is the matrix shown invertible?',
+        code: `
+      var matrix = [
+        1, 2, 3,
+        4, 5, 6,
+        7, 8, 9,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Yes' },
+          { id: '1', answer: 'No' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'The determinant of the matrix shown is',
+        code: `
+      var matrix = [
+        1, 2,
+        3, 4,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: '-2' },
+          { id: '1', answer: '2' },
+          { id: '2', answer: '0' },
+          { id: '3', answer: '1' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'The matrix shown is a',
+        code: `
+      var matrix = [
+        4, 0,
+        0, 4,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Diagonal matrix' },
+          { id: '1', answer: 'Symmetric matrix' },
+          { id: '2', answer: 'Invertible matrix' },
+          { id: '3', answer: 'All of the above' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'The matrix shown is a',
+        code: `
+      var matrix = [
+        3, 0, 0,
+        0, 3, 0,
+        0, 0, 3,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Identity matrix' },
+          { id: '1', answer: 'Diagonal matrix' },
+          { id: '2', answer: 'Orthogonal matrix' },
+          { id: '3', answer: 'Zero matrix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'The matrix shown is a',
+        code: `
+      var matrix = [
+        1, 0, 0,
+        0, 2, 0,
+        0, 0, 3,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Scalar matrix' },
+          { id: '1', answer: 'Diagonal matrix' },
+          { id: '2', answer: 'Symmetric matrix' },
+          { id: '3', answer: 'Zero matrix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Is the matrix shown invertible?',
+        code: `
+      var matrix = [
+        1, 0, 0,
+        0, 0, 0,
+        0, 0, 1,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Yes' },
+          { id: '1', answer: 'No' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'The determinant of the matrix is',
+        code: `
+      var matrix = [
+        3, 8,
+        4, 6,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: '-14' },
+          { id: '1', answer: '0' },
+          { id: '2', answer: '-36' },
+          { id: '3', answer: '14' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'The determinant of the matrix is',
+        code: `
+      var matrix = [
+        1, 2,
+        3, 4,
+      ];
+        `,
+        answers: [
+          { id: '0', answer: '5' },
+          { id: '1', answer: '-5' },
+          { id: '2', answer: '2' },
+          { id: '3', answer: '-2' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'The determinant of the shown matrix is calculated by',
+        code: `
+      a, b, c,
+      d, e, f,
+      g, h, i,
+        `,
+        answers: [
+          { id: '0', answer: 'aei + bcf + dgh - bad - afh - bdi' },
+          { id: '1', answer: 'aei + dgh + bcf - ceg - bad - fhi' },
+          { id: '2', answer: 'aei + bfg + cdh - ceg - bdi - afh' },
+          { id: '3', answer: 'aei + bdi + afh - ceg - bfg - cdh' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'To multiply the shown matrix by 3',
+        code: `
+      2, -3, 1,
+      5, 0, 4,
+        `,
+        answers: [
+          { id: '0', answer: 'Multiply the diagonal numbers by 3 and find their sum' },
+          { id: '1', answer: 'Find the determinant and multiply it by 3' },
+          { id: '2', answer: 'Multiply each number in place by 3' },
+          { id: '3', answer: 'Multiply the bottom row numbers by 3 and find their sum' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What is a matrix?',
+        answers: [
+          { id: '0', answer: 'A single number' },
+          { id: '1', answer: 'A collection of numbers arranged in rows and columns' },
+          { id: '2', answer: 'A type of function' },
+          { id: '3', answer: 'A complex number' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'Which notation represents a matrix?',
+        answers: [
+          { id: '0', answer: 'Bracket notation' },
+          { id: '1', answer: 'Parentheses notation' },
+          { id: '2', answer: 'Comma notation' },
+          { id: '3', answer: 'Angle bracket notation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What type of matrix has only one row?',
+        answers: [
+          { id: '0', answer: 'Column matrix' },
+          { id: '1', answer: 'Row matrix' },
+          { id: '2', answer: 'Square matrix' },
+          { id: '3', answer: 'Rectangular matrix' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What type of matrix has the same number of rows and columns?',
+        answers: [
+          { id: '0', answer: 'Row matrix' },
+          { id: '1', answer: 'Column matrix' },
+          { id: '2', answer: 'Square matrix' },
+          { id: '3', answer: 'Rectangular matrix' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'What does a matrix notation [m x n] represent?',
+        answers: [
+          { id: '0', answer: 'm columns and n rows' },
+          { id: '1', answer: 'm rows and n columns' },
+          { id: '2', answer: 'm x n is the determinant' },
+          { id: '3', answer: 'None of the above' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What type of matrix is represented by this notation?',
+        code: `
+      var matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Square matrix' },
+          { id: '1', answer: 'Column matrix' },
+          { id: '2', answer: 'Row matrix' },
+          { id: '3', answer: 'Rectangular matrix' },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: 'Identify the matrix type from the given matrix.',
+        code: `
+      var matrix = [
+        [1, 0],
+        [0, 1],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Diagonal matrix' },
+          { id: '1', answer: 'Row matrix' },
+          { id: '2', answer: 'Column matrix' },
+          { id: '3', answer: 'Non-square matrix' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following is NOT a type of matrix?',
+        answers: [
+          { id: '0', answer: 'Row matrix' },
+          { id: '1', answer: 'Column matrix' },
+          { id: '2', answer: 'Circle matrix' },
+          { id: '3', answer: 'Square matrix' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'A matrix with different numbers of rows and columns is called a',
+        answers: [
+          { id: '0', answer: 'Square matrix' },
+          { id: '1', answer: 'Column matrix' },
+          { id: '2', answer: 'Rectangular matrix' },
+          { id: '3', answer: 'Row matrix' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'Which of the following matrices is a row matrix?',
+        code: `
+      var matrix = [
+        [1, 2, 3],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Yes' },
+          { id: '1', answer: 'No' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What type of matrix is represented below?',
+        code: `
+      var matrix = [
+        [1, 2],
+        [3, 4],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Square matrix' },
+          { id: '1', answer: 'Column matrix' },
+          { id: '2', answer: 'Row matrix' },
+          { id: '3', answer: 'None of the above' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A matrix with all elements equal to zero is called a',
+        answers: [
+          { id: '0', answer: 'Zero matrix' },
+          { id: '1', answer: 'Identity matrix' },
+          { id: '2', answer: 'Square matrix' },
+          { id: '3', answer: 'Diagonal matrix' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the order of the matrix shown?',
+        code: `
+      var matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: '2 x 3' },
+          { id: '1', answer: '3 x 2' },
+          { id: '2', answer: '2 x 2' },
+          { id: '3', answer: '3 x 3' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following matrices is a square matrix?',
+        code: `
+      var matrix = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: 'Yes' },
+          { id: '1', answer: 'No' },
+        ],
+        correctAnswer: '1',
+      },
+    ],
+  },
 };
 
 export default quizData;
@@ -7007,3 +9590,5 @@ export default quizData;
 
 // generate questions which describe real-world scenarios and an applied physical layer (of the OSI model) explanation is the answer
 // generate questions which describe real-world scenarios and an applied router solution or explanation is the answer
+
+// let's say i have a home network with 3-4 machines connected to the internet through a router. explain what happens when i connect a new device to this router. i know that my new device must be mapped to the MAC address of the router, but

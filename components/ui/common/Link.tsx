@@ -12,7 +12,7 @@ const Link = ({
   name,
   className,
 }: LinkProps) => (
-  <NextLink href={href} className={cn('hover:bg-purple-200 text-sm border-0 border-b-2 border-b-purple-400', className)} key={href}>
+  <NextLink href={href} className={cn('hover:bg-purple-200 dark:hover:bg-purple-600 text-sm border-0 border-b-2 border-b-purple-400 flex h-max w-max text-nowrap', className)} key={href}>
     {name}
   </NextLink>
 );
