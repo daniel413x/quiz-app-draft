@@ -36,6 +36,7 @@ export type Question = {
   question: string;
   image?: string | StaticImageData;
   code?: string,
+  katex?: string,
   answers: Answer[];
   correctAnswer: string;
 };
@@ -2942,7 +2943,7 @@ const quizData: QuizData = {
         `,
         answers: [
           { id: '0', answer: '<a><c><b><console.log /></b><console.log /></c><console.log /></a>' },
-          { id: '1', answer: '<a /><c /><b /><console.log /><console.log /><console.log />' },
+          { id: '1', answer: '<a><b><c><console.log /></c><console.log /></b><console.log /></a>' },
           { id: '2', answer: '<a><c><console.log /></c><console.log /></a><console.log /></a>' },
           { id: '3', answer: '<a><b /><c /><console.log /><console.log /><console.log />' },
         ],
@@ -4471,6 +4472,123 @@ const quizData: QuizData = {
     name: 'Machine Learning',
     questions: [
       {
+        question: 'Which of the following is less pertinent to deep learning?',
+        answers: [
+          { id: '0', answer: 'Predicting house prices' },
+          { id: '1', answer: 'Image recognition' },
+          { id: '2', answer: 'Speech recognition' },
+          { id: '3', answer: 'Convolutional neural networks' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Deep learning is a subdiscipline of machine learning',
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How is data typically represented in machine learning models?',
+        answers: [
+          { id: '0', answer: 'As vectors and matrices' },
+          { id: '1', answer: 'As scalar values' },
+          { id: '2', answer: 'As images only' },
+          { id: '3', answer: 'As text files' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which linear algebra operation is essential for calculating the similarity between two vectors?',
+        answers: [
+          { id: '0', answer: 'Dot product' },
+          { id: '1', answer: 'Cross product' },
+          { id: '2', answer: 'Matrix inversion' },
+          { id: '3', answer: 'Determinant calculation' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary goal of Principal Component Analysis (PCA) in machine learning?',
+        answers: [
+          { id: '0', answer: 'To reduce the dimensionality of the data' },
+          { id: '1', answer: 'To increase the dimensionality of the data' },
+          { id: '2', answer: 'To normalize the data' },
+          { id: '3', answer: 'To classify the data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which matrix operation is used in the forward pass of a neural network?',
+        answers: [
+          { id: '0', answer: 'Matrix multiplication' },
+          { id: '1', answer: 'Matrix inversion' },
+          { id: '2', answer: 'Matrix determinant calculation' },
+          { id: '3', answer: 'Matrix transposition' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'In linear regression, what is the purpose of solving for the best-fit line?',
+        answers: [
+          { id: '0', answer: 'To minimize the error between predicted and actual values' },
+          { id: '1', answer: 'To maximize the error between predicted and actual values' },
+          { id: '2', answer: 'To ensure the line passes through all data points' },
+          { id: '3', answer: 'To transform the data into a higher dimension' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What role does matrix factorization play in recommendation systems?',
+        answers: [
+          { id: '0', answer: 'Decomposing the user-item interaction matrix into two lower-dimensional matrices' },
+          { id: '1', answer: 'Combining multiple matrices into a higher-dimensional matrix' },
+          { id: '2', answer: 'Calculating the determinant of the interaction matrix' },
+          { id: '3', answer: 'Inverting the user-item interaction matrix' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which algorithm in machine learning uses eigenvectors and eigenvalues of the covariance matrix?',
+        answers: [
+          { id: '0', answer: 'Principal Component Analysis (PCA)' },
+          { id: '1', answer: 'K-means Clustering' },
+          { id: '2', answer: 'Linear Regression' },
+          { id: '3', answer: 'Decision Trees' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the purpose of using Singular Value Decomposition (SVD) in machine learning?',
+        answers: [
+          { id: '0', answer: 'To reduce the dimensionality of data' },
+          { id: '1', answer: 'To classify the data' },
+          { id: '2', answer: 'To normalize the data' },
+          { id: '3', answer: 'To calculate the dot product of vectors' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'How is an image typically represented for processing in machine learning?',
+        answers: [
+          { id: '0', answer: 'As a matrix of pixel values' },
+          { id: '1', answer: 'As a single scalar value' },
+          { id: '2', answer: 'As a text file' },
+          { id: '3', answer: 'As a polynomial function' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which of the following best describes the use of the gradient descent algorithm in machine learning?',
+        answers: [
+          { id: '0', answer: 'An optimization technique that updates weights by taking steps proportional to the negative gradient' },
+          { id: '1', answer: 'A technique to normalize the data by backpropagating based on negative values emitted by the loss function' },
+          { id: '2', answer: 'A method to calculate the dot product of vectors when a hyperparameter is set to a certain value' },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: 'Which process is illustrated?',
         image: dropoutRegularization,
         answers: [
@@ -4658,6 +4776,106 @@ const quizData: QuizData = {
           { id: '1', answer: 'To determine the number of neurons in each layer' },
           { id: '2', answer: 'To set the number of training epochs' },
           { id: '3', answer: 'To select the activation function' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary purpose of an activation function in a neural network?',
+        answers: [
+          { id: '0', answer: 'To introduce non-linearity into the model' },
+          { id: '1', answer: 'To normalize the input data' },
+          { id: '2', answer: 'To initialize the weights' },
+          { id: '3', answer: 'To prevent overfitting' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which activation function outputs a value between 0 and 1?',
+        answers: [
+          { id: '0', answer: 'Sigmoid' },
+          { id: '1', answer: 'ReLU' },
+          { id: '2', answer: 'Tanh' },
+          { id: '3', answer: 'Softmax' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the ReLU activation function output for a negative input?',
+        answers: [
+          { id: '0', answer: '0' },
+          { id: '1', answer: 'The negative input value' },
+          { id: '2', answer: '1' },
+          { id: '3', answer: 'The absolute value of the input' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which activation function is often used in the output layer of a classification model?',
+        answers: [
+          { id: '0', answer: 'Softmax' },
+          { id: '1', answer: 'ReLU' },
+          { id: '2', answer: 'Tanh' },
+          { id: '3', answer: 'Sigmoid' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which activation function can cause the "vanishing gradient" problem during training?',
+        answers: [
+          { id: '0', answer: 'Sigmoid' },
+          { id: '1', answer: 'ReLU' },
+          { id: '2', answer: 'Leaky ReLU' },
+          { id: '3', answer: 'Swish' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the range of output values for the Tanh activation function?',
+        answers: [
+          { id: '0', answer: '-1 to 1' },
+          { id: '1', answer: '0 to 1' },
+          { id: '2', answer: '-∞ to ∞' },
+          { id: '3', answer: '0 to ∞' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Why is the ReLU activation function popular in deep learning models?',
+        answers: [
+          { id: '0', answer: 'It helps mitigate the vanishing gradient problem' },
+          { id: '1', answer: 'It has output values between 0 and 1' },
+          { id: '2', answer: 'It is computationally expensive' },
+          { id: '3', answer: 'It normalizes the input data' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'Which activation function is defined as f(x) = max(0, x)?',
+        answers: [
+          { id: '0', answer: 'ReLU' },
+          { id: '1', answer: 'Sigmoid' },
+          { id: '2', answer: 'Tanh' },
+          { id: '3', answer: 'Softmax' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What is the primary advantage of using the Leaky ReLU activation function over ReLU?',
+        answers: [
+          { id: '0', answer: 'It allows a small, non-zero gradient when the input is negative' },
+          { id: '1', answer: 'It normalizes the input data' },
+          { id: '2', answer: 'It has output values between -1 and 1' },
+          { id: '3', answer: 'It is faster to compute' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'What does the Softmax activation function do in a neural network?',
+        answers: [
+          { id: '0', answer: 'Converts the outputs into probabilities that sum to 1' },
+          { id: '1', answer: 'Converts the outputs into values between -1 and 1' },
+          { id: '2', answer: 'Converts the outputs into binary values' },
+          { id: '3', answer: 'Converts the outputs into absolute values' },
         ],
         correctAnswer: '0',
       },
@@ -6341,6 +6559,16 @@ const quizData: QuizData = {
   'comptia-network-plus': {
     name: 'CompTIA Network+',
     questions: [
+      {
+        question: 'An e-commerce with a storefront platform, a CMS platform, and a database shared between the two platforms',
+        answers: [
+          { id: '0', answer: 'DHCP, public IPs' },
+          { id: '1', answer: 'public IP, public IPs' },
+          { id: '2', answer: 'public IP, private IPs' },
+          { id: '3', answer: 'private IP, public IPs' },
+        ],
+        correctAnswer: '2',
+      },
       {
         question: 'Your router is assigned a ________ by the ISP, while devices connected to it are assigned ________ by the DHCP/router',
         answers: [
@@ -9090,6 +9318,21 @@ const quizData: QuizData = {
         correctAnswer: '1',
       },
       {
+        question: 'The trace of the matrix is',
+        katex: `
+      A = \\begin{pmatrix}
+      12 & 6 \\\\
+      33 & 1
+      \\end{pmatrix}`,
+        answers: [
+          { id: '0', answer: '12' },
+          { id: '1', answer: '1' },
+          { id: '2', answer: '0' },
+          { id: '3', answer: '13' },
+        ],
+        correctAnswer: '3',
+      },
+      {
         question: 'What is an orthogonal matrix?',
         answers: [
           { id: '0', answer: 'A matrix with all elements zero' },
@@ -9229,6 +9472,21 @@ const quizData: QuizData = {
         correctAnswer: '3',
       },
       {
+        question: 'What is the trace of the following matrix?',
+        code: `
+          \\begin{pmatrix}
+          5
+          \\end{pmatrix}
+        `,
+        answers: [
+          { id: '0', answer: '1' },
+          { id: '1', answer: '5' },
+          { id: '2', answer: '0' },
+          { id: '3', answer: 'Not applicable' },
+        ],
+        correctAnswer: '1',
+      },
+      {
         question: 'The matrix shown is a',
         code: `
       var matrix = [
@@ -9243,7 +9501,7 @@ const quizData: QuizData = {
           { id: '2', answer: 'Orthogonal matrix' },
           { id: '3', answer: 'Diagonal matrix' },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
       {
         question: 'Is the matrix shown invertible?',
@@ -9288,7 +9546,7 @@ const quizData: QuizData = {
           { id: '0', answer: 'Diagonal matrix' },
           { id: '1', answer: 'Symmetric matrix' },
           { id: '2', answer: 'Invertible matrix' },
-          { id: '3', answer: 'All of the above' },
+          { id: '3', answer: 'All of the above', order: 3 },
         ],
         correctAnswer: '3',
       },
@@ -9392,7 +9650,7 @@ const quizData: QuizData = {
         question: 'To multiply the shown matrix by 3',
         code: `
       2, -3, 1,
-      5, 0, 4,
+      5,  0, 4,
         `,
         answers: [
           { id: '0', answer: 'Multiply the diagonal numbers by 3 and find their sum' },
@@ -9505,17 +9763,66 @@ const quizData: QuizData = {
         correctAnswer: '2',
       },
       {
-        question: 'Which of the following matrices is a row matrix?',
-        code: `
-      var matrix = [
-        [1, 2, 3],
-      ];
-        `,
+        question: 'The matrix is singular',
+        katex: `
+      A = \\begin{pmatrix}
+      12 & 4 \\\\
+      3 & 1
+      \\end{pmatrix}`,
         answers: [
-          { id: '0', answer: 'Yes' },
-          { id: '1', answer: 'No' },
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
         ],
         correctAnswer: '0',
+      },
+      {
+        question: 'What is the trace of the following matrix?',
+        code: `
+          \\begin{pmatrix}
+          12 & 6 \\\\
+          33 & 1
+          \\end{pmatrix}
+        `,
+        answers: [
+          { id: '0', answer: '6' },
+          { id: '1', answer: '33' },
+          { id: '2', answer: '13' },
+          { id: '3', answer: '12' },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: 'The matrix is singular',
+        katex: `
+      A = \\begin{pmatrix}
+      12 & 1 \\\\
+      3 & 1
+      \\end{pmatrix}`,
+        answers: [
+          { id: '0', answer: 'True' },
+          { id: '1', answer: 'False' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'A matrix is singular',
+        answers: [
+          { id: '0', answer: 'If its determinant is zero' },
+          { id: '1', answer: 'If its dot product is zero' },
+          { id: '2', answer: 'If its determinant is not zero' },
+          { id: '3', answer: 'If its dot product is not zero' },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: 'A matrix is not singular',
+        answers: [
+          { id: '0', answer: 'If its determinant is zero' },
+          { id: '1', answer: 'If its dot product is zero' },
+          { id: '2', answer: 'If its determinant is not zero' },
+          { id: '3', answer: 'If its dot product is not zero' },
+        ],
+        correctAnswer: '2',
       },
       {
         question: 'What type of matrix is represented below?',
@@ -9574,6 +9881,90 @@ const quizData: QuizData = {
         ],
         correctAnswer: '1',
       },
+      {
+        question: 'How do you multiply two matrices?',
+        answers: [
+          { id: '0', answer: 'Add corresponding elements' },
+          { id: '1', answer: 'Take the dot product of rows and columns' },
+          { id: '2', answer: 'Element-wise multiplication' },
+          { id: '3', answer: 'Transpose the first matrix and then multiply' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the result of multiplying the following matrices?',
+        code: `
+      var A = [
+        [1, 2],
+        [3, 4],
+      ];
+      var B = [
+        [5, 6],
+        [7, 8],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: '[ [1, 2], [3, 4] ]' },
+          { id: '1', answer: '[ [19, 22], [43, 50] ]' },
+          { id: '2', answer: '[ [5, 6], [7, 8] ]' },
+          { id: '3', answer: '[ [26, 30], [38, 46] ]' },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: 'What is the result of multiplying the following matrices?',
+        // actually latex syntax
+        // https://chatgpt.com/c/3d15dcb4-b471-4370-b47f-23864673c00f
+        katex: `
+      A = \\begin{pmatrix}
+      1 & 2 \\\\
+      3 & 4
+      \\end{pmatrix}
+      \\\\
+      B = \\begin{pmatrix}
+      5 & 6 \\\\
+      7 & 8
+      \\end{pmatrix}
+        `,
+        code: `
+      var A = [
+        [1, 2],
+        [3, 4],
+      ];
+      var B = [
+        [5, 6],
+        [7, 8],
+      ];
+        `,
+        answers: [
+          { id: '0', answer: '[ [1, 2], [3, 4] ]' },
+          { id: '1', answer: '[ [19, 22], [43, 50] ]' },
+          { id: '2', answer: '[ [5, 6], [7, 8] ]' },
+          { id: '3', answer: '[ [26, 30], [38, 46] ]' },
+        ],
+        correctAnswer: '1',
+      },
+      // {
+      //   question: 'What is the dot product of the two matrices?',
+      //   code: `
+      // var a = [
+      //   [1, 2],
+      //   [1, 4],
+      //   [1, 6],
+      // ];
+
+      // var b = [
+      //   [3, 4],
+      //   [3, 5],
+      //   [3, 6],
+      // ];
+      //   `,
+      //   answers: [
+      //     { id: '0', answer: 'Yes' },
+      //     { id: '1', answer: 'No' },
+      //   ],
+      //   correctAnswer: '1',
+      // },
     ],
   },
 };

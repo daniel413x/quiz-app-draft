@@ -1,5 +1,7 @@
 'use client';
 
+import 'katex/dist/katex.min.css';
+import { BlockMath } from 'react-katex';
 import {
   Form, FormDescription, FormField, FormItem,
 } from '@/components/ui/common/shadcn/form';
@@ -173,6 +175,9 @@ const QuizForm = () => {
           </FormDescription>
           {question.code ? (
             <Code code={question.code} />
+          ) : null}
+          {question.katex ? (
+            <BlockMath>{question.katex}</BlockMath>
           ) : null}
           <FormField
             key="answer"
