@@ -15,6 +15,7 @@ import useUserQuizData from '../../_hooks/useUserQuizData';
 import { useTimer } from '../../_hooks/useTimer';
 import { timerStartMs } from '../../_consts';
 import Code from '../../_components/Code';
+import { renderMarkdown } from '../../_components/_utils';
 
 const ResultsPageContent = () => {
   const section = useParams().section;
@@ -130,7 +131,7 @@ const ResultsPageContent = () => {
                         Q
                       </span>
                       {': '}
-                      {q.question}
+                      {q.question.map(renderMarkdown)}
                     </span>
                     {!q.image ? null : (
                       <Image src={q.image} width={200} height={200} alt="" />
@@ -140,7 +141,7 @@ const ResultsPageContent = () => {
                     ) : null}
                     <div className="flex flex-col gap-2">
                       {q.answers.map((a) => (
-                        <div className="flex relative gap-4" key={a.answer}>
+                        <div className="flex relative gap-4" key={a.id}>
                           <div className={cn('shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1', {
                             'bg-green-100 border-green-500': answersRecord[i].includes(a.id),
                             'bg-red-100 border-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
@@ -149,10 +150,10 @@ const ResultsPageContent = () => {
                           <div className={cn('flex gap-1', {
                             'text-green-700': answersRecord[i].includes(a.id),
                             'text-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
-                            '[word-break:break-all]': a.answer.split(' ')[0].length > 25,
+                            '[word-break:break-all]': a.answer?.map((qmd) => qmd[1]).join(' ').split(' ')[0].length > 25,
                           })}
                           >
-                            {a.answer}
+                            {a.answer?.map(renderMarkdown)}
                             {answersRecord[i].includes(a.id) && a.id === q.correctAnswer ? <CheckCircle className="shrink-0" /> : null}
                           </div>
                         </div>

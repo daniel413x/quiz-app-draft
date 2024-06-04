@@ -23,7 +23,7 @@ import {
 import Image from 'next/image';
 import qs from 'query-string';
 import { useEventListener } from 'usehooks-ts';
-import { shuffleQuestions } from './_utils';
+import { renderMarkdown, shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
 import Progress from './Progress';
@@ -163,7 +163,7 @@ const QuizForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormDescription>
-            {question.question}
+            {!question.question ? null : question.question.map(renderMarkdown)}
             {question.image ? (
               <Image
                 className="py-6"
@@ -216,7 +216,7 @@ const QuizForm = () => {
                         className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]"
                         htmlFor={answer.id}
                       >
-                        {answer.answer}
+                        {!answer.answer ? null : answer.answer.map(renderMarkdown)}
                       </Label>
                     </div>
                   ))}
