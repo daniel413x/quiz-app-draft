@@ -42852,6 +42852,153 @@ const quizData: QuizData = {
   'linear-algebra': {
     name: 'Linear Algebra',
     questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A vector can be any of the following EXCEPT']
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A multi-dimensional matrix']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A row matrix']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A column matrix']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A one-dimensional matrix']
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?']
+        ],
+        katex: `
+          \\begin{pmatrix}
+          1 & 3 \\\\
+          2 & 5 \\\\
+          3 & 7 \\\\
+          4 & 9 \\\\
+          5 & 11
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{pmatrix}']
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the x-coordinates?']
+        ],
+        katex: `
+          \\begin{pmatrix}
+          1 & 3 \\\\
+          2 & 5 \\\\
+          3 & 7 \\\\
+          4 & 9 \\\\
+          5 & 11
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{pmatrix}']
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the name given to vectors representing points in a two-dimensional space?']
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Coordinate vectors']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Position vectors']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both 0 and 1 are correct']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither 0 nor 1 are correct']
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
       {
         question: [
           [
