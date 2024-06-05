@@ -3,10 +3,10 @@
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
 import {
-  Form, FormDescription, FormField, FormItem,
+  Form, FormDescription,
 } from '@/components/ui/common/shadcn/form';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/common/shadcn/radio-group';
 import {
+  RefObject,
   useEffect, useRef, useState,
 } from 'react';
 import { useForm } from 'react-hook-form';
@@ -14,9 +14,8 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import quizData, { Question } from '@/lib/quiz-data';
-import { Button, buttonVariants } from '@/components/ui/common/shadcn/button';
+import { Button } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
-import { Label } from '@/components/ui/common/shadcn/label';
 import {
   ArrowLeft, ArrowRight, CheckCircle, XCircle,
 } from 'lucide-react';
@@ -28,6 +27,7 @@ import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
 import Progress from './Progress';
 import Code from './Code';
+import QuizFormField from './QuizFormField';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -53,7 +53,7 @@ const QuizForm = () => {
   const question = questions[qNum];
   const { answers } = question;
   const isAnsweredCorrectly = submittedAnswer === question.correctAnswer;
-  const isAnsweredIncorrectly = submittedAnswer && submittedAnswer !== question.correctAnswer;
+  const isAnsweredIncorrectly = !!submittedAnswer && submittedAnswer !== question.correctAnswer;
   const isAtCurrentQuestion = answersRecord.length === qNum;
   const form = useForm<QuizFormValues>({
     resolver: zodResolver(formSchema),
@@ -96,8 +96,10 @@ const QuizForm = () => {
     form.reset({ answer: undefined });
     setSubmittedAnswer(null);
   };
-  const radioGroupRef = useRef<HTMLDivElement>(null);
-  const firstRadioButtonRef = useRef<HTMLButtonElement>(null);
+  const fieldRefs = useRef<{
+    radioGroupRef: RefObject<HTMLDivElement>;
+    firstRadioButtonRef: RefObject<HTMLButtonElement>;
+  }>(null);
   const submitRef = useRef<HTMLButtonElement>(null);
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
@@ -107,16 +109,16 @@ const QuizForm = () => {
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'ArrowUp') {
       e.preventDefault();
-      if (!radioGroupRef.current?.contains(document.activeElement)) {
-        firstRadioButtonRef.current?.focus();
+      if (!fieldRefs.current?.radioGroupRef.current?.contains(document.activeElement)) {
+        fieldRefs.current?.firstRadioButtonRef.current?.focus();
       }
     }
   });
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      if (!radioGroupRef.current?.contains(document.activeElement)) {
-        firstRadioButtonRef.current?.focus();
+      if (!fieldRefs.current?.radioGroupRef.current?.contains(document.activeElement)) {
+        fieldRefs.current?.firstRadioButtonRef.current?.focus();
       }
     }
   });
@@ -179,50 +181,15 @@ const QuizForm = () => {
           {question.katex ? (
             <BlockMath>{question.katex}</BlockMath>
           ) : null}
-          <FormField
-            key="answer"
-            name="answer"
-            control={form.control}
-            render={() => (
-              <FormItem>
-                <RadioGroup
-                  className={cn('p-4', {
-                    'bg-green-50/50 dark:bg-green-50/25': isAnsweredCorrectly,
-                    'bg-red-50 dark:bg-red-400': isAnsweredIncorrectly,
-                  })}
-                  onValueChange={(val) => handleChangeAnswer(val)}
-                  value=""
-                  ref={radioGroupRef}
-                >
-                  {answers.map((answer, i) => (
-                    <div
-                      className={cn(buttonVariants({ variant: 'outline', className: 'flex items-center space-x-3 border-2 border-black/5 dark:border-gray-800 shadow-sm px-4 py-10 cursor-pointer group' }), {
-                        'bg-accent': answer.id === formAnswer,
-                        'bg-green-100 hover:bg-green-100 dark:text-black': answer.id === formAnswer && isAnsweredCorrectly,
-                        'bg-red-100 hover:bg-red-100 dark:bg-red-300 dark:text-red-800': answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly,
-                        'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
-                        'pointer-events-none': isAnsweredCorrectly,
-                      })}
-                      key={answer.id}
-                    >
-                      <RadioGroupItem
-                        checked={answer.id === form.watch('answer')}
-                        value={answer.id}
-                        id={answer.id}
-                        ref={i === 0 ? firstRadioButtonRef : undefined}
-                        className={answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly ? 'dark:border-red-800 dark:group-hover:bg-red-300' : ''}
-                      />
-                      <Label
-                        className="w-full py-9 cursor-pointer whitespace-normal [line-height:2]"
-                        htmlFor={answer.id}
-                      >
-                        {!answer.answer ? null : answer.answer.map(renderMarkdown)}
-                      </Label>
-                    </div>
-                  ))}
-                </RadioGroup>
-              </FormItem>
-            )}
+          <QuizFormField
+            ref={fieldRefs}
+            answers={answers}
+            isAnsweredCorrectly={isAnsweredCorrectly}
+            isAnsweredIncorrectly={isAnsweredIncorrectly}
+            form={form}
+            formAnswer={formAnswer}
+            submittedAnswer={submittedAnswer}
+            handleChangeAnswer={handleChangeAnswer}
           />
           <div className="grid gap-2">
             <Button

@@ -4893,6 +4893,61 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
+            'In which of the following scenarios can',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'React.useImperativeHandle',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'be useful?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'You must imperatively modify the Shadow DOM',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'You must imperatively modify props from a parent component',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'You need to work with multiple refs in a child component',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'You need a hook that is easy to mock in Jest',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'What is the purpose of the following HTML?',
           ],
         ],
@@ -8255,7 +8310,7 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which answer best illustrates the "LIFO"?',
+            'Which answer illustrates the process "LIFO"?',
           ],
         ],
         answers: [
@@ -46386,6 +46441,47 @@ const quizData: QuizData = {
   test: {
     name: 'test',
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?'],
+        ],
+        katex: `
+          \\begin{pmatrix}
+          1 & 3 \\\\
+          2 & 5 \\\\
+          3 & 7 \\\\
+          4 & 9 \\\\
+          5 & 11
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
       {
         question: [
           [
