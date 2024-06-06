@@ -53,8 +53,7 @@ const QuizFormField = forwardRef(({
           >
             {answers.map((answer, i) => {
               const isWrongAnswer = answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly;
-              const qmd = answer.answer.map(renderMarkdown);
-
+              const qmd = renderMarkdown(answer.answer);
               return (
                 <Label
                   className="flex w-full cursor-pointer whitespace-normal [line-height:2] h-full max-h-full"
@@ -77,7 +76,9 @@ const QuizFormField = forwardRef(({
                       ref={i === 0 ? firstRadioButtonRef : undefined}
                       className={isWrongAnswer ? 'dark:border-red-800 dark:group-hover:bg-red-300' : ''}
                     />
-                    {qmd}
+                    <span>
+                      {qmd}
+                    </span>
                   </div>
                 </Label>
               );

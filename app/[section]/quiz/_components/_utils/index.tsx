@@ -7,41 +7,46 @@ import { numOfQuestions } from '../../_consts';
 import Code from '../Code';
 import InlineCode from '../InlineCode';
 
-const shuffleAnswers = (answers: Answer[]) => shuffle(answers).sort((a, b) => ((a.order && !b.order) || (a.order && b.order && a.order > b.order) ? 1 : 0));
+const shuffleAnswers = (answers: Answer[]) => shuffle(answers).slice().sort((a, b) => ((a.order && !b.order) || (a.order && b.order && a.order > b.order) ? 1 : 0));
 
-export const shuffleQuestions = (questions: Question[]) => shuffle(questions.map((q) => ({ ...q, answers: shuffleAnswers(q.answers) }))).slice(0, numOfQuestions);
+export const shuffleQuestions = (questions: Question[]) => shuffle(questions.map((q) => {
+  const answers = shuffleAnswers(q.answers);
+  return { ...q, answers };
+})).slice(0, numOfQuestions);
 
-export const renderMarkdown = (qmd: QuizMarkdownTuple) => {
-  if (qmd[0] === QuizMarkdownType.TEXT) {
+export const renderMarkdown = (qmd: QuizMarkdownTuple[]) => qmd.map((tuple, i) => {
+  if (tuple[0] === QuizMarkdownType.TEXT) {
     return (
-      <span key={qmd[1]}>
-        {qmd[1]}
+      <span key={i}>
+        {tuple[1]}
       </span>
     );
   }
-  if (qmd[0] === QuizMarkdownType.INLINE_KATEX) {
+  if (tuple[0] === QuizMarkdownType.INLINE_KATEX) {
     return (
-      <InlineMath key={qmd[1]}>
-        {qmd[1]}
+      <InlineMath key={i}>
+        {tuple[1]}
       </InlineMath>
     );
   }
-  if (qmd[0] === QuizMarkdownType.KATEX) {
+  if (tuple[0] === QuizMarkdownType.KATEX) {
     return (
-      <BlockMath key={qmd[1]}>
-        {qmd[1]}
-      </BlockMath>
+      <span className="text-black">
+        <BlockMath key={i}>
+          {tuple[1]}
+        </BlockMath>
+      </span>
     );
   }
-  if (qmd[0] === QuizMarkdownType.CODE) {
+  if (tuple[0] === QuizMarkdownType.CODE) {
     return (
-      <Code code={qmd[1]} key={qmd[1]} />
+      <Code code={tuple[1]} key={i} />
     );
   }
-  if (qmd[0] === QuizMarkdownType.INLINE_CODE) {
+  if (tuple[0] === QuizMarkdownType.INLINE_CODE) {
     return (
-      <InlineCode code={qmd[1]} key={qmd[1]} />
+      <InlineCode code={tuple[1]} key={i} />
     );
   }
   return null;
-};
+});

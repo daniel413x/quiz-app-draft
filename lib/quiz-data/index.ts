@@ -15431,2936 +15431,3739 @@ const quizData: QuizData = {
   },
   python: {
     name: 'Python',
-    questions: [
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which Python library is known for its powerful data structures and data analysis tools?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Scikit-learn',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'TensorFlow',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which library is primarily used for deep learning in Python and was developed by Google?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'PyTorch',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Keras',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'TensorFlow',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Theano',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the main advantage of using the Keras library?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'It is highly scalable',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'It provides an easy-to-use API for building neural networks',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'It is developed by Facebook',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'It is designed for reinforcement learning',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which Python library is known for its array manipulation capabilities and is often used as the foundation for other libraries?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matplotlib',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the primary use of the Scikit-learn library in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Data visualization',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Deep learning',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Statistical modeling',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Machine learning',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '3',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which library is known for providing a flexible platform for training deep learning models and is developed by Facebook?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Keras',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'TensorFlow',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'PyTorch',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Caffe',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which library would you use for scientific computing and technical computing in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matplotlib',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which library is often used for creating plots and visualizations in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Seaborn',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matplotlib',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Plotly',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Bokeh',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which Python library provides tools for working with large data sets and includes functionality for both data manipulation and visualization?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matplotlib',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the primary function of the library TensorFlow?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To perform numerical computations',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To build and train deep learning models',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To analyze and manipulate data',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To create interactive visualizations',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which Python library is specifically designed for symbolic mathematics and computer algebra?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SymPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which library provides high-level building blocks for developing complex machine learning workflows?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Scikit-learn',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'TensorFlow',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'PyTorch',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Keras',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the primary focus of the library Theano?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Reinforcement learning',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Deep learning',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Statistical analysis',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Probabilistic programming',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which Python library is known for its high-performance data structures and tools for data analysis?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matplotlib',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Scikit-learn',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Keras',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'PyTorch',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Theano',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What will be the output of the following code: `print("hello".capitalize())`?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Hello',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'HELLO',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'hello',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'HeLLo',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following methods can be used to add an element to a list in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'append()',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'add()',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'insert()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Both append() and insert()',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '3',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How can you retrieve the keys from a dictionary in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'dict.keys()',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'dict.values()',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'dict.items()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'dict.get_keys()',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the "random" module in Python provide?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Functions for generating random numbers',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Functions for working with arrays',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Functions for file I/O',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Functions for mathematical operations',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which keyword is used to begin a class definition in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'function',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'class',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'def',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'object',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How do you create a tuple in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using square brackets []',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using curly braces {}',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using parentheses ()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using angle brackets <>',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What will be the output of the following code: `print(type([]))`?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '<class \'list\'>',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '<class \'tuple\'>',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '<class \'dict\'>',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '<class \'set\'>',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is a correct way to create a set in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'set = {1, 2, 3}',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'set = [1, 2, 3]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'set = (1, 2, 3)',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'set = <1, 2, 3>',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How do you start a multi-line comment in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using /* and */',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using // and //',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using """ or \'\'\'',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Using # and #',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the "len()" function do in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Returns the length of an object',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Returns the type of an object',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Returns the memory address of an object',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Returns the id of an object',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which method is used to convert a string to lowercase in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'lowercase()',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'tolower()',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'lower()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'str.lower()',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the output of the following code: `print(3 == 3.0)`?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'True',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'False',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Error',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'None',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'The statement',
-          ],
-          [
-            QuizMarkdownType.INLINE_CODE,
-            'print(3 == 3.0)',
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            'prints',
-          ],
-          [
-            QuizMarkdownType.INLINE_CODE,
-            'True',
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            '. It outputs this way because',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Strict equality check',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Type conversion',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.INLINE_CODE,
-                '3',
-              ],
-              [
-                QuizMarkdownType.TEXT,
-                'and',
-              ],
-              [
-                QuizMarkdownType.INLINE_CODE,
-                '3.0',
-              ],
-              [
-                QuizMarkdownType.TEXT,
-                'are the same data type',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.INLINE_CODE,
-                '==',
-              ],
-              [
-                QuizMarkdownType.TEXT,
-                'is the same as',
-              ],
-              [
-                QuizMarkdownType.INLINE_CODE,
-                'is',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is not a valid way to import a module in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'import module',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'import module as alias',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'from module import *',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'include module',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '3',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How do you define a variable in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'var variableName = value',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'let variableName = value',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'variableName = value',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'define variableName = value',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is true about Python lists?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Lists are immutable',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Lists can contain elements of different types',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Lists are created using parentheses ()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Lists are a form of dictionary',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Python is an object-oriented language',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'True',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'False',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is a mutable data type in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Tuple',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'String',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'List',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Integer',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the "self" keyword in Python represent?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'The current class',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'The current method',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'The current instance of the class',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'A global variable',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is not a built-in data type in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Set',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Dictionary',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Array',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'List',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How do you define a private method in a Python class?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'By prefixing the method name with a single underscore',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'By prefixing the method name with a double underscore',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'By suffixing the method name with a single underscore',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'By suffixing the method name with a double underscore',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is used to handle exceptions in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'try-except block',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'try-catch block',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'catch-except block',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'try-finally block',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is true about Python decorators?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Decorators are a form of metaprogramming',
-              ],
-            ],
-            order: 0,
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Decorators can modify the behavior of a function',
-              ],
-            ],
-            order: 1,
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Decorators can be stacked',
-              ],
-            ],
-            order: 2,
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'All of the above',
-              ],
-            ],
-            order: 3,
-          },
-        ],
-        correctAnswer: '3',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the purpose of the "with" statement in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To create a new scope',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To simplify exception handling',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To ensure proper resource management',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To define anonymous functions',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is a feature of Python’s list comprehensions?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'They provide a concise way to create lists',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'They can include conditionals',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'They are more readable than for-loops for creating lists',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'All of the above',
-              ],
-            ],
-            order: 3,
-          },
-        ],
-        correctAnswer: '3',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the built-in function "zip()" do in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Combines two or more iterables into a single iterable',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Compresses data into a zip file',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Sorts multiple iterables',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Splits a string into a list',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is a lambda function in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'A function that can take any number of arguments',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'A function defined using the "def" keyword',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'An anonymous function expressed as a single statement',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'A recursive function',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which method can be used to convert a string into a list in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'split()',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'join()',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'append()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'extend()',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the output of the expression `2 ** 3` in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '5',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '6',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '8',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '9',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is a Python library for data manipulation and analysis?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matplotlib',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the purpose of the "__init__" method in a Python class?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To initialize an instance of the class',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To define a class-level method',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To destroy an instance of the class',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To define a static method',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the primary difference between "deepcopy" and "copy" in the copy module?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'deepcopy copies only the top-level objects, while copy copies all nested objects',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'copy copies only the top-level objects, while deepcopy copies all nested objects',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'There is no difference',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'copy is faster than deepcopy',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is used to define a block of code in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Curly braces {}',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Indentation',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Parentheses ()',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Square brackets []',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the use of the "pass" statement in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To create a placeholder for future code',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To end a loop',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To raise an exception',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To break out of a function',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which of the following is used to define a generator function in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'return',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'yield',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'generate',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'yield return',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
+    questions: [{
+      question: [[QuizMarkdownType.TEXT, 'What is polymorphism in Python?']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The ability to define multiple classes with the same name']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The ability to use a function or object in multiple forms']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The ability to inherit from multiple classes']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The ability to override methods']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [[QuizMarkdownType.TEXT, 'How is polymorphism typically implemented in Python?']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using function overloading']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using class inheritance and method overriding']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using multiple inheritance']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using abstract classes']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [[QuizMarkdownType.TEXT, 'Which of the following code demonstrates polymorphism in Python?']],
+      code: `
+    class Animal:
+        def sound(self):
+            pass
 
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What will be the output of the following code?',
-          ],
+    class Dog(Animal):
+        def sound(self):
+            return "Bark"
+
+    class Cat(Animal):
+        def sound(self):
+            return "Meow"
+
+    def make_sound(animal):
+        return animal.sound()
+
+    dog = Dog()
+    cat = Cat()
+    print(make_sound(dog))
+    print(make_sound(cat))
+      `,
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Polymorphism is not demonstrated here']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Polymorphism is demonstrated through the make_sound function']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Polymorphism is demonstrated through class inheritance']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Polymorphism is demonstrated through method overloading']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [[QuizMarkdownType.TEXT, 'What is a key benefit of using polymorphism in Python?']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Increases code complexity']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Allows for code reusability and flexibility']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reduces code readability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Enforces strict type checking']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [[QuizMarkdownType.TEXT, 'Which Python feature supports polymorphism by allowing objects of different classes to be treated as objects of a common superclass?']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Duck typing']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Static typing']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Operator overloading']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Function overloading']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which Python library is known for its powerful data structures and data analysis tools?',
         ],
-        code: `
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scikit-learn',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TensorFlow',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which library is primarily used for deep learning in Python and was developed by Google?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'PyTorch',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Keras',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TensorFlow',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Theano',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the main advantage of using the Keras library?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is highly scalable',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It provides an easy-to-use API for building neural networks',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is developed by Facebook',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is designed for reinforcement learning',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which Python library is known for its array manipulation capabilities and is often used as the foundation for other libraries?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SciPy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Matplotlib',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the primary use of the Scikit-learn library in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Data visualization',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Deep learning',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Statistical modeling',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Machine learning',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which library is known for providing a flexible platform for training deep learning models and is developed by Facebook?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Keras',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TensorFlow',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'PyTorch',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Caffe',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which library would you use for scientific computing and technical computing in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SciPy',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Matplotlib',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which library is often used for creating plots and visualizations in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Seaborn',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Matplotlib',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Plotly',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Bokeh',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which Python library provides tools for working with large data sets and includes functionality for both data manipulation and visualization?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SciPy',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Matplotlib',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the primary function of the library TensorFlow?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To perform numerical computations',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To build and train deep learning models',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To analyze and manipulate data',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To create interactive visualizations',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which Python library is specifically designed for symbolic mathematics and computer algebra?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SymPy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SciPy',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which library provides high-level building blocks for developing complex machine learning workflows?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scikit-learn',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TensorFlow',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'PyTorch',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Keras',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the primary focus of the library Theano?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Reinforcement learning',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Deep learning',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Statistical analysis',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Probabilistic programming',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which Python library is known for its high-performance data structures and tools for data analysis?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SciPy',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Matplotlib',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scikit-learn',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Keras',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'PyTorch',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Theano',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What will be the output of the following code: `print("hello".capitalize())`?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Hello',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'HELLO',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'hello',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'HeLLo',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following methods can be used to add an element to a list in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'append()',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'add()',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'insert()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Both append() and insert()',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How can you retrieve the keys from a dictionary in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dict.keys()',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dict.values()',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dict.items()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dict.get_keys()',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the "random" module in Python provide?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Functions for generating random numbers',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Functions for working with arrays',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Functions for file I/O',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Functions for mathematical operations',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which keyword is used to begin a class definition in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'function',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'class',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'def',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'object',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How do you create a tuple in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using square brackets []',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using curly braces {}',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using parentheses ()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using angle brackets <>',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What will be the output of the following code: `print(type([]))`?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '<class \'list\'>',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '<class \'tuple\'>',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '<class \'dict\'>',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '<class \'set\'>',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a correct way to create a set in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'set = {1, 2, 3}',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'set = [1, 2, 3]',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'set = (1, 2, 3)',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'set = <1, 2, 3>',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How do you start a multi-line comment in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using /* and */',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using // and //',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using """ or \'\'\'',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Using # and #',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the "len()" function do in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Returns the length of an object',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Returns the type of an object',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Returns the memory address of an object',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Returns the id of an object',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which method is used to convert a string to lowercase in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'lowercase()',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'tolower()',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'lower()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'low()',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the output of the following code: `print(3 == 3.0)`?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'True',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'False',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Error',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'None',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'The statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'print(3 == 3.0)',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'prints',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'True',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. It outputs this way because',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Strict equality check',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Type conversion',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '3',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '3.0',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'are the same data type',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '==',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'is the same as',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'is',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is not a valid way to import a module in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'import module',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'import module as alias',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'from module import *',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'include module',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How do you define a variable in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'var variableName = value',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'let variableName = value',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'variableName = value',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'define variableName = value',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is true about Python lists?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Lists are immutable',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Lists can contain elements of different types',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Lists are created using parentheses ()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Lists are a form of dictionary',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Python is an object-oriented language',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'True',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'False',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a mutable data type in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Tuple',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'String',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'List',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Integer',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the "self" keyword in Python represent?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The current class',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The current method',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The current instance of the class',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A global variable',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is not a built-in data type in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Set',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Dictionary',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Array',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'List',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How do you define a private method in a Python class?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'By prefixing the method name with a single underscore',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'By prefixing the method name with a double underscore',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'By suffixing the method name with a single underscore',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'By suffixing the method name with a double underscore',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is used to handle exceptions in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'try-except block',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'try-catch block',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'catch-except block',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'try-finally block',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is true about Python decorators?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Decorators are a form of metaprogramming',
+            ],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Decorators can modify the behavior of a function',
+            ],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Decorators can be stacked',
+            ],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All of the above',
+            ],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of the'],
+        [QuizMarkdownType.INLINE_CODE, 'with'],
+        [QuizMarkdownType.TEXT, 'statement in Python?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To create a new scope'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To ensure proper resource management'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define anonymous functions'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To simplify exception handling'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method must an object implement to be used with the'],
+        [QuizMarkdownType.INLINE_CODE, 'with'],
+        [QuizMarkdownType.TEXT, 'statement?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__init__'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__del__'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__enter__'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__call__'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens to an open file when the block under a'],
+        [QuizMarkdownType.INLINE_CODE, 'with'],
+        [QuizMarkdownType.TEXT, 'statement is exited?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The file remains open'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The file is automatically closed'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An exception is raised'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The file is deleted'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. What will be the output?'],
+      ],
+      code: `
+    with open('example.txt', 'w') as file:
+        file.write('Hello, world!')
+    print(file.closed)
+      `,
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'True'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'None'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Error'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which pair of methods must a context manager class implement for the'],
+        [QuizMarkdownType.INLINE_CODE, 'with'],
+        [QuizMarkdownType.TEXT, 'statement to work correctly?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__enter__'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '__exit__'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__init__'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '__del__'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__new__'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '__call__'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '__enter__'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '__leave__'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the purpose of the',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'with',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'statement in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To create a new scope',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To simplify exception handling',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To ensure proper resource management',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To define anonymous functions',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a feature of Python’s list comprehensions?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'They provide a concise way to create lists',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'They can include conditionals',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'They are more readable than for-loops for creating lists',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All of the above',
+            ],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the built-in function "zip()" do in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Combines two or more iterables into a single iterable',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Compresses data into a zip file',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Sorts multiple iterables',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Splits a string into a list',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is a lambda function in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A function that can take any number of arguments',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A function defined using the "def" keyword',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'An anonymous function expressed as a single statement',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A recursive function',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which method can be used to convert a string into a list in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'split()',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'join()',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'append()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'extend()',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the output of the expression `2 ** 3` in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '5',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '6',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '8',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '9',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a Python library for data manipulation and analysis?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NumPy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Pandas',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Matplotlib',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'SciPy',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the purpose of the',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '"__init__',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'method in a Python class?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To initialize an instance of the class',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To define a class-level method',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To destroy an instance of the class',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To define a static method',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the primary difference between',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'deepcopy',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'and',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'copy',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'in the',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'copy',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'module?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'deepcopy',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'copies only the top-level objects, while',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'copy',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'copies all nested objects',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'copy',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'copies only the top-level objects, while',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'deepcopy',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'copies all nested objects',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'There is no difference',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'copy',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'is faster than',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'deepcopy',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is used to define a block of code in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Curly braces {}',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Indentation',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Parentheses ()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Square brackets []',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the use of the "pass" statement in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To create a placeholder for future code',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To end a loop',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To raise an exception',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To break out of a function',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is used to define a generator function in Python?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'return',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'yield',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'generate',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'yield return',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What will be the output of the following code?',
+        ],
+      ],
+      code: `
       numbers = [1, 2, 3, 4, 5]
       squares = [n**2 for n in numbers]
       print(squares)
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 4, 9, 16, 25]',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[1, 4, 9, 16, 25]',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 2, 3, 4, 5]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[2, 3, 4, 5, 6]',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 8, 27, 64, 125]',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How can you create a list of even numbers from 0 to 20 using list comprehension?',
           ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in range(21) if x % 2 == 0]',
-              ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[1, 2, 3, 4, 5]',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in range(21) if x % 2 != 0]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in range(20) if x % 2 == 0]',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in range(20) if x % 2 != 0]',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the following list comprehension do?',
           ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[2, 3, 4, 5, 6]',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[1, 8, 27, 64, 125]',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How can you create a list of even numbers from 0 to 20 using list comprehension?',
         ],
-        code: `
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[x for x in range(21) if x % 2 == 0]',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[x for x in range(21) if x % 2 != 0]',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[x for x in range(20) if x % 2 == 0]',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[x for x in range(20) if x % 2 != 0]',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the following list comprehension do?',
+        ],
+      ],
+      code: `
       [n for n in range(10) if n % 2 == 0]
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of even numbers from 0 to 9',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of even numbers from 0 to 9',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of odd numbers from 0 to 9',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of numbers from 0 to 9',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of numbers from 2 to 10',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the following list comprehension do?',
           ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of odd numbers from 0 to 9',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of numbers from 0 to 9',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of numbers from 2 to 10',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the following list comprehension do?',
         ],
-        code: `
+      ],
+      code: `
       [n for n in range(10) if n % 2 == 0]
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of even numbers from 0 to 9',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of even numbers from 0 to 9',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of odd numbers from 0 to 9',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of even numbers from 0 to 10',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of odd numbers from 0 to 10',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What will be the output of the following code?',
           ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of odd numbers from 0 to 9',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of even numbers from 0 to 10',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of odd numbers from 0 to 10',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What will be the output of the following code?',
         ],
-        code: `
+      ],
+      code: `
       words = ['hello', 'world']
       capitalized = [word.upper() for word in words]
       print(capitalized)
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[\'HELLO\', \'WORLD\']',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[\'HELLO\', \'WORLD\']',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[\'hello\', \'world\']',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[\'Hello\', \'World\']',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[\'HELLO\', \'WORLD\', \'HELLO\', \'WORLD\']',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How can you create a list of the squares of even numbers from 0 to 10 using list comprehension?',
           ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x**2 for x in range(11) if x % 2 == 0]',
-              ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[\'hello\', \'world\']',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x**2 for x in range(10) if x % 2 == 0]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x**2 for x in range(11) if x % 2 != 0]',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x**2 for x in range(10) if x % 2 != 0]',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What does the following list comprehension do?',
           ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[\'Hello\', \'World\']',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[\'HELLO\', \'WORLD\', \'HELLO\', \'WORLD\']',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How can you create a list of the squares of even numbers from 0 to 10 using list comprehension?',
         ],
-        code: `
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x**2 for x in range(11) if x % 2 == 0]',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x**2 for x in range(10) if x % 2 == 0]',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x**2 for x in range(11) if x % 2 != 0]',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x**2 for x in range(10) if x % 2 != 0]',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What does the following list comprehension do?',
+        ],
+      ],
+      code: `
       [letter for letter in 'hello']
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of characters in the string "hello"',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of characters in the string "hello"',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of words in the string "hello"',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of strings "hello"',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of integers from the string "hello"',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'How can you filter out negative numbers from a list using list comprehension?',
           ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in numbers if x >= 0]',
-              ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of words in the string "hello"',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in numbers if x < 0]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in numbers if x == 0]',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[x for x in numbers if x != 0]',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What will be the output of the following code?',
           ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of strings "hello"',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of integers from the string "hello"',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How can you filter out negative numbers from a list using list comprehension?',
         ],
-        code: `
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x for x in numbers if x >= 0]',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x for x in numbers if x < 0]',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x for x in numbers if x == 0]',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[x for x in numbers if x != 0]',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What will be the output of the following code?',
+        ],
+      ],
+      code: `
       matrix = [[1, 2], [3, 4]]
       flat = [num for row in matrix for num in row]
       print(flat)
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 2, 3, 4]',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[1, 2, 3, 4]',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 2], [3, 4]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[[1, 2, 3, 4]]',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1], [2], [3], [4]',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the purpose of the following list comprehension?',
           ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[1, 2], [3, 4]',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[[1, 2, 3, 4]]',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '[1], [2], [3], [4]',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the purpose of the following list comprehension?',
         ],
-        code: `
+      ],
+      code: `
       [x if x % 2 == 0 else -x for x in range(10)]
         `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of numbers from 0 to 9 where even numbers are positive and odd numbers are negative',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of numbers from 0 to 9 where even numbers are positive and odd numbers are negative',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of numbers from 0 to 9 where even numbers are negative and odd numbers are positive',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of numbers from 0 to 9 where all numbers are positive',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Creates a list of numbers from 0 to 9 where all numbers are negative',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What will be the output of the following code?',
           ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of numbers from 0 to 9 where even numbers are negative and odd numbers are positive',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of numbers from 0 to 9 where all numbers are positive',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creates a list of numbers from 0 to 9 where all numbers are negative',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What will be the output of the following code?',
         ],
-        code: `
+      ],
+      code: `
       nums = [1, 2, 3, 4]
       result = [x * y for x in nums for y in nums]
       print(result)
     `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 2, 3, 4, 2, 4, 6, 8, 3, 6, 9, 12, 4, 8, 12, 16]',
-              ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[1, 2, 3, 4, 2, 4, 6, 8, 3, 6, 9, 12, 4, 8, 12, 16]',
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[1, 4, 9, 16]',
-              ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[1, 4, 9, 16]',
             ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[2, 4, 6, 8]',
-              ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[2, 4, 6, 8]',
             ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[16, 12, 8, 4, 12, 9, 6, 3, 8, 6, 4, 2, 4, 3, 2,1',
-              ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '[16, 12, 8, 4, 12, 9, 6, 3, 8, 6, 4, 2, 4, 3, 2,1',
             ],
-          },
-        ],
-        correctAnswer: '0',
-      },
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     ],
   },
   // ===========
   'machine-learning': {
     name: 'Machine Learning',
     questions: [
+      {
+        question: [[QuizMarkdownType.TEXT, 'Overfitting is associated with']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'High model complexity']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Low model complexity']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'High model bias']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Low model bias']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What does variance refer to in the context of machine learning?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The model’s sensitivity to fluctuations in the training data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The difference between training and test error']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The number of features in the dataset']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The model’s ability to generalize to new data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a high variance model likely to do?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Overfit the training data and perform poorly on new data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Underfit the training data and perform well on new data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Generalize well to new data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Have a low training error and a high test error']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Which of the following is a common technique to reduce variance in a model?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using cross-validation']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increasing the complexity of the model']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reducing the amount of training data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ignoring the test set']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the relationship between variance and model complexity?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'High variance is often associated with high model complexity']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'High variance is often associated with low model complexity']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Variance is independent of model complexity']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Variance always decreases with model complexity']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the bias-variance trade-off?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The balance between minimizing bias and minimizing variance to achieve better model performance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The trade-off between training error and test error']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The trade-off between model complexity and training time']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The balance between the amount of training data and the number of features']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How can ensemble methods like bagging reduce variance?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By averaging the predictions of multiple models to reduce overfitting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By increasing the training data size']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By simplifying the model']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By ignoring outliers in the training data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What happens when a model has both high bias and high variance?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The model performs poorly on both training and test data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The model performs well on training data but poorly on test data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The model performs well on test data but poorly on training data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The model generalizes well to new data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a low variance model likely to do?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Generalize well to new data but may underfit the training data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Overfit the training data and perform poorly on new data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Have a high training error and low test error']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Perform well on both training and test data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Why is cross-validation useful in assessing model variance?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It helps estimate the model’s performance on different subsets of data, giving a better sense of variance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It reduces the size of the training dataset']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It simplifies the model training process']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It always increases model accuracy']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Which of the following best describes the impact of high variance on model predictions?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Predictions are highly sensitive to the training data and may vary widely for different training sets']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Predictions are consistent and reliable across different training sets']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The model tends to underfit the training data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The model has a high training error and low test error']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'GPT stands for']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Generative pre-trained text']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Generative pre-trained task']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Generative pre-trained token']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Generative pre-trained transformer']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the term "dimensionality" in the context of machine learning?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The number of features or variables in a dataset']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The number of training examples']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The size of the dataset']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The number of layers in a neural network']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the curse of dimensionality?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The phenomenon where increasing the number of dimensions makes the data sparse and distances less meaningful']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The difficulty in visualizing data with high dimensions']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The increase in computational cost with more dimensions']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The problem of overfitting due to high-dimensional data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Which technique is commonly used for dimensionality reduction?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis (PCA)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Gradient Descent']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-means Clustering']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cross-Validation']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the goal of dimensionality reduction?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To reduce the number of features while retaining as much information as possible']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To increase the number of features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To split the dataset into training and test sets']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To normalize the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How does high dimensionality affect machine learning models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It can lead to overfitting and increased computational cost']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It makes the model simpler and less likely to overfit']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It reduces the training time']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It always improves model accuracy']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a common method to visualize high-dimensional data?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 't-Distributed Stochastic Neighbor Embedding (t-SNE)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Which of the following best describes Principal Component Analysis (PCA)?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A technique to transform data into a lower-dimensional space by finding the principal components']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A clustering algorithm']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A classification algorithm']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A regression technique']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a potential drawback of dimensionality reduction?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It can lead to loss of information']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It always decreases model accuracy']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It simplifies the model training process']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It reduces computational cost']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How does feature selection differ from feature extraction in the context of dimensionality reduction?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Feature selection involves choosing a subset of existing features, while feature extraction involves creating new features from the original ones']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Feature selection creates new features, while feature extraction removes features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Feature selection and feature extraction are the same']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Feature extraction involves choosing a subset of existing features, while feature selection involves creating new features from the original ones']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is an example of a feature extraction technique?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis (PCA)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Random Forests']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-means Clustering']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the primary purpose of a validation set in machine learning?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To assess model performance during training and tune hyperparameters']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To train the model on the data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To evaluate the final performance of the model']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To preprocess the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How is the validation set typically used in model training?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To evaluate model performance at the end of each epoch and adjust hyperparameters']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To initialize the model weights']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To split the dataset into smaller parts']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To generate new features from the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a common ratio for splitting the dataset into training, validation, and test sets?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '70% training, 15% validation, 15% test']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '50% training, 25% validation, 25% test']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '80% training, 10% validation, 10% test']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '60% training, 20% validation, 20% test']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Why is it important to use a validation set during model training?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To prevent overfitting and ensure the model generalizes well to new data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To increase the size of the training dataset']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To visualize the training process']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To preprocess the input data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is early stopping in the context of using a validation set?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stopping the training process when performance on the validation set starts to degrade']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Stopping the training process after a fixed number of epochs']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Starting the training process with pre-trained weights']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Stopping the training process when the model achieves zero error']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How does the validation set help in hyperparameter tuning?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By providing a performance metric to compare different hyperparameter configurations']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By training the model on different subsets of data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By initializing the model parameters']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By reducing the dimensionality of the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What distinguishes a validation set from a test set?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The validation set is used during training to tune the model, while the test set is used after training to evaluate final performance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The validation set is larger than the test set']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The validation set is used to preprocess the data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The validation set is only used for visualization purposes']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'In which phase of model development is the validation set primarily used?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'During the training phase to tune hyperparameters and evaluate model performance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'During the data collection phase']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'During the feature engineering phase']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'During the final model deployment phase']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How can the use of a validation set improve model generalization?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By providing feedback on the model’s performance on unseen data, allowing for adjustments that prevent overfitting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By increasing the number of training examples']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By reducing the computational cost']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By visualizing the training process']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Why is it not advisable to use the test set for hyperparameter tuning?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It can lead to overfitting on the test set, giving an overly optimistic view of model performance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It increases the computational cost']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It complicates the training process']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It reduces the size of the training dataset']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the primary purpose of a validation set in machine learning?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To assess model performance during training and tune hyperparameters']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To train the model on the data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To evaluate the final performance of the model']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To preprocess the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How is the validation set typically used in model training?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To evaluate model performance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To initialize the model weights']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To split the dataset into smaller parts']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To generate new features from the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a common ratio for splitting the dataset into training, validation, and test sets?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '70% training, 15% validation, 15% test']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '50% training, 25% validation, 25% test']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '80% training, 10% validation, 10% test']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '60% training, 20% validation, 20% test']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'A dataset to train a model is frequently split into three parts:']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A training set, a validation set, and an initialization set']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A training set, a validation set, and a seeding set']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A training set, a validation set, and a cleanup set']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A training set, a validation set, and a testing set']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'By using a validation set,']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'You ensure that the model is primed to answer input similar to the training data']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'You ensure that the model is not just memorizing the training data']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, ' You ensure that the model is capable of generalizing to new, unseen data']], order: 2 },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Answers 2 and 3']], order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is one of the main challenges in training Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Resource requirements']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Data availability']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Model interpretability']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Runaway AI scenarios']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How do Large Language Models typically handle different languages?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'They are trained on multilingual datasets']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'They use separate models for each language']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'They rely on external translation services']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'They use rule-based language processing']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is transfer learning in the context of Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Applying knowledge gained from one task to another related task']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Training a model on a large dataset']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Generating new text based on a prompt']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Evaluating model performance']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How do Large Language Models improve over traditional language models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By leveraging large amounts of data and complex architectures to understand context better']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By using smaller datasets']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By reducing computational requirements']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By using rule-based language processing']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is fine-tuning in the context of Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Adjusting a pre-trained model on a specific task or dataset']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Training a model from scratch']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Scaling the model to handle more data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reducing the model size to save computational resources']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Which technique is commonly used to train Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformer architecture']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional neural networks']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Recurrent neural networks']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Support vector machines']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Why is attention mechanism important in Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows the model to focus on relevant parts of the input when generating output']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It substitutes for sentiment analysis functions in certain scenarios']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It helps in feature extraction from images by relying on a vector-based approach']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It randomly penalizes the importance of differents parks of the user\'s input in order to generate unique responses']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is a common application of Large Language Models in natural language processing?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Machine translation']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Object detection']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Image segmentation']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Time series analysis']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'How do Large Language Models typically handle context in text generation?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By using attention mechanisms to weigh the importance of different parts of the input']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By using fixed-length input sequences to which to compare the user inout']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By relying on a cached context window that is updated hourly']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By using rule-based approaches']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the significance of the "pre-training" phase in Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows the model to learn general language patterns from a large corpus of text']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It fine-tunes the model for specific tasks']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It trains the model on an initial 25% of the final corpus of text which is used to adjust for error']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It initializes the model’s weights randomly']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the role of tokenization in Large Language Models?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'For processing']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To compress the data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To generate new text']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To visualize the data']] },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [
@@ -19061,7 +19864,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Reduce the dimensionality by using feature selection or extraction techniques',
+                'Use feature selection or extraction techniques',
               ],
             ],
           },
@@ -19070,7 +19873,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increase the dimensionality by adding more features',
+                'Add more features',
               ],
             ],
           },
@@ -19099,7 +19902,7 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
-            'A model predicting customer lifetime value is overfitting, indicated by a large gap between training and validation errors. How can dimensionality reduction help?',
+            'A model predicting customer lifetime value is overfitting, indicated by a large gap between training and validation errors. How can reducing dimensionality?',
           ],
         ],
         answers: [
@@ -19108,7 +19911,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Reduce the dimensionality to remove redundant and irrelevant features',
+                'By removing redundant and irrelevant features',
               ],
             ],
           },
@@ -19117,7 +19920,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increase the dimensionality to capture more patterns',
+                'By to capturing more patterns',
               ],
             ],
           },
@@ -19126,7 +19929,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Reduce the batch size',
+                'By reducing the batch size',
               ],
             ],
           },
@@ -19135,7 +19938,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increase the number of epochs',
+                'By increasing the number of epochs',
               ],
             ],
           },
@@ -19284,7 +20087,7 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
-        // ctrl f this in chatgpt
+      // ctrl f this in chatgpt
         question: [
           [
             QuizMarkdownType.TEXT,
@@ -19400,7 +20203,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Can also result in raising the learning rate',
+                'Can also result in raising the variance',
               ],
             ],
           },
@@ -19418,7 +20221,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Can also result in lowering the learning rate',
+                'Can also result in lowering bias',
               ],
             ],
           },
@@ -19701,101 +20504,6 @@ const quizData: QuizData = {
               [
                 QuizMarkdownType.TEXT,
                 'As text files',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'A vector can be',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Number lines on an xy coordinates plane',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Coordinate pairs in an xy coordinates plane',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Objects in an SQL database',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Answers 1 and 3',
-              ],
-            ],
-            order: 3,
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which linear algebra operation is essential for calculating the similarity between two vectors?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Dot product',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Cross product',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Matrix inversion',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Determinant calculation',
               ],
             ],
           },
@@ -20738,6 +21446,53 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
+            'What does a low value of a loss function indicate?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The model’s predictions are far from the actual target values',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The model’s predictions are very close to the actual target values',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The model has a high number of layers',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The learning rate is too low',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'Why is it important to minimize the loss function during training?',
           ],
         ],
@@ -21603,7 +22358,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'It can reduce the model\'s accuracy',
+                'It can reduce the model\'s accuracy by failing to adhere to simplicity',
               ],
             ],
           },
@@ -21612,7 +22367,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'It can decrease the training time',
+                'It can decrease the training time by freeing up computational resources',
               ],
             ],
           },
@@ -21621,7 +22376,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'It can simplify the model too much',
+                'It can overcomplicate the model and cause underfitting',
               ],
             ],
           },
@@ -22111,7 +22866,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'The process of adjusting weights',
+                'The process of adjusting weights from the input',
               ],
             ],
           },
@@ -22129,7 +22884,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'The process of calculating gradients',
+                'The process of calculating gradients from the input',
               ],
             ],
           },
@@ -22138,7 +22893,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'The process of initializing weights',
+                'The process of initializing weights from the input',
               ],
             ],
           },
@@ -24996,7 +25751,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'K-means requires the number of clusters to be specified, while DBSCAN does not',
+                'DBSCAN does not require the number of clusters to be specified',
               ],
             ],
           },
@@ -27297,7 +28052,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'To remove common words that do not contribute much meaning',
+                'To remove common words',
               ],
             ],
           },
@@ -28488,15 +29243,15 @@ const quizData: QuizData = {
         answers: [
           {
             id: '0',
-            answer: [[QuizMarkdownType.TEXT, 'Runnable']],
+            answer: [[QuizMarkdownType.INLINE_CODE, 'Runnable']],
           },
           {
             id: '1',
-            answer: [[QuizMarkdownType.TEXT, 'Cloneable']],
+            answer: [[QuizMarkdownType.INLINE_CODE, 'Cloneable']],
           },
           {
             id: '2',
-            answer: [[QuizMarkdownType.TEXT, 'Serializable']],
+            answer: [[QuizMarkdownType.INLINE_CODE, 'Serializable']],
           },
           {
             id: '3',
@@ -28530,7 +29285,7 @@ const quizData: QuizData = {
             order: 3,
           },
         ],
-        correctAnswer: '2',
+        correctAnswer: '3',
       },
       {
         question: [[QuizMarkdownType.TEXT, 'Can a marker interface have static methods?']],
@@ -28718,7 +29473,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'The Java Compiler',
+                'Java Compiler',
               ],
             ],
           },
@@ -29240,7 +29995,7 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'void run()',
               ],
             ],
@@ -29249,7 +30004,7 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'void start()',
               ],
             ],
@@ -29258,7 +30013,7 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'void main()',
               ],
             ],
@@ -29267,7 +30022,7 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'void execute()',
               ],
             ],
@@ -29287,7 +30042,7 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'java.util',
               ],
             ],
@@ -29296,7 +30051,7 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'java.lang',
               ],
             ],
@@ -29305,7 +30060,7 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'java.io',
               ],
             ],
@@ -29314,7 +30069,7 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'java.net',
               ],
             ],
@@ -29913,7 +30668,7 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'equals()',
               ],
             ],
@@ -29922,7 +30677,7 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'compare()',
               ],
             ],
@@ -29931,7 +30686,7 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'compareTo()',
               ],
             ],
@@ -29940,7 +30695,7 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'equalsIgnoreCase()',
               ],
             ],
@@ -30402,7 +31157,7 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'register()',
               ],
             ],
@@ -30411,7 +31166,7 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'execute()',
               ],
             ],
@@ -30420,7 +31175,7 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'subscribe()',
               ],
             ],
@@ -30429,7 +31184,7 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'run()',
               ],
             ],
@@ -30544,7 +31299,15 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Using the catch() method',
+                'Using the',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'catch()',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'method',
               ],
             ],
           },
@@ -30553,7 +31316,15 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Using the onError() method',
+                'Using the',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'onError()',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'method',
               ],
             ],
           },
@@ -30562,7 +31333,15 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Using the onErrorResume() method',
+                'Using the',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'onErrorResume()',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'method',
               ],
             ],
           },
@@ -30571,7 +31350,15 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Using the handleError() method',
+                'Using the',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'handleError()',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'method',
               ],
             ],
           },
@@ -30829,6 +31616,547 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Octets in an IPv4 address are written in'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Octal numbers'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Binary numbers'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Decimal integers'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hexadecimal numbers'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'In the following example,',
+          ],
+          [
+            QuizMarkdownType.CODE,
+            `
+        traceroute example.com
+        traceroute to example.com (93.184.216.34), 30 hops max, 60 byte packets
+        1  192.168.0.1 (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
+        2  192.168.1.1 (192.168.1.1)  5.172 ms  5.864 ms  6.890 ms
+        3  10.0.0.1 (10.0.0.1)  8.734 ms  9.308 ms  9.947 ms
+        4  172.16.0.1 (172.16.0.1)  12.491 ms  13.010 ms  13.277 ms
+        5  isp.gateway (198.51.100.1)  20.421 ms  21.719 ms  22.295 ms
+          ...
+            `,
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'Which of the following is true?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'The device pings four addresses within the local network before reaching the ISP\'s gateway',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'The device pings three addresses within the local network before reaching the ISP\'s gateway',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'The device makes four hops within the local network before reaching the ISP\'s gateway',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'The device makes three hops within the local network before reaching the ISP\'s gateway',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The output for running',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'traceroute google.com',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'likely looks something like this:',
+          ],
+          [
+            QuizMarkdownType.CODE,
+            `
+          1  _gateway (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
+          2  [Domain within ISP network] ([IP within ISP network])  19.734 ms  17.308 ms  19.947 ms
+          3  [Domain within ISP network] ([IP within ISP network])  21.491 ms  21.010 ms  21.277 ms
+          4  ...
+          5  ...
+          6  ...
+            `,
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'What do the numbers in the left-hand column signify?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Packets',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Logged indeces',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'OSI Layers',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Hops',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The output for running',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'traceroute google.com',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'likely looks something like this:',
+          ],
+          [
+            QuizMarkdownType.CODE,
+            `
+          1  _gateway (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
+          2  [Domain within ISP network] ([IP within ISP network])  19.734 ms  17.308 ms  19.947 ms
+          3  [Domain within ISP network] ([IP within ISP network])  21.491 ms  21.010 ms  21.277 ms
+          4  ...
+          5  ...
+          6  ...
+            `,
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'Which of the following is true?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'The output indicates packet loss',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Fixing network issues is outside of the network user\'s purview beyond hop #1',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Captured in the output are 6 of 7 layers from the OSI Model',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'The output indicates slow connectivity between the ISP network nodes',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'By the time an HTTP request is handled in a backend server application, are all 7 layers of the OSI model already accounted for?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Yes',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'No',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Only the first 4 layers',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer:
+            [
+              [
+                QuizMarkdownType.TEXT,
+                'Only the first 5 layers',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The medium responsible for transmitting raw bit streams is represented by the',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Application layer',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Presentation layer',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Session layer',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Transport layer',
+              ],
+            ],
+          },
+          {
+            id: '4',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Network layer',
+              ],
+            ],
+          },
+          {
+            id: '5',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Data link layer',
+              ],
+            ],
+          },
+          {
+            id: '6',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Physical layer',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The human-computer interaction layer, where applications can access the network services, is the',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Application layer',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Presentation layer',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Session layer',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Transport layer',
+              ],
+            ],
+          },
+          {
+            id: '4',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Network layer',
+              ],
+            ],
+          },
+          {
+            id: '5',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Data link layer',
+              ],
+            ],
+          },
+          {
+            id: '6',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Physical layer',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '6',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Device A (192.168.1.2) and Device B (192.168.1.3) want to connect to an external server. How might a router with a PAT setup functionally index these devices?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '192.168.1.2 and 192.168.1.3',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '192.168.1.2:50000 and 192.168.1.3:50001',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'device_a and device_b',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '192.168.1.2:device_a and 192.168.1.3:device_b',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'How does PAT (Port Address Translation) accommodate multiple devices?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'By mapping devices\' private IP addresses to public IP addresses',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'By mapping devices\' private IP addresses to ports on the public IP address',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'By mapping devices\' private IP addresses to ports on the router DHCP',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'By mapping devices\' public IP addresses to the router\'s public IP address',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
           [
             QuizMarkdownType.TEXT,
             'An e-commerce with a storefront platform, a CMS platform, and a database shared between the two platforms',
@@ -30961,7 +32289,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'DHCP is performed by the government',
+                'DHCP is performed by the Government',
               ],
             ],
           },
@@ -31008,7 +32336,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'It is assigned an IP address by the government',
+                'It is assigned an IP address by the Government',
               ],
             ],
           },
@@ -42852,75 +44180,48 @@ const quizData: QuizData = {
   'linear-algebra': {
     name: 'Linear Algebra',
     questions: [
-
       {
         question: [
-          [QuizMarkdownType.TEXT, 'A vector can be any of the following EXCEPT']
+          [
+            QuizMarkdownType.TEXT,
+            'If all uppercase vowels in the English language were representative of pictographic matrices, how many would be singular matrices?',
+          ],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'A multi-dimensional matrix']
+              [
+                QuizMarkdownType.TEXT,
+                '0',
+              ],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'A row matrix']
+              [
+                QuizMarkdownType.TEXT,
+                '1',
+              ],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'A column matrix']
+              [
+                QuizMarkdownType.TEXT,
+                '3',
+              ],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'A one-dimensional matrix']
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?']
-        ],
-        katex: `
-          \\begin{pmatrix}
-          1 & 3 \\\\
-          2 & 5 \\\\
-          3 & 7 \\\\
-          4 & 9 \\\\
-          5 & 11
-          \\end{pmatrix}
-        `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}']
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\end{pmatrix}']
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}']
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{pmatrix}']
+              [
+                QuizMarkdownType.TEXT,
+                '5',
+              ],
             ],
           },
         ],
@@ -42928,7 +44229,278 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the x-coordinates?']
+          [
+            QuizMarkdownType.TEXT,
+            'What is the result of multiplying the following matrices?',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} × \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '[ [1, 2], [3, 4] ]',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '[ [19, 22], [43, 50] ]',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '[ [5, 6], [7, 8] ]',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '[ [26, 30], [38, 46] ]',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula for finding the number of possible host addresses in an IPv4 CIDR block?'],
+          [QuizMarkdownType.KATEX, '2^{(32 - \\text{prefix length})} - 2'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(\\text{prefix length})} - 2'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(32 - \\text{prefix length})} - 2'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(32 - \\text{host bits})} - 2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(24 - \\text{prefix length})} - 2'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'What is the result of multiplying the following matrices?',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            'A = \\begin{pmatrix} 0 & 1 \\\\ 2 & 3 \\end{pmatrix}',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            'B = \\begin{pmatrix} 4 & 5 \\\\ 6 & 7 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 26 & 31 \\\\ 6 & 7 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 4 & 5 \\\\ 6 & 7 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 6 & 7 \\\\ 26 & 31 \\end{pmatrix}',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'A vector can be',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Number lines on an xy coordinates plane',
+              ],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Coordinate pairs in an xy coordinates plane',
+              ],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Objects in an SQL database',
+              ],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Answers 1 and 3',
+              ],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Which linear algebra operation is essential for calculating the similarity between two vectors?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Dot product',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Cross product',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Matrix inversion',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Determinant calculation',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A vector can be any of the following EXCEPT'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A multi-dimensional matrix'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A row matrix'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A column matrix'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A one-dimensional matrix'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the set of coordinates'],
+          [QuizMarkdownType.INLINE_KATEX, '\\((x, y)\\)'],
+          [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the y-coordinates?'],
         ],
         katex: `
           \\begin{pmatrix}
@@ -42943,25 +44515,66 @@ const quizData: QuizData = {
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\end{pmatrix}'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the x-coordinates?'],
+        ],
+        katex: `
+          \\begin{pmatrix}
+          1 & 3 \\\\
+          2 & 5 \\\\
+          3 & 7 \\\\
+          4 & 9 \\\\
+          5 & 11
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{pmatrix}'],
             ],
           },
         ],
@@ -42969,31 +44582,31 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the name given to vectors representing points in a two-dimensional space?']
+          [QuizMarkdownType.TEXT, 'What is the name given to vectors representing points in a two-dimensional space?'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'Coordinate vectors']
+              [QuizMarkdownType.TEXT, 'Coordinate vectors'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'Position vectors']
+              [QuizMarkdownType.TEXT, 'Position vectors'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'Both 0 and 1 are correct']
+              [QuizMarkdownType.TEXT, 'Both 0 and 1 are correct'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'Neither 0 nor 1 are correct']
+              [QuizMarkdownType.TEXT, 'Neither 0 nor 1 are correct'],
             ],
           },
         ],
@@ -43385,6 +44998,7 @@ const quizData: QuizData = {
         answers: [
           {
             id: '0',
+            order: 0,
             answer: [
               [
                 QuizMarkdownType.TEXT,
@@ -43394,6 +45008,7 @@ const quizData: QuizData = {
           },
           {
             id: '1',
+            order: 1,
             answer: [
               [
                 QuizMarkdownType.TEXT,
@@ -43403,19 +45018,31 @@ const quizData: QuizData = {
           },
           {
             id: '2',
+            order: 2,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'A vector with multiple columns',
+                'A vector arranged as a column',
               ],
             ],
           },
           {
             id: '3',
+            order: 3,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'A vector with multiple rows',
+                'A vector arranged as a row',
+              ],
+            ],
+          },
+          {
+            id: '4',
+            order: 4,
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Answers 1 and 4',
               ],
             ],
           },
@@ -43710,13 +45337,11 @@ const quizData: QuizData = {
             QuizMarkdownType.TEXT,
             'What is the rank of the following matrix?',
           ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}',
+          ],
         ],
-        code: `
-          \\begin{pmatrix}
-          0 & 0 \\\\
-          0 & 0
-          \\end{pmatrix}
-        `,
         answers: [
           {
             id: '0',
@@ -43765,10 +45390,8 @@ const quizData: QuizData = {
           ],
         ],
         code: `
-          \\begin{pmatrix}
-          1 & 1 \\\\
-          0 & 1
-          \\end{pmatrix}
+          1  1
+          0  1
         `,
         answers: [
           {
@@ -43873,7 +45496,7 @@ const quizData: QuizData = {
           \\mathbf{a} = \\begin{pmatrix}
           2
           \\end{pmatrix}
-          \\quad \\text{and} \\quad
+          \\quad and \\quad
           \\mathbf{b} = \\begin{pmatrix}
           3
           \\end{pmatrix}
@@ -43930,7 +45553,7 @@ const quizData: QuizData = {
           1 \\\\
           2
           \\end{pmatrix}
-          \\quad \text{and} \\quad
+          \\quad and \\quad
           \\mathbf{b} = \\begin{pmatrix}
           3 \\\\
           4
@@ -43995,7 +45618,7 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_KATEX,
                 '\\mathbf{v}_1',
               ],
             ],
@@ -44004,7 +45627,7 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_KATEX,
                 '\\mathbf{v}_2',
               ],
             ],
@@ -44013,7 +45636,7 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_KATEX,
                 '\\mathbf{v}_3',
               ],
             ],
@@ -44022,7 +45645,7 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_KATEX,
                 '\\mathbf{v}_4',
               ],
             ],
@@ -44031,7 +45654,7 @@ const quizData: QuizData = {
             id: '4',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_KATEX,
                 '\\mathbf{v}_5',
               ],
             ],
@@ -44654,7 +46277,6 @@ const quizData: QuizData = {
           },
         ],
         correctAnswer: '0',
-        code: '1/(ad - bc) * [[d, -b], [-c, a]]',
       },
       {
         question: [
@@ -44697,6 +46319,39 @@ const quizData: QuizData = {
               [
                 QuizMarkdownType.TEXT,
                 'The matrix is the identity matrix',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The matrix is invertible',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'True',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'False',
               ],
             ],
           },
@@ -44952,12 +46607,10 @@ const quizData: QuizData = {
             QuizMarkdownType.TEXT,
             'What is the trace of the following matrix?',
           ],
+          [
+            QuizMarkdownType.KATEX, '\\begin{pmatrix} 5 \\end{pmatrix}',
+          ],
         ],
-        code: `
-          \\begin{pmatrix}
-          5
-          \\end{pmatrix}
-        `,
         answers: [
           {
             id: '0',
@@ -46023,13 +47676,11 @@ const quizData: QuizData = {
             QuizMarkdownType.TEXT,
             'What is the trace of the following matrix?',
           ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\begin{pmatrix} 12 & 6 \\\\ 33 & 1 \\end{pmatrix}',
+          ],
         ],
-        code: `
-          \\begin{pmatrix}
-          12 & 6 \\\\
-          33 & 1
-          \\end{pmatrix}
-        `,
         answers: [
           {
             id: '0',
@@ -46356,42 +48007,6 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which of the following matrices is a square matrix?',
-          ],
-        ],
-        code: `
-      var matrix = [
-        [1, 2],
-        [3, 4],
-        [5, 6],
-      ];
-        `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Yes',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'No',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
             'How do you multiply two matrices?',
           ],
         ],
@@ -46492,76 +48107,6 @@ const quizData: QuizData = {
         ],
         correctAnswer: '1',
       },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the result of multiplying the following matrices?',
-          ],
-        ],
-        // actually latex syntax
-        // https://chatgpt.com/c/3d15dcb4-b471-4370-b47f-23864673c00f
-        katex: `
-      A = \\begin{pmatrix}
-      1 & 2 \\\\
-      3 & 4
-      \\end{pmatrix}
-      \\\\
-      B = \\begin{pmatrix}
-      5 & 6 \\\\
-      7 & 8
-      \\end{pmatrix}
-        `,
-        code: `
-      var A = [
-        [1, 2],
-        [3, 4],
-      ];
-      var B = [
-        [5, 6],
-        [7, 8],
-      ];
-        `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[ [1, 2], [3, 4] ]',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[ [19, 22], [43, 50] ]',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[ [5, 6], [7, 8] ]',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '[ [26, 30], [38, 46] ]',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
       // {
       //   question: 'What is the dot product of the two matrices?',
       //   code: `
@@ -46588,142 +48133,225 @@ const quizData: QuizData = {
   test: {
     name: 'test',
     questions: [
+
+      {
+        question: [[QuizMarkdownType.TEXT, 'What is the benefit of using marker interfaces?']],
+        answers: [
+          {
+            id: '0',
+            answer: [[QuizMarkdownType.TEXT, 'Improves code readability and maintainability.']],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [[QuizMarkdownType.TEXT, 'Allows for code polymorphism.']],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [[QuizMarkdownType.TEXT, 'There are no benefits to using marker interfaces.']],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [[QuizMarkdownType.TEXT, 'Both A and B.']],
+            order: 3,
+          },
+        ],
+        correctAnswer: '3',
+      },
+      // {
+      //   question: [
+      //     [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?'],
+      //   ],
+      //   katex: `
+      //     \\begin{pmatrix}
+      //     1 & 3 \\\\
+      //     2 & 5 \\\\
+      //     3 & 7 \\\\
+      //     4 & 9 \\\\
+      //     5 & 11
+      //     \\end{pmatrix}
+      //   `,
+      //   answers: [
+      //     {
+      //       id: '0',
+      //       answer: [
+      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
+      //       ],
+      //     },
+      //     {
+      //       id: '1',
+      //       answer: [
+      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\\\ 5 \\end{pmatrix}'],
+      //       ],
+      //     },
+      //     {
+      //       id: '2',
+      //       answer: [
+      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}'],
+      //       ],
+      //     },
+      //     {
+      //       id: '3',
+      //       answer: [
+      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
+      //       ],
+      //     },
+      //   ],
+      //   correctAnswer: '1',
+      // },
+      // {
+      //   question: [
+      //     [
+      //       QuizMarkdownType.TEXT,
+      //       'o hi',
+      //     ],
+      //     [
+      //       QuizMarkdownType.INLINE_KATEX,
+      //       'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
+      //     ],
+      //     [
+      //       QuizMarkdownType.TEXT,
+      //       'o hi',
+      //     ],
+      //     [
+      //       QuizMarkdownType.KATEX,
+      //       'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
+      //     ],
+      //     [
+      //       QuizMarkdownType.TEXT,
+      //       'o hi',
+      //     ],
+      //     [
+      //       QuizMarkdownType.INLINE_CODE,
+      //       `
+      // var A = [
+      //   [1, 2],
+      //   [3, 4],
+      // ];
+      // var B = [
+      //   [5, 6],
+      //   [7, 8],
+      // ];
+      //   `,
+      //     ],
+      //     [
+      //       QuizMarkdownType.TEXT,
+      //       'o hi',
+      //     ],
+      //     [
+      //       QuizMarkdownType.INLINE_CODE,
+      //       'a',
+      //     ],
+      //     [
+      //       QuizMarkdownType.TEXT,
+      //       'o hi',
+      //     ],
+      //   ],
+      //   // actually latex syntax
+      //   // https://chatgpt.com/c/3d15dcb4-b471-4370-b47f-23864673c00f
+      //   katex: `
+      // A = \\begin{pmatrix}
+      // 1 & 2 \\\\
+      // 3 & 4
+      // \\end{pmatrix}
+      // \\\\
+      // B = \\begin{pmatrix}
+      // 5 & 6 \\\\
+      // 7 & 8
+      // \\end{pmatrix}
+      //   `,
+      //   code: `
+      // var A = [
+      //   [1, 2],
+      //   [3, 4],
+      // ];
+      // var B = [
+      //   [5, 6],
+      //   [7, 8],
+      // ];
+      //   `,
+      //   answers: [
+      //     {
+      //       id: '0',
+      //       answer: [
+      //         [
+      //           QuizMarkdownType.TEXT,
+      //           'o hi',
+      //         ],
+      //         [
+      //           QuizMarkdownType.INLINE_KATEX,
+      //           'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
+      //         ],
+      //       ],
+      //     },
+      //     {
+      //       id: '1',
+      //       answer: [
+      //         [
+      //           QuizMarkdownType.TEXT,
+      //           'o hi',
+      //         ],
+      //         [
+      //           QuizMarkdownType.INLINE_KATEX,
+      //           'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
+      //         ],
+      //       ],
+      //     },
+      //   ],
+      //   correctAnswer: '1',
+      // },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?'],
+          [
+            QuizMarkdownType.TEXT,
+            'What is the dot product of the following vectors?',
+          ],
         ],
         katex: `
-          \\begin{pmatrix}
-          1 & 3 \\\\
-          2 & 5 \\\\
-          3 & 7 \\\\
-          4 & 9 \\\\
-          5 & 11
+          \\mathbf{a} = \\begin{pmatrix}
+          2
+          \\end{pmatrix}
+          \\quad and \\quad
+          \\mathbf{b} = \\begin{pmatrix}
+          3
           \\end{pmatrix}
         `,
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
+              [
+                QuizMarkdownType.TEXT,
+                '5',
+              ],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\\\ 5 \\end{pmatrix}'],
+              [
+                QuizMarkdownType.TEXT,
+                '6',
+              ],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}'],
+              [
+                QuizMarkdownType.TEXT,
+                '8',
+              ],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'o hi',
-          ],
-          [
-            QuizMarkdownType.INLINE_KATEX,
-            'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            'o hi',
-          ],
-          [
-            QuizMarkdownType.KATEX,
-            'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            'o hi',
-          ],
-          [
-            QuizMarkdownType.INLINE_CODE,
-            `
-      var A = [
-        [1, 2],
-        [3, 4],
-      ];
-      var B = [
-        [5, 6],
-        [7, 8],
-      ];
-        `,
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            'o hi',
-          ],
-          [
-            QuizMarkdownType.INLINE_CODE,
-            'a',
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            'o hi',
-          ],
-        ],
-        // actually latex syntax
-        // https://chatgpt.com/c/3d15dcb4-b471-4370-b47f-23864673c00f
-        katex: `
-      A = \\begin{pmatrix}
-      1 & 2 \\\\
-      3 & 4
-      \\end{pmatrix}
-      \\\\
-      B = \\begin{pmatrix}
-      5 & 6 \\\\
-      7 & 8
-      \\end{pmatrix}
-        `,
-        code: `
-      var A = [
-        [1, 2],
-        [3, 4],
-      ];
-      var B = [
-        [5, 6],
-        [7, 8],
-      ];
-        `,
-        answers: [
-          {
-            id: '0',
-            answer: [
               [
                 QuizMarkdownType.TEXT,
-                'o hi',
-              ],
-              [
-                QuizMarkdownType.INLINE_KATEX,
-                'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'o hi',
-              ],
-              [
-                QuizMarkdownType.INLINE_KATEX,
-                'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
+                '1',
               ],
             ],
           },

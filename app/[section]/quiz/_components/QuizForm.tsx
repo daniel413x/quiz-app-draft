@@ -165,7 +165,7 @@ const QuizForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormDescription>
-            {!question.question ? null : question.question.map(renderMarkdown)}
+            {renderMarkdown(question.question)}
             {question.image ? (
               <Image
                 className="py-6"
