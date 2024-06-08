@@ -18685,6 +18685,26 @@ const quizData: QuizData = {
     name: 'Machine Learning',
     questions: [
       {
+        question: [[QuizMarkdownType.TEXT, 'Batch normalization helps stabilize and accelerate the training process']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By normalizing the activations']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By lowering the training set dimensionality']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By updating parameters during training']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By carrying out dropout regularization']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'By normalizing the activations, batch normalization helps']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stabilize and accelerate the training process']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Lowering the training set dimensionality']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reduce the internal covariate shift']], order: 2 },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By carrying out dropout regularization']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'Overfitting is associated with']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'High model complexity']] },
@@ -19045,7 +19065,7 @@ const quizData: QuizData = {
         correctAnswer: '3',
       },
       {
-        question: [[QuizMarkdownType.TEXT, 'By using a validation set,']],
+        question: [[QuizMarkdownType.TEXT, 'By using a validation set']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'You ensure that the model is primed to answer input similar to the training data']], order: 0 },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'You ensure that the model is not just memorizing the training data']], order: 1 },
@@ -22772,7 +22792,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Weights are initialized',
+                'Weights are initialized based on the predicted output',
               ],
             ],
           },
@@ -22781,7 +22801,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Weights are updated',
+                'Weights are updated based on the input',
               ],
             ],
           },
@@ -22799,7 +22819,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Gradients are calculated',
+                'Gradients are calculated based on inputs',
               ],
             ],
           },
@@ -29221,6 +29241,1170 @@ const quizData: QuizData = {
     name: 'Java',
     questions: [
       {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the '],
+          [QuizMarkdownType.INLINE_CODE, 'map'],
+          [QuizMarkdownType.TEXT, ' operation in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To transform each element of the stream into another form.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To filter elements from the stream based on a predicate.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To collect the elements of the stream into a list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To sort the elements of the stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method would you use to filter elements of a stream based on a condition?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'filter'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'map'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collect'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'forEach'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do?'],
+          [QuizMarkdownType.CODE, `
+List<String> names = Arrays.asList("John", "Jane", "Jack", "Doe");
+List<String> upperCaseNames = names.stream()
+                                   .map(String::toUpperCase)
+                                   .collect(Collectors.toList());
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It converts all names in the list to uppercase and collects them into a new list.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters out names that are not in uppercase.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It sorts the names in alphabetical order and collects them into a new list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It concatenates all names into a single string.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which terminal operation is used to collect the elements of a stream into a list?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collect'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'toList'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'toCollection'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'toArray'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the difference between '],
+          [QuizMarkdownType.INLINE_CODE, 'map'],
+          [QuizMarkdownType.TEXT, ' and '],
+          [QuizMarkdownType.INLINE_CODE, 'flatMap'],
+          [QuizMarkdownType.TEXT, ' in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map transforms each element into another form, while flatMap transforms each element into a stream and flattens them into a single stream.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map is used for filtering elements, while flatMap is used for mapping elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map is a terminal operation, while flatMap is an intermediate operation.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map collects elements into a list, while flatMap collects elements into a set.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'You are deciding whether to use stream() in your WebFlux application as presented below. But is this implementation considered blocking?'],
+          [QuizMarkdownType.CODE, `
+        restaurant.setMenuItems(restaurantPUTReq.getMenuItems().stream()
+            .map(menuItemReq -> {
+                ObjectId id = menuItemReq.getId()
+                    .map(ObjectId::new)
+                    .orElseGet(ObjectId::new);
+                return new MenuItem(id, menuItemReq.getName(), menuItemReq.getPrice());
+            })
+            .collect(Collectors.toList()));
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'No, because the operations are minute and performed in-memory.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Yes, because stream operations inherently block the main thread.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'No, because the stream operation is always asynchronous.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Yes, because setting object fields is a blocking operation.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'CompletableFuture, which can be used to execute tasks asynchronously, can be found in'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Java Spring'],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Java WebFlux'],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Java Spring and Java WebFlux'],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither framework'],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is true of Java Spring?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Java Spring has methods for handling non-blocking tasks'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Java Spring leverages Java\'s multithreading capabilities to remain non-blocking'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Java Spring has a mechanism similar to Node.js\'s event loop'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Java Spring is built on subscribers and publishers'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Java WebFlux uses Java\'s multithreading capabilities'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'To achieve optimization at compilation and runtime'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'To handle errors on methods such as onErrorResume'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'To finalize objects for garbage collection'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'To achieve non-blocking runtimes'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method would you use to sort the elements of a stream in natural order?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'sorted'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'order'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'sort'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'arrange'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which terminal operation can be used to perform an action for each element of a stream?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'forEach'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'peek'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'map'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'filter'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the '],
+          [QuizMarkdownType.INLINE_CODE, 'reduce'],
+          [QuizMarkdownType.TEXT, ' operation in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To combine the elements of the stream into a single result using an associative accumulation function.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To filter elements of the stream based on a predicate.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To collect the elements of the stream into a list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To transform each element of the stream into another form.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is an example of a terminal operation in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collect'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'map'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'filter'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'sorted'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which class is used in Spring WebFlux to handle HTTP requests reactively?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Mono'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Flux'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'RouterFunction'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'WebClient'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the main difference between Mono and Flux in Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Mono is used for zero or one element, while Flux is used for zero or many elements.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Mono is used for synchronous processing, while Flux is used for asynchronous processing.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Mono is used for single-threaded processing, while Flux is used for multi-threaded processing.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Mono is used for blocking operations, while Flux is used for non-blocking operations.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used to merge two Flux streams in Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'merge()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'concat()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'zip()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'combine()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, `
+        Mono.just("Hello").flatMap(s -> Mono.just(s + " World"));
+          `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combines "Hello" and "World" into a single Mono.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "Hello" to "World" in a Mono stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a stream that emits "Hello" and "World" separately.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits "Hello World".'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the '],
+          [QuizMarkdownType.INLINE_CODE, 'flatMap'],
+          [QuizMarkdownType.TEXT, ' operator in reactive programming with Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To transform each element emitted by a Publisher into a Publisher and then flatten these Publishers into a single Publisher.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To combine multiple Publishers into a single Publisher without transforming the elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To filter elements emitted by a Publisher based on a predicate.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To map each element emitted by a Publisher to another element.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of '],
+          [QuizMarkdownType.INLINE_CODE, 'flatMap'],
+          [QuizMarkdownType.TEXT, ' in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Flux.just("a", "b", "c").flatMap(s -> Flux.just(s.toUpperCase()));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It converts each string to uppercase and flattens the result into a single Flux.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It converts each string to lowercase and combines the result into a single Mono.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters out elements that are not uppercase.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It concatenates the strings and returns a single Mono.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the difference between '],
+          [QuizMarkdownType.INLINE_CODE, 'map'],
+          [QuizMarkdownType.TEXT, ' and '],
+          [QuizMarkdownType.INLINE_CODE, 'flatMap'],
+          [QuizMarkdownType.TEXT, ' in Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map transforms each element to another element, while flatMap transforms each element to a Publisher and flattens them into a single Publisher.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map is used for synchronous operations, while flatMap is used for asynchronous operations.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map filters elements based on a predicate, while flatMap combines multiple Publishers.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'map is used for blocking operations, while flatMap is used for non-blocking operations.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which annotation is used to define a WebFlux controller in Spring?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '@RestController'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '@WebFluxController'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '@ReactiveController'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '@FluxController'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In Spring WebFlux, which method is used to handle errors in a reactive stream?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'onErrorResume()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'doOnError()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'handleError()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'catchError()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is true about the backpressure mechanism in Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It controls the flow of data to prevent overwhelming the receiver.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It increases the rate of data production.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is used to buffer data streams.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is only applicable to synchronous processing.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the function of the WebClient class in Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To make non-blocking HTTP requests.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To handle WebSocket connections.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To create reactive data streams.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To configure reactive routes.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method would you use to convert a Flux to a Mono in Spring WebFlux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collectList()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'reduce()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collect()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'concat()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which keyword is used to define a class in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'class'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'define'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'public'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'new'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the default value of a boolean variable in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'false'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'true'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'null'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method must be implemented by all threads in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'run()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'start()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'execute()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'init()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you declare an abstract method in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'abstract void methodName();'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'void methodName();'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'abstract methodName();'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'abstract methodName() {}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the size of an int variable in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '32 bits'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '64 bits'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '16 bits'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '8 bits'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to start a thread in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'start()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'run()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'init()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'execute()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which package contains the Random class in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'java.util'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'java.lang'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'java.io'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'java.math'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following code snippet?'],
+          [QuizMarkdownType.CODE, `
+        System.out.println(10 + 20 + "30")
+          `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '3030'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '102030'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '30'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '60'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is not a valid keyword in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'interface'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'string'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'extends'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'implements'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is called to release resources in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'close()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'release()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'shutdown()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'terminate()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'What is a marker interface in Java?']],
         answers: [
           {
@@ -31614,6 +32798,39 @@ const quizData: QuizData = {
   'comptia-network-plus': {
     name: 'CompTIA Network+',
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula for finding the number of possible host addresses in an IPv4 CIDR block?'],
+          [QuizMarkdownType.KATEX, '2^{(32 - \\text{prefix length})} - 2'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(\\text{prefix length})} - 2'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(32 - \\text{prefix length})} - 2'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(32 - \\text{host bits})} - 2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2^{(24 - \\text{prefix length})} - 2'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'Octets in an IPv4 address are written in'],
@@ -43201,7 +44418,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Add a temporary rule to the security group to allow inbound traffic on port 22 from the developer’s home IP address and remove it after use.',
+                'Allow inbound traffic on port 22 from the developer’s home IP address.',
               ],
             ],
           },
@@ -44182,6 +45399,199 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (0, 0, 0, 0) and (1, 2, 2, 1)?'],
+          [QuizMarkdownType.KATEX, '(x2​−x1​)2+(y2​−y1​)2+⋯+(z2​−z1​)2'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{6}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{8}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{9}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{10}'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (3, 2) and (4, 3)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '4'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '3'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '1'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (2, 3) and (6, 9)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '10'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (1, 2, 3) and (4, 6, 8)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{27}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{29}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{35}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{50}'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (1, 1) and (4, 5)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '3'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (1, 1, 1, 1, 1) and (2, 3, 4, 5, 6)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{25}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{30}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{35}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{55}'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
           [
             QuizMarkdownType.TEXT,
             'If all uppercase vowels in the English language were representative of pictographic matrices, how many would be singular matrices?',
@@ -44243,8 +45653,8 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [1, 2], [3, 4] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}',
               ],
             ],
           },
@@ -44252,8 +45662,8 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [19, 22], [43, 50] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 19 & 22 \\\\ 43 & 50 \\end{pmatrix}',
               ],
             ],
           },
@@ -44261,8 +45671,8 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [5, 6], [7, 8] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}',
               ],
             ],
           },
@@ -44270,42 +45680,9 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [26, 30], [38, 46] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 26 & 30 \\\\ 38 & 46 \\end{pmatrix}',
               ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the formula for finding the number of possible host addresses in an IPv4 CIDR block?'],
-          [QuizMarkdownType.KATEX, '2^{(32 - \\text{prefix length})} - 2'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '2^{(\\text{prefix length})} - 2'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '2^{(32 - \\text{prefix length})} - 2'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '2^{(32 - \\text{host bits})} - 2'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '2^{(24 - \\text{prefix length})} - 2'],
             ],
           },
         ],
@@ -44365,6 +45742,57 @@ const quizData: QuizData = {
           },
         ],
         correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The inverse of the inverse shown is',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 1 & 0 \\\\ 1 & 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
       },
       {
         question: [
@@ -44499,7 +45927,7 @@ const quizData: QuizData = {
       {
         question: [
           [QuizMarkdownType.TEXT, 'Given the set of coordinates'],
-          [QuizMarkdownType.INLINE_KATEX, '\\((x, y)\\)'],
+          [QuizMarkdownType.INLINE_KATEX, '(x, y)'],
           [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the y-coordinates?'],
         ],
         katex: `
@@ -44541,7 +45969,9 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the x-coordinates?'],
+          [QuizMarkdownType.TEXT, 'Given the set of coordinates'],
+          [QuizMarkdownType.INLINE_KATEX, '(x, y)'],
+          [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the y-coordinates?'],
         ],
         katex: `
           \\begin{pmatrix}
@@ -45042,12 +46472,12 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Answers 1 and 4',
+                'Answers 2 and 4',
               ],
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '4',
       },
       {
         question: [
@@ -45535,6 +46965,249 @@ const quizData: QuizData = {
               [
                 QuizMarkdownType.TEXT,
                 '1',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'What is the dot product of the following vectors?',
+          ],
+        ],
+        katex: `
+          \\mathbf{a} = \\begin{pmatrix}
+          3 \\\\
+          0
+          \\end{pmatrix}
+          \\quad and \\quad
+          \\mathbf{b} = \\begin{pmatrix}
+          0 \\\\
+          4
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '4',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '12',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '3',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '0',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Two vectors represent the crop yields of a wheat farm and a corn farm',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            `
+          \\mathbf{wheat} = \\begin{pmatrix}
+          3000 \\\\
+          0 \\\\
+          4000 \\\\
+          0
+          \\end{pmatrix}
+          \\quad and \\quad
+          \\mathbf{corn} = \\begin{pmatrix}
+          0 \\\\
+          5000 \\\\
+          0 \\\\
+          4000
+          \\end{pmatrix}
+            `,
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'Which of the following is true?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'If multiplied together, the two vectors would have a dot product of 0',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'If multiplied together, the two vectors would have a dot product of 31000000',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'If multiplied together, the two vectors would have a dot product of 12000000',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'If multiplied together, the two vectors would have a dot product of 24000000',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'What is the dot product of the following vectors?',
+          ],
+        ],
+        katex: `
+          \\mathbf{a} = \\begin{pmatrix}
+          3 \\\\
+          2
+          \\end{pmatrix}
+          \\quad and \\quad
+          \\mathbf{b} = \\begin{pmatrix}
+          2 \\\\
+          4
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '4',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '14',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '3',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '0',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'What is the dot product of the following vectors?',
+          ],
+        ],
+        katex: `
+          \\mathbf{a} = \\begin{pmatrix}
+          3 \\\\
+          0
+          \\end{pmatrix}
+          \\quad and \\quad
+          \\mathbf{b} = \\begin{pmatrix}
+          4 \\\\
+          0
+          \\end{pmatrix}
+        `,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '4',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '12',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '3',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '0',
               ],
             ],
           },
@@ -46235,7 +47908,7 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
-            'If a 2x2 matrix A has elements a, b, c, d, what is the formula for its inverse?',
+            'If a 2x2 matrix \\( A \\) has elements \\( a, b, c, d \\), what is the formula for its inverse?',
           ],
         ],
         answers: [
@@ -46243,8 +47916,8 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '1/(ad - bc) * [d, -b; -c, a]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}',
               ],
             ],
           },
@@ -46252,8 +47925,8 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '1/(ad + bc) * [d, b; c, a]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\frac{1}{ad + bc} \\begin{pmatrix} d & b \\\\ c & a \\end{pmatrix}',
               ],
             ],
           },
@@ -46261,8 +47934,8 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '1/(ab - cd) * [d, -b; -c, a]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\frac{1}{ab - cd} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}',
               ],
             ],
           },
@@ -46270,8 +47943,8 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '1/(ab + cd) * [d, b; c, a]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\frac{1}{ab + cd} \\begin{pmatrix} d & b \\\\ c & a \\end{pmatrix}',
               ],
             ],
           },
@@ -46380,7 +48053,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Check if all elements are non-zero',
+                'Calculate its determinant; if it is zero, the matrix is invertible',
               ],
             ],
           },
@@ -48072,8 +49745,8 @@ const quizData: QuizData = {
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [1, 2], [3, 4] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}',
               ],
             ],
           },
@@ -48081,8 +49754,8 @@ const quizData: QuizData = {
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [19, 22], [43, 50] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 19 & 22 \\\\ 43 & 50 \\end{pmatrix}',
               ],
             ],
           },
@@ -48090,8 +49763,8 @@ const quizData: QuizData = {
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [5, 6], [7, 8] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}',
               ],
             ],
           },
@@ -48099,8 +49772,8 @@ const quizData: QuizData = {
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
-                '[ [26, 30], [38, 46] ]',
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 26 & 30 \\\\ 38 & 46 \\end{pmatrix}',
               ],
             ],
           },
@@ -48128,6 +49801,3047 @@ const quizData: QuizData = {
       //   ],
       //   correctAnswer: '1',
       // },
+    ],
+  },
+  'shell-scripting': {
+    name: 'Shell Scripting',
+    questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to display the last few lines of a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tail'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'last'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'end'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'bottom'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to search for a pattern in a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'grep'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'search'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'find'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'pattern'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to display the manual of other commands?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'man'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'manual'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'help'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'info'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you display the running processes in Linux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'process'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'showproc'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'proc'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you display the memory usage in Linux?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'free'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'mem'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'memory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'usage'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to clear the terminal screen?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'clear'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cls'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'clean'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'erase'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to kill a process by its process ID?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'kill'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'terminate'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'end'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'stop'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to display disk usage?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'du'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'df'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'disk'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'usage'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you change the ownership of a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'chown'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'chmod'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'chperm'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'owner'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to compress files?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'gzip'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'compress'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'zip'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'pack'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you view the manual page for a command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'man'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'help'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'info'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'guide'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to terminate a process by PID?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'kill'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'terminate'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'end'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'stop'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      { question: [[QuizMarkdownType.TEXT, 'How do you display a list of running processes?']], answers: [{ id: '0', answer: [[QuizMarkdownType.TEXT, 'ps']] }, { id: '1', answer: [[QuizMarkdownType.TEXT, 'top']] }, { id: '2', answer: [[QuizMarkdownType.TEXT, 'processes']] }, { id: '3', answer: [[QuizMarkdownType.TEXT, 'jobs']] }], correctAnswer: '0' },
+      { question: [[QuizMarkdownType.TEXT, 'How do you change the permissions of a file?']], answers: [{ id: '0', answer: [[QuizMarkdownType.TEXT, 'chmod']] }, { id: '1', answer: [[QuizMarkdownType.TEXT, 'chperm']] }, { id: '2', answer: [[QuizMarkdownType.TEXT, 'perm']] }, { id: '3', answer: [[QuizMarkdownType.TEXT, 'chown']] }], correctAnswer: '0' },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to display the last 10 lines of a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tail'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'last'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'end'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'bottom'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you display the first 10 lines of a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'head'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'first'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'top'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'start'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to search for a pattern in a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'grep'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'find'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'search'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'locate'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the command'],
+          [QuizMarkdownType.INLINE_CODE, 'echo'],
+          [QuizMarkdownType.TEXT, 'do in the shell?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Displays a line of text'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Displays the current date'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Displays the current directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Displays the contents of a file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to move or rename files?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'mv'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'move'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'rename'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'transfer'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you copy files in the shell?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cp'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'copy'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cfile'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'duplicate'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to remove a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'rm'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'delete'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'erase'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'remove'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you display the current working directory?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'pwd'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cwd'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'dir'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'where'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to create a new directory?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'mkdir'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'createdir'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'md'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'newdir'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you change directories in the shell?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cd'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'chdir'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'move'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'goto'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command is used to display the contents of a file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cat'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'show'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'view'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'display'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What command is used to list files and directories in a directory?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'dir'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'files'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ "$#" != 1 ]; then
+          echo "Usage: $0 <image_name> [-e]"
+          exit 1
+      fi
+
+      kubectl exec -it $1 -- /bin/sh
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To execute an interactive shell in a Kubernetes pod'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To display the usage information for a Kubernetes pod'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To check if the specified image name is valid'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To terminate a specified Kubernetes pod'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The purpose of the bash script below is'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ "$#" -lt 1 ]; then
+          echo "Usage: $0 <image_name> [--no-cache] [BUILD_ARG1=VALUE1] [BUILD_ARG2=VALUE2] ..."
+          exit 1
+      fi
+
+      docker kill $1 && docker rm $1
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To build a Docker image with optional build arguments'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To display the usage information for Docker image building'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To create a Docker container from the specified image'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To stop and remove a Docker container by its name'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ -z "$1" ]; then
+          echo "Please provide a directory"
+          exit 1
+      fi
+
+      ls -l "$1"
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To list the contents of the provided directory in long format'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To create a new directory with the specified name'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To check if the provided directory exists'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To delete the specified directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for user in \`cat users.txt\`; do
+          userdel -r "$user"
+      done
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all users listed in the users.txt file and their home directories'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates new users listed in the users.txt file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays all users listed in the users.txt file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds all users listed in the users.txt file to a group'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ -z "$1" ]; then
+          echo "No file supplied"
+          exit 1
+      fi
+
+      wc -l "$1"
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of lines in the supplied file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays the contents of the supplied file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes the supplied file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies the supplied file to a new location'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for file in *.txt; do
+          mv "$file" "$\{file%.txt}.bak"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Renames all .txt files to .bak files in the current directory'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies all .txt files to .bak files in the current directory'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all .txt files in the current directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a backup of all .txt files in a new directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+        echo "Hello World" | awk '{print toupper($0)}'
+          `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'HELLO WORLD'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'hello world'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hello World'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'hELLO wORLD'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      while IFS= read -r line; do
+          echo "Processing: $line"
+      done < urls.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Reads each line from urls.txt and prints a processing message for each line'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes each line from the terminal to urls.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends each line from urls.txt to a new file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of lines in urls.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+      grep -r "main" /home/user`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Searches for the string "main" recursively in /home/user'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Searches for the string "main" only in /home/user'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Replaces the string "main" with an empty string in /home/user'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the occurrences of the string "main" in /home/user'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for i in {1..5}; do
+          echo "Welcome $i times"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Welcome" followed by a number from 1 to 5'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Welcome" five times'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Welcome" once'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints numbers from 1 to 5'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo $((2 + 3 * 4))`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '14'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '20'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '12'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '24'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ -f "$1" ]; then
+          echo "File exists."
+      else
+          echo "File does not exist."
+      fi`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Checks if the provided file exists and prints a message accordingly'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new file with the specified name'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes the specified file if it exists'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists the contents of the specified file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo "Hello World" | cut -d' ' -f1`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hello'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'World'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hello World'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'HelloWorld'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      log_file="system.log"
+
+      df -h > "$log_file"
+      free -h >> "$log_file"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Logs disk usage and memory usage to a file named system.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays disk usage and memory usage on the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes old log files and creates a new log file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new user log file and appends disk usage and memory usage to it'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      echo "Directory to backup: "
+      read dir
+      tar -czvf backup.tar.gz "$dir"
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for a directory and creates a compressed backup'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for a directory and lists its contents'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for a directory and creates a backup of it'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for a directory and moves it to a new location'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      while true; do
+          echo "Press CTRL+C to stop"
+          sleep 1
+      done
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Continuously prints a message every second until interrupted'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints a message once and exits'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints a message every second and stops after 10 iterations'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints a message every second and stops after 1 minute'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      log_file="system.log"
+
+      df -h > "$log_file"
+      free -h >> "$log_file"
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Logs disk usage and memory usage to a file named system.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays disk usage and memory usage on the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes old log files and creates a new log file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new user log file and appends disk usage and memory usage to it'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for file in *.txt; do
+          mv "$file" "$\{file%.txt}.bak"
+      done
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Renames all .txt files to .bak files in the current directory'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies all .txt files to .bak files in the current directory'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all .txt files in the current directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a backup of all .txt files in a new directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      while IFS= read -r line; do
+          echo "$line"
+      done < input.txt
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Reads each line from input.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes each line from the terminal to input.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends each line from input.txt to a new file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of lines in input.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of running the following script?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      echo "Enter your name: "
+      read name
+      echo "Hello, $name!"
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for their name and then greets them'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for their name and saves it to a file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints a static greeting message'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays a list of user names'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      find /var/log -type f -name "*.log" -exec gzip {} \\;
+      `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Compresses all .log files in /var/log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all .log files in the /var/log directory'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Moves all .log files to a backup directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists all .log files in the /var/log directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        for file in \`ls *.log\`; do
+            rm "$file"
+        done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all .log files in the current directory'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists all .log files in the current directory'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies all .log files to a backup directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Renames all .log files in the current directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        echo "Enter your age: "
+        read age
+
+        if [ "$age" -ge 18 ]; then
+            echo "You are an adult."
+        else
+            echo "You are a minor."
+        fi
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for their age and indicates if they are an adult or a minor'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for their age and calculates their birth year'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for their age and saves it to a file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prompts the user for their age and compares it to a predefined value'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        while IFS= read -r line; do
+            echo "Processing: $line"
+        done < urls.txt
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Reads each line from urls.txt and prints a processing message for each line'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes each line from the terminal to urls.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends each line from urls.txt to a new file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of lines in urls.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        mkdir -p /backup
+
+        for file in /home/user/*; do
+            cp "$file" /backup/
+        done
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a backup directory and copies all files from /home/user to /backup'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Moves all files from /home/user to /backup'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all files in /backup'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists all files in /home/user and /backup'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        if [ -f "$1" ]; then
+            echo "File exists."
+        else
+            echo "File does not exist."
+        fi
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Checks if the provided file exists and prints a message accordingly'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new file with the specified name'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes the specified file if it exists'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists the contents of the specified file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used for string comparison in Bash to check if two strings are equal?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '=='],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '='],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '==='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'eq'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to check if a file exists?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-f'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-e'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-d'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-z'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What operator is used in Bash for arithmetic addition?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '+'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '++'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '+='],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to negate a condition?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '!'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '!='],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '!=='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'not'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to check if a variable is greater than a number?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-gt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '>'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '>='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-ge'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to perform a logical AND operation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '&&'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'and'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '||'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '&'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to concatenate two strings?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '+'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'concat'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, ''],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to check if a string is not equal to another string?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '!='],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '!=='],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ne'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '<>'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to check if a variable is less than a number?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-lt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '<'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '<='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-le'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to check if a file is a directory?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-d'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-f'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-e'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-s'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to perform a bitwise OR operation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '|'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '||'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '&'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '^'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to check if a file is writable?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-w'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-r'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-x'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-e'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to perform a logical OR operation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '||'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '|'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '&&'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'or'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to check if a file is readable?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-r'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-w'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-x'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-e'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator is used in Bash to check if a file is executable?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-x'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-r'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-w'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-f'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to perform modulo operation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '%'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'mod'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '%%'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '/'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to compare if a variable is less than or equal to a number?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-le'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '<'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '<='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-lt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to check if a variable is not null?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-n'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-z'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '!='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-eq'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to check if a variable is null?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-z'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-n'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '=='],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which operator in Bash is used to compare if a variable is greater than or equal to a number?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-ge'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '>'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '>='],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '-gt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo $((5 & 3))`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '3'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '5'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '0'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for i in {1..3}; do
+          echo "Iteration $i"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Iteration 1", "Iteration 2", "Iteration 3"'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Iteration 1" three times'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Iteration 3" three times'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Iteration" three times'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for file in $(find . -type f -name "*.bak"); do
+          mv "$file" "\${file%.bak}.old"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Renames all .bak files to .old files in the current directory and subdirectories'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes all .bak files in the current directory and subdirectories'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies all .bak files to a new directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints the names of all .bak files in the current directory and subdirectories'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo $(expr 4 + 2 * 3)`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '10'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '14'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '12'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '24'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for ((i=1; i<=5; i++)); do
+          touch "file$i.txt"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates five empty files named file1.txt, file2.txt, file3.txt, file4.txt, file5.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes five files named file1.txt, file2.txt, file3.txt, file4.txt, file5.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Renames five files to file1.txt, file2.txt, file3.txt, file4.txt, file5.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies five files to the current directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+      ls -l | grep "^d"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists only the directories in the current directory'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists all files in the current directory'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists all hidden files in the current directory'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists all files and directories in the current directory'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo $((10 >> 1))`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '5'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '20'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      while IFS=, read -r name age; do
+          echo "$name is $age years old"
+      done < people.csv`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Reads names and ages from people.csv and prints them'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes names and ages to people.csv'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends names and ages to a new file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes the content of people.csv'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo $((7 ^ 3))`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '4'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '10'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '21'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '5'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for ((i=1; i<=3; i++)); do
+          for ((j=1; j<=2; j++)); do
+              echo "i=$i, j=$j"
+          done
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints combinations of i and j where i ranges from 1 to 3 and j ranges from 1 to 2'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints combinations of i and j where both range from 1 to 3'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints combinations of i and j where i ranges from 1 to 2 and j ranges from 1 to 3'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints i and j values where both range from 1 to 2'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        while read -r line; do
+            echo "Processing $line"
+        done < input.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Reads each line from input.txt and prints "Processing <line>"'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes "Processing <line>" to input.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes each line from input.txt after printing'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends "Processing <line>" to input.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+        echo "scale=2; 10 / 3" | bc`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '3.33'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '3.3'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '3'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '3.333333'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+        ls -al > filelist.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Saves the detailed list of files and directories to filelist.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the detailed list of files and directories to filelist.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints the detailed list of files and directories'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays the content of filelist.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+        #!/bin/bash
+
+        function greet() {
+            echo "Hello, $1"
+        }
+
+        greet "World"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Hello, World"'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Hello, $1"'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Hello, "'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "World"'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+        echo "Hello World" | awk '{print toupper($0)}'`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'HELLO WORLD'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'hello world'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hello World'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'HELLOWORLD'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+  },
+  // https://www.google.com/search?sca_esv=4ce04de13f7e18f6&sxsrf=ADLYWII1iTpZHmuNg5Q0ZkCuaaZF-lJHyw:1717784095817&q=%D0%BD%D0%B0+%D0%B4%D0%B8%D0%B0%D0%B3%D0%BE%D0%BD%D0%B0%D0%BB%D0%B8&uds=ADvngMjUXgvBgt_rBpnNYEl3NfSff0qvnJ7zYe5a1uwoRWmk6v-6UySfSLMVq3CG8Bfzu4H4-1drA1P-pjmDK0CtVdD1DZWcCi15vn2xrYArE2sAlLOJLxWF8QB6ijiAO55yCeIHqayIp36tsI4n8A5GZczXLWCjivis1lAgkGTCnBfU3J9CjV4r23Y4Yf_1cpoDEW48R0ucs50xrcZ1gRyJzJJq09nHqJfy9XONCeK-lkkke3l2E9OUCnoA1It3mF5FvSVBn3JQweiBPF8ZfWgawwfNEOxfax0zjEiLe71u7PVptgNzkj61e4ddhlCRmh_ZeJGw53DTRNIYkYp2WUSc65196CtvzEMOUPShZmiWdBBBjZHMZmYUlL_NNoA1UN0izKFEogwBwEwAioVHKFRrVrNW1bpBmcBQrMfjF7SS28luAc9vDGk&udm=2&prmd=ivsnmbtz&sa=X&ved=2ahUKEwjJydO2jMqGAxWev4kEHZ5pBg4QtKgLegQIFhAB&biw=2560&bih=1302&dpr=1#vhid=kFmwnFr1_EWHdM&vssid=mosaic
+  geometry: {
+    name: 'Geometry',
+    questions: [
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The formula',
+          ],
+          [
+            QuizMarkdownType.INLINE_KATEX,
+            'C^2 = A^2 + B^2',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'is used to find',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [[QuizMarkdownType.TEXT, 'The diagonal of a rectangle']],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [[QuizMarkdownType.TEXT, 'The diagonal of a right triangle']],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [[QuizMarkdownType.TEXT, 'The Pythagorean theorem']],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [[QuizMarkdownType.TEXT, 'All of the above']],
+            order: 3,
+          },
+        ],
+        correctAnswer: '3',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula to calculate Euclidean distance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + \\cdots + (z_2 - z_1)^2}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + \\cdots + (z_1 - z_2)^2}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
     ],
   },
   test: {
