@@ -1,7 +1,7 @@
 import quizData from '@/lib/quiz-data';
 import { ReactNode } from 'react';
 
-interface RootLayoutProps {
+interface SectionLayoutProps {
   children: ReactNode;
 }
 
@@ -23,7 +23,7 @@ export const generateMetadata = ({
 
 const sectionLayout = ({
   children,
-}: RootLayoutProps) => (
+}: SectionLayoutProps) => (
   children
 );
 

@@ -13,7 +13,7 @@ const Logo = () => {
       <Image
         src={theme === 'dark' ? '/navbar-logo-dark.png' : '/navbar-logo.png'}
         alt="Logo"
-        width={96}
+        width={130}
         height={40}
       />
     </NextLink>

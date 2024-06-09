@@ -5,7 +5,9 @@ const Footer = () => (
     <Separator />
     <div className="container flex justify-center">
       <span className="mt-6 opacity-60">
-        &copy;QuizTime
+        &copy;
+        {' '}
+        QuizGPT
       </span>
     </div>
   </footer>

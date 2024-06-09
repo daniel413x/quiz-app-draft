@@ -1,18 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import {
+  Ubuntu,
+} from 'next/font/google';
 import './globals.css';
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import ThemeProvider from '@/components/providers/ThemeProvider';
-import Navbar from './(root)/_components/Navbar';
-import Footer from './(root)/_components/Footer';
+import Navbar from './_components/Navbar';
+import Footer from './_components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+// fonts used are Roboto, Roboto Condensed, Ubuntu
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Quiz App',
-    template: '%s | Quiz App',
+    default: 'QuizGPT',
+    template: '%s | QuizGPT',
   },
   icons: {
     icon: [
@@ -33,7 +36,7 @@ const rootLayout = ({
   children,
 }: RootLayoutProps) => (
   <html lang="en" suppressHydrationWarning>
-    <body className={cn(inter.className, 'flex flex-col dark:bg-gray-900')}>
+    <body className={cn(ubuntu.className, 'flex flex-col dark:bg-gray-900')}>
       <ThemeProvider
         attribute="class"
         defaultTheme="light"

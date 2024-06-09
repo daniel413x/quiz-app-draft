@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-interface RootLayoutProps {
+interface QuizLayoutProps {
   children: ReactNode;
 }
 
@@ -8,10 +8,10 @@ export const metadata = {
   title: 'Quiz',
 };
 
-const sectionLayout = ({
+const QuizLayout = ({
   children,
-}: RootLayoutProps) => (
+}: QuizLayoutProps) => (
   children
 );
 
-export default sectionLayout;
+export default QuizLayout;
