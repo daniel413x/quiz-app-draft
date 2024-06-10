@@ -21,7 +21,7 @@ const SocialMediaIcon = ({
   url,
 }: SocialMediaIconProps) => (
   <div className="relative flex flex-col">
-    <SocialIcon as="div" style={{ position: 'absolute' }} className=" z-10 -left-5" url={url} />
+    <SocialIcon as="div" style={{ position: 'absolute' }} className="scale-75 z-10 -left-5" url={url} />
     <Link href="/" className="flex gap-1 items-center justify-center py-3 border shadow-inner hover:shadow-md hover:underline">
       <Link2Icon size={20} />
       {' '}
@@ -61,15 +61,15 @@ const SecondRow = () => {
         <Col
           h3="Browse quizzes for"
         >
-          <div className="flex flex-col">
-            <ul className="flex flex-wrap justify-evenly gap-2">
+          <div className="flex flex-col items-center">
+            <ul className="flex flex-wrap justify-evenly gap-2 max-w-[400px] lg:max-w-[unset]">
               {routes.map((r) => (
-                <li>
-                  <div>
-                    <Link className="text-sm border-l-4 pl-2 hover:underline hover:border-l-purple-500" href={r.href}>
+                <li key={r.href}>
+                  <Link className="py-2 group" href={r.href}>
+                    <span className="text-sm border-l-4 pl-2 group-hover:underline group-hover:border-l-purple-500">
                       {r.name}
-                    </Link>
-                  </div>
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -88,7 +88,7 @@ const SecondRow = () => {
         <Col
           h3="Follow us"
         >
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-2">
+          <div className="ps-3 grid grid-cols-1 xl:grid-cols-3 gap-y-2 gap-x-5">
             <SocialMediaIcon
               url="www.instagram.com"
               name="Instagram"

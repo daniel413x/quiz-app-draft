@@ -25,6 +25,7 @@ import trafficSignalAhead from '@/public/traffic-signal-ahead.png';
 import yieldAhead from '@/public/yield-ahead.png';
 import dropoutRegularization from '@/public/dropout-regularization.png';
 import identityMatrix from '@/public/identity-matrix.png';
+import classificationModel from '@/public/classification-model-1.png';
 
 export enum QuizMarkdownType {
   INLINE_KATEX, KATEX, INLINE_CODE, CODE, TEXT, IMAGE,
@@ -15598,6 +15599,77 @@ const quizData: QuizData = {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Why might batch normalization reduce the need for dropout in some networks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because it helps in regularizing the model and reducing overfitting']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because it directly increases the model complexity but decreases the bias']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because it eliminates the need for activation functions by abstracting linearity']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because it normalizes the input data by filtering out falsy objects']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What additional parameters are introduced in a layer when batch normalization is applied?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Gamma and Beta parameters for scaling and shifting']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Alpha and Omega parameters for gradient adjustment']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Delta and Theta parameters for weight regularization']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Mu and Sigma parameters for dropout']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'As of 2024, the most widely used machine learning library is',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'PyTorch',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Keras',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TensorFlow',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Theano',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
         [
           QuizMarkdownType.TEXT,
           'What is the main advantage of using the Keras library?',
@@ -18685,6 +18757,17 @@ const quizData: QuizData = {
     name: 'Machine Learning',
     questions: [
       {
+        question: [[QuizMarkdownType.TEXT, 'Which kind of machine learning model is illustrated below?']],
+        image: classificationModel,
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Classification model']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Text generation model']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Code generation model']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Image generation model']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'Batch normalization helps stabilize and accelerate the training process']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'By normalizing the activations']] },
@@ -18945,6 +19028,16 @@ const quizData: QuizData = {
         correctAnswer: '0',
       },
       {
+        question: [[QuizMarkdownType.TEXT, 'In a generic training dataset']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'There is as much training data as there is validation data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'There is as much test data as there is validation data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'There is as much training data as there is test data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'There is less training data than there is validation data']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'What is a common ratio for splitting the dataset into training, validation, and test sets?']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, '70% training, 15% validation, 15% test']] },
@@ -18994,13 +19087,110 @@ const quizData: QuizData = {
         ],
         correctAnswer: '0',
       },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A machine learning model is overfitting the training data. Which technique can help reduce variance and improve generalization?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Applying regularization techniques such as L1 or L2 regularization']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increasing the learning rate']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using fewer training examples']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Removing data preprocessing steps']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a common method to reduce variance in a machine learning model that uses decision trees?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using ensemble methods like Random Forest or Gradient Boosting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using regularization techniques like pruning or limiting tree depth']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using cross-validation techniques like k-fold cross-validation or bootstrapping']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using feature engineering techniques like interaction terms or polynomial features']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following strategies can help mitigate high variance in a neural network?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Implementing dropout during training']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increasing the complexity of the neural network']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Removing early stopping']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using a smaller training dataset']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary role of the loss gradient in training a machine learning model?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To indicate the direction and rate of change of the loss function']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To measure the accuracy of the model’s predictions in the validation set']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To determine the size of the training dataset']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To decide the model architecture']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'As training progresses and the loss function is successfully reduced, what generally happens to the magnitude of the loss gradient?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The magnitude of the loss gradient generally decreases']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The magnitude of the loss gradient generally increases']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The magnitude of the loss gradient remains constant']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The magnitude of the loss gradient oscillates randomly']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why does the magnitude of the loss gradient typically decrease as the model parameters approach their optimal values?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because the loss function gets smaller']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because the model is learning faster']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because the training time is concluding']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because the learning rate is increasing']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the relationship between the loss gradient and the weight updates in gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The weight updates are made in the direction opposite to the gradient of the loss function']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The weight updates are made in the same direction as the gradient of the loss function']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The weight updates are independent of the gradient of the loss function']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The weight updates are made randomly without considering the gradient']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a well-performing training process, how does the behavior of the loss gradient signal the nearing of convergence?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The loss gradient becomes very small, indicating minimal changes in the loss function value']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The loss gradient becomes very large, indicating significant changes in the loss function value']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The loss gradient remains constant, indicating stable changes in the loss function value']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The loss gradient oscillates randomly, indicating unpredictable changes in the loss function value']] },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [[QuizMarkdownType.TEXT, 'In which phase of model development is the validation set primarily used?']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'During the training phase to tune hyperparameters and evaluate model performance']] },
-          { id: '1', answer: [[QuizMarkdownType.TEXT, 'During the data collection phase']] },
-          { id: '2', answer: [[QuizMarkdownType.TEXT, 'During the feature engineering phase']] },
-          { id: '3', answer: [[QuizMarkdownType.TEXT, 'During the final model deployment phase']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'During the data collection phase to filter out objects with falsy values']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'During the feature engineering phase to warn developers of common errors']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'During the final model deployment phase as a benchmark performance test']] },
         ],
         correctAnswer: '0',
       },
@@ -19875,6 +20065,220 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
+            'In machine learning, features are',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The individual measurable properties or characteristics of the phenomenon being observed',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The input and output of functions designed by machine learning engineers according to the task',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Representative of neural nodes of the human brain in that they interface with the user to solve tasks',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Representative of computer architecture in that they process and output data as bytes',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'A machine learning model is being engineered to predict stock market prices. Which of the following correctly defines a feature?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The hardware involved in training and running the model',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The model\'s functions programmed by software engineers',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Social media sentiment on upcoming presidential elections',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Major machine learning paradigms such as generative pre-trained transformers (GPTs)',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can file extensions be incorporated into a machine learning model for images?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By using methods like one-hot encoding']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By converting them into numerical features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By ignoring them during preprocessing']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By using them as primary features']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In neural networks, features, semantically, mean'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '"Attributes"']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '"Layers"']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '"Neurons"']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '"Hardware"']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following attributes provides little value to a deep learning model for generating images?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The modification date']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The image resolution']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The file size']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The image\'s color depth']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In an image, a feature relevant to a machine learning model could be'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Pixels']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Artistic style']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Metadata']], order: 2 },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'All of the above']], order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In machine learning, "neurons" (or nodes)'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Compose what are referred to as layers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Compose what are referred to as features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are a synonym for "features"']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Are the model\'s hardware']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In machine learning, "layers"'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Consist of neurons (nodes)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Consist of features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are a synonym for "features"']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Are hardware-side']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In machine learning, "layers"'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Take neurons (nodes) as input']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Take features as input']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are a synonym for "features"']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Are hardware-side']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In machine learning, "layers"'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Are closely tied to the model\'s engineering paradigms']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Take "features" as input and update weights based on error']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are a synonym for "features" and handle input and output']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Provide context to make the most accurate prediction']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In machine learning, "features"'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Are closely tied to the model\'s engineering paradigms']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increase the accuracy of the model\'s output']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are the actual layers that handle input and output']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Provide context to make the most accurate prediction']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following defines a set of features for a machine learning model that generates predictions on the stock market?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The implementation details of the model\'s software']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Market sentiment, inflation, interest rates']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Layers for handling input and output']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The hardware for training and running the model']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'A sentiment analysis model is struggling to generalize well on new data, possibly due to the high dimensionality of the feature space. What action should be taken?',
           ],
         ],
@@ -19969,6 +20373,92 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
+            'In a scenario where a model is being trainied and the loss function is reduced successfully with each iteration, what should happen to the loss gradient?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'It should be increasing',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'It should be decreasing',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'It should be negative',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'It should be neither increasing nor decreasing',
+              ],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Consider the training phase for an arbitrary model where the weights are reducing the loss function. When the model is close to convergence,',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The gradients become very small, and the loss function value changes very little with each iteration',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The gradients become very large, and the loss function value changes dramatically with each iteration',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The gradients stay constant',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'A neural network for speech recognition has too many features, leading to slow training and overfitting. What should be done?',
           ],
         ],
@@ -19978,7 +20468,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Decrease the dimensionality by reducing the number of input features',
+                'Take steps to decrease the dimensionality',
               ],
             ],
           },
@@ -19987,7 +20477,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increase the dimensionality by adding more features',
+                'Take steps to increase the dimensionality',
               ],
             ],
           },
@@ -19996,7 +20486,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increase the learning rate',
+                'Take steps to increase the learning rate',
               ],
             ],
           },
@@ -20005,7 +20495,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increase the batch size',
+                'Take steps to increase the batch size',
               ],
             ],
           },
@@ -22219,6 +22709,57 @@ const quizData: QuizData = {
         question: [
           [
             QuizMarkdownType.TEXT,
+            'Which technique can help reduce high variance in a machine learning model?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Using more training data',
+              ],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Using dropout regularization',
+              ],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Reducing the number of features',
+              ],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Answers 1 and 2',
+              ],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'What happens to bias and variance as the model complexity increases?',
           ],
         ],
@@ -23262,7 +23803,7 @@ const quizData: QuizData = {
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'To introduce non-linearity into the model',
+                'To introduce non-linearity',
               ],
             ],
           },
@@ -45400,7 +45941,6 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (0, 0, 0, 0) and (1, 2, 2, 1)?'],
-          [QuizMarkdownType.KATEX, '(x2​−x1​)2+(y2​−y1​)2+⋯+(z2​−z1​)2'],
         ],
         answers: [
           {
@@ -45492,7 +46032,7 @@ List<String> upperCaseNames = names.stream()
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '2',
       },
       {
         question: [
@@ -45798,6 +46338,392 @@ List<String> upperCaseNames = names.stream()
         question: [
           [
             QuizMarkdownType.TEXT,
+            'What is the result of vector',
+          ],
+          [
+            QuizMarkdownType.INLINE_KATEX,
+            'v = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'applied to matrix',
+          ],
+          [
+            QuizMarkdownType.INLINE_KATEX,
+            'A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'What is the result of the following operation?',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            'Av = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '\\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix}',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following matrices has 3 as an eigenvalue?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 & 0 \\\\ 0 & 3 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 & 0 \\\\ 0 & 4 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 & 3 \\\\ 3 & 0 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the eigenvalue of the matrix'],
+          [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, 'for the eigenvector'],
+          [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '-1'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '0'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which vector is an eigenvector of the matrix'],
+          [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, 'with an eigenvalue of 2?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'All of the above'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the eigenvector of the matrix'],
+          [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 & 0 \\\\ 0 & 1 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, 'corresponding to the eigenvalue 4?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The operation',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            'Av = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'is known as',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Linear transformation',
+              ],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Eigentransformation',
+              ],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Applying',
+              ],
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                'v',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'to',
+              ],
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                'A',
+              ],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Answers 1 and 2',
+              ],
+            ],
+            order: 3,
+          },
+          {
+            id: '4',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Answers 1 and 3',
+              ],
+            ],
+            order: 4,
+          },
+        ],
+        correctAnswer: '4',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The following operation',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            'Av = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'has eigenvalue',
+          ],
+          [
+            QuizMarkdownType.INLINE_KATEX,
+            'λ=',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '2',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '3',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                '0',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'There is no eigenvalue',
+              ],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'A vector can be',
           ],
         ],
@@ -45971,7 +46897,7 @@ List<String> upperCaseNames = names.stream()
         question: [
           [QuizMarkdownType.TEXT, 'Given the set of coordinates'],
           [QuizMarkdownType.INLINE_KATEX, '(x, y)'],
-          [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the y-coordinates?'],
+          [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the x-coordinates?'],
         ],
         katex: `
           \\begin{pmatrix}
@@ -46020,24 +46946,28 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [QuizMarkdownType.TEXT, 'Coordinate vectors'],
             ],
+            order: 0,
           },
           {
             id: '1',
             answer: [
               [QuizMarkdownType.TEXT, 'Position vectors'],
             ],
+            order: 1,
           },
           {
             id: '2',
             answer: [
               [QuizMarkdownType.TEXT, 'Both 0 and 1 are correct'],
             ],
+            order: 2,
           },
           {
             id: '3',
             answer: [
               [QuizMarkdownType.TEXT, 'Neither 0 nor 1 are correct'],
             ],
+            order: 3,
           },
         ],
         correctAnswer: '2',
@@ -47096,7 +48026,7 @@ List<String> upperCaseNames = names.stream()
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -48029,7 +48959,7 @@ List<String> upperCaseNames = names.stream()
             ],
           },
         ],
-        correctAnswer: '1',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -48489,6 +49419,7 @@ List<String> upperCaseNames = names.stream()
                 'Diagonal matrix',
               ],
             ],
+            order: 0,
           },
           {
             id: '1',
@@ -48498,6 +49429,7 @@ List<String> upperCaseNames = names.stream()
                 'Symmetric matrix',
               ],
             ],
+            order: 1,
           },
           {
             id: '2',
@@ -48507,13 +49439,14 @@ List<String> upperCaseNames = names.stream()
                 'Invertible matrix',
               ],
             ],
+            order: 2,
           },
           {
             id: '3',
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'All of the above',
+                'Answers 1 and 2',
               ],
             ],
             order: 3,
@@ -49806,6 +50739,408 @@ List<String> upperCaseNames = names.stream()
   'shell-scripting': {
     name: 'Shell Scripting',
     questions: [
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Which of the following is used to define a block of code in shell scripting?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Curly braces {}',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Indentation',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Parentheses ()',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Square brackets []',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+      echo "Hello World" > greetings.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Saves "Hello World" to greetings.txt, overwriting any existing content'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends "Hello World" to greetings.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Hello World" to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays the contents of greetings.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+      echo "Goodbye World" >> greetings.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends "Goodbye World" to greetings.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Saves "Goodbye World" to greetings.txt, overwriting any existing content'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints "Goodbye World" to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new file named greetings.txt and writes "Goodbye World" to it'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      cat file1.txt file2.txt > combined.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Concatenates the contents of file1.txt and file2.txt and saves to combined.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the contents of file2.txt to file1.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies the contents of file1.txt to file2.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Merges file1.txt and file2.txt line by line'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for file in *.log; do
+          cat "$file" >> all_logs.txt
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the contents of all .log files to all_logs.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites all_logs.txt with the contents of the last .log file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deletes the contents of all_logs.txt and writes the contents of the .log files'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Merges all .log files into a single .log file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo $(cat file1.txt file2.txt) > combined.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combines the contents of file1.txt and file2.txt into a single line and saves to combined.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Concatenates file1.txt and file2.txt line by line and saves to combined.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends file1.txt and file2.txt into combined.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies the contents of file1.txt to combined.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      echo "Log entry at $(date)" >> logfile.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends a log entry with the current date and time to logfile.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites logfile.txt with a log entry containing the current date and time'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new file logfile.txt with the current date and time'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints the current date and time to the terminal'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the command below?'],
+          [QuizMarkdownType.CODE, `
+      cat file.txt >> backup.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the contents of file.txt to backup.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites backup.txt with the contents of file.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies file.txt to a new file named backup.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays the contents of file.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script do?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      echo "Starting backup..." > backup.log
+      tar -czf backup.tar.gz /home/user >> backup.log 2>&1
+      echo "Backup completed." >> backup.log`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Saves the backup process messages to backup.log and logs any errors'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the backup process messages to backup.log and logs any errors'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites backup.log with the backup process messages'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a backup of backup.log'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
+          [QuizMarkdownType.CODE, `
+      cat header.txt body.txt footer.txt > complete.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Concatenates header.txt, body.txt, and footer.txt into complete.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends body.txt and footer.txt to header.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies header.txt, body.txt, and footer.txt to complete.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Merges header.txt and body.txt line by line and saves to complete.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      echo "Data: $(date)" > data.log
+      df -h >> data.log`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Saves the current date and time, followed by disk usage information, to data.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the current date and time, followed by disk usage information, to data.log'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays the current date and time, followed by disk usage information, on the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a new file named data.log with the current date and time'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'Which command is used to display the last few lines of a file?'],
@@ -52821,7 +54156,58 @@ List<String> upperCaseNames = names.stream()
         ],
         correctAnswer: '3',
       },
-
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula to calculate Euclidean distance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{\\sum_{i=1}^n (a_i - b_i)^2}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{\\sum_{i=1}^n a_i b_i}{\\sqrt{\\sum_{i=1}^n a_i^2} \\sqrt{\\sum_{i=1}^n b_i^2}}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sum_{i=1}^n |a_i - b_i|'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\left( \\sum_{i=1}^n |a_i - b_i|^p \\right)^{\\frac{1}{p}}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula to calculate Euclidean distance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + \\cdots + (z_2 - z_1)^2}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + \\cdots + (z_1 - z_2)^2}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the formula to calculate Euclidean distance?'],

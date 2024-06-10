@@ -1,9 +1,9 @@
 import {
-  Award, Calculator, FileBarChart, GraduationCap, Star, ThumbsUp,
+  Award, Calculator, FileBarChart, GraduationCap, MessageCircleHeart, Star,
 } from 'lucide-react';
 import RotatingImage from './RotatingImage';
 import TypewriterTextRepeating from './TypewriterTextRepeating';
-import TopRowCard from './TopRowCard';
+import FirstRowCard from './FirstRowCard';
 
 const FirstRow = () => (
   <div className="flex flex-col justify-between w-full">
@@ -26,7 +26,7 @@ const FirstRow = () => (
       <div className="flex flex-col mt-16 lg:items-start items-center">
         <TypewriterTextRepeating />
         <div className="grid sm:grid-cols-2 gap-x-3 gap-y-3">
-          <TopRowCard
+          <FirstRowCard
             header={(
               <>
                 <Star className="text-purple-400" />
@@ -36,7 +36,7 @@ const FirstRow = () => (
             body="Lorem ipsum dolor.."
             delay={3000}
           />
-          <TopRowCard
+          <FirstRowCard
             header={(
               <>
                 <Calculator className="text-purple-400" />
@@ -46,7 +46,7 @@ const FirstRow = () => (
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
             delay={3100}
           />
-          <TopRowCard
+          <FirstRowCard
             header={(
               <>
                 <Award className="text-purple-400" />
@@ -56,17 +56,17 @@ const FirstRow = () => (
             body="Lorem ipsum dolor sit.."
             delay={3200}
           />
-          <TopRowCard
+          <FirstRowCard
             header={(
               <>
-                <ThumbsUp className="text-purple-400" />
+                <MessageCircleHeart className="text-purple-400" />
                 Community
               </>
                 )}
             body="Generate quizzes, earn points"
             delay={3200}
           />
-          <TopRowCard
+          <FirstRowCard
             header={(
               <>
                 <GraduationCap className="text-purple-400" />
@@ -76,14 +76,14 @@ const FirstRow = () => (
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
             delay={3200}
           />
-          <TopRowCard
+          <FirstRowCard
             header={(
               <>
                 <FileBarChart className="text-purple-400" />
                 Create your own
               </>
                 )}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
+            body="Support your organization's goals"
             delay={3200}
           />
         </div>

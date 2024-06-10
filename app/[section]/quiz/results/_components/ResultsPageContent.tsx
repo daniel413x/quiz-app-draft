@@ -5,11 +5,14 @@ import {
   Card, CardContent, CardHeader, CardTitle,
 } from '@/components/ui/common/shadcn/card';
 import { cn } from '@/lib/utils';
-import { CheckCircle, ChevronLeft, RefreshCcw } from 'lucide-react';
+import {
+  CheckCircle, ChevronLeft, MessageCircleQuestion, RefreshCcw,
+} from 'lucide-react';
 import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { buttonVariants } from '@/components/ui/common/shadcn/button';
+import { Button, buttonVariants } from '@/components/ui/common/shadcn/button';
+import { Separator } from '@/components/ui/common/shadcn/separator';
 import Timer from '../../_components/Timer';
 import useUserQuizData from '../../_hooks/useUserQuizData';
 import { useTimer } from '../../_hooks/useTimer';
@@ -116,21 +119,28 @@ const ResultsPageContent = () => {
           <ul className="grid md:grid-cols-2 2xl:grid-cols-2 gap-8">
             {questions.map((q, i) => (
               <li key={i}>
-                <Card className={cn('shadow-md pt-2 pb-5', {
+                <Card className={cn('relative shadow-md pt-2 pb-5', {
                   'border-red-300 border-2': answersRecord[i].length > 1,
                 })}
                 >
+                  <Button
+                    className="absolute border rounded-full -right-1.5 -top-1.5 bg-card w-14 h-14"
+                    variant="ghost"
+                  >
+                    <MessageCircleQuestion className="text-blue-600" />
+                  </Button>
                   <CardHeader>
                     <CardTitle>
                       {`Question #${i + 1}`}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-4">
+                    <Separator className="w-1/2" />
                     <span className="font-regular text-gray-600">
-                      <span className="text-2xl text-gray-600/50">
+                      <span className="text-2xl text-gray-600/50 mr-1.5">
                         Q
+                        {': '}
                       </span>
-                      {': '}
                       {renderMarkdown(q.question)}
                     </span>
                     {!q.image ? null : (

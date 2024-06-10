@@ -5,24 +5,24 @@ import useHasMounted from '@/lib/hooks/useHasMounted';
 import { cn } from '@/lib/utils';
 import { ReactElement, useEffect, useState } from 'react';
 
-interface TopRowCardProps {
+interface FirstRowCardProps {
   delay: number;
   header: ReactElement;
   body: string;
 }
 
-const TopRowCard = ({
+const FirstRowCard = ({
   delay,
   header,
   body,
-}: TopRowCardProps) => {
+}: FirstRowCardProps) => {
   const [show, setShow] = useState<boolean>(false);
   useEffect(() => {
     setTimeout(() => setShow(true), delay);
-  }, []);
+  }, [delay]);
   if (!useHasMounted()) return null;
   return (
-    <Card className={cn('shadow-md pt-4 flex w-full transition-all opacity-0 relative top-1', {
+    <Card className={cn('shadow-md pt-4 flex w-full transition-all opacity-0 relative top-4', {
       'top-0 opacity-100': show,
     })}
     >
@@ -38,4 +38,4 @@ const TopRowCard = ({
   );
 };
 
-export default TopRowCard;
+export default FirstRowCard;
