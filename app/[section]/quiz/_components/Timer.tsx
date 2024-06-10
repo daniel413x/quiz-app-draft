@@ -1,4 +1,7 @@
-import { formatTime } from '@/lib/utils';
+import { cn, formatTime } from '@/lib/utils';
+import { Roboto_Condensed } from 'next/font/google';
+
+const robotoC = Roboto_Condensed({ subsets: ['latin'], weight: '400' });
 
 interface TimerProps {
   timer: number;
@@ -7,7 +10,7 @@ interface TimerProps {
 const Timer = ({
   timer,
 }: TimerProps) => (
-  <div className="flex text-3xl text-stone-500 dark:text-gray-400">
+  <div className={cn(robotoC.className, '[font-family:Roboto] flex text-3xl text-stone-500 dark:text-gray-400')}>
     {formatTime(timer)}
   </div>
 );

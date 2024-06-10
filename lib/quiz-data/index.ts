@@ -29783,6 +29783,106 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Which two commands can compaile and execute a'],
+          [QuizMarkdownType.INLINE_CODE, 'HelloWorld.java'],
+          [QuizMarkdownType.TEXT, 'script?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, `
+            javacompile HelloWorld.java
+            java HelloWorld.java
+              `],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, `
+            javac HelloWorld.java
+            javarun HelloWorld.java
+              `],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.CODE, `
+            javacompile HelloWorld.java
+            javarun HelloWorld.java
+              `],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.CODE, `
+            javac HelloWorld.java
+            java HelloWorld.java
+              `],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you write a Hello World script in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.CODE, `
+            public class HelloWorld {
+              public static void main(String[] args) {
+                  System.out.println("Hello World");
+              }
+            }
+              `],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.CODE, `
+            public static void main(String[] args) {
+                System.out.println("Hello World");
+            }
+              `],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.CODE, `
+            public class HelloWorld {
+              public static void main() {
+                  System.out.println("Hello World");
+              }
+            }
+              `],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.CODE, `
+            class HelloWorld {
+              static void main(String[] args) {
+                  System.out.println("Hello World");
+              }
+            }
+              `],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the '],
           [QuizMarkdownType.INLINE_CODE, 'map'],
           [QuizMarkdownType.TEXT, ' operation in Java Streams?'],
@@ -30039,25 +30139,25 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Java Spring has methods for handling non-blocking tasks'],
+              [QuizMarkdownType.TEXT, 'Java Spring has methods for handling non-blocking tasks'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Java Spring leverages Java\'s multithreading capabilities to remain non-blocking'],
+              [QuizMarkdownType.TEXT, 'Java Spring leverages Java\'s multithreading capabilities to remain non-blocking'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Java Spring has a mechanism similar to Node.js\'s event loop'],
+              [QuizMarkdownType.TEXT, 'Java Spring has a mechanism similar to Node.js\'s event loop'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Java Spring is built on subscribers and publishers'],
+              [QuizMarkdownType.TEXT, 'Java Spring is built on subscribers and publishers'],
             ],
           },
         ],
@@ -30391,41 +30491,43 @@ List<String> upperCaseNames = names.stream()
         ],
         correctAnswer: '0',
       },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of '],
-          [QuizMarkdownType.INLINE_CODE, 'flatMap'],
-          [QuizMarkdownType.TEXT, ' in Spring WebFlux?'],
-          [QuizMarkdownType.CODE, 'Flux.just("a", "b", "c").flatMap(s -> Flux.just(s.toUpperCase()));'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It converts each string to uppercase and flattens the result into a single Flux.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It converts each string to lowercase and combines the result into a single Mono.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It filters out elements that are not uppercase.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It concatenates the strings and returns a single Mono.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
+      // {
+      //   question: [
+      //     [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of '],
+      //     [QuizMarkdownType.INLINE_CODE, 'flatMap'],
+      //     [QuizMarkdownType.TEXT, ' in Spring WebFlux?'],
+      //     [QuizMarkdownType.CODE, `
+      //   Flux.just("a", "b", "c").flatMap(s -> Flux.just(s.toUpperCase()));
+      //     `],
+      //   ],
+      //   answers: [
+      //     {
+      //       id: '0',
+      //       answer: [
+      //         [QuizMarkdownType.TEXT, 'It converts each string to uppercase and flattens the result into a single Flux.'],
+      //       ],
+      //     },
+      //     {
+      //       id: '1',
+      //       answer: [
+      //         [QuizMarkdownType.TEXT, 'It converts each string to lowercase and combines the result into a single Mono.'],
+      //       ],
+      //     },
+      //     {
+      //       id: '2',
+      //       answer: [
+      //         [QuizMarkdownType.TEXT, 'It filters out elements that are not uppercase.'],
+      //       ],
+      //     },
+      //     {
+      //       id: '3',
+      //       answer: [
+      //         [QuizMarkdownType.TEXT, 'It concatenates the strings and returns a single Mono.'],
+      //       ],
+      //     },
+      //   ],
+      //   correctAnswer: '0',
+      // },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the difference between '],
@@ -32379,7 +32481,7 @@ List<String> upperCaseNames = names.stream()
             ],
           },
         ],
-        correctAnswer: '1',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -52383,7 +52485,8 @@ List<String> upperCaseNames = names.stream()
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
           [QuizMarkdownType.CODE, `
-      echo "Hello World" | cut -d' ' -f1`],
+      echo "Hello World" | cut -d' ' -f1
+        `],
         ],
         answers: [
           {
@@ -53572,7 +53675,8 @@ List<String> upperCaseNames = names.stream()
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
           [QuizMarkdownType.CODE, `
-      echo $((5 & 3))`],
+      echo $((5 & 3))
+          `],
         ],
         answers: [
           {
@@ -54080,8 +54184,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-        echo "Hello World" | awk '{print toupper($0)}'`],
+          [QuizMarkdownType.CODE, 'echo "Hello World" | awk \'{print toupper($0)}\''],
         ],
         answers: [
           {
@@ -54235,31 +54338,71 @@ List<String> upperCaseNames = names.stream()
     questions: [
 
       {
-        question: [[QuizMarkdownType.TEXT, 'What is the benefit of using marker interfaces?']],
+        question: [
+          [QuizMarkdownType.TEXT, 'You are deciding whether to use stream() in your WebFlux application as presented below. But is this implementation considered blocking?'],
+          [QuizMarkdownType.CODE, `restaurant.setMenuItems(restaurantPUTReq.getMenuItems().stream()
+    .map(menuItemReq -> {
+        ObjectId id = menuItemReq.getId()
+            .map(ObjectId::new)
+            .orElseGet(ObjectId::new);
+        return new MenuItem(id, menuItemReq.getName(), menuItemReq.getPrice());
+    })
+    .collect(Collectors.toList()));`],
+        ],
         answers: [
           {
             id: '0',
-            answer: [[QuizMarkdownType.TEXT, 'Improves code readability and maintainability.']],
-            order: 0,
+            answer: [
+              [QuizMarkdownType.TEXT, 'No, because the operations are minute and performed in-memory.'],
+            ],
           },
           {
             id: '1',
-            answer: [[QuizMarkdownType.TEXT, 'Allows for code polymorphism.']],
-            order: 1,
+            answer: [
+              [QuizMarkdownType.TEXT, 'Yes, because stream operations inherently block the main thread.'],
+            ],
           },
           {
             id: '2',
-            answer: [[QuizMarkdownType.TEXT, 'There are no benefits to using marker interfaces.']],
-            order: 2,
+            answer: [
+              [QuizMarkdownType.TEXT, 'No, because the stream operation is always asynchronous.'],
+            ],
           },
           {
             id: '3',
-            answer: [[QuizMarkdownType.TEXT, 'Both A and B.']],
-            order: 3,
+            answer: [
+              [QuizMarkdownType.TEXT, 'Yes, because setting object fields is a blocking operation.'],
+            ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
+      // {
+      //   question: [[QuizMarkdownType.TEXT, 'What is the benefit of using marker interfaces?']],
+      //   answers: [
+      //     {
+      //       id: '0',
+      //       answer: [[QuizMarkdownType.TEXT, 'Improves code readability and maintainability.']],
+      //       order: 0,
+      //     },
+      //     {
+      //       id: '1',
+      //       answer: [[QuizMarkdownType.TEXT, 'Allows for code polymorphism.']],
+      //       order: 1,
+      //     },
+      //     {
+      //       id: '2',
+      //       answer: [[QuizMarkdownType.TEXT, 'There are no benefits to using marker interfaces.']],
+      //       order: 2,
+      //     },
+      //     {
+      //       id: '3',
+      //       answer: [[QuizMarkdownType.TEXT, 'Both A and B.']],
+      //       order: 3,
+      //     },
+      //   ],
+      //   correctAnswer: '3',
+      // },
       // {
       //   question: [
       //     [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?'],
@@ -54402,62 +54545,62 @@ List<String> upperCaseNames = names.stream()
       //   ],
       //   correctAnswer: '1',
       // },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'What is the dot product of the following vectors?',
-          ],
-        ],
-        katex: `
-          \\mathbf{a} = \\begin{pmatrix}
-          2
-          \\end{pmatrix}
-          \\quad and \\quad
-          \\mathbf{b} = \\begin{pmatrix}
-          3
-          \\end{pmatrix}
-        `,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '5',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '6',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '8',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                '1',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
+      // {
+      //   question: [
+      //     [
+      //       QuizMarkdownType.TEXT,
+      //       'What is the dot product of the following vectors?',
+      //     ],
+      //   ],
+      //   katex: `
+      //     \\mathbf{a} = \\begin{pmatrix}
+      //     2
+      //     \\end{pmatrix}
+      //     \\quad and \\quad
+      //     \\mathbf{b} = \\begin{pmatrix}
+      //     3
+      //     \\end{pmatrix}
+      //   `,
+      //   answers: [
+      //     {
+      //       id: '0',
+      //       answer: [
+      //         [
+      //           QuizMarkdownType.TEXT,
+      //           '5',
+      //         ],
+      //       ],
+      //     },
+      //     {
+      //       id: '1',
+      //       answer: [
+      //         [
+      //           QuizMarkdownType.TEXT,
+      //           '6',
+      //         ],
+      //       ],
+      //     },
+      //     {
+      //       id: '2',
+      //       answer: [
+      //         [
+      //           QuizMarkdownType.TEXT,
+      //           '8',
+      //         ],
+      //       ],
+      //     },
+      //     {
+      //       id: '3',
+      //       answer: [
+      //         [
+      //           QuizMarkdownType.TEXT,
+      //           '1',
+      //         ],
+      //       ],
+      //     },
+      //   ],
+      //   correctAnswer: '1',
+      // },
     ],
   },
 };

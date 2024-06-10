@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import {
-  Ubuntu,
+  Roboto,
 } from 'next/font/google';
 import './globals.css';
 import { ReactNode } from 'react';
@@ -10,7 +10,7 @@ import Navbar from './_components/Navbar';
 import Footer from './_components/Footer';
 
 // fonts used are Roboto, Roboto Condensed, Ubuntu
-const ubuntu = Ubuntu({ subsets: ['latin'], weight: '400' });
+const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +36,7 @@ const rootLayout = ({
   children,
 }: RootLayoutProps) => (
   <html lang="en" suppressHydrationWarning>
-    <body className={cn(ubuntu.className, 'flex flex-col dark:bg-gray-900')}>
+    <body className={cn(roboto.className, 'flex flex-col dark:bg-gray-900')}>
       <ThemeProvider
         attribute="class"
         defaultTheme="light"

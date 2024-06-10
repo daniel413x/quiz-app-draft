@@ -25,7 +25,6 @@ import { useEventListener } from 'usehooks-ts';
 import { renderMarkdown, shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
-import Progress from './Progress';
 import Code from './Code';
 import QuizFormField from './QuizFormField';
 
@@ -41,10 +40,9 @@ const QuizForm = () => {
     timer,
   } = useTimer();
   const {
-    answersRecord, setAnswersRecord, setFinalTime, setQuestions,
+    answersRecord, setAnswersRecord, setFinalTime, setQuestions, setProgress, progress,
   } = useUserQuizData();
   const [submittedAnswer, setSubmittedAnswer] = useState<string | null>(null);
-  const [progress, setProgress] = useState<number>(0);
   const router = useRouter();
   const section = useParams().section as string;
   const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
@@ -140,27 +138,32 @@ const QuizForm = () => {
     isFirstRender.current = false;
   }, []);
   return qNum > answersRecord.length ? null : (
-    <div className="flex flex-col">
-      <div className="flex justify-between">
-        <div className={cn('flex h-[24px]', {
-          'text-red-800': isAnsweredIncorrectly,
-          'text-green-800': isAnsweredCorrectly,
+    <div className="flex flex-col mt-4">
+      <div className="flex gap-3 items-center mb-2">
+        <h1 className="flex text-2xl">
+          Question #
+          {qNum}
+        </h1>
+        <div className={cn('flex gap-0.5 h-[24px]', {
+          'text-red-800 dark:text-red-600': isAnsweredIncorrectly,
+          'text-green-800 dark:text-green-700': isAnsweredCorrectly,
         })}
         >
           {isAnsweredIncorrectly ? (
             <>
+              &mdash;
               <XCircle />
               Incorrect
             </>
           ) : null}
           {isAnsweredCorrectly ? (
             <>
+              &mdash;
               <CheckCircle />
               Correct
             </>
           ) : null}
         </div>
-        <Progress progress={progress} questions={questions} />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>

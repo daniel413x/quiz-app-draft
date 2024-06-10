@@ -2,6 +2,8 @@ import { Question } from '@/lib/quiz-data';
 import { create } from 'zustand';
 
 interface UseUserQuizDataStore {
+  progress: number;
+  setProgress: (progress: number) => void;
   finalTime: number;
   setFinalTime: (finalTime: number) => void;
   questions: Question[];
@@ -27,6 +29,10 @@ const useUserQuizData = create<UseUserQuizDataStore>((set) => ({
   reset: () => {
     set({ answersRecord: [], finalTime: 0, questions: [] });
   },
+  setProgress: (progress: number) => {
+    set({ progress });
+  },
+  progress: 0,
 }));
 
 export default useUserQuizData;
