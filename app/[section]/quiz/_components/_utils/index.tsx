@@ -24,8 +24,8 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[]) => qmd.map((tuple, i) =
   }
   if (tuple[0] === QuizMarkdownType.INLINE_KATEX) {
     return (
-      <span className="px-1">
-        <InlineMath key={i}>
+      <span className="px-1 text-black dark:text-white" key={i}>
+        <InlineMath>
           {tuple[1]}
         </InlineMath>
       </span>
@@ -33,8 +33,8 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[]) => qmd.map((tuple, i) =
   }
   if (tuple[0] === QuizMarkdownType.KATEX) {
     return (
-      <span className="text-black dark:text-white">
-        <BlockMath key={i}>
+      <span className="text-black dark:text-white" key={i}>
+        <BlockMath>
           {tuple[1]}
         </BlockMath>
       </span>

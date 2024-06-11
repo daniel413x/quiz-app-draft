@@ -31,12 +31,13 @@ const QuizPageContent = () => {
     setProgress(0);
   }, []);
   return (
+    // consider className="max-w-2xl m-auto"
     <main>
       <div className="flex justify-between items-end">
         <Timer timer={timer} />
         <Progress />
       </div>
-      <Separator className="w-1/4 mt-4 mx-auto" />
+      <Separator className="w-1/5 mt-4 mx-auto" />
       {!isStarted ? <QuizPrompt /> : null}
       {!isStarted ? null : <QuizForm />}
     </main>

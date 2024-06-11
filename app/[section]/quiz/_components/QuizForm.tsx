@@ -3,7 +3,7 @@
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
 import {
-  Form, FormDescription,
+  Form,
 } from '@/components/ui/common/shadcn/form';
 import {
   RefObject,
@@ -26,7 +26,7 @@ import { renderMarkdown, shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
 import Code from './Code';
-import QuizFormField from './QuizFormField';
+import QuizFormFields from './QuizFormFields';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -142,7 +142,7 @@ const QuizForm = () => {
       <div className="flex gap-3 items-center mb-2">
         <h1 className="flex text-2xl">
           Question #
-          {qNum}
+          {qNum + 1}
         </h1>
         <div className={cn('flex gap-0.5 h-[24px]', {
           'text-red-800 dark:text-red-600': isAnsweredIncorrectly,
@@ -167,7 +167,7 @@ const QuizForm = () => {
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <FormDescription>
+          <div className="text-sm text-gray-600 dark:text-gray-400">
             {renderMarkdown(question.question)}
             {question.image ? (
               <Image
@@ -177,14 +177,14 @@ const QuizForm = () => {
                 alt="Question image"
               />
             ) : null}
-          </FormDescription>
+          </div>
           {question.code ? (
             <Code code={question.code} />
           ) : null}
           {question.katex ? (
             <BlockMath>{question.katex}</BlockMath>
           ) : null}
-          <QuizFormField
+          <QuizFormFields
             ref={fieldRefs}
             answers={answers}
             isAnsweredCorrectly={isAnsweredCorrectly}

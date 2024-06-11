@@ -4952,9 +4952,7 @@ const quizData: QuizData = {
             'What is the purpose of the following HTML?',
           ],
         ],
-        code: `
-      <span className="sr-only">Toggle theme</span>
-        `,
+        code: '<span className="sr-only">Toggle theme</span>',
         answers: [
           {
             id: '0',
@@ -5472,9 +5470,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log([] + []);
-        `,
+        code: 'console.log([] + []);',
         answers: [
           {
             id: '0',
@@ -5616,9 +5612,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(typeof NaN);
-        `,
+        code: 'console.log(typeof NaN);',
         answers: [
           {
             id: '0',
@@ -5949,9 +5943,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(0.1 + 0.2 === 0.3);
-        `,
+        code: 'console.log(0.1 + 0.2 === 0.3);',
         answers: [
           {
             id: '0',
@@ -6093,9 +6085,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(typeof []);
-        `,
+        code: 'console.log(typeof []);',
         answers: [
           {
             id: '0',
@@ -6378,9 +6368,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log("5" - 2);
-        `,
+        code: 'console.log("5" - 2);',
         answers: [
           {
             id: '0',
@@ -6767,9 +6755,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(typeof null);
-        `,
+        code: 'console.log(typeof null);',
         answers: [
           {
             id: '0',
@@ -6911,9 +6897,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(1 + "1");
-        `,
+        code: 'console.log(1 + "1");',
         answers: [
           {
             id: '0',
@@ -7102,9 +7086,7 @@ const quizData: QuizData = {
             'The statement below checks for value and type equality',
           ],
         ],
-        code: `
-      console.log(0 == "0");
-        `,
+        code: 'console.log(0 == "0");',
         answers: [
           {
             id: '0',
@@ -7134,9 +7116,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(typeof function(){});
-        `,
+        code: 'console.log(typeof function(){});',
         answers: [
           {
             id: '0',
@@ -7278,9 +7258,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(0 == "0");
-        `,
+        code: 'console.log(0 == "0");',
         answers: [
           {
             id: '0',
@@ -7499,9 +7477,7 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log(typeof NaN);
-        `,
+        code: 'console.log(typeof NaN);',
         answers: [
           {
             id: '0',
@@ -7690,18 +7666,16 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      function outer() {
-        let counter = 0;
-        return function() {
-          counter++;
-          return counter;
-        };
-      }
-      const increment = outer();
-      console.log(increment());
-      console.log(increment());
-        `,
+        code: `function outer() {
+  let counter = 0;
+  return function() {
+    counter++;
+    return counter;
+  };
+}
+const increment = outer();
+console.log(increment());
+console.log(increment());`,
         answers: [
           {
             id: '0',
@@ -7749,18 +7723,16 @@ const quizData: QuizData = {
             'What principle is best illustrated by the code below?',
           ],
         ],
-        code: `
-      function outer() {
-        let counter = 0;
-        return function() {
-          counter++;
-          return counter;
-        };
-      }
-      const increment = outer();
-      console.log(increment());
-      console.log(increment());
-        `,
+        code: `function outer() {
+  let counter = 0;
+  return function() {
+    counter++;
+    return counter;
+  };
+}
+const increment = outer();
+console.log(increment());
+console.log(increment());`,
         answers: [
           {
             id: '0',
@@ -7902,13 +7874,11 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log('start');
-      setTimeout(() => {
-        console.log('middle');
-      }, 0);
-      console.log('end');
-        `,
+        code: `console.log('start');
+setTimeout(() => {
+  console.log('middle');
+}, 0);
+console.log('end');`,
         answers: [
           {
             id: '0',
@@ -8003,15 +7973,13 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      setTimeout(() => {
-        console.log('timeout');
-      }, 0);
-      Promise.resolve().then(() => {
-        console.log('promise');
-      });
-      console.log('log');
-        `,
+        code: `setTimeout(() => {
+  console.log('timeout');
+}, 0);
+Promise.resolve().then(() => {
+  console.log('promise');
+});
+console.log('log');`,
         answers: [
           {
             id: '0',
@@ -8106,11 +8074,9 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log('first');
-      setTimeout(() => console.log('second'), 0);
-      console.log('third');
-        `,
+        code: `console.log('first');
+setTimeout(() => console.log('second'), 0);
+console.log('third');`,
         answers: [
           {
             id: '0',
@@ -8205,21 +8171,19 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log('script start');
+        code: `console.log('script start');
 
-      setTimeout(function() {
-        console.log('setTimeout');
-      }, 0);
+setTimeout(function() {
+  console.log('setTimeout');
+}, 0);
 
-      Promise.resolve().then(function() {
-        console.log('promise1');
-      }).then(function() {
-        console.log('promise2');
-      });
+Promise.resolve().then(function() {
+  console.log('promise1');
+}).then(function() {
+  console.log('promise2');
+});
 
-      console.log('script end');
-        `,
+console.log('script end');`,
         answers: [
           {
             id: '0',
@@ -8409,19 +8373,17 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      function task(message) {
-        console.log(message);
-      }
+        code: `function task(message) {
+  console.log(message);
+}
 
-      console.log('Start');
+console.log('Start');
 
-      setTimeout(task, 0, 'Timeout task');
+setTimeout(task, 0, 'Timeout task');
 
-      Promise.resolve().then(() => task('Promise task'));
+Promise.resolve().then(() => task('Promise task'));
 
-      console.log('End');
-        `,
+console.log('End');`,
         answers: [
           {
             id: '0',
@@ -8789,21 +8751,19 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      function Counter() {
-        const [count, setCount] = React.useState(0);
-        return (
-          <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>
-              Click me
-            </button>
-          </div>
-        );
-      }
+        code: `function Counter() {
+  const [count, setCount] = React.useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
 
-      ReactDOM.render(<Counter />, document.getElementById('root'));
-        `,
+ReactDOM.render(<Counter />, document.getElementById('root'));`,
         answers: [
           {
             id: '0',
@@ -9087,29 +9047,27 @@ const quizData: QuizData = {
             'What will be the output of the following code when using React and the Virtual DOM?',
           ],
         ],
-        code: `
-      class App extends React.Component {
-        constructor() {
-          super();
-          this.state = { count: 0 };
-        }
+        code: `class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+  }
 
-        increment() {
-          this.setState({ count: this.state.count + 1 });
-        }
+  increment() {
+    this.setState({ count: this.state.count + 1 });
+  }
 
-        render() {
-          return (
-            <div>
-              <p>{this.state.count}</p>
-              <button onClick={() => this.increment()}>Increment</button>
-            </div>
-          );
-        }
-      }
+  render() {
+    return (
+      <div>
+        <p>{this.state.count}</p>
+        <button onClick={() => this.increment()}>Increment</button>
+      </div>
+    );
+  }
+}
 
-      ReactDOM.render(<App />, document.getElementById('root'));
-        `,
+ReactDOM.render(<App />, document.getElementById('root'));`,
         answers: [
           {
             id: '0',
@@ -9345,19 +9303,17 @@ const quizData: QuizData = {
             'What will be the output of the code below?',
           ],
         ],
-        code: `
-      var promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('promise win')
-        }, 4000)
-      })
-      promise.then((result) => {
-          console.log(result)
-      })
-      setTimeout(() => {
-          console.log('setTimeout win')
-      }, 4000)
-        `,
+        code: `var promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+      resolve('promise win')
+  }, 4000)
+})
+promise.then((result) => {
+    console.log(result)
+})
+setTimeout(() => {
+    console.log('setTimeout win')
+}, 4000)`,
         answers: [
           {
             id: '0',
@@ -9575,29 +9531,27 @@ const quizData: QuizData = {
             'What will be the output of the following code when using React and the Virtual DOM?',
           ],
         ],
-        code: `
-      class App extends React.Component {
-        constructor() {
-          super();
-          this.state = { count: 0 };
-        }
+        code: `class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+  }
 
-        increment() {
-          this.setState({ count: this.state.count + 1 });
-        }
+  increment() {
+    this.setState({ count: this.state.count + 1 });
+  }
 
-        render() {
-          return (
-            <div>
-              <p>{this.state.count}</p>
-              <button onClick={() => this.increment()}>Increment</button>
-            </div>
-          );
-        }
-      }
+  render() {
+    return (
+      <div>
+        <p>{this.state.count}</p>
+        <button onClick={() => this.increment()}>Increment</button>
+      </div>
+    );
+  }
+}
 
-      ReactDOM.render(<App />, document.getElementById('root'));
-        `,
+ReactDOM.render(<App />, document.getElementById('root'));`,
         answers: [
           {
             id: '0',
@@ -9880,19 +9834,17 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log('start');
-      
-      setTimeout(() => {
-        console.log('setTimeout');
-      }, 0);
-      
-      Promise.resolve().then(() => {
-        console.log('promise');
-      });
-      
-      console.log('end');
-        `,
+        code: `console.log('start');
+
+setTimeout(() => {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('promise');
+});
+
+console.log('end');`,
         answers: [
           {
             id: '0',
@@ -10175,18 +10127,16 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      console.log('A');
-      setTimeout(() => {
-        console.log('B');
-      }, 0);
-      Promise.resolve().then(() => {
-        console.log('C');
-      }).then(() => {
-        console.log('D');
-      });
-      console.log('E');
-        `,
+        code: `console.log('A');
+setTimeout(() => {
+  console.log('B');
+}, 0);
+Promise.resolve().then(() => {
+  console.log('C');
+}).then(() => {
+  console.log('D');
+});
+console.log('E');`,
         answers: [
           {
             id: '0',
@@ -10375,16 +10325,14 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-        function first() {
-          console.log('first');
-        }
-        function second() {
-          first();
-          console.log('second');
-        }
-        second();
-        `,
+        code: `function first() {
+  console.log('first');
+}
+function second() {
+  first();
+  console.log('second');
+}
+second();`,
         answers: [
           {
             id: '0',
@@ -10667,16 +10615,14 @@ const quizData: QuizData = {
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-        function a() {
-          b();
-          console.log('a');
-        }
-        function b() {
-          console.log('b');
-        }
-        a();
-        `,
+        code: `function a() {
+  b();
+  console.log('a');
+}
+function b() {
+  console.log('b');
+}
+a();`,
         answers: [
           {
             id: '0',
@@ -11375,15 +11321,13 @@ const quizData: QuizData = {
             'How does the console output of following code demonstrate the non-blocking nature of JavaScript?',
           ],
         ],
-        code: `
-        console.log('start');
+        code: `console.log('start');
 
-        setTimeout(() => {
-          console.log('setTimeout');
-        }, 0);
+setTimeout(() => {
+  console.log('setTimeout');
+}, 0);
 
-        console.log('end');
-        `,
+console.log('end');`,
         answers: [
           {
             id: '0',
@@ -11582,22 +11526,20 @@ const quizData: QuizData = {
             'What is true of the increment function in the component below?',
           ],
         ],
-        code: `
-      function Counter() {
-        const [count, setCount] = useState(0);
+        code: `function Counter() {
+  const [count, setCount] = useState(0);
 
-        const increment = () => {
-          setCount(count + 1);
-        };
+  const increment = () => {
+    setCount(count + 1);
+  };
 
-        return (
-          <div>
-            <p>{count}</p>
-            <button onClick={increment}>Increment</button>
-          </div>
-        );
-      }
-        `,
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}`,
         answers: [
           {
             id: '0',
@@ -11965,16 +11907,14 @@ const quizData: QuizData = {
             'Which answer best represents the call stack for executing the following lines of code?',
           ],
         ],
-        code: `
-      function a() {
-        b();
-        console.log('a');
-      }
-      function b() {
-        console.log('b');
-      }
-      a();
-        `,
+        code: `function a() {
+  b();
+  console.log('a');
+}
+function b() {
+  console.log('b');
+}
+a();`,
         answers: [
           {
             id: '0',
@@ -12022,20 +11962,18 @@ const quizData: QuizData = {
             'Which answer best represents the call stack for executing the following lines of code?',
           ],
         ],
-        code: `
-      function x() {
-        y();
-        console.log('x');
-      }
-      function y() {
-        z();
-        console.log('y');
-      }
-      function z() {
-        console.log('z');
-      }
-      x();
-        `,
+        code: `function x() {
+  y();
+  console.log('x');
+}
+function y() {
+  z();
+  console.log('y');
+}
+function z() {
+  console.log('z');
+}
+x();`,
         answers: [
           {
             id: '0',
@@ -12082,20 +12020,18 @@ const quizData: QuizData = {
             'Which answer best represents the call stack for executing the following lines of code?',
           ],
         ],
-        code: `
-      function a() {
-        c();
-        console.log('a');
-      }
-      function b() {
-        console.log('b');
-      }
-      function c() {
-        b();
-        console.log('c');
-      }
-      a();
-        `,
+        code: `function a() {
+  c();
+  console.log('a');
+}
+function b() {
+  console.log('b');
+}
+function c() {
+  b();
+  console.log('c');
+}
+a();`,
         answers: [
           {
             id: '0',
@@ -12143,20 +12079,18 @@ const quizData: QuizData = {
             'Which answer best represents the call stack for executing the following lines of code?',
           ],
         ],
-        code: `
-      function start() {
-        middle();
-        console.log('start');
-      }
-      function middle() {
-        end();
-        console.log('middle');
-      }
-      function end() {
-        console.log('end');
-      }
-      start();
-        `,
+        code: `function start() {
+  middle();
+  console.log('start');
+}
+function middle() {
+  end();
+  console.log('middle');
+}
+function end() {
+  console.log('end');
+}
+start();`,
         answers: [
           {
             id: '0',
@@ -12204,24 +12138,22 @@ const quizData: QuizData = {
             'Which answer best represents the call stack for executing the following lines of code?',
           ],
         ],
-        code: `
-      function first() {
-        second();
-        console.log('first');
-      }
-      function second() {
-        third();
-        console.log('second');
-      }
-      function third() {
-        fourth();
-        console.log('third');
-      }
-      function fourth() {
-        console.log('fourth');
-      }
-      first();
-        `,
+        code: `function first() {
+  second();
+  console.log('first');
+}
+function second() {
+  third();
+  console.log('second');
+}
+function third() {
+  fourth();
+  console.log('third');
+}
+function fourth() {
+  console.log('fourth');
+}
+first();`,
         answers: [
           {
             id: '0',
@@ -12269,24 +12201,22 @@ const quizData: QuizData = {
             'Which answer best represents the call stack for executing the following lines of code?',
           ],
         ],
-        code: `
-      function alpha() {
-        beta();
-        console.log('alpha');
-      }
-      function beta() {
-        gamma();
-        console.log('beta');
-      }
-      function gamma() {
-        delta();
-        console.log('gamma');
-      }
-      function delta() {
-        console.log('delta');
-      }
-      alpha();
-        `,
+        code: `function alpha() {
+  beta();
+  console.log('alpha');
+}
+function beta() {
+  gamma();
+  console.log('beta');
+}
+function gamma() {
+  delta();
+  console.log('gamma');
+}
+function delta() {
+  console.log('delta');
+}
+alpha();`,
         answers: [
           {
             id: '0',
@@ -12334,17 +12264,15 @@ const quizData: QuizData = {
             'Given the following code, is `b` a closure of `a`?',
           ],
         ],
-        code: `
-      function a() {
-        const x = 10;
-        function b() {
-          console.log(x);
-        }
-        return b;
-      }
-      const closure = a();
-      closure();
-        `,
+        code: `function a() {
+  const x = 10;
+  function b() {
+    console.log(x);
+  }
+  return b;
+}
+const closure = a();
+closure();`,
         answers: [
           {
             id: '0',
@@ -12392,26 +12320,24 @@ const quizData: QuizData = {
             'Which functions are closures in the following code?',
           ],
         ],
-        code: `
-      function outer() {
-        const y = 20;
-        function inner1() {
-          console.log(y);
-        }
-        function inner2() {
-          const z = 30;
-          function inner3() {
-            console.log(z);
-          }
-          return inner3;
-        }
-        return { inner1, inner2 };
-      }
-      const { inner1, inner2 } = outer();
-      const inner3 = inner2();
-      inner1();
-      inner3();
-        `,
+        code: `function outer() {
+  const y = 20;
+  function inner1() {
+    console.log(y);
+  }
+  function inner2() {
+    const z = 30;
+    function inner3() {
+      console.log(z);
+    }
+    return inner3;
+  }
+  return { inner1, inner2 };
+}
+const { inner1, inner2 } = outer();
+const inner3 = inner2();
+inner1();
+inner3();`,
         answers: [
           {
             id: '0',
@@ -12459,25 +12385,23 @@ const quizData: QuizData = {
             'In the following code, does `d` form a closure?',
           ],
         ],
-        code: `
-      function a() {
-        const val = 100;
-        function b() {
-          const innerVal = 200;
-          function c() {
-            console.log(val);
-          }
-          function d() {
-            console.log(innerVal);
-          }
-          return { c, d };
-        }
-        return b();
-      }
-      const { c, d } = a();
-      c();
-      d();
-        `,
+        code: `function a() {
+  const val = 100;
+  function b() {
+    const innerVal = 200;
+    function c() {
+      console.log(val);
+    }
+    function d() {
+      console.log(innerVal);
+    }
+    return { c, d };
+  }
+  return b();
+}
+const { c, d } = a();
+c();
+d();`,
         answers: [
           {
             id: '0',
@@ -12525,19 +12449,17 @@ const quizData: QuizData = {
             'In the following code, which function(s) form a closure?',
           ],
         ],
-        code: `
-      function outerFunction() {
-        const outerVariable = 'I am outside!';
-        
-        function innerFunction() {
-          console.log(outerVariable);
-        }
-        
-        return innerFunction;
-      }
-      const myFunction = outerFunction();
-      myFunction();
-        `,
+        code: `function outerFunction() {
+  const outerVariable = 'I am outside!';
+  
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  
+  return innerFunction;
+}
+const myFunction = outerFunction();
+myFunction();`,
         answers: [
           {
             id: '0',
@@ -12585,24 +12507,22 @@ const quizData: QuizData = {
             'Given the following code, which function(s) are closures?',
           ],
         ],
-        code: `
-      function createCounter() {
-        let count = 0;
-        return {
-          increment: function() {
-            count++;
-            return count;
-          },
-          decrement: function() {
-            count--;
-            return count;
-          }
-        };
-      }
-      const counter = createCounter();
-      console.log(counter.increment());
-      console.log(counter.decrement());
-        `,
+        code: `function createCounter() {
+  let count = 0;
+  return {
+    increment: function() {
+      count++;
+      return count;
+    },
+    decrement: function() {
+      count--;
+      return count;
+    }
+  };
+}
+const counter = createCounter();
+console.log(counter.increment());
+console.log(counter.decrement());`,
         answers: [
           {
             id: '0',
@@ -12979,21 +12899,19 @@ const quizData: QuizData = {
             'If you wanted the program below to print 1, 2, 3 to the console, what is a possible solution?',
           ],
         ],
-        code: `
-      function funcOne() {
-        console.log(1)
-      }
+        code: `function funcOne() {
+  console.log(1)
+}
 
-      function funcTwo() {
-        setTimeout(() => {
-          console.log(2)
-        }, 0)
-      }
+function funcTwo() {
+  setTimeout(() => {
+    console.log(2)
+  }, 0)
+}
 
-      function funcThree() {
-        console.log(3)
-      }
-        `,
+function funcThree() {
+  console.log(3)
+}`,
         answers: [
           {
             id: '0',
@@ -13182,32 +13100,30 @@ const quizData: QuizData = {
             'Which of the following best demonstrates encapsulation?',
           ],
         ],
-        code: `
-        class Person {
-          constructor(name, age) {
-            this._name = name;
-            this._age = age;
-          }
+        code: `class Person {
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
 
-          getName() {
-            return this._name;
-          }
+  getName() {
+    return this._name;
+  }
 
-          getAge() {
-            return this._age;
-          }
+  getAge() {
+    return this._age;
+  }
 
-          setName(name) {
-            this._name = name;
-          }
+  setName(name) {
+    this._name = name;
+  }
 
-          setAge(age) {
-            if (age > 0) {
-              this._age = age;
-            }
-          }
-        }
-        `,
+  setAge(age) {
+    if (age > 0) {
+      this._age = age;
+    }
+  }
+}`,
         answers: [
           {
             id: '0',
@@ -14147,9 +14063,7 @@ const quizData: QuizData = {
             'What is the correct inference from the line of code below?',
           ],
         ],
-        code: `
-      Array.prototype.map()
-        `,
+        code: 'Array.prototype.map()',
         answers: [
           {
             id: '0',
@@ -14197,36 +14111,34 @@ const quizData: QuizData = {
             'What is a correct inference from the snippet of code below?',
           ],
         ],
-        code: `
-      function a(param: string) {
-        console.log('a');
-        console.log(param);
-      }
+        code: `function a(param: string) {
+  console.log('a');
+  console.log(param);
+}
 
-      function b(param: string) {
-        console.log('b');
-        console.log(param);
-      }
+function b(param: string) {
+  console.log('b');
+  console.log(param);
+}
 
-      function c(param: string) {
-        console.log('c');
-        console.log(param);
-      }
+function c(param: string) {
+  console.log('c');
+  console.log(param);
+}
 
-      function d(cb: (params: any[]) => void) {
-        console.log('d');
-        console.log(cb('d'));
-      }
+function d(cb: (params: any[]) => void) {
+  console.log('d');
+  console.log(cb('d'));
+}
 
-      function e(cb: (params: any[]) => void) {
-        console.log('e');
-        console.log(cb('e'));
-      }
+function e(cb: (params: any[]) => void) {
+  console.log('e');
+  console.log(cb('e'));
+}
 
-      function f(param: string) {
-        console.log('f');
-      }
-        `,
+function f(param: string) {
+  console.log('f');
+}`,
         answers: [
           {
             id: '0',
@@ -15043,23 +14955,21 @@ const quizData: QuizData = {
             'Which is the most accurate assessment of the following JavaScript program?',
           ],
         ],
-        code: `
-      // main.js
-      const worker = new Worker('worker.js');
+        code: `// main.js
+const worker = new Worker('worker.js');
 
-      worker.postMessage('Hello, worker!');
+worker.postMessage('Hello, worker!');
 
-      worker.onmessage = function(event) {
-        console.log('Received from worker:', event.data);
-      };
+worker.onmessage = function(event) {
+  console.log('Received from worker:', event.data);
+};
 
-      // worker.js
-      onmessage = function(event) {
-        let result = event.data + ' - processed by worker';
-    
-        postMessage(result);
-      };
-        `,
+// worker.js
+onmessage = function(event) {
+  let result = event.data + ' - processed by worker';
+
+  postMessage(result);
+};`,
         answers: [
           {
             id: '0',
@@ -15454,27 +15364,25 @@ const quizData: QuizData = {
     },
     {
       question: [[QuizMarkdownType.TEXT, 'Which of the following code demonstrates polymorphism in Python?']],
-      code: `
-    class Animal:
-        def sound(self):
-            pass
+      code: `class Animal:
+    def sound(self):
+        pass
 
-    class Dog(Animal):
-        def sound(self):
-            return "Bark"
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
 
-    class Cat(Animal):
-        def sound(self):
-            return "Meow"
+class Cat(Animal):
+    def sound(self):
+        return "Meow"
 
-    def make_sound(animal):
-        return animal.sound()
+def make_sound(animal):
+    return animal.sound()
 
-    dog = Dog()
-    cat = Cat()
-    print(make_sound(dog))
-    print(make_sound(cat))
-      `,
+dog = Dog()
+cat = Cat()
+print(make_sound(dog))
+print(make_sound(cat))`,
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Polymorphism is not demonstrated here']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Polymorphism is demonstrated through the make_sound function']] },
@@ -17488,11 +17396,9 @@ const quizData: QuizData = {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following code. What will be the output?'],
       ],
-      code: `
-    with open('example.txt', 'w') as file:
-        file.write('Hello, world!')
-    print(file.closed)
-      `,
+      code: `with open('example.txt', 'w') as file:
+    file.write('Hello, world!')
+print(file.closed)`,
       answers: [
         {
           id: '0',
@@ -18208,11 +18114,9 @@ const quizData: QuizData = {
           'What will be the output of the following code?',
         ],
       ],
-      code: `
-      numbers = [1, 2, 3, 4, 5]
+      code: `numbers = [1, 2, 3, 4, 5]
       squares = [n**2 for n in numbers]
-      print(squares)
-        `,
+      print(squares)`,
       answers: [
         {
           id: '0',
@@ -18307,9 +18211,7 @@ const quizData: QuizData = {
           'What does the following list comprehension do?',
         ],
       ],
-      code: `
-      [n for n in range(10) if n % 2 == 0]
-        `,
+      code: '[n for n in range(10) if n % 2 == 0]',
       answers: [
         {
           id: '0',
@@ -18357,9 +18259,7 @@ const quizData: QuizData = {
           'What does the following list comprehension do?',
         ],
       ],
-      code: `
-      [n for n in range(10) if n % 2 == 0]
-        `,
+      code: '[n for n in range(10) if n % 2 == 0]',
       answers: [
         {
           id: '0',
@@ -18407,11 +18307,9 @@ const quizData: QuizData = {
           'What will be the output of the following code?',
         ],
       ],
-      code: `
-      words = ['hello', 'world']
-      capitalized = [word.upper() for word in words]
-      print(capitalized)
-        `,
+      code: `words = ['hello', 'world']
+capitalized = [word.upper() for word in words]
+print(capitalized)`,
       answers: [
         {
           id: '0',
@@ -18506,9 +18404,7 @@ const quizData: QuizData = {
           'What does the following list comprehension do?',
         ],
       ],
-      code: `
-      [letter for letter in 'hello']
-        `,
+      code: '[letter for letter in \'hello\']',
       answers: [
         {
           id: '0',
@@ -18603,11 +18499,9 @@ const quizData: QuizData = {
           'What will be the output of the following code?',
         ],
       ],
-      code: `
-      matrix = [[1, 2], [3, 4]]
+      code: `matrix = [[1, 2], [3, 4]]
       flat = [num for row in matrix for num in row]
-      print(flat)
-        `,
+      print(flat)`,
       answers: [
         {
           id: '0',
@@ -18655,9 +18549,7 @@ const quizData: QuizData = {
           'What is the purpose of the following list comprehension?',
         ],
       ],
-      code: `
-      [x if x % 2 == 0 else -x for x in range(10)]
-        `,
+      code: '[x if x % 2 == 0 else -x for x in range(10)]',
       answers: [
         {
           id: '0',
@@ -18705,11 +18597,9 @@ const quizData: QuizData = {
           'What will be the output of the following code?',
         ],
       ],
-      code: `
-      nums = [1, 2, 3, 4]
+      code: `nums = [1, 2, 3, 4]
       result = [x * y for x in nums for y in nums]
-      print(result)
-    `,
+      print(result)`,
       answers: [
         {
           id: '0',
@@ -29791,37 +29681,29 @@ const quizData: QuizData = {
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, `
-            javacompile HelloWorld.java
-            java HelloWorld.java
-              `],
+              [QuizMarkdownType.CODE, `javacompile HelloWorld.java
+java HelloWorld.java`],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, `
-            javac HelloWorld.java
-            javarun HelloWorld.java
-              `],
+              [QuizMarkdownType.CODE, `javac HelloWorld.java
+javarun HelloWorld.java`],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.CODE, `
-            javacompile HelloWorld.java
-            javarun HelloWorld.java
-              `],
+              [QuizMarkdownType.CODE, `javacompile HelloWorld.java
+javarun HelloWorld.java`],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.CODE, `
-            javac HelloWorld.java
-            java HelloWorld.java
-              `],
+              [QuizMarkdownType.CODE, `javac HelloWorld.java
+java HelloWorld.java`],
             ],
           },
         ],
@@ -29835,47 +29717,39 @@ const quizData: QuizData = {
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.CODE, `
-            public class HelloWorld {
-              public static void main(String[] args) {
-                  System.out.println("Hello World");
-              }
-            }
-              `],
+              [QuizMarkdownType.CODE, `public class HelloWorld {
+  public static void main(String[] args) {
+      System.out.println("Hello World");
+  }
+}`],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.CODE, `
-            public static void main(String[] args) {
-                System.out.println("Hello World");
-            }
-              `],
+              [QuizMarkdownType.CODE, `public static void main(String[] args) {
+    System.out.println("Hello World");
+}`],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.CODE, `
-            public class HelloWorld {
-              public static void main() {
-                  System.out.println("Hello World");
-              }
-            }
-              `],
+              [QuizMarkdownType.CODE, `public class HelloWorld {
+  public static void main() {
+      System.out.println("Hello World");
+  }
+}`],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.CODE, `
-            class HelloWorld {
-              static void main(String[] args) {
-                  System.out.println("Hello World");
-              }
-            }
-              `],
+              [QuizMarkdownType.CODE, `class HelloWorld {
+  static void main(String[] args) {
+      System.out.println("Hello World");
+  }
+}`],
             ],
           },
         ],
@@ -29950,12 +29824,10 @@ const quizData: QuizData = {
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following code snippet do?'],
-          [QuizMarkdownType.CODE, `
-List<String> names = Arrays.asList("John", "Jane", "Jack", "Doe");
+          [QuizMarkdownType.CODE, `List<String> names = Arrays.asList("John", "Jane", "Jack", "Doe");
 List<String> upperCaseNames = names.stream()
                                    .map(String::toUpperCase)
-                                   .collect(Collectors.toList());
-        `],
+                                   .collect(Collectors.toList());`],
         ],
         answers: [
           {
@@ -30055,17 +29927,15 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'You are deciding whether to use stream() in your WebFlux application as presented below. But is this implementation considered blocking?'],
-          [QuizMarkdownType.CODE, `
-        restaurant.setMenuItems(restaurantPUTReq.getMenuItems().stream()
-            .map(menuItemReq -> {
-                ObjectId id = menuItemReq.getId()
-                    .map(ObjectId::new)
-                    .orElseGet(ObjectId::new);
-                return new MenuItem(id, menuItemReq.getName(), menuItemReq.getPrice());
-            })
-            .collect(Collectors.toList()));
-        `],
+          [QuizMarkdownType.TEXT, 'You are deciding whether to use stream() in your WebFlux application as presented below. Is this implementation considered blocking?'],
+          [QuizMarkdownType.CODE, `restaurant.setMenuItems(restaurantPUTReq.getMenuItems().stream()
+.map(menuItemReq -> {
+    ObjectId id = menuItemReq.getId()
+        .map(ObjectId::new)
+        .orElseGet(ObjectId::new);
+    return new MenuItem(id, menuItemReq.getName(), menuItemReq.getPrice());
+})
+.collect(Collectors.toList()));`],
         ],
         answers: [
           {
@@ -30425,9 +30295,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
-          [QuizMarkdownType.CODE, `
-        Mono.just("Hello").flatMap(s -> Mono.just(s + " World"));
-          `],
+          [QuizMarkdownType.CODE, 'Mono.just("Hello").flatMap(s -> Mono.just(s + " World"));'],
         ],
         answers: [
           {
@@ -30496,8 +30364,7 @@ List<String> upperCaseNames = names.stream()
       //     [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of '],
       //     [QuizMarkdownType.INLINE_CODE, 'flatMap'],
       //     [QuizMarkdownType.TEXT, ' in Spring WebFlux?'],
-      //     [QuizMarkdownType.CODE, `
-      //   Flux.just("a", "b", "c").flatMap(s -> Flux.just(s.toUpperCase()));
+      //     [QuizMarkdownType.CODE, `//   Flux.just("a", "b", "c").flatMap(s -> Flux.just(s.toUpperCase()));
       //     `],
       //   ],
       //   answers: [
@@ -30951,9 +30818,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following code snippet?'],
-          [QuizMarkdownType.CODE, `
-        System.out.println(10 + 20 + "30")
-          `],
+          [QuizMarkdownType.CODE, 'System.out.println(10 + 20 + "30")'],
         ],
         answers: [
           {
@@ -31435,12 +31300,10 @@ List<String> upperCaseNames = names.stream()
             'What will be the output of the following Java bytecode instruction?',
           ],
         ],
-        code: `
-      iconst_1
+        code: `iconst_1
       iconst_2
       iadd
-      invokestatic java/io/PrintStream.println(I)V
-        `,
+      invokestatic java/io/PrintStream.println(I)V`,
         answers: [
           {
             id: '0',
@@ -32005,13 +31868,11 @@ List<String> upperCaseNames = names.stream()
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      public class Test {
-        public static void main(String[] args) {
-          System.out.println("Hello, World!");
-        }
-      }
-        `,
+        code: `public class Test {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+  }
+}`,
         answers: [
           {
             id: '0',
@@ -32153,14 +32014,12 @@ List<String> upperCaseNames = names.stream()
             'What will be the result of compiling and running the following code?',
           ],
         ],
-        code: `
-      public class Test {
-        public static void main(String[] args) {
-          int x = 5;
-          System.out.println(x++);
-        }
-      }
-        `,
+        code: `public class Test {
+  public static void main(String[] args) {
+    int x = 5;
+    System.out.println(x++);
+  }
+}`,
         answers: [
           {
             id: '0',
@@ -32537,15 +32396,13 @@ List<String> upperCaseNames = names.stream()
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      public class Test {
-        public static void main(String[] args) {
-          String s1 = "hello";
-          String s2 = "hello";
-          System.out.println(s1 == s2);
-        }
-      }
-        `,
+        code: `public class Test {
+  public static void main(String[] args) {
+    String s1 = "hello";
+    String s2 = "hello";
+    System.out.println(s1 == s2);
+  }
+}`,
         answers: [
           {
             id: '0',
@@ -32640,16 +32497,14 @@ List<String> upperCaseNames = names.stream()
             'What is the output of the following code?',
           ],
         ],
-        code: `
-      public class Test {
-        public static void main(String[] args) {
-          int a = 10;
-          int b = 20;
-          int c = a + b;
-          System.out.println(c);
-        }
-      }
-        `,
+        code: `public class Test {
+  public static void main(String[] args) {
+    int a = 10;
+    int b = 20;
+    int c = a + b;
+    System.out.println(c);
+  }
+}`,
         answers: [
           {
             id: '0',
@@ -33340,14 +33195,12 @@ List<String> upperCaseNames = names.stream()
             'What will be the output of the following code?',
           ],
         ],
-        code: `
-      public class Test {
-        public static void main(String[] args) {
-          char c = 65;
-          System.out.println(c);
-        }
-      }
-        `,
+        code: `public class Test {
+  public static void main(String[] args) {
+    char c = 65;
+    System.out.println(c);
+  }
+}`,
         answers: [
           {
             id: '0',
@@ -33513,17 +33366,14 @@ List<String> upperCaseNames = names.stream()
             'In the following example,',
           ],
           [
-            QuizMarkdownType.CODE,
-            `
-        traceroute example.com
+            QuizMarkdownType.CODE, `traceroute example.com
         traceroute to example.com (93.184.216.34), 30 hops max, 60 byte packets
         1  192.168.0.1 (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
         2  192.168.1.1 (192.168.1.1)  5.172 ms  5.864 ms  6.890 ms
         3  10.0.0.1 (10.0.0.1)  8.734 ms  9.308 ms  9.947 ms
         4  172.16.0.1 (172.16.0.1)  12.491 ms  13.010 ms  13.277 ms
         5  isp.gateway (198.51.100.1)  20.421 ms  21.719 ms  22.295 ms
-          ...
-            `,
+          ...`,
           ],
           [
             QuizMarkdownType.TEXT,
@@ -33589,15 +33439,12 @@ List<String> upperCaseNames = names.stream()
             'likely looks something like this:',
           ],
           [
-            QuizMarkdownType.CODE,
-            `
-          1  _gateway (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
+            QuizMarkdownType.CODE, `1  _gateway (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
           2  [Domain within ISP network] ([IP within ISP network])  19.734 ms  17.308 ms  19.947 ms
           3  [Domain within ISP network] ([IP within ISP network])  21.491 ms  21.010 ms  21.277 ms
           4  ...
           5  ...
-          6  ...
-            `,
+          6  ...`,
           ],
           [
             QuizMarkdownType.TEXT,
@@ -33663,15 +33510,12 @@ List<String> upperCaseNames = names.stream()
             'likely looks something like this:',
           ],
           [
-            QuizMarkdownType.CODE,
-            `
-          1  _gateway (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
+            QuizMarkdownType.CODE, `1  _gateway (192.168.0.1)  2.172 ms  2.864 ms  3.890 ms
           2  [Domain within ISP network] ([IP within ISP network])  19.734 ms  17.308 ms  19.947 ms
           3  [Domain within ISP network] ([IP within ISP network])  21.491 ms  21.010 ms  21.277 ms
           4  ...
           5  ...
-          6  ...
-            `,
+          6  ...`,
           ],
           [
             QuizMarkdownType.TEXT,
@@ -36057,8 +35901,7 @@ List<String> upperCaseNames = names.stream()
             'What command can be used to display the routing table on a Windows machine?',
           ],
         ],
-        // code: `
-        // route print
+        // code: `// route print
         // `,
         answers: [
           {
@@ -36248,8 +36091,7 @@ List<String> upperCaseNames = names.stream()
             'Which command can be used to display all active network connections on a Linux machine?',
           ],
         ],
-        // code: `
-        // netstat -an
+        // code: `// netstat -an
         // `,
         answers: [
           {
@@ -36533,8 +36375,7 @@ List<String> upperCaseNames = names.stream()
             'Which command is used to test the reachability of a host on an IP network?',
           ],
         ],
-        // code: `
-        // ping google.com
+        // code: `// ping google.com
         // `,
         answers: [
           {
@@ -37194,8 +37035,7 @@ List<String> upperCaseNames = names.stream()
             'Which command is used to view the current IP routing table on a Linux machine?',
           ],
         ],
-        //     code: `
-        // netstat -r
+        //     code: `// netstat -r
         // `,
         answers: [
           {
@@ -37808,8 +37648,7 @@ List<String> upperCaseNames = names.stream()
             'Which command can be used to display the IP address configuration on a macOS machine?',
           ],
         ],
-        //     code: `
-        // ifconfig
+        //     code: `// ifconfig
         // `,
         answers: [
           {
@@ -37952,8 +37791,7 @@ List<String> upperCaseNames = names.stream()
             'Which command can be used to determine the path taken by packets across an IP network?',
           ],
         ],
-        //     code: `
-        // tracert google.com
+        //     code: `// tracert google.com
         // `,
         answers: [
           {
@@ -38331,8 +38169,7 @@ List<String> upperCaseNames = names.stream()
             'Which command can be used to display active TCP connections and the ports on which the computer is listening?',
           ],
         ],
-        //     code: `
-        // netstat -an
+        //     code: `// netstat -an
         // `,
         answers: [
           {
@@ -38428,8 +38265,7 @@ List<String> upperCaseNames = names.stream()
             'What command is typically used to verify that a computer can communicate over the network with another device?',
           ],
         ],
-        // code: `
-        // ping 8.8.8.8
+        // code: `// ping 8.8.8.8
         // `,
         answers: [
           {
@@ -46042,7 +45878,11 @@ List<String> upperCaseNames = names.stream()
     questions: [
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (0, 0, 0, 0) and (1, 2, 2, 1)?'],
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
+          [QuizMarkdownType.INLINE_KATEX, '(0, 0, 0, 0)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 2, 2, 1)'],
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
@@ -46074,31 +45914,644 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (3, 2) and (4, 3)?'],
+          [QuizMarkdownType.TEXT, 'In Unix-like operating systems, what is the default file descriptor number for standard input (stdin)?'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '4'],
+              [QuizMarkdownType.INLINE_CODE, '0'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '2'],
+              [QuizMarkdownType.INLINE_CODE, '1'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '3'],
+              [QuizMarkdownType.INLINE_CODE, '2'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '1'],
+              [QuizMarkdownType.INLINE_CODE, '3'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What file descriptor number is used for standard output (stdout) in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '3'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the default behavior of the pipe (|) operator in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It concatenates two strings'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects standard output from one command to standard input of another command'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It compares two files'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It terminates a process'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to redirect both standard output and standard error to the same file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file 2>&1'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to pass the output of `ls` as input to the `grep` command to find files containing "txt"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | grep txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls > grep txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls < grep txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls & grep txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What command would you use to redirect only standard error to a file named "error.log"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> error.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > error.log'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> error.log'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>> error.log'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which file descriptor is used for standard error (stderr) in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '3'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the command `command > file`, what happens to the output of the command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is appended to the file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is written to the file, overwriting any existing content'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is displayed on the terminal and written to the file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is discarded'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to count the number of lines in a file named "example.txt"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cat example.txt | wc -l'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'wc -l example.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'grep -c . example.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'count -l example.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens when you use the `command > file 2>&1` syntax in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard output and standard error are both redirected to the same file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Only standard output is redirected to the file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Only standard error is redirected to the file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard output and standard error are both discarded'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to filter the output of a command and only display lines containing the word "error"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command | grep error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > grep error'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command & grep error'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command < grep error'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In Unix-like systems, how would you redirect both stdout and stderr to different files?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > stdout.log 2> stderr.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>&1 > logfile'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> logfile'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > logfile 2>&1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What command would you use to append the output of a command to a file without overwriting it?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command >> file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 1> file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In Unix-like systems, how do you use the pipe operator to pass the output of `ps` to `sort` and then to `head` to display the top 10 processes by memory usage?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | sort -rk 4 | head'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | head | sort -rk 4'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | sort -rk 4 > head'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | head -10 | sort -rk 4'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to find the number of files in the current directory?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | wc -l'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | grep -c .'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | count'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | find -type f'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of using `2>&1` in a Unix-like system command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects stderr to the same location as stdout'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects stdout to the same location as stderr'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It appends stderr to stdout'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects both stdout and stderr to a file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to filter out error messages and only display the standard output of a command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>/dev/null'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command >/dev/null'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &>/dev/null'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 1>/dev/null'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens when you use the `tee` command in combination with a pipe?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It allows the output to be both displayed on the terminal and saved to a file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects stderr to stdout'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It appends the output to a file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters the output'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to redirect both stdout and stderr to the terminal and a file simultaneously?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>&1 | tee file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
+          [QuizMarkdownType.INLINE_KATEX, '(3, 2)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 3)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{4}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{2}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{3}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{1}'],
             ],
           },
         ],
@@ -46106,7 +46559,11 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (2, 3) and (6, 9)?'],
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(2, 3)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(6, 9)'],
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
@@ -46138,7 +46595,11 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (1, 2, 3) and (4, 6, 8)?'],
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 2, 3)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 6, 8)'],
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
@@ -46170,7 +46631,11 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (1, 1) and (4, 5)?'],
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 1)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 5)'],
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
@@ -46202,7 +46667,11 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points (1, 1, 1, 1, 1) and (2, 3, 4, 5, 6)?'],
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 1, 1, 1, 1)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(2, 3, 4, 5, 6)'],
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
@@ -46922,6 +47391,53 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Dot product calculation is used to compute',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Dimensionality',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Invertibility',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The determinant',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Cosine similarity',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'A vector can be any of the following EXCEPT'],
         ],
         answers: [
@@ -46958,15 +47474,13 @@ List<String> upperCaseNames = names.stream()
           [QuizMarkdownType.INLINE_KATEX, '(x, y)'],
           [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the y-coordinates?'],
         ],
-        katex: `
-          \\begin{pmatrix}
+        katex: `\\begin{pmatrix}
           1 & 3 \\\\
           2 & 5 \\\\
           3 & 7 \\\\
           4 & 9 \\\\
           5 & 11
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -47001,15 +47515,13 @@ List<String> upperCaseNames = names.stream()
           [QuizMarkdownType.INLINE_KATEX, '(x, y)'],
           [QuizMarkdownType.TEXT, 'listed below, which column vector correctly represents the x-coordinates?'],
         ],
-        katex: `
-          \\begin{pmatrix}
+        katex: `\\begin{pmatrix}
           1 & 3 \\\\
           2 & 5 \\\\
           3 & 7 \\\\
           4 & 9 \\\\
           5 & 11
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -47851,10 +48363,8 @@ List<String> upperCaseNames = names.stream()
             'What is the rank of the following matrix?',
           ],
         ],
-        code: `
-          1  1
-          0  1
-        `,
+        code: `1  1
+          0  1`,
         answers: [
           {
             id: '0',
@@ -47901,12 +48411,12 @@ List<String> upperCaseNames = names.stream()
             QuizMarkdownType.TEXT,
             'What is the rank of the following matrix?',
           ],
-        ],
-        code: `
-          \\begin{pmatrix}
+          [
+            QuizMarkdownType.KATEX, `\\begin{pmatrix}
           2 & 2
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
+          ],
+        ],
         answers: [
           {
             id: '0',
@@ -47954,15 +48464,13 @@ List<String> upperCaseNames = names.stream()
             'What is the dot product of the following vectors?',
           ],
         ],
-        katex: `
-          \\mathbf{a} = \\begin{pmatrix}
+        katex: `\\mathbf{a} = \\begin{pmatrix}
           2
           \\end{pmatrix}
           \\quad and \\quad
           \\mathbf{b} = \\begin{pmatrix}
           3
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -48010,8 +48518,7 @@ List<String> upperCaseNames = names.stream()
             'What is the dot product of the following vectors?',
           ],
         ],
-        katex: `
-          \\mathbf{a} = \\begin{pmatrix}
+        katex: `\\mathbf{a} = \\begin{pmatrix}
           3 \\\\
           0
           \\end{pmatrix}
@@ -48019,8 +48526,7 @@ List<String> upperCaseNames = names.stream()
           \\mathbf{b} = \\begin{pmatrix}
           0 \\\\
           4
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -48068,9 +48574,7 @@ List<String> upperCaseNames = names.stream()
             'Two vectors represent the crop yields of a wheat farm and a corn farm',
           ],
           [
-            QuizMarkdownType.KATEX,
-            `
-          \\mathbf{wheat} = \\begin{pmatrix}
+            QuizMarkdownType.KATEX, `\\mathbf{wheat} = \\begin{pmatrix}
           3000 \\\\
           0 \\\\
           4000 \\\\
@@ -48082,8 +48586,7 @@ List<String> upperCaseNames = names.stream()
           5000 \\\\
           0 \\\\
           4000
-          \\end{pmatrix}
-            `,
+          \\end{pmatrix}`,
           ],
           [
             QuizMarkdownType.TEXT,
@@ -48137,8 +48640,7 @@ List<String> upperCaseNames = names.stream()
             'What is the dot product of the following vectors?',
           ],
         ],
-        katex: `
-          \\mathbf{a} = \\begin{pmatrix}
+        katex: `\\mathbf{a} = \\begin{pmatrix}
           3 \\\\
           2
           \\end{pmatrix}
@@ -48146,8 +48648,7 @@ List<String> upperCaseNames = names.stream()
           \\mathbf{b} = \\begin{pmatrix}
           2 \\\\
           4
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -48195,8 +48696,7 @@ List<String> upperCaseNames = names.stream()
             'What is the dot product of the following vectors?',
           ],
         ],
-        katex: `
-          \\mathbf{a} = \\begin{pmatrix}
+        katex: `\\mathbf{a} = \\begin{pmatrix}
           3 \\\\
           0
           \\end{pmatrix}
@@ -48204,8 +48704,7 @@ List<String> upperCaseNames = names.stream()
           \\mathbf{b} = \\begin{pmatrix}
           4 \\\\
           0
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -48253,8 +48752,7 @@ List<String> upperCaseNames = names.stream()
             'What is the dot product of the following vectors?',
           ],
         ],
-        katex: `
-          \\mathbf{a} = \\begin{pmatrix}
+        katex: `\\mathbf{a} = \\begin{pmatrix}
           1 \\\\
           2
           \\end{pmatrix}
@@ -48262,8 +48760,7 @@ List<String> upperCaseNames = names.stream()
           \\mathbf{b} = \\begin{pmatrix}
           3 \\\\
           4
-          \\end{pmatrix}
-        `,
+          \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -48311,13 +48808,11 @@ List<String> upperCaseNames = names.stream()
             'Which of the following vectors represents the point (1, 1) on the xy-plane?',
           ],
         ],
-        katex: `
-          \\mathbf{v}_1 = \\begin{pmatrix} -2 \\\\ -2 \\end{pmatrix}
+        katex: `\\mathbf{v}_1 = \\begin{pmatrix} -2 \\\\ -2 \\end{pmatrix}
           \\mathbf{v}_2 = \\begin{pmatrix} -1 \\\\ -1 \\end{pmatrix}
           \\mathbf{v}_3 = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}
           \\mathbf{v}_4 = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}
-          \\mathbf{v}_5 = \\begin{pmatrix} 2 \\\\ 2 \\end{pmatrix}
-        `,
+          \\mathbf{v}_5 = \\begin{pmatrix} 2 \\\\ 2 \\end{pmatrix}`,
         answers: [
           {
             id: '0',
@@ -48609,8 +49104,7 @@ List<String> upperCaseNames = names.stream()
             'The trace of the matrix is',
           ],
         ],
-        katex: `
-      A = \\begin{pmatrix}
+        katex: `A = \\begin{pmatrix}
       12 & 6 \\\\
       33 & 1
       \\end{pmatrix}`,
@@ -49259,13 +49753,11 @@ List<String> upperCaseNames = names.stream()
             'The matrix shown is a',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 0, 0,
-        0, 1, 0,
-        0, 0, 1,
-      ];
-      `,
+        code: `var matrix = [
+  1, 0, 0,
+  0, 1, 0,
+  0, 0, 1,
+];`,
         answers: [
           {
             id: '0',
@@ -49363,13 +49855,11 @@ List<String> upperCaseNames = names.stream()
             'The matrix shown is a',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 2, 1,
-        0, 4, 5,
-        0, 0, 1,
-      ];
-        `,
+        code: `var matrix = [
+  1, 2, 1,
+  0, 4, 5,
+  0, 0, 1,
+];`,
         answers: [
           {
             id: '0',
@@ -49417,13 +49907,11 @@ List<String> upperCaseNames = names.stream()
             'Is the matrix shown invertible?',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 2, 3,
-        4, 5, 6,
-        7, 8, 9,
-      ];
-        `,
+        code: `var matrix = [
+  1, 2, 3,
+  4, 5, 6,
+  7, 8, 9,
+];`,
         answers: [
           {
             id: '0',
@@ -49453,12 +49941,10 @@ List<String> upperCaseNames = names.stream()
             'The determinant of the matrix shown is',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 2,
-        3, 4,
-      ];
-        `,
+        code: `var matrix = [
+  1, 2,
+  3, 4,
+];`,
         answers: [
           {
             id: '0',
@@ -49506,12 +49992,10 @@ List<String> upperCaseNames = names.stream()
             'The matrix shown is a',
           ],
         ],
-        code: `
-      var matrix = [
-        4, 0,
-        0, 4,
-      ];
-        `,
+        code: `var matrix = [
+  4, 0,
+  0, 4,
+];`,
         answers: [
           {
             id: '0',
@@ -49563,13 +50047,11 @@ List<String> upperCaseNames = names.stream()
             'The matrix shown is a',
           ],
         ],
-        code: `
-      var matrix = [
-        3, 0, 0,
-        0, 3, 0,
-        0, 0, 3,
-      ];
-        `,
+        code: `var matrix = [
+  3, 0, 0,
+  0, 3, 0,
+  0, 0, 3,
+];`,
         answers: [
           {
             id: '0',
@@ -49617,13 +50099,11 @@ List<String> upperCaseNames = names.stream()
             'The matrix shown is a',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 0, 0,
-        0, 2, 0,
-        0, 0, 3,
-      ];
-        `,
+        code: `var matrix = [
+  1, 0, 0,
+  0, 2, 0,
+  0, 0, 3,
+];`,
         answers: [
           {
             id: '0',
@@ -49671,13 +50151,11 @@ List<String> upperCaseNames = names.stream()
             'Is the matrix shown invertible?',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 0, 0,
-        0, 0, 0,
-        0, 0, 1,
-      ];
-        `,
+        code: `var matrix = [
+  1, 0, 0,
+  0, 0, 0,
+  0, 0, 1,
+];`,
         answers: [
           {
             id: '0',
@@ -49707,12 +50185,10 @@ List<String> upperCaseNames = names.stream()
             'The determinant of the matrix is',
           ],
         ],
-        code: `
-      var matrix = [
-        3, 8,
-        4, 6,
-      ];
-        `,
+        code: `var matrix = [
+  3, 8,
+  4, 6,
+];`,
         answers: [
           {
             id: '0',
@@ -49760,12 +50236,10 @@ List<String> upperCaseNames = names.stream()
             'The determinant of the matrix is',
           ],
         ],
-        code: `
-      var matrix = [
-        1, 2,
-        3, 4,
-      ];
-        `,
+        code: `var matrix = [
+  1, 2,
+  3, 4,
+];`,
         answers: [
           {
             id: '0',
@@ -49813,11 +50287,9 @@ List<String> upperCaseNames = names.stream()
             'The determinant of the shown matrix is calculated by',
           ],
         ],
-        code: `
-      a, b, c,
-      d, e, f,
-      g, h, i,
-        `,
+        code: `a, b, c,
+d, e, f,
+g, h, i,`,
         answers: [
           {
             id: '0',
@@ -49865,10 +50337,8 @@ List<String> upperCaseNames = names.stream()
             'To multiply the shown matrix by 3',
           ],
         ],
-        code: `
-      2, -3, 1,
-      5,  0, 4,
-        `,
+        code: `2, -3, 1,
+5,  0, 4,`,
         answers: [
           {
             id: '0',
@@ -50151,12 +50621,10 @@ List<String> upperCaseNames = names.stream()
             'What type of matrix is represented by this notation?',
           ],
         ],
-        code: `
-      var matrix = [
-        [1, 2, 3],
-        [4, 5, 6],
-      ];
-        `,
+        code: `var matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+];`,
         answers: [
           {
             id: '0',
@@ -50204,12 +50672,10 @@ List<String> upperCaseNames = names.stream()
             'Identify the matrix type from the given matrix.',
           ],
         ],
-        code: `
-      var matrix = [
-        [1, 0],
-        [0, 1],
-      ];
-        `,
+        code: `var matrix = [
+  [1, 0],
+  [0, 1],
+];`,
         answers: [
           {
             id: '0',
@@ -50351,8 +50817,7 @@ List<String> upperCaseNames = names.stream()
             'The matrix is singular',
           ],
         ],
-        katex: `
-      A = \\begin{pmatrix}
+        katex: `A = \\begin{pmatrix}
       12 & 4 \\\\
       3 & 1
       \\end{pmatrix}`,
@@ -50436,8 +50901,7 @@ List<String> upperCaseNames = names.stream()
             'The matrix is singular',
           ],
         ],
-        katex: `
-      A = \\begin{pmatrix}
+        katex: `A = \\begin{pmatrix}
       12 & 1 \\\\
       3 & 1
       \\end{pmatrix}`,
@@ -50564,12 +51028,10 @@ List<String> upperCaseNames = names.stream()
             'What type of matrix is represented below?',
           ],
         ],
-        code: `
-      var matrix = [
-        [1, 2],
-        [3, 4],
-      ];
-        `,
+        code: `var matrix = [
+  [1, 2],
+  [3, 4],
+];`,
         answers: [
           {
             id: '0',
@@ -50665,12 +51127,10 @@ List<String> upperCaseNames = names.stream()
             'What is the order of the matrix shown?',
           ],
         ],
-        code: `
-      var matrix = [
-        [1, 2, 3],
-        [4, 5, 6],
-      ];
-        `,
+        code: `var matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+];`,
         answers: [
           {
             id: '0',
@@ -50765,16 +51225,14 @@ List<String> upperCaseNames = names.stream()
             'What is the result of multiplying the following matrices?',
           ],
         ],
-        code: `
-      var A = [
-        [1, 2],
-        [3, 4],
-      ];
-      var B = [
-        [5, 6],
-        [7, 8],
-      ];
-        `,
+        code: `var A = [
+  [1, 2],
+  [3, 4],
+];
+var B = [
+  [5, 6],
+  [7, 8],
+];`,
         answers: [
           {
             id: '0',
@@ -50817,8 +51275,7 @@ List<String> upperCaseNames = names.stream()
       },
       // {
       //   question: 'What is the dot product of the two matrices?',
-      //   code: `
-      // var a = [
+      //   code: `// var a = [
       //   [1, 2],
       //   [1, 4],
       //   [1, 6],
@@ -50891,8 +51348,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `
-      echo "Hello World" > greetings.txt`],
+          [QuizMarkdownType.CODE, 'echo "Hello World" > greetings.txt'],
         ],
         answers: [
           {
@@ -50925,8 +51381,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `
-      echo "Goodbye World" >> greetings.txt`],
+          [QuizMarkdownType.CODE, 'echo "Goodbye World" >> greetings.txt'],
         ],
         answers: [
           {
@@ -50959,10 +51414,9 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      cat file1.txt file2.txt > combined.txt`],
+cat file1.txt file2.txt > combined.txt`],
         ],
         answers: [
           {
@@ -50995,12 +51449,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for file in *.log; do
-          cat "$file" >> all_logs.txt
-      done`],
+for file in *.log; do
+    cat "$file" >> all_logs.txt
+done`],
         ],
         answers: [
           {
@@ -51033,8 +51486,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo $(cat file1.txt file2.txt) > combined.txt`],
+          [QuizMarkdownType.CODE, 'echo $(cat file1.txt file2.txt) > combined.txt'],
         ],
         answers: [
           {
@@ -51067,10 +51519,9 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      echo "Log entry at $(date)" >> logfile.txt`],
+echo "Log entry at $(date)" >> logfile.txt`],
         ],
         answers: [
           {
@@ -51103,8 +51554,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the command below?'],
-          [QuizMarkdownType.CODE, `
-      cat file.txt >> backup.txt`],
+          [QuizMarkdownType.CODE, 'cat file.txt >> backup.txt'],
         ],
         answers: [
           {
@@ -51137,12 +51587,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      echo "Starting backup..." > backup.log
-      tar -czf backup.tar.gz /home/user >> backup.log 2>&1
-      echo "Backup completed." >> backup.log`],
+echo "Starting backup..." > backup.log
+tar -czf backup.tar.gz /home/user >> backup.log 2>&1
+echo "Backup completed." >> backup.log`],
         ],
         answers: [
           {
@@ -51175,8 +51624,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
-          [QuizMarkdownType.CODE, `
-      cat header.txt body.txt footer.txt > complete.txt`],
+          [QuizMarkdownType.CODE, 'cat header.txt body.txt footer.txt > complete.txt'],
         ],
         answers: [
           {
@@ -51209,11 +51657,10 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      echo "Data: $(date)" > data.log
-      df -h >> data.log`],
+echo "Data: $(date)" > data.log
+df -h >> data.log`],
         ],
         answers: [
           {
@@ -52020,16 +52467,14 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      if [ "$#" != 1 ]; then
-          echo "Usage: $0 <image_name> [-e]"
-          exit 1
-      fi
+if [ "$#" != 1 ]; then
+    echo "Usage: $0 <image_name> [-e]"
+    exit 1
+fi
 
-      kubectl exec -it $1 -- /bin/sh
-      `],
+kubectl exec -it $1 -- /bin/sh`],
         ],
         answers: [
           {
@@ -52062,16 +52507,14 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'The purpose of the bash script below is'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      if [ "$#" -lt 1 ]; then
-          echo "Usage: $0 <image_name> [--no-cache] [BUILD_ARG1=VALUE1] [BUILD_ARG2=VALUE2] ..."
-          exit 1
-      fi
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <image_name> [--no-cache] [BUILD_ARG1=VALUE1] [BUILD_ARG2=VALUE2] ..."
+    exit 1
+fi
 
-      docker kill $1 && docker rm $1
-      `],
+docker kill $1 && docker rm $1`],
         ],
         answers: [
           {
@@ -52104,16 +52547,14 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      if [ -z "$1" ]; then
-          echo "Please provide a directory"
-          exit 1
-      fi
+if [ -z "$1" ]; then
+    echo "Please provide a directory"
+    exit 1
+fi
 
-      ls -l "$1"
-      `],
+ls -l "$1"`],
         ],
         answers: [
           {
@@ -52146,13 +52587,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for user in \`cat users.txt\`; do
-          userdel -r "$user"
-      done
-      `],
+for user in \`cat users.txt\`; do
+    userdel -r "$user"
+done`],
         ],
         answers: [
           {
@@ -52185,16 +52624,14 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      if [ -z "$1" ]; then
-          echo "No file supplied"
-          exit 1
-      fi
+if [ -z "$1" ]; then
+    echo "No file supplied"
+    exit 1
+fi
 
-      wc -l "$1"
-      `],
+wc -l "$1"`],
         ],
         answers: [
           {
@@ -52227,12 +52664,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for file in *.txt; do
-          mv "$file" "$\{file%.txt}.bak"
-      done`],
+for file in *.txt; do
+    mv "$file" "$\{file%.txt}.bak"
+done`],
         ],
         answers: [
           {
@@ -52265,9 +52701,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-        echo "Hello World" | awk '{print toupper($0)}'
-          `],
+          [QuizMarkdownType.CODE, 'echo "Hello World" | awk \'{print toupper($0)}\''],
         ],
         answers: [
           {
@@ -52300,12 +52734,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      while IFS= read -r line; do
-          echo "Processing: $line"
-      done < urls.txt`],
+while IFS= read -r line; do
+    echo "Processing: $line"
+done < urls.txt`],
         ],
         answers: [
           {
@@ -52338,8 +52771,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `
-      grep -r "main" /home/user`],
+          [QuizMarkdownType.CODE, 'grep -r "main" /home/user'],
         ],
         answers: [
           {
@@ -52372,12 +52804,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for i in {1..5}; do
-          echo "Welcome $i times"
-      done`],
+for i in {1..5}; do
+    echo "Welcome $i times"
+done`],
         ],
         answers: [
           {
@@ -52410,8 +52841,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo $((2 + 3 * 4))`],
+          [QuizMarkdownType.CODE, 'echo $((2 + 3 * 4))'],
         ],
         answers: [
           {
@@ -52444,14 +52874,13 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the code below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      if [ -f "$1" ]; then
-          echo "File exists."
-      else
-          echo "File does not exist."
-      fi`],
+if [ -f "$1" ]; then
+    echo "File exists."
+else
+    echo "File does not exist."
+fi`],
         ],
         answers: [
           {
@@ -52484,9 +52913,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo "Hello World" | cut -d' ' -f1
-        `],
+          [QuizMarkdownType.CODE, 'echo "Hello World" | cut -d\' \' -f1'],
         ],
         answers: [
           {
@@ -52519,13 +52946,12 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      log_file="system.log"
+log_file="system.log"
 
-      df -h > "$log_file"
-      free -h >> "$log_file"`],
+df -h > "$log_file"
+free -h >> "$log_file"`],
         ],
         answers: [
           {
@@ -52558,13 +52984,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      echo "Directory to backup: "
-      read dir
-      tar -czvf backup.tar.gz "$dir"
-      `],
+echo "Directory to backup: "
+read dir
+tar -czvf backup.tar.gz "$dir"`],
         ],
         answers: [
           {
@@ -52597,14 +53021,12 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      while true; do
-          echo "Press CTRL+C to stop"
-          sleep 1
-      done
-      `],
+while true; do
+    echo "Press CTRL+C to stop"
+    sleep 1
+done`],
         ],
         answers: [
           {
@@ -52637,14 +53059,12 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      log_file="system.log"
+log_file="system.log"
 
-      df -h > "$log_file"
-      free -h >> "$log_file"
-      `],
+df -h > "$log_file"
+free -h >> "$log_file"`],
         ],
         answers: [
           {
@@ -52677,13 +53097,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for file in *.txt; do
-          mv "$file" "$\{file%.txt}.bak"
-      done
-      `],
+for file in *.txt; do
+    mv "$file" "$\{file%.txt}.bak"
+done`],
         ],
         answers: [
           {
@@ -52716,13 +53134,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      while IFS= read -r line; do
-          echo "$line"
-      done < input.txt
-      `],
+while IFS= read -r line; do
+    echo "$line"
+done < input.txt`],
         ],
         answers: [
           {
@@ -52755,13 +53171,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the effect of running the following script?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      echo "Enter your name: "
-      read name
-      echo "Hello, $name!"
-      `],
+echo "Enter your name: "
+read name
+echo "Hello, $name!"`],
         ],
         answers: [
           {
@@ -52794,11 +53208,9 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      find /var/log -type f -name "*.log" -exec gzip {} \\;
-      `],
+find /var/log -type f -name "*.log" -exec gzip {} \\;`],
         ],
         answers: [
           {
@@ -52831,12 +53243,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        for file in \`ls *.log\`; do
-            rm "$file"
-        done`],
+for file in \`ls *.log\`; do
+    rm "$file"
+done`],
         ],
         answers: [
           {
@@ -52869,18 +53280,16 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        echo "Enter your age: "
-        read age
+echo "Enter your age: "
+read age
 
-        if [ "$age" -ge 18 ]; then
-            echo "You are an adult."
-        else
-            echo "You are a minor."
-        fi
-        `],
+if [ "$age" -ge 18 ]; then
+    echo "You are an adult."
+else
+    echo "You are a minor."
+fi`],
         ],
         answers: [
           {
@@ -52913,13 +53322,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        while IFS= read -r line; do
-            echo "Processing: $line"
-        done < urls.txt
-        `],
+  while IFS= read -r line; do
+      echo "Processing: $line"
+  done < urls.txt`],
         ],
         answers: [
           {
@@ -52952,15 +53359,13 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        mkdir -p /backup
+mkdir -p /backup
 
-        for file in /home/user/*; do
-            cp "$file" /backup/
-        done
-        `],
+for file in /home/user/*; do
+    cp "$file" /backup/
+done`],
         ],
         answers: [
           {
@@ -52993,15 +53398,13 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        if [ -f "$1" ]; then
-            echo "File exists."
-        else
-            echo "File does not exist."
-        fi
-        `],
+if [ -f "$1" ]; then
+    echo "File exists."
+else
+    echo "File does not exist."
+fi`],
         ],
         answers: [
           {
@@ -53674,9 +54077,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo $((5 & 3))
-          `],
+          [QuizMarkdownType.CODE, 'echo $((5 & 3))'],
         ],
         answers: [
           {
@@ -53709,12 +54110,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for i in {1..3}; do
-          echo "Iteration $i"
-      done`],
+for i in {1..3}; do
+    echo "Iteration $i"
+done`],
         ],
         answers: [
           {
@@ -53747,12 +54147,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for file in $(find . -type f -name "*.bak"); do
-          mv "$file" "\${file%.bak}.old"
-      done`],
+for file in $(find . -type f -name "*.bak"); do
+    mv "$file" "\${file%.bak}.old"
+done`],
         ],
         answers: [
           {
@@ -53785,8 +54184,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo $(expr 4 + 2 * 3)`],
+          [QuizMarkdownType.CODE, 'echo $(expr 4 + 2 * 3)'],
         ],
         answers: [
           {
@@ -53819,12 +54217,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the functionality of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for ((i=1; i<=5; i++)); do
-          touch "file$i.txt"
-      done`],
+for ((i=1; i<=5; i++)); do
+    touch "file$i.txt"
+done`],
         ],
         answers: [
           {
@@ -53857,8 +54254,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `
-      ls -l | grep "^d"`],
+          [QuizMarkdownType.CODE, 'ls -l | grep "^d"'],
         ],
         answers: [
           {
@@ -53891,8 +54287,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo $((10 >> 1))`],
+          [QuizMarkdownType.CODE, 'echo $((10 >> 1))'],
         ],
         answers: [
           {
@@ -53925,12 +54320,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      while IFS=, read -r name age; do
-          echo "$name is $age years old"
-      done < people.csv`],
+while IFS=, read -r name age; do
+    echo "$name is $age years old"
+done < people.csv`],
         ],
         answers: [
           {
@@ -53963,8 +54357,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-      echo $((7 ^ 3))`],
+          [QuizMarkdownType.CODE, 'echo $((7 ^ 3))'],
         ],
         answers: [
           {
@@ -53998,14 +54391,13 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
-          [QuizMarkdownType.CODE, `
-      #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-      for ((i=1; i<=3; i++)); do
-          for ((j=1; j<=2; j++)); do
-              echo "i=$i, j=$j"
-          done
-      done`],
+for ((i=1; i<=3; i++)); do
+    for ((j=1; j<=2; j++)); do
+        echo "i=$i, j=$j"
+    done
+done`],
         ],
         answers: [
           {
@@ -54038,12 +54430,11 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following script do?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        while read -r line; do
-            echo "Processing $line"
-        done < input.txt`],
+while read -r line; do
+    echo "Processing $line"
+done < input.txt`],
         ],
         answers: [
           {
@@ -54076,8 +54467,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the output of the following command?'],
-          [QuizMarkdownType.CODE, `
-        echo "scale=2; 10 / 3" | bc`],
+          [QuizMarkdownType.CODE, 'echo "scale=2; 10 / 3" | bc'],
         ],
         answers: [
           {
@@ -54110,8 +54500,7 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `
-        ls -al > filelist.txt`],
+          [QuizMarkdownType.CODE, 'ls -al > filelist.txt'],
         ],
         answers: [
           {
@@ -54144,14 +54533,13 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the script below?'],
-          [QuizMarkdownType.CODE, `
-        #!/bin/bash
+          [QuizMarkdownType.CODE, `#!/bin/bash
 
-        function greet() {
-            echo "Hello, $1"
-        }
+function greet() {
+    echo "Hello, $1"
+}
 
-        greet "World"`],
+greet "World"`],
         ],
         answers: [
           {
@@ -54339,268 +54727,40 @@ List<String> upperCaseNames = names.stream()
 
       {
         question: [
-          [QuizMarkdownType.TEXT, 'You are deciding whether to use stream() in your WebFlux application as presented below. But is this implementation considered blocking?'],
-          [QuizMarkdownType.CODE, `restaurant.setMenuItems(restaurantPUTReq.getMenuItems().stream()
-    .map(menuItemReq -> {
-        ObjectId id = menuItemReq.getId()
-            .map(ObjectId::new)
-            .orElseGet(ObjectId::new);
-        return new MenuItem(id, menuItemReq.getName(), menuItemReq.getPrice());
-    })
-    .collect(Collectors.toList()));`],
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 1)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 5)'],
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'No, because the operations are minute and performed in-memory.'],
+              [QuizMarkdownType.INLINE_KATEX, '3'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'Yes, because stream operations inherently block the main thread.'],
+              [QuizMarkdownType.INLINE_KATEX, '5'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'No, because the stream operation is always asynchronous.'],
+              [QuizMarkdownType.INLINE_KATEX, '6'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'Yes, because setting object fields is a blocking operation.'],
+              [QuizMarkdownType.INLINE_KATEX, '7'],
             ],
           },
         ],
-        correctAnswer: '0',
+        correctAnswer: '1',
       },
-      // {
-      //   question: [[QuizMarkdownType.TEXT, 'What is the benefit of using marker interfaces?']],
-      //   answers: [
-      //     {
-      //       id: '0',
-      //       answer: [[QuizMarkdownType.TEXT, 'Improves code readability and maintainability.']],
-      //       order: 0,
-      //     },
-      //     {
-      //       id: '1',
-      //       answer: [[QuizMarkdownType.TEXT, 'Allows for code polymorphism.']],
-      //       order: 1,
-      //     },
-      //     {
-      //       id: '2',
-      //       answer: [[QuizMarkdownType.TEXT, 'There are no benefits to using marker interfaces.']],
-      //       order: 2,
-      //     },
-      //     {
-      //       id: '3',
-      //       answer: [[QuizMarkdownType.TEXT, 'Both A and B.']],
-      //       order: 3,
-      //     },
-      //   ],
-      //   correctAnswer: '3',
-      // },
-      // {
-      //   question: [
-      //     [QuizMarkdownType.TEXT, 'Given the set of coordinates \\((x, y)\\) listed below, which column vector correctly represents the y-coordinates?'],
-      //   ],
-      //   katex: `
-      //     \\begin{pmatrix}
-      //     1 & 3 \\\\
-      //     2 & 5 \\\\
-      //     3 & 7 \\\\
-      //     4 & 9 \\\\
-      //     5 & 11
-      //     \\end{pmatrix}
-      //   `,
-      //   answers: [
-      //     {
-      //       id: '0',
-      //       answer: [
-      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
-      //       ],
-      //     },
-      //     {
-      //       id: '1',
-      //       answer: [
-      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 5 \\\\ 7 \\\\ 9 \\\\ 11 \\\\ 5 \\end{pmatrix}'],
-      //       ],
-      //     },
-      //     {
-      //       id: '2',
-      //       answer: [
-      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\\\ 8 \\\\ 10 \\end{pmatrix}'],
-      //       ],
-      //     },
-      //     {
-      //       id: '3',
-      //       answer: [
-      //         [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 2 \\\\ 3 \\\\ 4 \\\\ 5 \\end{pmatrix}'],
-      //       ],
-      //     },
-      //   ],
-      //   correctAnswer: '1',
-      // },
-      // {
-      //   question: [
-      //     [
-      //       QuizMarkdownType.TEXT,
-      //       'o hi',
-      //     ],
-      //     [
-      //       QuizMarkdownType.INLINE_KATEX,
-      //       'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-      //     ],
-      //     [
-      //       QuizMarkdownType.TEXT,
-      //       'o hi',
-      //     ],
-      //     [
-      //       QuizMarkdownType.KATEX,
-      //       'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-      //     ],
-      //     [
-      //       QuizMarkdownType.TEXT,
-      //       'o hi',
-      //     ],
-      //     [
-      //       QuizMarkdownType.INLINE_CODE,
-      //       `
-      // var A = [
-      //   [1, 2],
-      //   [3, 4],
-      // ];
-      // var B = [
-      //   [5, 6],
-      //   [7, 8],
-      // ];
-      //   `,
-      //     ],
-      //     [
-      //       QuizMarkdownType.TEXT,
-      //       'o hi',
-      //     ],
-      //     [
-      //       QuizMarkdownType.INLINE_CODE,
-      //       'a',
-      //     ],
-      //     [
-      //       QuizMarkdownType.TEXT,
-      //       'o hi',
-      //     ],
-      //   ],
-      //   // actually latex syntax
-      //   // https://chatgpt.com/c/3d15dcb4-b471-4370-b47f-23864673c00f
-      //   katex: `
-      // A = \\begin{pmatrix}
-      // 1 & 2 \\\\
-      // 3 & 4
-      // \\end{pmatrix}
-      // \\\\
-      // B = \\begin{pmatrix}
-      // 5 & 6 \\\\
-      // 7 & 8
-      // \\end{pmatrix}
-      //   `,
-      //   code: `
-      // var A = [
-      //   [1, 2],
-      //   [3, 4],
-      // ];
-      // var B = [
-      //   [5, 6],
-      //   [7, 8],
-      // ];
-      //   `,
-      //   answers: [
-      //     {
-      //       id: '0',
-      //       answer: [
-      //         [
-      //           QuizMarkdownType.TEXT,
-      //           'o hi',
-      //         ],
-      //         [
-      //           QuizMarkdownType.INLINE_KATEX,
-      //           'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-      //         ],
-      //       ],
-      //     },
-      //     {
-      //       id: '1',
-      //       answer: [
-      //         [
-      //           QuizMarkdownType.TEXT,
-      //           'o hi',
-      //         ],
-      //         [
-      //           QuizMarkdownType.INLINE_KATEX,
-      //           'A = \\begin{pmatrix} 1 & 2 \\\\3 & 4 \\\\ \\end{pmatrix}',
-      //         ],
-      //       ],
-      //     },
-      //   ],
-      //   correctAnswer: '1',
-      // },
-      // {
-      //   question: [
-      //     [
-      //       QuizMarkdownType.TEXT,
-      //       'What is the dot product of the following vectors?',
-      //     ],
-      //   ],
-      //   katex: `
-      //     \\mathbf{a} = \\begin{pmatrix}
-      //     2
-      //     \\end{pmatrix}
-      //     \\quad and \\quad
-      //     \\mathbf{b} = \\begin{pmatrix}
-      //     3
-      //     \\end{pmatrix}
-      //   `,
-      //   answers: [
-      //     {
-      //       id: '0',
-      //       answer: [
-      //         [
-      //           QuizMarkdownType.TEXT,
-      //           '5',
-      //         ],
-      //       ],
-      //     },
-      //     {
-      //       id: '1',
-      //       answer: [
-      //         [
-      //           QuizMarkdownType.TEXT,
-      //           '6',
-      //         ],
-      //       ],
-      //     },
-      //     {
-      //       id: '2',
-      //       answer: [
-      //         [
-      //           QuizMarkdownType.TEXT,
-      //           '8',
-      //         ],
-      //       ],
-      //     },
-      //     {
-      //       id: '3',
-      //       answer: [
-      //         [
-      //           QuizMarkdownType.TEXT,
-      //           '1',
-      //         ],
-      //       ],
-      //     },
-      //   ],
-      //   correctAnswer: '1',
-      // },
     ],
   },
 };

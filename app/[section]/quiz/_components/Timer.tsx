@@ -1,7 +1,7 @@
 import { cn, formatTime } from '@/lib/utils';
-import { Roboto_Condensed } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 
-const robotoC = Roboto_Condensed({ subsets: ['latin'], weight: '400' });
+const robotoC = Roboto({ subsets: ['latin'], weight: '400' });
 
 interface TimerProps {
   timer: number;

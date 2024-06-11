@@ -8,7 +8,7 @@ import { UseFormReturn } from 'react-hook-form';
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 import { renderMarkdown } from './_utils';
 
-interface QuizFormFieldProps {
+interface QuizFormFieldsProps {
   form: UseFormReturn<{
     answer: string;
   }, any, undefined>;
@@ -20,7 +20,7 @@ interface QuizFormFieldProps {
   submittedAnswer: string | null;
 }
 
-const QuizFormField = forwardRef(({
+const QuizFormFields = forwardRef(({
   form,
   isAnsweredCorrectly,
   isAnsweredIncorrectly,
@@ -28,7 +28,7 @@ const QuizFormField = forwardRef(({
   handleChangeAnswer,
   formAnswer,
   submittedAnswer,
-}: QuizFormFieldProps, ref) => {
+}: QuizFormFieldsProps, ref) => {
   const radioGroupRef = useRef<HTMLDivElement>(null);
   const firstRadioButtonRef = useRef<HTMLButtonElement>(null);
   useImperativeHandle(ref, () => ({
@@ -53,20 +53,22 @@ const QuizFormField = forwardRef(({
           >
             {answers.map((answer, i) => {
               const isWrongAnswer = answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly;
+              const isCorrectAnswer = answer.id === submittedAnswer && isAnsweredCorrectly;
               const qmd = renderMarkdown(answer.answer);
               return (
                 <Label
-                  className="flex w-full cursor-pointer whitespace-normal [line-height:2] h-full max-h-full"
+                  className={cn('flex w-full cursor-pointer whitespace-normal [line-height:2] h-full max-h-full', {
+                    'pointer-events-none': isAnsweredCorrectly,
+                  })}
                   htmlFor={answer.id}
                   key={answer.id}
                 >
                   <div
                     className={cn(buttonVariants({ variant: 'outline', className: 'flex w-full text-wrap justify-start space-x-3 border-2 border-black/5 dark:border-gray-800 shadow-sm px-4 py-3 cursor-pointer group h-max' }), {
                       'bg-accent': answer.id === formAnswer,
-                      'bg-green-100 hover:bg-green-100 dark:text-black': answer.id === formAnswer && isAnsweredCorrectly,
+                      'bg-green-100 hover:bg-green-100 dark:text-black': isCorrectAnswer,
                       'bg-red-100 hover:bg-red-100 dark:bg-red-300 dark:text-red-800': isWrongAnswer,
                       'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
-                      'pointer-events-none': isAnsweredCorrectly,
                     })}
                   >
                     <RadioGroupItem
@@ -76,7 +78,10 @@ const QuizFormField = forwardRef(({
                       ref={i === 0 ? firstRadioButtonRef : undefined}
                       className={isWrongAnswer ? 'dark:border-red-800 dark:group-hover:bg-red-300' : ''}
                     />
-                    <span>
+                    <span className={cn({
+                      'dark:text-black': isCorrectAnswer,
+                    })}
+                    >
                       {qmd}
                     </span>
                   </div>
@@ -90,4 +95,4 @@ const QuizFormField = forwardRef(({
   );
 });
 
-export default QuizFormField;
+export default QuizFormFields;
