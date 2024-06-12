@@ -27,6 +27,7 @@ import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
 import Code from './Code';
 import QuizFormFields from './QuizFormFields';
+import IssueModal from './IssueModal';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -139,31 +140,34 @@ const QuizForm = () => {
   }, []);
   return qNum > answersRecord.length ? null : (
     <div className="flex flex-col mt-4">
-      <div className="flex gap-3 items-center mb-2">
-        <h1 className="flex text-2xl">
-          Question #
-          {qNum + 1}
-        </h1>
-        <div className={cn('flex gap-0.5 h-[24px]', {
-          'text-red-800 dark:text-red-600': isAnsweredIncorrectly,
-          'text-green-800 dark:text-green-700': isAnsweredCorrectly,
-        })}
-        >
-          {isAnsweredIncorrectly ? (
-            <>
-              &mdash;
-              <XCircle />
-              Incorrect
-            </>
-          ) : null}
-          {isAnsweredCorrectly ? (
-            <>
-              &mdash;
-              <CheckCircle />
-              Correct
-            </>
-          ) : null}
+      <div className="flex justify-between">
+        <div className="flex gap-3 items-center mb-2">
+          <h1 className="flex text-2xl">
+            Question #
+            {qNum + 1}
+          </h1>
+          <div className={cn('flex gap-0.5 h-[24px]', {
+            'text-red-800 dark:text-red-600': isAnsweredIncorrectly,
+            'text-green-800 dark:text-green-700': isAnsweredCorrectly,
+          })}
+          >
+            {isAnsweredIncorrectly ? (
+              <>
+                &mdash;
+                <XCircle />
+                Incorrect
+              </>
+            ) : null}
+            {isAnsweredCorrectly ? (
+              <>
+                &mdash;
+                <CheckCircle />
+                Correct
+              </>
+            ) : null}
+          </div>
         </div>
+        <IssueModal id="quiz-id" />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>

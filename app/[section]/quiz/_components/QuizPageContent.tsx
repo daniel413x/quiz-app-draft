@@ -32,7 +32,7 @@ const QuizPageContent = () => {
   }, []);
   return (
     // consider className="max-w-2xl m-auto"
-    <main>
+    <main className="max-w-3xl m-auto">
       <div className="flex justify-between items-end">
         <Timer timer={timer} />
         <Progress />

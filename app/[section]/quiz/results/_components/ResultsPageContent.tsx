@@ -151,7 +151,8 @@ const ResultsPageContent = () => {
                     ) : null}
                     <div className="flex flex-col gap-2">
                       {q.answers.map((a) => (
-                        <div className="flex relative gap-4" key={a.id}>
+                        // overflow-x-auto to catch katex overflow
+                        <div className="flex relative gap-4 overflow-x-auto" key={a.id}>
                           <div className={cn('shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1 dark:bg-black/75 dark:border-secondary', {
                             'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': answersRecord[i].includes(a.id),
                             'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,

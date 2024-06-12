@@ -15507,18 +15507,6 @@ print(make_sound(cat))`,
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Why might batch normalization reduce the need for dropout in some networks?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because it helps in regularizing the model and reducing overfitting']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because it directly increases the model complexity but decreases the bias']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because it eliminates the need for activation functions by abstracting linearity']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because it normalizes the input data by filtering out falsy objects']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'What additional parameters are introduced in a layer when batch normalization is applied?'],
       ],
       answers: [
@@ -18647,6 +18635,342 @@ print(capitalized)`,
     name: 'Machine Learning',
     questions: [
       {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why might batch normalization reduce the need for dropout in some networks?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because it helps in regularizing the model and reducing overfitting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because it directly increases the model complexity but decreases the bias']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because it eliminates the need for activation functions by abstracting linearity']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because it normalizes the input data by filtering out falsy objects']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the typical range for normalized input values in neural networks?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Between 0 and 1 or -1 and 1']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Between 0 and 255']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Between 1 and 10']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Between -10 and 10']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For a grayscale image of size 28x28 pixels, the magnitude of the input vector would be equal to'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '784 elements']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '28 elements']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '56 elements']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '112 elements']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What would be the dimensions of the weight matrix for a layer with 128 neurons receiving input from 784 features?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '784 rows and 128 columns']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '128 rows and 784 columns']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '128 rows and 128 columns']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '784 rows and 784 columns']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the last hidden layer of a neural network has 64 neurons and there are 10 output classes, what are the dimensions of the weight matrix for the output layer?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '64 rows and 10 columns']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '10 rows and 64 columns']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '64 rows and 64 columns']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '10 rows and 10 columns']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is normalization important for input vectors in neural networks?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It helps stabilize and speed up the training process']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It reduces the number of features in the input data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It increases the complexity of the model']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It helps in regularization']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a fully connected neural network layer, what determines the number of rows in the weight matrix?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The number of input features or neurons from the previous layer']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The number of output classes']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The learning rate']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The number of epochs']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does each column in a weight matrix represent in a fully connected neural network layer?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The weights corresponding to a single neuron in the next layer']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The weights corresponding to a single input feature']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The biases of the neurons']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The output classes']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does increasing the number of features in the input vector affect the dimensions of the weight matrix?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It increases the number of rows in the weight matrix']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It increases the number of columns in the weight matrix']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It decreases the number of rows in the weight matrix']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It decreases the number of columns in the weight matrix']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The rows x columns of the weight matrix'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The architecture of the neural network']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The number of input features']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The number of training epochs']], order: 2 },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Answers 1 and 2']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For a network with an input layer of 784 features and a hidden layer of 128 neurons, the weight matrix will be ______. Between a hidden layer of 128 neurons and another hidden layer of 64 neurons, the weight matrix will be ______.'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '784×128, 128×64']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '128×64, 784×128']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '784×128, 784×64']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dependent on the number of training epochs, independent of the number of training epochs']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The dimensions of a weight matrix'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Are dependent on the number of neurons (or features) in the connected layers']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Are independent of the number of neurons (or features) in the connected layers']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are dependent on the number of training epochs']], order: 2 },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Answers 1 and 2']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The number of columns in a neural network weight matrix signifies'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The number of neurons in the layer the weights are connecting to']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The number of input features across all layers/neurons']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The number of rows in the weight matrix']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The number of training epochs']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In neural network terminology, what is an epoch?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'One complete pass through the entire training dataset']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'One forward pass through the entire training dataset']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'One backward pass through the entire training dataset']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'One iteration of weight updates']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For a grayscale image of size 28x28 pixels (such as MNIST dataset), the magnitude of the input vector would be one for each pixel, or'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '784 elements']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '785 elements']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '783 elements']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '786 elements']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For image data, pixel values are often normalized from a range of'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '0-255 to 0-1']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '0-255 to 0-100']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '0-255 to percentages']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '0-255 to 0-10']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of the transformer architecture in machine learning?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To handle sequential data with parallel processing capabilities']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To improve convolutional operations in image processing']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To reduce the complexity of decision trees']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To increase the depth of neural networks without overfitting']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What key innovation allows transformers to process data in parallel?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Self-attention mechanism']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent neural networks']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional layers']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dropout regularization']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which components make up a single transformer encoder layer?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Self-attention layer followed by a feed-forward neural network']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'LSTM layer followed by a softmax layer and backpropagation']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional layer followed by a single-threaded max-pooling layer']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Recurrent layer followed by a fully connected Tanh activation layer']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does the self-attention mechanism work in a transformer model?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It computes a weighted sum of all input positions for each position']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It processes data sequentially, similar to RNNs']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It performs dimensionality reduction on the input features']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It applies recursive convolutional operations to the input data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The mechanism that provides information about the position of words in the input sequence, which is otherwise lost due to parallel processing, is called'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Positional encoding']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Input data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Long sequence data handling']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Gradient flow']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is the transformer architecture particularly well-suited for tasks in natural language processing?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because it can process entire sequences in parallel and capture long-range dependencies']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because it relies on convolutional operations which are efficient for text data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because it has a fixed-size input and output']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because it uses a recurrent structure to handle sequences']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of transformers, what is "multi-head attention"?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A mechanism that allows the model to jointly attend to information from different representation subspaces']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A technique to increase the number of layers in the model']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A method to handle multiple input sequences simultaneously']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A way to concatenate multiple models together']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What role does layer normalization play in the transformer architecture?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It stabilizes and accelerates the training process by normalizing the inputs of each layer']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It reduces the dimensionality of the input data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It performs regularization to prevent overfitting']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It introduces non-linearity into the model']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Layer normalization works by'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Normalizing the inputs of each layer']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reducing the dimensionality of the input data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Performing regularization to prevent overfitting']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Introducing non-linearity into the model']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do transformers handle long-term dependencies in sequences compared to RNNs?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers can directly attend to any part of the sequence using self-attention, whereas RNNs must traverse the sequence step by step']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Transformers rely on convolutional layers to capture dependencies, while RNNs use recurrent connections']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers ignore long-term dependencies and focus on local context only']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers use fixed-size windows to process sequences']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a significant advantage of the transformer architecture over traditional RNNs?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers allow for parallel processing of the input data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Transformers are easier to implement for small datasets']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers have fewer parameters to train']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers use less memory during training']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a significant advantage of parallel processing?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It speeds up training and inference times']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It makes it easier to implement small datasets']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It allows models to train on fewer hyperparameters']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It allows models to use less memory during training']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'Which kind of machine learning model is illustrated below?']],
         image: classificationModel,
         answers: [
@@ -18730,7 +19054,7 @@ print(capitalized)`,
       {
         question: [[QuizMarkdownType.TEXT, 'What is the bias-variance trade-off?']],
         answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The balance between minimizing bias and minimizing variance to achieve better model performance']] },
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The balance between minimizing bias and minimizing variance']] },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'The trade-off between training error and test error']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'The trade-off between model complexity and training time']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'The balance between the amount of training data and the number of features']] },
@@ -18944,6 +19268,16 @@ print(capitalized)`,
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'To increase the size of the training dataset']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'To visualize the training process']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'To preprocess the input data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Early stopping in the context of using a validation set is stopping the training process when']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Performance on the validation set starts to degrade']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A fixed number of epochs has been achieved']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The loss function is reduced to an absolute minimum']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The model achieves zero error']] },
         ],
         correctAnswer: '0',
       },
@@ -20101,7 +20435,7 @@ print(capitalized)`,
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Compose what are referred to as layers']] },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'Compose what are referred to as features']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'Are a synonym for "features"']] },
-          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Are the model\'s hardware']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Are the model\'s physical worker machines']] },
         ],
         correctAnswer: '0',
       },
@@ -27930,6 +28264,53 @@ print(capitalized)`,
         question: [
           [
             QuizMarkdownType.TEXT,
+            'Which of the following is a commonly used activation function?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'ReLU (Rectified Linear Unit)',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Principal Component Analysis',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'K-means',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Gradient Descent',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'What is a feedforward neural network?',
           ],
         ],
@@ -27948,7 +28329,7 @@ print(capitalized)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'A neural network that includes loops',
+                'A neural network that includes loops and convolutional layers',
               ],
             ],
           },
@@ -30041,31 +30422,81 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'To achieve optimization at compilation and runtime'],
+              [QuizMarkdownType.TEXT, 'To achieve optimization at compilation and runtime'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'To handle errors on methods such as onErrorResume'],
+              [QuizMarkdownType.TEXT, 'To handle errors on methods such as'],
+              [QuizMarkdownType.INLINE_CODE, 'onErrorResume'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'To finalize objects for garbage collection'],
+              [QuizMarkdownType.TEXT, 'To finalize objects for garbage collection'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'To achieve non-blocking runtimes'],
+              [QuizMarkdownType.TEXT, 'To achieve non-blocking runtimes'],
             ],
           },
         ],
         correctAnswer: '3',
       },
-
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Consider the following handler,'],
+          [QuizMarkdownType.CODE, `public Mono<ServerResponse> getUserOrders(ServerRequest req) {
+    String authorizationHeader = req.headers().firstHeader("Authorization");
+    return this.getAuth0IdFromToken(authorizationHeader)
+            .flatMap(auth0Id -> {
+                PageRequest pageRequest = this.getPageRequest(req);
+                Flux<Order> ordersFlux = ordersRepository.findAllByUserId(auth0Id, pageRequest);
+                Mono<Long> count = ordersRepository.findAllByUserId(auth0Id, Pageable.unpaged()).count();
+                // A method is missing here
+                return ordersFlux.______()
+                // A method is missing here
+                        .zipWith(count, (list, cnt) -> OrdersGETReq.fromOrders(list, pageRequest, cnt))
+                        .flatMap(dtoMono -> dtoMono)
+                        .flatMap(dto -> ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(dto));
+            });
+}`],
+          [QuizMarkdownType.TEXT, 'What method is missing from the line'],
+          [QuizMarkdownType.INLINE_CODE, 'return ordersFlux'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collectList'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'sorted'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'collect'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'concat'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'Which method would you use to sort the elements of a stream in natural order?'],
@@ -45873,9 +46304,173 @@ List<String> upperCaseNames = names.stream()
       },
     ],
   },
+  // ==================
   'linear-algebra': {
     name: 'Linear Algebra',
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is NOT a possible operation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiply a vector by a matrix that has the same number of rows as the vector'],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiply a vector by a matrix that has a different number of rows than than the vector'],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiply a matrix by a matrix where both have the same number of rows'],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'All of the above'],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is a possible operation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiply a vector by a matrix'],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiply a vector by a vector'],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiply a matrix by a matrix'],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'All of the above'],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the term for the "rows x columns" count of a matrix?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Order'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Magnitude'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Size'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Shape'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The number of elements in a vector is also know as the'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Magnitude of the vector']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Dimensionality of the vector']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Vector 3d space']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Vector-matrix number']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For an image classification machine learning model, a grayscale image of size 28x28 pixels (such as MNIST dataset) would have an input vector of 784 elements, or one for each pixel. This is also known as the'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Magnitude of the vector']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Dimensionality of the vector']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Vector 3d space']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Vector-matrix number']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the result of multiplying the matrix'],
+          [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, 'by the vector'],
+          [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
@@ -45911,614 +46506,6 @@ List<String> upperCaseNames = names.stream()
           },
         ],
         correctAnswer: '3',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'In Unix-like operating systems, what is the default file descriptor number for standard input (stdin)?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '1'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '2'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '3'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What file descriptor number is used for standard output (stdout) in Unix-like operating systems?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '1'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '2'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '3'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the default behavior of the pipe (|) operator in Unix-like operating systems?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It concatenates two strings'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It redirects standard output from one command to standard input of another command'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It compares two files'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It terminates a process'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which command would you use to redirect both standard output and standard error to the same file?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > file 2>&1'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > file'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command &> file'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to pass the output of `ls` as input to the `grep` command to find files containing "txt"?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls | grep txt'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls > grep txt'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls < grep txt'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls & grep txt'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What command would you use to redirect only standard error to a file named "error.log"?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2> error.log'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > error.log'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command &> error.log'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2>> error.log'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which file descriptor is used for standard error (stderr) in Unix-like operating systems?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '1'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '2'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, '3'],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'In the command `command > file`, what happens to the output of the command?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It is appended to the file'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It is written to the file, overwriting any existing content'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It is displayed on the terminal and written to the file'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It is discarded'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to count the number of lines in a file named "example.txt"?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'cat example.txt | wc -l'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'wc -l example.txt'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'grep -c . example.txt'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'count -l example.txt'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What happens when you use the `command > file 2>&1` syntax in Unix-like operating systems?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Standard output and standard error are both redirected to the same file'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Only standard output is redirected to the file'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Only standard error is redirected to the file'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Standard output and standard error are both discarded'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to filter the output of a command and only display lines containing the word "error"?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command | grep error'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > grep error'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command & grep error'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command < grep error'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'In Unix-like systems, how would you redirect both stdout and stderr to different files?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > stdout.log 2> stderr.log'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2>&1 > logfile'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command &> logfile'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > logfile 2>&1'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What command would you use to append the output of a command to a file without overwriting it?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command >> file'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > file'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 1> file'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'In Unix-like systems, how do you use the pipe operator to pass the output of `ps` to `sort` and then to `head` to display the top 10 processes by memory usage?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ps aux | sort -rk 4 | head'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ps aux | head | sort -rk 4'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ps aux | sort -rk 4 > head'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ps aux | head -10 | sort -rk 4'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to find the number of files in the current directory?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls | wc -l'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls | grep -c .'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls | count'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'ls | find -type f'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the effect of using `2>&1` in a Unix-like system command?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It redirects stderr to the same location as stdout'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It redirects stdout to the same location as stderr'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It appends stderr to stdout'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It redirects both stdout and stderr to a file'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which command would you use to filter out error messages and only display the standard output of a command?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2>/dev/null'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command >/dev/null'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command &>/dev/null'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 1>/dev/null'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What happens when you use the `tee` command in combination with a pipe?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It allows the output to be both displayed on the terminal and saved to a file'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It redirects stderr to stdout'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It appends the output to a file'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It filters the output'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which command would you use to redirect both stdout and stderr to the terminal and a file simultaneously?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2>&1 | tee file'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command > file'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'command &> file'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
       },
 
       {
@@ -51298,6 +51285,615 @@ var B = [
   'shell-scripting': {
     name: 'Shell Scripting',
     questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In Unix-like operating systems, what is the default file descriptor number for standard input (stdin)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '3'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What file descriptor number is used for standard output (stdout) in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '3'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the default behavior of the pipe (|) operator in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It concatenates two strings'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects standard output from one command to standard input of another command'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It compares two files'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It terminates a process'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to redirect both standard output and standard error to the same file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file 2>&1'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to pass the output of `ls` as input to the `grep` command to find files containing "txt"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | grep txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls > grep txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls < grep txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls & grep txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What command would you use to redirect only standard error to a file named "error.log"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> error.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > error.log'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> error.log'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>> error.log'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which file descriptor is used for standard error (stderr) in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '3'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the command `command > file`, what happens to the output of the command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is appended to the file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is written to the file, overwriting any existing content'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is displayed on the terminal and written to the file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is discarded'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to count the number of lines in a file named "example.txt"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'cat example.txt | wc -l'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'wc -l example.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'grep -c . example.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'count -l example.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens when you use the `command > file 2>&1` syntax in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard output and standard error are both redirected to the same file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Only standard output is redirected to the file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Only standard error is redirected to the file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard output and standard error are both discarded'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to filter the output of a command and only display lines containing the word "error"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command | grep error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > grep error'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command & grep error'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command < grep error'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In Unix-like systems, how would you redirect both stdout and stderr to different files?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > stdout.log 2> stderr.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>&1 > logfile'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> logfile'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > logfile 2>&1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What command would you use to append the output of a command to a file without overwriting it?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command >> file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 1> file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In Unix-like systems, how do you use the pipe operator to pass the output of `ps` to `sort` and then to `head` to display the top 10 processes by memory usage?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | sort -rk 4 | head'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | head | sort -rk 4'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | sort -rk 4 > head'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ps aux | head -10 | sort -rk 4'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you use the pipe operator to find the number of files in the current directory?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | wc -l'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | grep -c .'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | count'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ls | find -type f'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of using `2>&1` in a Unix-like system command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects stderr to the same location as stdout'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects stdout to the same location as stderr'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It appends stderr to stdout'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects both stdout and stderr to a file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to filter out error messages and only display the standard output of a command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>/dev/null'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command >/dev/null'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &>/dev/null'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 1>/dev/null'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens when you use the `tee` command in combination with a pipe?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It allows the output to be both displayed on the terminal and saved to a file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It redirects stderr to stdout'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It appends the output to a file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters the output'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to redirect both stdout and stderr to the terminal and a file simultaneously?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2>&1 | tee file'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command > file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command 2> file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'command &> file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [
