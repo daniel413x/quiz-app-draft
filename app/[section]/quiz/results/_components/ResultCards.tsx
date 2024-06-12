@@ -1,0 +1,90 @@
+import {
+  Card, CardContent, CardHeader, CardTitle,
+} from '@/components/ui/common/shadcn/card';
+import { cn } from '@/lib/utils';
+import {
+  CheckCircle, MessageCircleQuestion,
+} from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/common/shadcn/button';
+import { Separator } from '@/components/ui/common/shadcn/separator';
+import { Question } from '@/lib/quiz-data';
+import Code from '../../_components/Code';
+import { renderMarkdown } from '../../_components/_utils';
+
+interface ResultCardsProps {
+  questions: (Question | 0)[];
+  answersRecord: string[][];
+}
+
+const ResultCards = ({
+  questions,
+  answersRecord,
+}: ResultCardsProps) => (
+  <ul className="grid md:grid-cols-2 2xl:grid-cols-2 gap-8">
+    {questions
+    // if 0, result is filtered
+      .map((q, i) => (q === 0 ? null : (
+        <li key={i}>
+          {/* md:w-[500px] md:max-w-full — account for results lists with a length of < 2 rendering a bad grid */}
+          <Card className={cn('md:w-[500px] md:max-w-full relative shadow-md pt-2 pb-5 border-2 border-transparent', {
+            'border-red-300 border-2': answersRecord[i].length > 1,
+          })}
+          >
+            <Button
+              className="absolute border rounded-full -right-1.5 -top-1.5 bg-card w-14 h-14"
+              variant="ghost"
+            >
+              <MessageCircleQuestion className="text-blue-600" />
+            </Button>
+            <CardHeader>
+              <CardTitle>
+                {`Question #${i + 1}`}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col gap-4">
+              <Separator className="w-1/2" />
+              <span className="font-regular text-gray-600">
+                <span className="text-2xl text-gray-600/50 mr-1.5">
+                  Q
+                  {': '}
+                </span>
+                {renderMarkdown(q.question)}
+              </span>
+              {!q.image ? null : (
+                <Image src={q.image} width={200} height={200} alt="" />
+              )}
+              {q.code ? (
+                <Code code={q.code} />
+              ) : null}
+              <div className="flex flex-col gap-2">
+                {q.answers.map((a) => (
+                  // overflow-x-auto to catch katex overflow
+                  <div className="flex relative gap-4 overflow-x-auto" key={a.id}>
+                    <div className={cn('shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1 dark:bg-black/75 dark:border-secondary', {
+                      'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': answersRecord[i].includes(a.id),
+                      'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
+                    })}
+                    />
+                    <div className={cn('flex', {
+                      'text-green-700': answersRecord[i].includes(a.id),
+                      'text-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
+                      '[word-break:break-all]': a.answer?.map((qmd) => qmd[1]).join(' ').split(' ')[0].length > 25,
+                    })}
+                    >
+                      <span>
+                        {renderMarkdown(a.answer)}
+                      </span>
+                      {answersRecord[i].includes(a.id) && a.id === q.correctAnswer ? <CheckCircle className="ml-1 shrink-0" /> : null}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </li>
+      )))}
+  </ul>
+);
+
+export default ResultCards;

@@ -64,7 +64,7 @@ const QuizFormFields = forwardRef(({
                   key={answer.id}
                 >
                   <div
-                    className={cn(buttonVariants({ variant: 'outline', className: 'flex w-full text-wrap justify-start space-x-3 border-2 border-black/5 dark:border-gray-800 shadow-sm px-4 py-3 cursor-pointer group h-max' }), {
+                    className={cn(buttonVariants({ variant: 'outline', className: 'flex w-full text-wrap justify-start space-x-3 border border-black/75 dark:border-2 dark:border-black/5 dark:border-gray-800 shadow-sm px-4 py-3 cursor-pointer group h-max' }), {
                       'bg-accent': answer.id === formAnswer,
                       'bg-green-100 hover:bg-green-100 dark:text-black': isCorrectAnswer,
                       'bg-red-100 hover:bg-red-100 dark:bg-red-300 dark:text-red-800': isWrongAnswer,

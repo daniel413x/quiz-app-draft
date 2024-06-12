@@ -1,24 +1,22 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
-  Card, CardContent, CardHeader, CardTitle,
+  Card, CardContent,
 } from '@/components/ui/common/shadcn/card';
 import { cn } from '@/lib/utils';
 import {
-  CheckCircle, ChevronLeft, MessageCircleQuestion, RefreshCcw,
+  ChevronLeft, RefreshCcw,
 } from 'lucide-react';
-import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Button, buttonVariants } from '@/components/ui/common/shadcn/button';
-import { Separator } from '@/components/ui/common/shadcn/separator';
+import { buttonVariants } from '@/components/ui/common/shadcn/button';
 import Timer from '../../_components/Timer';
 import useUserQuizData from '../../_hooks/useUserQuizData';
 import { useTimer } from '../../_hooks/useTimer';
 import { timerStartMs } from '../../_consts';
-import Code from '../../_components/Code';
-import { renderMarkdown } from '../../_components/_utils';
+import ResultCards from './ResultCards';
+import FilterOptions, { DEFAULT, INCORRECT_ONLY } from './FilterOptions';
 
 const ResultsPageContent = () => {
   const section = useParams().section;
@@ -43,10 +41,6 @@ const ResultsPageContent = () => {
       reset();
     };
   }, []);
-  if (answersRecord.length === 0) {
-    router.back();
-    return;
-  }
   let answeredCorrectly = answersRecord.length;
   answersRecord.forEach((a) => {
     if (a.length > 1) {
@@ -54,6 +48,21 @@ const ResultsPageContent = () => {
     }
   });
   const grade = ((answeredCorrectly / questions.length) * 100);
+  const [filter, setFilter] = useState<string>(DEFAULT);
+  const filteredQuestionss = questions.map((q, i) => {
+    if (filter === INCORRECT_ONLY) {
+      if (answersRecord[i].length > 1) {
+        return q;
+      }
+      // result is filtered/not rendered
+      return 0;
+    }
+    return q;
+  });
+  if (answersRecord.length === 0) {
+    router.back();
+    return;
+  }
   return (
     <main className="flex flex-col items-center justify-between">
       <div className="flex flex-col gap-6">
@@ -113,70 +122,19 @@ const ResultsPageContent = () => {
           </CardContent>
         </Card>
         <div className="flex flex-col">
-          <h2 className="text-2xl mb-3">
-            Answers:
-          </h2>
-          <ul className="grid md:grid-cols-2 2xl:grid-cols-2 gap-8">
-            {questions.map((q, i) => (
-              <li key={i}>
-                <Card className={cn('relative shadow-md pt-2 pb-5', {
-                  'border-red-300 border-2': answersRecord[i].length > 1,
-                })}
-                >
-                  <Button
-                    className="absolute border rounded-full -right-1.5 -top-1.5 bg-card w-14 h-14"
-                    variant="ghost"
-                  >
-                    <MessageCircleQuestion className="text-blue-600" />
-                  </Button>
-                  <CardHeader>
-                    <CardTitle>
-                      {`Question #${i + 1}`}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-col gap-4">
-                    <Separator className="w-1/2" />
-                    <span className="font-regular text-gray-600">
-                      <span className="text-2xl text-gray-600/50 mr-1.5">
-                        Q
-                        {': '}
-                      </span>
-                      {renderMarkdown(q.question)}
-                    </span>
-                    {!q.image ? null : (
-                      <Image src={q.image} width={200} height={200} alt="" />
-                    )}
-                    {q.code ? (
-                      <Code code={q.code} />
-                    ) : null}
-                    <div className="flex flex-col gap-2">
-                      {q.answers.map((a) => (
-                        // overflow-x-auto to catch katex overflow
-                        <div className="flex relative gap-4 overflow-x-auto" key={a.id}>
-                          <div className={cn('shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1 dark:bg-black/75 dark:border-secondary', {
-                            'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': answersRecord[i].includes(a.id),
-                            'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
-                          })}
-                          />
-                          <div className={cn('flex', {
-                            'text-green-700': answersRecord[i].includes(a.id),
-                            'text-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
-                            '[word-break:break-all]': a.answer?.map((qmd) => qmd[1]).join(' ').split(' ')[0].length > 25,
-                          })}
-                          >
-                            <span>
-                              {renderMarkdown(a.answer)}
-                            </span>
-                            {answersRecord[i].includes(a.id) && a.id === q.correctAnswer ? <CheckCircle className="ml-1 shrink-0" /> : null}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-2 mb-3">
+            <h2 className="text-2xl">
+              Answers:
+            </h2>
+            <FilterOptions
+              filter={filter}
+              setFilter={setFilter}
+            />
+          </div>
+          <ResultCards
+            questions={filteredQuestionss}
+            answersRecord={answersRecord}
+          />
         </div>
       </div>
       <Link

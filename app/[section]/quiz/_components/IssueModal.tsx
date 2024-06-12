@@ -99,7 +99,7 @@ const IssueModal = ({
           </div>
         ) : (
           <Form {...form}>
-            <FormDescription className="text-center">
+            <FormDescription className="text-center underline">
               What is the issue you are observing?
             </FormDescription>
             <form onSubmit={form.handleSubmit(onSubmit)}>
