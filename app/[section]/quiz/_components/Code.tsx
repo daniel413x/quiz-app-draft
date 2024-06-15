@@ -15,8 +15,8 @@ const Code = ({
 }: CodeProps) => (
   <div>
     <CopyButton code={code} />
-    <code className="text-sm text-emerald-800">
-      <pre className={cn(courierP.className, 'text-sm bg-black text-emerald-500 mt-4 mb-1 py-12 ps-14 overflow-x-auto')}>
+    <code className="w-full text-sm text-emerald-800">
+      <pre className={cn(courierP.className, 'max-w-full text-sm bg-black text-emerald-500 mt-4 mb-1 py-12 ps-14 overflow-x-auto')}>
         {code}
       </pre>
     </code>

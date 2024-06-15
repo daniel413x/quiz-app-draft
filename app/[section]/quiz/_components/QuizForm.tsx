@@ -167,7 +167,7 @@ const QuizForm = () => {
             ) : null}
           </div>
         </div>
-        <IssueModal id="quiz-id" />
+        <IssueModal id={String(qNum)} />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>

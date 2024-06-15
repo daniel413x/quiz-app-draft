@@ -25,7 +25,7 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
   <RadioGroupPrimitive.Item
     ref={ref}
     className={cn(
-      'aspect-square h-8 w-8 rounded-full border border-black text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-400 dark:group-hover:bg-gray-900 group-hover:bg-white transition-all   ',
+      'aspect-square h-8 w-8 rounded-full border border-black text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-400 dark:group-hover:bg-gray-900 group-hover:bg-white transition-all',
       className,
     )}
     {...props}

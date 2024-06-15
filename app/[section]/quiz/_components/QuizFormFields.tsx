@@ -43,7 +43,7 @@ const QuizFormFields = forwardRef(({
       render={() => (
         <FormItem>
           <RadioGroup
-            className={cn('p-4', {
+            className={cn('flex flex-col max-w-full p-2 sm:p-4 sm:ps-9', {
               'bg-green-50/50 dark:bg-green-50/25': isAnsweredCorrectly,
               'bg-red-50 dark:bg-red-400': isAnsweredIncorrectly,
             })}
@@ -54,37 +54,51 @@ const QuizFormFields = forwardRef(({
             {answers.map((answer, i) => {
               const isWrongAnswer = answer.id === submittedAnswer && isAnsweredIncorrectly && !isAnsweredCorrectly;
               const isCorrectAnswer = answer.id === submittedAnswer && isAnsweredCorrectly;
-              const qmd = renderMarkdown(answer.answer);
+              const qmd = renderMarkdown(answer.answer, {
+                isCorrectAnswer,
+              });
               return (
                 <Label
-                  className={cn('flex w-full cursor-pointer whitespace-normal [line-height:2] h-full max-h-full', {
+                  className={cn('relative flex items-center gap-3 w-full cursor-pointer whitespace-normal [line-height:2] h-full max-h-full', {
                     'pointer-events-none': isAnsweredCorrectly,
                   })}
                   htmlFor={answer.id}
                   key={answer.id}
                 >
-                  <div
-                    className={cn(buttonVariants({ variant: 'outline', className: 'flex w-full text-wrap justify-start space-x-3 border border-black/75 dark:border-2 dark:border-black/5 dark:border-gray-800 shadow-sm px-4 py-3 cursor-pointer group h-max' }), {
+                  <span className={cn('absolute -left-5 text-gray-600 dark:text-gray-500 text-xs flex', {
+                    'dark:text-gray-400': isAnsweredCorrectly,
+                    'dark:text-black': isAnsweredIncorrectly,
+                  })}
+                  >
+                    {i + 1}
+                    &#46;
+                    {' '}
+                  </span>
+                  {/* flex-row-reverse: better copy/pasting ux because it deals with the unneeded flow of the div element */}
+                  <span
+                    className={cn(buttonVariants({ variant: 'outline', className: 'relative flex flex-row-reverse w-full text-wrap justify-start border border-black/75  dark:border-gray-700 shadow-sm ps-16 pe-5 py-[1.375rem] cursor-pointer group h-max ' }), {
                       'bg-accent': answer.id === formAnswer,
                       'bg-green-100 hover:bg-green-100 dark:text-black': isCorrectAnswer,
                       'bg-red-100 hover:bg-red-100 dark:bg-red-300 dark:text-red-800': isWrongAnswer,
                       'opacity-50': isAnsweredCorrectly && submittedAnswer !== answer.id,
                     })}
                   >
-                    <RadioGroupItem
-                      checked={answer.id === form.watch('answer')}
-                      value={answer.id}
-                      id={answer.id}
-                      ref={i === 0 ? firstRadioButtonRef : undefined}
-                      className={isWrongAnswer ? 'dark:border-red-800 dark:group-hover:bg-red-300' : ''}
-                    />
-                    <span className={cn({
+                    <span className={cn('w-full', {
                       'dark:text-black': isCorrectAnswer,
                     })}
                     >
                       {qmd}
                     </span>
-                  </div>
+                    <RadioGroupItem
+                      checked={answer.id === form.watch('answer')}
+                      value={answer.id}
+                      id={answer.id}
+                      ref={i === 0 ? firstRadioButtonRef : undefined}
+                      className={cn('absolute left-5 me-2', {
+                        'dark:border-red-800 dark:group-hover:bg-red-300': isWrongAnswer,
+                      })}
+                    />
+                  </span>
                 </Label>
               );
             })}

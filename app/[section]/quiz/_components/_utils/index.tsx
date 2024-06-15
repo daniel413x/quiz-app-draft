@@ -3,6 +3,7 @@ import {
 } from '@/lib/quiz-data';
 import shuffle from 'lodash/shuffle';
 import { BlockMath, InlineMath } from 'react-katex';
+import { cn } from '@/lib/utils';
 import { numOfQuestions } from '../../_consts';
 import Code from '../Code';
 import InlineCode from '../InlineCode';
@@ -14,7 +15,11 @@ export const shuffleQuestions = (questions: Question[]) => shuffle(questions.map
   return { ...q, answers };
 })).slice(0, numOfQuestions);
 
-export const renderMarkdown = (qmd: QuizMarkdownTuple[]) => qmd.map((tuple, i) => {
+export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
+  isAnsweredIncorrectly?: boolean;
+  isAnsweredCorrectly?: boolean;
+  isCorrectAnswer?: boolean;
+}) => qmd.map((tuple, i) => {
   if (tuple[0] === QuizMarkdownType.TEXT) {
     return (
       <span key={i}>
@@ -24,16 +29,28 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[]) => qmd.map((tuple, i) =
   }
   if (tuple[0] === QuizMarkdownType.INLINE_KATEX) {
     return (
-      <span className="px-1 text-black dark:text-white" key={i}>
+      <span
+        className={cn('px-0.5 text-black dark:text-white', {
+          'dark:text-gray-900': params?.isCorrectAnswer,
+        })}
+        key={i}
+      >
+        {' '}
         <InlineMath>
           {tuple[1]}
         </InlineMath>
+        {' '}
       </span>
     );
   }
   if (tuple[0] === QuizMarkdownType.KATEX) {
     return (
-      <span className="text-black dark:text-white" key={i}>
+      <span
+        className={cn('text-black dark:text-white', {
+          'dark:text-gray-900': params?.isCorrectAnswer,
+        })}
+        key={i}
+      >
         <BlockMath>
           {tuple[1]}
         </BlockMath>

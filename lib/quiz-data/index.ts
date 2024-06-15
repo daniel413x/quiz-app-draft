@@ -4892,6 +4892,404 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'What is the main advantage of using the'],
+          [QuizMarkdownType.INLINE_CODE, 'useEffect'],
+          [QuizMarkdownType.TEXT, 'hook in a React application over using an event listener listening to the'],
+          [QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded'],
+          [QuizMarkdownType.TEXT, 'event?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'useEffect is integrated with the React component lifecycle.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'useEffect executes before the DOM is fully loaded.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'useEffect can be used to listen to global events.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'useEffect already uses an event listener listening to \'DOMContentLoaded\'.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If both '],
+          [QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded'],
+          [QuizMarkdownType.TEXT, ' and '],
+          [QuizMarkdownType.INLINE_CODE, 'useEffect'],
+          [QuizMarkdownType.TEXT, ' are used in a React app\'s top-level component, which one executes first?'],
+          // DOMContentLoaded executes first because it fires once the initial HTML document is fully loaded and parsed, before React components finish rendering.
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The DOMContentLoaded event listener']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The useEffect hook']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Both execute simultaneously.']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is it generally not recommended to use the '],
+          [QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded'],
+          [QuizMarkdownType.TEXT, ' event listener in a React application to fetch data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because React provides the '], [QuizMarkdownType.INLINE_CODE, 'useEffect'], [QuizMarkdownType.TEXT, ' hook for handling side effects.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because the '], [QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded'], [QuizMarkdownType.TEXT, ' event does not work in React applications.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because it is not possible to fetch data using '], [QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded'], [QuizMarkdownType.TEXT, '.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because it will always execute before the '], [QuizMarkdownType.INLINE_CODE, 'useEffect'], [QuizMarkdownType.TEXT, ' hook.']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the'],
+          [QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded'],
+          [QuizMarkdownType.TEXT, 'event signify in a web application?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The HTML document has been fully loaded and parsed, but stylesheets, images, and subframes may not have finished loading.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'All resources including stylesheets, images, and subframes have finished loading.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The user has interacted with the page for the first time.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The JavaScript code has finished executing.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you sort an array of objects by a property value in ascending order?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.CODE, 'array.sort((a, b) => a.property - b.property)']] },
+          { id: '1', answer: [[QuizMarkdownType.CODE, 'array.sort((a, b) => b.property - a.property)']] },
+          { id: '2', answer: [[QuizMarkdownType.CODE, 'array.sort((a, b) => a.property.length - b.property.length)']] },
+          { id: '3', answer: [[QuizMarkdownType.CODE, 'array.sort((a, b) => b.property.length - a.property.length)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why might using'],
+          [QuizMarkdownType.INLINE_CODE, 'sort()'],
+          [QuizMarkdownType.TEXT, 'without a compare function give unexpected results for an array of numbers?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because the default sorting is lexicographical']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because the default sorting is based on length']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because the default sorting relies on integers']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because the default sorting is numerical']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code when using'],
+          [QuizMarkdownType.INLINE_CODE, 'sort()'],
+          [QuizMarkdownType.TEXT, 'with a compare function?'],
+          [QuizMarkdownType.CODE, `const numbers = [4, 2, 5, 1, 3];
+numbers.sort((a, b) => b - a);
+console.log(numbers);`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '[5, 4, 3, 2, 1]']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '[1, 2, 3, 4, 5]']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '[4, 2, 5, 1, 3]']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '[2, 3, 4, 5, 1]']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following compare functions will sort an array of strings in reverse alphabetical order?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.CODE, '(a, b) => b.localeCompare(a)']] },
+          { id: '1', answer: [[QuizMarkdownType.CODE, '(a, b) => a.localeCompare(b)']] },
+          { id: '2', answer: [[QuizMarkdownType.CODE, '(a, b) => a.length - b.length']] },
+          { id: '3', answer: [[QuizMarkdownType.CODE, '(a, b) => b.length - a.length']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the compare function in'],
+          [QuizMarkdownType.INLINE_CODE, 'Array.prototype.sort()'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To define the sort order of elements based on custom logic']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To filter elements during sorting']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To map elements to new values']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To join array elements into a string']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does the compare function used in'],
+          [QuizMarkdownType.INLINE_CODE, 'sort()'],
+          [QuizMarkdownType.TEXT, 'determine the order of elements?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It returns a negative, zero, or positive value to determine the order']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It returns true or false']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It returns the index of the elements']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It returns the length of the elements']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the result of sorting the following array of strings using'],
+          [QuizMarkdownType.INLINE_CODE, 'sort()'],
+          [QuizMarkdownType.TEXT, '?'],
+          [QuizMarkdownType.CODE, `const fruits = ['banana', 'apple', 'Cherry'];
+fruits.sort();
+console.log(fruits);`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '[\'Cherry\', \'apple\', \'banana\']']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '[\'apple\', \'banana\', \'Cherry\']']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '[\'banana\', \'Cherry\', \'apple\']']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '[\'apple\', \'Cherry\', \'banana\']']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you sort an array of numbers in ascending order?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.CODE, 'array.sort((a, b) => a - b)']] },
+          { id: '1', answer: [[QuizMarkdownType.CODE, 'array.sort((a, b) => b - a)']] },
+          { id: '2', answer: [[QuizMarkdownType.CODE, 'array.sort()']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the following code, what will be the output?'],
+          [QuizMarkdownType.CODE, `const numbers = [1, 30, 4, 21, 100000];
+numbers.sort();
+console.log(numbers);`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, '[1, 100000, 21, 30, 4]']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, '[1, 4, 21, 30, 100000]']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, '[100000, 1, 21, 30, 4]']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, '[1, 30, 4, 21, 100000]']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the default sorting order when using'],
+          [QuizMarkdownType.INLINE_CODE, 'Array.prototype.sort()'],
+          [QuizMarkdownType.TEXT, 'without a compare function?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Lexicographical (based on Unicode code points)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Numerical']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Chronological']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reverse lexicographical']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which JavaScript event is used to detect when the content of a webpage has fully loaded?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'load']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'ready']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'beforeunload']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which answer demonstrates type coercion?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '===']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '!!']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '!=']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'parseInt()']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which answer demonstrates type coercion?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '===']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '!!']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '!=']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'parseInt()']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the line of code'],
+          [QuizMarkdownType.INLINE_CODE, 'In the line of code'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '===']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '!!']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '!=']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'parseInt()']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which JavaScript event is used to ensure that the DOM is fully constructed before running scripts that depend on DOM elements?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'DOMContentLoaded']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'load']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'ready']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'beforeunload']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which JavaScript method can be used to dynamically add a new element to the DOM?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'document.createElement']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'document.getElementById']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'document.querySelector']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'document.write']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A useEffect hook defined with an empty dependency array in the top-level React component is most functionally similar to which of the following event listeners in a non-React context?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("load", function() {...})']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("DOMContentLoaded", function() {...})']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("ready", function() {...})']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("beforeunload", function() {...})']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A web developer must perform a certain action after the entire web page has loaded, including all stylesheets and images. Which event listener would best serve the web developer?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("load", function() {...})']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("DOMContentLoaded", function() {...})']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("ready", function() {...})']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("beforeunload", function() {...})']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you ensure that a script is executed only after the entire page has loaded?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("load", function() {...})']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("DOMContentLoaded", function() {...})']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("ready", function() {...})']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'window.addEventListener("beforeunload", function() {...})']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following methods can be used to prevent the default action of an event in JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'event.preventDefault()']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'event.stopPropagation()']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'event.stopImmediatePropagation()']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'event.cancelBubble']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following methods can be used to prevent the default action of an event in JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'event.preventDefault()']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'event.stopPropagation()']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'event.stopImmediatePropagation()']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'event.cancelBubble']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which JavaScript method can be used to change the content of an HTML element?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'element.innerHTML']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'element.innerText']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'element.content']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'element.value']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you add a class to an HTML element using JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'element.classList.add("classname")']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'element.addClass("classname")']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'element.className += " classname"']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'element.setAttribute("class", "classname")']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to stop event propagation in JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'event.stopPropagation()']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'event.preventDefault()']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'event.stopImmediatePropagation()']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'event.cancelBubble']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you listen for a click event on a button with the ID'],
+          [QuizMarkdownType.INLINE_CODE, 'myButton'],
+          [QuizMarkdownType.TEXT, 'using JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.CODE, 'document.getElementById("myButton").addEventListener("click", function() {...})']] },
+          { id: '1', answer: [[QuizMarkdownType.CODE, 'document.getElementById("myButton").on("click", function() {...})']] },
+          { id: '2', answer: [[QuizMarkdownType.CODE, 'document.querySelector("#myButton").on("click", function() {...})']] },
+          { id: '3', answer: [[QuizMarkdownType.CODE, 'document.querySelector("#myButton").click(function() {...})']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which JavaScript method is used to remove an existing HTML element from the DOM?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'element.remove()']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'element.delete()']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'element.removeChild()']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'element.discard()']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
           [
             QuizMarkdownType.TEXT,
             'Which principle is best described by the code below?',
@@ -6084,6 +6482,53 @@ myDog.speak(); // Dog barks`,
         question: [
           [
             QuizMarkdownType.TEXT,
+            'A critical component to encapsulation in JavaScript is ______',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'ES6',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Parameters',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Global scope',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Closures',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'What is the main purpose of the "async/await" syntax?',
           ],
         ],
@@ -6176,7 +6621,6 @@ console.log(typeof (f = foo.bar)());`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'Which of the following evaluates to NaN?'],
-          [QuizMarkdownType.CODE, 'parseInt("hello")'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'parseInt("hello")']] },
@@ -6289,6 +6733,83 @@ console.log(y);`],
               [
                 QuizMarkdownType.INLINE_CODE,
                 '"0.3"',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, 'console.log([] == []);'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'false']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'true']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'undefined']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'TypeError']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'What would be the best way to type arguments for the function',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'function theFunc() {}',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'if',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'theFunc',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'takes any number of arguments?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_CODE,
+                '(...args: any[])',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_CODE,
+                '(args: any[])',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_CODE,
+                '(args: any)',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.INLINE_CODE,
+                '(args: [...any])',
               ],
             ],
           },
@@ -10978,6 +11499,8 @@ a();`,
         question: [
           [
             QuizMarkdownType.TEXT,
+            // chatgpt says it is
+            // https://chatgpt.com/c/b7c63420-542b-4f82-9de5-41b572c9df54
             'The terms "callback queue" and "task queue" are interchangeable',
           ],
         ],
@@ -11412,7 +11935,7 @@ a();`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'By caching interpreted bytecode for reuse',
+                'By caching frequently interpreted bytecode for reuse',
               ],
             ],
           },
@@ -15554,7 +16077,7 @@ onmessage = function(event) {
             ],
           },
         ],
-        correctAnswer: '0',
+        correctAnswer: '1',
       },
       {
         question: [
@@ -15654,6 +16177,200 @@ onmessage = function(event) {
   python: {
     name: 'Python',
     questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens if the file specified in the'],
+          [QuizMarkdownType.INLINE_CODE, '"with"'],
+          [QuizMarkdownType.TEXT, 'statement does not exist?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An exception is raised'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A new file is created'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The program exits with an error'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Nothing happens'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'When opening a file with mode'],
+          [QuizMarkdownType.INLINE_CODE, '"w"'],
+          [QuizMarkdownType.TEXT, 'in a'],
+          [QuizMarkdownType.INLINE_CODE, '"with"'],
+          [QuizMarkdownType.TEXT, 'statement, what happens if the file already exists?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file is appended'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file is truncated and overwritten'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An error is raised'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file remains unchanged'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What ensures that the file is properly closed after the'],
+          [QuizMarkdownType.INLINE_CODE, '"with"'],
+          [QuizMarkdownType.TEXT, 'block is exited?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file is closed manually'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The'],
+              [QuizMarkdownType.INLINE_CODE, '"__exit__"'],
+              [QuizMarkdownType.TEXT, 'method of the context manager is called'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The Python interpreter closes it automatically'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file is not closed'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If an exception occurs inside a'],
+          [QuizMarkdownType.INLINE_CODE, '"with"'],
+          [QuizMarkdownType.TEXT, 'block, what happens to the file?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file remains open'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file is automatically closed'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The file is deleted'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An error is raised'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Consider the following code:'],
+          [QuizMarkdownType.CODE, `with open('example.txt', 'w') as file:
+  file.write('Hello, world!')`],
+          [QuizMarkdownType.TEXT, 'When the second argument of'],
+          [QuizMarkdownType.CODE, 'open'],
+          [QuizMarkdownType.TEXT, 'is'],
+          [QuizMarkdownType.CODE, '___'],
+          [QuizMarkdownType.TEXT, ', the command'],
+          [QuizMarkdownType.CODE, 'file.write'],
+          [QuizMarkdownType.TEXT, 'will overwrite the entire contents of file example.txt with the string'],
+          [QuizMarkdownType.CODE, '\'Hello, world!\''],
+          [QuizMarkdownType.TEXT, ', whereas when the second argument is'],
+          [QuizMarkdownType.CODE, '___'],
+          [QuizMarkdownType.TEXT, ', the command will append the string to the end of the file'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'w'],
+              [QuizMarkdownType.TEXT, ','],
+              [QuizMarkdownType.INLINE_CODE, 'a'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'a'],
+              [QuizMarkdownType.TEXT, ','],
+              [QuizMarkdownType.INLINE_CODE, 'w'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'a'],
+              [QuizMarkdownType.TEXT, ','],
+              [QuizMarkdownType.INLINE_CODE, 'o'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'o'],
+              [QuizMarkdownType.TEXT, ','],
+              [QuizMarkdownType.INLINE_CODE, 'a'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [[QuizMarkdownType.TEXT, 'What is the output of the following code?'], [QuizMarkdownType.CODE, 'type(\'text\')']],
         answers: [
@@ -15836,18 +16553,6 @@ print(make_sound(cat))`,
           },
         ],
         correctAnswer: '2',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What additional parameters are introduced in a layer when batch normalization is applied?'],
-        ],
-        answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Gamma and Beta parameters for scaling and shifting']] },
-          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Alpha and Omega parameters for gradient adjustment']] },
-          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Delta and Theta parameters for weight regularization']] },
-          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Mu and Sigma parameters for dropout']] },
-        ],
-        correctAnswer: '0',
       },
       {
         question: [
@@ -16511,7 +17216,15 @@ print(make_sound(cat))`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'What will be the output of the following code: `print("hello".capitalize())`?',
+            'What will be the output of',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'print("hello".capitalize())',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            '?',
           ],
         ],
         answers: [
@@ -16519,7 +17232,7 @@ print(make_sound(cat))`,
             id: '0',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'Hello',
               ],
             ],
@@ -16528,7 +17241,7 @@ print(make_sound(cat))`,
             id: '1',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'HELLO',
               ],
             ],
@@ -16537,7 +17250,7 @@ print(make_sound(cat))`,
             id: '2',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'hello',
               ],
             ],
@@ -16546,7 +17259,7 @@ print(make_sound(cat))`,
             id: '3',
             answer: [
               [
-                QuizMarkdownType.TEXT,
+                QuizMarkdownType.INLINE_CODE,
                 'HeLLo',
               ],
             ],
@@ -18473,6 +19186,7 @@ print(file.closed)`,
         ],
         correctAnswer: '1',
       },
+
       {
         question: [
           [
@@ -18480,16 +19194,32 @@ print(file.closed)`,
             'Which answer best describes the following code?',
           ],
         ],
-        code: `numbers = [1, 2, 3, 4, 5]
-squares = [n**2 for n in numbers]
-print(squares)`,
+        code: `nums = [1, 2, 3, 4]
+result = [x * y for x in nums for y in nums]
+print(result)`,
         answers: [
           {
             id: '0',
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'A nested loop',
+                'It is an',
+              ],
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                'x\\cdot y',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'and',
+              ],
+              [
+                QuizMarkdownType.INLINE_KATEX,
+                'y\\cdot x',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'nested loop',
               ],
             ],
           },
@@ -18498,7 +19228,7 @@ print(squares)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Recursive list comprehension',
+                'It is a recursive list comprehension',
               ],
             ],
           },
@@ -18507,7 +19237,7 @@ print(squares)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Squaring nested values',
+                'It squares all values',
               ],
             ],
           },
@@ -18516,7 +19246,7 @@ print(squares)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Squaring',
+                'It multiplies',
               ],
               [
                 QuizMarkdownType.INLINE_CODE,
@@ -18924,8 +19654,8 @@ print(capitalized)`,
           ],
         ],
         code: `matrix = [[1, 2], [3, 4]]
-      flat = [num for row in matrix for num in row]
-      print(flat)`,
+flat = [num for row in matrix for num in row]
+print(flat)`,
         answers: [
           {
             id: '0',
@@ -19022,8 +19752,8 @@ print(capitalized)`,
           ],
         ],
         code: `nums = [1, 2, 3, 4]
-      result = [x * y for x in nums for y in nums]
-      print(result)`,
+result = [x * y for x in nums for y in nums]
+print(result)`,
         answers: [
           {
             id: '0',
@@ -19070,6 +19800,18 @@ print(capitalized)`,
   'machine-learning': {
     name: 'Machine Learning',
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What additional parameters are introduced in a layer when batch normalization is applied?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Gamma and Beta parameters for scaling and shifting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Alpha and Omega parameters for gradient adjustment']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Delta and Theta parameters for weight regularization']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Mu and Sigma parameters for dropout']] },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'Why might batch normalization reduce the need for dropout in some networks?'],
@@ -19286,6 +20028,127 @@ print(capitalized)`,
         ],
         correctAnswer: '0',
       },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A company wants to predict future sales based on past sales data recorded over time. Which type of model should they use for this time-series forecasting task?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'An e-commerce platform wants to categorize product images into different categories such as clothing, electronics, and home goods. Which model is most suitable for this image classification task?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A bank wants to predict whether a loan applicant will default on their loan based on various applicant attributes. Which models are typically used for such tabular data classification tasks?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees or Gradient Boosting Machines (GBMs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A social media company wants to build a chatbot that can understand and respond to user messages in real-time. Which model architecture is best suited for this natural language processing task?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A healthcare provider wants to analyze patient medical records to identify patterns that indicate potential health issues. Which models are effective for handling such high-dimensional tabular data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting Machines (GBMs) or Random Forests']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A tech company wants to develop a system that can generate captions for images. Which model architecture should they use for this task involving both image and text data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers with Convolutional Neural Networks']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs) with Support Vector Machines']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines with Convolutional Neural Networks']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees with Convolutional Neural Networks']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A weather forecasting agency wants to predict temperature trends based on historical weather data. Which type of model is best suited for this time-series data analysis?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A financial analyst wants to cluster customers into distinct segments based on their transaction history. Which models are commonly used for clustering tasks involving tabular data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means or Hierarchical Clustering']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'An online retailer wants to recommend products to users based on their browsing and purchase history. Which model is typically used for such recommendation systems?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Collaborative Filtering with Matrix Factorization']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A researcher wants to identify the presence of different species in a set of environmental audio recordings. Which model is most suitable for this audio classification task?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Generative Pre-trained Transformers (GPTs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'How does the self-attention mechanism work in a transformer model?'],
@@ -19372,6 +20235,150 @@ print(capitalized)`,
       },
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Which type of model is most commonly used for image data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting Machines (GBMs)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What type of data is typically handled by decision trees and random forests?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Tabular data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sequential data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Image data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Audio data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which model architecture is designed to handle sequential data such as time-series or text?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which models are typically used for natural language processing (NLP) tasks?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting Machines (GBMs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which model is most suitable for classification tasks involving high-dimensional tabular data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting Machines (GBMs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which type of model may be unnecessary for non-sequential data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting Machines (GBMs)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For tasks involving categorical data, which models are commonly used?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes, Decision Trees, Logistic Regression']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is an appropriate model for handling set data where order does not matter?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Feedforward Neural Networks']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which model is highly effective for predicting stock prices based on historical data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines (SVMs)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary advantage of using transformers for NLP tasks over RNNs?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformers can process entire sequences in parallel and capture long-range dependencies effectively']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Transformers are easier to train']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers use fewer parameters']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers are more suitable for small datasets']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Convolutional neural networks are best suited for'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Non-image data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Image data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Any kind of data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Random forests']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Generative pre-trained transformer (GPT) architecture is best suited for'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Sequential data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Non-sequential data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Either sequential data or non-sequential data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Neither sequential data nor non-sequential data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is a significant advantage of the transformer architecture over traditional RNNs?'],
         ],
         answers: [
@@ -19406,6 +20413,46 @@ print(capitalized)`,
         correctAnswer: '0',
       },
       {
+        question: [[QuizMarkdownType.TEXT, 'Which of the following is untrue of dropout regularization?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It reduces overreliance on specific neurons']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It can reduce a model\'s variance']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It improves the model\'s ability to generalize']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It reduces the number of features computed']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Dropout regularization is effective because']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It prevents the network from becoming overly reliant on specific neurons']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It prevents the network from becoming overly reliant on the same features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It prevents the network from becoming overly reliant on the ability to generalize']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It prevents the network from becoming overly reliant on its training data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Dropout regularization is effective because']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It forces the network to learn redundant representations of features']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It eliminates underperforming neurons, making for more accurate predictions']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It makes the network less complex and less prone to underfitting']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It sacrifices some of the model\'s ability to generalize for computational gains']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [[QuizMarkdownType.TEXT, 'Dropout regularization works by']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Randomly dropping neurons during training']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Regularly dropping efficiency-checked neurons']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Dropping neurons in alternating shifts']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dropping neurons that produce inaccurate output']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'Batch normalization helps stabilize and accelerate the training process']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'By normalizing the activations']] },
@@ -19434,6 +20481,262 @@ print(capitalized)`,
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'Low model bias']] },
         ],
         correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is an example of a sequence in time-series data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stock prices recorded at regular intervals over time']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A single stock price']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random prices of different stocks']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A collection of unrelated financial metrics']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of neural networks, what does the term "sequence" refer to?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A series of data points or elements ordered in a specific manner']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A single data point in a dataset']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A random arrangement of data points']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A fixed-size window of data points']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is parallel processing in transformers advantageous for sequence data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because it allows the model to process the entire sequence at once, improving efficiency and performance']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because it ensures that each element in the sequence is processed independently']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because it reduces the complexity of the model']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because it eliminates the need for activation functions']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of speech recognition, what constitutes a sequence?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A sequence of audio frames representing spoken words']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A single audio frame']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A set of random audio clips']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A silent audio recording']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What challenge do transformers overcome in processing sequences that RNNs typically face?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Capturing long-term dependencies effectively without the limitations of sequential processing']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Handling large datasets without overfitting']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reducing the need for large computational resources']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ensuring that all elements in the sequence are independent']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which neural network mechanism allows transformers to consider all positions in a sequence simultaneously?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Self-attention']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent connections']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convolutional operations']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Pooling layers']] },
+        ],
+        correctAnswer: '0',
+      },
+      // a sequence refers to a series of data points or elements that are ordered in a specific manner. This is common in time-series data, natural language processing (NLP), speech recognition, and other domains where the order of the elements matters.
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of neural networks, a sequence refers to'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A series of data points or elements that are ordered in a specific manner']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Time-series, speech, or text data']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Tabular data']], order: 2 },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Answers 1 and 2']], order: 3 },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of neural networks, sequential data could refer to (a)________________, while non-sequential data could refer to (b)________________'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'a. time-series, speech, or text data; b. tabular data or image data']], order: 0 },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'a. tabular data or image data; b. tabular data or image data']], order: 1 },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'None of the above']], order: 2 },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is an example of noise in a dataset?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A house price recorded as $1,000,000 instead of $100,000']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A seasonal spike in sales during the holiday season']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A clear trend of increasing sales over several years']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Consistent measurement of a product’s weight']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What term describes data points that are significantly different from the majority of the data?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Outliers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Noise']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Seasonal variations']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Measurement errors']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A retailer notices a spike in sales every December. What type of fluctuation is this an example of?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Seasonal variations']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Noise']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outliers']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Measurement errors']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following best describes measurement error in data collection?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Inaccuracies in data recording due to faulty equipment or human error']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Random fluctuations in data that do not represent the true pattern']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Significant deviations from the trend that occur regularly']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Consistent data points that reflect a long-term trend']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A dataset contains a few data points with extremely high values compared to the rest. These points are likely to be:'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Outliers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Seasonal variations']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Noise']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Measurement errors']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is a common cause of noise in a dataset?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Data entry errors']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Long-term trends']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Seasonal patterns']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Consistent measurements']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is it important to identify outliers in a dataset?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Outliers can skew the results of statistical analyses and models']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Outliers are always incorrect data points']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outliers should be removed from all datasets']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Outliers represent the most important data points in a dataset']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the impact of high variance in a machine learning model?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The model may overfit the training data and perform poorly on new data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The model will have low bias and high accuracy on new data']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The model will underfit the training data and perform well on new data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The model will ignore fluctuations in the data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can measurement errors be minimized in a dataset?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using precise and calibrated instruments for data collection']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increasing the number of features in the dataset']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Removing seasonal variations from the data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Normalizing the data to a standard scale']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A data scientist notices that a particular feature in the dataset has a lot of variability but no clear pattern. What is this an example of?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Noise']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Outliers']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Seasonal variations']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Measurement errors']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Instead of representing words as sparse ____________ vectors (e.g., one-hot encoding), word embeddings use dense ___________ vectors, which are more efficient and effective for machine learning models.'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'high-dimensional, low-dimensional']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'low-dimensional, high-dimensional']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'low-frequency, high-frequency']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'high-frequency, low-frequency']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is an example of a sequence in natural language processing?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A sentence with words in a specific order']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A single word in isolation']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A random set of words']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A list of unrelated sentences']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [[QuizMarkdownType.TEXT, 'Variance is often an issue of']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Low bias']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'High complexity']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Sparse training data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Excess training data']] },
+        ],
+        correctAnswer: '2',
       },
       {
         question: [[QuizMarkdownType.TEXT, 'What does variance refer to in the context of machine learning?']],
@@ -22519,7 +23822,7 @@ print(capitalized)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'They provide a way to measure and minimize the error during training',
+                'They provide a way to measure the error during training',
               ],
             ],
           },
@@ -22528,7 +23831,7 @@ print(capitalized)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'They initialize the weights of the model',
+                'They initialize the weights of the model with small random values',
               ],
             ],
           },
@@ -23310,7 +24613,7 @@ print(capitalized)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which technique can help reduce high variance in a machine learning model?',
+            'Which technique CANNOT help reduce high variance in a machine learning model?',
           ],
         ],
         answers: [
@@ -23346,7 +24649,54 @@ print(capitalized)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Increasing the learning rate',
+                'Using less training data',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'Which technique can help reduce high variance in a machine learning model?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Using more training data',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Using Principal Component Analysis (PCA)',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Reducing the number of features',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Using less training data',
               ],
             ],
           },
@@ -23396,7 +24746,7 @@ print(capitalized)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Answers 2 and 3',
+                'All of the above (depending on the implementation)',
               ],
             ],
             order: 3,
@@ -27642,7 +28992,7 @@ print(capitalized)`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'Both 0 and 1',
+                'Answers 1 and 2',
               ],
             ],
             order: 3,
@@ -30814,7 +32164,7 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'Java Spring has methods for handling non-blocking tasks'],
+              [QuizMarkdownType.TEXT, 'Java Spring has methods for asynchronously handling blocking tasks'],
             ],
           },
           {
@@ -31053,7 +32403,7 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which class is used in Spring WebFlux to handle HTTP requests reactively?'],
+          [QuizMarkdownType.TEXT, 'Which class is used in Spring WebFlux to handle incoming HTTP requests reactively?'],
         ],
         answers: [
           {
@@ -46734,19 +48084,295 @@ List<String> upperCaseNames = names.stream()
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Element order does not matter in vectors'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the result of the dot product of two vectors?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A scalar'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A vector'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A matrix'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A tensor'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which product is also known as the element-wise product?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Dot product'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hadamard product'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cross product'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Outer product'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In which dimension is the cross product defined?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1D'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '2D'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '3D'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Any dimension'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which product results in a vector that is perpendicular to the original vectors?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Dot product'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hadamard product'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cross product'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Outer product'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which product measures how much two vectors point in the same direction?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Dot product'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hadamard product'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cross product'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\cos^2 \\theta'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'To find the Hadamard product of two vectors'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Take the dot product of rows and columns'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cross-multiply the equivalent elements'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Find the cross product'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Find the sum of their elements'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is an invalid concept?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiplying a vector by a vector of the same number of elements.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiplying a 3x3 matrix with a 3x4 matrix.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Finding the Hadamard product of two column vectors.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Finding the dot product of a 5x1 row matrix and a vector with 5 elements.'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is an invalid concept?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiplying a vector by a vector of the same number of elements.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiplying a vector with 3 elements by a matrix of size 3x2.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Finding the dot product of two column vectors.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Finding the dot product of a 5x1 row matrix and a vector with 5 elements.'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'The formula to find the magnitude of a vector is'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '|v| = \\sqrt{(x_2 - x_1)^2}'],
+              [QuizMarkdownType.INLINE_KATEX, '|v| = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '|v| = \\sqrt{(x_1 - x_2)^2}'],
+              [QuizMarkdownType.INLINE_KATEX, '|v| = \\sqrt{(x_1 - x_2)^2 + (y_2 - y_1)^2}'],
             ],
           },
           {
@@ -46762,7 +48388,7 @@ List<String> upperCaseNames = names.stream()
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -47163,7 +48789,7 @@ List<String> upperCaseNames = names.stream()
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '1',
       },
       {
         question: [
@@ -47576,6 +49202,53 @@ List<String> upperCaseNames = names.stream()
         question: [
           [
             QuizMarkdownType.TEXT,
+            'What is the following operation called?',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\mathbf{v}_1 = \\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix}',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\mathbf{v}_2 = \\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}',
+          ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\mathbf{v}_1\\mathbf{v}_2= \\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix} \\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix} =  \\begin{pmatrix} 0 \\\\ -4 \\end{pmatrix}',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Dot product'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hadamard product'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cross product'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Outer product'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
             'What is the result of the following operation?',
           ],
           [
@@ -47702,24 +49375,28 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}'],
             ],
+            order: 0,
           },
           {
             id: '1',
             answer: [
               [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}'],
             ],
+            order: 1,
           },
           {
             id: '2',
             answer: [
               [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}'],
             ],
+            order: 2,
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, 'All of the above'],
+              [QuizMarkdownType.TEXT, 'All of the above'],
             ],
+            order: 3,
           },
         ],
         correctAnswer: '3',
@@ -48970,9 +50647,11 @@ List<String> upperCaseNames = names.stream()
             QuizMarkdownType.TEXT,
             'What is the rank of the following matrix?',
           ],
+          [
+            QuizMarkdownType.KATEX,
+            '\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}',
+          ],
         ],
-        code: `1  1
-          0  1`,
         answers: [
           {
             id: '0',
@@ -49177,8 +50856,116 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Given the avocado fecundity vector'],
+          [QuizMarkdownType.INLINE_KATEX, 'f = (0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0)'],
+          [QuizMarkdownType.TEXT, 'and a vector representing seeds planted per month'],
+          [QuizMarkdownType.INLINE_KATEX, 's = (100, 150, 200, 250, 300, 50, 60, 70, 80, 90, 100, 110)'],
+          [QuizMarkdownType.TEXT, 'what does the element-wise multiplication'],
+          [QuizMarkdownType.INLINE_KATEX, 'f \\odot s'],
+          [QuizMarkdownType.TEXT, 'prove about avocado growth?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no avocado growth outside the spring months.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no avocado growth outside the winter and spring months.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no avocado growth outside the summer and spring months.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The avocado yield is the same in all months.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The fecundity of watermelons per month is represented by the vector'],
+          [QuizMarkdownType.INLINE_KATEX, 'f = (0,0,0,0,0,1,1,1,1,0,0,0)'],
+          [QuizMarkdownType.TEXT, 'and it is part of a system of vectors predicting monthly watermelon yield. What is implied if you multiply'],
+          [QuizMarkdownType.INLINE_KATEX, 'f'],
+          [QuizMarkdownType.TEXT, 'by another vector in the system?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'You will find watermelon yield in the spring months'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'You will find watermelon yield in the summer months'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'You will find watermelon yield in the winter months'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'You will find watermelon yield in the fall months'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If avacados are a spring fruit, which of the following vectors could represent the fecundity of avacados in months?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'f = (0,0,1,1,1,1,0,0,0,0,0,0)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'f = (0,1,1,1,1,0,0,0,0,0,0,0)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'f = (1,1,0,0,0,0,0,0,0,0,0,1)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'f = (0,0,0,0,0,0,1,1,1,1,0,0)'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [
             QuizMarkdownType.TEXT,
+            // https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/
             'Two vectors represent the crop yields of a wheat farm and a corn farm',
           ],
           [
@@ -49236,6 +51023,202 @@ List<String> upperCaseNames = names.stream()
                 QuizMarkdownType.TEXT,
                 'If multiplied together, the two vectors would have a dot product of 24000000',
               ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the cross product of the vectors'],
+          [QuizMarkdownType.INLINE_CODE, 'u = (1, 0, 0)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_CODE, 'v = (0, 1, 0)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the dot product return?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A vector'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A number'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A matrix'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A tensor'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In which dimension does the cross product work?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1D'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '2D'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '3D'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Any number of dimensions'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the cross product measure?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'How much two vectors point in the same direction'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'How much two vectors point in different directions'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The length of two vectors'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The angle between two vectors'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following statements is true about the dot product?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a vector.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It only works in 3D.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It measures how much two vectors point in the same direction.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It measures how much two vectors point in different directions.'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the main difference between the outputs of the dot product and the cross product?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The dot product returns a number, but the cross product returns a vector.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The dot product works in 3D, but the cross product works in any number of dimensions.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The dot product measures angles, but the cross product measures distances.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The dot product returns a vector, but the cross product returns a number.'],
             ],
           },
         ],
@@ -50042,7 +52025,23 @@ List<String> upperCaseNames = names.stream()
         question: [
           [
             QuizMarkdownType.TEXT,
-            'If a 2x2 matrix \\( A \\) has elements \\( a, b, c, d \\), what is the formula for its inverse?',
+            'If a 2x2 matrix',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            '\\( A \\)',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'has elements',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            '\\( a, b, c, d \\)',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'what is the formula for its inverse?',
           ],
         ],
         answers: [
@@ -51218,6 +53217,7 @@ g, h, i,`,
                 'None of the above',
               ],
             ],
+            order: 3,
           },
         ],
         correctAnswer: '1',
@@ -51903,9 +53903,409 @@ var B = [
       // },
     ],
   },
+  // ===================
   'shell-scripting': {
     name: 'Shell Scripting',
     questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo "Hello World" | tee output.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes "Hello World" to output.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes "Hello World" to output.txt but does not print it to the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends "Hello World" to output.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites output.txt with "Hello World" but does not print it to the terminal'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+      ls -l | tee files.txt | grep ".txt"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes the output of ls -l to files.txt and then filters lines containing ".txt"'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes the output of grep ".txt" to files.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters lines containing ".txt" and then writes them to files.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes the output of ls -l to files.txt but does not print it to the terminal'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of the following script?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      echo "Start of script" | tee log.txt
+      df -h | tee -a log.txt
+      echo "End of script" | tee -a log.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes "Start of script", disk usage information, and "End of script" to log.txt and prints all to the terminal'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites log.txt with "Start of script" and appends disk usage information and "End of script"'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends "Start of script", disk usage information, and "End of script" to log.txt but does not print them to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes disk usage information to log.txt and prints it to the terminal, but does not include "Start of script" and "End of script"'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
+          [QuizMarkdownType.CODE, `
+      cat input.txt | tee output1.txt output2.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes the contents of input.txt to both output1.txt and output2.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes the contents of input.txt to output1.txt and then to output2.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the contents of input.txt to both output1.txt and output2.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies the contents of input.txt to both output1.txt and output2.txt but does not print it to the terminal'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does setting IFS to an empty value affect the behavior of the read command in a while loop?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It causes the read command to read entire lines, including any leading or trailing whitespace'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It changes the delimiter used by the read command to a comma'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It causes the read command to ignore lines containing only whitespace'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It makes the read command process input as a single string, ignoring newlines'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a Bash script, why might you set IFS to an empty value before using the read command?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To allow special characters to be interpreted correctly'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To prevent word splitting and preserve the exact formatting of each line'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To convert all input to uppercase'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To enable reading from multiple files simultaneously'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does setting the Internal Field Separator (IFS) to an empty value (IFS=) accomplish in a Bash script?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It trims leading and trailing whitespace from input lines'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It ensures that leading and trailing whitespace in input lines is preserved'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It splits input lines into words based on spaces'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It causes the script to ignore input lines containing whitespace'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which symbol is used for input redirection in Unix-like operating systems?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '<'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '>'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '>>'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '|'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, 'sort < unsorted.txt'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sorts the contents of unsorted.txt and displays the result'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sorts the contents of unsorted.txt and saves it back to unsorted.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sorts the contents of unsorted.txt and redirects the output to a file'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Displays the contents of unsorted.txt without sorting'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you redirect the contents of a file named "input.txt" to be the input for a script called "process.sh"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './process.sh < input.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './process.sh > input.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './process.sh >> input.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './process.sh | input.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, 'wc -l < file.txt'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of lines in file.txt and displays the result'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of words in file.txt and displays the result'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Counts the number of characters in file.txt and displays the result'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Copies the contents of file.txt to a new file'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which command would you use to execute a script named "analyze.sh" and provide input from a file named "data.txt"?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './analyze.sh < data.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './analyze.sh > data.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './analyze.sh >> data.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, './analyze.sh | data.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
 
       {
         question: [
@@ -55938,10 +58338,65 @@ greet "World"`],
       },
     ],
   },
+  'english-ii': {
+    name: 'English II',
+    questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Question marks should go _____________ if the quote is a question. If the quote is not a question, but the sentence is, the question mark should be _____________.'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'inside of the quotation marks, outside the quotation marks'],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'outside the quotation marks, inside of the quotation marks'],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'Either of the above'],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'None of the above'],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+  },
   test: {
     name: 'test',
     questions: [
-
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you listen for a click event on a button with the ID'],
+          [QuizMarkdownType.INLINE_CODE, 'myButton'],
+          [QuizMarkdownType.TEXT, 'using JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.CODE, 'document.getElementById("myButton").addEventListener("click", function() {...})']] },
+          { id: '1', answer: [[QuizMarkdownType.CODE, 'document.getElementById("myButton").on("click", function() {...})']] },
+          { id: '2', answer: [[QuizMarkdownType.CODE, 'document.querySelector("#myButton").on("click", function() {...})']] },
+          { id: '3', answer: [[QuizMarkdownType.CODE, 'document.querySelector("#myButton").click(function() {...})']] },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],

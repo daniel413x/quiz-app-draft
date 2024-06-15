@@ -13,7 +13,7 @@ const SectionPageContent = () => {
       <Link
         href={`${section}/quiz`}
         className={cn('flex gap-1 p-6 shadow-sm bg-red-200 text-red-800', {
-          'opacity-50': clicked,
+          'opacity-50 pointer-events-none': clicked,
         })}
         onClick={() => setClicked(true)}
       >
