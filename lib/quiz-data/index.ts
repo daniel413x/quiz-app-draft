@@ -4892,6 +4892,497 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'What is the default behavior of a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tag in HTML?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The script is executed synchronously and blocks HTML parsing until it is fully executed.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The script is executed asynchronously and does not block HTML parsing.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The script is deferred and executes after the HTML document has been fully parsed.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The script is handled by background threads, allowing for a non-blocking runtime.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Consider the code below,'],
+          [QuizMarkdownType.CODE, `<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <script>
+    console.log('Start');
+    setTimeout(() => {
+      console.log('Macrotask');
+    }, 0);
+    Promise.resolve().then(() => {
+      console.log('Microtask');
+    });
+    console.log('End');
+  </script>
+</head>
+<body>
+  <h1>Hello, world!</h1>
+</body>
+</html>
+`],
+          [QuizMarkdownType.TEXT, 'Which is true of the <script> tag?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The script logs',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'Start, End, Microtask, Macrotask',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'and blocks the UI until',
+              ],
+              [QuizMarkdownType.INLINE_CODE,
+                'Microtask',
+              ],
+              [QuizMarkdownType.TEXT,
+                'is logged',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The script logs',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'Start, End, Microtask, Macrotask',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'and blocks the UI until',
+              ],
+              [QuizMarkdownType.INLINE_CODE,
+                'Macrotask',
+              ],
+              [QuizMarkdownType.TEXT,
+                'is logged',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The script logs',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'Start, End, Microtask, Macrotask',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'and blocks the UI until',
+              ],
+              [QuizMarkdownType.INLINE_CODE,
+                'Microtask',
+              ],
+              [QuizMarkdownType.TEXT,
+                'is logged',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'The script logs',
+              ],
+              [
+                QuizMarkdownType.INLINE_CODE,
+                'Start, End, Microtask, Macrotask',
+              ],
+              [
+                QuizMarkdownType.TEXT,
+                'and blocks the UI until',
+              ],
+              [QuizMarkdownType.INLINE_CODE,
+                'End',
+              ],
+              [QuizMarkdownType.TEXT,
+                'is logged',
+              ],
+            ],
+
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which attribute allows a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tag to load the script asynchronously, without blocking HTML parsing, but executes it as soon as it is available?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'async']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'defer']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'type']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'src']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the line of code'],
+          [QuizMarkdownType.INLINE_CODE, 'x += 1'],
+          [QuizMarkdownType.TEXT, ','],
+          [QuizMarkdownType.INLINE_CODE, 'x'],
+          [QuizMarkdownType.TEXT, 'is known as the'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'Operand']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Deferred']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'Value']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Operator']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the'],
+          [QuizMarkdownType.INLINE_CODE, 'defer'],
+          [QuizMarkdownType.TEXT, 'attribute do when used with a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tag?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It loads the script in parallel with HTML parsing and executes it after the document has been fully parsed.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It prevents the script from executing.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It executes the script as soon as it is available, without blocking HTML parsing.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It only allows the script to run on older browsers.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following statements about'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tags is true?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
+              [QuizMarkdownType.INLINE_CODE, 'defer'],
+              [QuizMarkdownType.TEXT, 'attribute are executed in the order they appear in the document.']],
+          },
+          {
+            id: '1',
+            answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
+              [QuizMarkdownType.INLINE_CODE, 'async'],
+              [QuizMarkdownType.TEXT, 'attribute are guaranteed to be executed in order.']],
+          },
+          {
+            id: '2',
+            answer: [[QuizMarkdownType.TEXT, 'Scripts without'],
+              [QuizMarkdownType.INLINE_CODE, 'defer'],
+              [QuizMarkdownType.TEXT, 'or'],
+              [QuizMarkdownType.INLINE_CODE, 'async'],
+              [QuizMarkdownType.TEXT, 'attributes are executed asynchronously.']],
+          },
+          {
+            id: '3',
+            answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
+              [QuizMarkdownType.INLINE_CODE, 'defer'],
+              [QuizMarkdownType.TEXT, 'attribute block HTML parsing.']],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens when a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tag is placed in the body of an HTML document without'],
+          [QuizMarkdownType.INLINE_CODE, 'async'],
+          [QuizMarkdownType.TEXT, 'or'],
+          [QuizMarkdownType.INLINE_CODE, 'defer'],
+          [QuizMarkdownType.TEXT, 'attributes?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The script is executed immediately and blocks HTML parsing until it finishes.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The script is loaded in parallel and executed after the HTML document is fully parsed.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The script does not execute at all.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The script is executed after all other resources are loaded.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary difference between synchronous and asynchronous script loading in HTML?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Synchronous scripts block HTML parsing, while asynchronous scripts do not.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Asynchronous scripts are always executed before synchronous scripts.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Synchronous scripts are loaded faster than asynchronous scripts.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Asynchronous scripts block the loading of other resources.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which attribute ensures that a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'is executed only after the HTML document has been fully parsed, but still loads the script in parallel?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'defer']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'async']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'type']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'src']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If both'],
+          [QuizMarkdownType.INLINE_CODE, 'async'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_CODE, 'defer'],
+          [QuizMarkdownType.TEXT, 'attributes are present on a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tag, which one takes precedence?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'async']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'defer']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Neither, the script will not execute.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Both, the script will execute twice.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which type of script loading is most appropriate for scripts that modify the DOM structure of the document?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'defer']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'async']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'type="module"']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'type="text/javascript"']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why might you use the'],
+          [QuizMarkdownType.INLINE_CODE, 'async'],
+          [QuizMarkdownType.TEXT, 'attribute on a'],
+          [QuizMarkdownType.INLINE_CODE, '<script>'],
+          [QuizMarkdownType.TEXT, 'tag?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To load the script without blocking HTML parsing and execute it as soon as it is available.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To ensure the script is executed in order after all HTML parsing is complete.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To prevent the script from executing until a user interaction.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To guarantee that the script will not execute.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In traditional HTML, you write __________, while in React, you write __________'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'JavaScript inside HTML, HTML inside JavaScript']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'HTML inside HTML, JavaScript inside JavaScript']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'HTML inside JavaScript, JavaScript inside HTML']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'JavaScript inside scripts, scripts inside HTML']] },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, `try {
+  console.log(undeclaredVariable);
+} catch (error) {
+  console.error(error);
+}`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'ReferenceError']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'TypeError']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'RangeError']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'SyntaxError']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, 'let num =+ 5'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'ReferenceError']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'TypeError']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'RangeError']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'SyntaxError']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, `try {
+  let arr = new Array(-1);
+} catch (error) {
+  console.error(error);
+}`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'ReferenceError']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'TypeError']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'RangeError']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'SyntaxError']] },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, `try {
+  let interOp = 'interOp';
+  interOp.toFixed(2);
+} catch (error) {
+  console.error(error);
+}`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'ReferenceError']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'TypeError']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'RangeError']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'SyntaxError']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, `try {
+  let num = 5;
+  num.toUpperCase();
+} catch (error) {
+  console.error(error);
+}`],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'ReferenceError']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'TypeError']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'RangeError']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'SyntaxError']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'When does a'],
+          [QuizMarkdownType.INLINE_CODE, 'ReferenceError'],
+          [QuizMarkdownType.TEXT, 'typically occur in JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'When a code attempts to access a variable that hasn’t been declared within its scope.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'When a variable is declared but not initialized.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'When there is a type mismatch in the variable assignment.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'When a function is called with incorrect arguments.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following code snippets will throw a'],
+          [QuizMarkdownType.INLINE_CODE, 'ReferenceError'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.CODE, 'console.log(nonExistentVariable);']] },
+          { id: '1', answer: [[QuizMarkdownType.CODE, 'let a;\nconsole.log(a);']] },
+          { id: '2', answer: [[QuizMarkdownType.CODE, 'let b = undefined;\nconsole.log(b);']] },
+          { id: '3', answer: [[QuizMarkdownType.CODE, 'const c = null;\nconsole.log(c);']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a '],
+          [QuizMarkdownType.INLINE_CODE, 'ReferenceError'],
+          [QuizMarkdownType.TEXT, ' in JavaScript?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'An error thrown when trying to access a variable that is not declared.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'An error thrown when a variable is declared but not assigned a value.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'An error thrown when there is a syntax mistake in the code.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'An error thrown when a variable is assigned an undefined value.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, `var i = 0;
+
+i++;
+++i;
+++i;
+i++;
+i++;
+++i;
+i++;
+i++;
+++i;
+
+console.log(i);`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'SyntaxError'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ReferenceError'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '9'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '7'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is the main advantage of using the'],
           [QuizMarkdownType.INLINE_CODE, 'useEffect'],
           [QuizMarkdownType.TEXT, 'hook in a React application over using an event listener listening to the'],
@@ -5119,19 +5610,6 @@ console.log(numbers);`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'Which answer demonstrates type coercion?'],
-        ],
-        answers: [
-          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '===']] },
-          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '!!']] },
-          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '!=']] },
-          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'parseInt()']] },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'In the line of code'],
-          [QuizMarkdownType.INLINE_CODE, 'In the line of code'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '===']] },
@@ -6672,7 +7150,7 @@ console.log(y);`],
           { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'undefined']] },
           { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'ReferenceError']] },
         ],
-        correctAnswer: '1',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -8541,7 +9019,7 @@ console.log(increment());`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                '0 and 1',
+                '1 and 2',
               ],
             ],
           },
@@ -12300,7 +12778,7 @@ console.log('end');`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which of the following is not true?',
+            'Which of the following is NOT true?',
           ],
         ],
         answers: [
@@ -15221,6 +15699,7 @@ function f(param: string) {
                 'Web Workers run on background threads',
               ],
             ],
+            order: 0,
           },
           {
             id: '1',
@@ -15230,6 +15709,7 @@ function f(param: string) {
                 'JavaScript is single-threaded',
               ],
             ],
+            order: 1,
           },
           {
             id: '2',
@@ -15239,6 +15719,7 @@ function f(param: string) {
                 'JavaScript and Web Workers run on the same thread',
               ],
             ],
+            order: 2,
           },
           {
             id: '3',
@@ -16177,7 +16658,6 @@ onmessage = function(event) {
   python: {
     name: 'Python',
     questions: [
-
       {
         question: [
           [QuizMarkdownType.TEXT, 'What happens if the file specified in the'],
@@ -19802,6 +20282,18 @@ print(result)`,
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'You frequently find that the local weather stations do not accurately predict rain. You assign less importance to their reporting when deciding whether or not to carry an umbrella on any given day. In a neural network setting, this would be most analogous to'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Updating the weights']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Lowering the loss function']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Increasing training data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Hyperparameter adjustment']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What additional parameters are introduced in a layer when batch normalization is applied?'],
         ],
         answers: [
@@ -20413,6 +20905,16 @@ print(result)`,
         correctAnswer: '0',
       },
       {
+        question: [[QuizMarkdownType.TEXT, 'Which of the following is true of dropout regularization?']],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It reduces overreliance on specific neurons by augmenting their features']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The features computed by dropped neurons are ultimately dropped from training']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It frees resources by lowering the number of features computed']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The features computed by dropped neurons are picked up by other neurons']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
         question: [[QuizMarkdownType.TEXT, 'Which of the following is untrue of dropout regularization?']],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'It reduces overreliance on specific neurons']] },
@@ -20487,7 +20989,7 @@ print(result)`,
           [QuizMarkdownType.TEXT, 'What is an example of a sequence in time-series data?'],
         ],
         answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stock prices recorded at regular intervals over time']] },
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stock prices recorded at regular intervals']] },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'A single stock price']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random prices of different stocks']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'A collection of unrelated financial metrics']] },
@@ -20539,7 +21041,7 @@ print(result)`,
           [QuizMarkdownType.TEXT, 'What challenge do transformers overcome in processing sequences that RNNs typically face?'],
         ],
         answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Capturing long-term dependencies effectively without the limitations of sequential processing']] },
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Capturing long-term dependencies effectively']] },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'Handling large datasets without overfitting']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reducing the need for large computational resources']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ensuring that all elements in the sequence are independent']] },
@@ -20851,7 +21353,7 @@ print(result)`,
       {
         question: [[QuizMarkdownType.TEXT, 'What is the term "dimensionality" in the context of machine learning?']],
         answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The number of features or variables in a dataset']] },
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The number of features or variables']] },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'The number of training examples']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'The size of the dataset']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'The number of layers in a neural network']] },
@@ -31828,6 +32330,480 @@ print(result)`,
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'What does the intermediate operation '],
+          [QuizMarkdownType.INLINE_CODE, 'skip'],
+          [QuizMarkdownType.TEXT, ' do in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of the remaining elements after discarding the first n elements.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of the first n elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It collects the elements of the stream into a list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It transforms each element of the stream into another form.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the '],
+          [QuizMarkdownType.INLINE_CODE, 'peek'],
+          [QuizMarkdownType.TEXT, ' intermediate operation in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It allows performing a side-effect action on each element of the stream as elements are consumed by a terminal operation.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It collects the elements of the stream into a list.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It transforms each element of the stream into another form.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters elements based on a given predicate.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the intermediate operation '],
+          [QuizMarkdownType.INLINE_CODE, 'limit'],
+          [QuizMarkdownType.TEXT, ' do in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of the first n elements of the stream.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of the elements after skipping the first n elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters elements based on a given predicate.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It sorts the elements of the stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the intermediate operation '],
+          [QuizMarkdownType.INLINE_CODE, 'distinct'],
+          [QuizMarkdownType.TEXT, ' do in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of distinct elements (removing duplicates) based on `equals` method.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It sorts the elements of the stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It applies a function to each element of the stream and returns a new stream.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters elements based on a given predicate.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the '],
+          [QuizMarkdownType.INLINE_CODE, 'sorted'],
+          [QuizMarkdownType.TEXT, ' intermediate operation in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream with the elements sorted according to natural order or a provided comparator.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of distinct elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a stream that skips the first n elements.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It limits the stream to the first n elements.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the intermediate operation '],
+          [QuizMarkdownType.INLINE_CODE, 'map'],
+          [QuizMarkdownType.TEXT, ' do in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream by applying a function to each element of the original stream.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It filters elements based on a given predicate.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It sorts the elements of the stream.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It performs an action for each element of the stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the intermediate operation '],
+          [QuizMarkdownType.INLINE_CODE, 'filter'],
+          [QuizMarkdownType.TEXT, ' do in Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It returns a new stream consisting of elements that match a given predicate.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It transforms each element of the stream into another form.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It sorts the elements of the stream.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It collects the elements of the stream into a list.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does it mean for stream operations to be stateless in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Each element is processed independently of others, with no state stored between elements.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Stream operations can store and modify state between elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams can only process elements in sequential order.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Stream operations must use shared variables for state management.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is meant by non-interference in the context of Java streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams do not modify the source data structure and produce a new result instead.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams directly modify each element in the source data structure.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams cannot be reused once they are created.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams always operate on primitive data types.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do streams in Java take advantage of parallel processing?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams can be processed in parallel, utilizing multi-core processors to improve performance for large datasets.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams automatically parallelize all operations by default.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams are always processed using a single thread.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams do not support parallel processing.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does lazy evaluation mean in the context of Java streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Intermediate operations are not executed until a terminal operation is invoked.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'All operations are executed immediately as they are encountered.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams can only be processed using a single thread.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Streams do not support parallel processing.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do streams in Java support functional-style operations?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By using functional interfaces such as Predicate, Function, and Consumer.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By directly modifying elements in the stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By requiring the use of explicit loops.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By only supporting primitive data types.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does it mean for streams in Java to be declarative?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'They allow you to express complex data processing queries in a clear and concise way using a fluent API.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'They modify the source data structure directly.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'They are always evaluated eagerly.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'They can only process data sequentially.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is an intermediate operation in the context of Java Streams?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An operation that returns a new stream and does not trigger the processing of the stream.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An operation that consumes the stream and produces a result or side-effect.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An operation that modifies the source data structure directly.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An operation that is only used with parallel streams.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'Which two commands can compaile and execute a'],
           [QuizMarkdownType.INLINE_CODE, 'HelloWorld.java'],
           [QuizMarkdownType.TEXT, 'script?'],
@@ -32231,9 +33207,9 @@ List<String> upperCaseNames = names.stream()
                 PageRequest pageRequest = this.getPageRequest(req);
                 Flux<Order> ordersFlux = ordersRepository.findAllByUserId(auth0Id, pageRequest);
                 Mono<Long> count = ordersRepository.findAllByUserId(auth0Id, Pageable.unpaged()).count();
-                // A method is missing here
+                // A method is missing below
                 return ordersFlux.______()
-                // A method is missing here
+                // A method is missing above
                         .zipWith(count, (list, cnt) -> OrdersGETReq.fromOrders(list, pageRequest, cnt))
                         .flatMap(dtoMono -> dtoMono)
                         .flatMap(dto -> ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(dto));
@@ -48084,6 +49060,211 @@ List<String> upperCaseNames = names.stream()
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'If a matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' has an eigenvector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, ' with eigenvalue '],
+          [QuizMarkdownType.INLINE_KATEX, '\\lambda = 3'],
+          [QuizMarkdownType.TEXT, ', what happens to '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, ' when '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' is applied to it?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The vector is scaled by 3, and its direction remains unchanged.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The vector is scaled by 3, and its direction changes.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The vector is scaled by 1/3, and its direction remains unchanged.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The vector becomes zero.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For the matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', if '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' is an eigenvector, what is the resulting vector when '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' is applied to '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 2 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} -1 \\\\ -1 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' has an eigenvector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' with eigenvalue '],
+          [QuizMarkdownType.INLINE_KATEX, '\\lambda = 5'],
+          [QuizMarkdownType.TEXT, '. What is the resulting vector when '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' is applied to '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 10 \\\\ 15 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} -2 \\\\ -3 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A = \\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' has an eigenvector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', what is the resulting vector when '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' is applied to '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 8 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} -1 \\\\ -2 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'For the matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A = \\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', if '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' is an eigenvector, what is the resulting vector when '],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
+          [QuizMarkdownType.TEXT, ' is applied to '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} -2 \\\\ -5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'Element order does not matter in vectors'],
         ],
         answers: [
@@ -48497,24 +49678,28 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [QuizMarkdownType.TEXT, 'When a vector is applied to a vector'],
             ],
+            order: 0,
           },
           {
             id: '1',
             answer: [
               [QuizMarkdownType.TEXT, 'When a vector is applied to a matrix'],
             ],
+            order: 1,
           },
           {
             id: '2',
             answer: [
               [QuizMarkdownType.TEXT, 'When an eigenvector is applied to a vector'],
             ],
+            order: 2,
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, 'Answers 1 and 2'],
+              [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
             ],
+            order: 3,
           },
         ],
         correctAnswer: '3',
@@ -49306,24 +50491,42 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 1 & 0 \\\\ 0 & 3 \\end{pmatrix}'],
             ],
+            order: 0,
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 & 0 \\\\ 0 & 4 \\end{pmatrix}'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}'],
             ],
+            order: 1,
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 & 3 \\\\ 3 & 0 \\end{pmatrix}'],
             ],
+            order: 2,
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 0 & 3 \\\\ 3 & 0 \\end{pmatrix}'],
+              [QuizMarkdownType.INLINE_KATEX, 'Answers 1 and 2'],
             ],
+            order: 3,
+          },
+          {
+            id: '4',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'Answers 2 and 3'],
+            ],
+            order: 4,
+          },
+          {
+            id: '5',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'Answers 1, 2 and 3'],
+            ],
+            order: 5,
           },
         ],
         correctAnswer: '0',
@@ -49362,6 +50565,42 @@ List<String> upperCaseNames = names.stream()
           },
         ],
         correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The equation to find an eigenvector is'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'Av = Av'],
+            ],
+            order: 0,
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'λv = \\begin{pmatrix} λ \\\\ λ \\end{pmatrix}'],
+            ],
+            order: 1,
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'Av = λv'],
+            ],
+            order: 2,
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'Av= \\begin{pmatrix} λ \\\\ 0 \\end{pmatrix}'],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '2',
       },
       {
         question: [
@@ -49439,7 +50678,7 @@ List<String> upperCaseNames = names.stream()
         question: [
           [
             QuizMarkdownType.TEXT,
-            'The operation',
+            'An operation',
           ],
           [
             QuizMarkdownType.KATEX,
@@ -49447,7 +50686,7 @@ List<String> upperCaseNames = names.stream()
           ],
           [
             QuizMarkdownType.TEXT,
-            'is known as',
+            'can be called',
           ],
         ],
         answers: [
@@ -49857,14 +51096,14 @@ List<String> upperCaseNames = names.stream()
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'Both 0 and 1 are correct'],
+              [QuizMarkdownType.TEXT, 'Both 1 and 2 are correct'],
             ],
             order: 2,
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'Neither 0 nor 1 are correct'],
+              [QuizMarkdownType.TEXT, 'Neither 1 nor 2 are correct'],
             ],
             order: 3,
           },
@@ -52793,6 +54032,57 @@ List<String> upperCaseNames = names.stream()
           ],
         ],
         code: `var matrix = [
+  5, 8,
+  -1, 2,
+];`,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '2',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '0',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '18',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                '38',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The determinant of the matrix is',
+          ],
+        ],
+        code: `var matrix = [
   3, 8,
   4, 6,
 ];`,
@@ -53904,6 +55194,23 @@ var B = [
     ],
   },
   // ===================
+  data: {
+    name: 'Data',
+    questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A data scientist notices that a particular feature in the dataset has a lot of variability but no clear pattern. What is this an example of?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Noise']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Outliers']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Seasonal variations']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Measurement errors']] },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+  },
   'shell-scripting': {
     name: 'Shell Scripting',
     questions: [

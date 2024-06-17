@@ -32,7 +32,7 @@ const ResultCards = ({
           })}
           >
             <Button
-              className="absolute border rounded-full -right-1.5 -top-1.5 bg-card w-14 h-14"
+              className="absolute border rounded-md -right-0.5 -top-0.5 bg-card w-14 h-14"
               variant="ghost"
             >
               <MessageCircleQuestion className="text-blue-600" />
@@ -58,32 +58,43 @@ const ResultCards = ({
                 <Code code={q.code} />
               ) : null}
               <div className="flex flex-col gap-2">
-                {q.answers.map((a, answerIndex) => (
+                {q.answers.map((a, answerIndex) => {
+                  const isCorrectAnswer = answersRecord[i].includes(a.id) && a.id === q.correctAnswer;
+                  const isAnsweredIncorrectly = answersRecord[i].includes(a.id) && a.id !== q.correctAnswer;
+                  return (
                   // overflow-x-auto to catch katex overflow
-                  <div className="flex relative overflow-x-auto" key={a.id}>
-                    <span className="self-center text-xs text-gray-700">
-                      {answerIndex + 1}
-                      &#46;
-                      {' '}
-                    </span>
-                    <span className={cn('mx-2 shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1 dark:bg-black/75 dark:border-secondary', {
-                      'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': answersRecord[i].includes(a.id),
-                      'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
-                    })}
-                    />
-                    <span className={cn('flex', {
-                      'text-green-700': answersRecord[i].includes(a.id),
-                      'text-red-500': answersRecord[i].includes(a.id) && a.id !== q.correctAnswer,
-                      '[word-break:break-all]': a.answer?.map((qmd) => qmd[1]).join(' ').split(' ')[0].length > 25,
-                    })}
+                    <div
+                      className={cn('flex relative overflow-x-auto', {
+                        'bg-green-100/50 dark:bg-green-500/10': isCorrectAnswer,
+                        '   bg-orange-300/20 dark:bg-red-500/10': isAnsweredIncorrectly,
+                      })}
+                      key={a.id}
                     >
-                      <span>
-                        {renderMarkdown(a.answer)}
+                      <span className="self-center text-xs text-gray-700">
+                        {answerIndex + 1}
+                        &#46;
+                        {' '}
                       </span>
-                      {answersRecord[i].includes(a.id) && a.id === q.correctAnswer ? <CheckCircle className="ml-1 shrink-0" /> : null}
-                    </span>
-                  </div>
-                ))}
+                      <span className={cn('mx-2 shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1 dark:bg-black/75 dark:border-secondary', {
+                        'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': isCorrectAnswer,
+                        'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': isAnsweredIncorrectly,
+                      })}
+                      >
+                        {isCorrectAnswer ? <CheckCircle size={22} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 shrink-0 text-green-700" /> : null}
+                      </span>
+                      <span className={cn('flex', {
+                        'text-green-700': isCorrectAnswer,
+                        'text-red-500': isAnsweredIncorrectly,
+                        '[word-break:break-all]': a.answer?.map((qmd) => qmd[1]).join(' ').split(' ')[0].length > 25,
+                      })}
+                      >
+                        <span>
+                          {renderMarkdown(a.answer)}
+                        </span>
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </CardContent>
           </Card>

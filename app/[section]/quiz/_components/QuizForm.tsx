@@ -101,24 +101,34 @@ const QuizForm = () => {
   }>(null);
   const submitRef = useRef<HTMLButtonElement>(null);
   useEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      submitRef.current?.click();
+    if (Number.isInteger(parseInt(e.key, 10))) {
+      e.preventDefault();
+      if (!isAnsweredCorrectly) {
+        const element = fieldRefs.current?.radioGroupRef.current?.children[Number(e.key) - 1];
+        // select all button elements and figure out the correct one to focus
+        // if you add more button elements to the form fields (like Code's CopyButton), then you may need to modify the following lines
+        const buttonElements = element?.querySelectorAll('button');
+        buttonElements![buttonElements!.length - 1].click();
+      }
     }
-  });
-  useEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'ArrowUp') {
       e.preventDefault();
-      if (!fieldRefs.current?.radioGroupRef.current?.contains(document.activeElement)) {
-        fieldRefs.current?.firstRadioButtonRef.current?.focus();
+      if (!isAnsweredCorrectly) {
+        if (!fieldRefs.current?.radioGroupRef.current?.contains(document.activeElement)) {
+          fieldRefs.current?.firstRadioButtonRef.current?.focus();
+        }
       }
     }
-  });
-  useEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      if (!fieldRefs.current?.radioGroupRef.current?.contains(document.activeElement)) {
-        fieldRefs.current?.firstRadioButtonRef.current?.focus();
+      if (!isAnsweredCorrectly) {
+        if (!fieldRefs.current?.radioGroupRef.current?.contains(document.activeElement)) {
+          fieldRefs.current?.firstRadioButtonRef.current?.focus();
+        }
       }
+    }
+    if (e.key === 'Enter') {
+      submitRef.current?.click();
     }
   });
   useEffect(() => {
