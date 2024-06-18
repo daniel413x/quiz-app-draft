@@ -70,18 +70,20 @@ const ResultCards = ({
                       })}
                       key={a.id}
                     >
-                      <span className="self-center text-xs text-gray-700">
-                        {answerIndex + 1}
-                        &#46;
-                        {' '}
-                      </span>
-                      <span className={cn('mx-2 shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative top-1 dark:bg-black/75 dark:border-secondary', {
-                        'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': isCorrectAnswer,
-                        'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': isAnsweredIncorrectly,
-                      })}
-                      >
-                        {isCorrectAnswer ? <CheckCircle size={22} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 shrink-0 text-green-700" /> : null}
-                      </span>
+                      <div className="flex items-center self-start relative top-0.5">
+                        <span className=" text-xs text-gray-700">
+                          {answerIndex + 1}
+                          &#46;
+                          {' '}
+                        </span>
+                        <span className={cn('mx-2 shrink-0 border-2 border-black/20 rounded-full w-5 h-5 relative dark:bg-black/75 dark:border-secondary', {
+                          'bg-green-100 border-green-500 dark:bg-green-100 dark:border-green-500': isCorrectAnswer,
+                          'bg-red-100 border-red-500 dark:bg-red-100 dark:border-red-500': isAnsweredIncorrectly,
+                        })}
+                        >
+                          {isCorrectAnswer ? <CheckCircle size={22} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 shrink-0 text-green-700" /> : null}
+                        </span>
+                      </div>
                       <span className={cn('flex', {
                         'text-green-700': isCorrectAnswer,
                         'text-red-500': isAnsweredIncorrectly,

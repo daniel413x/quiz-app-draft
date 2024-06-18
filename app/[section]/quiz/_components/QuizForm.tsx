@@ -28,6 +28,7 @@ import { useTimer } from '../_hooks/useTimer';
 import Code from './Code';
 import QuizFormFields from './QuizFormFields';
 import IssueModal from './IssueModal';
+import useActiveElement from '../_hooks/useActiveElement';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -100,15 +101,29 @@ const QuizForm = () => {
     firstRadioButtonRef: RefObject<HTMLButtonElement>;
   }>(null);
   const submitRef = useRef<HTMLButtonElement>(null);
+  const activeElement = useActiveElement();
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (Number.isInteger(parseInt(e.key, 10))) {
-      e.preventDefault();
+      const element = fieldRefs.current?.radioGroupRef.current?.children[Number(e.key) - 1];
+      // select all button elements and figure out the correct one to interact with
+      // if you add more button elements to the form fields (like Code's CopyButton), then you may need to modify the following lines
+      const buttonElements = element?.querySelectorAll('button');
+      const button = buttonElements![buttonElements!.length - 1];
+      console.log(activeElement);
+      console.log(button);
+      console.log(activeElement === button);
+      // submit the form if the user double presses the same key
+      // or just select the form item according to the key pressed
       if (!isAnsweredCorrectly) {
-        const element = fieldRefs.current?.radioGroupRef.current?.children[Number(e.key) - 1];
-        // select all button elements and figure out the correct one to focus
-        // if you add more button elements to the form fields (like Code's CopyButton), then you may need to modify the following lines
-        const buttonElements = element?.querySelectorAll('button');
-        buttonElements![buttonElements!.length - 1].click();
+        if (activeElement === button) {
+          submitRef.current?.click();
+        } else {
+          button.click();
+          button.focus();
+        }
+      }
+      if (isAnsweredCorrectly) {
+        submitRef.current?.click();
       }
     }
     if (e.key === 'ArrowUp') {

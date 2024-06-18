@@ -2,25 +2,25 @@ import { buttonVariants } from '@/components/ui/common/shadcn/button';
 import { FormField, FormItem } from '@/components/ui/common/shadcn/form';
 import { Label } from '@/components/ui/common/shadcn/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/common/shadcn/radio-group';
-import { Answer } from '@/lib/quiz-data';
+import { Answer as AnswerType } from '@/lib/quiz-data';
 import { cn } from '@/lib/utils';
 import { UseFormReturn } from 'react-hook-form';
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 import { renderMarkdown } from './_utils';
 
-interface QuizFormFieldsProps {
+interface AnswerProps {
   form: UseFormReturn<{
     answer: string;
   }, any, undefined>;
   isAnsweredCorrectly: boolean;
   isAnsweredIncorrectly: boolean;
-  answers: Answer[];
+  answers: AnswerType[];
   handleChangeAnswer: (val: string) => void;
   formAnswer: string;
   submittedAnswer: string | null;
 }
 
-const QuizFormFields = forwardRef(({
+const Answer = forwardRef(({
   form,
   isAnsweredCorrectly,
   isAnsweredIncorrectly,
@@ -28,7 +28,7 @@ const QuizFormFields = forwardRef(({
   handleChangeAnswer,
   formAnswer,
   submittedAnswer,
-}: QuizFormFieldsProps, ref) => {
+}: AnswerProps, ref) => {
   const radioGroupRef = useRef<HTMLDivElement>(null);
   const firstRadioButtonRef = useRef<HTMLButtonElement>(null);
   useImperativeHandle(ref, () => ({
@@ -109,4 +109,4 @@ const QuizFormFields = forwardRef(({
   );
 });
 
-export default QuizFormFields;
+export default Answer;

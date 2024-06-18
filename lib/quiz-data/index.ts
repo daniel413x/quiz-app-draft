@@ -4891,6 +4891,270 @@ const quizData: QuizData = {
     name: 'JavaScript',
     questions: [
       {
+  question: [
+    [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of'],
+    [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
+    [QuizMarkdownType.TEXT, 'in a React component?']
+  ],
+  answers: [
+    { id: '0', answer: [[QuizMarkdownType.CODE, `
+import React, { useLayoutEffect, useState } from 'react';
+
+function MyComponent() {
+  const [size, setSize] = useState({ width: 0, height: 0 });
+
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return <div>Width: {size.width}, Height: {size.height}</div>;
+}
+  `]] },
+    { id: '1', answer: [[QuizMarkdownType.CODE, `
+import React, { useLayoutEffect, useState } from 'react';
+
+function MyComponent() {
+  const [data, setData] = useState(null);
+
+  useLayoutEffect(() => {
+    fetch('/api/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  return <div>{data}</div>;
+}
+  `]] },
+    { id: '2', answer: [[QuizMarkdownType.CODE, `
+import React, { useLayoutEffect } from 'react';
+
+function MyComponent() {
+  useLayoutEffect(() => {
+    document.title = 'New Title';
+  });
+
+  return <div>Check the document title</div>;
+}
+  `]] },
+    { id: '3', answer: [[QuizMarkdownType.CODE, `
+import React, { useLayoutEffect, useState } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useLayoutEffect(() => {
+    const id = setInterval(() => {
+      setCount(c => c + 1);
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, []);
+
+  return <div>Count: {count}</div>;
+}
+  `]] },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What can happen if you perform DOM measurements in'],
+    [QuizMarkdownType.INLINE_CODE, 'useEffect'],
+    [QuizMarkdownType.TEXT, 'instead of'],
+    [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
+    [QuizMarkdownType.TEXT, '?']
+  ],
+  answers: [
+    { id: '0', answer: [[QuizMarkdownType.TEXT, 'The measurements might be incorrect.']] },
+    { id: '1', answer: [[QuizMarkdownType.TEXT, 'The component will not render correctly.']] },
+    { id: '2', answer: [[QuizMarkdownType.TEXT, 'The measurements will be more accurate.']] },
+    { id: '3', answer: [[QuizMarkdownType.TEXT, 'The measurements will be undefined.']] },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'In which phase of the React component lifecycle does'],
+    [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
+    [QuizMarkdownType.TEXT, 'run?']
+  ],
+  answers: [
+    { id: '0', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated but before the browser has painted.']] },
+    { id: '1', answer: [[QuizMarkdownType.TEXT, 'Before the DOM is updated but after the first render.']] },
+    { id: '2', answer: [[QuizMarkdownType.TEXT, 'After the browser has painted and before the component\'s side effects.']] },
+    { id: '3', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated and after the browser has painted.']] },
+  ],
+  correctAnswer: '0',
+},
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does CSSOM stand for in web development?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'CSS Object Model']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Cascading Style Sheet Object Manager']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Cascading Style Sheet Object Modeler']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cascading Style Sheet Operating Model']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of the CSSOM in web development?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To represent the stylesheets of a document as a structured tree of objects']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To manipulate HTML content dynamically']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To handle server-side rendering']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To store user session data']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following best describes how the CSSOM is related to the DOM?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The CSSOM and DOM are separate, but the CSSOM is used to apply styles to the DOM elements.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The CSSOM is a subset of the DOM and directly modifies the HTML structure.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The CSSOM replaces the DOM for styling purposes.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The CSSOM is used exclusively for JavaScript interactions.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What kind of objects does the CSSOM represent in a web document?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'CSS rules, properties, and values']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'HTML elements and attributes']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'JavaScript functions and variables']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'HTTP requests and responses']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can JavaScript be used to interact with the CSSOM?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [[QuizMarkdownType.TEXT, 'By accessing and modifying style properties using methods like'],
+              [QuizMarkdownType.INLINE_CODE, 'document.styleSheets'],
+              [QuizMarkdownType.TEXT, 'and'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet.insertRule'],
+            ],
+          },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By sending AJAX requests to update styles.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By manipulating cookies to store style information.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By updating the HTML directly within script tags.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to insert a new CSS rule into a stylesheet in the CSSOM?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'insertRule']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'appendChild']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'createRule']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'addRule']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the'],
+          [QuizMarkdownType.INLINE_CODE, 'CSSStyleDeclaration'],
+          [QuizMarkdownType.TEXT, 'interface represent in the CSSOM?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It represents an object that is a list of CSS property-value pairs.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It represents an individual CSS rule in a stylesheet.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It represents a collection of CSS stylesheets.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It represents the entire CSS object model.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which CSSOM method is used to delete a CSS rule from a stylesheet?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'deleteRule']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'removeRule']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'clearRule']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'eraseRule']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the'],
+          [QuizMarkdownType.INLINE_CODE, 'CSSRule'],
+          [QuizMarkdownType.TEXT, 'interface in the CSSOM?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It represents a single CSS rule within a stylesheet.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It represents the entire CSS stylesheet.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It represents a list of CSS stylesheets.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It represents the CSS object model.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you access the CSS rules of a specific stylesheet in the CSSOM?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [[QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'cssRules'],
+              [QuizMarkdownType.TEXT, 'property of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
+          },
+          {
+            id: '1',
+            answer: [[QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'getRules'],
+              [QuizMarkdownType.TEXT, 'method of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
+          },
+          {
+            id: '2',
+            answer: [[QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'rules'],
+              [QuizMarkdownType.TEXT, 'property of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
+          },
+          {
+            id: '3',
+            answer: [[QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'getCSSRules'],
+              [QuizMarkdownType.TEXT, 'method of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
         question: [
           [QuizMarkdownType.TEXT, 'What is the default behavior of a'],
           [QuizMarkdownType.INLINE_CODE, '<script>'],
@@ -4909,22 +5173,22 @@ const quizData: QuizData = {
           [QuizMarkdownType.TEXT, 'Consider the code below,'],
           [QuizMarkdownType.CODE, `<!DOCTYPE html>
 <html>
-<head>
-  <title>Example</title>
-  <script>
-    console.log('Start');
-    setTimeout(() => {
-      console.log('Macrotask');
-    }, 0);
-    Promise.resolve().then(() => {
-      console.log('Microtask');
-    });
-    console.log('End');
-  </script>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-</body>
+  <head>
+    <title>Example</title>
+    <script>
+      console.log('Start');
+      setTimeout(() => {
+        console.log('Macrotask');
+      }, 0);
+      Promise.resolve().then(() => {
+        console.log('Microtask');
+      });
+      console.log('End');
+    </script>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+  </body>
 </html>
 `],
           [QuizMarkdownType.TEXT, 'Which is true of the <script> tag?'],
@@ -5869,7 +6133,7 @@ myDog.speak(); // Dog barks`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'You need to work with multiple refs in a child component',
+                'You need to pass down multiple refs to a child component',
               ],
             ],
           },
@@ -5924,7 +6188,7 @@ myDog.speak(); // Dog barks`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'You need to work with multiple refs in a child component',
+                'You need to pass down multiple refs to a child component',
               ],
             ],
           },
@@ -16801,18 +17065,18 @@ onmessage = function(event) {
       {
         question: [
           [QuizMarkdownType.TEXT, 'Consider the following code:'],
-          [QuizMarkdownType.CODE, `with open('example.txt', 'w') as file:
+          [QuizMarkdownType.INLINE_CODE, `with open('example.txt', 'w') as file:
   file.write('Hello, world!')`],
           [QuizMarkdownType.TEXT, 'When the second argument of'],
-          [QuizMarkdownType.CODE, 'open'],
+          [QuizMarkdownType.INLINE_CODE, 'open'],
           [QuizMarkdownType.TEXT, 'is'],
-          [QuizMarkdownType.CODE, '___'],
+          [QuizMarkdownType.INLINE_CODE, '___'],
           [QuizMarkdownType.TEXT, ', the command'],
-          [QuizMarkdownType.CODE, 'file.write'],
+          [QuizMarkdownType.INLINE_CODE, 'file.write'],
           [QuizMarkdownType.TEXT, 'will overwrite the entire contents of file example.txt with the string'],
-          [QuizMarkdownType.CODE, '\'Hello, world!\''],
+          [QuizMarkdownType.INLINE_CODE, '\'Hello, world!\''],
           [QuizMarkdownType.TEXT, ', whereas when the second argument is'],
-          [QuizMarkdownType.CODE, '___'],
+          [QuizMarkdownType.INLINE_CODE, '___'],
           [QuizMarkdownType.TEXT, ', the command will append the string to the end of the file'],
         ],
         answers: [
@@ -17790,6 +18054,7 @@ print(make_sound(cat))`,
                 'Both append() and insert()',
               ],
             ],
+            order: 3,
           },
         ],
         correctAnswer: '3',
@@ -19033,61 +19298,6 @@ print(file.closed)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'What is the purpose of the',
-          ],
-          [
-            QuizMarkdownType.INLINE_CODE,
-            'with',
-          ],
-          [
-            QuizMarkdownType.TEXT,
-            'statement in Python?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To create a new scope',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To simplify exception handling',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To ensure proper resource management',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'To define anonymous functions',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
             'Which of the following is a feature of Python’s list comprehensions?',
           ],
         ],
@@ -20280,6 +20490,336 @@ print(result)`,
   'machine-learning': {
     name: 'Machine Learning',
     questions: [
+
+  {
+    question: [
+      [QuizMarkdownType.TEXT, 'What is a perceptron?'],
+    ],
+    answers: [
+      {
+        id: '0',
+        answer: [
+          [QuizMarkdownType.TEXT, 'A single-layer neural network'],
+        ],
+      },
+      {
+        id: '1',
+        answer: [
+          [QuizMarkdownType.TEXT, 'A deep learning model'],
+        ],
+      },
+      {
+        id: '2',
+        answer: [
+          [QuizMarkdownType.TEXT, 'A reinforcement learning algorithm'],
+        ],
+      },
+      {
+        id: '3',
+        answer: [
+          [QuizMarkdownType.TEXT, 'An optimization technique'],
+        ],
+      },
+    ],
+    correctAnswer: '0',
+  },
+  {
+    question: [
+      [QuizMarkdownType.TEXT, 'What is the activation function used in a perceptron?'],
+    ],
+    answers: [
+      {
+        id: '0',
+        answer: [
+          [QuizMarkdownType.INLINE_CODE, 'step'],
+        ],
+      },
+      {
+        id: '1',
+        answer: [
+          [QuizMarkdownType.INLINE_CODE, 'sigmoid'],
+        ],
+      },
+      {
+        id: '2',
+        answer: [
+          [QuizMarkdownType.INLINE_CODE, 'relu'],
+        ],
+      },
+      {
+        id: '3',
+        answer: [
+          [QuizMarkdownType.INLINE_CODE, 'tanh'],
+        ],
+      },
+    ],
+    correctAnswer: '0',
+  },
+  {
+    question: [
+      [QuizMarkdownType.TEXT, 'What is the perceptron learning rule used for?'],
+    ],
+    answers: [
+      {
+        id: '0',
+        answer: [
+          [QuizMarkdownType.TEXT, 'Updating weights based on errors'],
+        ],
+      },
+      {
+        id: '1',
+        answer: [
+          [QuizMarkdownType.TEXT, 'Calculating activation values'],
+        ],
+      },
+      {
+        id: '2',
+        answer: [
+          [QuizMarkdownType.TEXT, 'Determining layer connections'],
+        ],
+      },
+      {
+        id: '3',
+        answer: [
+          [QuizMarkdownType.TEXT, 'Preprocessing input data'],
+        ],
+      },
+    ],
+    correctAnswer: '0',
+  },
+  {
+    question: [
+      [QuizMarkdownType.TEXT, 'What happens if a perceptron\'s activation function output is below a threshold?'],
+    ],
+    answers: [
+      {
+        id: '0',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It outputs zero'],
+        ],
+      },
+      {
+        id: '1',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It outputs one'],
+        ],
+      },
+      {
+        id: '2',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It outputs a negative value'],
+        ],
+      },
+      {
+        id: '3',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It outputs a positive value'],
+        ],
+      },
+    ],
+    correctAnswer: '0',
+  },
+  {
+    question: [
+      [QuizMarkdownType.TEXT, 'What is the primary limitation of a perceptron?'],
+    ],
+    answers: [
+      {
+        id: '0',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It cannot solve nonlinear problems'],
+        ],
+      },
+      {
+        id: '1',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It requires large amounts of training data'],
+        ],
+      },
+      {
+        id: '2',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It is computationally expensive'],
+        ],
+      },
+      {
+        id: '3',
+        answer: [
+          [QuizMarkdownType.TEXT, 'It struggles with high-dimensional data'],
+        ],
+      },
+    ],
+    correctAnswer: '0',
+  },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the encoder in the transformer encoder-decoder architecture produce?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A fixed-size vector representation of the input sentence']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The final translated sentence']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A sequence of probabilities']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A set of embeddings for each word in the sentence']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the transformer encoder-decoder architecture, what mechanisms does the decoder use?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Self-attention and cross-attention']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Only self-attention']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Only cross-attention']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Recurrent connections']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is an example of a transformer encoder-decoder model introduced by Google in 2019?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'T5 (Text-to-Text Transfer Transformer)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'GPT-3 (Generative Pre-trained Transformer)']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'BERT (Bidirectional Encoder Representations from Transformers)']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformer XL']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What are some of the NLP tasks for which the T5 model can be fine-tuned?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Language translation, question answering, summarization']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Image classification, object detection, segmentation']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Time-series forecasting, anomaly detection, clustering']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Speech recognition, audio classification, sound localization']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which real-world application uses the T5 model for translating text between languages?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Google Translate']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Siri']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Alexa']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Google Maps']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is Facebook’s multilingual machine translation model that can translate between 100 different languages called?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'M2M-100']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'BERT']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'GPT-3']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'XLNet']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What type of attention mechanism is used in the transformer decoder to attend to the encoder outputs?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cross-attention']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Self-attention']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Global attention']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Local attention']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which part of the transformer encoder-decoder architecture is responsible for generating the output sentence in another language?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The decoder']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The encoder']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The input layer']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The embedding layer']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the self-attention mechanism in the transformer decoder do?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows the decoder to consider the entire sequence generated so far when producing the next word']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It allows the decoder to focus only on the most recent word generated']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It prevents the decoder from attending to the encoder outputs']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It focuses on a fixed window of previous words']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A hypothetical machine learning model classifies images of size 3x3 in pixels:'],
+          [QuizMarkdownType.KATEX, `\\begin{bmatrix} 1 \\ 2 \\ 3 \\\\ 4 \\ 5 \\ 6 \\\\ 7 \\ 8 \\ 9 \\end{bmatrix}`],
+          [QuizMarkdownType.TEXT, 'How can the model normalize the image input?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'By flattening the input to a row vector']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'By applying linear transformation to the matrix']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'By multiplying each element in place by weighed values']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'By calculating the determinant']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A hypothetical machine learning model classifies images of size 3x3 in pixels:'],
+          [QuizMarkdownType.KATEX, ``]
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The gradient is negative']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The gradient is positive']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The predictions are becoming more accurate']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The predictions are becoming less accurate']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What can be inferred about the loss function of the following TensorFlow output?'],
+          [QuizMarkdownType.CODE, `Epoch 1/5
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.2970 - accuracy: 0.9146 - val_loss: 0.1360 - val_accuracy: 0.9594
+Epoch 2/5
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.1401 - accuracy: 0.9585 - val_loss: 0.1001 - val_accuracy: 0.9690
+Epoch 3/5
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.1033 - accuracy: 0.9691 - val_loss: 0.0873 - val_accuracy: 0.9733
+Epoch 4/5
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.0824 - accuracy: 0.9751 - val_loss: 0.0783 - val_accuracy: 0.9749
+Epoch 5/5
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.0669 - accuracy: 0.9791 - val_loss: 0.0761 - val_accuracy: 0.9762`]
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The gradient is negative']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The gradient is positive']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The predictions are becoming more accurate']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The predictions are becoming less accurate']] },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If a weight\'s gradient is ______, it means increasing that weight will increase the loss. To reduce the loss, the weight should be decreased. If a weight\'s gradient is ______, it means increasing that weight will decrease the loss. To reduce the loss, the weight should be increased.'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'positive, negative']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'negative, even']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'even, positive']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'negative, positive']] },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'You frequently find that the local weather stations do not accurately predict rain. You assign less importance to their reporting when deciding whether or not to carry an umbrella on any given day. In a neural network setting, this would be most analogous to'],
@@ -21171,6 +21711,18 @@ print(result)`,
       },
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the most likely cause of high variance in a machine learning model?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'There are many errors and fluctuations in the training data']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The training data does not include a wide range of subjects']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'There is too little training data for the model\'s complexity']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'There is too much training data for the model\'s complexity']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is the impact of high variance in a machine learning model?'],
         ],
         answers: [
@@ -21413,10 +21965,10 @@ print(result)`,
       {
         question: [[QuizMarkdownType.TEXT, 'Which of the following best describes Principal Component Analysis (PCA)?']],
         answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A technique to transform data into a lower-dimensional space by finding the principal components']] },
-          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A clustering algorithm']] },
-          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A classification algorithm']] },
-          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A regression technique']] },
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'A way to transform data into a lower-dimensional space by finding the principal components']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'A method to classify data points into different clusters based on cosine similarity']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'An approach to optimize performance in machine learning models by analyzing hardware']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'A procedure to balance and normalize data across different features']] },
         ],
         correctAnswer: '0',
       },
@@ -27234,7 +27786,7 @@ print(result)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'What is the main advantage of using the Keras library?',
+            'What is the main advantage of using the Keras library in Python?',
           ],
         ],
         answers: [
@@ -27375,7 +27927,7 @@ print(result)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which library is known for providing a flexible platform for training deep learning models and is developed by Facebook?',
+            'Which Python library is known for providing a flexible platform for training deep learning models and is developed by Facebook?',
           ],
         ],
         answers: [
@@ -27563,7 +28115,7 @@ print(result)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'What is the primary function of the library TensorFlow?',
+            'What is the primary function of the Python library TensorFlow?',
           ],
         ],
         answers: [
@@ -27610,54 +28162,7 @@ print(result)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which Python library is specifically designed for symbolic mathematics and computer algebra?',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SymPy',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'NumPy',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'SciPy',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'Pandas',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'Which library provides high-level building blocks for developing complex machine learning workflows?',
+            'Which Python library provides high-level building blocks for developing complex machine learning workflows?',
           ],
         ],
         answers: [
@@ -27704,7 +28209,7 @@ print(result)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'What is the primary focus of the library Theano?',
+            'What is the primary focus of the Python library Theano?',
           ],
         ],
         answers: [
@@ -27751,7 +28256,7 @@ print(result)`,
         question: [
           [
             QuizMarkdownType.TEXT,
-            'Which machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
+            'Which Python machine learning library is designed for ease of use and extensibility, and is built on top of TensorFlow?',
           ],
         ],
         answers: [
@@ -49060,6 +49565,238 @@ List<String> upperCaseNames = names.stream()
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'A vector that does not change direction under a linear transformation is']
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A scalar multiple of the vector']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Not a scalar multiple of the vector']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Solution to the characteristic equation']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Not a solution to the characteristic equation']
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the vector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', which of the following is a scalar multiple of '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?']
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 10 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 7 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 9 \\end{pmatrix}']
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the matrices'],
+          [QuizMarkdownType.INLINE_KATEX, 'A = \\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, 'A\' = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, 'and the vector'],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', which is true? '],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
+              [QuizMarkdownType.TEXT, 'is a scalar multiple of'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+              [QuizMarkdownType.TEXT, 'while'],
+              [QuizMarkdownType.INLINE_KATEX, 'A\\mathbf{v}'],
+              [QuizMarkdownType.TEXT, 'is not'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'A\\mathbf{v}'],
+              [QuizMarkdownType.TEXT, 'is a scalar multiple of'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+              [QuizMarkdownType.TEXT, 'while'],
+              [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
+              [QuizMarkdownType.TEXT, 'is not'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+              [QuizMarkdownType.TEXT, 'solves the characteristic equation of'],
+              [QuizMarkdownType.INLINE_KATEX, 'A\''],
+              [QuizMarkdownType.TEXT, 'but not for'],
+              [QuizMarkdownType.INLINE_KATEX, 'A'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+              [QuizMarkdownType.TEXT, 'solves the characteristic equation of'],
+              [QuizMarkdownType.INLINE_KATEX, 'A'],
+              [QuizMarkdownType.TEXT, 'but not for'],
+              [QuizMarkdownType.INLINE_KATEX, 'A\''],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A\' = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' and the vector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', which is true? '],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
+              [QuizMarkdownType.TEXT, 'is a scalar multiple of'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
+              [QuizMarkdownType.TEXT, 'is not a scalar multiple of'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+              [QuizMarkdownType.TEXT, 'solves the characteristic equation of'],
+              [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+              [QuizMarkdownType.TEXT, 'cannot be applied to'],
+              [QuizMarkdownType.INLINE_KATEX, 'A'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A\' = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' and the vector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, 'is an eigenvector of '],
+          [QuizMarkdownType.INLINE_KATEX, 'A\''],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False']
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the matrix '],
+          [QuizMarkdownType.INLINE_KATEX, 'A\' = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' and the vector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', what is the result of the operation '],
+          [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?']
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 11 \\\\ 17 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 9 \\\\ 13 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}']
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 8 \\\\ 20 \\end{pmatrix}']
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'If a matrix '],
           [QuizMarkdownType.INLINE_KATEX, 'A'],
           [QuizMarkdownType.TEXT, ' has an eigenvector '],
@@ -49623,13 +50360,13 @@ List<String> upperCaseNames = names.stream()
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'Multiplying two vectors of congruent dimensions.'],
+              [QuizMarkdownType.TEXT, 'Multiplying two vectors of congruent number of elements.'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'Multiplying two vectors of different dimensions.'],
+              [QuizMarkdownType.TEXT, 'Multiplying two vectors of different number of elements.'],
             ],
           },
         ],
@@ -49849,7 +50586,7 @@ List<String> upperCaseNames = names.stream()
           [QuizMarkdownType.TEXT, 'The number of elements in a vector is also know as the'],
         ],
         answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Magnitude of the vector']] },
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Length of the vector']] },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'Dimensionality of the vector']] },
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'Vector 3d space']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'Vector-matrix number']] },
@@ -50510,26 +51247,26 @@ List<String> upperCaseNames = names.stream()
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, 'Answers 1 and 2'],
+              [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
             ],
             order: 3,
           },
           {
             id: '4',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, 'Answers 2 and 3'],
+              [QuizMarkdownType.TEXT, 'Answers 2 and 3'],
             ],
             order: 4,
           },
           {
             id: '5',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, 'Answers 1, 2 and 3'],
+              [QuizMarkdownType.TEXT, 'Answers 1, 2 and 3'],
             ],
             order: 5,
           },
         ],
-        correctAnswer: '0',
+        correctAnswer: '5',
       },
       {
         question: [
@@ -50959,6 +51696,43 @@ List<String> upperCaseNames = names.stream()
           },
         ],
         correctAnswer: '3',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following formulas represents the cosine similarity between two vectors '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{a}'],
+          [QuizMarkdownType.TEXT, ' and '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{b}'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\| \\mathbf{a} \\| \\| \\mathbf{b} \\|}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\| \\mathbf{a} - \\mathbf{b} \\|'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\| \\mathbf{a} \\| + \\| \\mathbf{b} \\|}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\mathbf{a} \\times \\mathbf{b}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
       },
       {
         question: [
@@ -53267,7 +54041,7 @@ List<String> upperCaseNames = names.stream()
             'If a 2x2 matrix',
           ],
           [
-            QuizMarkdownType.INLINE_CODE,
+            QuizMarkdownType.INLINE_KATEX,
             '\\( A \\)',
           ],
           [
@@ -53275,7 +54049,7 @@ List<String> upperCaseNames = names.stream()
             'has elements',
           ],
           [
-            QuizMarkdownType.INLINE_CODE,
+            QuizMarkdownType.INLINE_KATEX,
             '\\( a, b, c, d \\)',
           ],
           [
