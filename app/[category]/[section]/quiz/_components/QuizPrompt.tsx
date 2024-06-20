@@ -1,12 +1,14 @@
 'use client';
 
 import { Button } from '@/components/ui/common/shadcn/button';
-import quizData from '@/lib/quiz-data';
+import quizData from '@/lib/data/quiz-data';
 import { useParams, useRouter } from 'next/navigation';
+import { QUIZ_ROUTE } from '@/lib/data/routes';
 import { useTimer } from '../_hooks/useTimer';
 import { numOfQuestions } from '../_consts';
 
 const QuizPrompt = () => {
+  const category = useParams().category as string;
   const section = useParams().section as string;
   const router = useRouter();
   const quiz = quizData[section];
@@ -14,7 +16,7 @@ const QuizPrompt = () => {
     handleStartTimer,
   } = useTimer();
   const handlePressStart = () => {
-    router.replace(`/${section}/quiz?qNum=0`);
+    router.replace(`/${category}/${section}/${QUIZ_ROUTE}?qNum=0`);
     handleStartTimer();
   };
   return (

@@ -1,6 +1,6 @@
 'use client';
 
-import routes from '@/lib/data/routes';
+import { directQuizRoutes } from '@/lib/data/routes';
 import Link from 'next/link';
 import { ReactElement, useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
@@ -63,7 +63,7 @@ const SecondRow = () => {
         >
           <div className="flex flex-col items-center">
             <ul className="flex flex-wrap justify-evenly gap-2 max-w-[400px] lg:max-w-[unset]">
-              {routes.map((r) => (
+              {directQuizRoutes.map((r) => (
                 <li key={r.href}>
                   <Link className="py-2 group" href={r.href}>
                     <span className="text-sm border-l-4 pl-2 group-hover:underline group-hover:border-l-purple-500">
@@ -73,7 +73,7 @@ const SecondRow = () => {
                 </li>
               ))}
             </ul>
-            <Link className={cn(buttonVariants({ variant: 'link' }), 'mt-8')} href="/">
+            <Link className={cn(buttonVariants({ variant: 'link' }), 'mt-8')} href="/categories">
               +More
             </Link>
           </div>

@@ -1,4 +1,4 @@
-import quizData from '@/lib/quiz-data';
+import quizData from '@/lib/data/quiz-data';
 import { ReactNode } from 'react';
 
 interface SectionLayoutProps {

@@ -13,7 +13,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import quizData, { Question } from '@/lib/quiz-data';
+import quizData, { Question } from '@/lib/data/quiz-data';
 import { Button } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
 import {
@@ -29,6 +29,7 @@ import Code from './Code';
 import QuizFormFields from './QuizFormFields';
 import IssueModal from './IssueModal';
 import useActiveElement from '../_hooks/useActiveElement';
+import { QUIZ_ROUTE, RESULTS_ROUTE } from '@/lib/data/routes';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -47,6 +48,7 @@ const QuizForm = () => {
   const [submittedAnswer, setSubmittedAnswer] = useState<string | null>(null);
   const router = useRouter();
   const section = useParams().section as string;
+  const category = useParams().category as string;
   const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
   const searchParams = useSearchParams();
   const qNum = Number(searchParams.get('qNum')) || 0;
@@ -89,7 +91,7 @@ const QuizForm = () => {
     if (qNum === questions.length - 1) {
       setFinalTime(timer);
       setQuestions(questions);
-      router.push(`/${section}/quiz/results`);
+      router.push(`/${category}/${section}/${QUIZ_ROUTE}/${RESULTS_ROUTE}`);
       return;
     }
     router.push(getNextUrl(qNum + 1));
@@ -154,7 +156,7 @@ const QuizForm = () => {
       form.reset({ answer: undefined });
       setSubmittedAnswer(null);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qNum]);
   const isFirstRender = useRef(true);
   useEffect(() => () => {

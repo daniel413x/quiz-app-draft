@@ -1,5 +1,6 @@
-import routes from '@/lib/data/routes';
+import { CATEGORIES_ROUTE } from '@/lib/data/routes';
 import Link from '@/components/ui/common/Link';
+import { categories } from '@/lib/data/quiz-data';
 import MobileNav from './MobileNav';
 import { DarkModeToggle } from './DarkModeToggle';
 import Logo from './Logo';
@@ -11,11 +12,16 @@ const Navbar = () => (
       <div className="md:hidden flex">
         <MobileNav />
       </div>
-      <div className="gap-2 text-sm hidden md:flex items-center overflow-x-auto h-14 -my-4">
-        {routes.map((r) => (
-          <Link href={r.href} name={r.name} key={r.href} />
+      <ul className="gap-2 text-sm hidden md:flex items-center overflow-x-auto h-14 -my-4">
+        <li>
+          <Link href={`/${CATEGORIES_ROUTE}`} name="Browse All Categories" />
+        </li>
+        {categories.map((c) => (
+          <li key={c.slug}>
+            <Link href={`/${c.slug}`} name={c.name} key={c.slug} />
+          </li>
         ))}
-      </div>
+      </ul>
       <div className="items-center gap-1.5 text-gray-400 hidden md:flex">
         <DarkModeToggle />
       </div>

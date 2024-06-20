@@ -19,6 +19,9 @@ import parkingOnHill from '@/public/parking-on-hill.jpg';
 import constructionSignTriangle from '@/public/construction-sign-triangle.jpg';
 import bridge from '@/public/bridge.png';
 import switchImg from '@/public/switch.png';
+import covarianceEqZero from '@/public/covariance-eq-zero.png';
+import covarianceGtZero from '@/public/covariance-gt-zero.png';
+import covarianceLtZero from '@/public/covariance-lt-zero.png';
 
 import leftCurveAhead from '@/public/left-curve-ahead.png';
 import trafficSignalAhead from '@/public/traffic-signal-ahead.png';
@@ -49,8 +52,16 @@ export type Question = {
   correctAnswer: string;
 };
 
-type QuizDataObject = {
+export type Category = {
   name: string;
+  slug: string;
+  quizzes: QuizDataObject[];
+};
+
+export type QuizDataObject = {
+  name: string;
+  slug: string;
+  category: Pick<Category, 'slug'>;
   questions: Question[];
 };
 
@@ -61,6 +72,10 @@ type QuizData = {
 const quizData: QuizData = {
   'learners-permit': {
     name: 'Learner\'s Permit',
+    slug: 'learners-permit',
+    category: {
+      slug: 'cars',
+    },
     questions: [
       {
         question: [
@@ -4890,10 +4905,14 @@ const quizData: QuizData = {
   // ===========
   javascript: {
     name: 'JavaScript',
+    slug: 'javascript',
+    category: {
+      slug: 'programming',
+    },
     questions: [
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the primary purpose of Babel in web development?']
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of Babel in web development?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'To transpile modern JavaScript code to a version compatible with older browsers']] },
@@ -4905,7 +4924,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which configuration file is commonly used to customize Babel\'s behavior?']
+          [QuizMarkdownType.TEXT, 'Which configuration file is commonly used to customize Babel\'s behavior?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '.babelrc']] },
@@ -4917,7 +4936,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which Babel package is responsible for transforming ES6+ syntax into a backward-compatible version of JavaScript?']
+          [QuizMarkdownType.TEXT, 'Which Babel package is responsible for transforming ES6+ syntax into a backward-compatible version of JavaScript?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-env']] },
@@ -4931,7 +4950,7 @@ const quizData: QuizData = {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the'],
           [QuizMarkdownType.INLINE_CODE, '@babel/preset-react'],
-          [QuizMarkdownType.TEXT, 'package?']
+          [QuizMarkdownType.TEXT, 'package?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'To transpile React\'s JSX syntax']] },
@@ -4945,7 +4964,7 @@ const quizData: QuizData = {
         question: [
           [QuizMarkdownType.TEXT, 'What does the Babel plugin'],
           [QuizMarkdownType.INLINE_CODE, '@babel/plugin-transform-runtime'],
-          [QuizMarkdownType.TEXT, 'do?']
+          [QuizMarkdownType.TEXT, 'do?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'It optimizes the code by reusing Babel\'s helper functions to avoid code duplication']] },
@@ -4957,7 +4976,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which of the following statements is true about Babel?']
+          [QuizMarkdownType.TEXT, 'Which of the following statements is true about Babel?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Babel can be configured to target specific browsers and environments']] },
@@ -4969,7 +4988,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which of the following Babel presets would you use to transpile code that includes experimental JavaScript features?']
+          [QuizMarkdownType.TEXT, 'Which of the following Babel presets would you use to transpile code that includes experimental JavaScript features?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-env']] },
@@ -4981,7 +5000,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is responsible for transpiling JSX into JavaScript?']
+          [QuizMarkdownType.TEXT, 'What is responsible for transpiling JSX into JavaScript?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Babel using the @babel/preset-react preset']] },
@@ -4996,7 +5015,7 @@ const quizData: QuizData = {
         question: [
           [QuizMarkdownType.TEXT, 'During the build phase of a React application or'],
           [QuizMarkdownType.INLINE_CODE, 'npm run build'],
-          [QuizMarkdownType.TEXT, ', what technology is responsible for bundling?']
+          [QuizMarkdownType.TEXT, ', what technology is responsible for bundling?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Create React App']] },
@@ -5010,7 +5029,7 @@ const quizData: QuizData = {
         question: [
           [QuizMarkdownType.TEXT, 'Which of the following is NOT part of the Webpack bundling process when running'],
           [QuizMarkdownType.INLINE_CODE, 'npm run build'],
-          [QuizMarkdownType.TEXT, 'in a React project?']
+          [QuizMarkdownType.TEXT, 'in a React project?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linting and code formatting']] },
@@ -5024,7 +5043,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'The stages of processing React source code into the HTML used by the end user goes roughly']
+          [QuizMarkdownType.TEXT, 'The stages of processing React source code into the HTML used by the end user goes roughly'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Babel -> Webpack -> ReactDOM.render']] },
@@ -5036,7 +5055,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which tool is commonly used to bundle the JavaScript, CSS, and other assets in a React application and inject the necessary script tags into the HTML file?']
+          [QuizMarkdownType.TEXT, 'Which tool is commonly used to bundle the JavaScript, CSS, and other assets in a React application and inject the necessary script tags into the HTML file?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Webpack']] },
@@ -5048,7 +5067,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'In a React project, what command is used to generate an optimized build of the application, including the final HTML, CSS, and JavaScript files?']
+          [QuizMarkdownType.TEXT, 'In a React project, what command is used to generate an optimized build of the application, including the final HTML, CSS, and JavaScript files?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'npm run build']] },
@@ -5060,7 +5079,7 @@ const quizData: QuizData = {
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is the role of ReactDOM in a typical client-side rendered React application?']
+          [QuizMarkdownType.TEXT, 'What is the role of ReactDOM in a typical client-side rendered React application?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'To render transpiled JSX at the root element of the HTML template']] },
@@ -5074,11 +5093,12 @@ const quizData: QuizData = {
         question: [
           [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of'],
           [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
-          [QuizMarkdownType.TEXT, 'in a React component?']
+          [QuizMarkdownType.TEXT, 'in a React component?'],
         ],
         answers: [
           {
-            id: '0', answer: [[QuizMarkdownType.CODE, `
+            id: '0',
+            answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect, useState } from 'react';
 
 function MyComponent() {
@@ -5097,10 +5117,11 @@ function MyComponent() {
 
   return <div>Width: {size.width}, Height: {size.height}</div>;
 }
-  `]]
+  `]],
           },
           {
-            id: '1', answer: [[QuizMarkdownType.CODE, `
+            id: '1',
+            answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect, useState } from 'react';
 
 function MyComponent() {
@@ -5114,10 +5135,11 @@ function MyComponent() {
 
   return <div>{data}</div>;
 }
-  `]]
+  `]],
           },
           {
-            id: '2', answer: [[QuizMarkdownType.CODE, `
+            id: '2',
+            answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect } from 'react';
 
 function MyComponent() {
@@ -5127,10 +5149,11 @@ function MyComponent() {
 
   return <div>Check the document title</div>;
 }
-  `]]
+  `]],
           },
           {
-            id: '3', answer: [[QuizMarkdownType.CODE, `
+            id: '3',
+            answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect, useState } from 'react';
 
 function MyComponent() {
@@ -5146,7 +5169,7 @@ function MyComponent() {
 
   return <div>Count: {count}</div>;
 }
-  `]]
+  `]],
           },
         ],
         correctAnswer: '0',
@@ -5157,7 +5180,7 @@ function MyComponent() {
           [QuizMarkdownType.INLINE_CODE, 'useEffect'],
           [QuizMarkdownType.TEXT, 'instead of'],
           [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
-          [QuizMarkdownType.TEXT, '?']
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'The measurements might be incorrect.']] },
@@ -5171,7 +5194,7 @@ function MyComponent() {
         question: [
           [QuizMarkdownType.TEXT, 'In which phase of the React component lifecycle does'],
           [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
-          [QuizMarkdownType.TEXT, 'run?']
+          [QuizMarkdownType.TEXT, 'run?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated but before the browser has painted.']] },
@@ -5237,10 +5260,11 @@ function MyComponent() {
         answers: [
           {
             id: '0',
-            answer: [[QuizMarkdownType.TEXT, 'By accessing and modifying style properties using methods like'],
-            [QuizMarkdownType.INLINE_CODE, 'document.styleSheets'],
-            [QuizMarkdownType.TEXT, 'and'],
-            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet.insertRule'],
+            answer: [
+              [QuizMarkdownType.TEXT, 'By accessing and modifying style properties using methods like'],
+              [QuizMarkdownType.INLINE_CODE, 'document.styleSheets'],
+              [QuizMarkdownType.TEXT, 'and'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet.insertRule'],
             ],
           },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'By sending AJAX requests to update styles.']] },
@@ -5308,35 +5332,39 @@ function MyComponent() {
         answers: [
           {
             id: '0',
-            answer: [[QuizMarkdownType.TEXT, 'Using the'],
-            [QuizMarkdownType.INLINE_CODE, 'cssRules'],
-            [QuizMarkdownType.TEXT, 'property of the'],
-            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-            [QuizMarkdownType.TEXT, 'interface.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'cssRules'],
+              [QuizMarkdownType.TEXT, 'property of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
           },
           {
             id: '1',
-            answer: [[QuizMarkdownType.TEXT, 'Using the'],
-            [QuizMarkdownType.INLINE_CODE, 'getRules'],
-            [QuizMarkdownType.TEXT, 'method of the'],
-            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-            [QuizMarkdownType.TEXT, 'interface.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'getRules'],
+              [QuizMarkdownType.TEXT, 'method of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
           },
           {
             id: '2',
-            answer: [[QuizMarkdownType.TEXT, 'Using the'],
-            [QuizMarkdownType.INLINE_CODE, 'rules'],
-            [QuizMarkdownType.TEXT, 'property of the'],
-            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-            [QuizMarkdownType.TEXT, 'interface.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'rules'],
+              [QuizMarkdownType.TEXT, 'property of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
           },
           {
             id: '3',
-            answer: [[QuizMarkdownType.TEXT, 'Using the'],
-            [QuizMarkdownType.INLINE_CODE, 'getCSSRules'],
-            [QuizMarkdownType.TEXT, 'method of the'],
-            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-            [QuizMarkdownType.TEXT, 'interface.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using the'],
+              [QuizMarkdownType.INLINE_CODE, 'getCSSRules'],
+              [QuizMarkdownType.TEXT, 'method of the'],
+              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+              [QuizMarkdownType.TEXT, 'interface.']],
           },
         ],
         correctAnswer: '0',
@@ -5533,29 +5561,36 @@ function MyComponent() {
         answers: [
           {
             id: '0',
-            answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
-            [QuizMarkdownType.INLINE_CODE, 'defer'],
-            [QuizMarkdownType.TEXT, 'attribute are executed in the order they appear in the document.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Scripts with the'],
+              [QuizMarkdownType.INLINE_CODE, 'defer'],
+              [QuizMarkdownType.TEXT, 'attribute are executed in the order they appear in the document.']],
           },
           {
             id: '1',
-            answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
-            [QuizMarkdownType.INLINE_CODE, 'async'],
-            [QuizMarkdownType.TEXT, 'attribute are guaranteed to be executed in order.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Scripts with the'],
+              [QuizMarkdownType.INLINE_CODE, 'async'],
+              [QuizMarkdownType.TEXT, 'attribute are guaranteed to be executed in order.'],
+            ],
           },
           {
             id: '2',
-            answer: [[QuizMarkdownType.TEXT, 'Scripts without'],
-            [QuizMarkdownType.INLINE_CODE, 'defer'],
-            [QuizMarkdownType.TEXT, 'or'],
-            [QuizMarkdownType.INLINE_CODE, 'async'],
-            [QuizMarkdownType.TEXT, 'attributes are executed asynchronously.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Scripts without'],
+              [QuizMarkdownType.INLINE_CODE, 'defer'],
+              [QuizMarkdownType.TEXT, 'or'],
+              [QuizMarkdownType.INLINE_CODE, 'async'],
+              [QuizMarkdownType.TEXT, 'attributes are executed asynchronously.'],
+            ],
           },
           {
             id: '3',
-            answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
-            [QuizMarkdownType.INLINE_CODE, 'defer'],
-            [QuizMarkdownType.TEXT, 'attribute block HTML parsing.']],
+            answer: [
+              [QuizMarkdownType.TEXT, 'Scripts with the'],
+              [QuizMarkdownType.INLINE_CODE, 'defer'],
+              [QuizMarkdownType.TEXT, 'attribute block HTML parsing.'],
+            ],
           },
         ],
         correctAnswer: '0',
@@ -17169,6 +17204,10 @@ onmessage = function(event) {
   },
   python: {
     name: 'Python',
+    slug: 'python',
+    category: {
+      slug: 'programming',
+    },
     questions: [
       {
         question: [
@@ -20735,41 +20774,13 @@ print(result)`,
     ],
   },
   // ===========
-  'machine-learning': {
+  'ml-principles': {
     name: 'Machine Learning',
+    slug: 'ml-principles',
+    category: {
+      slug: 'machine-learning',
+    },
     questions: [
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is a perceptron?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'A single-layer neural network'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'A deep learning model'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'A reinforcement learning algorithm'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'An optimization technique'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is a perceptron?'],
@@ -20932,7 +20943,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What does the encoder in the transformer encoder-decoder architecture produce?']
+          [QuizMarkdownType.TEXT, 'What does the encoder in the transformer encoder-decoder architecture produce?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'A fixed-size vector representation of the input sentence']] },
@@ -20944,7 +20955,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'In the transformer encoder-decoder architecture, what mechanisms does the decoder use?']
+          [QuizMarkdownType.TEXT, 'In the transformer encoder-decoder architecture, what mechanisms does the decoder use?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Self-attention and cross-attention']] },
@@ -20956,7 +20967,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which of the following is an example of a transformer encoder-decoder model introduced by Google in 2019?']
+          [QuizMarkdownType.TEXT, 'Which of the following is an example of a transformer encoder-decoder model introduced by Google in 2019?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'T5 (Text-to-Text Transfer Transformer)']] },
@@ -20968,7 +20979,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What are some of the NLP tasks for which the T5 model can be fine-tuned?']
+          [QuizMarkdownType.TEXT, 'What are some of the NLP tasks for which the T5 model can be fine-tuned?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Language translation, question answering, summarization']] },
@@ -20980,7 +20991,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which real-world application uses the T5 model for translating text between languages?']
+          [QuizMarkdownType.TEXT, 'Which real-world application uses the T5 model for translating text between languages?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Google Translate']] },
@@ -20992,7 +21003,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is Facebook’s multilingual machine translation model that can translate between 100 different languages called?']
+          [QuizMarkdownType.TEXT, 'What is Facebook’s multilingual machine translation model that can translate between 100 different languages called?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'M2M-100']] },
@@ -21004,7 +21015,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What type of attention mechanism is used in the transformer decoder to attend to the encoder outputs?']
+          [QuizMarkdownType.TEXT, 'What type of attention mechanism is used in the transformer decoder to attend to the encoder outputs?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cross-attention']] },
@@ -21016,7 +21027,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'Which part of the transformer encoder-decoder architecture is responsible for generating the output sentence in another language?']
+          [QuizMarkdownType.TEXT, 'Which part of the transformer encoder-decoder architecture is responsible for generating the output sentence in another language?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'The decoder']] },
@@ -21028,7 +21039,7 @@ print(result)`,
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What does the self-attention mechanism in the transformer decoder do?']
+          [QuizMarkdownType.TEXT, 'What does the self-attention mechanism in the transformer decoder do?'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows the decoder to consider the entire sequence generated so far when producing the next word']] },
@@ -21041,7 +21052,7 @@ print(result)`,
       {
         question: [
           [QuizMarkdownType.TEXT, 'A hypothetical machine learning model classifies images of size 3x3 in pixels:'],
-          [QuizMarkdownType.KATEX, `\\begin{bmatrix} 1 \\ 2 \\ 3 \\\\ 4 \\ 5 \\ 6 \\\\ 7 \\ 8 \\ 9 \\end{bmatrix}`],
+          [QuizMarkdownType.KATEX, '\\begin{bmatrix} 1 \\ 2 \\ 3 \\\\ 4 \\ 5 \\ 6 \\\\ 7 \\ 8 \\ 9 \\end{bmatrix}'],
           [QuizMarkdownType.TEXT, 'How can the model normalize the image input?'],
         ],
         answers: [
@@ -21055,7 +21066,7 @@ print(result)`,
       {
         question: [
           [QuizMarkdownType.TEXT, 'A hypothetical machine learning model classifies images of size 3x3 in pixels:'],
-          [QuizMarkdownType.KATEX, ``]
+          [QuizMarkdownType.KATEX, ''],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'The gradient is negative']] },
@@ -21077,7 +21088,7 @@ Epoch 3/5
 Epoch 4/5
 1875/1875 [==============================] - 5s 2ms/step - loss: 0.0824 - accuracy: 0.9751 - val_loss: 0.0783 - val_accuracy: 0.9749
 Epoch 5/5
-1875/1875 [==============================] - 5s 2ms/step - loss: 0.0669 - accuracy: 0.9791 - val_loss: 0.0761 - val_accuracy: 0.9762`]
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.0669 - accuracy: 0.9791 - val_loss: 0.0761 - val_accuracy: 0.9762`],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'The gradient is negative']] },
@@ -33159,6 +33170,10 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
   // ===========
   java: {
     name: 'Java',
+    slug: 'java',
+    category: {
+      slug: 'programming',
+    },
     questions: [
       {
         question: [
@@ -37306,6 +37321,10 @@ List<String> upperCaseNames = names.stream()
   // ===========
   'comptia-network-plus': {
     name: 'CompTIA Network+',
+    slug: 'comptia-network-plus',
+    category: {
+      slug: 'it-certifications',
+    },
     questions: [
       {
         question: [
@@ -37838,7 +37857,7 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'By mapping devices\' private IP addresses to public IP addresses',
+                'By mapping devices\' private IP addresses to ports on the public IP address',
               ],
             ],
           },
@@ -37847,7 +37866,7 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'By mapping devices\' private IP addresses to ports on the public IP address',
+                'By mapping devices\' private IP addresses to public IP addresses',
               ],
             ],
           },
@@ -37871,53 +37890,6 @@ List<String> upperCaseNames = names.stream()
           },
         ],
         correctAnswer: '1',
-      },
-      {
-        question: [
-          [
-            QuizMarkdownType.TEXT,
-            'An e-commerce with a storefront platform, a CMS platform, and a database shared between the two platforms',
-          ],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'DHCP, public IPs',
-              ],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'public IP, public IPs',
-              ],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'public IP, private IPs',
-              ],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [
-                QuizMarkdownType.TEXT,
-                'private IP, public IPs',
-              ],
-            ],
-          },
-        ],
-        correctAnswer: '2',
       },
       {
         question: [
@@ -46107,7 +46079,7 @@ List<String> upperCaseNames = names.stream()
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'A CIDR block represents an octet',
+                'A CIDR block represents octets',
               ],
             ],
           },
@@ -46640,6 +46612,10 @@ List<String> upperCaseNames = names.stream()
   // ===============
   'aws-cloud-practitioner': {
     name: 'AWS Certified Cloud Practitioner Certification',
+    slug: 'aws-cloud-practitioner',
+    category: {
+      slug: 'cloud-certifications',
+    },
     questions: [
       {
         question: [
@@ -50370,34 +50346,38 @@ List<String> upperCaseNames = names.stream()
   // ==================
   'linear-algebra': {
     name: 'Linear Algebra',
+    slug: 'linear-algebra',
+    category: {
+      slug: 'mathematics',
+    },
     questions: [
       {
         question: [
-          [QuizMarkdownType.TEXT, 'A vector that does not change direction under a linear transformation is']
+          [QuizMarkdownType.TEXT, 'A vector that does not change direction under a linear transformation is'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'A scalar multiple of the vector']
+              [QuizMarkdownType.TEXT, 'A scalar multiple of the vector'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'Not a scalar multiple of the vector']
+              [QuizMarkdownType.TEXT, 'Not a scalar multiple of the vector'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'Solution to the characteristic equation']
+              [QuizMarkdownType.TEXT, 'Solution to the characteristic equation'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'Not a solution to the characteristic equation']
+              [QuizMarkdownType.TEXT, 'Not a solution to the characteristic equation'],
             ],
           },
         ],
@@ -50409,31 +50389,31 @@ List<String> upperCaseNames = names.stream()
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
           [QuizMarkdownType.TEXT, ', which of the following is a scalar multiple of '],
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
-          [QuizMarkdownType.TEXT, '?']
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 10 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 10 \\end{pmatrix}'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 7 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 3 \\\\ 7 \\end{pmatrix}'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 9 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 9 \\end{pmatrix}'],
             ],
           },
         ],
@@ -50553,13 +50533,13 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'True']
+              [QuizMarkdownType.TEXT, 'True'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'False']
+              [QuizMarkdownType.TEXT, 'False'],
             ],
           },
         ],
@@ -50573,31 +50553,31 @@ List<String> upperCaseNames = names.stream()
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
           [QuizMarkdownType.TEXT, ', what is the result of the operation '],
           [QuizMarkdownType.INLINE_KATEX, 'A\'\\mathbf{v}'],
-          [QuizMarkdownType.TEXT, '?']
+          [QuizMarkdownType.TEXT, '?'],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 11 \\\\ 17 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 11 \\\\ 17 \\end{pmatrix}'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 9 \\\\ 13 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 9 \\\\ 13 \\end{pmatrix}'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 8 \\\\ 20 \\end{pmatrix}']
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 8 \\\\ 20 \\end{pmatrix}'],
             ],
           },
         ],
@@ -56778,7 +56758,331 @@ var B = [
   // ===================
   data: {
     name: 'Data',
+    slug: 'data',
+    category: {
+      slug: 'data',
+    },
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of a database index?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To increase the speed of data retrieval'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To store additional data'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To enforce data integrity'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To manage user access'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which SQL statement is used to remove a table from a database?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'DROP TABLE table_name;'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'DELETE TABLE table_name;'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'REMOVE TABLE table_name;'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'TRUNCATE TABLE table_name;'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a relational database, what is a primary key used for?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To uniquely identify each record in a table'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To provide a unique index for a table'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To link two tables together'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To enforce data validation rules'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What type of data model is used in a NoSQL database like MongoDB?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Document-oriented model'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Relational model'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hierarchical model'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Network model'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In data warehousing, what does ETL stand for?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Extract, Transform, Load'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Extract, Transfer, Load'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Extract, Transform, Link'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Extract, Transfer, Link'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the main advantage of a star schema in a data warehouse?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Simplified queries and faster data retrieval'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Reduced storage requirements'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Enhanced data security'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Improved data redundancy'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the function of a foreign key in a relational database?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To establish a link between the data in two tables'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To uniquely identify each record in a table'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To enforce data validation rules'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To provide a unique index for a table'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What type of operation is a JOIN in SQL?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combining rows from two or more tables based on a related column'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Selecting specific columns from a table'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filtering rows based on a condition'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Grouping rows that have the same values'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does ACID stand for in database transactions?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Atomicity, Consistency, Isolation, Durability'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Accuracy, Consistency, Integrity, Durability'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Atomicity, Consistency, Integrity, Durability'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Accuracy, Consistency, Isolation, Durability'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a key-value store in NoSQL databases?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A simple data storage paradigm where each key is associated with one value'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A table structure with rows and columns'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A hierarchical storage structure'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A graph-based storage model'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'A data scientist notices that a particular feature in the dataset has a lot of variability but no clear pattern. What is this an example of?'],
@@ -56795,6 +57099,10 @@ var B = [
   },
   'shell-scripting': {
     name: 'Shell Scripting',
+    slug: 'shell-scripting',
+    category: {
+      slug: 'programming',
+    },
     questions: [
 
       {
@@ -56903,7 +57211,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
-          [QuizMarkdownType.CODE, `command 1>output.txt 2>error.txt`],
+          [QuizMarkdownType.CODE, 'command 1>output.txt 2>error.txt'],
         ],
         answers: [
           {
@@ -56936,7 +57244,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `command <input.txt >output.txt`],
+          [QuizMarkdownType.CODE, 'command <input.txt >output.txt'],
         ],
         answers: [
           {
@@ -56969,7 +57277,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
-          [QuizMarkdownType.CODE, `command >output.txt 2>&1`],
+          [QuizMarkdownType.CODE, 'command >output.txt 2>&1'],
         ],
         answers: [
           {
@@ -57002,7 +57310,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command accomplish?'],
-          [QuizMarkdownType.CODE, `command 0</dev/null`],
+          [QuizMarkdownType.CODE, 'command 0</dev/null'],
         ],
         answers: [
           {
@@ -57035,7 +57343,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
-          [QuizMarkdownType.CODE, `command 1>>output.txt`],
+          [QuizMarkdownType.CODE, 'command 1>>output.txt'],
         ],
         answers: [
           {
@@ -57068,7 +57376,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
-          [QuizMarkdownType.CODE, `command 2>&1 | tee logfile.txt`],
+          [QuizMarkdownType.CODE, 'command 2>&1 | tee logfile.txt'],
         ],
         answers: [
           {
@@ -57101,7 +57409,7 @@ command 0<input.txt`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
-          [QuizMarkdownType.CODE, `command <input.txt 2>&1`],
+          [QuizMarkdownType.CODE, 'command <input.txt 2>&1'],
         ],
         answers: [
           {
@@ -61512,6 +61820,10 @@ greet "World"`],
   // https://www.google.com/search?sca_esv=4ce04de13f7e18f6&sxsrf=ADLYWII1iTpZHmuNg5Q0ZkCuaaZF-lJHyw:1717784095817&q=%D0%BD%D0%B0+%D0%B4%D0%B8%D0%B0%D0%B3%D0%BE%D0%BD%D0%B0%D0%BB%D0%B8&uds=ADvngMjUXgvBgt_rBpnNYEl3NfSff0qvnJ7zYe5a1uwoRWmk6v-6UySfSLMVq3CG8Bfzu4H4-1drA1P-pjmDK0CtVdD1DZWcCi15vn2xrYArE2sAlLOJLxWF8QB6ijiAO55yCeIHqayIp36tsI4n8A5GZczXLWCjivis1lAgkGTCnBfU3J9CjV4r23Y4Yf_1cpoDEW48R0ucs50xrcZ1gRyJzJJq09nHqJfy9XONCeK-lkkke3l2E9OUCnoA1It3mF5FvSVBn3JQweiBPF8ZfWgawwfNEOxfax0zjEiLe71u7PVptgNzkj61e4ddhlCRmh_ZeJGw53DTRNIYkYp2WUSc65196CtvzEMOUPShZmiWdBBBjZHMZmYUlL_NNoA1UN0izKFEogwBwEwAioVHKFRrVrNW1bpBmcBQrMfjF7SS28luAc9vDGk&udm=2&prmd=ivsnmbtz&sa=X&ved=2ahUKEwjJydO2jMqGAxWev4kEHZ5pBg4QtKgLegQIFhAB&biw=2560&bih=1302&dpr=1#vhid=kFmwnFr1_EWHdM&vssid=mosaic
   geometry: {
     name: 'Geometry',
+    slug: 'geometry',
+    category: {
+      slug: 'mathematics',
+    },
     questions: [
       {
         question: [
@@ -61628,6 +61940,10 @@ greet "World"`],
   },
   'english-ii': {
     name: 'English II',
+    slug: 'english-ii',
+    category: {
+      slug: 'english',
+    },
     questions: [
 
       {
@@ -61670,7 +61986,92 @@ greet "World"`],
   },
   'probability-theory': {
     name: 'Probability',
+    slug: 'probability-theory',
+    category: {
+      slug: 'mathematics',
+    },
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+        ],
+        image: covarianceEqZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+        ],
+        image: covarianceLtZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+        ],
+        image: covarianceGtZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the formula for the variance of a population?'],
@@ -61868,6 +62269,7 @@ greet "World"`],
           [QuizMarkdownType.TEXT, 'Why is'],
           [QuizMarkdownType.INLINE_KATEX, 'N - 1'],
           [QuizMarkdownType.TEXT, 'used in the sample variance formula instead of N?'],
+          [QuizMarkdownType.INLINE_KATEX, 'N'],
         ],
         answers: [
           {
@@ -61905,25 +62307,25 @@ greet "World"`],
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'All data points are identical'],
+              [QuizMarkdownType.TEXT, 'All data points are identical'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'All data points are different'],
+              [QuizMarkdownType.TEXT, 'All data points are different'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are spread out'],
+              [QuizMarkdownType.TEXT, 'Data points are spread out'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are negative'],
+              [QuizMarkdownType.TEXT, 'Data points are negative'],
             ],
           },
         ],
@@ -62088,38 +62490,6 @@ greet "World"`],
           },
         ],
         correctAnswer: '2',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'In a group of 30 people, what is the probability that at least two people have the same birthday?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, '1/365'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, '1/30'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, '1/2'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, '1'],
-            ],
-          },
-        ],
-        correctAnswer: '3',
       },
       {
         question: [
@@ -62345,10 +62715,704 @@ greet "World"`],
         ],
         correctAnswer: '1',
       },
-    ]
+    ],
+  },
+  tensorflow: {
+    name: 'TensorFlow',
+    slug: 'tensorflow',
+    category: {
+      slug: 'machine-learning',
+    },
+    questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which function in TensorFlow is used to define a variable?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.placeholder'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Variable'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.constant'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Tensor'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary use of the'],
+          [QuizMarkdownType.INLINE_CODE, 'tf.data.Dataset'],
+          [QuizMarkdownType.TEXT, 'class in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define layers of a neural network'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To load and preprocess data'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define loss functions'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To initialize variables'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which TensorFlow function is used to create a neural network layer?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Variable'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.keras.layers.Dense'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.constant'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.layers.Layer'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which optimizer is commonly used in TensorFlow for training deep learning models?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.train.GradientDescentOptimizer'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.train.AdamOptimizer'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.train.RMSPropOptimizer'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.train.MomentumOptimizer'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to compile a model in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'model.fit'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'model.compile'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'model.train'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'model.add'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of'],
+          [QuizMarkdownType.INLINE_CODE, 'tf.keras.models.Sequential'],
+          [QuizMarkdownType.TEXT, 'in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define a dataset pipeline'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define a sequence of layers'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To compile a model'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To load pre-trained models'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which function is used to initialize variables in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.global_variables_initializer'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.initialize_all_variables'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.init_variables'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.initialize_variables'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which TensorFlow class is used to define a custom loss function?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.keras.losses.Loss'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.losses.Loss'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.keras.losses.CustomLoss'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.custom.Loss'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which function in TensorFlow is used to compute the softmax of a tensor?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.nn.softmax'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.math.softmax'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.keras.activations.softmax'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.softmax'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which TensorFlow function is used to create a tensor of zeros?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.zeros'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.zeros_like'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.constant'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.zeros_tensor'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of'],
+          [QuizMarkdownType.INLINE_CODE, 'tf.keras.layers.Dense'],
+          [QuizMarkdownType.TEXT, 'in a neural network model?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define the activation function'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To add a dense layer with a specified number of neurons'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To initialize weights'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define the optimizer'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is TensorFlow primarily used for?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Web development'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Data analysis'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Machine learning and deep learning'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Game development'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which company developed TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Microsoft'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Facebook'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Apple'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Google'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a Tensor in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A scalar value'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A data container that holds multi-dimensional data'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A graphical representation of data'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A statistical model'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to create a constant tensor in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.variable'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.constant'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.placeholder'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.tensor'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a Placeholder in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A fixed value used in computations'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A variable that can be modified during training'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A way to feed data into the computational graph'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A function that initializes weights'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which API does TensorFlow provide for high-level neural network building?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Keras'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Scikit-learn'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'PyTorch'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Theano'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary language used to write TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'JavaScript'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'C++'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Python'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Java'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow, what does the function'],
+          [QuizMarkdownType.INLINE_CODE, 'tf.Session()'],
+          [QuizMarkdownType.TEXT, 'do?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It initializes all variables'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It evaluates tensors'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It builds the computational graph'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It executes operations in the computational graph'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is TensorBoard used for in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Data preprocessing'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hyperparameter tuning'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Visualizing the computational graph and metrics'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Model deployment'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is a feature of TensorFlow 2.0?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Eager execution by default'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removal of tf.data API'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Support for only linear regression models'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Incompatibility with Keras'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+    ],
   },
   test: {
     name: 'test',
+    slug: 'test',
+    category: {
+      slug: 'test',
+    },
     questions: [
       {
         question: [
@@ -62438,6 +63502,75 @@ greet "World"`],
       },
     ],
   },
+};
+
+const categories = [
+  {
+    name: 'Cars',
+    slug: 'cars',
+    quizzes: [
+      quizData['learners-permit'],
+    ],
+  },
+  {
+    name: 'Programming',
+    slug: 'programming',
+    quizzes: [
+      quizData.javascript,
+      quizData.python,
+      quizData.java,
+    ],
+  },
+  {
+    name: 'Machine Learning',
+    slug: 'machine-learning',
+    quizzes: [
+      quizData['ml-principles'],
+      quizData.tensorflow,
+    ],
+  },
+  {
+    name: 'IT Certifications',
+    slug: 'it-certifications',
+    quizzes: [
+      quizData['comptia-network-plus'],
+    ],
+  },
+  {
+    name: 'Cloud Certifications',
+    slug: 'cloud-certifications',
+    quizzes: [
+      quizData['aws-cloud-practitioner'],
+    ],
+  },
+  {
+    name: 'Mathematics',
+    slug: 'mathematics',
+    quizzes: [
+      quizData['linear-algebra'],
+      quizData.geometry,
+      quizData['probability-theory'],
+      quizData.test,
+    ],
+  },
+  {
+    name: 'Data',
+    slug: 'data',
+    quizzes: [
+      quizData.data,
+    ],
+  },
+  {
+    name: 'English',
+    slug: 'english',
+    quizzes: [
+      quizData['english-ii'],
+    ],
+  },
+];
+
+export {
+  categories,
 };
 
 export default quizData;

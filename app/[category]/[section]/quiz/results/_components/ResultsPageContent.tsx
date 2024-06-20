@@ -19,6 +19,7 @@ import ResultCards from './ResultCards';
 import FilterOptions, { DEFAULT, INCORRECT_ONLY } from './FilterOptions';
 
 const ResultsPageContent = () => {
+  const category = useParams().category;
   const section = useParams().section;
   const router = useRouter();
   const {
@@ -49,7 +50,7 @@ const ResultsPageContent = () => {
   });
   const grade = ((answeredCorrectly / questions.length) * 100);
   const [filter, setFilter] = useState<string>(DEFAULT);
-  const filteredQuestionss = questions.map((q, i) => {
+  const filteredQuestions = questions.map((q, i) => {
     if (filter === INCORRECT_ONLY) {
       if (answersRecord[i].length > 1) {
         return q;
@@ -132,13 +133,13 @@ const ResultsPageContent = () => {
             />
           </div>
           <ResultCards
-            questions={filteredQuestionss}
+            questions={filteredQuestions}
             answersRecord={answersRecord}
           />
         </div>
       </div>
       <Link
-        href={`/${section}/quiz`}
+        href={`/${category}/${section}/quiz`}
         className={buttonVariants({ variant: 'outline', className: 'mt-8 h-[unset]' })}
       >
         <div className="flex items-center px-8 py-12">

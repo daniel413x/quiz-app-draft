@@ -12,6 +12,7 @@ import Progress from './Progress';
 
 const QuizPageContent = () => {
   const section = useParams().section as string;
+  const category = useParams().category as string;
   const router = useRouter();
   const {
     isStarted,
@@ -25,7 +26,7 @@ const QuizPageContent = () => {
     setProgress,
   } = useUserQuizData();
   useEffect(() => {
-    router.replace(`/${section}/quiz`);
+    router.replace(`/${category}/${section}/quiz`);
     setAnswersRecord([]);
     resetTimer();
     setProgress(0);

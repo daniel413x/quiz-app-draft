@@ -1,6 +1,6 @@
 import {
   Answer, Question, QuizMarkdownTuple, QuizMarkdownType,
-} from '@/lib/quiz-data';
+} from '@/lib/data/quiz-data';
 import shuffle from 'lodash/shuffle';
 import { BlockMath, InlineMath } from 'react-katex';
 import { cn } from '@/lib/utils';

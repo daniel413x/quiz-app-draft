@@ -5,8 +5,8 @@ import {
   Sheet, SheetContent, SheetTrigger,
 } from '@/components/ui/common/shadcn/sheet';
 import { Separator } from '@/components/ui/common/shadcn/separator';
-import routes from '@/lib/data/routes';
 import Link from '@/components/ui/common/Link';
+import { categories } from '@/lib/data/quiz-data';
 import Logo from './Logo';
 import { DarkModeToggle } from './DarkModeToggle';
 
@@ -20,9 +20,18 @@ const MobileNav = () => (
       <Separator />
       <div className="flex flex-col text-sm">
         <DarkModeToggle className="self-end" />
-        {routes.map((r) => (
-          <Link href={r.href} key={r.href} name={r.name} className="pt-6" />
-        ))}
+        <div className="flex flex-col">
+          <h2 className=" text-purple-500 text-lg">
+            Categories
+          </h2>
+          <ul>
+            {categories.map((c) => (
+              <li key={c.slug}>
+                <Link href={c.slug} name={c.name} className="pt-6" />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </SheetContent>
   </Sheet>

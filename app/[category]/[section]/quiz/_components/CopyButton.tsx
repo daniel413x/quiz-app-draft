@@ -4,8 +4,6 @@ import { Button } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
 import {
   ClipboardCopy,
-  ClipboardEdit,
-  ClipboardPaste,
   CopyCheck,
 } from 'lucide-react';
 import {

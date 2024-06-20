@@ -1,4 +1,3 @@
-
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -18,27 +17,44 @@
   ],
   "root": true,
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx",
-".ts", ".tsx"] }],
-    "no-param-reassign": ["error", {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
         "props": true,
         "ignorePropertyModificationsFor": [
-            "state"
+          "state"
         ]
-    }],
+      }
+    ],
     "import/extensions": [
-        "error",
-        "always",
-        {
-          "pattern": {
-            "js": "never",
-            "ts": "never",
-            "jsx": "never",
-            "tsx": "never"
+      "error",
+      "always",
+      {
+        "pattern": {
+          "js": "never",
+          "ts": "never",
+          "jsx": "never",
+          "tsx": "never",
+          "mjs": "never"
         }
       }
     ],
-    "quotes": [2, "single"],
+    "indent": "off",
+    "quotes": [
+      2,
+      "single"
+    ],
     "react/function-component-definition": [
       "warn",
       {
@@ -62,7 +78,9 @@
   },
   "overrides": [
     {
-      "files": ["**/*.tsx"],
+      "files": [
+        "**/*.tsx"
+      ],
       "rules": {
         "react/prop-types": "off"
       }

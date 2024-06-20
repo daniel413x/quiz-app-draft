@@ -12,6 +12,6 @@ const useActiveElement = () => {
     };
   }, []);
   return active;
-}
+};
 
 export default useActiveElement;
