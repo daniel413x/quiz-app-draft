@@ -26,6 +26,7 @@ import yieldAhead from '@/public/yield-ahead.png';
 import dropoutRegularization from '@/public/dropout-regularization.png';
 import identityMatrix from '@/public/identity-matrix.png';
 import classificationModel from '@/public/classification-model-1.png';
+import teeCommand from '@/public/tee-command-linux.png';
 
 export enum QuizMarkdownType {
   INLINE_KATEX, KATEX, INLINE_CODE, CODE, TEXT, IMAGE,
@@ -4891,13 +4892,193 @@ const quizData: QuizData = {
     name: 'JavaScript',
     questions: [
       {
-  question: [
-    [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of'],
-    [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
-    [QuizMarkdownType.TEXT, 'in a React component?']
-  ],
-  answers: [
-    { id: '0', answer: [[QuizMarkdownType.CODE, `
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of Babel in web development?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To transpile modern JavaScript code to a version compatible with older browsers']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To minify JavaScript files for faster loading and JIT hot paths profiling']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To compile TypeScript code to JavaScript']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To lint JavaScript code and enforce coding standards']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which configuration file is commonly used to customize Babel\'s behavior?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '.babelrc']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'babel.config.js']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '.babelconfig']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'babelrc.config']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which Babel package is responsible for transforming ES6+ syntax into a backward-compatible version of JavaScript?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-env']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/core']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/plugin-transform-runtime']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-react']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the'],
+          [QuizMarkdownType.INLINE_CODE, '@babel/preset-react'],
+          [QuizMarkdownType.TEXT, 'package?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To transpile React\'s JSX syntax']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To add polyfills for older browsers']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To minify React code']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To bundle JavaScript files']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the Babel plugin'],
+          [QuizMarkdownType.INLINE_CODE, '@babel/plugin-transform-runtime'],
+          [QuizMarkdownType.TEXT, 'do?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'It optimizes the code by reusing Babel\'s helper functions to avoid code duplication']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'It enables support for TypeScript by transpiling TypeScript code to JavaScript code compatible with older browsers']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'It transforms ES6 modules to CommonJS']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'It adds support for async/await syntax']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following statements is true about Babel?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Babel can be configured to target specific browsers and environments']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Babel automatically minifies code during transpilation']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Babel is only used for React, Angular and Vue applications']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Babel follows a transpilation process similar to that of JIT compilation\'s profiling']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following Babel presets would you use to transpile code that includes experimental JavaScript features?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-env']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-stage-0']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-react']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '@babel/preset-typescript']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is responsible for transpiling JSX into JavaScript?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Babel using the @babel/preset-react preset']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Browser engines such as Chrome\'s V8']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReactDOM.render']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'JSX is natively understood by all browsers']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'During the build phase of a React application or'],
+          [QuizMarkdownType.INLINE_CODE, 'npm run build'],
+          [QuizMarkdownType.TEXT, ', what technology is responsible for bundling?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Create React App']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Webpack']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReactDOM.render']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Babel']], order: 3 },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is NOT part of the Webpack bundling process when running'],
+          [QuizMarkdownType.INLINE_CODE, 'npm run build'],
+          [QuizMarkdownType.TEXT, 'in a React project?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linting and code formatting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Outputting to a folder'], [QuizMarkdownType.INLINE_CODE, 'build']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Injecting script tags into'], [QuizMarkdownType.INLINE_CODE, 'index.html']] },
+          // actually true if you ctrl f + webpack in the chat
+          // https://chatgpt.com/c/b7c63420-542b-4f82-9de5-41b572c9df54
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transpiling JSX to JavaScript via Babel']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The stages of processing React source code into the HTML used by the end user goes roughly']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Babel -> Webpack -> ReactDOM.render']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Webpack -> Babel -> ReactDOM.render']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReactDOM.render -> Webpack -> Babel']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'React source code is natively understood by all browsers']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which tool is commonly used to bundle the JavaScript, CSS, and other assets in a React application and inject the necessary script tags into the HTML file?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Webpack']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Babel']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'ESLint']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'npm']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a React project, what command is used to generate an optimized build of the application, including the final HTML, CSS, and JavaScript files?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'npm run build']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'npm start']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'npm run serve']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'npm install']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the role of ReactDOM in a typical client-side rendered React application?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To render transpiled JSX at the root element of the HTML template']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To render transpiled JSX at the root element of the browser canvas']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To render transpiled JSX at the root element of SSR applications exclusively']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To render transpiled JSX at the root element of CSR applications exclusively']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is a correct usage of'],
+          [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
+          [QuizMarkdownType.TEXT, 'in a React component?']
+        ],
+        answers: [
+          {
+            id: '0', answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect, useState } from 'react';
 
 function MyComponent() {
@@ -4916,8 +5097,10 @@ function MyComponent() {
 
   return <div>Width: {size.width}, Height: {size.height}</div>;
 }
-  `]] },
-    { id: '1', answer: [[QuizMarkdownType.CODE, `
+  `]]
+          },
+          {
+            id: '1', answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect, useState } from 'react';
 
 function MyComponent() {
@@ -4931,8 +5114,10 @@ function MyComponent() {
 
   return <div>{data}</div>;
 }
-  `]] },
-    { id: '2', answer: [[QuizMarkdownType.CODE, `
+  `]]
+          },
+          {
+            id: '2', answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect } from 'react';
 
 function MyComponent() {
@@ -4942,8 +5127,10 @@ function MyComponent() {
 
   return <div>Check the document title</div>;
 }
-  `]] },
-    { id: '3', answer: [[QuizMarkdownType.CODE, `
+  `]]
+          },
+          {
+            id: '3', answer: [[QuizMarkdownType.CODE, `
 import React, { useLayoutEffect, useState } from 'react';
 
 function MyComponent() {
@@ -4959,40 +5146,41 @@ function MyComponent() {
 
   return <div>Count: {count}</div>;
 }
-  `]] },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What can happen if you perform DOM measurements in'],
-    [QuizMarkdownType.INLINE_CODE, 'useEffect'],
-    [QuizMarkdownType.TEXT, 'instead of'],
-    [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
-    [QuizMarkdownType.TEXT, '?']
-  ],
-  answers: [
-    { id: '0', answer: [[QuizMarkdownType.TEXT, 'The measurements might be incorrect.']] },
-    { id: '1', answer: [[QuizMarkdownType.TEXT, 'The component will not render correctly.']] },
-    { id: '2', answer: [[QuizMarkdownType.TEXT, 'The measurements will be more accurate.']] },
-    { id: '3', answer: [[QuizMarkdownType.TEXT, 'The measurements will be undefined.']] },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'In which phase of the React component lifecycle does'],
-    [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
-    [QuizMarkdownType.TEXT, 'run?']
-  ],
-  answers: [
-    { id: '0', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated but before the browser has painted.']] },
-    { id: '1', answer: [[QuizMarkdownType.TEXT, 'Before the DOM is updated but after the first render.']] },
-    { id: '2', answer: [[QuizMarkdownType.TEXT, 'After the browser has painted and before the component\'s side effects.']] },
-    { id: '3', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated and after the browser has painted.']] },
-  ],
-  correctAnswer: '0',
-},
+  `]]
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What can happen if you perform DOM measurements in'],
+          [QuizMarkdownType.INLINE_CODE, 'useEffect'],
+          [QuizMarkdownType.TEXT, 'instead of'],
+          [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
+          [QuizMarkdownType.TEXT, '?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The measurements might be incorrect.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The component will not render correctly.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The measurements will be more accurate.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The measurements will be undefined.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In which phase of the React component lifecycle does'],
+          [QuizMarkdownType.INLINE_CODE, 'useLayoutEffect'],
+          [QuizMarkdownType.TEXT, 'run?']
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated but before the browser has painted.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Before the DOM is updated but after the first render.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'After the browser has painted and before the component\'s side effects.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'After the DOM has been updated and after the browser has painted.']] },
+        ],
+        correctAnswer: '0',
+      },
 
       {
         question: [
@@ -5050,9 +5238,9 @@ function MyComponent() {
           {
             id: '0',
             answer: [[QuizMarkdownType.TEXT, 'By accessing and modifying style properties using methods like'],
-              [QuizMarkdownType.INLINE_CODE, 'document.styleSheets'],
-              [QuizMarkdownType.TEXT, 'and'],
-              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet.insertRule'],
+            [QuizMarkdownType.INLINE_CODE, 'document.styleSheets'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet.insertRule'],
             ],
           },
           { id: '1', answer: [[QuizMarkdownType.TEXT, 'By sending AJAX requests to update styles.']] },
@@ -5121,34 +5309,34 @@ function MyComponent() {
           {
             id: '0',
             answer: [[QuizMarkdownType.TEXT, 'Using the'],
-              [QuizMarkdownType.INLINE_CODE, 'cssRules'],
-              [QuizMarkdownType.TEXT, 'property of the'],
-              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-              [QuizMarkdownType.TEXT, 'interface.']],
+            [QuizMarkdownType.INLINE_CODE, 'cssRules'],
+            [QuizMarkdownType.TEXT, 'property of the'],
+            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+            [QuizMarkdownType.TEXT, 'interface.']],
           },
           {
             id: '1',
             answer: [[QuizMarkdownType.TEXT, 'Using the'],
-              [QuizMarkdownType.INLINE_CODE, 'getRules'],
-              [QuizMarkdownType.TEXT, 'method of the'],
-              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-              [QuizMarkdownType.TEXT, 'interface.']],
+            [QuizMarkdownType.INLINE_CODE, 'getRules'],
+            [QuizMarkdownType.TEXT, 'method of the'],
+            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+            [QuizMarkdownType.TEXT, 'interface.']],
           },
           {
             id: '2',
             answer: [[QuizMarkdownType.TEXT, 'Using the'],
-              [QuizMarkdownType.INLINE_CODE, 'rules'],
-              [QuizMarkdownType.TEXT, 'property of the'],
-              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-              [QuizMarkdownType.TEXT, 'interface.']],
+            [QuizMarkdownType.INLINE_CODE, 'rules'],
+            [QuizMarkdownType.TEXT, 'property of the'],
+            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+            [QuizMarkdownType.TEXT, 'interface.']],
           },
           {
             id: '3',
             answer: [[QuizMarkdownType.TEXT, 'Using the'],
-              [QuizMarkdownType.INLINE_CODE, 'getCSSRules'],
-              [QuizMarkdownType.TEXT, 'method of the'],
-              [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
-              [QuizMarkdownType.TEXT, 'interface.']],
+            [QuizMarkdownType.INLINE_CODE, 'getCSSRules'],
+            [QuizMarkdownType.TEXT, 'method of the'],
+            [QuizMarkdownType.INLINE_CODE, 'CSSStyleSheet'],
+            [QuizMarkdownType.TEXT, 'interface.']],
           },
         ],
         correctAnswer: '0',
@@ -5346,28 +5534,28 @@ function MyComponent() {
           {
             id: '0',
             answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
-              [QuizMarkdownType.INLINE_CODE, 'defer'],
-              [QuizMarkdownType.TEXT, 'attribute are executed in the order they appear in the document.']],
+            [QuizMarkdownType.INLINE_CODE, 'defer'],
+            [QuizMarkdownType.TEXT, 'attribute are executed in the order they appear in the document.']],
           },
           {
             id: '1',
             answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
-              [QuizMarkdownType.INLINE_CODE, 'async'],
-              [QuizMarkdownType.TEXT, 'attribute are guaranteed to be executed in order.']],
+            [QuizMarkdownType.INLINE_CODE, 'async'],
+            [QuizMarkdownType.TEXT, 'attribute are guaranteed to be executed in order.']],
           },
           {
             id: '2',
             answer: [[QuizMarkdownType.TEXT, 'Scripts without'],
-              [QuizMarkdownType.INLINE_CODE, 'defer'],
-              [QuizMarkdownType.TEXT, 'or'],
-              [QuizMarkdownType.INLINE_CODE, 'async'],
-              [QuizMarkdownType.TEXT, 'attributes are executed asynchronously.']],
+            [QuizMarkdownType.INLINE_CODE, 'defer'],
+            [QuizMarkdownType.TEXT, 'or'],
+            [QuizMarkdownType.INLINE_CODE, 'async'],
+            [QuizMarkdownType.TEXT, 'attributes are executed asynchronously.']],
           },
           {
             id: '3',
             answer: [[QuizMarkdownType.TEXT, 'Scripts with the'],
-              [QuizMarkdownType.INLINE_CODE, 'defer'],
-              [QuizMarkdownType.TEXT, 'attribute block HTML parsing.']],
+            [QuizMarkdownType.INLINE_CODE, 'defer'],
+            [QuizMarkdownType.TEXT, 'attribute block HTML parsing.']],
           },
         ],
         correctAnswer: '0',
@@ -5479,7 +5667,8 @@ function MyComponent() {
         question: [
           [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
           [QuizMarkdownType.CODE, `try {
-  console.log(undeclaredVariable);
+  var x = 4;
+  console.log(y);
 } catch (error) {
   console.error(error);
 }`],
@@ -13140,7 +13329,7 @@ console.log('end');`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'It causes state mutation',
+                'It causes a synchronous state update',
               ],
             ],
           },
@@ -13149,7 +13338,7 @@ console.log('end');`,
             answer: [
               [
                 QuizMarkdownType.TEXT,
-                'It causes a synchronous state update',
+                'It causes an asynchronous state update',
               ],
             ],
           },
@@ -13338,6 +13527,65 @@ console.log('end');`,
               [
                 QuizMarkdownType.TEXT,
                 'React defers state updates until the component unmounts',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'useMemo',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'is used to memoize the results of a ________, while',
+          ],
+          [
+            QuizMarkdownType.INLINE_CODE,
+            'useCallback',
+          ],
+          [
+            QuizMarkdownType.TEXT,
+            'is used to memoize the results of a ________',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'computation, callback',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'callback, computation',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'computation, callback or computation',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'computation or callback, callback or computation',
               ],
             ],
           },
@@ -20490,167 +20738,198 @@ print(result)`,
   'machine-learning': {
     name: 'Machine Learning',
     questions: [
-
-  {
-    question: [
-      [QuizMarkdownType.TEXT, 'What is a perceptron?'],
-    ],
-    answers: [
       {
-        id: '0',
-        answer: [
-          [QuizMarkdownType.TEXT, 'A single-layer neural network'],
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a perceptron?'],
         ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A single-layer neural network'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A deep learning model'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A reinforcement learning algorithm'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An optimization technique'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
       },
       {
-        id: '1',
-        answer: [
-          [QuizMarkdownType.TEXT, 'A deep learning model'],
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a perceptron?'],
         ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A single-layer neural network'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A deep learning model'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A reinforcement learning algorithm'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An optimization technique'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
       },
       {
-        id: '2',
-        answer: [
-          [QuizMarkdownType.TEXT, 'A reinforcement learning algorithm'],
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the activation function used in a perceptron?'],
         ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'step'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'sigmoid'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'relu'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tanh'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
       },
       {
-        id: '3',
-        answer: [
-          [QuizMarkdownType.TEXT, 'An optimization technique'],
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the perceptron learning rule used for?'],
         ],
-      },
-    ],
-    correctAnswer: '0',
-  },
-  {
-    question: [
-      [QuizMarkdownType.TEXT, 'What is the activation function used in a perceptron?'],
-    ],
-    answers: [
-      {
-        id: '0',
-        answer: [
-          [QuizMarkdownType.INLINE_CODE, 'step'],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Updating weights based on errors'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calculating activation values'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Determining layer connections'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Preprocessing input data'],
+            ],
+          },
         ],
-      },
-      {
-        id: '1',
-        answer: [
-          [QuizMarkdownType.INLINE_CODE, 'sigmoid'],
-        ],
-      },
-      {
-        id: '2',
-        answer: [
-          [QuizMarkdownType.INLINE_CODE, 'relu'],
-        ],
-      },
-      {
-        id: '3',
-        answer: [
-          [QuizMarkdownType.INLINE_CODE, 'tanh'],
-        ],
-      },
-    ],
-    correctAnswer: '0',
-  },
-  {
-    question: [
-      [QuizMarkdownType.TEXT, 'What is the perceptron learning rule used for?'],
-    ],
-    answers: [
-      {
-        id: '0',
-        answer: [
-          [QuizMarkdownType.TEXT, 'Updating weights based on errors'],
-        ],
+        correctAnswer: '0',
       },
       {
-        id: '1',
-        answer: [
-          [QuizMarkdownType.TEXT, 'Calculating activation values'],
+        question: [
+          [QuizMarkdownType.TEXT, 'What happens if a perceptron\'s activation function output is below a threshold?'],
         ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It outputs zero'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It outputs one'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It outputs a negative value'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It outputs a positive value'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
       },
       {
-        id: '2',
-        answer: [
-          [QuizMarkdownType.TEXT, 'Determining layer connections'],
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary limitation of a perceptron?'],
         ],
-      },
-      {
-        id: '3',
-        answer: [
-          [QuizMarkdownType.TEXT, 'Preprocessing input data'],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It cannot solve nonlinear problems'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It requires large amounts of training data'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is computationally expensive'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It struggles with high-dimensional data'],
+            ],
+          },
         ],
+        correctAnswer: '0',
       },
-    ],
-    correctAnswer: '0',
-  },
-  {
-    question: [
-      [QuizMarkdownType.TEXT, 'What happens if a perceptron\'s activation function output is below a threshold?'],
-    ],
-    answers: [
-      {
-        id: '0',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It outputs zero'],
-        ],
-      },
-      {
-        id: '1',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It outputs one'],
-        ],
-      },
-      {
-        id: '2',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It outputs a negative value'],
-        ],
-      },
-      {
-        id: '3',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It outputs a positive value'],
-        ],
-      },
-    ],
-    correctAnswer: '0',
-  },
-  {
-    question: [
-      [QuizMarkdownType.TEXT, 'What is the primary limitation of a perceptron?'],
-    ],
-    answers: [
-      {
-        id: '0',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It cannot solve nonlinear problems'],
-        ],
-      },
-      {
-        id: '1',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It requires large amounts of training data'],
-        ],
-      },
-      {
-        id: '2',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It is computationally expensive'],
-        ],
-      },
-      {
-        id: '3',
-        answer: [
-          [QuizMarkdownType.TEXT, 'It struggles with high-dimensional data'],
-        ],
-      },
-    ],
-    correctAnswer: '0',
-  },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the encoder in the transformer encoder-decoder architecture produce?']
@@ -23602,7 +23881,7 @@ Epoch 5/5
         correctAnswer: '0',
       },
       {
-      // ctrl f this in chatgpt
+        // ctrl f this in chatgpt
         question: [
           [
             QuizMarkdownType.TEXT,
@@ -24207,6 +24486,54 @@ Epoch 5/5
               [
                 QuizMarkdownType.TEXT,
                 'Inverting the user-item interaction matrix',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'PCA (Principal Component Analysis) is based on which of the following formulae?',
+          ],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.KATEX, `\\mathbf{R} = \\begin{bmatrix}
+1 & \\text{corr}(X_1, X_2) & \\cdots & \\text{corr}(X_1, X_n) \\\\
+\\text{corr}(X_2, X_1) & 1 & \\cdots & \\text{corr}(X_2, X_n) \\\\
+\\vdots & \\vdots & \\ddots & \\vdots \\\\
+\\text{corr}(X_n, X_1) & \\text{corr}(X_n, X_2) & \\cdots & 1
+\\end{bmatrix}`,
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.KATEX, `A = \\begin{bmatrix}
+a_{11} & a_{12} & \\cdots & a_{1n} \\\\
+a_{21} & a_{22} & \\cdots & a_{2n} \\\\
+\\vdots & \\vdots & \\ddots & \\vdots \\\\
+a_{n1} & a_{n2} & \\cdots & a_{nn}
+\\end{bmatrix}`,
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.KATEX, `\\Sigma = \\begin{bmatrix}
+\\sigma_{X}^2 & \\text{cov}(X, Y) \\\\
+\\text{cov}(X, Y) & \\sigma_{Y}^2
+\\end{bmatrix}`,
               ],
             ],
           },
@@ -37070,42 +37397,42 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'The device pings four addresses within the local network before reaching the ISP\'s gateway',
+                [
+                  QuizMarkdownType.TEXT,
+                  'The device pings four addresses within the local network before reaching the ISP\'s gateway',
+                ],
               ],
-            ],
           },
           {
             id: '1',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'The device pings three addresses within the local network before reaching the ISP\'s gateway',
+                [
+                  QuizMarkdownType.TEXT,
+                  'The device pings three addresses within the local network before reaching the ISP\'s gateway',
+                ],
               ],
-            ],
           },
           {
             id: '2',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'The device makes four hops within the local network before reaching the ISP\'s gateway',
+                [
+                  QuizMarkdownType.TEXT,
+                  'The device makes four hops within the local network before reaching the ISP\'s gateway',
+                ],
               ],
-            ],
           },
           {
             id: '3',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'The device makes three hops within the local network before reaching the ISP\'s gateway',
+                [
+                  QuizMarkdownType.TEXT,
+                  'The device makes three hops within the local network before reaching the ISP\'s gateway',
+                ],
               ],
-            ],
           },
         ],
         correctAnswer: '2',
@@ -37141,42 +37468,42 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Packets',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Packets',
+                ],
               ],
-            ],
           },
           {
             id: '1',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Logged indeces',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Logged indeces',
+                ],
               ],
-            ],
           },
           {
             id: '2',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'OSI Layers',
+                [
+                  QuizMarkdownType.TEXT,
+                  'OSI Layers',
+                ],
               ],
-            ],
           },
           {
             id: '3',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Hops',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Hops',
+                ],
               ],
-            ],
           },
         ],
         correctAnswer: '3',
@@ -37212,42 +37539,42 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'The output indicates packet loss',
+                [
+                  QuizMarkdownType.TEXT,
+                  'The output indicates packet loss',
+                ],
               ],
-            ],
           },
           {
             id: '1',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Fixing network issues is outside of the network user\'s purview beyond hop #1',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Fixing network issues is outside of the network user\'s purview beyond hop #1',
+                ],
               ],
-            ],
           },
           {
             id: '2',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Captured in the output are 6 of 7 layers from the OSI Model',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Captured in the output are 6 of 7 layers from the OSI Model',
+                ],
               ],
-            ],
           },
           {
             id: '3',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'The output indicates slow connectivity between the ISP network nodes',
+                [
+                  QuizMarkdownType.TEXT,
+                  'The output indicates slow connectivity between the ISP network nodes',
+                ],
               ],
-            ],
           },
         ],
         correctAnswer: '1',
@@ -37263,42 +37590,42 @@ List<String> upperCaseNames = names.stream()
           {
             id: '0',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Yes',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Yes',
+                ],
               ],
-            ],
           },
           {
             id: '1',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'No',
+                [
+                  QuizMarkdownType.TEXT,
+                  'No',
+                ],
               ],
-            ],
           },
           {
             id: '2',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Only the first 4 layers',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Only the first 4 layers',
+                ],
               ],
-            ],
           },
           {
             id: '3',
             answer:
-            [
               [
-                QuizMarkdownType.TEXT,
-                'Only the first 5 layers',
+                [
+                  QuizMarkdownType.TEXT,
+                  'Only the first 5 layers',
+                ],
               ],
-            ],
           },
         ],
         correctAnswer: '0',
@@ -46310,9 +46637,362 @@ List<String> upperCaseNames = names.stream()
       */
     ],
   },
+  // ===============
   'aws-cloud-practitioner': {
     name: 'AWS Certified Cloud Practitioner Certification',
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does S3 stand for in AWS?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Simple Storage Service'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Secure Storage Service'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Structured Storage System'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard Storage Solution'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the maximum size of an S3 object?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '5 TB'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1 GB'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '10 TB'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1 TB'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which AWS service is used for deploying and managing containers?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'ECS (Elastic Container Service)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'EKS (Elastic Kubernetes Service)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'EC2 (Elastic Compute Cloud)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lambda'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does RDS stand for in AWS?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Relational Database Service'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Remote Database System'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Resource Deployment Service'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Regional Database Storage'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which AWS service can be used to distribute content to users with low latency?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'CloudFront'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Route 53'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'API Gateway'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Elastic Load Balancing'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the pricing model for AWS Lambda?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Pay-per-request'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hourly billing'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Monthly subscription'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Free tier'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which AWS service allows you to set up a virtual private cloud (VPC)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'VPC (Virtual Private Cloud)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Direct Connect'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Route 53'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'API Gateway'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which AWS service is used for real-time messaging and event-driven computing?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'SNS (Simple Notification Service)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'SQS (Simple Queue Service)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'SES (Simple Email Service)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lambda'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is AWS CloudFormation used for?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Infrastructure as Code'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Automated Testing'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Data Warehousing'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Machine Learning'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which AWS service is used for logging and monitoring resources?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'CloudWatch'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'CloudTrail'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'X-Ray'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Config'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does AWS IAM stand for?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Identity and Access Management'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Internet Access Management'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Internal Account Management'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Information Access Management'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [
@@ -47629,6 +48309,134 @@ List<String> upperCaseNames = names.stream()
           },
         ],
         correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of a bastion host in AWS?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To provide secure access to private instances within a VPC'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To host public-facing websites'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To manage AWS IAM roles and policies'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To automatically scale EC2 instances based on traffic'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which AWS service is commonly used as a bastion host in a VPC?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'EC2 (Elastic Compute Cloud)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'S3 (Simple Storage Service)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'RDS (Relational Database Service)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'IAM (Identity and Access Management)'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What security measure should be implemented for bastion hosts in AWS?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Use multi-factor authentication (MFA) for SSH access'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Store sensitive data on the bastion host'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Allow unrestricted access from any IP address'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Run production workloads on the bastion host'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is NOT a benefit of using a bastion host?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Enhanced scalability of applications'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Improved security posture for accessing private instances'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Centralized management of AWS resources'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Controlled access to sensitive data'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
       },
       {
         question: [
@@ -55991,6 +56799,405 @@ var B = [
 
       {
         question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+      command 1>output.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output of command to output.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard input of command from output.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error of command to output.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard output of command to output.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
+          [QuizMarkdownType.CODE, `
+      command 2>error.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error of command to error.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output of command to error.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both standard output and standard error of command to error.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard error of command to error.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following script accomplish?'],
+          [QuizMarkdownType.CODE, `#!/bin/bash
+
+command 0<input.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard input of command from input.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output of command to input.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error of command to input.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard input of command to input.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
+          [QuizMarkdownType.CODE, `command 1>output.txt 2>error.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output to output.txt and the standard error to error.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard output and standard error to output.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard output to output.txt and the standard error to error.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard input to output.txt and the standard error to error.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `command <input.txt >output.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard input from input.txt and the standard output to output.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard input and standard output to input.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard output to output.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error from input.txt and the standard output to output.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
+          [QuizMarkdownType.CODE, `command >output.txt 2>&1`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard output and standard error to output.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output to output.txt and appends the standard error to output.txt'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error to output.txt and the standard output to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output to the terminal and the standard error to output.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command accomplish?'],
+          [QuizMarkdownType.CODE, `command 0</dev/null`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard input from /dev/null'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output to /dev/null'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error to /dev/null'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard input and standard output to /dev/null'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
+          [QuizMarkdownType.CODE, `command 1>>output.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard output to output.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites output.txt with the standard output'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard input to output.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error to output.txt'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `command 2>&1 | tee logfile.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard error and standard output to the terminal and logfile.txt'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output to logfile.txt and the standard error to the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error to logfile.txt and the standard output to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard output and standard error to the terminal only'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
+          [QuizMarkdownType.CODE, `command <input.txt 2>&1`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard input from input.txt and the standard error to the same place as the standard output'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output to input.txt and the standard error to the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard input and standard error from input.txt'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard error to input.txt and the standard input to the terminal'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'There is a special file in Unix-like operating systems. It’s often referred to as the "null device" or "bit bucket". Writing to its path discards the output of a command, effectively making it disappear. The path to this file is'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '/dev/null'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '/dev/bucket'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '/dev/bin'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '/dev/out'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
+        ],
+        image: teeCommand,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes "Hello World" to output.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Writes "Hello World" to output.txt but does not print it to the terminal'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends "Hello World" to output.txt and prints it to the terminal'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites output.txt with "Hello World" but does not print it to the terminal'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
           [QuizMarkdownType.CODE, `
       echo "Hello World" | tee output.txt`],
@@ -60460,6 +61667,685 @@ greet "World"`],
         correctAnswer: '0',
       },
     ],
+  },
+  'probability-theory': {
+    name: 'Probability',
+    questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula for the variance of a population?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N - 1}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma = \\frac{\\sum (x - \\mu)}{N}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma = \\frac{\\sum (x - \\mu)}{N - 1}'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does variance measure in a dataset?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Spread of data points around the mean'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Average of data points'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Total sum of data points'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Minimum value in the dataset'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If variance is high in a dataset, what does it indicate about the data points?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are spread out from the mean'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are close to the mean'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are clustered together'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are negative'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which term represents the mean in the variance formula?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'x'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'N'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'μ'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'σ'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the relationship between variance and standard deviation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard deviation is the square root of variance'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard deviation is double the variance'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variance is the square root of standard deviation'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variance and standard deviation are not related'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If all data points in a dataset are identical, what is the variance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'N'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'N - 1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is'],
+          [QuizMarkdownType.INLINE_KATEX, 'N - 1'],
+          [QuizMarkdownType.TEXT, 'used in the sample variance formula instead of N?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To correct for bias in the sample'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To make the formula simpler'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To increase the variance value'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To decrease the variance value'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the variance of a dataset is 0, what can you say about the data points?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'All data points are identical'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'All data points are different'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are spread out'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are negative'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the range of possible values for variance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '0 to ∞'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '0 to 1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1 to ∞'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '-∞ to ∞'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which statistical measure is sensitive to outliers: variance or mean?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variance'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Mean'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the probability of rolling a 6 on a fair six-sided die?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/6'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/2'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/3'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/4'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If two events are independent, what is the probability that both will occur?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The product of their individual probabilities'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The sum of their individual probabilities'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The maximum of their individual probabilities'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The minimum of their individual probabilities'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the probability of drawing a red card from a standard deck of 52 cards?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/2'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/4'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/13'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/26'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a group of 30 people, what is the probability that at least two people have the same birthday?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/365'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/30'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the probability of flipping a fair coin and getting heads?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/2'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/3'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/4'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/6'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If event A and event B are mutually exclusive, what is P(A ∪ B)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'P(A) + P(B)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'P(A) * P(B)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'P(A) - P(B)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '0'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the expected value of rolling a fair six-sided die?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '3.5'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '6'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the probability of an event is 0, what can you say about the event?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It will never happen'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It will always happen'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It might happen'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It cannot be determined'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the probability that a card drawn from a standard deck is not a heart?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '3/4'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/4'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1/2'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the probability of an event is 1, what can you say about the event?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It will always happen'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It will never happen'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It might happen'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It cannot be determined'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If two events are mutually exclusive, what is the probability that either A or B occurs?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'P(A) * P(B)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'P(A) + P(B)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, 'P(A) - P(B)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '0'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+    ]
   },
   test: {
     name: 'test',

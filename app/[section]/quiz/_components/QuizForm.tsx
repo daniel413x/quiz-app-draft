@@ -104,14 +104,14 @@ const QuizForm = () => {
   const activeElement = useActiveElement();
   useEventListener('keydown', (e: KeyboardEvent) => {
     if (Number.isInteger(parseInt(e.key, 10))) {
+      if (Number(e.key) > answers.length) {
+        return;
+      }
       const element = fieldRefs.current?.radioGroupRef.current?.children[Number(e.key) - 1];
       // select all button elements and figure out the correct one to interact with
       // if you add more button elements to the form fields (like Code's CopyButton), then you may need to modify the following lines
-      const buttonElements = element?.querySelectorAll('button');
+      const buttonElements = element!.querySelectorAll('button');
       const button = buttonElements![buttonElements!.length - 1];
-      console.log(activeElement);
-      console.log(button);
-      console.log(activeElement === button);
       // submit the form if the user double presses the same key
       // or just select the form item according to the key pressed
       if (!isAnsweredCorrectly) {

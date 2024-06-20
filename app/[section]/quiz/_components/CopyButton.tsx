@@ -3,6 +3,9 @@
 import { Button } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
 import {
+  ClipboardCopy,
+  ClipboardEdit,
+  ClipboardPaste,
   CopyCheck,
 } from 'lucide-react';
 import {
@@ -52,7 +55,7 @@ const CopyButton = ({
         <div className="-z-10 absolute top-8 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black rotate-45 w-4 h-4" />
       </div>
       <Button className={cn(courierP.className, 'text-xs border border-green-200/25 absolute right-0.5 top-0.5 h-8 text-green-200')} onClick={clickCopyButton} type="button" variant="ghost">
-        copy
+        <ClipboardCopy size={19} />
       </Button>
     </div>
   );

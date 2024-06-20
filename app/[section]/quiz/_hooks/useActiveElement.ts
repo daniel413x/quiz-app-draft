@@ -11,9 +11,6 @@ const useActiveElement = () => {
       document.removeEventListener('focusin', handleFocusIn);
     };
   }, []);
-  React.useEffect(() => {
-    console.log(active);
-  }, [active]);
   return active;
 }
 
