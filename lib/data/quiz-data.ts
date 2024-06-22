@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import keepToTheRight from '@/public/keep-to-the-right.jpg';
 import neutralGear from '@/public/neutral-gear.jpeg';
 import stopSignAhead from '@/public/stop-sign-ahead.jpg';
@@ -20783,6 +20784,178 @@ print(result)`,
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'According to convention, the equation for a model with one feature would be written'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.INLINE_KATEX, 'y\' = w_1 x_1 + b']] },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_KATEX, 'y\' = m_1 x_1 + b']] },
+          { id: '2', answer: [[QuizMarkdownType.INLINE_KATEX, 'y\' = z_1 x_1 + b']] },
+          { id: '3', answer: [[QuizMarkdownType.INLINE_KATEX, 'y\' = w_1 z_1 + b']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary goal of gradient descent in machine learning?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To minimize the loss function']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To maximize the loss function']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To calculate the mean of the data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To reduce overfitting']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following best describes the learning rate in gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The size of the steps taken towards the minimum of the loss function']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The total number of iterations']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The initial value of the weights']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The final value of the loss function']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of gradient descent, what does a positive gradient indicate?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The weight should be decreased to reduce the loss']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The weight should be increased to reduce the loss']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The learning rate should be increased']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The number of epochs should be increased']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is one of the main drawbacks of using a high learning rate in gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The model may oscillate and not converge to the minimum']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The model will converge too slowly']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The model will overfit the training data']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The model will require more epochs to converge']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In training data. the training set contains ____ data, while the test set contains ____ data'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'labeled, unlabeled']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'unlabeled, labeled']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'batched, unbatched']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'unbatched, batched']] },
+        ],
+        correctAnswer: '0',
+      },
+      // https://developers.google.com/machine-learning/crash-course/framing/ml-terminology
+      // i wanted to do a shadcn DataTable using the tables from this tut
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a certain machine learning model, the median value of houses is predicted. The features include the house\'s median age, the total rooms, and the total bedrooms. For the data setup to be labeled, which must be true?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The training data must exclude the median value of houses']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The training data must include the median value of houses']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The training data must include more features']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The training data must include fewer features']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In machine learning parlance,'],
+          [QuizMarkdownType.INLINE_CODE, 'labels'],
+          [QuizMarkdownType.TEXT, 'are'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The predicted values']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The weights']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The batches']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which variant of gradient descent updates the model weights after each training example?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stochastic Gradient Descent (SGD)']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Batch Gradient Descent']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Mini-batch Gradient Descent']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Momentum Gradient Descent']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does mini-batch gradient descent differ from batch gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Mini-batch gradient descent updates weights after a subset of training examples']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Mini-batch gradient descent updates weights after all training examples']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Mini-batch gradient descent uses a variable learning rate']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Mini-batch gradient descent does not use a learning rate']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of using momentum in gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To accelerate convergence by considering past gradients']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To increase the learning rate based on the gradient']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To accelerate convergence by considering gradient projection']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To increase the model accuracy']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is it important to scale features before applying gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To ensure features contribute equally to the distance calculations']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To ensure convergance based on a stabilized loss gradient']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To decrease the number of epochs needed before convergance']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To make the model less susceptile to high variance and overfitting']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the term "convergence" mean in the context of gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'The point at which further training does not significantly reduce the loss']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The point at which the model accuracy is maximized']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The point at which training begins to significantly reduce the loss']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The point at which the slope of the straight line equation is negative']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is a common method to prevent overfitting while using gradient descent?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using regularization techniques like L2 regularization']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increasing the learning rate']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using a smaller dataset']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reducing the number of epochs']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is a perceptron?'],
         ],
         answers: [
@@ -30770,6 +30943,173 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
       },
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Which function is used to write logs for TensorBoard in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.summary.create_file_writer()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.summary.log()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.summary.writer()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.summary.write_log()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you launch TensorBoard to visualize logs?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By running the command '],
+              [QuizMarkdownType.INLINE_CODE, 'tensorboard --logdir=path_to_logs'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By running the command '],
+              [QuizMarkdownType.INLINE_CODE, 'tensorboard --logs=path_to_logs'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By running the command '],
+              [QuizMarkdownType.INLINE_CODE, 'tensorboard --dir=path_to_logs'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By running the command '],
+              [QuizMarkdownType.INLINE_CODE, 'tensorboard --path=path_to_logs'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What information can TensorBoard provide about a model?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Model architecture, training metrics, and computational graphs'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Deployment status and runtime errors'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Data preprocessing steps'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Hyperparameter optimization'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you visualize the training of a model in TensorBoard?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By using the Scalars dashboard'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By using the Images dashboard'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By using the Audio dashboard'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By using the Text dashboard'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which TensorBoard feature allows you to compare different runs of the same model?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The Scalars dashboard'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The Graphs dashboard'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The Histograms dashboard'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The Projector dashboard'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [
             QuizMarkdownType.TEXT,
             'Which method involves using a subset of the training data to stop training early to prevent overfitting?',
@@ -33175,6 +33515,1276 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
       slug: 'programming',
     },
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you access the first element of an ArrayList in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.get(0)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list[0]'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.first()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.elementAt(0)'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the correct way to create a list of integers in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<Integer> list = new ArrayList<Integer>();'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<int> list = new ArrayList<int>();'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<Integer> list = new List<Integer>();'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ArrayList<Integer> list = new List<Integer>();'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following methods is used to sort an array in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Arrays.sort(array);'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Collections.sort(array);'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'array.sort();'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'array.order();'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you determine the size of an ArrayList in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.size()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.length'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.getSize()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.count()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will happen if you try to access an array element with an index that is out of bounds?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'An ArrayIndexOutOfBoundsException will be thrown.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The program will crash without an exception.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The array will automatically resize to accommodate the new index.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The program will continue running without any error.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the correct way to declare a two-dimensional array in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'int[][] matrix = new int[3][3];'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'int matrix[][] = new int[3][3];'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'int[] matrix = new int[3][3];'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'int[][] matrix = new int[3, 3];'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you convert an array to an ArrayList in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<String> list = Arrays.asList(array);'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<String> list = new ArrayList<String>(array);'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<String> list = array.toList();'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'List<String> list = List.of(array);'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the correct way to iterate over an array in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'for (int i = 0; i < numbers.length; i++) { System.out.println(numbers[i]); }'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'for (int i = 0; i <= numbers.length; i++) { System.out.println(numbers[i]); }'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'for (int i = 1; i < numbers.length; i++) { System.out.println(numbers[i]); }'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'for (int i = 1; i <= numbers.length; i++) { System.out.println(numbers[i]); }'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to remove an element from an ArrayList in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.remove(index);'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.delete(index);'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.removeElement(index);'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.drop(index);'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the syntax error in the following ArrayList initialization:'],
+          [QuizMarkdownType.CODE, `
+ArrayList<String> list = new ArrayList<String>[10];
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Incorrect way to specify the size of the ArrayList.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Incorrect data type for the ArrayList elements.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Missing import statement for ArrayList.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'ArrayList cannot be initialized with a specific size.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the correct way to add an element to an ArrayList in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.add("element");'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.append("element");'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.insert("element");'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'list.push("element");'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you determine the length of an array in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'numbers.length'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'numbers.size()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'numbers.getLength()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'numbers.count()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code snippet?'],
+          [QuizMarkdownType.CODE, `
+int[] numbers = {10, 20, 30, 40, 50};
+System.out.println(numbers[2]);
+        `],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '30'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '20'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '40'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '50'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
+          [QuizMarkdownType.CODE, 'Stream.of("apple", "banana", "cherry").map(String::toUpperCase);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Transforms each string to uppercase and returns a new stream.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out strings that are not in uppercase.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Collects the uppercase strings into a list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sorts the strings and returns a new stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do with an ArrayList in Java?'],
+          [QuizMarkdownType.CODE, 'List<String> list = new ArrayList<>(); list.add("Hello"); list.add("World");'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds "Hello" and "World" to the ArrayList.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a list with "Hello" and "World" but does not add them to the ArrayList.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes "Hello" and "World" from the ArrayList.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates an empty ArrayList.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java?'],
+          [QuizMarkdownType.CODE, 'int[] numbers = {1, 2, 3, 4, 5};'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Initializes an array with the values 1, 2, 3, 4, 5.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates an empty array of size 5.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sets all elements of the array to 0.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a list with the values 1, 2, 3, 4, 5.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do with an ArrayList in Java?'],
+          [QuizMarkdownType.CODE, 'List<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "cherry")); int size = list.size();'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calculates the size of the list, which will be 3.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds the size of the list to the ArrayList.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes the first element of the list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Clears all elements in the list.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
+          [QuizMarkdownType.CODE, 'Stream.of(1, 2, 3, 4, 5).filter(n -> n % 2 == 0);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out odd numbers and returns a new stream with even numbers.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiplies each number by 2 and returns a new stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes all numbers from the stream.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a list with the values 1, 2, 3, 4, 5.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do with an ArrayList in Java?'],
+          [QuizMarkdownType.CODE, 'List<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "cherry")); list.remove("banana");'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes "banana" from the list.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes the first element of the list.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Clears all elements in the list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds "banana" to the list.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java?'],
+          [QuizMarkdownType.CODE, 'int[] numbers = {1, 2, 3, 4, 5}; int length = numbers.length;'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Gets the length of the array, which will be 5.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sets the length of the array to 5.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Initializes an empty array of size 5.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sets all elements of the array to 0.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
+          [QuizMarkdownType.CODE, 'Stream.of("apple", "banana", "cherry").forEach(System.out::println);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints each element of the stream to the console.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Collects the elements of the stream into a list.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out elements that are not "apple", "banana", or "cherry".'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Transforms each string to uppercase.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code snippet?'],
+          [QuizMarkdownType.CODE, 'int[] numbers = {10, 20, 30, 40, 50}; System.out.println(numbers[4]);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '50'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '40'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '30'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '20'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
+          [QuizMarkdownType.CODE, 'List<String> list = Stream.of("apple", "banana", "cherry").collect(Collectors.toList());'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Collects the elements of the stream into a list.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out elements that are not "apple", "banana", or "cherry".'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Transforms each string to uppercase and collects them into a list.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints each element of the stream to the console.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do with an ArrayList in Java?'],
+          [QuizMarkdownType.CODE, 'List<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "cherry")); String element = list.get(1);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Gets the element at index 1, which will be "banana".'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes the element at index 1, which will be "banana".'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sets the element at index 1 to "cherry".'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds a new element "banana" at index 1.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
+          [QuizMarkdownType.CODE, 'List<Integer> list = Stream.of(1, 2, 3, 4, 5).map(n -> n * n).collect(Collectors.toList());'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Transforms each number to its square and collects the results into a list.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out numbers that are not squares and collects the results into a list.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints the square of each number to the console.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds each number to a list.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What will be the output of the following code snippet?'],
+          [QuizMarkdownType.CODE, 'int[] numbers = new int[5]; numbers[0] = 10; numbers[1] = 20; System.out.println(numbers[1]);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '20'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '10'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '0'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, '5'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do with an ArrayList in Java?'],
+          [QuizMarkdownType.CODE, 'List<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "cherry")); list.clear();'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes all elements from the list.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Removes the first element from the list.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sets all elements of the list to null.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Adds a new element to the list.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
+          [QuizMarkdownType.CODE, 'int sum = Stream.of(1, 2, 3, 4, 5).reduce(0, Integer::sum);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calculates the sum of the elements in the stream, which will be 15.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multiplies all elements of the stream together.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Subtracts all elements of the stream from 0.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Prints each element of the stream to the console.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Mono.just("Hello").flatMap(s -> Mono.just(s + " WebFlux"));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combines "Hello" and "WebFlux" into a single Mono.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "Hello" to "WebFlux" in a Mono stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a stream that emits "Hello" and "WebFlux" separately.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits "Hello WebFlux".'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Mono.just(5).map(x -> x * 2);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits 10.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps 5 to 10 in a Mono stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a stream that emits 5 and 10 separately.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits 5.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Flux.just(1, 2, 3, 4, 5).filter(x -> x % 2 == 0);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits 2 and 4.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out odd numbers and creates a Mono.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a stream that emits only odd numbers.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits 1, 2, 3, 4, 5.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Flux.just(1, 2, 3, 4, 5).reduce((x, y) -> x + y);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits the sum of the numbers: 15.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits the sum of each pair of numbers.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits the product of the numbers.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a stream that emits each number separately.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Mono.just("Hello").concatWith(Mono.just("World"));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a stream that emits "Hello" followed by "World".'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combines "Hello" and "World" into a single Mono.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "Hello" to "World" in a Mono stream.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits "HelloWorld".'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Mono.zip(Mono.just("Hello"), Mono.just("World"));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits a tuple ("Hello", "World").'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combines "Hello" and "World" into a single string.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits "Hello" followed by "World".'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "Hello" to "World" in a Mono stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Flux.range(1, 10).buffer(3);'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits lists of 3 elements each: [1, 2, 3], [4, 5, 6], [7, 8, 9], [10].'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits elements in batches of 3.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Filters out elements that are not multiples of 3.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps each element to its square in a Flux stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Mono.just("Hello").flatMapMany(s -> Flux.just(s.split("")));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits the characters "H", "e", "l", "l", "o".'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "Hello" to a single Mono stream.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits "Hello".'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits "Hello".'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Flux.just("A", "B").mergeWith(Flux.just("C", "D"));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits "A", "B", "C", and "D".'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Combines "A" and "B" with "C" and "D" into a single Mono.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits "ABCD".'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "A" to "D" in a Flux stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+          [QuizMarkdownType.CODE, 'Mono.empty().switchIfEmpty(Mono.just("Default"));'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits "Default" if the original Mono is empty.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Mono that emits an empty string.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a Flux that emits "Default".'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maps "Default" to the original Mono stream.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the intermediate operation '],
@@ -50383,6 +51993,71 @@ List<String> upperCaseNames = names.stream()
         ],
         correctAnswer: '0',
       },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Scalar multiples of vectors are an expression of'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Linear movement along a line'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Fluctuating movement along a line'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Movement along several lines'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Movement along a parabola'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is true of eigenvectors?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Eigenvectors measure linear direction'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Eigenvectors measure nonlinear direction'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Eigenvectors cannot prove inversed direction'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Eigenvectors cannot prove scaling transformation'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'Given the vector '],
@@ -50522,12 +52197,12 @@ List<String> upperCaseNames = names.stream()
       {
         question: [
           [QuizMarkdownType.TEXT, 'Given the matrix '],
-          [QuizMarkdownType.INLINE_KATEX, 'A\' = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}'],
-          [QuizMarkdownType.TEXT, ' and the vector '],
+          [QuizMarkdownType.INLINE_KATEX, 'A = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ' and the vector'],
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
           [QuizMarkdownType.TEXT, 'is an eigenvector of '],
-          [QuizMarkdownType.INLINE_KATEX, 'A\''],
+          [QuizMarkdownType.INLINE_KATEX, 'A'],
         ],
         answers: [
           {
@@ -57104,7 +58779,691 @@ var B = [
       slug: 'programming',
     },
     questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the following command do?'],
+          [QuizMarkdownType.CODE, `
+    command 2>>error.log`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Appends the standard error of command to error.log'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Overwrites error.log with the standard error of command'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects the standard output of command to error.log'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirects both the standard output and standard error of command to error.log'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is 1> equivalent to in shell redirection?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '>'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '2>'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '>>'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '1>>'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the syntax error in the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo "Hello World" > "output.txt"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon at the end of the command'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Double quotes around output.txt should be single quotes'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirection operator should be >> instead of >'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the syntax error in the following script:'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
 
+      if [ -f "file.txt" ]
+      echo "File exists"
+      fi`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing then after if condition'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing fi to close the if statement'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should be indented'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'File path should be in single quotes'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Find the syntax error in the following command:'],
+          [QuizMarkdownType.CODE, `
+      grep "pattern file.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing closing double quote'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon at the end of the command'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'pattern should be in single quotes'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'File path should be absolute'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the error in this command:'],
+          [QuizMarkdownType.CODE, `
+      ls -l | grep .txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The dot before txt should be escaped or quoted'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'ls command should not be piped'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'grep should be followed by a hyphen'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'ls command should use single dash for options'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the syntax error in the following script?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for i in {1..5}
+      do
+          echo "Iteration $i"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Curly braces should be replaced with parentheses'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon after done'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'do should be on the same line as for'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should be indented'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the syntax error in the following command:'],
+          [QuizMarkdownType.CODE, `
+      cat < "input.txt"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirection operator should be > instead of <'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'File name should be in single quotes'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'cat command should not use redirection'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Find the error in this script:'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      while [ $count -le 10 ]
+      do
+          echo $count
+          count=$((count + 1))
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'count variable is not initialized'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'while loop should use double square brackets'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should be indented'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon after done'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the syntax error in this command?'],
+          [QuizMarkdownType.CODE, `
+      echo "Hello World" | awk '{print toupper($0)}`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing closing single quote in awk command'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon at the end of the command'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should not be piped'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'toupper function should not be used'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the error in the following script:'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ -d "/mydir" ]; then
+          echo "Directory exists"
+      else
+          echo "Directory does not exist"
+      fi`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'if statement should not use square brackets'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statements should be indented'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon after fi'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Find the syntax error in the following command:'],
+          [QuizMarkdownType.CODE, `
+      mv file1 file2`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing quotes around file names'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon at the end of the command'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'mv should be replaced with cp'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the syntax error in the following script?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      name="John Doe"
+      echo "Hello, $name"`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variable name should be in single quotes'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should be indented'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon after echo statement'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the syntax error in the following script:'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      myArray=(1 2 3 4 5)
+      for i in "\${myArray[@]}"
+      do
+          echo "\\$i"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Double quotes around ${myArray[@]} should be removed'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Array declaration is incorrect'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'for loop should use curly braces'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should not use double quotes'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the syntax error in the following script?'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      for ((i=0; i<10; i++))
+      do
+          echo "Number \\$i"
+      done`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'for loop should use single brackets'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statement should be indented'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'i should be initialized outside the for loop'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the syntax error in this command:'],
+          [QuizMarkdownType.CODE, `
+      find . -name "*.txt" -exec grep "pattern" {} \\;`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'find command should use single quotes'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'grep pattern should be in single quotes'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon at the end of the command'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the error in the following command?'],
+          [QuizMarkdownType.CODE, `
+      echo "Hello World" > output.txt | tee log.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Piping after redirection is not valid'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo command should use single quotes'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tee command should be used before redirection'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'output.txt should be enclosed in double quotes'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Identify the syntax error in this script:'],
+          [QuizMarkdownType.CODE, `
+      #!/bin/bash
+
+      if [ -z "$1" ]; then
+          echo "No arguments supplied"
+      else
+          echo "Argument: $1"
+      fi`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no syntax error'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'echo statements should be indented'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Missing semicolon after then'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Square brackets should be replaced with parentheses'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Find the syntax error in the following command:'],
+          [QuizMarkdownType.CODE, `
+      sort file1 file2 | uniq | > sorted_unique.txt`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Redirection operator should not be placed after a pipe'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'uniq command should not be used with sort'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'file1 and file2 should be quoted'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Pipe operator should be replaced with a semicolon'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What does the following command do?'],
@@ -61993,410 +64352,6 @@ greet "World"`],
     questions: [
       {
         question: [
-          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
-        ],
-        image: covarianceEqZero,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
-        ],
-        image: covarianceLtZero,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
-        ],
-        image: covarianceGtZero,
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the formula for the variance of a population?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N}'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N - 1}'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma = \\frac{\\sum (x - \\mu)}{N}'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma = \\frac{\\sum (x - \\mu)}{N - 1}'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What does variance measure in a dataset?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Spread of data points around the mean'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Average of data points'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Total sum of data points'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Minimum value in the dataset'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'If variance is high in a dataset, what does it indicate about the data points?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are spread out from the mean'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are close to the mean'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are clustered together'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are negative'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which term represents the mean in the variance formula?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'x'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'N'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'μ'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'σ'],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the relationship between variance and standard deviation?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Standard deviation is the square root of variance'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Standard deviation is double the variance'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Variance is the square root of standard deviation'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Variance and standard deviation are not related'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'If all data points in a dataset are identical, what is the variance?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, '0'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, '1'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'N'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'N - 1'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Why is'],
-          [QuizMarkdownType.INLINE_KATEX, 'N - 1'],
-          [QuizMarkdownType.TEXT, 'used in the sample variance formula instead of N?'],
-          [QuizMarkdownType.INLINE_KATEX, 'N'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To correct for bias in the sample'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To make the formula simpler'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To increase the variance value'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To decrease the variance value'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'If the variance of a dataset is 0, what can you say about the data points?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'All data points are identical'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'All data points are different'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Data points are spread out'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Data points are negative'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the range of possible values for variance?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, '0 to ∞'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, '0 to 1'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, '1 to ∞'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, '-∞ to ∞'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which statistical measure is sensitive to outliers: variance or mean?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Variance'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Mean'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Neither'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Both'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
           [QuizMarkdownType.TEXT, 'What is the probability of rolling a 6 on a fair six-sided die?'],
         ],
         answers: [
@@ -62725,6 +64680,501 @@ greet "World"`],
     },
     questions: [
 
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the method '],
+          [QuizMarkdownType.INLINE_CODE, 'model.compile()'],
+          [QuizMarkdownType.TEXT, ' do in TensorFlow Keras?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Configures the model for training'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Defines the model architecture'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Evaluates the model performance'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Predicts the model output'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to train a model in TensorFlow Keras?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.evaluate()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.fit()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.predict()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.summary()'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow, what is an epoch?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A single pass through the entire training dataset'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The number of layers in a neural network'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The number of neurons in a layer'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A type of activation function'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How would you save a model in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.save("model.h5")'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.store("model.h5")'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.serialize("model.h5")'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'model.persist("model.h5")'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does '],
+          [QuizMarkdownType.INLINE_CODE, 'tf.placeholder()'],
+          [QuizMarkdownType.TEXT, ' do in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Initializes a variable'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a tensor that can be fed data during runtime'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Creates a constant tensor'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Defines a computational graph'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does a "graph" represent in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A collection of nodes representing operations and edges representing the flow of data'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A collection of nodes representing a plot of data points and edges representing error'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A neural network model that takes features (inputs) and produces a prediction (output)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'None of the above'],
+            ],
+            order: 3,
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How is a computational graph created in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By defining operations and variables in Python code'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By drawing it manually using TensorFlow modules'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By defining the object in a file with the .tf.graph extension'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By running the model and recording the output'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow, what is the default graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The first graph created in a session'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A built-in graph that is used if no other graph is specified'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The graph used for visualization in TensorBoard'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The graph that contains all available variables'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which TensorFlow class represents a computational graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Session'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Graph'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Tensor'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.Variable'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you explicitly set a TensorFlow graph as the default graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using'],
+              [QuizMarkdownType.INLINE_CODE, 'with tf.Graph().as_default():'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calling'],
+              [QuizMarkdownType.INLINE_CODE, 'tf.Graph().set_default()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using'],
+              [QuizMarkdownType.INLINE_CODE, 'tf.set_default_graph()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calling'],
+              [QuizMarkdownType.INLINE_CODE, 'graph.as_default()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the purpose of the'],
+          [QuizMarkdownType.INLINE_CODE, 'tf.Session'],
+          [QuizMarkdownType.TEXT, 'class in relation to a TensorFlow graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To build the graph'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To execute the graph'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To visualize the graph'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To modify the graph'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow 2.x, which function is typically used to execute operations immediately, eliminating the need for a session?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.run()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.execute()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.function()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'tf.compat.v1.Session()'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the significance of "eager execution" in TensorFlow 2.x?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It builds the graph without executing it'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It allows for the immediate execution of operations'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is used only for data preprocessing'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is used to save the model'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you reset the default graph in TensorFlow 1.x?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using'],
+              [QuizMarkdownType.INLINE_CODE, 'tf.reset_default_graph()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using'],
+              [QuizMarkdownType.INLINE_CODE, 'tf.clear_default_graph()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calling'],
+              [QuizMarkdownType.INLINE_CODE, 'tf.Graph().as_default()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Calling'],
+              [QuizMarkdownType.INLINE_CODE, 'tf.Graph().reset()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of TensorFlow graphs, what is an "operation" (or "op")?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A placeholder for data input that is processed by the activation layer'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A node that performs computations and produces output tensors'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A dataset iterator that diagrams weight matrices for the features'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A variable that stores model parameters'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'Which function in TensorFlow is used to define a variable?'],
@@ -63085,38 +65535,6 @@ greet "World"`],
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'What is TensorFlow primarily used for?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Web development'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Data analysis'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Machine learning and deep learning'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Game development'],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
           [QuizMarkdownType.TEXT, 'Which company developed TensorFlow?'],
         ],
         answers: [
@@ -63237,7 +65655,7 @@ greet "World"`],
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.TEXT, 'A function that initializes weights'],
+              [QuizMarkdownType.TEXT, 'A function that initializes weights to a specified value'],
             ],
           },
         ],
@@ -63361,7 +65779,7 @@ greet "World"`],
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'Visualizing the computational graph and metrics'],
+              [QuizMarkdownType.TEXT, 'Visualizing the data'],
             ],
           },
           {
@@ -63400,6 +65818,1677 @@ greet "World"`],
             id: '3',
             answer: [
               [QuizMarkdownType.TEXT, 'Incompatibility with Keras'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is a computational graph in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A structure for setting up and executing operations'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A type of neural network'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A method for data preprocessing'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A visualization tool'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow, what is the primary purpose of using a computational graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define and execute a sequence of operations on tensors'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To view information such as the covariance matrix'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To generate synthetic data through data augmentation'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To provide assistance in initializing weights and setting hyperparameters'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which component in TensorFlow represents the computational graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.Session'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.Graph'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.Variable'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.Operation'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What function is used to add operations to a computational graph in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.add()'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.Operation()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.placeholder()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'tf.Session.run()'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does TensorFlow execute a computational graph?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By calling the run() method on a tf.Session'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By calling the execute() method on a tf.Graph'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By calling the run() method on a tf.Variable'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By calling the execute() method on a tf.Operation'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow, what is the role of the tf.Session?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To construct the computational graph'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To execute operations in the computational graph'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To define variables and constants'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To visualize the computational graph'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the advantage of using a computational graph in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It allows for efficient computation and optimization'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It makes it easier to debug the code'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It simplifies the creation of user interfaces'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It improves the readability of the code'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How can you visualize a computational graph in TensorFlow?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using TensorBoard'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using tf.Session.visualize()'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using tf.Graph.visualize()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Using tf.Operation.visualize()'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the default computational graph in TensorFlow called?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Default Graph'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Primary Graph'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Main Graph'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Global Graph'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In TensorFlow 2.x, how has the approach to computational graphs changed?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Computational graphs are automatically constructed using eager execution'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Users must manually construct computational graphs'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Computational graphs are no longer used'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Computational graphs are only used for debugging'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+  },
+  statistics: {
+    name: 'Statistics',
+    slug: 'statistics',
+    category: {
+      slug: 'statistics',
+    },
+    questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+        ],
+        image: covarianceEqZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+        ],
+        image: covarianceLtZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+        ],
+        image: covarianceGtZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the formula for the variance of a population?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N - 1}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma = \\frac{\\sum (x - \\mu)}{N}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sigma = \\frac{\\sum (x - \\mu)}{N - 1}'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does variance measure in a dataset?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Spread of data points around the mean'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Average of data points'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Total sum of data points'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Minimum value in the dataset'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If variance is high in a dataset, what does it indicate about the data points?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are spread out from the mean'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are close to the mean'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are clustered together'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'Data points are negative'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which term represents the mean in the variance formula?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'x'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'N'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'μ'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'σ'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Variance is symbolically represented by'],
+          [QuizMarkdownType.INLINE_KATEX, '\\angle'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Standard deviation is symbolically represented by'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sigma'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Standard deviation is symbolically represented by'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sigma^2'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Standard deviation is equal to'],
+          [QuizMarkdownType.INLINE_KATEX, 'sqrt{\\sigma^2}'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Standard deviation is equal to'],
+          [QuizMarkdownType.INLINE_KATEX, 'sqrt{\\sigma}'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for sample mean is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\bar{x}'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for sample standard deviation is'],
+          [QuizMarkdownType.INLINE_KATEX, 's'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for correlation coefficient is'],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for coefficient of determination (R-squared) is'],
+          [QuizMarkdownType.INLINE_KATEX, 'R^2'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for regression coefficient is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\beta'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for mean (average) is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\mu'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for variance is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sigma'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for standard deviation is'],
+          [QuizMarkdownType.INLINE_KATEX, 's'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for population mean is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\bar{x}'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for population mean is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\mu'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The symbol for mean (average) is'],
+          [QuizMarkdownType.INLINE_KATEX, '\\bar{X}'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Standard deviation is equal to'],
+          [QuizMarkdownType.INLINE_KATEX, 'sqrt{\\mu}'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Variance is symbolically represented by'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sigma^2'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'True'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'False'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the relationship between variance and standard deviation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard deviation is the square root of variance'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Standard deviation is double the variance'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variance is the square root of standard deviation'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variance and standard deviation are not related'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If all data points in a dataset are identical, what is the variance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'N'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'N - 1'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is'],
+          [QuizMarkdownType.INLINE_KATEX, 'N - 1'],
+          [QuizMarkdownType.TEXT, 'used in the sample variance formula instead of N?'],
+          [QuizMarkdownType.INLINE_KATEX, 'N'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To correct for bias in the sample'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To make the formula simpler'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To increase the variance value'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To decrease the variance value'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the variance of a dataset is 0, what can you say about the data points?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'All data points are identical'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'All data points are different'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Data points are spread out'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Data points are negative'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the range of possible values for variance?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '0 to ∞'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '0 to 1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '1 to ∞'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '-∞ to ∞'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which statistical measure is sensitive to outliers: variance or mean?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Variance'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Mean'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the average of the numbers'],
+          [QuizMarkdownType.INLINE_CODE, '3, 7, 10, 4, 2, 6, 9'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '4'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the median of the numbers'],
+          [QuizMarkdownType.INLINE_CODE, '2, 5, 6, 7, 9'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '9'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the mode of the numbers'],
+          [QuizMarkdownType.INLINE_CODE, '5, 7, 3, 5, 2, 7, 7'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '3'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the range of the numbers'],
+          [QuizMarkdownType.INLINE_CODE, '12, 5, 8, 3, 15, 9'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '12'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '15'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '10'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '13'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the standard deviation of the numbers'],
+          [QuizMarkdownType.INLINE_CODE, '4, 6, 7, 3, 5'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '1.58'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '2.25'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '1.41'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '1.73'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the probability of rolling a number divisible by 3 on a fair six-sided die?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{1}{3}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{1}{2}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{2}{3}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\frac{1}{6}'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the factorial of'],
+          [QuizMarkdownType.INLINE_CODE, '4'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '24'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '16'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '12'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the goal of linear regression?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To predict a continuous dependent variable based on one or more independent variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To classify data points into different categories.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To reduce the dimensionality of data.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To analyze the relationships between categorical variables.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the equation of a simple linear regression model?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'y = mx + b'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'y = a + bx'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'y = b + mx'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'y = ax + b'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the coefficient "m" in a linear regression model represent?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The intercept of the regression line on the y-axis.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The standard error of the regression model.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The slope of the regression line.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The correlation coefficient between variables.'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In linear regression, what is the purpose of the residual plot?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To visualize the relationship between independent and dependent variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To check if the residuals are normally distributed.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To check for multicollinearity between independent variables.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To evaluate the goodness of fit of the regression model.'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is multicollinearity in the context of linear regression?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'When there is a perfect linear relationship between two or more independent variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'When the residuals of the regression model are not normally distributed.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'When the regression line does not pass through the origin.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'When the relationship between independent and dependent variables is nonlinear.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is R-squared (R²) in linear regression?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A measure of how well the regression model fits the observed data.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The coefficient that indicates the strength and direction of the linear relationship between variables.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A measure of how sensitive the regression model is to changes in the independent variables.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The probability that the regression coefficients are not zero.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following assumptions must be met for linear regression to be valid?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Normality of residuals, independence of observations, and linearity of the relationship.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Multicollinearity, homoscedasticity, and normality of residuals.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Linearity of the relationship, homoscedasticity, and independence of observations.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Normality of residuals, independence of observations, and homoscedasticity.'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the p-value associated with a regression coefficient indicate?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The strength and direction of the relationship between variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The probability of observing a coefficient at least as extreme as the one computed, assuming the null hypothesis is true.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The proportion of variance in the dependent variable explained by the independent variables.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The standard error of the regression coefficient.'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does a negative residual indicate in linear regression?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'That the predicted value is higher than the observed value.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'That the predicted value is lower than the observed value.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'That the relationship between variables is nonlinear.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'That the residuals are not normally distributed.'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the method used to estimate the parameters of a linear regression model?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE)'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maximum Likelihood Estimation (MLE)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Gradient Descent'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Principal Component Analysis (PCA)'],
             ],
           },
         ],
@@ -63519,6 +67608,7 @@ const categories = [
       quizData.javascript,
       quizData.python,
       quizData.java,
+      quizData['shell-scripting'],
     ],
   },
   {
@@ -63550,6 +67640,7 @@ const categories = [
       quizData['linear-algebra'],
       quizData.geometry,
       quizData['probability-theory'],
+      quizData.statistics,
       quizData.test,
     ],
   },

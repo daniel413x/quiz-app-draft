@@ -1,6 +1,6 @@
-import { CATEGORIES_ROUTE } from '@/lib/data/routes';
+import { CATEGORIES_ROUTE, directQuizRoutes } from '@/lib/data/routes';
 import Link from '@/components/ui/common/Link';
-import { categories } from '@/lib/data/quiz-data';
+import { Separator } from '@/components/ui/common/shadcn/separator';
 import MobileNav from './MobileNav';
 import { DarkModeToggle } from './DarkModeToggle';
 import Logo from './Logo';
@@ -14,11 +14,14 @@ const Navbar = () => (
       </div>
       <ul className="gap-2 text-sm hidden md:flex items-center overflow-x-auto h-14 -my-4">
         <li>
-          <Link href={`/${CATEGORIES_ROUTE}`} name="Browse All Categories" />
+          <Link href={`/${CATEGORIES_ROUTE}`} name="All Categories" />
         </li>
-        {categories.map((c) => (
-          <li key={c.slug}>
-            <Link href={`/${c.slug}`} name={c.name} key={c.slug} />
+        <Separator
+          className="bg-gray-400 dark:bg-gray-400 w-[1px] h-8 mx-2.5 opacity-50"
+        />
+        {directQuizRoutes.map((r) => (
+          <li key={r.slug}>
+            <Link href={`/${r.category.slug}/${r.slug}`} name={r.name} key={r.slug} />
           </li>
         ))}
       </ul>

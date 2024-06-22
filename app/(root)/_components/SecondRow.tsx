@@ -64,8 +64,8 @@ const SecondRow = () => {
           <div className="flex flex-col items-center">
             <ul className="flex flex-wrap justify-evenly gap-2 max-w-[400px] lg:max-w-[unset]">
               {directQuizRoutes.map((r) => (
-                <li key={r.href}>
-                  <Link className="py-2 group" href={r.href}>
+                <li key={r.slug}>
+                  <Link className="py-2 group" href={`/${r.category.slug}/${r.slug}`}>
                     <span className="text-sm border-l-4 pl-2 group-hover:underline group-hover:border-l-purple-500">
                       {r.name}
                     </span>

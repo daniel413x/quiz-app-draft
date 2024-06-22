@@ -9,7 +9,7 @@ const FirstRow = () => (
   <div className="flex flex-col justify-between w-full">
     <div className="flex flex-col lg:flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-2 gap-10">
       <TypewriterTextRepeating mobile />
-      <div className="relative h-[30vw] lg:h-[600px] w-full flex justify-center">
+      <div className="relative bottom-14 lg:-bottom-10 xl:bottom-0 h-[30vw] lg:h-[600px] w-full flex justify-center">
         <RotatingImage
           delay={0}
           cardNum="1"
@@ -32,7 +32,7 @@ const FirstRow = () => (
                 <Star className="text-purple-400" />
                 Highly-rated
               </>
-                )}
+            )}
             body="Lorem ipsum dolor.."
             delay={3000}
           />
@@ -42,7 +42,7 @@ const FirstRow = () => (
                 <Calculator className="text-purple-400" />
                 GPT-4o
               </>
-                )}
+            )}
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
             delay={3100}
           />
@@ -52,7 +52,7 @@ const FirstRow = () => (
                 <Award className="text-purple-400" />
                 Award-winning
               </>
-                )}
+            )}
             body="Lorem ipsum dolor sit.."
             delay={3200}
           />
@@ -62,7 +62,7 @@ const FirstRow = () => (
                 <MessageCircleHeart className="text-purple-400" />
                 Community
               </>
-                )}
+            )}
             body="Generate quizzes, earn points"
             delay={3200}
           />
@@ -72,7 +72,7 @@ const FirstRow = () => (
                 <GraduationCap className="text-purple-400" />
                 Test prep
               </>
-                )}
+            )}
             body="Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
             delay={3200}
           />
@@ -82,7 +82,7 @@ const FirstRow = () => (
                 <FileBarChart className="text-purple-400" />
                 Create your own
               </>
-                )}
+            )}
             body="Support your organization's goals"
             delay={3200}
           />

@@ -23,7 +23,7 @@ const ResultCards = ({
 }: ResultCardsProps) => (
   <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-2 gap-8">
     {questions
-    // if 0, result is filtered
+      // if 0, result is filtered
       .map((q, i) => (q === 0 ? null : (
         <li key={i}>
           {/* md:w-[500px] md:max-w-full — account for results lists with a length of < 2 rendering a bad grid */}
@@ -62,9 +62,9 @@ const ResultCards = ({
                   const isCorrectAnswer = answersRecord[i].includes(a.id) && a.id === q.correctAnswer;
                   const isAnsweredIncorrectly = answersRecord[i].includes(a.id) && a.id !== q.correctAnswer;
                   return (
-                  // overflow-x-auto to catch katex overflow
+                    // overflow-x-auto to catch katex overflow
                     <div
-                      className={cn('flex relative overflow-x-auto', {
+                      className={cn('flex relative overflow-x-auto px-1.5', {
                         'bg-green-100/50 dark:bg-green-500/10': isCorrectAnswer,
                         '   bg-orange-300/20 dark:bg-red-500/10': isAnsweredIncorrectly,
                       })}

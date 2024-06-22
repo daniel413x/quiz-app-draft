@@ -19,7 +19,7 @@ const CategoryPageContent = () => {
           <li key={q.slug}>
             <Link
               href={`/${category.slug}/${q.slug}`}
-              className="flex p-3 w-full dark:bg-purple-900/20 dark:hover:bg-purple-900/40 border-0 dark:border-b-slate-900 border-b-2 border-l-4 border-l-transparent dark:hover:border-l-purple-600"
+              className="h-full shadow-md flex flex-col gap-3 p-6 rounded-sm bg-gray-100 dark:bg-background border border-black/75 dark:border-gray-700"
             >
               {q.name}
             </Link>
