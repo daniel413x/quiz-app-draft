@@ -1,5 +1,6 @@
 import quizData from '@/lib/data/quiz-data';
 import { ReactNode } from 'react';
+import Breadcrumbs from './_components/Breadcrumbs';
 
 interface SectionLayoutProps {
   children: ReactNode;
@@ -24,7 +25,10 @@ export const generateMetadata = ({
 const sectionLayout = ({
   children,
 }: SectionLayoutProps) => (
-  children
+  <>
+    <Breadcrumbs />
+    {children}
+  </>
 );
 
 export default sectionLayout;

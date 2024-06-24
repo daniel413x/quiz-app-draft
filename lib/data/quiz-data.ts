@@ -23,6 +23,7 @@ import switchImg from '@/public/switch.png';
 import covarianceEqZero from '@/public/covariance-eq-zero.png';
 import covarianceGtZero from '@/public/covariance-gt-zero.png';
 import covarianceLtZero from '@/public/covariance-lt-zero.png';
+import normDistStdNormDist from '@/public/norm-dist-std-norm-dist.png';
 
 import leftCurveAhead from '@/public/left-curve-ahead.png';
 import trafficSignalAhead from '@/public/traffic-signal-ahead.png';
@@ -5052,7 +5053,7 @@ const quizData: QuizData = {
           { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReactDOM.render -> Webpack -> Babel']] },
           { id: '3', answer: [[QuizMarkdownType.TEXT, 'React source code is natively understood by all browsers']], order: 3 },
         ],
-        correctAnswer: '0',
+        correctAnswer: '1',
       },
       {
         question: [
@@ -17353,7 +17354,7 @@ onmessage = function(event) {
       {
         question: [
           [QuizMarkdownType.TEXT, 'Consider the following code:'],
-          [QuizMarkdownType.INLINE_CODE, `with open('example.txt', 'w') as file:
+          [QuizMarkdownType.CODE, `with open('example.txt', 'w') as file:
   file.write('Hello, world!')`],
           [QuizMarkdownType.TEXT, 'When the second argument of'],
           [QuizMarkdownType.INLINE_CODE, 'open'],
@@ -20870,15 +20871,37 @@ print(result)`,
       },
       {
         question: [
+          [QuizMarkdownType.TEXT, 'In model training, the labeled data set'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Includes the actual value being predicted']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Excludes the actual value being predicted']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Neither of the above']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In model training, the unlabeled data set'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Excludes the actual value being predicted']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Includes the actual value being predicted']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Neither of the above']], order: 3 },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'In machine learning parlance,'],
           [QuizMarkdownType.INLINE_CODE, 'labels'],
           [QuizMarkdownType.TEXT, 'are'],
         ],
         answers: [
           { id: '0', answer: [[QuizMarkdownType.TEXT, 'The predicted values']] },
-          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The features']] },
-          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The weights']] },
-          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The batches']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'The model features']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'The model weights']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'The data batches']] },
         ],
         correctAnswer: '0',
       },
@@ -21884,6 +21907,67 @@ Epoch 5/5
         ],
         correctAnswer: '0',
       },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A deep neural network is being used to analyze time-series data to predict stock prices. The network has many layers and is struggling to learn long-term dependencies. Which of the following issues is most likely affecting the network?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Overfitting']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Vanishing gradient problem']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Underfitting']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Data leakage']] },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In training a deep convolutional neural network (CNN) for image classification, the model’s accuracy plateaus early during training. This issue might be caused by which of the following?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Exploding gradient problem']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Insufficient data augmentation']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Vanishing gradient problem']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Improper learning rate scheduling']] },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A research team is developing a neural network to predict weather patterns. Despite using a large dataset and complex model architecture, the network fails to improve after initial training epochs. Which technique could help mitigate this problem?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using ReLU activation functions']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increasing the number of epochs']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decreasing the batch size']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reducing the number of layers']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'While training a neural network for natural language processing (NLP) tasks, the gradient updates become very small in the initial layers of the network. Which architectural change can address this issue?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Adding residual connections']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using larger batch sizes']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Switching to sigmoid activation functions']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reducing the learning rate']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'An autonomous vehicle company is training a deep neural network to recognize road signs. The network’s performance improves very slowly due to the gradients becoming insignificant. What is a common solution to this problem?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using batch normalization']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Applying dropout regularization']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Increasing the learning rate']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'Adding more layers']] },
+        ],
+        correctAnswer: '0',
+      },
+
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is a significant advantage of parallel processing?'],
@@ -34258,7 +34342,7 @@ System.out.println(numbers[2]);
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'Filters out elements that are not "apple", "banana", or "cherry".'],
+              [QuizMarkdownType.TEXT, 'Collects the elements of a list and creates a stream from them.'],
             ],
           },
           {
@@ -34313,6 +34397,329 @@ System.out.println(numbers[2]);
 
       {
         question: [
+          [QuizMarkdownType.TEXT, 'How is memory allocation different for arrays and lists in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays allocate memory for all elements up front, while lists allocate memory dynamically as needed.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists allocate memory for all elements up front, while arrays allocate memory dynamically as needed.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both arrays and lists allocate memory for all elements up front.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both arrays and lists allocate memory dynamically as needed.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which is generally faster for fixed-size collections in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays are generally faster due to lower overhead.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists are generally faster due to dynamic memory allocation.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both arrays and lists have the same performance for fixed-size collections.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists are faster for fixed-size collections due to lower overhead.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which data structure in Java comes with utility methods like add, remove, and contains?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both arrays and lists'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither arrays nor lists'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which data structure in Java can be multi-dimensional?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both arrays and lists'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither arrays nor lists'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following is the correct way to declare an array in Java?'],
+          [QuizMarkdownType.CODE, 'int[] array = new int[5];'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'int[] array = new int[5];'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'List<int> list = new ArrayList<>(5);'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'int array = new ArrayList<>(5);'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'int[] array = new ArrayList<>(5);'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which data structure supports iterators and enhanced for loops in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Both arrays and lists'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Neither arrays nor lists'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Can arrays and lists in Java store elements of different types?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'No, both arrays and lists can only store elements of the same type.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Yes, both arrays and lists can store elements of different types.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays can store different types, but lists cannot.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists can store different types, but arrays cannot.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How do you access the first element of an array in Java?'],
+          [QuizMarkdownType.CODE, 'int[] array = {1, 2, 3};'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'array[0]'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'array.get(0)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'array.first()'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'array.elementAt(0)'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which method is used to add an element to a list in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'add'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'put'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'append'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'insert'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is one key difference between an array and a list in Java?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays have a fixed size while lists can grow and shrink dynamically.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays can store elements of different types, while lists can only store elements of the same type.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Arrays come with many utility methods like add, remove, etc., while lists do not.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Lists are generally faster for fixed-size collections due to lower overhead.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
           [QuizMarkdownType.CODE, 'List<Integer> list = Stream.of(1, 2, 3, 4, 5).map(n -> n * n).collect(Collectors.toList());'],
         ],
@@ -34332,7 +34739,7 @@ System.out.println(numbers[2]);
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'Prints the square of each number to the console.'],
+              [QuizMarkdownType.TEXT, 'Transforms each number in a list to its square and creates a stream.'],
             ],
           },
           {
@@ -35038,7 +35445,7 @@ System.out.println(numbers[2]);
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'Each element is processed independently of others, with no state stored between elements.'],
+              [QuizMarkdownType.TEXT, 'Stream operations are processed independently of others.'],
             ],
           },
           {
@@ -36839,6 +37246,42 @@ List<String> upperCaseNames = names.stream()
       },
       {
         question: [
+          [QuizMarkdownType.TEXT, 'What is the operand stack used for in the Java Virtual Machine (JVM)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It is used for intermediate calculations and method invocation in the JVM.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It stores local variables for method execution upon running'],
+              [QuizMarkdownType.INLINE_CODE, 'java'],
+              [QuizMarkdownType.TEXT, 'with the'],
+              [QuizMarkdownType.INLINE_CODE, '.class'],
+              [QuizMarkdownType.TEXT, 'file'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It adds and pops off function calls as they are handled by the main thread.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'It manages memory allocation for streams and objects.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [
             QuizMarkdownType.TEXT,
             'What is the primary function of the javac command?',
@@ -36939,9 +37382,9 @@ List<String> upperCaseNames = names.stream()
           ],
         ],
         code: `iconst_1
-      iconst_2
-      iadd
-      invokestatic java/io/PrintStream.println(I)V`,
+iconst_2
+iadd
+invokestatic java/io/PrintStream.println(I)V`,
         answers: [
           {
             id: '0',
@@ -53302,7 +53745,7 @@ List<String> upperCaseNames = names.stream()
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{30}'],
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y)'],
             ],
           },
           {
@@ -56505,7 +56948,7 @@ List<String> upperCaseNames = names.stream()
           ],
           [
             QuizMarkdownType.INLINE_KATEX,
-            '\\( A \\)',
+            'A',
           ],
           [
             QuizMarkdownType.TEXT,
@@ -56513,7 +56956,7 @@ List<String> upperCaseNames = names.stream()
           ],
           [
             QuizMarkdownType.INLINE_KATEX,
-            '\\( a, b, c, d \\)',
+            '\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix})',
           ],
           [
             QuizMarkdownType.TEXT,
@@ -60926,7 +61369,7 @@ command 0<input.txt`],
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.TEXT, 'Saves "Hello World" to greetings.txt, overwriting any existing content'],
+              [QuizMarkdownType.TEXT, 'Overwrites greetings.txt with "Hello World"'],
             ],
           },
           {
@@ -66150,32 +66593,46 @@ greet "World"`],
     name: 'Statistics',
     slug: 'statistics',
     category: {
-      slug: 'statistics',
+      slug: 'mathematics',
     },
     questions: [
-
       {
         question: [
-          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+          [QuizMarkdownType.TEXT, 'Data scientists are studying the relationship between monthly advertising spend and sales revenue for a retail company. They expect a strong positive linear relationship between the two variables. What value of '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' would indicate such a relationship?'],
         ],
-        image: covarianceEqZero,
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.8'],
+              [QuizMarkdownType.TEXT, ''],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.2'],
+              [QuizMarkdownType.TEXT, ''],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.8'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = -0.2'],
+              [QuizMarkdownType.TEXT, ''],
             ],
           },
         ],
@@ -66183,26 +66640,332 @@ greet "World"`],
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+          [QuizMarkdownType.TEXT, 'In a medical research study, researchers are analyzing the correlation between blood pressure (independent variable) and cholesterol levels (dependent variable) across a sample population. They anticipate a moderate positive linear relationship. What range of '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' values would likely confirm their hypothesis?'],
         ],
-        image: covarianceLtZero,
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '0.2 \\leq r \\leq 0.5'],
+              [QuizMarkdownType.TEXT, ''],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '0.7 \\leq r \\leq 0.9'],
+              [QuizMarkdownType.TEXT, ''],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '-0.5 \\leq r \\leq -0.2'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '-0.9 \\leq r \\leq -0.7'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'A data scientist is analyzing the correlation between temperature and ice cream sales over a summer season. They expect a weak positive linear relationship. What approximate value of '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' would support this expectation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.1'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = -0.5'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.8'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = -0.2'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Researchers are investigating the association between years of education (independent variable) and income levels (dependent variable) in a demographic study. They believe there is no significant linear relationship between the two variables. What value of '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' would suggest no linear correlation?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.9'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0.1'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = -0.4'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, 'r = 0'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Data analysts are examining the relationship between hours of sunlight and crop yields for different regions. They anticipate a moderate negative linear relationship. What range of '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' values would confirm their hypothesis?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '-0.7 \\leq r \\leq -0.5'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '0.3 \\leq r \\leq 0.5'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '0.8 \\leq r \\leq 0.9'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+              [QuizMarkdownType.INLINE_KATEX, '-0.1 \\leq r \\leq 0.1'],
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The graph on the right is',
+          ],
+        ],
+        image: normDistStdNormDist,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Normal distribution',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Standard normal distribution',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Exponential curve',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Cumulative distribution',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [
+            QuizMarkdownType.TEXT,
+            'The graph on the left is',
+          ],
+        ],
+        image: normDistStdNormDist,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Normal distribution',
+              ],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Standard normal distribution',
+              ],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Exponential curve',
+              ],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [
+                QuizMarkdownType.TEXT,
+                'Cumulative distribution',
+              ],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does the correlation coefficient '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' measure in a dataset?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The strength and direction of the linear relationship between two variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The difference between mean values of the variables.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The difference between maximum and minimum values of the variables.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The probability of occurrence of the variables.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What does a correlation coefficient '],
+          [QuizMarkdownType.INLINE_KATEX, 'r = 0.8'],
+          [QuizMarkdownType.TEXT, ' between two variables indicate?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A weak positive linear relationship.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A strong positive linear relationship.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A weak negative linear relationship.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'No linear relationship.'],
             ],
           },
         ],
@@ -66210,26 +66973,291 @@ greet "World"`],
       },
       {
         question: [
-          [QuizMarkdownType.TEXT, 'The pattern shown indicates'],
+          [QuizMarkdownType.TEXT, 'If the correlation coefficient is'],
+          [QuizMarkdownType.INLINE_KATEX, 'r = 0.6'],
+          [QuizMarkdownType.TEXT, ', how would you describe the relationship between the variables?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'This is a direct correlation.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'This is an inverse correlation.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'This is a strong positive linear relationship.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no linear relationship.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the correlation coefficient is'],
+          [QuizMarkdownType.INLINE_KATEX, 'r = -0.6'],
+          [QuizMarkdownType.TEXT, ', how would you describe the relationship between the variables?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'This is an inverse correlation.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'This is a direct correlation.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'This is a strong positive linear relationship.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no linear relationship.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If the correlation coefficient is'],
+          [QuizMarkdownType.INLINE_KATEX, 'r = -0.6'],
+          [QuizMarkdownType.TEXT, ', how would you describe the relationship between the variables?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A moderate negative linear relationship.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A weak negative linear relationship.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'A strong positive linear relationship.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'No linear relationship.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the range of values that the correlation coefficient '],
+          [QuizMarkdownType.INLINE_KATEX, 'r'],
+          [QuizMarkdownType.TEXT, ' can take?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'From -1 to 1.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'From 0 to 1.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'From -∞ to +∞.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'From 1 to -1.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'If '],
+          [QuizMarkdownType.INLINE_KATEX, 'r = 0'],
+          [QuizMarkdownType.TEXT, ', what does this indicate about the relationship between the variables?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is no linear relationship between the variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is a perfect positive linear relationship between the variables.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'There is a perfect negative linear relationship between the variables.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The variables are independent of each other.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The formula'],
+          [QuizMarkdownType.INLINE_KATEX, '\\frac{1}{n} \\sum_{i=1}^{n} (x_i - \\bar{x})(y_i - \\bar{y})'],
+          [QuizMarkdownType.TEXT, 'is used to find'],
+        ],
+        image: covarianceEqZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Covariance'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'R squared'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE)'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cosine similarity'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown for'],
+          [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y)'],
+          [QuizMarkdownType.TEXT, 'indicates'],
+        ],
+        image: covarianceEqZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown for'],
+          [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y)'],
+          [QuizMarkdownType.TEXT, 'indicates'],
+        ],
+        image: covarianceLtZero,
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y) > 0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y) < 0'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y) ≊ 0'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The pattern shown for'],
+          [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y)'],
+          [QuizMarkdownType.TEXT, 'indicates'],
         ],
         image: covarianceGtZero,
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 > 0'],
+              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) > 0'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 < 0'],
+              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) < 0'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sigma^2 ≊ 0'],
+              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) ≊ 0'],
             ],
           },
         ],
@@ -66275,25 +67303,25 @@ greet "World"`],
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Spread of data points around the mean'],
+              [QuizMarkdownType.TEXT, 'Spread of data points around the mean'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Average of data points'],
+              [QuizMarkdownType.TEXT, 'Average of data points'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Total sum of data points'],
+              [QuizMarkdownType.TEXT, 'Total sum of data points'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Minimum value in the dataset'],
+              [QuizMarkdownType.TEXT, 'Minimum value in the dataset'],
             ],
           },
         ],
@@ -66307,25 +67335,25 @@ greet "World"`],
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are spread out from the mean'],
+              [QuizMarkdownType.TEXT, 'Data points are spread out from the mean'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are close to the mean'],
+              [QuizMarkdownType.TEXT, 'Data points are close to the mean'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are clustered together'],
+              [QuizMarkdownType.TEXT, 'Data points are clustered together'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_CODE, 'Data points are negative'],
+              [QuizMarkdownType.TEXT, 'Data points are negative'],
             ],
           },
         ],
@@ -66382,7 +67410,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '0',
+        correctAnswer: '1',
       },
       {
         question: [
@@ -66429,7 +67457,7 @@ greet "World"`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'Standard deviation is equal to'],
-          [QuizMarkdownType.INLINE_KATEX, 'sqrt{\\sigma^2}'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sqrt{\\sigma^2}'],
         ],
         answers: [
           {
@@ -66450,7 +67478,7 @@ greet "World"`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'Standard deviation is equal to'],
-          [QuizMarkdownType.INLINE_KATEX, 'sqrt{\\sigma}'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sqrt{\\sigma}'],
         ],
         answers: [
           {
@@ -66466,7 +67494,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '0',
+        correctAnswer: '1',
       },
       {
         question: [
@@ -66704,7 +67732,7 @@ greet "World"`],
       {
         question: [
           [QuizMarkdownType.TEXT, 'Standard deviation is equal to'],
-          [QuizMarkdownType.INLINE_KATEX, 'sqrt{\\mu}'],
+          [QuizMarkdownType.INLINE_KATEX, '\\sqrt{\\mu}'],
         ],
         answers: [
           {
@@ -66741,7 +67769,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '1',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -67072,7 +68100,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -67236,7 +68264,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '3',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -67412,7 +68440,7 @@ greet "World"`],
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.TEXT, 'The probability of observing a coefficient at least as extreme as the one computed, assuming the null hypothesis is true.'],
+              [QuizMarkdownType.TEXT, 'The probability of observing a coefficient at least as extreme as the one computed.'],
             ],
           },
           {
@@ -67460,7 +68488,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '1',
+        correctAnswer: '0',
       },
       {
         question: [
@@ -67494,6 +68522,689 @@ greet "World"`],
         ],
         correctAnswer: '0',
       },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is homoscedasticity important in the context of regression analysis when modeling housing prices?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To ensure that the variability of housing prices around the regression line remains constant across different levels of predictor variables.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To reduce the computational complexity of regression models used in housing price predictions.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To account for seasonal fluctuations in housing prices throughout the year.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To comply with legal requirements for the accurate valuation of properties.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is it important for financial analysts to check for homoscedasticity when evaluating the performance of investment portfolios?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To ensure that the variability of portfolio returns remains constant over different market conditions.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To optimize the allocation of assets within the portfolio to maximize returns.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To comply with regulatory requirements for financial reporting and disclosures.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To simplify the calculation of performance metrics such as Sharpe ratio and alpha.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why do quality control engineers in manufacturing industries check for the normality of residuals when assessing product specifications?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To ensure that the manufacturing process is consistent and produces products within acceptable quality limits.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To comply with international standards and regulations for product safety.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To optimize production efficiency and reduce operational costs.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To facilitate communication between engineers and production managers regarding product specifications.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is it necessary for analysts in financial markets to confirm the normality of residuals when developing predictive models for stock prices?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To ensure that the predictive models accurately capture the patterns and trends in stock price movements.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To comply with regulatory requirements for transparency and disclosure of financial analyses.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To simplify the interpretation of complex financial data and communicate findings to stakeholders.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To optimize trading strategies and maximize returns on investment portfolios.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why do environmental scientists verify the normality of residuals when analyzing air quality data collected from monitoring stations?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To assess the effectiveness of pollution control measures and their impact on air quality.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To comply with international standards and regulations for environmental monitoring and reporting.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To improve public awareness and understanding of environmental issues related to air pollution.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To streamline data analysis and facilitate collaboration with government agencies and policymakers.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the mathematical principle behind '],
+          [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE) '],
+          [QuizMarkdownType.TEXT, 'in regression analysis?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Minimizing the sum of the squares of the differences between observed and predicted values.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maximizing the variance explained by the independent variables.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Minimizing the mean absolute error between observed and predicted values.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maximizing the correlation coefficient between variables.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In the context of '],
+          [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE), '],
+          [QuizMarkdownType.TEXT, 'what does the term "residual" refer to?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The difference between observed and predicted values of the dependent variable.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The difference between the mean and median of the independent variable.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The difference between the intercept and slope of the regression line.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The difference between the maximum and minimum values of the dataset.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What statistical technique is used to estimate the coefficients in a linear regression model using '],
+          [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE)?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Ordinary Least Squares (OLS).'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Maximum Likelihood Estimation (MLE).'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Principal Component Analysis (PCA).'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'ANOVA (Analysis of Variance).'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does '],
+          [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE) '],
+          [QuizMarkdownType.TEXT, 'determine the best-fit line in a simple linear regression model?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By minimizing the sum of squared residuals (differences between observed and predicted values).'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By maximizing the R-squared value of the regression model.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By minimizing the sum of absolute differences between observed and predicted values.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'By selecting the line that passes closest to the mean of the dependent variable.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary goal of '],
+          [QuizMarkdownType.TEXT, 'Least Squares Estimation (LSE) '],
+          [QuizMarkdownType.TEXT, 'in regression analysis?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To find the line (or curve) that best fits the data by minimizing the sum of squared differences between observed and predicted values.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To maximize the correlation coefficient between variables.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To identify outliers in the dataset.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To calculate the mean absolute error between observed and predicted values.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'In a normal distribution:'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The mean, median, and mode are equal.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The mean is always greater than the mode.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The standard deviation is always greater than the mean.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'The range of values is limited to positive numbers.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What percentage of data falls within one standard deviation of the mean in a standard normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '68.2%'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '95.4%'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '99.7%'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '50%'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is the normal distribution commonly used in statistical analyses?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Because it accurately represents many natural phenomena, such as heights and weights.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Because it always has a mean of zero.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Because it is the simplest distribution to calculate.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Because it is the only distribution that can be used for any dataset.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the shape of the probability density function (PDF) of a normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Bell-shaped curve'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Exponential curve'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Step function'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Sine wave'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does increasing the standard deviation affect the spread of data in a normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Increases the spread of data'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Decreases the spread of data'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Does not affect the spread of data'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Causes the mean to shift'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the mean of a standard normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '0'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '1'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '10'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Cannot be determined'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'How does changing the mean affect the position of a normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Shifts the distribution horizontally'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Changes the shape of the distribution'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Makes the distribution narrower'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Does not affect the distribution'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What percentage of data falls within two standard deviations of the mean in a standard normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, '95.4%'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, '68.2%'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, '99.7%'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, '50%'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the shape of the cumulative distribution function (CDF) of a normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'S-shaped curve'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Exponential curve'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Bell-shaped curve'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Step function'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the key characteristic that defines a normal distribution?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Symmetry around the mean'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Positive skewness'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Uniform distribution of data points'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Exponential decrease in values'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Why is it essential for researchers in educational psychology to confirm the normality of residuals when analyzing test performance data?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To ensure that the comparisons between different groups of students are valid and reliable.'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To comply with ethical guidelines for conducting research involving human subjects.'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To simplify the interpretation of test scores and identify areas for educational intervention.'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'To improve the accuracy of grade predictions and academic assessments.'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+
     ],
   },
   test: {
