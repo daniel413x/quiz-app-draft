@@ -52505,6 +52505,42 @@ invokestatic java/io/PrintStream.println(I)V`,
         question: [
           [QuizMarkdownType.TEXT, 'Given the vector '],
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
+          [QuizMarkdownType.TEXT, ', which of the following is NOT a scalar multiple of '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 5 \\\\ 24 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 4 \\\\ 10 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 10 \\\\ 25 \\end{pmatrix}'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Given the vector '],
+          [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}'],
           [QuizMarkdownType.TEXT, ', which of the following is a scalar multiple of '],
           [QuizMarkdownType.INLINE_KATEX, '\\mathbf{v}'],
           [QuizMarkdownType.TEXT, '?'],
@@ -52525,7 +52561,7 @@ invokestatic java/io/PrintStream.println(I)V`,
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 15 \\end{pmatrix}'],
+              [QuizMarkdownType.INLINE_KATEX, '\\begin{pmatrix} 6 \\\\ 19 \\end{pmatrix}'],
             ],
           },
           {
@@ -53545,223 +53581,6 @@ invokestatic java/io/PrintStream.println(I)V`,
           },
         ],
         correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
-          [QuizMarkdownType.INLINE_KATEX, '(0, 0, 0, 0)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(1, 2, 2, 1)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{6}'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{8}'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{9}'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{10}'],
-            ],
-          },
-        ],
-        correctAnswer: '3',
-      },
-
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
-          [QuizMarkdownType.INLINE_KATEX, '(3, 2)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(4, 3)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{4}'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{2}'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{3}'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{1}'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
-          [QuizMarkdownType.INLINE_KATEX, '(2, 3)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(6, 9)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '5'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '6'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '7'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '10'],
-            ],
-          },
-        ],
-        correctAnswer: '2',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
-          [QuizMarkdownType.INLINE_KATEX, '(1, 2, 3)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(4, 6, 8)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{27}'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{29}'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{35}'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{50}'],
-            ],
-          },
-        ],
-        correctAnswer: '3',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
-          [QuizMarkdownType.INLINE_KATEX, '(1, 1)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(4, 5)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '3'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '5'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '6'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '7'],
-            ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
-          [QuizMarkdownType.INLINE_KATEX, '(1, 1, 1, 1, 1)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(2, 3, 4, 5, 6)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{25}'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y)'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{35}'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{55}'],
-            ],
-          },
-        ],
-        correctAnswer: '3',
       },
       {
         question: [
@@ -64718,6 +64537,224 @@ greet "World"`],
         ],
         correctAnswer: '0',
       },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
+          [QuizMarkdownType.INLINE_KATEX, '(0, 0, 0, 0)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 2, 2, 1)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{6}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{8}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{9}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{10}'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points '],
+          [QuizMarkdownType.INLINE_KATEX, '(3, 2)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 3)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{4}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{2}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{3}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{1}'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(2, 3)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(6, 9)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '10'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 2, 3)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 6, 8)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{27}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{29}'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{35}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{50}'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 1)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(4, 5)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '3'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '5'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '6'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '7'],
+            ],
+          },
+        ],
+        correctAnswer: '1',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
+          [QuizMarkdownType.INLINE_KATEX, '(1, 1, 1, 1, 1)'],
+          [QuizMarkdownType.TEXT, 'and'],
+          [QuizMarkdownType.INLINE_KATEX, '(2, 3, 4, 5, 6)'],
+          [QuizMarkdownType.TEXT, '?'],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{25}'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y)'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{35}'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_KATEX, '\\sqrt{55}'],
+            ],
+          },
+        ],
+        correctAnswer: '3',
+      },
       {
         question: [
           [QuizMarkdownType.TEXT, 'What is the formula to calculate Euclidean distance?'],
@@ -66853,7 +66890,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '0',
+        correctAnswer: '1',
       },
       {
         question: [
@@ -66993,7 +67030,7 @@ greet "World"`],
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.TEXT, 'This is a strong positive linear relationship.'],
+              [QuizMarkdownType.TEXT, 'This is a covariant correlation.'],
             ],
           },
           {
@@ -67187,19 +67224,19 @@ greet "World"`],
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) > 0'],
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y) > 0'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) < 0'],
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y) < 0'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '\text{Cov}(x, y) ≊ 0'],
+              [QuizMarkdownType.INLINE_KATEX, '\\text{Cov}(x, y) ≊ 0'],
             ],
           },
         ],
@@ -67620,7 +67657,7 @@ greet "World"`],
             ],
           },
         ],
-        correctAnswer: '1',
+        correctAnswer: '0',
       },
       {
         question: [

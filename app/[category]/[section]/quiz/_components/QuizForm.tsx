@@ -202,7 +202,7 @@ const QuizForm = () => {
             {renderMarkdown(question.question)}
             {question.image ? (
               <Image
-                className="py-6"
+                className="py-6 m-auto"
                 width={500}
                 src={question.image}
                 alt="Question image"
