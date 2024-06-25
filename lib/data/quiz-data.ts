@@ -4914,6 +4914,34 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
+          [QuizMarkdownType.TEXT, 'Which answer modifies all arrays such that you can call the method array.last() on any array and it will return the last element?'],
+        ],
+        answers: [
+          {
+            id: '0', answer: [[QuizMarkdownType.CODE, `Array.prototype.last = function () {
+  return this[this.length - 1];
+}`]]
+          },
+          {
+            id: '1', answer: [[QuizMarkdownType.CODE, `Array.prototype.last = function () {
+  return this[this.length];
+}`]]
+          },
+          {
+            id: '2', answer: [[QuizMarkdownType.CODE, `Array.prototype.last = function () {
+  return this.length - 1;
+}`]]
+          },
+          {
+            id: '3', answer: [[QuizMarkdownType.CODE, `Array.prototype.last = function () {
+  return this;
+}`]]
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
           [QuizMarkdownType.TEXT, 'What is the primary purpose of Babel in web development?'],
         ],
         answers: [

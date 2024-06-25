@@ -31,7 +31,7 @@ const MobileNav = () => (
             </li>
             {categories.map((c) => (
               <li key={c.slug}>
-                <Link href={c.slug} name={c.name} className="pt-6" />
+                <Link href={`/${c.slug}`} name={c.name} className="pt-6" />
               </li>
             ))}
           </ul>
