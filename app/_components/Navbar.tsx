@@ -19,7 +19,7 @@ const Navbar = () => (
         <Separator
           className="bg-gray-400 dark:bg-gray-400 w-[1px] h-8 mx-2.5 opacity-50"
         />
-        {directQuizRoutes.map((r) => (
+        {directQuizRoutes.slice(0, 11).map((r) => (
           <li key={r.slug}>
             <Link href={`/${r.category.slug}/${r.slug}`} name={r.name} key={r.slug} />
           </li>
