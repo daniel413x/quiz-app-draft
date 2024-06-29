@@ -17,6 +17,9 @@ import python from './python';
 import javascript from './javascript';
 import learnersPermit from './learners-permit';
 import { QuizDataObject, QuizMarkdownType } from './types';
+import principlesOfProgramming from './principles-of-programming';
+import sql from './sql';
+import dataStructures from './data-structures';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -43,8 +46,11 @@ const quizData: QuizData = {
   'probability-theory': probabilityTheory,
   tensorflow,
   statistics,
+  'principles-of-programming': principlesOfProgramming,
   'principles-of-cybersecurity': principlesOfCybersecurity,
   'principles-ui-ux': uiUx,
+  'data-structures': dataStructures,
+  sql,
   test: {
     name: 'test',
     slug: 'test',
@@ -159,6 +165,8 @@ const categories = [
       quizData.java,
       quizData['shell-scripting'],
       quizData['principles-ui-ux'],
+      quizData['principles-of-programming'],
+      quizData.sql,
     ],
   },
   {
@@ -199,6 +207,7 @@ const categories = [
     slug: 'data',
     quizzes: [
       quizData.data,
+      quizData['data-structures'],
     ],
   },
   {

@@ -47,7 +47,7 @@ const useTimerOnInterval = () => {
         clearInterval(timerId);
       };
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isStarted, timer]);
   return { isStarted: timerToggle.isStarted, timer: timerToggle.timer };
 };

@@ -9,6 +9,2439 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Identify the anonymous class in the code below.'],
+        [QuizMarkdownType.CODE, `public class HelloWorld {
+
+  interface Greeting {
+      void sayHello();
+  }
+
+  public static void main(String[] args) {
+      Greeting greeting = new Greeting() {
+          @Override
+          public void sayHello() {
+              System.out.println("Hello, World!");
+          }
+      };
+
+      greeting.sayHello();
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `Greeting greeting = new Greeting() {
+  @Override
+  public void sayHello() {
+      System.out.println("Hello, World!");
+  }
+};`],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `interface Greeting {
+  void sayHello();
+}`],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'greeting.sayHello();'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `public static void main(String[] args) {
+  ...
+}`],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Based on the code below, which is the correct answer?'],
+        // note that defining brewCoffee n times doesn't invalidate all previous implementations, they are simply called with different parameters
+        [QuizMarkdownType.CODE, `class CoffeeMachine {
+  public void brewCoffee(String selection) {
+      System.out.println("Brewing " + selection);
+  }
+
+  public void brewCoffee(String selection, int number) {
+      System.out.println("Brewing " + number + " cups of " + selection);
+  }
+
+  public static void main(String[] args) {
+      CoffeeMachine machine = new CoffeeMachine();
+      machine.brewCoffee("Espresso");
+      machine.brewCoffee("Espresso", 2);
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static polymorphism/binding'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism/binding'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Absence of polymorphism'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of OOP principles'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If a class is instantiated and its methods are overridden, this naturally means'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism/binding'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static polymorphism/binding'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Absence of polymorphism'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of OOP principles'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answers define the dynamics at play in the following code?'],
+        [QuizMarkdownType.CODE, `public class HelloWorld {
+
+  interface Greeting {
+      void sayHello();
+  }
+
+  public static void main(String[] args) {
+      Greeting greeting = new Greeting() {
+          @Override
+          public void sayHello() {
+              System.out.println("Hello, World!");
+          }
+      };
+
+      greeting.sayHello();
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'There is a block of code that is an anonymous class'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of dynamic binding'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of static binding'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Two of the answers are correct'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, method overloading is required for static polymorphism.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, the terms static binding and static polymorphism are interchangeable.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, the terms static binding and static polymorphism are interchangeable.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A class inherits from another class or an interface inherits from another interface via the keyword _______, while the keyword _______ is used when a class implements an interface.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'extends'],
+            [QuizMarkdownType.INLINE_CODE, 'implements'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'implements'],
+            [QuizMarkdownType.INLINE_CODE, 'extends'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 2,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method correctly intializes an array of primitive integers from 1-5?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[] numbers = {1, 2, 3, 4, 5};'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[] numbers = int[5]'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[] numbers = int[1][2][3][4][5]'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'List<Integer> numbers = new ArrayList<>(1, 2, 3, 4, 5)'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, method overloading is required for static binding.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, method overloading is required for ________.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'static polymorphism'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'static binding'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'static binding AND static polymorphism'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, static polymorphism is defined by _____________.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'method overloading'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'the'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'access modifier'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'the'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+            [QuizMarkdownType.TEXT, 'access modifier'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the following line of code, '],
+        [QuizMarkdownType.INLINE_CODE, 'List<String> list = new ArrayList<>(); list.add("Hello"); list.add("World");'],
+        [QuizMarkdownType.TEXT, ', the syntax'],
+        [QuizMarkdownType.INLINE_CODE, '<>'],
+        [QuizMarkdownType.TEXT, ', also known as the diamond operator, infers the type of the ArrayList based on what information?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The type of'],
+            [QuizMarkdownType.INLINE_CODE, 'list'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The type of the items added'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamically determined at runtime'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 2 and 3'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Any time method implements _________, it is considered static polymorphism AND static binding in Java.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'method overloading'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'the'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'access modifier'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'the'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+            [QuizMarkdownType.TEXT, 'access modifier'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following program?'],
+        [QuizMarkdownType.CODE, `class HelloWorld {
+    private void display() {
+        System.out.println("Hello World");
+    }
+
+    public static void main(String[] args) {
+        HelloWorld obj = new HelloWorld();
+        obj.display();
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of static binding'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of static polymorphism'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of dynamic polymorphism'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following program?'],
+        [QuizMarkdownType.CODE, `public class BasicCoffeeMachine {
+    // ...
+    public Coffee brewCoffee(CoffeeSelection selection) throws CoffeeException {
+        switch (selection) {
+        case FILTER_COFFEE:
+            return brewFilterCoffee();
+        default:
+            throw new CoffeeException(
+                "CoffeeSelection ["+selection+"] not supported!");
+        }   
+    }
+  
+    public List brewCoffee(CoffeeSelection selection, int number) throws CoffeeException {
+        List coffees = new ArrayList(number);
+        for (int i=0; i<number; i++) {
+            coffees.add(brewCoffee(selection));
+        }
+        return coffees;
+    }
+    // ...
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of static binding'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of static polymorphism'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is an example of dynamic polymorphism'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which set of commands will successfully execute the following program?'],
+        [QuizMarkdownType.CODE, `public class DynamicBindingProgram {
+    public static void main(String[] args) {
+        Animal obj = new Dog();
+        obj.sound(); // Dynamic binding: method determined at runtime
+    }
+}
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `javac DynamicBindingProgram.java
+java DynamicBindingProgram`],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'java DynamicBindingProgram.java'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Either of the above'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which set of commands will successfully execute the following program?'],
+        [QuizMarkdownType.CODE, `class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class DynamicBindingProgram {
+    public static void main(String[] args) {
+        Animal obj = new Dog();
+        obj.sound(); // Dynamic binding: method determined at runtime
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `javac DynamicBindingProgram.java
+java DynamicBindingProgram`],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'java DynamicBindingProgram.java'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Either of the above'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer best describes the following code?'],
+        [QuizMarkdownType.CODE, `class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Example {
+    public static void main(String[] args) {
+        Animal obj = new Dog();
+        obj.sound();
+    }
+}
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an example of dynamic binding.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an example of static binding.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an example of closures.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an example of unsafe method overriding.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does method overriding relate to dynamic binding in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic binding allows the overridden method to be called at runtime based on the object type.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic binding prevents method overriding.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Method overriding is not related to binding.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Method overriding only uses static binding.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is dynamic binding in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at runtime.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at compile time.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding variables to data types dynamically.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding classes together using static methods.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is static binding in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at compile time.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at runtime.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding variables to data types.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding classes together using interfaces.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What command would be used to run the following program with proper output?'],
+        [QuizMarkdownType.CODE, `import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ScanIt {
+    public static void main(String[] args) {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                System.out.println(line); // Process the line as needed
+            }
+            scanner.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'java ScanIt < input.txt'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'javac ScanIt < input.txt'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'java > input.txt'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'java ScanIt << input.txt'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The keywords'],
+        [QuizMarkdownType.INLINE_CODE, 'static'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'public'],
+        [QuizMarkdownType.TEXT, 'can be applied to the same method.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The keywords'],
+        [QuizMarkdownType.INLINE_CODE, 'static'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'abstract'],
+        [QuizMarkdownType.TEXT, 'can be applied to the same method.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.INLINE_CODE, 'ValidationHandler'],
+        [QuizMarkdownType.TEXT, 'is a class defined in a Spring application. '],
+        [QuizMarkdownType.INLINE_CODE, 'Validator'],
+        [QuizMarkdownType.TEXT, 'is a class that is a dependency of'],
+        [QuizMarkdownType.INLINE_CODE, 'ValidationHandler'],
+        [QuizMarkdownType.TEXT, '. Which of the following is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The constructor of'],
+            [QuizMarkdownType.INLINE_CODE, 'ValidationHandler'],
+            [QuizMarkdownType.TEXT, 'is annotated with'],
+            [QuizMarkdownType.INLINE_CODE, '@Autowired'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The constructor of'],
+            [QuizMarkdownType.INLINE_CODE, 'Validator'],
+            [QuizMarkdownType.TEXT, 'is annotated with'],
+            [QuizMarkdownType.INLINE_CODE, '@Autowired'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The constructor of'],
+            [QuizMarkdownType.INLINE_CODE, 'Validator'],
+            [QuizMarkdownType.TEXT, 'is annotated with'],
+            [QuizMarkdownType.INLINE_CODE, '@Bean'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The constructor of'],
+            [QuizMarkdownType.INLINE_CODE, 'ValidationHandler'],
+            [QuizMarkdownType.TEXT, 'is annotated with'],
+            [QuizMarkdownType.INLINE_CODE, '@Bean'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer most accurately defines the way to define a class method before the arguments?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'accessModifier? static? returnType methodName'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'accessModifier static? returnType methodName'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'accessModifier? static? returnType? methodName'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'accessModifier? static returnType? methodName'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT true of the keyword'],
+        [QuizMarkdownType.INLINE_CODE, 'static'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'this'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to static methods'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'cannot be applied to the main thread'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to encapsulation'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to nested classes'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, the'],
+        [QuizMarkdownType.INLINE_CODE, 'static'],
+        [QuizMarkdownType.TEXT, ' keyword can be used with nested classes (inner classes) to define static nested classes. Consequently, the nested class does not have _________________ of the enclosing class.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'reference to any instance'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'access to static fields and methods'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'access to any context'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 3'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of the keyword'],
+        [QuizMarkdownType.INLINE_CODE, 'this'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'this'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to static methods'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'this'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to abstract classes'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'this'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to private classes'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'this'],
+            [QuizMarkdownType.TEXT, 'is irrelevant to protected classes'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is the correct syntax for a for loop in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for (int i = 0; i < 10; i++) { // code to be executed }'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for (i = 0; i < 10; i++) { // code to be executed }'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for int i = 0; i < 10; i++ { // code to be executed }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for (int i = 0, i < 10, i++) { // code to be executed }'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you declare an array of integers in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int[] numbers;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int numbers[];'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int array numbers;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int array[] numbers;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the public access modifier mean in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible from any other class.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible only within its own package.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible only within its own class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible within its own package and subclasses.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An example of an access modifier would be'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'void'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'class'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When no access modifier is specified, the field or method is accessible'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only within its own package.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'From any other class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'From the main class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only from subclasses in the package.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the protected access modifier mean in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible within its own package and by subclasses.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible from any other class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible only within its own class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible only within its own package.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A blueprint for defining fields and methods.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An instance of an object compiled at runtime.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A collection of static and abstract methods.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A data structure that holds values in a key-value format.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following can be members of a class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Fields, methods, constructors, nested classes'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only public fields and abstract methods'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only methods, constructors, and nested classes'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only fields and constructors'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a constructor in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A special method used to initialize objects.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that is called when an object is garbage collected.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A static method used to initialize static fields.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method used to compare two objects.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a default constructor in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A no-argument constructor automatically provided by the compiler if no other constructors are defined.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor that initializes all fields to default values unless overrided at runtime.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor that initializes static fields and methods.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor that must be defined explicitly at compile time.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you declare an integer variable in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int number;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'integer number;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Number number;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int number()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you create an object of a class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'MyClass obj = new MyClass();'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'MyClass obj = MyClass();'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'MyClass obj = new Object();'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'obj = new MyClass();'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the static keyword mean when applied to a member of a class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member belongs to the class rather than to any specific instance.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member cannot be accessed from outside the class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member cannot be accessed from any specific instance of the class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is created by the constructor of the specific instance of that class.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is an abstract class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that cannot be instantiated and may contain abstract methods.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that can only contain abstract methods and can only be implemented via interface.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that must be extended by another class and has methods instantiated by the constructor.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code:'],
+        [QuizMarkdownType.CODE, `public class HelloWorld {
+
+  private Printer printer;
+
+  public HelloWorld(Printer printer) {
+    this.printer = printer;
+  }
+
+  public static void main(String[] args) {
+    System.out.println("System.out.println(public static void main(String[] args) {)");
+
+    Printer printer = new Printer();
+    printer.print("printer.print("Printer printer = new Printer();")");
+    printer.print("Hello World");
+  }
+}
+
+class Printer {
+  public Printer() {
+  }
+
+  public final void print(String arg) {
+    System.out.println(arg);
+  }
+
+}`],
+        [QuizMarkdownType.TEXT, 'Which of the following is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The'],
+            [QuizMarkdownType.INLINE_CODE, 'print'],
+            [QuizMarkdownType.TEXT, 'method of'],
+            [QuizMarkdownType.INLINE_CODE, 'Printer'],
+            [QuizMarkdownType.TEXT, 'cannot be submethoded.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The'],
+            [QuizMarkdownType.INLINE_CODE, 'Printer'],
+            [QuizMarkdownType.TEXT, 'class cannot be subclassed'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+            [QuizMarkdownType.TEXT, '\'s implementation of'],
+            [QuizMarkdownType.INLINE_CODE, 'Printer'],
+            [QuizMarkdownType.TEXT, 'is an example of static polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The implementation of'],
+            [QuizMarkdownType.INLINE_CODE, 'Printer'],
+            [QuizMarkdownType.TEXT, 'by'],
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+            [QuizMarkdownType.TEXT, 'is an example of static binding'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a final class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that cannot be subclassed.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class with final fields.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that cannot be instantiated.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that must be extended.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If you mark a class\'s method as '],
+        [QuizMarkdownType.TEXT, 'If you mark a class\'s method as ______'],
+        [QuizMarkdownType.TEXT, ', then it cannot be overridden by subclasses.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'final'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'abstract'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Autowired'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Serializable'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is an inner class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class defined within another class.'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that is static.'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that is extended by another class.'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 2 and 3'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the protected access modifier mean in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible within its own package and by subclasses.'],
+          ],
+        },
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'What is the most concise way to declare a class in Java?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'class MyClass { }'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'public MyClass { }'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'void class MyClass { }'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'public class { }'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'What is an anonymous class in Java?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'A class without a name defined and instantiated in a single expression.'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'A class that cannot be instantiated and is declared outside a parent class.'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'A class that is extended by another class.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'A class that implements an interface.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible from any other class or package.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible only within its own class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member is accessible only within its own subclasses.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is polymorphism in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The ability of an object to take many forms.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A way to define multiple classes.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The process of creating a new object.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A technique to encapsulate data.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is method overriding in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A subclass provides a specific implementation of a method already defined in its superclass.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Two or more methods in a class have the same name but different parameters.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method calls other method(s) defined in parent class(es).'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class provides a specific implementation of a method already defined in one of its inner classes.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Access modifiers are most relevant to _______ in Java'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inheritance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A member is accessible from any other class by virtue of'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The access modifier'],
+            [QuizMarkdownType.INLINE_CODE, 'public'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The access modifier'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The access modifier'],
+            [QuizMarkdownType.INLINE_CODE, 'protected'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The default access modifier'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A member is accessible from any other class by virtue of'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The access modifier'],
+            [QuizMarkdownType.INLINE_CODE, 'public'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The access modifier'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The access modifier'],
+            [QuizMarkdownType.INLINE_CODE, 'protected'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The default access modifier'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the result of the following ternary operation?'],
+        [QuizMarkdownType.CODE, 'int result = (5 > 3) ? 10 : 20;'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '10'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '20'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '5'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the result of the following ternary operation?'],
+        [QuizMarkdownType.CODE, 'int result = (5 > 3) ? 10 : 20;'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '10'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '20'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '5'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of a static block in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To initialize static variables.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To initialize instance variables.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To create anonymous classes.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define constructors.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is an anonymous class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class defined within another class without a name.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class with a default access modifier.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that implements an interface without methods.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that cannot be instantiated.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the diamond operator <> do in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It infers the type parameters of generic classes or methods.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It indicates a deprecated class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It marks a method as synchronized.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It specifies a checked exception.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of varargs in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To allow a method to accept a variable number of arguments.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define constants in an interface.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To enable the use of lambda expressions.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To specify generic types.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of a synchronized block in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To control access to a shared resource in a multi-threaded environment.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define an immutable class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To create an enumeration.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define a default method in an interface.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is an enum in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A special data type that represents a group of constants.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class that cannot be instantiated.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that returns a constant value.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A special type of array.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a default method in a Java interface?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method with an implementation that can be optionally overridden.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that must be overridden by implementing classes.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that defines a constant value.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that synchronizes access to a resource.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of the try-with-resources statement in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To ensure that resources are closed automatically after use.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define multiple catch blocks for handling exceptions.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To specify a finally block for cleaning up resources.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To enable multiple resources to be used in a try block.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a lambda expression in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A concise way to represent an anonymous function.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that defines a constant value.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A block of code that defines a class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A way to define a multi-threaded block of code.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'How do you access the first element of an ArrayList in Java?'],
       ],
       answers: [
@@ -162,6 +2595,468 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'The program will continue running without any error.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following answers will cause a Java program to fail to compile?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'List<int> list = new ArrayList<int>();'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Integer[][] ints = new Integer[3][3];'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'List<Integer> list = new ArrayList<Integer>();'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[][] matrix = new int[6][6];'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: It is possible to substitute'],
+        [QuizMarkdownType.INLINE_CODE, 'Integer'],
+        [QuizMarkdownType.TEXT, 'with'],
+        [QuizMarkdownType.INLINE_CODE, 'int'],
+        [QuizMarkdownType.TEXT, 'in a List (ArrayList) declaration.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, int and Integer are not interchangeable in Lists (ArrayList).'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, you can substitute int with Integer.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but only in Lists (ArrayList).'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, you must always use int for Lists (ArrayList)s.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a LinkedList in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A data structure that stores elements in a doubly linked list.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A data structure that stores elements in a dynamic array.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A stack implementation using arrays.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A collection that allows duplicate elements in a set.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What are the key characteristics of a LinkedList in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Elements are linked using nodes.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Elements are stored in contiguous memory locations.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It uses a fixed-size array to store elements.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It does not allow null elements.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a LinkedList, which operations are generally faster compared to an ArrayList?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Insertions and deletions.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Random access and element retrieval.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sorting and searching.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Memory allocation and resizing.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does the access time of elements in a LinkedList compare to an ArrayList?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'LinkedList has slower access time due to sequential traversal.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'LinkedList has faster access time due to optimal path traversal.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'LinkedList and ArrayList have the same access time.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'LinkedList has faster access time for the first element only.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of'],
+        [QuizMarkdownType.INLINE_CODE, 'List'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists cannot accept primitive types such as'],
+            [QuizMarkdownType.INLINE_CODE, 'int'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists cannot accept wrapper classes such as'],
+            [QuizMarkdownType.INLINE_CODE, 'String'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists are the same thing as'],
+            [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When is it preferable to use a LinkedList over an ArrayList?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When frequent insertions and deletions are required.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When frequent random access is required.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When a fixed-size collection is needed.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When high memory efficiency is needed.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of iterator does LinkedList provide?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ListIterator for bidirectional traversal.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Iterator for unidirectional traversal only.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ArrayIterator for random access traversal.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SetIterator for unique element traversal.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What methods does LinkedList provide for accessing the first and last elements?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'getFirst() and getLast().'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'peekFirst() and peekLast().'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first() and last().'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'head() and tail().'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method removes the first occurrence of a specified element in LinkedList?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'remove(Object o).'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'delete(Object o).'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'removeFirst(Object o).'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'deleteFirst(Object o).'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: It is possible to substitute'],
+        [QuizMarkdownType.INLINE_CODE, 'int'],
+        [QuizMarkdownType.TEXT, 'with'],
+        [QuizMarkdownType.INLINE_CODE, 'Integer'],
+        [QuizMarkdownType.TEXT, 'in a two-dimensional array declaration.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, you can substitute int with Integer.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, int and Integer are not interchangeable in arrays.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but only in one-dimensional arrays.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, you must always use int for arrays.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following answers will cause a Java program to fail to compile?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'List<int> list = new ArrayList<int>();'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Integer[][] ints = new Integer[3][3];'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'List<Integer> list = new ArrayList<Integer>();'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[][] matrix = new int[6][6];'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is the correct way to declare a two-dimensional array in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[][] matrix = new int[6][6];'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int matrix[][] = new int[6][6];'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[] matrix = new int[6][6];'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[][] matrix = new int[6, 6];'],
           ],
         },
       ],
@@ -934,6 +3829,78 @@ System.out.println(numbers[2]);
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'In Java, a'],
+        [QuizMarkdownType.INLINE_CODE, 'List'],
+        [QuizMarkdownType.TEXT, 'is capable of being multi-dimensional.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The eight wrapper classes of Java are'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Byte'],
+            [QuizMarkdownType.INLINE_CODE, 'Short'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+            [QuizMarkdownType.INLINE_CODE, 'Long'],
+            [QuizMarkdownType.INLINE_CODE, 'Float'],
+            [QuizMarkdownType.INLINE_CODE, 'Double'],
+            [QuizMarkdownType.INLINE_CODE, 'Boolean'],
+            [QuizMarkdownType.INLINE_CODE, 'Character'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'byte'],
+            [QuizMarkdownType.INLINE_CODE, 'shoft'],
+            [QuizMarkdownType.INLINE_CODE, 'int'],
+            [QuizMarkdownType.INLINE_CODE, 'long'],
+            [QuizMarkdownType.INLINE_CODE, 'float'],
+            [QuizMarkdownType.INLINE_CODE, 'double'],
+            [QuizMarkdownType.INLINE_CODE, 'boolean'],
+            [QuizMarkdownType.INLINE_CODE, 'char'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Either of the above'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which data structure in Java can be multi-dimensional?'],
       ],
       answers: [
@@ -967,7 +3934,6 @@ System.out.println(numbers[2]);
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following is the correct way to declare an array in Java?'],
-        [QuizMarkdownType.CODE, 'int[] array = new int[5];'],
       ],
       answers: [
         {
@@ -993,6 +3959,43 @@ System.out.println(numbers[2]);
           answer: [
             [QuizMarkdownType.TEXT, 'int[] array = new ArrayList<>(5);'],
           ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the function of the'],
+        [QuizMarkdownType.INLINE_CODE, '5'],
+        [QuizMarkdownType.TEXT, 'in the following code?'],
+        [QuizMarkdownType.CODE, 'int[] array = new int[5];'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define the size of the array'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define an initialized value in the array'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define the initialized array as five ints of '],
+            [QuizMarkdownType.INLINE_CODE, '5'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -1534,6 +4537,174 @@ System.out.println(numbers[2]);
     {
       question: [
         [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+        [QuizMarkdownType.CODE, 'Mono.just("Test").flatMap(s -> Mono.just(s.length()));'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits the length of the string "Test".'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits the string "Test".'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits the string "Test".'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits the length of the string "Test".'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+        [QuizMarkdownType.CODE, 'Flux.just("1", "2", "3").map(Integer::parseInt);'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits the integers 1, 2, 3.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits a list of integers.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits the integers 1, 2, 3 separately.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits the strings "1", "2", "3".'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+        [QuizMarkdownType.CODE, 'Mono.just("Data").map(String::toUpperCase);'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits "DATA".'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits "DATA".'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Maps "Data" to a single Mono stream.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits "Data".'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+        [QuizMarkdownType.CODE, 'Flux.just("A", "B", "C").collectList();'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits a list containing "A", "B", "C".'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits "A", "B", "C".'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits "A", "B", "C" separately.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Maps "A", "B", "C" to individual Mono streams.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
+        [QuizMarkdownType.CODE, 'Mono.just("World").flatMapMany(s -> Flux.fromArray(s.split("")));'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits the characters "W", "o", "r", "l", "d".'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Mono that emits "World".'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Maps "World" to a single Mono stream.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a Flux that emits "World".'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following code snippet do in Spring WebFlux?'],
         [QuizMarkdownType.CODE, 'Mono.just("Hello").flatMapMany(s -> Flux.just(s.split("")));'],
       ],
       answers: [
@@ -1671,7 +4842,7 @@ System.out.println(numbers[2]);
       question: [
         [QuizMarkdownType.TEXT, 'What is the purpose of the '],
         [QuizMarkdownType.INLINE_CODE, 'peek'],
-        [QuizMarkdownType.TEXT, ' intermediate operation in Java Streams?'],
+        [QuizMarkdownType.TEXT, 'intermediate operation in Java Streams?'],
       ],
       answers: [
         {
@@ -1747,7 +4918,7 @@ System.out.println(numbers[2]);
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'It returns a new stream consisting of distinct elements (removing duplicates) based on `equals` method.'],
+            [QuizMarkdownType.TEXT, 'It returns a new stream consisting of unique elements.'],
           ],
         },
         {
@@ -2108,6 +5279,60 @@ System.out.println(numbers[2]);
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Assume you are working in a file'],
+        [QuizMarkdownType.INLINE_CODE, 'HelloWorld.java'],
+        [QuizMarkdownType.TEXT, 'which consists of a main class'],
+        [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+        [QuizMarkdownType.TEXT, 'and a subclass'],
+        [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
+        [QuizMarkdownType.TEXT, 'that has a method'],
+        [QuizMarkdownType.INLINE_CODE, 'printHelloWorld'],
+        [QuizMarkdownType.TEXT, 'that prints the string'],
+        [QuizMarkdownType.INLINE_CODE, '"Hello World"'],
+        [QuizMarkdownType.TEXT, '. This method is to be run in'],
+        [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+        [QuizMarkdownType.TEXT, '. For the program to work properly, which of the following answers is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
+            [QuizMarkdownType.TEXT, 'in declared outside the'],
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+            [QuizMarkdownType.TEXT, 'class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
+            [QuizMarkdownType.TEXT, 'in declared inside the'],
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+            [QuizMarkdownType.TEXT, 'class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
+            [QuizMarkdownType.TEXT, 'in declared inside the'],
+            [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
+            [QuizMarkdownType.TEXT, 'class'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which two commands can compaile and execute a'],
         [QuizMarkdownType.INLINE_CODE, 'HelloWorld.java'],
         [QuizMarkdownType.TEXT, 'script?'],
@@ -2438,6 +5663,43 @@ List<String> upperCaseNames = names.stream()
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'To which of the following does the keyword'],
+        [QuizMarkdownType.INLINE_CODE, 'abstract'],
+        [QuizMarkdownType.TEXT, 'not apply?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static objects']],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Classes'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Methods and properties'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Overridden objects'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which of the following is true of Java Spring?'],
       ],
       answers: [
@@ -2500,6 +5762,229 @@ List<String> upperCaseNames = names.stream()
         },
       ],
       correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following classes violates the Single-Responsibility Principle?'],
+        [QuizMarkdownType.CODE, `class Employee {
+  void calculatePay() { ... }
+  void saveToDatabase() { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, `class Employee {
+  void calculatePay() { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, `class Database {
+  void save(Employee emp) { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, `class Payroll {
+  void process(Employee emp) { ... }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The first class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The second class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The third class'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The fourth class'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which function below violates the Single-Responsibility Principle?'],
+        [QuizMarkdownType.CODE, `void generateReport() {
+  fetchData();
+  processData();
+  printReport();
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, 'void fetchData() { ... }'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, 'void processData() { ... }'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, 'void printReport() { ... }'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The first function'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The second function'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The third function'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The fourth function'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following scenarios violates the Single-Responsibility Principle?'],
+        [QuizMarkdownType.KATEX, 'A class handles both user authentication and user profile management'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.KATEX, 'A class handles only user authentication'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.KATEX, 'A class handles only user profile management'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.KATEX, 'A class handles only data validation for user input'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The first scenario'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The second scenario'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The third scenario'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The fourth scenario'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following classes violates the Single-Responsibility Principle?'],
+        [QuizMarkdownType.CODE, `class User {
+  void login() { ... }
+  void register() { ... }
+  void sendEmailNotification() { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, `class User {
+  void login() { ... }
+  void register() { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, `class EmailService {
+  void sendEmailNotification(User user) { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, `class RegistrationService {
+  void register(User user) { ... }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The first class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The second class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The third class'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The fourth class'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following functions violates the Single-Responsibility Principle?'],
+        [QuizMarkdownType.CODE, `void manageUserAccount() {
+  createUser();
+  updateUser();
+  deleteUser();
+}`],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, 'void createUser() { ... }'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, 'void updateUser() { ... }'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.CODE, 'void deleteUser() { ... }'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The first function'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The second function'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The third function'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The fourth function'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -2578,6 +6063,38 @@ List<String> upperCaseNames = names.stream()
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'arrange'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____ is a terminal operation while _____ is an intermediate operation.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'forEach, map'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'peek, forEach'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'map, forEach'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'filter, map'],
           ],
         },
       ],
@@ -3715,6 +7232,240 @@ List<String> upperCaseNames = names.stream()
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'It manages memory allocation for streams and objects.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is static binding in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at compile time.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at runtime.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding variables to data types dynamically.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding classes together using interfaces.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Complete the sentence: Static binding in Java is the association of a method call to a method definition __ _____'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'at compile time.'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'at runtime.'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'at compile time or runtime.'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above.'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Complete the sentence: Dynamic binding in Java is the association of a method call to a method definition __ _____'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'at runtime.'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'at compile time.'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'at compile time or runtime.'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above.'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is dynamic binding in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at runtime.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The association of a method call to a method definition at compile time.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding variables to data types dynamically.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Binding classes together using interfaces.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of methods in Java typically use static binding?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static and private methods.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstract methods.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Overridden methods.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Final methods.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does static binding impact performance in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static binding generally improves performance.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static binding decreases performance due to late binding.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static binding has no impact on performance.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static binding only affects memory usage.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which scenario is static binding used in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When calling overloaded methods.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When calling overridden methods.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When using polymorphism with interfaces.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When using lambda expressions.'],
           ],
         },
       ],
@@ -5303,6 +9054,199 @@ invokestatic java/io/PrintStream.println(I)V`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code snippet with a break statement?'],
+        [QuizMarkdownType.CODE, `
+for (int i = 0; i < 5; i++) {
+    if (i == 3) {
+        break;
+    }
+    System.out.print(i + " ");
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 1 2'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 1 2 3'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 1 2 3 4'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1 2 3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the output of the following code using an enhanced for loop?'],
+        [QuizMarkdownType.CODE, `
+int[] numbers = {10, 20, 30};
+for (int num : numbers) {
+    System.out.print(num + " ");
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '10 20 30'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '30 20 10'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '10 30 20'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '20 10 30'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many times will the following loop execute?'],
+        [QuizMarkdownType.CODE, `
+int i = 0;
+do {
+    i++;
+} while (i < 5);
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '5 times'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '4 times'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '6 times'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Infinite times'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of the following code snippet?'],
+        [QuizMarkdownType.CODE, `
+int count = 0;
+while (count < 3) {
+    System.out.println("Count is: " + count);
+    count++;
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Count is: 0\nCount is: 1\nCount is: 2'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Count is: 1\nCount is: 2\nCount is: 3'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Count is: 0\nCount is: 1\nCount is: 2\nCount is: 3'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Count is: 1\nCount is: 2'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the output of the following code snippet?'],
+        [QuizMarkdownType.CODE, `
+for (int i = 0; i < 5; i++) {
+    System.out.print(i + " ");
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 1 2 3 4'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1 2 3 4 5'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 1 2 3 4 5'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1 2 3 4'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
         [
           QuizMarkdownType.TEXT,
           'What is the purpose of the @EnableWebFlux annotation in a Spring application?',
@@ -5411,6 +9355,200 @@ invokestatic java/io/PrintStream.println(I)V`,
               'A mechanism to control the flow of data and prevent overwhelming the consumer',
             ],
           ],
+        },
+
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'Which of the following is a limitation of field injection using @Autowired?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It makes unit testing more difficult.'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It cannot inject prototype-scoped beans.'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It requires explicit configuration in XML.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It can only be used in Java-based configuration.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'How can you indicate that a dependency is optional with @Autowired?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'Use @Autowired(required = false).'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'Use @Autowired(optional = true).'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'Use @OptionalAutowired.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'Use @Nullable.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'How is constructor injection performed using @Autowired in Spring?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed on the constructor.'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed on the class.'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed on the setter method.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed directly on the field.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'Which of the following is true about field injection using @Autowired?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed directly on the field to be injected.'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed on the class.'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed on the setter method.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'The @Autowired annotation is placed on the constructor.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'What is the purpose of the @Autowired annotation in Spring?'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It injects dependencies automatically.'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It marks a method as a bean producer.'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It configures transaction management.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'It specifies a data repository.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'Evaluate: A method modified by the @Bean annotation cannot accept parameters.'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.TEXT, 'False, the parameters can be autowired by Spring.'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.TEXT, 'True, methods annotated with @Bean cannot accept parameters.'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.TEXT, 'False, but only if they are primitive types.'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.TEXT, 'True, parameters must be injected manually.'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
         },
         {
           id: '1',

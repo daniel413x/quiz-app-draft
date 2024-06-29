@@ -11,9 +11,409 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The command `sh -c` is functionally equivalent to the subshell syntax `(command)`'],
+        [QuizMarkdownType.INLINE_CODE, 'sh -c'],
+        [QuizMarkdownType.TEXT, 'Evaluate: The command `sh -c` is functionally equivalent to the subshell syntax'],
+        [QuizMarkdownType.INLINE_CODE, '(command)'],
+        [QuizMarkdownType.TEXT, ' Assume'],
+        [QuizMarkdownType.INLINE_CODE, 'command'],
+        [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which command runs in a completely new shell process, isolated from the parent shell\'s environment?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'sh -c \'command\''],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '( command )'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '{ command; }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'command &'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How can you pass the variable'],
+        [QuizMarkdownType.INLINE_CODE, 'VAR'],
+        [QuizMarkdownType.TEXT, 'from the parent shell to a command run with'],
+        [QuizMarkdownType.INLINE_CODE, 'sh -c'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR="value" sh -c \'echo $VAR\''],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'sh -c \'VAR="value"; echo $VAR\''],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR="value"; sh -c \'echo $VAR\''],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'sh -c \'echo $VAR\' VAR="value"'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    VAR="Hello"
+    ( VAR="World"; echo "VAR is $VAR" )
+    echo "VAR is $VAR"`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is World\nVAR is Hello'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is "", VAR is Hello'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is World\nVAR is World'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is "", VAR is World'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output in output.txt after running the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    ( echo "test" ) > output.txt`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'test'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No output'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Error: cannot redirect subshell output'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Empty file'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    ( sleep 1; echo "Done" ) &`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Done (after 1 second delay)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Done (immediately)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No output'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Error: cannot run subshell in background'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    ( exit 1 )
+    echo $?`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '0'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No output'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    ( ls | grep "txt" )`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all files in the current directory that contain "txt" in their names'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all files in the current directory'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Prints an error message'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No output'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the output of the following script?'],
+        [QuizMarkdownType.CODE, `#!/bin/bash
+
+echo "Line one"
+( echo "Starting subshell"; sleep 1; echo "Ending subshell" )
+echo "Line two"`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `Line one
+Starting subshell
+Ending subshell
+Line two`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `Line one
+Line two
+Starting subshell
+Ending subshell`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `Line one
+Line two`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Error'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    pwd # /home/user
+    ( cd /tmp; ls )
+    pwd`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The contents of /tmp and the current directory (/home/user)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The contents of /tmp and the current directory (/tmp)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only /home/user'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Error: cannot change directory to /tmp'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the output of the following script?'],
+        [QuizMarkdownType.CODE, `
+    #!/bin/bash
+
+    export VAR="Hello"
+    ( echo "VAR is $VAR" )
+    echo "VAR is $VAR"`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is Hello\nVAR is Hello'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is "", VAR is Hello'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is Hello\nVAR is'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'VAR is "", VAR is'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What does the following command do?'],
         [QuizMarkdownType.CODE, 'command 2>>error.log'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -701,7 +1101,7 @@ export default {
         [QuizMarkdownType.TEXT, 'What does the following command do?'],
         [QuizMarkdownType.CODE, `
       command 1>output.txt`],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -738,7 +1138,7 @@ export default {
         [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
         [QuizMarkdownType.CODE, `
       command 2>error.txt`],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -776,7 +1176,7 @@ export default {
         [QuizMarkdownType.CODE, `#!/bin/bash
 
 command 0<input.txt`],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -812,7 +1212,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
         [QuizMarkdownType.CODE, 'command 1>output.txt 2>error.txt'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -848,7 +1248,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What does the following command do?'],
         [QuizMarkdownType.CODE, 'command <input.txt >output.txt'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -884,7 +1284,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
         [QuizMarkdownType.CODE, 'command >output.txt 2>&1'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -920,7 +1320,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What does the following command accomplish?'],
         [QuizMarkdownType.CODE, 'command 0</dev/null'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -956,7 +1356,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What is the effect of the following command?'],
         [QuizMarkdownType.CODE, 'command 1>>output.txt'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -992,7 +1392,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What does the following command do?'],
         [QuizMarkdownType.CODE, 'command 2>&1 | tee logfile.txt'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1028,7 +1428,7 @@ command 0<input.txt`],
       question: [
         [QuizMarkdownType.TEXT, 'What is the purpose of the following command?'],
         [QuizMarkdownType.CODE, 'command <input.txt 2>&1'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1623,7 +2023,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which command would you use to redirect both standard output and standard error to the same file?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1690,7 +2090,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'What command would you use to redirect only standard error to a file named "error.log"?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1757,7 +2157,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'In the command `command > file`, what happens to the output of the command?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1824,7 +2224,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'What happens when you use the `command > file 2>&1` syntax in Unix-like operating systems?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1859,7 +2259,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'How would you use the pipe operator to filter the output of a command and only display lines containing the word "error"?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1894,7 +2294,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'In Unix-like systems, how would you redirect both stdout and stderr to different files?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -1929,7 +2329,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'What command would you use to append the output of a command to a file without overwriting it?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -2060,7 +2460,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which command would you use to filter out error messages and only display the standard output of a command?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],
@@ -2127,7 +2527,7 @@ command 0<input.txt`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which command would you use to redirect both stdout and stderr to the terminal and a file simultaneously?'],
-        [QuizMarkdownType.TEXT, 'Assume'],
+        [QuizMarkdownType.TEXT, ' Assume'],
         [QuizMarkdownType.INLINE_CODE, 'command'],
         [QuizMarkdownType.TEXT, 'could be any command in a Unix-like operating system.'],
       ],

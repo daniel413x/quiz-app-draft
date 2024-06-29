@@ -13,7 +13,8 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import quizData, { Question } from '@/lib/data/quiz-data';
+import { Question as QuestionType } from '@/lib/data/types';
+import quizData from '@/lib/data/quiz-data';
 import { Button } from '@/components/ui/common/shadcn/button';
 import { cn } from '@/lib/utils';
 import {
@@ -22,6 +23,7 @@ import {
 import Image from 'next/image';
 import qs from 'query-string';
 import { useEventListener } from 'usehooks-ts';
+import { QUIZ_ROUTE, RESULTS_ROUTE } from '@/lib/data/routes';
 import { renderMarkdown, shuffleQuestions } from './_utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
 import { useTimer } from '../_hooks/useTimer';
@@ -29,7 +31,6 @@ import Code from './Code';
 import QuizFormFields from './QuizFormFields';
 import IssueModal from './IssueModal';
 import useActiveElement from '../_hooks/useActiveElement';
-import { QUIZ_ROUTE, RESULTS_ROUTE } from '@/lib/data/routes';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -49,7 +50,7 @@ const QuizForm = () => {
   const router = useRouter();
   const section = useParams().section as string;
   const category = useParams().category as string;
-  const [questions] = useState<Question[]>(shuffleQuestions(quizData[section].questions));
+  const [questions] = useState<QuestionType[]>(shuffleQuestions(quizData[section].questions));
   const searchParams = useSearchParams();
   const qNum = Number(searchParams.get('qNum')) || 0;
   const question = questions[qNum];
