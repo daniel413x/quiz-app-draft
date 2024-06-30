@@ -9,6 +9,66 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Consider the code below. Which answer is true?'],
+        [QuizMarkdownType.CODE, `public class MyClass implements Cloneable {
+    int value;
+    MyClass reference;
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The method'],
+            [QuizMarkdownType.INLINE_CODE, 'clone()'],
+            [QuizMarkdownType.TEXT, 'of interface'],
+            [QuizMarkdownType.INLINE_CODE, 'Cloneable'],
+            [QuizMarkdownType.TEXT, 'creates a shallow copy of'],
+            [QuizMarkdownType.INLINE_CODE, 'MyClass'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The method'],
+            [QuizMarkdownType.INLINE_CODE, 'clone()'],
+            [QuizMarkdownType.TEXT, 'of interface'],
+            [QuizMarkdownType.INLINE_CODE, 'Cloneable'],
+            [QuizMarkdownType.TEXT, 'creates a deep copy of'],
+            [QuizMarkdownType.INLINE_CODE, 'MyClass'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The method'],
+            [QuizMarkdownType.INLINE_CODE, 'clone()'],
+            [QuizMarkdownType.TEXT, 'of interface'],
+            [QuizMarkdownType.INLINE_CODE, 'Cloneable'],
+            [QuizMarkdownType.TEXT, 'instantiates a new instance of'],
+            [QuizMarkdownType.INLINE_CODE, 'MyClass'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 3'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Identify the anonymous class in the code below.'],
         [QuizMarkdownType.CODE, `public class HelloWorld {
 
@@ -65,6 +125,219 @@ export default {
 }`],
           ],
           order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Based on the code below, which is the correct answer?'],
+        [QuizMarkdownType.CODE, `import java.util.TreeMap;
+
+public class TreeMaps {
+
+  public TreeMaps() {}
+
+  public static void main(String[] args) {
+    TheTreeMapExecutor theTreeMapExecutor = new TheTreeMapExecutor();
+    theTreeMapExecutor.executeTheTreeMap();
+  }
+}
+
+class TheTreeMapExecutor {
+  TheTreeMap theTreeMap;
+
+  public TheTreeMapExecutor() {
+    this.theTreeMap = new TheTreeMap();
+  }
+
+  public void executeTheTreeMap() {
+    this.theTreeMap.testTheTreeMap();
+  }
+}
+
+class TheTreeMap {
+  public TheTreeMap() {}
+
+  public void testTheTreeMap () {
+    TreeMap<Integer, String> treeMap = new TreeMap<>();
+    treeMap.put(2, "second");
+    treeMap.put(1, "first");
+    treeMap.put(3, "third");
+
+    for (String str : treeMap.values()) {
+      System.out.println(str);
+    }
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'first'],
+            [QuizMarkdownType.INLINE_CODE, 'second'],
+            [QuizMarkdownType.INLINE_CODE, 'third'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'second'],
+            [QuizMarkdownType.INLINE_CODE, 'first'],
+            [QuizMarkdownType.INLINE_CODE, 'third'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'error: non-static variable theTreeMap cannot be referenced from a static context'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'null'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Based on the code below, which is the correct answer?'],
+        [QuizMarkdownType.CODE, `import java.util.TreeMap;
+
+public class TreeMaps {
+
+  TheTreeMap theTreeMap;
+
+  public TreeMaps() {
+    this.theTreeMap = new TheTreeMap();
+  }
+
+  public static void main(String[] args) {
+    this.theTreeMap.testTheTreeMap();
+  }
+}
+
+final class TheTreeMap {
+  public TheTreeMap() {}
+
+  public void testTheTreeMap () {
+    TreeMap<Integer, String> treeMap = new TreeMap<>();
+    treeMap.put(2, "second");
+    treeMap.put(1, "first");
+    treeMap.put(3, "third");
+
+    for (String str : treeMap.values()) {
+      System.out.println(str);
+    }
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'error: non-static variable theTreeMap cannot be referenced from a static context'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'second'],
+            [QuizMarkdownType.INLINE_CODE, 'first'],
+            [QuizMarkdownType.INLINE_CODE, 'third'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'first'],
+            [QuizMarkdownType.INLINE_CODE, 'second'],
+            [QuizMarkdownType.INLINE_CODE, 'third'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'null'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Based on the code below, which is the correct answer?'],
+        [QuizMarkdownType.CODE, `import java.util.TreeMap;
+
+public class TreeMaps {
+
+  public TreeMaps() {}
+
+  public static void main(String[] args) {
+    TheTreeMap theTreeMap = new TheTreeMap();
+    theTreeMap.testTheTreeMap();
+  }
+}
+
+class TheTreeMap {
+  public TheTreeMap() {}
+
+  public void testTheTreeMap () {
+    TreeMap<Integer, String> treeMap = new TreeMap<>();
+    treeMap.put(2, "second");
+    treeMap.put(1, "first");
+    treeMap.put(3, "third");
+
+    for (String str : treeMap.values()) {
+      System.out.println(str);
+    }
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'first'],
+            [QuizMarkdownType.INLINE_CODE, 'second'],
+            [QuizMarkdownType.INLINE_CODE, 'third'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'second'],
+            [QuizMarkdownType.INLINE_CODE, 'first'],
+            [QuizMarkdownType.INLINE_CODE, 'third'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'error: non-static variable theTreeMap cannot be referenced from a static context'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The output will be'],
+            [QuizMarkdownType.INLINE_CODE, 'null'],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -397,6 +670,40 @@ export default {
             [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
           ],
           order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A'],
+        [QuizMarkdownType.INLINE_CODE, 'TreeMap'],
+        [QuizMarkdownType.TEXT, 'in Java sorts its constituents according to the natural order of their'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Keys'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Values'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Bytes'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Gradients'],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -5253,7 +5560,7 @@ System.out.println(numbers[2]);
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'An operation that returns a new stream and does not trigger the processing of the stream.'],
+            [QuizMarkdownType.TEXT, 'An operation that returns a new stream without consuming it.'],
           ],
         },
         {
@@ -5285,20 +5592,20 @@ System.out.println(numbers[2]);
         [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
         [QuizMarkdownType.TEXT, 'and a subclass'],
         [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
-        [QuizMarkdownType.TEXT, 'that has a method'],
+        [QuizMarkdownType.TEXT, 'that has a non-static method'],
         [QuizMarkdownType.INLINE_CODE, 'printHelloWorld'],
         [QuizMarkdownType.TEXT, 'that prints the string'],
         [QuizMarkdownType.INLINE_CODE, '"Hello World"'],
         [QuizMarkdownType.TEXT, '. This method is to be run in'],
         [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
-        [QuizMarkdownType.TEXT, '. For the program to work properly, which of the following answers is true?'],
+        [QuizMarkdownType.TEXT, '. For the program to work properly, which of the following answers must be true?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
-            [QuizMarkdownType.TEXT, 'in declared outside the'],
+            [QuizMarkdownType.TEXT, 'initialized inside the'],
             [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
             [QuizMarkdownType.TEXT, 'class'],
           ],

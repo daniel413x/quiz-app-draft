@@ -2462,6 +2462,243 @@ class OrderService {
       ],
       correctAnswer: '0',
     },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If a method in a superclass returns a type '],
+        [QuizMarkdownType.INLINE_CODE, 'Animal'],
+        [QuizMarkdownType.TEXT, ', and a method in a subclass returns a type '],
+        [QuizMarkdownType.INLINE_CODE, 'Dog'],
+        [QuizMarkdownType.TEXT, ', which is a subtype of '],
+        [QuizMarkdownType.INLINE_CODE, 'Animal'],
+        [QuizMarkdownType.TEXT, ', what does this demonstrate?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Invariance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Polymorphism'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In an object-oriented programming language, a '],
+        [QuizMarkdownType.INLINE_CODE, 'Fruit'],
+        [QuizMarkdownType.TEXT, ' class has a method returning '],
+        [QuizMarkdownType.INLINE_CODE, 'Fruit'],
+        [QuizMarkdownType.TEXT, '. A subclass '],
+        [QuizMarkdownType.INLINE_CODE, 'Apple'],
+        [QuizMarkdownType.TEXT, ' overrides this method to return '],
+        [QuizMarkdownType.INLINE_CODE, 'Apple'],
+        [QuizMarkdownType.TEXT, '. What principle does this illustrate?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Overloading'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Suppose a '],
+        [QuizMarkdownType.INLINE_CODE, 'Shape'],
+        [QuizMarkdownType.TEXT, ' class has a method that returns '],
+        [QuizMarkdownType.INLINE_CODE, 'Shape'],
+        [QuizMarkdownType.TEXT, ', and a subclass '],
+        [QuizMarkdownType.INLINE_CODE, 'Circle'],
+        [QuizMarkdownType.TEXT, ' overrides this method to return '],
+        [QuizMarkdownType.INLINE_CODE, 'Circle'],
+        [QuizMarkdownType.TEXT, '. Which of the following best describes this relationship?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The Liskov Substitution Principle'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance in return types'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Method Overriding'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Invariance'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a hierarchy where '],
+        [QuizMarkdownType.INLINE_CODE, 'Vehicle'],
+        [QuizMarkdownType.TEXT, ' is a superclass and '],
+        [QuizMarkdownType.INLINE_CODE, 'Car'],
+        [QuizMarkdownType.TEXT, ' is a subclass, if a method in '],
+        [QuizMarkdownType.INLINE_CODE, 'Vehicle'],
+        [QuizMarkdownType.TEXT, ' returns '],
+        [QuizMarkdownType.INLINE_CODE, 'Vehicle'],
+        [QuizMarkdownType.TEXT, ' and a method in '],
+        [QuizMarkdownType.INLINE_CODE, 'Car'],
+        [QuizMarkdownType.TEXT, ' returns '],
+        [QuizMarkdownType.INLINE_CODE, 'Car'],
+        [QuizMarkdownType.TEXT, ', this is an example of:'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariant method parameters'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariant return types'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Invariant type substitution'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Type erasure'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of polymorphism?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A parent class cannot inherit the behavior of its subclass'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A parent class can inherit the behavior of its subclass'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A derived class cannot inherit the behavior of its parent'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A derived class cannot override methods inherited from its parent'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A '],
+        [QuizMarkdownType.INLINE_CODE, 'Plant'],
+        [QuizMarkdownType.TEXT, ' class method returns '],
+        [QuizMarkdownType.INLINE_CODE, 'Plant'],
+        [QuizMarkdownType.TEXT, '. A '],
+        [QuizMarkdownType.INLINE_CODE, 'Tree'],
+        [QuizMarkdownType.TEXT, ' class, which extends '],
+        [QuizMarkdownType.INLINE_CODE, 'Plant'],
+        [QuizMarkdownType.TEXT, ', overrides this method to return '],
+        [QuizMarkdownType.INLINE_CODE, 'Tree'],
+        [QuizMarkdownType.TEXT, '. This illustrates:'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Invariance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Polymorphism without covariance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariant return types'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic binding'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which feature of Java ensures that errors are caught and handled during runtime?'],

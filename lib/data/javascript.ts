@@ -9,6 +9,30 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which JavaScript object best implements the concept of a HashMap?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The'], [QuizMarkdownType.INLINE_CODE, 'Map'], [QuizMarkdownType.TEXT, 'interface']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Any JavaScript object']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The'], [QuizMarkdownType.INLINE_CODE, 'Map'], [QuizMarkdownType.TEXT, 'function']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The'], [QuizMarkdownType.INLINE_CODE, 'Array'], [QuizMarkdownType.TEXT, 'interface']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'JavaScript is a ______ typed language'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Dynamically']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Completely']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Statically']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Strictly']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which JavaScript library is specifically used for building games and multimedia applications?'],
       ],
       answers: [
