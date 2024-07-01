@@ -9,6 +9,319 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The following program requires the user to enter input three times if it is run via the command .'],
+        [QuizMarkdownType.INLINE_CODE, 'java PadNumbers,java'],
+        [QuizMarkdownType.TEXT, '. Which command will run the program and pass in (redirect) three inputs at once?'],
+        [QuizMarkdownType.CODE, `import java.util.Scanner;
+        
+public class PadNumbers {
+
+  public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("================================");
+      for (int i = 0; i < 3; i++) {
+          String s1 = sc.next();
+          int x = sc.nextInt();
+          System.out.printf("%-15s%03d%n", s1, x);
+      }
+      System.out.println("================================");
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `java Solution <<< "java 100
+cpp 65
+python 50"`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'java Solution <<< "java 100, cpp 65, python 50'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `java Solution <<< java 100
+cpp 65
+python 50`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `java Solution < "java 100
+cpp 65
+python 50"`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The best alternative to using string concatenation in a loop to reverse a string would be'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using'],
+            [QuizMarkdownType.INLINE_CODE, 'StringBuilder'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creating a list and reversing it'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using recursion'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using arrays'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. Which solution is its best replacement?'],
+        [QuizMarkdownType.CODE, `public static String reverseAString(String str) {
+  String[] arr = str.split("");
+  String reversed = "";
+  for (int i = arr.length - 1; i >= 0; i--) {
+      reversed += arr[i];
+  }
+  return reversed;
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `public static String reverseAString(String str) {
+    StringBuilder reversed = new StringBuilder();
+    for (int i = str.length() - 1; i >= 0; i--) {
+        reversed.append(str.charAt(i));
+    }
+    return reversed.toString();
+}`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `public static String reverseAString(String str) {
+    if (str.isEmpty()) {
+        return str;
+    }
+    return reverseAString(str.substring(1)) + str.charAt(0);
+}`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `public static String reverseAString(String str) {
+    if (str.isEmpty()) {
+        return str;
+    }
+    return reverseAString(str.substring(1)) + str.charAt(0);
+}`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To clear the input'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code.'],
+        [QuizMarkdownType.CODE, 'System.out.printf("%d x %d = %d%n", 3, 2, 3 * 2);'],
+        [QuizMarkdownType.TEXT, 'What is the function of the syntax'],
+        [QuizMarkdownType.CODE, '%d'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To serve as an argument placeholder'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To print a new line'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To perform multiplication'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To clear the input'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code.'],
+        [QuizMarkdownType.CODE, 'System.out.printf("%d x %d = %d%n", 3, 2, 3 * 2);'],
+        [QuizMarkdownType.TEXT, 'What is the function of the syntax'],
+        [QuizMarkdownType.CODE, '%n'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To print a new line'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To serve as an argument placeholder'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To perform multiplication'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To clear the input'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, ______ precede ______.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'classes, objects'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'objects, classes'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'no entity can, objects'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'no entity can, classes'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A blueprint for creating objects, defining properties and behaviors.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An instance of an object.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method that executes code.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A package of related classes.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the relationship between a class and an object in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class is a template from which objects are created.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An object defines the structure of a class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class is an instance of an object.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Objects and classes are the same.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Consider the code below. Which answer is true?'],
         [QuizMarkdownType.CODE, `public class MyClass implements Cloneable {
     int value;
@@ -646,30 +959,204 @@ class TheTreeMap {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'static polymorphism'],
+            [QuizMarkdownType.TEXT, 'Static polymorphism/binding'],
           ],
           order: 0,
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'static binding'],
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism/binding'],
           ],
           order: 1,
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'static binding AND static polymorphism'],
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
           ],
           order: 2,
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+            [QuizMarkdownType.TEXT, 'None of the above'],
           ],
           order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, method overloading is required for ________.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static polymorphism/binding'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism/binding'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following functions will not return the intended result of summing the individual digits of an integer input?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `public static int sumOfDigitsForLoopFour(int n) {
+  return Arrays.stream(String.valueOf(n).split(""))
+    .map(Integer::parseInt)
+    .reduce(0, Integer::sum);
+}`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `public static int sumOfDigitsOne(int n) {
+  int sum = 0;
+  while (n > 0) {
+    sum += n % 10;
+    n /= 10;
+  }
+  return sum;
+}`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `public static int sumOfDigitsForLoopThree(int n) {
+  return String.valueOf(n).chars().sum();
+}`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `public static int sumOfDigitsForLoopTwo(int n) {
+  String[] nA = String.valueOf(n).split("");
+  int total = Arrays.stream(nA).map(Integer::parseInt).reduce(0, Integer::sum);
+  return total;
+}`],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. Which method call is missing for the function to work properly?'],
+        [QuizMarkdownType.CODE, `public static List<Integer> individualDigits(int n) {
+  return String.valueOf(n)
+    .chars()
+    .map(Character::getNumericValue)
+    // Missing method
+    .collect(Collectors.toList());
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '.boxed()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '.sorted()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '.distinct()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '.filter()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A seemingly innocuous palindrome function implementation always outputs'],
+        [QuizMarkdownType.INLINE_CODE, 'true'],
+        [QuizMarkdownType.TEXT, ', regardless of the input. Why might this happen? Assume the input must be filtered so that there are only alphanumeric characters in the checked strings.'],
+        [QuizMarkdownType.CODE, `public static boolean isPalindrome(String s) {
+  String regex = "_|\\W+";
+  String[] filteredC = s.split(regex);
+  StringBuilder fS = new StringBuilder();
+  for (String c : filteredC) {
+      fS.append(c);
+  }
+  StringBuilder rS = fS.reverse();
+  return rS.toString().equals(fS.toString());
+}`],
+        [QuizMarkdownType.TEXT, 'in Java sorts its constituents according to the natural order of their'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The method'],
+            [QuizMarkdownType.INLINE_CODE, 'StringBuilder.reverse()'],
+            [QuizMarkdownType.TEXT, 'modifies its object in place'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The string'],
+            [QuizMarkdownType.INLINE_CODE, 'regex'],
+            [QuizMarkdownType.TEXT, 'does not properly filter out special characters'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'isPalindrome'],
+            [QuizMarkdownType.TEXT, 'is not properly splitting the input strings'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The program actually should not be erroring'],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -710,40 +1197,38 @@ class TheTreeMap {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In Java, static polymorphism is defined by _____________.'],
+        [QuizMarkdownType.TEXT, 'The loop below is known as'],
+        [QuizMarkdownType.CODE, `String regex = "_|\\W+";
+String[] filtered = s.split(regex);
+String t = "";
+for (String part : filtered) {
+  t += part;
+}`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'method overloading'],
+            [QuizMarkdownType.TEXT, 'An enhanced for loop'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'the'],
-            [QuizMarkdownType.INLINE_CODE, 'static'],
-            [QuizMarkdownType.TEXT, 'access modifier'],
+            [QuizMarkdownType.TEXT, 'A for loop'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'the'],
-            [QuizMarkdownType.INLINE_CODE, 'private'],
-            [QuizMarkdownType.TEXT, 'access modifier'],
+            [QuizMarkdownType.TEXT, 'A recursion'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+            [QuizMarkdownType.TEXT, 'An anonymous loop'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -3764,7 +4249,186 @@ System.out.println(numbers[2]);
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the method'],
+        [QuizMarkdownType.INLINE_CODE, 'Stream.of(string.split(","))'],
+        [QuizMarkdownType.TEXT, 'do in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Converts an array returned by'],
+            [QuizMarkdownType.INLINE_CODE, 'string.split(",")'],
+            [QuizMarkdownType.TEXT, 'into a stream.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Converts a string into a list of substrings.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Splits a string into characters.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a parallel stream from a string.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does'],
+        [QuizMarkdownType.INLINE_CODE, 'collect(Collectors.toList())'],
+        [QuizMarkdownType.TEXT, 'do when used with a stream?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Collects the elements of the stream into a list.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Converts the stream into an array.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Filters the elements of the stream.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sorts the elements of the stream.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the output of the following code snippet?'],
+        [QuizMarkdownType.CODE, `String string = "name,surname";
+List<String> list = Stream.of(string.split(","))
+                                .collect(Collectors.toList());
+System.out.println(list);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '[name, surname]'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '[name surname]'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '[name,surname]'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '[n, a, m, e, s, u, r, n, a, m, e]'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the'],
+        [QuizMarkdownType.INLINE_CODE, '.chars()'],
+        [QuizMarkdownType.TEXT, 'method do in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Returns an IntStream of the Unicode code points of each character in the String.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Converts the string to an array of characters.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Converts each character to its numeric value.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creates a stream of substrings split by commas.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. Which method call is missing for the function to work properly?'],
+        [QuizMarkdownType.CODE, `public static List<Integer> individualDigits(int n) {
+  return String.valueOf(n)
+    .chars()
+    .map(Character::getNumericValue)
+    // Missing method
+    .collect(Collectors.toList());
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.boxed()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.sorted()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.distinct()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.filter()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What does the following code snippet do with an ArrayList in Java?'],
@@ -3774,7 +4438,7 @@ System.out.println(numbers[2]);
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Calculates the size of the list, which will be 3.'],
+            [QuizMarkdownType.TEXT, 'Calculates the size of the list.'],
           ],
         },
         {
@@ -3799,6 +4463,168 @@ System.out.println(numbers[2]);
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the method to get the length of a'],
+        [QuizMarkdownType.INLINE_CODE, 'StringBuilder'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.length()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.length'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.size'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.size()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the best rewrite for the code below?'],
+        [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStringsFive(String string) {
+  List<String> sL = new ArrayList<>();
+  String[] sA = string.split(",");
+  for (int i = 0; i < sA.length; i++) {
+      sL.add(sA[i]);
+  }
+  return sL;
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Use the method'],
+            [QuizMarkdownType.INLINE_CODE, 'List.replaceAll()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Use a stream to transform and collect the elements'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Set each element individually in a for loop'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Return a'],
+            [QuizMarkdownType.INLINE_CODE, 'map(String::toUpperCase)'],
+            [QuizMarkdownType.TEXT, 'call in a stream'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the best replacement to the code below?'],
+        [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStringsFive(String string) {
+  List<String> sL = new ArrayList<>();
+  String[] sA = string.split(",");
+  for (int i = 0; i < sA.length; i++) {
+      sL.add(sA[i]);
+  }
+  return sL;
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStringsFour(String string) {
+  List<String> sL = Arrays.asList(string.split(","));
+  sL.replaceAll(String::toUpperCase);
+  return sL;
+}`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStringsThree(String string) {
+  return Stream.of(string.split(",")).map(String::toUpperCase).toList();
+}`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStringsFour(String string) {
+  List<String> sL = Arrays.asList(string.split(","));
+  sL.replaceAll(String::toUpperCase);
+  return sL;
+}`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
+  return Arrays.stream(string.split(",")).map(String::toUpperCase).toList();
+}`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Assuming the output is valid, what is proven in the following code?'],
+        [QuizMarkdownType.CODE, 'String string = "name,surname"; List<String> list = Stream.of(string.split(",")).toList()'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Arrays can be utilized as iterables in Java.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A string can be converted into an array of substrings.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A string can be split into characters.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A list is derived from operations that return a stream.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What does the following code snippet do in Java Streams?'],
@@ -4158,6 +4984,39 @@ System.out.println(numbers[2]);
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is not a primitive type in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'string'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'byte'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'boolean'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'The eight wrapper classes of Java are'],
       ],
       answers: [
@@ -4179,7 +5038,7 @@ System.out.println(numbers[2]);
           id: '1',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'byte'],
-            [QuizMarkdownType.INLINE_CODE, 'shoft'],
+            [QuizMarkdownType.INLINE_CODE, 'short'],
             [QuizMarkdownType.INLINE_CODE, 'int'],
             [QuizMarkdownType.INLINE_CODE, 'long'],
             [QuizMarkdownType.INLINE_CODE, 'float'],
@@ -5586,6 +6445,46 @@ System.out.println(numbers[2]);
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'It is technically correct to refer to an uninstantiated class as an object in Java.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'It is technically correct not to refer to an uninstantiated class as an object in Java.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Assume you are working in a file'],
         [QuizMarkdownType.INLINE_CODE, 'HelloWorld.java'],
         [QuizMarkdownType.TEXT, 'which consists of a main class'],
@@ -5605,7 +6504,7 @@ System.out.println(numbers[2]);
           id: '0',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
-            [QuizMarkdownType.TEXT, 'initialized inside the'],
+            [QuizMarkdownType.TEXT, 'is initialized inside the'],
             [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
             [QuizMarkdownType.TEXT, 'class'],
           ],
@@ -5614,7 +6513,7 @@ System.out.println(numbers[2]);
           id: '1',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
-            [QuizMarkdownType.TEXT, 'in declared inside the'],
+            [QuizMarkdownType.TEXT, 'is declared inside the'],
             [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
             [QuizMarkdownType.TEXT, 'class'],
           ],
@@ -5623,7 +6522,7 @@ System.out.println(numbers[2]);
           id: '2',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'HelloWorld'],
-            [QuizMarkdownType.TEXT, 'in declared inside the'],
+            [QuizMarkdownType.TEXT, 'is declared inside the'],
             [QuizMarkdownType.INLINE_CODE, 'HelloWorldPrinter'],
             [QuizMarkdownType.TEXT, 'class'],
           ],

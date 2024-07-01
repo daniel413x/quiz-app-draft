@@ -1,3 +1,4 @@
+import domIllustration from '@/public/dom-illustration.png';
 import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
@@ -7,6 +8,54 @@ export default {
     slug: 'programming',
   },
   questions: [
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which algorithm is used by React to efficiently update the DOM?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Diffing Algorithm']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Binary Search']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Sorting Algorithm']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Pathfinding Algorithm']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which algorithm is commonly used to control the rate of input validation in React forms?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Debouncing']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sorting']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Pathfinding']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Memoization']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which algorithm is used to traverse hierarchical data structures in React?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Tree Traversal']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sorting']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Binary Search']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Memoization']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of easing functions in React animations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To define the rate of change of a parameter over time and create smooth transitions.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To fetch data from APIs.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To validate form inputs.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To manage state.']] },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which JavaScript object best implements the concept of a HashMap?'],
@@ -52,6 +101,19 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Next.js']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Express']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Angular']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does one correctly fill in the blanks for the DOM illustration?'],
+      ],
+      image: domIllustration,
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '1. window, 2. document, 3. html']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '1. document, 2. window, 3. html']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '1. html, 2. document, 3. window']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '1. window, 2. html, 3. document']] },
       ],
       correctAnswer: '0',
     },
