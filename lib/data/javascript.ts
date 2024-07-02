@@ -1458,6 +1458,20 @@ console.log(numbers);`],
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The array sorting function'],
+        [QuizMarkdownType.INLINE_CODE, 'Array.prototype.sort()'],
+        [QuizMarkdownType.TEXT, 'is based on the _______ algorithm'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'TimSort']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Bubble Sort']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Insertion Sort']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Heap Sort']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What is the default sorting order when using'],
         [QuizMarkdownType.INLINE_CODE, 'Array.prototype.sort()'],
         [QuizMarkdownType.TEXT, 'without a compare function?'],

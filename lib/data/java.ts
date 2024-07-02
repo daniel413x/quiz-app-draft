@@ -64,6 +64,161 @@ python 50"`],
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which of the following functions will cause a program to fail to compile?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
+    List<String> l = List.of(string.split(","));
+    l.replaceAll(String::toUpperCase);
+    return l;
+}`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
+    List<String> l = new ArrayList<>(Arrays.asList(string.split(",")));
+    l.replaceAll(String::toUpperCase);
+    return l;
+}`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
+    List<String> l = Arrays.asList(string.split(","));
+    l.replaceAll(String::toUpperCase);
+    return l;
+}`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
+    List<String> l = Arrays.stream(string.split(",")).map(String::toUpperCase).toList();
+    return l;
+}`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+        [QuizMarkdownType.CODE, `String string = "Static,binding,in,java";
+List<String> list = new ArrayList<>(Arrays.asList(string.split(",")));
+list.replaceAll(String::toUpperCase);
+System.out.println(list);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[STATIC,BINDING,IN,JAVA]'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'UnsupportedOperationException'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[Static,binding,in,java]'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, ''],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+        [QuizMarkdownType.CODE, `String string = "Static,binding,in,java";
+List<String> list = List.of(string.split(","));
+list.replaceAll(String::toUpperCase);
+System.out.println(list);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'UnsupportedOperationException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[STATIC,BINDING,IN,JAVA]'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[Static,binding,in,java]'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, ''],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+        [QuizMarkdownType.CODE, `String string = "Static,binding,in,java";
+List<String> list = List.of(string.split(","));
+list.replaceAll(String::toUpperCase);
+System.out.println(list);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'UnsupportedOperationException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[STATIC,BINDING,IN,JAVA]'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[Static,binding,in,java]'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, ''],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'The best alternative to using string concatenation in a loop to reverse a string would be'],
       ],
       answers: [
@@ -798,7 +953,7 @@ class TheTreeMap {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In Java, method overloading is required for static polymorphism.'],
+        [QuizMarkdownType.TEXT, 'In Java, method overloading is a necessary condition for static polymorphism/binding.'],
       ],
       answers: [
         {
@@ -925,28 +1080,6 @@ class TheTreeMap {
             [QuizMarkdownType.INLINE_CODE, 'List<Integer> numbers = new ArrayList<>(1, 2, 3, 4, 5)'],
           ],
           order: 3,
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'In Java, method overloading is required for static binding.'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'False'],
-          ],
-          order: 0,
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'True'],
-          ],
-          order: 1,
         },
       ],
       correctAnswer: '0',
@@ -1271,6 +1404,90 @@ for (String part : filtered) {
           ],
           order: 3,
         },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the value of'],
+        [QuizMarkdownType.INLINE_CODE, 'intArrayStringified'],
+        [QuizMarkdownType.TEXT, 'in the following code?'],
+        [QuizMarkdownType.CODE, `int[] intArray = new int[3];
+intArray[0] = 2;
+intArray[1] = 4;
+intArray[2] = 5;
+String intArrayStringified = Array.toString(intArray);`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A memory address such as'], [QuizMarkdownType.INLINE_CODE, '[I@1fd14d74']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '{2, 4, 5}']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '[2, 4, 5]']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Error']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the value of'],
+        [QuizMarkdownType.INLINE_CODE, 'intArrayStringified'],
+        [QuizMarkdownType.TEXT, 'in the following code?'],
+        [QuizMarkdownType.CODE, `int[] intArray = new int[3];
+intArray[0] = 2;
+intArray[1] = 4;
+intArray[2] = 5;
+String intArrayStringified = Array.toString(intArray);`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '[2, 4, 5]']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A memory address such as'], [QuizMarkdownType.INLINE_CODE, '[I@1fd14d74']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Error']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the value of'],
+        [QuizMarkdownType.INLINE_CODE, 'intArrayStringified'],
+        [QuizMarkdownType.TEXT, 'in the following code?'],
+        [QuizMarkdownType.CODE, `int[] intArray = {2, 4, 5};
+String intArrayStringified = Array.toString(intArray);`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '[2, 4, 5]']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A memory address such as'], [QuizMarkdownType.INLINE_CODE, '[I@1fd14d74']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Error']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the value of'],
+        [QuizMarkdownType.INLINE_CODE, 'intArrayStringified'],
+        [QuizMarkdownType.TEXT, 'in the following code?'],
+        [QuizMarkdownType.CODE, `int[] intArray = {2, 4, 5};
+String intArrayStringified = intArray.toString();`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A memory address such as'], [QuizMarkdownType.INLINE_CODE, '[I@1fd14d74']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '{2, 4, 5}']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '[2, 4, 5]']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Error']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The list sorting function'],
+        [QuizMarkdownType.INLINE_CODE, 'List.sort()'],
+        [QuizMarkdownType.TEXT, 'is based on the _______ algorithm'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'TimSort']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Bubble Sort']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Insertion Sort']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Heap Sort']] },
       ],
       correctAnswer: '0',
     },

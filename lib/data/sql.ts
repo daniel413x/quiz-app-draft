@@ -1006,6 +1006,406 @@ export default {
       ],
       correctAnswer: '0',
     },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT employees.name, departments.name FROM employees JOIN departments ON employees.department_id = departments.id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves employee names along with their respective department names'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves department names along with their respective employee IDs'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves all employees and departments'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves department names along with the count of employees'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(*), status FROM orders GROUP BY status'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of orders for each status'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves the total number of orders'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups orders by status without counting'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes orders based on their status'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT DISTINCT country FROM customers WHERE country IS NOT NULL'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves a list of unique countries from the customers table'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves all customers from countries that are not null'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes all customers from countries that are not null'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the country field for all customers'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT AVG(salary) FROM employees WHERE department_id = 5'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Calculates the average salary of employees in department 5'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of employees in department 5'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all employees with their average salary'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the salary of employees in department 5'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM orders WHERE order_date BETWEEN \'2023-01-01\' AND \'2023-12-31\''],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves all orders placed in the year 2023'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes all orders placed in the year 2023'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the order date for all orders placed in the year 2023'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts all orders placed in the year 2023'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT products.name, categories.name FROM products JOIN categories ON products.category_id = categories.id WHERE categories.name = "Electronics"'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves names of products and their categories for products in the "Electronics" category'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retrieves all categories and their products'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the category of products to "Electronics"'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes products that do not belong to the "Electronics" category'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT employee_id, SUM(hours) FROM timesheets GROUP BY employee_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Calculates the total hours worked by each employee'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all employees and their timesheets'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes timesheets for each employee'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the hours worked for each employee'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT department_id, MAX(salary) FROM employees GROUP BY department_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Finds the highest salary in each department'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all departments and their salaries'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes the highest salary in each department'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the salary of each department'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT student_id, COUNT(course_id) FROM enrollments GROUP BY student_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of courses each student is enrolled in'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all students and their courses'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes enrollments for each student'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the courses each student is enrolled in'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT employee_id, department_id FROM employees WHERE employee_id IN (SELECT manager_id FROM departments)'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Finds employees who are also managers'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all employees and their managers'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes employees who are not managers'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates the department of each manager'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the query '],
+        [QuizMarkdownType.INLINE_CODE, ' SELECT * FROM employees WHERE department_id = (SELECT department_id FROM employees WHERE id = 5) '],
+        [QuizMarkdownType.TEXT, '. What does the line'],
+        [QuizMarkdownType.INLINE_CODE, '(SELECT department_id FROM employees WHERE id = 5)'],
+        [QuizMarkdownType.TEXT, 'represent?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The department id where the employee with the id 5 works'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The department id where any employee with the id 5 works'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An employee with the id 5 works in the department'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all employees who are part of the department'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT products.name, SUM(order_items.quantity * order_items.price) FROM products JOIN order_items ON products.id = order_items.product_id GROUP BY products.name'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all products and their ordered items along with the total sales amount for each'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all ordered items with their total sales amounts'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all products that have more than five orders and groups them by total sales'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all customers who have more than five orders and their order totals'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What query would you use to list all products along with the total sales amount for each?'],
@@ -1136,7 +1536,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which query lists all departments that have employees?'],
+        [QuizMarkdownType.TEXT, 'Which query lists all department ids from departments that have employees?'],
       ],
       answers: [
         {
