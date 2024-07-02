@@ -20,6 +20,7 @@ import { QuizDataObject, QuizMarkdownType } from './types';
 import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
+import special from './special';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -50,6 +51,7 @@ const quizData: QuizData = {
   'principles-of-cybersecurity': principlesOfCybersecurity,
   'principles-ui-ux': uiUx,
   'data-structures': dataStructures,
+  special,
   sql,
   test: {
     name: 'test',
@@ -167,6 +169,7 @@ const categories = [
       quizData['principles-ui-ux'],
       quizData['principles-of-programming'],
       quizData.sql,
+      quizData.special,
     ],
   },
   {
