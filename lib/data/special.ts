@@ -244,7 +244,7 @@ export default {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Encapsulation'],
+            [QuizMarkdownType.TEXT, 'Polymorphism'],
           ],
         },
         {
@@ -256,7 +256,7 @@ export default {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Polymorphism'],
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
           ],
         },
         {
@@ -319,7 +319,7 @@ class Dog extends Animal {
 public class Main {
     public static void main(String[] args) {
         Animal myAnimal = new Dog();
-        myAnimal.sound(); // Dynamic polymorphism: calls Dog's sound method
+        myAnimal.sound(); 
     }
 }`],
       ],
@@ -370,7 +370,7 @@ class Dog extends Animal {
 public class Main {
     public static void main(String[] args) {
         Animal myAnimal = new Dog();
-        myAnimal.sound(); // Dynamic polymorphism: calls Dog's sound method
+        myAnimal.sound(); 
     }
 }`],
       ],
@@ -421,7 +421,7 @@ class Dog extends Animal {
 public class Main {
     public static void main(String[] args) {
         Dog myAnimal = new Dog();
-        myAnimal.sound(); // Dynamic polymorphism: calls Dog's sound method
+        myAnimal.sound(); 
     }
 }`],
       ],
@@ -868,13 +868,13 @@ class Bike extends Vehicle {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.CODE, 'subtype, supertype'],
+            [QuizMarkdownType.TEXT, 'subtype, supertype'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.CODE, 'supertype, subtype'],
+            [QuizMarkdownType.TEXT, 'supertype, subtype'],
           ],
         },
       ],
@@ -1396,8 +1396,8 @@ Animal animal = animals.get(0);
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following code. Which answer is true?'],
         [QuizMarkdownType.CODE, `List<? super Cat> animals = new ArrayList<Animal>();
-animals.add(new Cat()); // Valid
-Cat cat = animals.get(0); // Compile-time error, needs casting
+animals.add(new Cat()); 
+Cat cat = animals.get(0); 
 `],
       ],
       answers: [
