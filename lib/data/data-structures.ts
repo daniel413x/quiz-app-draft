@@ -3573,6 +3573,38 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Because linked lists do not store their constituents in contiguous memory locations,'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Insertions and deletions do not require shifting each constituent'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Insertions and deletions require traversing each node in the list.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Insertions and deletions require shifting each constituent'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Insertions and deletions exclude the possibility of dynamic allocation of memory'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Linked lists do not require shifting of elements during insertions or deletions because'],
       ],
       answers: [

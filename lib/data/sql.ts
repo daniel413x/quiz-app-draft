@@ -1009,7 +1009,7 @@ export default {
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT employees.name, departments.name FROM employees JOIN departments ON employees.department_id = departments.id'],
       ],
       answers: [
@@ -1042,7 +1042,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(*), status FROM orders GROUP BY status'],
       ],
       answers: [
@@ -1075,7 +1075,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT DISTINCT country FROM customers WHERE country IS NOT NULL'],
       ],
       answers: [
@@ -1108,7 +1108,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT AVG(salary) FROM employees WHERE department_id = 5'],
       ],
       answers: [
@@ -1141,7 +1141,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM orders WHERE order_date BETWEEN \'2023-01-01\' AND \'2023-12-31\''],
       ],
       answers: [
@@ -1174,7 +1174,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT products.name, categories.name FROM products JOIN categories ON products.category_id = categories.id WHERE categories.name = "Electronics"'],
       ],
       answers: [
@@ -1207,7 +1207,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT employee_id, SUM(hours) FROM timesheets GROUP BY employee_id'],
       ],
       answers: [
@@ -1240,7 +1240,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT department_id, MAX(salary) FROM employees GROUP BY department_id'],
       ],
       answers: [
@@ -1273,7 +1273,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT student_id, COUNT(course_id) FROM enrollments GROUP BY student_id'],
       ],
       answers: [
@@ -1306,7 +1306,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT employee_id, department_id FROM employees WHERE employee_id IN (SELECT manager_id FROM departments)'],
       ],
       answers: [
@@ -1332,6 +1332,500 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'Updates the department of each manager'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(*) FROM employees'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of rows in the employees table'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of distinct employees'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of unique employee IDs'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of employees with a non-null ID'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT department_id, COUNT(*) FROM employees GROUP BY department_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of employees in each department'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of departments in the employees table'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of employees and departments'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all departments with more than one employee'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT status, COUNT(*) FROM orders GROUP BY status'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of orders for each status'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of orders'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups orders by their status without counting'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Deletes orders based on their status'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many unique customers have placed orders?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(DISTINCT customer_id) FROM orders'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of unique customer IDs in the orders table'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of customer orders'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all customers who have placed orders'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of customers with more than one order'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT product_id, COUNT(*) FROM order_items GROUP BY product_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of times each product has been ordered'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of products ordered'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all products with their order quantities'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of unique products in the orders table'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you find the total number of orders placed in 2023?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(*) FROM orders WHERE order_date BETWEEN \'2023-01-01\' AND \'2023-12-31\''],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of orders placed in the year 2023'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of orders placed in December 2023'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all orders placed in the year 2023'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups orders by month for the year 2023'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT category_id, COUNT(*) FROM products GROUP BY category_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of products in each category'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of categories in the products table'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all categories with their products'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups products by category without counting'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you find the number of employees hired in each year?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT YEAR(hire_date), COUNT(*) FROM employees GROUP BY YEAR(hire_date)'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of employees hired each year'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists the hire dates of all employees'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of employees'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups employees by month of hire'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT customer_id, COUNT(*) FROM reviews GROUP BY customer_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of reviews left by each customer'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of reviews'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all customers and their reviews'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups reviews by customer without counting'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many orders were shipped to each city?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT city, COUNT(*) FROM orders GROUP BY city'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of orders shipped to each city'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of orders'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all cities and their orders'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups orders by city without counting'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT manager_id, COUNT(*) FROM employees GROUP BY manager_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of employees managed by each manager'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of managers'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all managers and their employees'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups employees by manager without counting'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many products have been sold in each store?'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT store_id, COUNT(*) FROM sales GROUP BY store_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of products sold in each store'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of stores'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all stores and their sales'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups sales by store without counting'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT project_id, COUNT(*) FROM tasks GROUP BY project_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of tasks for each project'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of projects'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all projects and their tasks'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups tasks by project without counting'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT DATE(created_at), COUNT(*) FROM tickets GROUP BY DATE(created_at)'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of tickets created each day'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all tickets with their creation dates'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of tickets'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups tickets by month of creation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
+        [QuizMarkdownType.INLINE_CODE, 'SELECT employee_id, COUNT(*) FROM absences GROUP BY employee_id'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the number of absences for each employee'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counts the total number of absences'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lists all employees and their absences'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Groups absences by employee without counting'],
           ],
         },
       ],
@@ -1375,7 +1869,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What does the following SQL query accomplish?'],
+        [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT products.name, SUM(order_items.quantity * order_items.price) FROM products JOIN order_items ON products.id = order_items.product_id GROUP BY products.name'],
       ],
       answers: [

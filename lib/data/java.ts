@@ -64,46 +64,71 @@ python 50"`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which of the following functions will cause a program to fail to compile?'],
+        [QuizMarkdownType.TEXT, 'Your Java program throws the following exception. What does this infer?'],
+        [QuizMarkdownType.CODE, 'Exception in thread "main" java.lang.UnsupportedOperationException'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
-    List<String> l = List.of(string.split(","));
-    l.replaceAll(String::toUpperCase);
-    return l;
-}`],
+            [QuizMarkdownType.TEXT, 'This is a runtime error'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
-    List<String> l = new ArrayList<>(Arrays.asList(string.split(",")));
-    l.replaceAll(String::toUpperCase);
-    return l;
-}`],
+            [QuizMarkdownType.TEXT, 'This is a compilation error'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
-    List<String> l = Arrays.asList(string.split(","));
-    l.replaceAll(String::toUpperCase);
-    return l;
-}`],
+            [QuizMarkdownType.TEXT, 'This is neither a compilation nor a runtime error'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.CODE, `public static List<String> uppercaseAllStrings(String string) {
-    List<String> l = Arrays.stream(string.split(",")).map(String::toUpperCase).toList();
-    return l;
-}`],
+            [QuizMarkdownType.TEXT, 'This is both a compilation and a runtime error'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following lines of code will cause a program to fail at runtime?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `String string = "Dynamic,binding,in,Java";
+List<String> l = List.of(string.split(","));
+l.replaceAll(String::toUpperCase);`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `String string = "Dynamic,binding,in,Java";
+List<String> l = new ArrayList<>(Arrays.asList(string.split(",")));
+l.replaceAll(String::toUpperCase);`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `String string = "Dynamic,binding,in,Java";
+List<String> l = Arrays.asList(string.split(","));
+l.replaceAll(String::toUpperCase);`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `String string = "Dynamic,binding,in,Java";
+List<String> l = Arrays.stream(string.split(",")).map(String::toUpperCase).toList();`],
           ],
         },
       ],
@@ -1403,6 +1428,216 @@ for (String part : filtered) {
             [QuizMarkdownType.TEXT, 'Answers 2 and 3'],
           ],
           order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the term "autoboxing" refer to in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The automatic conversion of a primitive type to its corresponding wrapper type.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The manual conversion of a primitive type to its corresponding wrapper type.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The automatic conversion of a wrapper type to its corresponding primitive type.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The manual conversion of a wrapper type to its corresponding primitive type.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the following code, the output of'],
+        [QuizMarkdownType.INLINE_CODE, 'number.getClass().getName()'],
+        [QuizMarkdownType.TEXT, 'will be'],
+        [QuizMarkdownType.INLINE_CODE, 'java.lang.Integer'],
+        [QuizMarkdownType.TEXT, 'despite'],
+        [QuizMarkdownType.INLINE_CODE, 'number'],
+        [QuizMarkdownType.TEXT, 'being typed as a'],
+        [QuizMarkdownType.INLINE_CODE, 'Number'],
+        [QuizMarkdownType.TEXT, '. Which mechanic in Java explains this?'],
+        [QuizMarkdownType.CODE, `public class CovariantReturnTypes {
+    public static void main(String[] args) {
+        NumberProvider numberProvider = new NumberProvider();
+        Number number = numberProvider.getNumber();
+        System.out.println("Type of number: " + number.getClass().getName());
+    }
+}
+
+class NumberProvider {
+    public Number getNumber() {
+        return 42;
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Autoboxing'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic typing'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compile-time polymorphism'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the line number.getClass().getName() in the main method?'],
+        [QuizMarkdownType.CODE, `class NumberProvider {
+    public Number getNumber() {
+        return 42; // Returning an Integer, but as a Number
+    }
+}
+
+class IntegerProvider extends NumberProvider {
+    @Override
+    public Integer getNumber() {
+        return 42; // Returning an Integer directly
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        NumberProvider numberProvider = new NumberProvider();
+        Number number = numberProvider.getNumber();
+        System.out.println("Type of number: " + number.getClass().getName());
+
+        IntegerProvider integerProvider = new IntegerProvider();
+        Integer integer = integerProvider.getNumber();
+        System.out.println("Type of integer: " + integer.getClass().getName());
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'java.lang.Integer'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'java.lang.Number'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'java.lang.Object'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'java.lang.Class'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generally speaking, the purpose of covariant return types in Java is'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To allow a subclass to return a more specific type than the one declared by the superclass method.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To allow a subclass to return a more generic type than the one declared by the superclass method.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To prevent subclasses from overriding methods.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To ensure all methods return the same type.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?'],
+        [QuizMarkdownType.CODE, `public static void printNumbers() {
+    Number[] n = new Number[10];
+    System.out.println(Arrays.toString(n));
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[null, null, null, null, null, null, null, null, null, null]'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            { id: '0', answer: [[QuizMarkdownType.TEXT, 'A memory address such as'], [QuizMarkdownType.INLINE_CODE, '[I@1fd14d74']] },
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]'],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -4130,38 +4365,6 @@ class Printer {
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'List<String> list = List.of(array);'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Which of the following is the correct way to iterate over an array in Java?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'for (int i = 0; i < numbers.length; i++) { System.out.println(numbers[i]); }'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'for (int i = 0; i <= numbers.length; i++) { System.out.println(numbers[i]); }'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'for (int i = 1; i < numbers.length; i++) { System.out.println(numbers[i]); }'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'for (int i = 1; i <= numbers.length; i++) { System.out.println(numbers[i]); }'],
           ],
         },
       ],

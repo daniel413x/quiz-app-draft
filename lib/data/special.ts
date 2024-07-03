@@ -13,6 +13,390 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What is "polymorphism" in Object-Oriented Programming?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The ability to process objects differently based on their data type or class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A way to hide the internal state of objects'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The creation of a new object from existing ones'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The use of functions with the same name but different parameters'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is "encapsulation" in Object-Oriented Programming?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The bundling of data with the methods that operate on that data'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The ability to inherit methods from another class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A technique to reduce redundancy'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method of processing objects based on their class'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of polymorphism is achieved through method overloading?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compile-time polymorphism'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Run-time polymorphism'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the term "abstraction" refer to in object-oriented programming?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Hiding the complex reality while exposing only the necessary parts'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Providing a way to reuse code'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Bundling data with the methods that operate on that data'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Allowing objects to take on many forms'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where possible, from a memory standpoint, you should use _______ types over _______ types.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'primitive, reference'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'reference, primitive'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'static, reference'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'reference, static'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Objects that are _______ types are stored directly in the stack while  _______ types have a memory address stored in the stack that points to the object in the heap.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'primitive, reference'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'reference, primitive'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'static, reference'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'reference, static'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How are primitive types typically stored in memory?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As direct values'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As references'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the stack'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the heap'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a primitive type in programming?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A basic data type provided by the programming language'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A user-defined data type'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A complex data structure like arrays'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A type that contains multiple values'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which programming paradigm is based on the concept of objects containing both data and methods?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Object-Oriented Programming'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Functional Programming'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Procedural Programming'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Event-Driven Programming'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary advantage of using interfaces in programming?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'They allow for the definition of methods without specifying their implementation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'They enable the use of polymorphism'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'They ensure that a class has only one reason to change'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'They allow objects to be replaceable with instances of their subtypes'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which principle is focused on bundling the data and the methods that operate on that data together into a single unit?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inheritance'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Polymorphism'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The four principles of object-oriented programming are:'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Encapsulation, Abstraction, Inheritance, Polymorphism'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Encapsulation, Modularity, Inheritance, Polymorphism'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction, Encapsulation, Modularity, Polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inheritance, Encapsulation, Abstraction, Modularity'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What does hierarchical inheritance mean in object-oriented programming?'],
       ],
       answers: [
@@ -172,6 +556,93 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Can interfaces extend other interfaces in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, interfaces can extend multiple other interfaces.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, interfaces cannot extend other interfaces.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but they can only extend one interface.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, interfaces can only extend classes.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Can a Java class implement multiple interfaces?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, a class can implement multiple interfaces.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, a class can only implement one interface.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but it can only extend one class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, a class can only implement interfaces of the same type.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A class without the'],
+        [QuizMarkdownType.INLINE_CODE, 'abstract'],
+        [QuizMarkdownType.TEXT, 'modifier cannot be considered part of abstraction in the object-oriented programming sense of the term.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is true about abstract methods in interfaces?'],
@@ -431,7 +902,7 @@ public class Main {
           answer: [
             [QuizMarkdownType.TEXT, 'The method'],
             [QuizMarkdownType.INLINE_CODE, 'myAnimal.sound()'],
-            [QuizMarkdownType.TEXT, 'is resolved at compile time'],
+            [QuizMarkdownType.TEXT, 'is resolved at runtime'],
           ],
         },
         {
@@ -439,7 +910,7 @@ public class Main {
           answer: [
             [QuizMarkdownType.TEXT, 'The method'],
             [QuizMarkdownType.INLINE_CODE, 'myAnimal.sound()'],
-            [QuizMarkdownType.TEXT, 'is resolved at runtime'],
+            [QuizMarkdownType.TEXT, 'is resolved at compile time'],
           ],
         },
         {
@@ -659,6 +1130,208 @@ public class Main {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which line of code is invalid?'],
+        [QuizMarkdownType.CODE, `List<? super Integer> foo3 = new ArrayList<Integer>();
+List<? super Integer> foo3 = new ArrayList<Number>();
+List<? super Integer> foo3 = new ArrayList<Object>();`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The first line'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The second line'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The third line'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None are invalid'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What can be said generally and accurately about the following line of code?'],
+        [QuizMarkdownType.CODE, 'List<? super Integer> integers = new ArrayList<Number>();'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It uses the concept of generics with a wildcard to create a list that can hold elements of type Integer or any of its supertypes.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It uses the concept of covariance with a wildcard to create a list that can hold elements of type Integer or any of its supertypes.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It uses the concept of contravariance with a wildcard to create a list that can hold elements of type Integer or any of its subtypes.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You can add elements of the type specified by the wildcard.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. What change will make it compile and run?'],
+        [QuizMarkdownType.CODE, `import java.util.ArrayList;
+import java.util.List;
+
+class Bird {}
+class Parrot extends Bird {}
+class Parakeet extends Bird {}
+
+public class BirdHouse {
+
+    /* There is a problem here */
+    public static List<Bird> getBirds(boolean parrots) {
+    /* There is a problem here */
+
+        if (parrots) {
+            return new ArrayList<Parrot>();
+        } else {
+            return new ArrayList<Parakeet>();
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Parrot> parrots = new ArrayList<>();
+        List<Parakeet> parakeets = new ArrayList<>();
+
+        getBirds(true);
+        getBirds(false);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Redefining the'],
+            [QuizMarkdownType.INLINE_CODE, 'getAnimals()'],
+            [QuizMarkdownType.TEXT, 'return type as'],
+            [QuizMarkdownType.INLINE_CODE, 'List<? extends Bird>'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Redefining the'],
+            [QuizMarkdownType.INLINE_CODE, 'getAnimals()'],
+            [QuizMarkdownType.TEXT, 'return type as'],
+            [QuizMarkdownType.INLINE_CODE, 'List<? super Bird>'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Redefining'],
+            [QuizMarkdownType.INLINE_CODE, 'getAnimals()'],
+            [QuizMarkdownType.TEXT, 'as a'],
+            [QuizMarkdownType.INLINE_CODE, 'non-static'],
+            [QuizMarkdownType.TEXT, 'method'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Redefining the'],
+            [QuizMarkdownType.INLINE_CODE, 'getAnimals()'],
+            [QuizMarkdownType.TEXT, 'return type as'],
+            [QuizMarkdownType.INLINE_CODE, 'List<Optional<Bird>>'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. What does it represent?'],
+        [QuizMarkdownType.CODE, `class Animal {}
+class Cat extends Animal {}
+class Dog extends Animal {}
+
+public class Zoo {
+    public static List<? extends Animal> getAnimals(boolean cats) {
+        if (cats) {
+            return new ArrayList<Cat>();
+        } else {
+            return new ArrayList<Dog>();
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Cat> cats = new ArrayList<>();
+        List<Dog> dogs = new ArrayList<>();
+        
+        getAnimals(true); // Valid
+        getAnimals(); // Valid
+    }
+}
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Hierarchical inheritance.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Interface segregation.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Runtime binding.'],
+          ],
+        },
+        {
+          id: '4',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Runtime binding and hierarchical inheritance.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Consider the following code. What does it represent?'],
         [QuizMarkdownType.CODE, `class Vehicle {
     void start() {
@@ -772,9 +1445,8 @@ class Bike extends Vehicle {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In Java, are arrays covariant? Consider the following code:'],
+        [QuizMarkdownType.TEXT, 'Consider the following code. What will happen when it is executed?'],
         [QuizMarkdownType.CODE, 'Integer[] intArray = {1, 2, 3};\nNumber[] numArray = intArray;\nnumArray[0] = 3.14; // What happens here?'],
-        [QuizMarkdownType.TEXT, 'What will happen when the above code is executed?'],
       ],
       answers: [
         {
@@ -807,6 +1479,154 @@ class Bike extends Vehicle {
 
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What feature of Java is prominently displayed below?'],
+        [QuizMarkdownType.CODE, `class Animal {}
+class Cat extends Animal {}
+class Dog extends Animal {}
+
+public class Zoo {
+    public static void feedAnimals(List<? extends Animal> animals) {
+        for (Animal animal : animals) {
+            System.out.println("nom nom");
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Cat> cats = new ArrayList<>();
+        List<Dog> dogs = new ArrayList<>();
+        
+        feedAnimals(cats);
+        feedAnimals(dogs);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dependency inversion'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Type conversion'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Covariance and contravariance are best described as ______ of Java.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Features'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Laws'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Phenomena'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Side effects'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a method overload, what can the Java feature "covariance" help you accomplish?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstractly describe the type of object that can be passed into a method overload.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Type the object passed into a method overload as the superclass of one of its subclasses.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Cast the type of the object passed in as the superclass of the subclass'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Define the object passed into the overload as a class that extends an interface'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate the following code. Will it compile?'],
+        [QuizMarkdownType.CODE, 'List<Number> numberList = new ArrayList<Integer>(); // What happens here?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, it will not compile by virtue of a misunderstanding of covariance.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, it will compile by virtue of implementing covariance.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will compile but throw a runtime exception.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will compile with a warning.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Consider the following code involving generics:'],
         [QuizMarkdownType.CODE, 'List<Number> numberList = new ArrayList<Integer>(); // What happens here?'],
         [QuizMarkdownType.TEXT, 'Will this code compile?'],
@@ -815,7 +1635,7 @@ class Bike extends Vehicle {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'No, it will not compile by virtue of violating covariance.'],
+            [QuizMarkdownType.TEXT, 'No, it will not compile by virtue of misunderstanding covariance.'],
           ],
         },
         {
@@ -841,19 +1661,107 @@ class Bike extends Vehicle {
     },
     {
       question: [
+        // a subtype is trying to be typed for an instantiation of its superclass
+        [QuizMarkdownType.TEXT, 'Generalize the issue with the following code:'],
+        [QuizMarkdownType.CODE, 'Integer[] numbers = new Number[10];'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'numbers'],
+            [QuizMarkdownType.TEXT, 'is typed as an'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+            [QuizMarkdownType.TEXT, 'array, but the instantiated object is an array of the superclass of'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'numbers'],
+            [QuizMarkdownType.TEXT, 'is typed as an'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+            [QuizMarkdownType.TEXT, 'array, but the instantiated object is an array of the subclass of'],
+            [QuizMarkdownType.INLINE_CODE, 'Number'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'numbers'],
+            [QuizMarkdownType.TEXT, 'is typed as an'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+            [QuizMarkdownType.TEXT, 'array, not as a'],
+            [QuizMarkdownType.INLINE_CODE, 'Number'],
+            [QuizMarkdownType.TEXT, 'array.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'numbers'],
+            [QuizMarkdownType.TEXT, 'is typed as an'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+            [QuizMarkdownType.TEXT, 'array, and it is a typing violation to assign a superclass'],
+            [QuizMarkdownType.INLINE_CODE, 'Number'],
+            [QuizMarkdownType.TEXT, 'array to that reference.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        // a subtype is trying to be typed for an instantiation of its superclass
+        [QuizMarkdownType.TEXT, 'The displayed code will not error. By virtue of what?'],
+        [QuizMarkdownType.CODE, `int[] ints = {0, 3, 4};
+Integer key = ints[1]; // no type error`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Autoboxing'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static polymorphism'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        // a subtype is trying to be typed for an instantiation of its superclass
         [QuizMarkdownType.TEXT, 'Which of the following is not a valid display of covariance?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.CODE, 'Number[] numbers = new Integer[10];'],
+            [QuizMarkdownType.CODE, 'Integer[] numbers = new Number[10];'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.CODE, 'Integer[] numbers = new Number[10];'],
+            [QuizMarkdownType.CODE, 'Number[] numbers = new Integer[10];'],
           ],
         },
       ],
@@ -1278,6 +2186,191 @@ class Bike extends Vehicle {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'In the context of method overriding, what does it mean for a return type to be covariant?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The return type of the overriding method is allowed to be a subclass of the return type declared in the overridden method.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The return type of the overriding method must be the exact same type as the return type declared in the overridden method.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The return type of the overriding method must be a superclass of the return type declared in the overridden method.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The return type of the overriding method can be any type.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Generally speaking, the purpose of covariant return types in Java is'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To allow a subclass to return a more specific type than the one declared by the superclass method.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To allow a subclass to return a more generic type than the one declared by the superclass method.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To prevent subclasses from overriding methods.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To ensure all methods return the same type.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code.'],
+        [QuizMarkdownType.CODE, `class NumberProvider {
+    public Number getNumber() {
+        return 42; // Returning an Integer, but as a Number
+    }
+}
+
+class IntegerProvider extends NumberProvider {
+    @Override
+    public Integer getNumber() {
+        return 42; // Returning an Integer directly
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        NumberProvider numberProvider = new NumberProvider();
+        Number number = numberProvider.getNumber();
+
+        IntegerProvider integerProvider = new IntegerProvider();
+        Integer integer = integerProvider.getNumber();
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariant return types.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariant return types.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Return types determined at compilation.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above.'],
+          ],
+          order: '3',
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the code below. Which dynamic is at play?'],
+        [QuizMarkdownType.CODE, `class NumberProvider {
+    public Number getNumber() {
+        return 42;
+    }
+    
+    public Number getNumber(int value) {
+        return value; 
+    }
+    
+    public Number getNumber(double value) {
+        return value;
+    }
+}
+
+public class CompileTimePolymorphismDemo {
+    public static void main(String[] args) {
+        NumberProvider numberProvider = new NumberProvider();
+        
+        Number number1 = numberProvider.getNumber();
+        
+        Number number2 = numberProvider.getNumber(123);
+        
+        Number number3 = numberProvider.getNumber(123.45);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The functionality of '],
+            [QuizMarkdownType.INLINE_CODE, 'getNumber()'],
+            [QuizMarkdownType.TEXT, 'is determined at compile time (compile-time polymorphism)'],
+          ],
+          order: '0',
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The property of a type system that allows a type to be replaced with its supertypes.'],
+          ],
+          order: '1',
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'During the program runtime, it is already known by Java what the return type of'],
+            [QuizMarkdownType.INLINE_CODE, 'getNumber()'],
+            [QuizMarkdownType.TEXT, 'will be by virtue of method signatures'],
+          ],
+          order: '2',
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 and 3.'],
+          ],
+          order: '3',
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Covariance is'],
       ],
       answers: [
@@ -1304,6 +2397,71 @@ class Bike extends Vehicle {
           answer: [
             [QuizMarkdownType.TEXT, 'None of the above.'],
           ],
+          order: '3',
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Speaking generally about polymorphism,'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compile-time polymorphism is associated with method overloading, while runtime polymorphism is associated with method overriding'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compile-time polymorphism is associated with method overriding, while runtime polymorphism is associated with method overloading'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compile-time polymorphism is associated with method return types, while runtime polymorphism is associated with method overloading'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No statement makes sense.'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'Can interfaces in Java have static methods?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, interfaces can have static methods with a body.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, interfaces cannot have static methods.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but the methods must be abstract.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, only classes can have static methods.'],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -1329,6 +2487,60 @@ class Bike extends Vehicle {
           id: '2',
           answer: [
             [QuizMarkdownType.TEXT, 'The property of a type system that allows a type to be replaced with either its subtypes or supertypes.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. What mechanic is demonstrated by the method'],
+        [QuizMarkdownType.INLINE_CODE, 'feedAnimals'],
+        [QuizMarkdownType.TEXT, '?'],
+        [QuizMarkdownType.CODE, `class Animal {}
+class Cat extends Animal {}
+class Dog extends Animal {}
+
+public class Zoo {
+    public static void feedAnimals(List<? extends Animal> animals) {
+        for (Animal animal : animals) {
+            // Feed each animal
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Cat> cats = new ArrayList<>();
+        List<Dog> dogs = new ArrayList<>();
+        
+        feedAnimals(cats); // Valid
+        feedAnimals(dogs); // Valid
+    }
+}`],
+
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance.'],
           ],
         },
         {
@@ -1445,6 +2657,56 @@ Cat cat = animals.get(0);
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Identify the polymorphism dynamic in the code below.'],
+        [QuizMarkdownType.CODE, `public class HelloWorld {
+
+  interface Greeting {
+      void sayHello();
+  }
+
+  public static void main(String[] args) {
+      Greeting greeting = new Greeting() {
+          @Override
+          public void sayHello() {
+              System.out.println("Hello, World!");
+          }
+      };
+
+      greeting.sayHello();
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The anonymous class'],
+            [QuizMarkdownType.INLINE_CODE, 'greeting'],
+            [QuizMarkdownType.TEXT, 'is driving runtime polymorphism'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The anonymous class'],
+            [QuizMarkdownType.INLINE_CODE, 'greeting'],
+            [QuizMarkdownType.TEXT, 'is driving compile-time polymorphism'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Neither answer.'],
+          ],
+          order: 2,
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
 
