@@ -751,7 +751,7 @@ export default {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Encapsulation'],
+            [QuizMarkdownType.TEXT, 'Polymorphism'],
           ],
         },
         {
@@ -763,7 +763,7 @@ export default {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Polymorphism'],
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
           ],
         },
         {
@@ -2325,7 +2325,7 @@ public class Demo {
     }
 }
 
-public class CompileTimePolymorphismDemo {
+public class PolymorphismDemo {
     public static void main(String[] args) {
         NumberProvider numberProvider = new NumberProvider();
         
@@ -3787,6 +3787,38 @@ Cat cat = animals.get(0);
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, 'Left join'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Right join'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Full Outer Join'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In SQL, a many-to-many relationship between models should be handled by means of'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A special join table'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A special query syntax'],
           ],
         },
         {

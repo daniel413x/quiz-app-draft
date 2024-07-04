@@ -2220,5 +2220,338 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of relationship is shown below?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  order_date DATE
+);
+
+CREATE TABLE order_items (
+  order_item_id INT PRIMARY KEY,
+  order_id INT,
+  product_name VARCHAR(100),
+  quantity INT,
+  FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-Many (1:N)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Many-to-Many (M:N)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-One (1:1)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of relationship is shown below?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE categories (
+  category_id INT PRIMARY KEY,
+  category_name VARCHAR(100)
+);
+
+CREATE TABLE products (
+  product_id INT PRIMARY KEY,
+  product_name VARCHAR(100),
+  category_id INT,
+  FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-Many (1:N)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Many-to-Many (M:N)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-One (1:1)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of relationship is shown below?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE products (
+  product_id INT PRIMARY KEY,
+  name VARCHAR(100)
+);
+
+CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  order_date DATE
+);
+
+CREATE TABLE order_items (
+  order_id INT,
+  product_id INT,
+  quantity INT,
+  FOREIGN KEY (order_id) REFERENCES orders(order_id),
+  FOREIGN KEY (product_id) REFERENCES products(product_id),
+  PRIMARY KEY (order_id, product_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Many-to-Many (M:N)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-Many (1:N)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-One (1:1)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of relationship is shown below?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE authors (
+  author_id INT PRIMARY KEY,
+  name VARCHAR(100)
+);
+
+CREATE TABLE books (
+  book_id INT PRIMARY KEY,
+  title VARCHAR(100)
+);
+
+CREATE TABLE author_books (
+  author_id INT,
+  book_id INT,
+  FOREIGN KEY (author_id) REFERENCES authors(author_id),
+  FOREIGN KEY (book_id) REFERENCES books(book_id),
+  PRIMARY KEY (author_id, book_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Many-to-Many (M:N)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-Many (1:N)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-One (1:1)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of relationship is shown below?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE students (
+  student_id INT PRIMARY KEY,
+  name VARCHAR(100)
+);
+
+CREATE TABLE courses (
+  course_id INT PRIMARY KEY,
+  course_name VARCHAR(100)
+);
+
+CREATE TABLE student_courses (
+  student_id INT,
+  course_id INT,
+  FOREIGN KEY (student_id) REFERENCES students(student_id),
+  FOREIGN KEY (course_id) REFERENCES courses(course_id),
+  PRIMARY KEY (student_id, course_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Many-to-Many (M:N)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-Many (1:N)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-One (1:1)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a Many-to-Many (M:N) relationship in SQL?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship occurs when multiple records in one table are related to multiple records in another table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship occurs when a single record in one table is related to a single record in another table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship occurs when a single record in one table is related to multiple records in the same table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship occurs when multiple records in one table are related to a single record in another table.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How is a Many-to-Many relationship typically implemented in SQL?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using a junction table that contains foreign keys referencing the primary keys of the two related tables.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using a single table with multiple foreign keys.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using a primary key in one table and a foreign key in another table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using a view that combines two tables.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a One-to-Many (1:M) relationship in SQL?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A One-to-Many relationship occurs when a single record in one table is related to multiple records in another table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A One-to-Many relationship occurs when multiple records in one table are related to a single record in another table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A One-to-Many relationship occurs when a single record in one table is related to a single record in another table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A One-to-Many relationship occurs when multiple records in one table are related to multiple records in another table.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answers correctly explains the difference between a Many-to-Many relationship and a self-referencing Many-to-Many relationship?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship involves two different tables connected via a junction table, while a self-referencing Many-to-Many relationship involves a single table related to itself through a junction table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship involves a single table with multiple foreign keys, while a self-referencing Many-to-Many relationship involves two different tables connected via a junction table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship involves two tables connected via a view, while a self-referencing Many-to-Many relationship involves a single table with multiple foreign keys.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Many-to-Many relationship involves two tables with primary keys, while a self-referencing Many-to-Many relationship involves a single table without primary keys.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
