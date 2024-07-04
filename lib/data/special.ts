@@ -1166,7 +1166,7 @@ List<? super Integer> foo3 = new ArrayList<Object>();`],
           order: 3,
         },
       ],
-      correctAnswer: '0',
+      correctAnswer: '3',
     },
     {
       question: [
@@ -1304,7 +1304,7 @@ public class Zoo {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Hierarchical inheritance.'],
+            [QuizMarkdownType.TEXT, 'Runtime binding and hierarchical inheritance.'],
           ],
         },
         {
@@ -1328,7 +1328,7 @@ public class Zoo {
         {
           id: '4',
           answer: [
-            [QuizMarkdownType.TEXT, 'Runtime binding and hierarchical inheritance.'],
+            [QuizMarkdownType.TEXT, 'Hierarchical inheritance.'],
           ],
         },
       ],
@@ -3703,6 +3703,102 @@ Cat cat = animals.get(0);
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'FIFO'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In SQL, joins are used to combine _____ from two or more _____ based on a related ______ between them.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'rows, tables, columns'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'tables, rows, columns'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'rows, columns, tables'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'columns, rows, columns'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In SQL, an inner join could be used to find rows from two tables based on matching ______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Columns'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Tables'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Rows'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Foreign keys'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In SQL, the most commonly used join query is the'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inner join'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Left join'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Right join'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Full Outer Join'],
           ],
         },
       ],
