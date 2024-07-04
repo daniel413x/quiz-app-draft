@@ -34,6 +34,16 @@ const arr = [['Arrays', 'fast random access', 'fixed size'],
   ['Normalization', '1NF eliminates duplicate columns', '2NF removes subsets of data', '3NF eliminates transitive dependency', 'BCNF strict version of 3NF'],
   ['DMLStatements', 'INSERT adds new rows', 'UPDATE modifies existing rows', 'DELETE removes rows'],
   ['DDLStatements', 'CREATE TABLE defines a new table', 'ALTER TABLE modifies an existing table', 'DROP TABLE deletes a table', 'Constraints define rules for data'],
+  ['Stacks', 'LIFO order', 'used for method call management', 'memory allocation is faster', 'limited in size'],
+  ['Heaps', 'dynamic memory allocation', 'used for storing objects', 'memory allocation is slower', 'larger size compared to stack'],
+  ['Stacks', 'stores local variables and function calls', 'last in, first out structure'],
+  ['Heaps', 'allows dynamic memory allocation', 'objects can be accessed globally'],
+  ['Stacks', 'memory deallocation is automatic', 'fixed memory size'],
+  ['Heaps', 'memory deallocation needs to be managed', 'flexible memory size'],
+  ['Stacks', 'fast access', 'less memory used'],
+  ['Heaps', 'slower access', 'more memory used'],
+  ['Stacks', 'grows and shrinks automatically with function calls', 'potential for stack overflow'],
+  ['Heaps', 'grows and shrinks dynamically with allocation and deallocation', 'potential for memory fragmentation'],
 ];
 
 // stacks are generally FILO but the call stack is LIFO
