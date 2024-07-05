@@ -2753,6 +2753,46 @@ class Bike extends Vehicle {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which is true of the following code?'],
+        [QuizMarkdownType.CODE, 'Integer[] intArray = {1, 2, 3};\nNumber[] numArray = intArray;'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'numArray'],
+            [QuizMarkdownType.TEXT, 'is a reference that actually points to an'],
+            [QuizMarkdownType.INLINE_CODE, 'Integer'],
+            [QuizMarkdownType.TEXT, 'array.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'numArray'],
+            [QuizMarkdownType.TEXT, 'casts copied values of'],
+            [QuizMarkdownType.INLINE_CODE, 'intArray'],
+            [QuizMarkdownType.TEXT, 'and creates an array where each value is a'],
+            [QuizMarkdownType.INLINE_CODE, 'Number'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw a ClassCastException.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Consider the following code. What will happen when it is executed?'],
         [QuizMarkdownType.CODE, 'Integer[] intArray = {1, 2, 3};\nNumber[] numArray = intArray;\nnumArray[0] = 3.14; // What happens here?'],
       ],
@@ -2949,7 +2989,7 @@ public class Zoo {
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Yes, it will compile by virtue of complying with covariance.'],
+            [QuizMarkdownType.TEXT, 'Yes, it will compile by virtue of implementing covariance.'],
           ],
         },
         {
@@ -4126,6 +4166,314 @@ Cat cat = animals.get(0);
             [QuizMarkdownType.TEXT, 'will be valid and the call'],
             [QuizMarkdownType.INLINE_CODE, 'Animal animal = animals.get(0)'],
             [QuizMarkdownType.TEXT, 'will cause a runtime error'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is true of the following code?'],
+        [QuizMarkdownType.CODE, `public class Test {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.make_sound();
+        Animal dog = new Dog();
+        dog.make_sound();
+    }
+}
+
+class Animal {
+    public void make_sound() {
+        System.out.println("sound");
+    }
+}
+
+class Dog extends Animal {
+    public void make_sound(String str) {
+        System.out.println(str);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the subclass '],
+            [QuizMarkdownType.INLINE_CODE, 'Dog'],
+            [QuizMarkdownType.TEXT, ', '],
+            [QuizMarkdownType.INLINE_CODE, 'make_sound'],
+            [QuizMarkdownType.TEXT, ' is overloaded and not overridden.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the subclass '],
+            [QuizMarkdownType.INLINE_CODE, 'Dog'],
+            [QuizMarkdownType.TEXT, ', '],
+            [QuizMarkdownType.INLINE_CODE, 'make_sound'],
+            [QuizMarkdownType.TEXT, ' is overridden and not overloaded.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The method '],
+            [QuizMarkdownType.INLINE_CODE, 'make_sound'],
+            [QuizMarkdownType.TEXT, ' in '],
+            [QuizMarkdownType.INLINE_CODE, 'Dog'],
+            [QuizMarkdownType.TEXT, ' class is a static method.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The method '],
+            [QuizMarkdownType.INLINE_CODE, 'make_sound'],
+            [QuizMarkdownType.TEXT, ' in '],
+            [QuizMarkdownType.INLINE_CODE, 'Animal'],
+            [QuizMarkdownType.TEXT, ' class is private.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where do no instances of polymorphism occur in the following code?'],
+        [QuizMarkdownType.CODE, `public class Test {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.make_sound();
+        animal.make_sound("meow");
+
+        Animal dog = new Dog();
+        dog.make_sound();
+        dog.make_sound("bark");
+
+        Dog anotherDog = new Dog();
+        anotherDog.make_sound();
+        anotherDog.make_sound("bark");
+    }
+}
+
+class Animal {
+    public void make_sound() {
+        System.out.println("Animal sound");
+    }
+
+    public void make_sound(String str) {
+        System.out.println("Animal makes sound: " + str);
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void make_sound() {
+        System.out.println("Dog sound");
+    }
+
+    @Override
+    public void make_sound(String str) {
+        System.out.println("Dog makes sound: " + str);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where does runtime polymorphism occur in the following code?'],
+        [QuizMarkdownType.CODE, `public class Test {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.make_sound();
+        animal.make_sound("meow");
+
+        Animal dog = new Dog();
+        dog.make_sound();
+        dog.make_sound("bark");
+
+        Dog anotherDog = new Dog();
+        anotherDog.make_sound();
+        anotherDog.make_sound("bark");
+    }
+}
+
+class Animal {
+    public void make_sound() {
+        System.out.println("Animal sound");
+    }
+
+    public void make_sound(String str) {
+        System.out.println("Animal makes sound: " + str);
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void make_sound() {
+        System.out.println("Dog sound");
+    }
+
+    @Override
+    public void make_sound(String str) {
+        System.out.println("Dog makes sound: " + str);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound("bark")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where does compile-time polymorphism occur in the following code?'],
+        [QuizMarkdownType.CODE, `public class Test {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.make_sound();
+        animal.make_sound("meow");
+
+        Animal dog = new Dog();
+        dog.make_sound();
+        dog.make_sound("bark");
+
+        Dog anotherDog = new Dog();
+        anotherDog.make_sound();
+        anotherDog.make_sound("bark");
+    }
+}
+
+class Animal {
+    public void make_sound() {
+        System.out.println("Animal sound");
+    }
+
+    public void make_sound(String str) {
+        System.out.println("Animal makes sound: " + str);
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void make_sound() {
+        System.out.println("Dog sound");
+    }
+
+    @Override
+    public void make_sound(String str) {
+        System.out.println("Dog makes sound: " + str);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+            [QuizMarkdownType.TEXT, 'only'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound("bark")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'anotherDog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'dog.make_sound("bark")'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'animal.make_sound("meow")'],
           ],
         },
       ],
