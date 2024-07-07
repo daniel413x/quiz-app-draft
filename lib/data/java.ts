@@ -10875,7 +10875,11 @@ for (int i = 0; i < 5; i++) {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'What is the purpose of the @EnableWebFlux annotation in a Spring application?',
+          'The method',
+          QuizMarkdownType.INLINE_CODE,
+          '.toArray(String[]::new)',
+          QuizMarkdownType.TEXT,
+          'is found in objects of which type?',
         ],
       ],
       answers: [
@@ -10883,28 +10887,31 @@ for (int i = 0; i < 5; i++) {
           id: '0',
           answer: [
             [
-              QuizMarkdownType.TEXT,
-              'To enable WebFlux support in the application',
+              QuizMarkdownType.INLINE_CODE,
+              'Streams',
             ],
           ],
+          order: 0,
         },
         {
           id: '1',
           answer: [
             [
-              QuizMarkdownType.TEXT,
-              'To configure the data source',
+              QuizMarkdownType.INLINE_CODE,
+              'Lists',
             ],
           ],
+          order: 1,
         },
         {
           id: '2',
           answer: [
             [
-              QuizMarkdownType.TEXT,
-              'To enable Spring Boot auto-configuration',
+              QuizMarkdownType.INLINE_CODE,
+              'Strings',
             ],
           ],
+          order: 2,
         },
         {
           id: '3',
@@ -10914,9 +10921,97 @@ for (int i = 0; i < 5; i++) {
               'To enable transaction management',
             ],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the more memory-efficient approach to sorting a',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'List',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Collections.sort(list);',
+            ],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'list = list.stream().sorted().toList();',
+            ],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which method is used to subscribe to a Mono or Flux?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'register()',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'execute()',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'subscribe()',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'run()',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
     },
     {
       question: [
@@ -11573,5 +11668,6 @@ for (int i = 0; i < 5; i++) {
       ],
       correctAnswer: '1',
     },
+
   ],
 } as QuizDataObject;

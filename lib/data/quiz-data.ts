@@ -21,6 +21,7 @@ import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
 import special from './special';
+import javaIi from './java-ii';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -47,6 +48,7 @@ const quizData: QuizData = {
   'probability-theory': probabilityTheory,
   tensorflow,
   statistics,
+  'java-ii': javaIi,
   'principles-of-programming': principlesOfProgramming,
   'principles-of-cybersecurity': principlesOfCybersecurity,
   'principles-ui-ux': uiUx,
@@ -165,6 +167,7 @@ const categories = [
       quizData.javascript,
       quizData.python,
       quizData.java,
+      quizData['java-ii'],
       quizData['shell-scripting'],
       quizData['principles-ui-ux'],
       quizData['principles-of-programming'],
