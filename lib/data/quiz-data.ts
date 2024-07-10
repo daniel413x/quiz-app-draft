@@ -22,6 +22,7 @@ import sql from './sql';
 import dataStructures from './data-structures';
 import special from './special';
 import javaIi from './java-ii';
+import moduleI from './module-i';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -36,6 +37,7 @@ const quizData: QuizData = {
   'ml-principles': mlPrinciples,
   // ===========
   java,
+  'module-i': moduleI,
   // ===========
   'comptia-network-plus': comptiaNetworkPlus,
   'aws-cloud-practitioner': awsCloudPractitioner,
@@ -166,6 +168,7 @@ const categories = [
     quizzes: [
       quizData.javascript,
       quizData.python,
+      quizData['module-i'],
       quizData.java,
       quizData['java-ii'],
       quizData['shell-scripting'],

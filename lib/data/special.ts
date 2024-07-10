@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/quotes */
 import circularLinkedList from '@/public/circular-linked-list.png';
 import doubleEndedQueue from '@/public/double-ended-queue.png';
 import singlyLinkedList from '@/public/singly-linked-list.png';
@@ -23,7 +24,7 @@ export default {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'It uses reactive programming to handle data streams where data producers emit data, and consumers process it asynchronously.'],
+            [QuizMarkdownType.TEXT, 'It handles data streams where data producers emit data, and consumers process it asynchronously.'],
           ],
         },
         {
@@ -439,7 +440,7 @@ export default {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Singletons are difficult to extend because they require modification of the original class, violating the Open/Closed Principle.'],
+            [QuizMarkdownType.TEXT, 'Singletons require modification of the original class.'],
           ],
         },
         {
@@ -1623,7 +1624,7 @@ boolean result = oldFile.modify(newFile);`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.CODE, `Files.copy(Paths.get("source.txt"), Paths.get("destination.txt"), StandardCopyOption.REPLACE_EXISTING);`],
+            [QuizMarkdownType.CODE, 'Files.copy(Paths.get("source.txt"), Paths.get("destination.txt"), StandardCopyOption.REPLACE_EXISTING);'],
           ],
         },
         {
