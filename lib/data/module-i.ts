@@ -3657,7 +3657,39 @@ public class Main {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Are maps in Java ordered or unordered?'],
+        [QuizMarkdownType.TEXT, 'A _______ is structured as stacks of linked lists in order to deal with potential key collision'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HashMap'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'LinkedList'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Array'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Are maps in Java ordered or unordered by default?'],
       ],
       answers: [
         {
@@ -4782,6 +4814,16 @@ public class Main {
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the purpose of the try-with-resources statement in the given code?'],
+        [QuizMarkdownType.CODE, `
+try (InputStream inputStream = new FileInputStream("file.txt")) {
+    int byteData;
+    while ((byteData = inputStream.read()) != -1) {
+        System.out.print((char) byteData);
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+        `],
       ],
       answers: [
         {
@@ -5621,6 +5663,40 @@ fis.close();`],
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method is used with'],
+        [QuizMarkdownType.INLINE_CODE, 'FileWriter'],
+        [QuizMarkdownType.TEXT, 'in order to write text to a file?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, `.write()`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, `.append()`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, `.save()`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, `.flush()`],
           ],
         },
       ],
@@ -7130,7 +7206,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the enrollments of students in different courses along with their course details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table. This entity is in violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -8082,5 +8158,1061 @@ for (iterator.hasNext(); String element = iterator.next()) {
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of using packages?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To group related components together and provide for encapsulation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To compile the Java code into bytecode'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To document the Java code using comments'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To manage memory allocation for Java programs'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is an instance variable in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A variable that is declared inside a class but outside any method, constructor, or block'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A variable that is declared inside a method'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A variable that is declared as static'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A variable that is used to store constants'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Where are instance variables declared in a Java class?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Inside a class but outside any method, constructor, or block'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Inside a method'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Inside a constructor'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Inside a static block'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type int in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, '0'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'null'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, '1'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'undefined'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Can instance variables have access modifiers in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Yes, instance variables can have access modifiers'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'No, instance variables cannot have access modifiers'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Only public access modifier is allowed'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Only private access modifier is allowed'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'How long do instance variables live in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'As long as the object that contains them exists'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'As long as the method in which they are declared exists'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Until the program terminates'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Until the variable goes out of scope'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is the primary difference between a class variable and an instance variable in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A class variable is shared among all instances of the class, while an instance variable is unique to each instance'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A class variable can only be declared in the main method, while an instance variable can be declared anywhere in the class'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A class variable is initialized only once, while an instance variable is reinitialized each time an instance is created'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A class variable can only hold primitive data types, while an instance variable can hold both primitive and object data types'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'How do you declare a class variable in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By using the static keyword'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By using the final keyword'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By using the private keyword'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By using the public keyword'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Where are class variables stored in memory compared to instance variables?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Class variables are stored in the method area, while instance variables are stored in the heap'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Class variables are stored in the stack, while instance variables are stored in the heap'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Both class variables and instance variables are stored in the stack'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Both class variables and instance variables are stored in the heap'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Can class variables have different values for different instances of the class?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'No, class variables have the same value across all instances of the class'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Yes, class variables can have different values for different instances'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Yes, but only if they are declared as final'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'No, class variables are read-only and cannot be changed once set'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'How do instance variables differ in scope compared to class variables?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Instance variables are scoped to the object they belong to, while class variables are scoped to the class they are declared in'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Instance variables are accessible globally, while class variables are accessible only within the class'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Instance variables are static, while class variables are dynamic'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Instance variables must be initialized immediately, while class variables can be initialized later'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is the initial state of a thread when it is created but not yet started?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What must the first line of a constructor be in Java?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using this() or a call to the superclass constructor using super()'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A declaration of an instance variable'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A method call'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'An initialization block'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What must the first line of a constructor be in Java if it is a superclass constructor?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using this() or a call to the superclass constructor using super()'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A call to the constructor of the subclass'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'A method call'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'An initialization block'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What happens if neither this() nor super() is explicitly called in a constructor?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the superclass using super()'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the subclass using this()'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The compiler throws a compile-time error'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The constructor will not compile'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What converts Java source code into Java bytecode?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Java Compiler (javac)'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Java Virtual Machine (JVM)'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Java Runtime Environment (JRE)'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Java Development Kit (JDK)'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What role does the JVM play in the execution of Java programs?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It interprets or compiles Java bytecode into native machine code for execution'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It converts Java source code into Java bytecode'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It provides the standard libraries for Java programs'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It compiles Java programs'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Is the JVM (Java Virtual Machine) part of the JDK (Java Development Kit)?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Yes, the JVM is included in the JDK'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'No, the JVM is separate from the JDK'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'No, the JVM is part of the JRE (Java Runtime Environment) only'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Yes, but it must be installed separately'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What does the JDK (Java Development Kit) include?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The JVM, Java compiler (javac), libraries, and other development tools'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Only the Java compiler (javac)'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Only the JVM and standard libraries'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Only the standard libraries and utilities'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Which state does a thread enter when it has been started using the start() method?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What causes a thread to enter the BLOCKED state?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Waiting to acquire a lock'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Completion of the thread\'s run method'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Calling thread.sleep()'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'Waiting indefinitely using thread.wait()'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Which state does a thread enter when it is waiting indefinitely for another thread to complete?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'How does a thread enter the TIMED-WAITING state?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By calling thread.join(milliseconds) or thread.sleep(milliseconds)'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By calling thread.join() without a timeout'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By waiting to acquire a lock'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'By calling thread.start()'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What happens when a thread completes its execution?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It enters the TERMINATED state'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It enters the WAITING state'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It enters the RUNNABLE state'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'It enters the BLOCKED state'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is the state of a thread that has been created but not yet started?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What method call can cause a thread to enter the WAITING state?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'thread.join()'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'thread.start()'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'thread.sleep(milliseconds)'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'thread.interrupt()'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'In which state is a thread when it is actively running and executing its task?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is the state of a thread that is waiting for a specified amount of time before continuing?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Which thread state indicates that the thread has completed its execution?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TERMINATED'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting indefinitely for another thread to perform a particular action?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting to acquire a lock?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What does the RUNNABLE state signify in a thread\'s lifecycle?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The thread is ready to run and is waiting for CPU time'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The thread has been created but not yet started'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The thread is waiting indefinitely'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'The thread has completed its execution'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'What is the state of a thread that has been started and is currently executing its task?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'RUNNABLE'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'NEW'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, 'WAITING'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, 'BLOCKED'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
   ],
 } as QuizDataObject;
