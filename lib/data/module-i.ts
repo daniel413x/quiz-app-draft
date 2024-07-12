@@ -2417,38 +2417,6 @@ public class Main {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which method in the Vehicle class is an example of an abstract method?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'start()'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'getType()'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'setNumWheels(int numWheels)'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'Vehicle()'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Which keyword is used to define an abstract method in Java?'],
       ],
       answers: [
@@ -4493,45 +4461,13 @@ public class Main {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which pattern is often used in conjunction with Singletons for creating objects?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Factory Method'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Prototype'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Adapter'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Decorator'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'What is the main advantage of using the Factory Method pattern?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'It allows the client to decide which class to instantiate.'],
+            [QuizMarkdownType.TEXT, 'It helps reduce coupling in your code base.'],
           ],
         },
         {
@@ -4949,6 +4885,39 @@ try (InputStream inputStream = new FileInputStream("file.txt")) {
       ],
       correctAnswer: '0',
     },
+    
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which design pattern helps mitigate high code coupling by allowing the creation of objects without specifying the exact class of object that will be created?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Factory Design Pattern'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Singleton Design Pattern'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Observer Design Pattern'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Decorator Design Pattern'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the purpose of the try-catch block in file I/O operations?'],
@@ -5331,6 +5300,58 @@ writer.close();`],
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The code'],
+        [QuizMarkdownType.INLINE_CODE, `Class A extends B`],
+        [QuizMarkdownType.TEXT, 'is not possible if class'],
+        [QuizMarkdownType.INLINE_CODE, `B`],
+        [QuizMarkdownType.TEXT, 'is modified by the'],
+        [QuizMarkdownType.INLINE_CODE, `final`],
+        [QuizMarkdownType.TEXT, 'keyword'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The code'],
+        [QuizMarkdownType.INLINE_CODE, `Class A extends B`],
+        [QuizMarkdownType.TEXT, 'is possible ven if class'],
+        [QuizMarkdownType.INLINE_CODE, `B`],
+        [QuizMarkdownType.TEXT, 'is modified by the'],
+        [QuizMarkdownType.INLINE_CODE, `final`],
+        [QuizMarkdownType.TEXT, 'keyword'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
           ],
         },
       ],
@@ -6720,115 +6741,9 @@ for (iterator.hasNext(); String element = iterator.next()) {
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following tables showing sales and product tables in a SQL database. These entities are in violation of which normal form?'],
-        [QuizMarkdownType.TABLE, {
-          name: 'Sales table',
-          data: [
-            {
-              id: '1', sale_id: 'S001', product_id: 'P001', sale_date: '2023-07-01', customer_name: 'John Doe', product_name: 'Laptop',
-            },
-            {
-              id: '2', sale_id: 'S002', product_id: 'P002', sale_date: '2023-07-02', customer_name: 'Jane Smith', product_name: 'Smartphone',
-            },
-            {
-              id: '3', sale_id: 'S003', product_id: 'P001', sale_date: '2023-07-03', customer_name: 'Alice Johnson', product_name: 'Laptop',
-            },
-          ],
-          cols: [
-            { accessorKey: 'sale_id', header: 'id' },
-            { accessorKey: 'product_id', header: 'product_id' },
-            { accessorKey: 'sale_date', header: 'date' },
-            { accessorKey: 'customer_name', header: 'customer_name' },
-            { accessorKey: 'product_name', header: 'product_name' },
-          ],
-        }],
-        [QuizMarkdownType.TABLE, {
-          name: 'Product table',
-          data: [
-            {
-              id: '1', product_id: 'P001', product_name: 'Laptop', category: 'Electronics',
-            },
-            {
-              id: '2', product_id: 'P002', product_name: 'Smartphone', category: 'Electronics',
-            },
-          ],
-          cols: [
-            { accessorKey: 'product_id', header: 'id' },
-            { accessorKey: 'product_name', header: 'name' },
-            { accessorKey: 'category', header: 'category' },
-          ],
-        }],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'None of the above'],
-          ],
-        },
-      ],
-      correctAnswer: '2',
-    }, {
-      question: [
-        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer is true?'],
-        [QuizMarkdownType.CODE, `CREATE TABLE orders (
-  order_id INT,
-  product_id INT,
-  quantity INT,
-  PRIMARY KEY (order_id, product_id)
-);`],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id and product_id form a composite primary key'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id and product_id form a simple primary key'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id forms a composite super key'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'product_id forms a simple super key'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer is true?'],
         [QuizMarkdownType.CODE, `CREATE TABLE employees (
-  employee_id INT PRIMARY KEY,
+  id INT PRIMARY KEY,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   department_id INT
@@ -6838,7 +6753,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'employee_id forms a simple super key'],
+            [QuizMarkdownType.TEXT, 'id forms a simple super key'],
           ],
         },
         {
@@ -6866,24 +6781,24 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer is true?'],
         [QuizMarkdownType.CODE, `CREATE TABLE projects (
-  project_id INT,
-  project_name VARCHAR(100),
+  id INT,
+  name VARCHAR(100),
   start_date DATE,
   end_date DATE,
-  PRIMARY KEY (project_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'project_id forms a simple primary key'],
+            [QuizMarkdownType.TEXT, 'id forms a simple primary key'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'project_name forms a simple primary key'],
+            [QuizMarkdownType.TEXT, 'name forms a simple primary key'],
           ],
         },
         {
@@ -6895,7 +6810,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'project_id and project_name form a composite super key'],
+            [QuizMarkdownType.TEXT, 'id and name form a composite super key'],
           ],
         },
       ],
@@ -6941,7 +6856,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'The primary key uniquely identifies a row and is part of the superset of candidate keys for any given row.'],
+            [QuizMarkdownType.TEXT, 'The primary key uniquely identifies a row and is part of the superset of candidate keys.'],
           ],
         },
         {
@@ -6965,25 +6880,26 @@ for (iterator.hasNext(); String element = iterator.next()) {
       ],
       correctAnswer: '0',
     },
+    
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           name: 'Employee table',
           data: [
             {
-              id: '1', employeeId: 'E001', employeeName: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+              _tableDataColId: '1', id: '1', name: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
             },
             {
-              id: '2', employeeId: 'E002', employeeName: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
+              _tableDataColId: '2', id: '2', name: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
             },
             {
-              id: '3', employeeId: 'E003', employeeName: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+              _tableDataColId: '3', id: '3', name: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
             },
           ],
           cols: [
-            { accessorKey: 'employeeId', header: 'id' },
-            { accessorKey: 'employeeName', header: 'name' },
+            { accessorKey: 'id', header: 'id' },
+            { accessorKey: 'name', header: 'name' },
             { accessorKey: 'projectId', header: 'project_id' },
             { accessorKey: 'projectName', header: 'project_name' },
             { accessorKey: 'projectManager', header: 'project_manager' },
@@ -7052,22 +6968,22 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
-              id: '1', employeeId: 'E001', employeeName: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+              _tableDataColId: '1', id: '1', name: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
             },
             {
-              id: '2', employeeId: 'E002', employeeName: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
+              _tableDataColId: '2', id: '2', name: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
             },
             {
-              id: '3', employeeId: 'E003', employeeName: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+              _tableDataColId: '3', id: '3', name: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
             },
           ],
           cols: [
-            { accessorKey: 'employeeId', header: 'id' },
-            { accessorKey: 'employeeName', header: 'name' },
+            { accessorKey: 'id', header: 'id' },
+            { accessorKey: 'name', header: 'name' },
             { accessorKey: 'projectId', header: 'project_id' },
             { accessorKey: 'projectName', header: 'project_name' },
             { accessorKey: 'projectManager', header: 'project_manager' },
@@ -7104,22 +7020,22 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
-              id: '1', orderId: 'O001', orderDate: '2023-07-01', items: 'Laptop, Smartphone',
+              _tableDataColId: '1', id: '1', date: '2023-07-01', items: 'Laptop, Smartphone',
             },
             {
-              id: '2', orderId: 'O002', orderDate: '2023-07-02', items: 'Tablet',
+              _tableDataColId: '2', id: '2', date: '2023-07-02', items: 'Tablet',
             },
             {
-              id: '3', orderId: 'O003', orderDate: '2023-07-03', items: 'Smartwatch, Headphones',
+              _tableDataColId: '3', id: '3', date: '2023-07-03', items: 'Smartwatch, Headphones',
             },
           ],
           cols: [
-            { accessorKey: 'orderId', header: 'id' },
-            { accessorKey: 'orderDate', header: 'date' },
+            { accessorKey: 'id', header: 'id' },
+            { accessorKey: 'date', header: 'date' },
             { accessorKey: 'items', header: 'items' },
           ],
         }],
@@ -7154,24 +7070,24 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
-              id: '1', saleId: 'S001', productId: 'P001', productName: 'Laptop', saleDate: '2023-07-01', customerName: 'John Doe',
+              _tableDataColId: '1', id: '1', saleId: 'S001', productId: 'P001', productName: 'Laptop', date: '2023-07-01', customerName: 'John Doe',
             },
             {
-              id: '2', saleId: 'S002', productId: 'P002', productName: 'Smartphone', saleDate: '2023-07-02', customerName: 'Jane Smith',
+              _tableDataColId: '2', id: '2', saleId: 'S002', productId: 'P002', productName: 'Smartphone', date: '2023-07-02', customerName: 'Jane Smith',
             },
             {
-              id: '3', saleId: 'S003', productId: 'P001', productName: 'Laptop', saleDate: '2023-07-03', customerName: 'Alice Johnson',
+              _tableDataColId: '3', id: '3', saleId: 'S003', productId: 'P001', productName: 'Laptop', date: '2023-07-03', customerName: 'Alice Johnson',
             },
           ],
           cols: [
-            { accessorKey: 'saleId', header: 'id' },
+            { accessorKey: 'id', header: 'id' },
             { accessorKey: 'productId', header: 'product_id' },
             { accessorKey: 'productName', header: 'product_name' },
-            { accessorKey: 'saleDate', header: 'date' },
+            { accessorKey: 'date', header: 'date' },
             { accessorKey: 'customerName', header: 'customer_name' },
           ],
         }],
@@ -7206,74 +7122,22 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table. This entity is in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
-              id: '1', studentId: '1001', studentName: 'Alice', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+              _tableDataColId: '1', customerId: 'C001', customerName: 'John Doe', phoneNumbers: '123-456-7890, 987-654-3210',
             },
             {
-              id: '2', studentId: '1002', studentName: 'Bob', courseId: 'C102', courseName: 'Science 101', courseInstructor: 'Dr. Johnson',
+              _tableDataColId: '2', customerId: 'C002', customerName: 'Jane Smith', phoneNumbers: '555-123-4567',
             },
             {
-              id: '3', studentId: '1003', studentName: 'Charlie', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+              _tableDataColId: '3', customerId: 'C003', customerName: 'Alice Johnson', phoneNumbers: '444-555-6666, 333-222-1111',
             },
           ],
           cols: [
-            { accessorKey: 'studentId', header: 'id' },
-            { accessorKey: 'studentName', header: 'name' },
-            { accessorKey: 'courseId', header: 'course_id' },
-            { accessorKey: 'courseName', header: 'course_name' },
-            { accessorKey: 'courseInstructor', header: 'course_instructor' },
-          ],
-        }],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'None of the above'],
-          ],
-        },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. These entities are in violation of which normal form?'],
-        [QuizMarkdownType.TABLE, {
-          data: [
-            {
-              id: '1', customerId: 'C001', customerName: 'John Doe', phoneNumbers: '123-456-7890, 987-654-3210',
-            },
-            {
-              id: '2', customerId: 'C002', customerName: 'Jane Smith', phoneNumbers: '555-123-4567',
-            },
-            {
-              id: '3', customerId: 'C003', customerName: 'Alice Johnson', phoneNumbers: '444-555-6666, 333-222-1111',
-            },
-          ],
-          cols: [
-            { accessorKey: 'customerId', header: 'id' },
-            { accessorKey: 'customerName', header: 'name' },
+            { accessorKey: 'customerId', header: 'customerId' },
+            { accessorKey: 'customerName', header: 'customerName' },
             { accessorKey: 'phoneNumbers', header: 'phone_numbers' },
           ],
         }],
@@ -7308,17 +7172,17 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
-              id: '1', employeeId: 'E001', employeeName: 'Alice', phoneNumbers: '123-456-7890, 987-654-3210',
+              _tableDataColId: '1', employeeId: 'E001', employeeName: 'Alice', phoneNumbers: '123-456-7890, 987-654-3210',
             },
             {
-              id: '2', employeeId: 'E002', employeeName: 'Bob', phoneNumbers: '555-123-4567',
+              _tableDataColId: '2', employeeId: 'E002', employeeName: 'Bob', phoneNumbers: '555-123-4567',
             },
             {
-              id: '3', employeeId: 'E003', employeeName: 'Charlie', phoneNumbers: '444-555-6666, 333-222-1111',
+              _tableDataColId: '3', employeeId: 'E003', employeeName: 'Charlie', phoneNumbers: '444-555-6666, 333-222-1111',
             },
           ],
           cols: [
@@ -7358,22 +7222,22 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. This design pattern is a violation of which normal form??'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
-              id: '1', studentId: '1001', studentName: 'Alice', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+              _tableDataColId: '1', id: '1001', name: 'Alice', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
             },
             {
-              id: '2', studentId: '1002', studentName: 'Bob', courseId: 'C102', courseName: 'Science 101', courseInstructor: 'Dr. Johnson',
+              _tableDataColId: '2', id: '1002', name: 'Bob', courseId: 'C102', courseName: 'Science 101', courseInstructor: 'Dr. Johnson',
             },
             {
-              id: '3', studentId: '1003', studentName: 'Charlie', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+              _tableDataColId: '3', id: '1003', name: 'Charlie', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
             },
           ],
           cols: [
-            { accessorKey: 'studentId', header: 'id' },
-            { accessorKey: 'studentName', header: 'name' },
+            { accessorKey: 'id', header: 'id' },
+            { accessorKey: 'name', header: 'name' },
             { accessorKey: 'courseId', header: 'course_id' },
             { accessorKey: 'courseName', header: 'name' },
             { accessorKey: 'courseInstructor', header: 'instructor' },
@@ -7412,11 +7276,11 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE students (
-  student_id INT,
+  id INT,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   email VARCHAR(100),
-  PRIMARY KEY (student_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
@@ -7587,18 +7451,18 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer correctly identifies the candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE products (
-  product_id INT,
+  id INT,
   product_name VARCHAR(100),
   sku VARCHAR(50), // Stock-keeping unit
   price DECIMAL(10, 2),
-  PRIMARY KEY (product_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, sku'],
+            [QuizMarkdownType.TEXT, 'id, sku'],
           ],
         },
         {
@@ -7616,7 +7480,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, price'],
+            [QuizMarkdownType.TEXT, 'id, price'],
           ],
         },
       ],
@@ -7657,18 +7521,18 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE shipments (
-  shipment_id INT,
+  id INT,
   order_id INT,
   product_id INT,
   shipment_date DATE,
-  PRIMARY KEY (shipment_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'shipment_id, order_id, product_id'],
+            [QuizMarkdownType.TEXT, 'id, order_id, product_id'],
           ],
         },
         {
@@ -7680,7 +7544,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'shipment_id, shipment_date'],
+            [QuizMarkdownType.TEXT, 'id, shipment_date'],
           ],
         },
         {
@@ -7728,18 +7592,18 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE orders (
-  order_id INT,
+  id INT,
   product_id INT,
   customer_id INT,
   order_date DATE,
-  PRIMARY KEY (order_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'order_id, product_id, customer_id'],
+            [QuizMarkdownType.TEXT, 'id, product_id, customer_id'],
           ],
         },
         {
@@ -7751,7 +7615,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'order_id, order_date'],
+            [QuizMarkdownType.TEXT, 'id, order_date'],
           ],
         },
         {
@@ -7799,18 +7663,18 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE users (
-  user_id INT,
+  id INT,
   username VARCHAR(50),
   email VARCHAR(100),
   password VARCHAR(100),
-  PRIMARY KEY (user_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'user_id, username, email'],
+            [QuizMarkdownType.TEXT, 'id, username, email'],
           ],
         },
         {
@@ -7822,7 +7686,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'user_id, password'],
+            [QuizMarkdownType.TEXT, 'id, password'],
           ],
         },
         {
@@ -7861,45 +7725,6 @@ for (iterator.hasNext(); String element = iterator.next()) {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'email'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form candidate keys?'],
-        [QuizMarkdownType.CODE, `CREATE TABLE inventory (
-  inventory_id INT,
-  product_id INT,
-  warehouse_id INT,
-  stock_level INT,
-  PRIMARY KEY (inventory_id)
-);`],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'inventory_id, product_id, warehouse_id'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'product_id, warehouse_id'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'inventory_id, stock_level'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'product_id, stock_level'],
           ],
         },
       ],
@@ -7979,24 +7804,24 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer correctly identifies the candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE products (
-  product_id INT,
-  product_name VARCHAR(100),
+  product INT,
+  name VARCHAR(100),
   sku VARCHAR(50),
   price DECIMAL(10, 2),
-  PRIMARY KEY (product_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, sku'],
+            [QuizMarkdownType.TEXT, 'id, sku'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_name, sku'],
+            [QuizMarkdownType.TEXT, 'name, sku'],
           ],
         },
         {
@@ -8008,7 +7833,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, price'],
+            [QuizMarkdownType.TEXT, 'id, price'],
           ],
         },
       ],
@@ -8050,19 +7875,19 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns could be candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE employees (
-  employee_id INT,
+  id INT,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   ssn VARCHAR(11),
   email VARCHAR(100),
-  PRIMARY KEY (employee_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'employee_id, ssn, email'],
+            [QuizMarkdownType.TEXT, 'id, ssn, email'],
           ],
         },
         {
@@ -8550,7 +8375,10 @@ for (iterator.hasNext(); String element = iterator.next()) {
     {
       id: '0',
       answer: [
-        [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using this() or a call to the superclass constructor using super()'],
+        [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using'],
+        [QuizMarkdownType.INLINE_CODE, 'this()'],
+        [QuizMarkdownType.TEXT, 'or a call to the superclass constructor using'],
+        [QuizMarkdownType.INLINE_CODE, 'super()'],
       ],
     },
     {
@@ -8569,6 +8397,62 @@ for (iterator.hasNext(); String element = iterator.next()) {
       id: '3',
       answer: [
         [QuizMarkdownType.TEXT, 'An initialization block'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'When an'],
+    [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+    [QuizMarkdownType.TEXT, 'reaches its maximum capacity, by how much will it grow dynamically?'],
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, '50%'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, '75%'],
+      ],
+    },
+    {
+      id: '2',
+      answer: [
+        [QuizMarkdownType.TEXT, '10%'],
+      ],
+    },
+    {
+      id: '3',
+      answer: [
+        [QuizMarkdownType.TEXT, '25%'],
+      ],
+    },
+  ],
+  correctAnswer: '0',
+},
+{
+  question: [
+    [QuizMarkdownType.TEXT, 'Evaluate: The first line of a constructor in Java must be a call to'],
+    [QuizMarkdownType.INLINE_CODE, 'super()'],
+
+  ],
+  answers: [
+    {
+      id: '0',
+      answer: [
+        [QuizMarkdownType.TEXT, 'True'],
+      ],
+    },
+    {
+      id: '1',
+      answer: [
+        [QuizMarkdownType.TEXT, 'False'],
       ],
     },
   ],

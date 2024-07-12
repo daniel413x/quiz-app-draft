@@ -15,7 +15,7 @@ export type Answer = {
 export type TableData = {
   data: {
     [key: string]: any;
-    id: string;
+    _tableDataColId: string;
   }[];
   cols: {
     accessorKey: string;
