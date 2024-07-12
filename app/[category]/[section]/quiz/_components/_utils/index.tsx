@@ -1,5 +1,6 @@
 import {
   Answer, Question, QuizMarkdownTuple, QuizMarkdownType,
+  TableData,
 } from '@/lib/data/types';
 import shuffle from 'lodash/shuffle';
 import { BlockMath, InlineMath } from 'react-katex';
@@ -7,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { numOfQuestions } from '../../_consts';
 import Code from '../Code';
 import InlineCode from '../InlineCode';
+import DataTable from '../DataTable';
 
 const shuffleAnswers = (answers: Answer[]) => shuffle(answers).slice().sort((a, b) => ((a.order && !b.order) || (a.order && b.order && a.order > b.order) ? 1 : 0));
 
@@ -23,7 +25,7 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
   if (tuple[0] === QuizMarkdownType.TEXT) {
     return (
       <span key={i}>
-        {tuple[1]}
+        {tuple[1] as string}
       </span>
     );
   }
@@ -37,7 +39,7 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
       >
         {' '}
         <InlineMath>
-          {tuple[1]}
+          {tuple[1] as string}
         </InlineMath>
         {' '}
       </span>
@@ -52,19 +54,24 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
         key={i}
       >
         <BlockMath>
-          {tuple[1]}
+          {tuple[1] as string}
         </BlockMath>
       </span>
     );
   }
   if (tuple[0] === QuizMarkdownType.CODE) {
     return (
-      <Code code={tuple[1]} key={i} />
+      <Code code={tuple[1] as string} key={i} />
     );
   }
   if (tuple[0] === QuizMarkdownType.INLINE_CODE) {
     return (
-      <InlineCode code={tuple[1]} key={i} />
+      <InlineCode code={tuple[1] as string} key={i} />
+    );
+  }
+  if (tuple[0] === QuizMarkdownType.TABLE) {
+    return (
+      <DataTable tableData={tuple[1] as TableData} key={i} mbMargin={!!qmd[i + 1]} />
     );
   }
   return null;

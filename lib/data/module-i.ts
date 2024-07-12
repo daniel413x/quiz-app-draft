@@ -691,7 +691,7 @@ public void readFile(String filePath) throws IOException {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'During which phase does Maven ensure that your project has all the necessary components?'],
+        [QuizMarkdownType.TEXT, 'During which phase of a Maven build lifecycle does Maven ensure that your project has all the necessary components?'],
       ],
       answers: [
         {
@@ -883,7 +883,7 @@ public void readFile(String filePath) throws IOException {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which phase runs all integration tests to ensure all pieces are working together?'],
+        [QuizMarkdownType.TEXT, 'Which phase of the Maven build lifecycle runs all integration tests to ensure all pieces are working together?'],
       ],
       answers: [
         {
@@ -947,7 +947,7 @@ public void readFile(String filePath) throws IOException {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Where is the created package installed during the install phase?'],
+        [QuizMarkdownType.TEXT, 'Where is the created package installed during the install phase of the Maven build lifecycle?'],
       ],
       answers: [
         {
@@ -5273,6 +5273,52 @@ String line = reader.nextLine();`],
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The following program will work as intended'],
+        [QuizMarkdownType.CODE, `FileWriter writer = new FileWriter("example.txt");
+writer.write("Hello, World!");
+writer.close();`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following program will work as intended'],
+        [QuizMarkdownType.CODE, `FileWriter writer = new FileWriter("example.txt");
+writer.append("Hello, World!");
+writer.close();`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'How do you write a string to a file using FileWriter?'],
       ],
       answers: [
@@ -5524,6 +5570,57 @@ writer.close();`],
             [QuizMarkdownType.CODE, `FileWriter writer = new FileWriter("example.txt");
 writer.writeAppend("Appending data");
 writer.close();`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following program will function as intended'],
+        [QuizMarkdownType.CODE, `FileInputStream fis = new FileInputStream("example.bin");
+int data = fis.read();
+while (data != -1) {
+  System.out.print((char) data);
+  data = fis.read();
+}
+fis.close();`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following program will function as intended'],
+        [QuizMarkdownType.CODE, `FileInputStream fis = new FileInputStream("example.bin");
+byte[] data = fis.readBytes();
+System.out.print(new String(data));
+fis.close();`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
           ],
         },
       ],
@@ -6544,5 +6641,1446 @@ for (iterator.hasNext(); String element = iterator.next()) {
       ],
       correctAnswer: '0',
     },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following tables showing sales and product tables in a SQL database. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Sales table',
+          data: [
+            {
+              id: '1', sale_id: 'S001', product_id: 'P001', sale_date: '2023-07-01', customer_name: 'John Doe', product_name: 'Laptop',
+            },
+            {
+              id: '2', sale_id: 'S002', product_id: 'P002', sale_date: '2023-07-02', customer_name: 'Jane Smith', product_name: 'Smartphone',
+            },
+            {
+              id: '3', sale_id: 'S003', product_id: 'P001', sale_date: '2023-07-03', customer_name: 'Alice Johnson', product_name: 'Laptop',
+            },
+          ],
+          cols: [
+            { accessorKey: 'sale_id', header: 'id' },
+            { accessorKey: 'product_id', header: 'product_id' },
+            { accessorKey: 'sale_date', header: 'date' },
+            { accessorKey: 'customer_name', header: 'customer_name' },
+            { accessorKey: 'product_name', header: 'product_name' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'Product table',
+          data: [
+            {
+              id: '1', product_id: 'P001', product_name: 'Laptop', category: 'Electronics',
+            },
+            {
+              id: '2', product_id: 'P002', product_name: 'Smartphone', category: 'Electronics',
+            },
+          ],
+          cols: [
+            { accessorKey: 'product_id', header: 'id' },
+            { accessorKey: 'product_name', header: 'name' },
+            { accessorKey: 'category', header: 'category' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer is true?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE orders (
+  order_id INT,
+  product_id INT,
+  quantity INT,
+  PRIMARY KEY (order_id, product_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id and product_id form a composite primary key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id and product_id form a simple primary key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id forms a composite super key'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id forms a simple super key'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer is true?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE employees (
+  employee_id INT PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  department_id INT
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'employee_id forms a simple super key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'department_id forms a simple primary key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name and last_name form a composite primary key'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'department_id forms a composite super key'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer is true?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE projects (
+  project_id INT,
+  project_name VARCHAR(100),
+  start_date DATE,
+  end_date DATE,
+  PRIMARY KEY (project_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'project_id forms a simple primary key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'project_name forms a simple primary key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'start_date and end_date form a composite primary key'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'project_id and project_name form a composite super key'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key is part of the superset of candidate keys for any given row.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key can have duplicate values and is not part of the candidate keys.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key cannot be a part of any candidate keys.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key is always a composite key.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is true about the primary key in a SQL table?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key uniquely identifies a row and is part of the superset of candidate keys for any given row.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key is not unique and can be duplicated in the table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key is not necessary for a SQL table to function properly.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The primary key must always be a composite key with more than one column.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Employee table',
+          data: [
+            {
+              id: '1', employeeId: 'E001', employeeName: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+            },
+            {
+              id: '2', employeeId: 'E002', employeeName: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
+            },
+            {
+              id: '3', employeeId: 'E003', employeeName: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+            },
+          ],
+          cols: [
+            { accessorKey: 'employeeId', header: 'id' },
+            { accessorKey: 'employeeName', header: 'name' },
+            { accessorKey: 'projectId', header: 'project_id' },
+            { accessorKey: 'projectName', header: 'project_name' },
+            { accessorKey: 'projectManager', header: 'project_manager' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the solution to partial dependency in relational databases?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Split up the tables'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Add foreign keys'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shrink the composite primary key'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Expand the composite primary key'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', employeeId: 'E001', employeeName: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+            },
+            {
+              id: '2', employeeId: 'E002', employeeName: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
+            },
+            {
+              id: '3', employeeId: 'E003', employeeName: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+            },
+          ],
+          cols: [
+            { accessorKey: 'employeeId', header: 'id' },
+            { accessorKey: 'employeeName', header: 'name' },
+            { accessorKey: 'projectId', header: 'project_id' },
+            { accessorKey: 'projectName', header: 'project_name' },
+            { accessorKey: 'projectManager', header: 'project_manager' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', orderId: 'O001', orderDate: '2023-07-01', items: 'Laptop, Smartphone',
+            },
+            {
+              id: '2', orderId: 'O002', orderDate: '2023-07-02', items: 'Tablet',
+            },
+            {
+              id: '3', orderId: 'O003', orderDate: '2023-07-03', items: 'Smartwatch, Headphones',
+            },
+          ],
+          cols: [
+            { accessorKey: 'orderId', header: 'id' },
+            { accessorKey: 'orderDate', header: 'date' },
+            { accessorKey: 'items', header: 'items' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', saleId: 'S001', productId: 'P001', productName: 'Laptop', saleDate: '2023-07-01', customerName: 'John Doe',
+            },
+            {
+              id: '2', saleId: 'S002', productId: 'P002', productName: 'Smartphone', saleDate: '2023-07-02', customerName: 'Jane Smith',
+            },
+            {
+              id: '3', saleId: 'S003', productId: 'P001', productName: 'Laptop', saleDate: '2023-07-03', customerName: 'Alice Johnson',
+            },
+          ],
+          cols: [
+            { accessorKey: 'saleId', header: 'id' },
+            { accessorKey: 'productId', header: 'product_id' },
+            { accessorKey: 'productName', header: 'product_name' },
+            { accessorKey: 'saleDate', header: 'date' },
+            { accessorKey: 'customerName', header: 'customer_name' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the enrollments of students in different courses along with their course details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', studentId: '1001', studentName: 'Alice', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+            },
+            {
+              id: '2', studentId: '1002', studentName: 'Bob', courseId: 'C102', courseName: 'Science 101', courseInstructor: 'Dr. Johnson',
+            },
+            {
+              id: '3', studentId: '1003', studentName: 'Charlie', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+            },
+          ],
+          cols: [
+            { accessorKey: 'studentId', header: 'id' },
+            { accessorKey: 'studentName', header: 'name' },
+            { accessorKey: 'courseId', header: 'course_id' },
+            { accessorKey: 'courseName', header: 'course_name' },
+            { accessorKey: 'courseInstructor', header: 'course_instructor' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', customerId: 'C001', customerName: 'John Doe', phoneNumbers: '123-456-7890, 987-654-3210',
+            },
+            {
+              id: '2', customerId: 'C002', customerName: 'Jane Smith', phoneNumbers: '555-123-4567',
+            },
+            {
+              id: '3', customerId: 'C003', customerName: 'Alice Johnson', phoneNumbers: '444-555-6666, 333-222-1111',
+            },
+          ],
+          cols: [
+            { accessorKey: 'customerId', header: 'id' },
+            { accessorKey: 'customerName', header: 'name' },
+            { accessorKey: 'phoneNumbers', header: 'phone_numbers' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', employeeId: 'E001', employeeName: 'Alice', phoneNumbers: '123-456-7890, 987-654-3210',
+            },
+            {
+              id: '2', employeeId: 'E002', employeeName: 'Bob', phoneNumbers: '555-123-4567',
+            },
+            {
+              id: '3', employeeId: 'E003', employeeName: 'Charlie', phoneNumbers: '444-555-6666, 333-222-1111',
+            },
+          ],
+          cols: [
+            { accessorKey: 'employeeId', header: 'id' },
+            { accessorKey: 'employeeName', header: 'name' },
+            { accessorKey: 'phoneNumbers', header: 'phone_numbers' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. These entities are in violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              id: '1', studentId: '1001', studentName: 'Alice', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+            },
+            {
+              id: '2', studentId: '1002', studentName: 'Bob', courseId: 'C102', courseName: 'Science 101', courseInstructor: 'Dr. Johnson',
+            },
+            {
+              id: '3', studentId: '1003', studentName: 'Charlie', courseId: 'C101', courseName: 'Math 101', courseInstructor: 'Dr. Smith',
+            },
+          ],
+          cols: [
+            { accessorKey: 'studentId', header: 'id' },
+            { accessorKey: 'studentName', header: 'name' },
+            { accessorKey: 'courseId', header: 'course_id' },
+            { accessorKey: 'courseName', header: 'name' },
+            { accessorKey: 'courseInstructor', header: 'instructor' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE students (
+  student_id INT,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  email VARCHAR(100),
+  PRIMARY KEY (student_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'student_id, email'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name, last_name'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'email, first_name'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'student_id, first_name'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true about candidate keys and super keys?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All candidate keys are super keys.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All super keys are candidate keys.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All super keys are primary keys.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Super keys are a subset of a candidate key.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true about candidate keys?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys are minimal super keys that can uniquely identify a row in a table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys can have duplicate values in a table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table can have only one candidate key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys must always be composite keys.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns could be candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE employees (
+  employee_id INT,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  ssn VARCHAR(11),
+  email VARCHAR(100),
+  PRIMARY KEY (employee_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'employee_id, ssn, email'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name, last_name, ssn'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name, email'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ssn, last_name'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes a candidate key?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A minimal set of attributes that can uniquely identify a row in a table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that can be duplicated in a table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of non-unique attributes used to index a table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that must be a composite key.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer correctly identifies the candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE products (
+  product_id INT,
+  product_name VARCHAR(100),
+  sku VARCHAR(50), // Stock-keeping unit
+  price DECIMAL(10, 2),
+  PRIMARY KEY (product_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, sku'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_name, sku'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'sku, price'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, price'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an example of a candidate key?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ssn'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '(order_id, product_id)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'email, phone_number'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'employee_id, department_id'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE shipments (
+  shipment_id INT,
+  order_id INT,
+  product_id INT,
+  shipment_date DATE,
+  PRIMARY KEY (shipment_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'shipment_id, order_id, product_id'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id, product_id'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'shipment_id, shipment_date'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, shipment_date'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true about candidate keys?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys are minimal super keys that can uniquely identify a row in a table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys can be composite keys only.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table can have only one candidate key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys cannot be unique.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE orders (
+  order_id INT,
+  product_id INT,
+  customer_id INT,
+  order_date DATE,
+  PRIMARY KEY (order_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id, product_id, customer_id'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, customer_id'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id, order_date'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_date, product_id'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes a super key?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that uniquely identify a row, which may contain additional attributes beyond those necessary for uniqueness.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A minimal set of attributes that uniquely identify a row, without any additional attributes.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that is not unique but can be used to index a table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that must be a composite key.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE users (
+  user_id INT,
+  username VARCHAR(50),
+  email VARCHAR(100),
+  password VARCHAR(100),
+  PRIMARY KEY (user_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'user_id, username, email'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'username, email'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'user_id, password'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'email, password'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an example of a composite candidate key?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '(order_id, product_id)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'employee_id'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ssn'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'email'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE inventory (
+  inventory_id INT,
+  product_id INT,
+  warehouse_id INT,
+  stock_level INT,
+  PRIMARY KEY (inventory_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'inventory_id, product_id, warehouse_id'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, warehouse_id'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'inventory_id, stock_level'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, stock_level'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true about super keys?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A super key is a set of attributes that can uniquely identify a row in a table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A super key is always a single attribute that can uniquely identify a row.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A super key cannot contain any additional attributes beyond those necessary for uniqueness.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table can have only one super key.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE orders (
+  order_id INT,
+  customer_id INT,
+  order_date DATE,
+  PRIMARY KEY (order_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id, customer_id'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'customer_id, order_date'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_id'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'order_date, order_id'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer correctly identifies the candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE products (
+  product_id INT,
+  product_name VARCHAR(100),
+  sku VARCHAR(50),
+  price DECIMAL(10, 2),
+  PRIMARY KEY (product_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, sku'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_name, sku'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'sku, price'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'product_id, price'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes a candidate key?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A minimal set of attributes that can uniquely identify a row in a table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that can be duplicated in a table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of non-unique attributes used to index a table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A set of attributes that must be a composite key.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns could be candidate keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE employees (
+  employee_id INT,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  ssn VARCHAR(11),
+  email VARCHAR(100),
+  PRIMARY KEY (employee_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'employee_id, ssn, email'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name, last_name, ssn'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name, email'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ssn, last_name'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true about candidate keys?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys are minimal super keys that can uniquely identify a row in a table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys can have duplicate values in a table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table can have only one candidate key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate keys must always be composite keys.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
+        [QuizMarkdownType.CODE, `CREATE TABLE students (
+  student_id INT,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  email VARCHAR(100),
+  PRIMARY KEY (student_id)
+);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'student_id, email'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'first_name, last_name'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'email, first_name'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'student_id, first_name'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;

@@ -2,7 +2,7 @@ import { buttonVariants } from '@/components/ui/common/shadcn/button';
 import { FormField, FormItem } from '@/components/ui/common/shadcn/form';
 import { Label } from '@/components/ui/common/shadcn/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/common/shadcn/radio-group';
-import { Answer } from '@/lib/data/quiz-data';
+import { Answer } from '@/lib/data/types';
 import { cn } from '@/lib/utils';
 import { UseFormReturn } from 'react-hook-form';
 import { forwardRef, useImperativeHandle, useRef } from 'react';

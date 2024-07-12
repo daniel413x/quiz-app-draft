@@ -66,85 +66,121 @@ const quizData: QuizData = {
     questions: [
       {
         question: [
-          [QuizMarkdownType.TEXT, 'How can you listen for a click event on a button with the ID'],
-          [QuizMarkdownType.INLINE_CODE, 'myButton'],
-          [QuizMarkdownType.TEXT, 'using JavaScript?'],
-        ],
-        answers: [
-          { id: '0', answer: [[QuizMarkdownType.CODE, 'document.getElementById("myButton").addEventListener("click", function() {...})']] },
-          { id: '1', answer: [[QuizMarkdownType.CODE, 'document.getElementById("myButton").on("click", function() {...})']] },
-          { id: '2', answer: [[QuizMarkdownType.CODE, 'document.querySelector("#myButton").on("click", function() {...})']] },
-          { id: '3', answer: [[QuizMarkdownType.CODE, 'document.querySelector("#myButton").click(function() {...})']] },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
-          [QuizMarkdownType.INLINE_KATEX, '(1, 1)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(4, 5)'],
-          [QuizMarkdownType.TEXT, '?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '3'],
+          [QuizMarkdownType.TEXT, 'Consider the following tables showing sales and product tables in a SQL database. These entities are in violation of which normal form?'],
+          [QuizMarkdownType.TABLE, {
+            name: 'Sales table',
+            data: [
+              {
+                id: '1', sale_id: 'S001', product_id: 'P001', sale_date: '2023-07-01', customer_name: 'John Doe', product_name: 'Laptop',
+              },
+              {
+                id: '2', sale_id: 'S002', product_id: 'P002', sale_date: '2023-07-02', customer_name: 'Jane Smith', product_name: 'Smartphone',
+              },
+              {
+                id: '3', sale_id: 'S003', product_id: 'P001', sale_date: '2023-07-03', customer_name: 'Alice Johnson', product_name: 'Laptop',
+              },
             ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '5'],
+            cols: [
+              { accessorKey: 'sale_id', header: 'id' },
+              { accessorKey: 'product_id', header: 'product_id' },
+              { accessorKey: 'sale_date', header: 'date' },
+              { accessorKey: 'customer_name', header: 'customer_name' },
+              { accessorKey: 'product_name', header: 'product_name' },
             ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '6'],
+          }],
+          [QuizMarkdownType.TABLE, {
+            name: 'Product table',
+            data: [
+              {
+                id: '1', product_id: 'P001', product_name: 'Laptop', category: 'Electronics',
+              },
+              {
+                id: '2', product_id: 'P002', product_name: 'Smartphone', category: 'Electronics',
+              },
             ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.INLINE_KATEX, '7'],
+            cols: [
+              { accessorKey: 'product_id', header: 'id' },
+              { accessorKey: 'product_name', header: 'name' },
+              { accessorKey: 'category', header: 'category' },
             ],
-          },
-        ],
-        correctAnswer: '1',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the Euclidean distance between the points'],
-          [QuizMarkdownType.INLINE_KATEX, '(1, 1)'],
-          [QuizMarkdownType.TEXT, 'and'],
-          [QuizMarkdownType.INLINE_KATEX, '(4, 5)'],
-          [QuizMarkdownType.TEXT, '?'],
+          }],
         ],
         answers: [
           {
             id: '0',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '3'],
+              [QuizMarkdownType.TEXT, 'Violation of 1NF'],
             ],
           },
           {
             id: '1',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '5'],
+              [QuizMarkdownType.TEXT, 'Violation of 2NF'],
             ],
           },
           {
             id: '2',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '6'],
+              [QuizMarkdownType.TEXT, 'Violation of 3NF'],
             ],
           },
           {
             id: '3',
             answer: [
-              [QuizMarkdownType.INLINE_KATEX, '7'],
+              [QuizMarkdownType.TEXT, 'None of the above'],
+            ],
+          },
+        ],
+        correctAnswer: '2',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. These entities are in violation of which normal form?'],
+          [QuizMarkdownType.TABLE, {
+            name: 'Employee table',
+            data: [
+              {
+                id: '1', employeeId: 'E001', employeeName: 'Alice', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+              },
+              {
+                id: '2', employeeId: 'E002', employeeName: 'Bob', projectId: 'P102', projectName: 'Project Beta', projectManager: 'Jane Doe',
+              },
+              {
+                id: '3', employeeId: 'E003', employeeName: 'Charlie', projectId: 'P101', projectName: 'Project Alpha', projectManager: 'John Smith',
+              },
+            ],
+            cols: [
+              { accessorKey: 'employeeId', header: 'id' },
+              { accessorKey: 'employeeName', header: 'name' },
+              { accessorKey: 'projectId', header: 'project_id' },
+              { accessorKey: 'projectName', header: 'project_name' },
+              { accessorKey: 'projectManager', header: 'project_manager' },
+            ],
+          }],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'None of the above'],
             ],
           },
         ],
