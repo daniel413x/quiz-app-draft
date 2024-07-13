@@ -1,4 +1,4 @@
-import { Question } from '@/lib/data/quiz-data';
+import { Question } from '@/lib/data/types';
 import { create } from 'zustand';
 
 interface UseUserQuizDataStore {
