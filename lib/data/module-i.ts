@@ -1302,7 +1302,6 @@ public void readFile(String filePath) throws IOException {
         [QuizMarkdownType.TEXT, 'Consider the following code block:'],
         [QuizMarkdownType.CODE, `PrintWriter writer = new PrintWriter(new FileWriter("example.txt"));
 writer.print("Hello, World!");
-// Missing writer.flush();
 writer.close();`],
         [QuizMarkdownType.TEXT, 'What is the potential issue with the above code?'],
       ],
@@ -1310,7 +1309,7 @@ writer.close();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Some data might not be written to "example.txt" because flush() is not called'],
+            [QuizMarkdownType.TEXT, 'Some data might not be written to "example.txt"'],
           ],
         },
         {
@@ -1804,7 +1803,9 @@ FileOutputStream fos = new FileOutputStream(outputFile);`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What benefit does using the @Override annotation provide during compilation?'],
+        [QuizMarkdownType.TEXT, 'What benefit does using the'],
+        [QuizMarkdownType.INLINE_CODE, '@Override'],
+        [QuizMarkdownType.TEXT, 'annotation provide during compilation?'],
       ],
       answers: [
         {
@@ -2590,7 +2591,9 @@ public class Main {
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What is the purpose of the hashCode() method in Java?'],
+        [QuizMarkdownType.TEXT, 'What is the purpose of the'],
+        [QuizMarkdownType.INLINE_CODE, 'hashCode()'],
+        [QuizMarkdownType.TEXT, 'method in Java?'],
       ],
       answers: [
         {
@@ -2686,31 +2689,31 @@ public class Main {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What is the purpose of the equals() method in Java?'],
+        [QuizMarkdownType.TEXT, 'Which method is used to determine if two objects of a class are equivalent?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'To determine if two objects of a class are equivalent'],
+            [QuizMarkdownType.INLINE_CODE, 'equals()'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'To generate a unique hash value for an object'],
+            [QuizMarkdownType.INLINE_CODE, 'hashCode()'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'To convert an object into a string representation'],
+            [QuizMarkdownType.INLINE_CODE, 'is()'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'To clone an object'],
+            [QuizMarkdownType.INLINE_CODE, 'isEqual()'],
           ],
         },
       ],
@@ -5334,8 +5337,8 @@ writer.close();`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'Evaluate: The code'],
-        [QuizMarkdownType.INLINE_CODE, 'Class A extends B'],
-        [QuizMarkdownType.TEXT, 'is possible ven if class'],
+        [QuizMarkdownType.INLINE_CODE, 'Class A extends B {}'],
+        [QuizMarkdownType.TEXT, 'is possible even if class'],
         [QuizMarkdownType.INLINE_CODE, 'B'],
         [QuizMarkdownType.TEXT, 'is modified by the'],
         [QuizMarkdownType.INLINE_CODE, 'final'],
@@ -6883,7 +6886,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           name: 'Employee table',
           data: [
@@ -6968,7 +6971,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7020,7 +7023,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7070,7 +7073,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7122,7 +7125,73 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1', validate: 'validate the project is correct and all necessary information is available',
+            },
+            {
+              _tableDataColId: '2', compile: 'compile the source code of the project',
+            },
+            {
+              _tableDataColId: '3', test: 'test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+            },
+            {
+              _tableDataColId: '4', package: 'take the compiled code and package it in its distributable format, such as a JAR',
+            },
+            {
+              _tableDataColId: '5', verify: 'run any checks on results of integration tests to ensure quality criteria are met',
+            },
+            {
+              _tableDataColId: '6', install: 'install the package into the local repository, for use as a dependency in other projects locally',
+            },
+            {
+              _tableDataColId: '7', deploy: 'done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7172,7 +7241,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7222,7 +7291,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7287,7 +7356,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, email'],
+            [QuizMarkdownType.TEXT, 'id, email'],
           ],
         },
         {
@@ -7305,7 +7374,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, first_name'],
+            [QuizMarkdownType.TEXT, 'id, first_name'],
           ],
         },
       ],
@@ -7485,46 +7554,15 @@ for (iterator.hasNext(); String element = iterator.next()) {
         },
       ],
       correctAnswer: '0',
-    }, {
-      question: [
-        [QuizMarkdownType.TEXT, 'Which of the following is an example of a candidate key?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'ssn'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, '(order_id, product_id)'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'email, phone_number'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'employee_id, department_id'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
     },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE shipments (
   id INT,
+  date DATE,
   order_id INT,
   product_id INT,
-  shipment_date DATE,
   PRIMARY KEY (id)
 );`],
       ],
@@ -7544,13 +7582,13 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, shipment_date'],
+            [QuizMarkdownType.TEXT, 'id, date'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, shipment_date'],
+            [QuizMarkdownType.TEXT, 'product_id, date'],
           ],
         },
       ],
@@ -7595,7 +7633,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
   id INT,
   product_id INT,
   customer_id INT,
-  order_date DATE,
+  date DATE,
   PRIMARY KEY (id)
 );`],
       ],
@@ -7603,25 +7641,31 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, product_id, customer_id'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, customer_id'],
+            [QuizMarkdownType.INLINE_CODE, 'product_id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'customer_id'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, order_date'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'order_date'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'order_date, product_id'],
+            [QuizMarkdownType.INLINE_CODE, 'order_date'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'product_id'],
           ],
         },
       ],
@@ -7674,25 +7718,35 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, username, email'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'username'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'username, email'],
+            [QuizMarkdownType.INLINE_CODE, 'username'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, password'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'password'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'email, password'],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'password'],
           ],
         },
       ],
@@ -7706,25 +7760,27 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, '(order_id, product_id)'],
+            [QuizMarkdownType.INLINE_CODE, 'order_id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'product_id'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'employee_id'],
+            [QuizMarkdownType.INLINE_CODE, 'employee_id'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'ssn'],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'email'],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
       ],
@@ -7764,44 +7820,6 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
-        [QuizMarkdownType.CODE, `CREATE TABLE orders (
-  order_id INT,
-  customer_id INT,
-  order_date DATE,
-  PRIMARY KEY (order_id)
-);`],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id, customer_id'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'customer_id, order_date'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_date, order_id'],
-          ],
-        },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer correctly identifies the candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE products (
   product INT,
@@ -7815,25 +7833,33 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, sku'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'sku'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'name, sku'],
+            [QuizMarkdownType.INLINE_CODE, 'name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'sku'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'sku, price'],
+            [QuizMarkdownType.INLINE_CODE, 'price'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'sku'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, price'],
+            [QuizMarkdownType.INLINE_CODE, 'price'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
       ],
@@ -7887,25 +7913,37 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, ssn, email'],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'first_name, last_name, ssn'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'last_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'first_name, email'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'ssn, last_name'],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'last_name'],
           ],
         },
       ],
@@ -7947,36 +7985,44 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE students (
-  student_id INT,
+  id INT,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   email VARCHAR(100),
-  PRIMARY KEY (student_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, email'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'first_name, last_name'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'last_name'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'email, first_name'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, first_name'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
       ],
@@ -8215,25 +8261,33 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'By using the static keyword'],
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'keyword'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'By using the final keyword'],
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'final'],
+            [QuizMarkdownType.TEXT, 'keyword'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'By using the private keyword'],
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+            [QuizMarkdownType.TEXT, 'keyword'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'By using the public keyword'],
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'public'],
+            [QuizMarkdownType.TEXT, 'keyword'],
           ],
         },
       ],
@@ -8504,7 +8558,8 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the subclass using this()'],
+            [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the subclass using'],
+            [QuizMarkdownType.INLINE_CODE, 'this()'],
           ],
         },
         {
@@ -8530,25 +8585,33 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Java Compiler (javac)'],
+            [QuizMarkdownType.TEXT, 'Java Compiler ('],
+            [QuizMarkdownType.INLINE_CODE, 'javac'],
+            [QuizMarkdownType.TEXT, ')'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Java Virtual Machine (JVM)'],
+            [QuizMarkdownType.TEXT, 'Java Virtual Machine ('],
+            [QuizMarkdownType.TEXT, 'JVM'],
+            [QuizMarkdownType.TEXT, ')'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Java Runtime Environment (JRE)'],
+            [QuizMarkdownType.TEXT, 'Java Runtime Environment ('],
+            [QuizMarkdownType.TEXT, 'JRE'],
+            [QuizMarkdownType.TEXT, ')'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Java Development Kit (JDK)'],
+            [QuizMarkdownType.TEXT, 'Java Development Kit ('],
+            [QuizMarkdownType.TEXT, 'JDK'],
+            [QuizMarkdownType.TEXT, ')'],
           ],
         },
       ],
@@ -8582,6 +8645,57 @@ for (iterator.hasNext(); String element = iterator.next()) {
           answer: [
             [QuizMarkdownType.TEXT, 'It compiles Java programs'],
           ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Identify the set of attributes that are the project coordinates of a'],
+        [QuizMarkdownType.INLINE_CODE, 'pom.xml'],
+        [QuizMarkdownType.TEXT, 'file.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `<groupId>com.skillstorm</groupId>
+  <artifactId>age-validator</artifactId>
+  <version>1.0.0</version>`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source> 
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `<project xmlns="..." xmlns:xsi="...">
+  <modelVersion>4.0.0</modelVersion>
+  ...
+</project>`],
+          ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -8696,19 +8810,23 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Completion of the thread\'s run method'],
+            [QuizMarkdownType.TEXT, 'Completion of the thread\'s'],
+            [QuizMarkdownType.INLINE_CODE, 'run'],
+            [QuizMarkdownType.TEXT, 'method'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Calling thread.sleep()'],
+            [QuizMarkdownType.TEXT, 'Calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.sleep()'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Waiting indefinitely using thread.wait()'],
+            [QuizMarkdownType.TEXT, 'Waiting indefinitely using'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.wait()'],
           ],
         },
       ],
@@ -8754,13 +8872,18 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'By calling thread.join(milliseconds) or thread.sleep(milliseconds)'],
+            [QuizMarkdownType.TEXT, 'By calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.join(milliseconds)'],
+            [QuizMarkdownType.TEXT, 'or'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.sleep(milliseconds)'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'By calling thread.join() without a timeout'],
+            [QuizMarkdownType.TEXT, 'By calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.join()'],
+            [QuizMarkdownType.TEXT, 'without a timeout'],
           ],
         },
         {
@@ -8772,39 +8895,8 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'By calling thread.start()'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'What happens when a thread completes its execution?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'It enters the TERMINATED state'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'It enters the WAITING state'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'It enters the RUNNABLE state'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'It enters the BLOCKED state'],
+            [QuizMarkdownType.TEXT, 'By calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.start()'],
           ],
         },
       ],
@@ -8940,38 +9032,6 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which thread state indicates that the thread has completed its execution?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'TERMINATED'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'RUNNABLE'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'BLOCKED'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'NEW'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting indefinitely for another thread to perform a particular action?'],
       ],
       answers: [
@@ -9004,7 +9064,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting to acquire a lock?'],
+        [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting on a lock before continuing?'],
       ],
       answers: [
         {
@@ -9029,38 +9089,6 @@ for (iterator.hasNext(); String element = iterator.next()) {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'What does the RUNNABLE state signify in a thread\'s lifecycle?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'The thread is ready to run and is waiting for CPU time'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'The thread has been created but not yet started'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'The thread is waiting indefinitely'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'The thread has completed its execution'],
           ],
         },
       ],
@@ -9093,6 +9121,592 @@ for (iterator.hasNext(); String element = iterator.next()) {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'The Maven Build Lifecycle',
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Compile the source code of the project',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "verify" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "install" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Compile the source code of the project',
+              compile: 'Validate the project is correct and all necessary information is available',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "compile" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "install" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many possible states can a thread have in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Six'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Five'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Seven'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Four'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Compile the source code of the project',
+              test: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "test" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "install" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Compile the source code of the project',
+              test: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "test" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "install" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Compile the source code of the project',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              verify: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              install: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "install" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "test" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'The Maven Build Lifecycle',
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Compile the source code of the project',
+              verify: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "package" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "verify" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "deploy" and "install" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Calling the method'],
+        [QuizMarkdownType.INLINE_CODE, 'join(3000)'],
+        [QuizMarkdownType.TEXT, 'method on a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'will put that thread into which of the following states?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Calling the method'],
+        [QuizMarkdownType.INLINE_CODE, 'join(3000)'],
+        [QuizMarkdownType.TEXT, 'on a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'will put that thread into which of the following states?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Calling the method'],
+        [QuizMarkdownType.INLINE_CODE, 'sleep(3000)'],
+        [QuizMarkdownType.TEXT, 'on a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'will put that thread into which of the following states?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 6 possible states of a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'in Java. But 2 of the columns have had their definitions erroneously swapped. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Thread states',
+          data: [
+            {
+              _tableDataColId: '1',
+              new: 'Created but not yet started',
+              runnable: 'Started (thread.start())',
+              blocked: 'Waiting indefinitely (thread.join() or thread.wait())',
+              waiting: 'Waiting on some lock before continuing',
+              timedWaiting: 'Waiting for a specified amount of time (thread.join(3000))',
+              terminated: 'Finished',
+            },
+          ],
+          cols: [
+            { accessorKey: 'new', header: 'NEW' },
+            { accessorKey: 'runnable', header: 'RUNNABLE' },
+            { accessorKey: 'blocked', header: 'BLOCKED' },
+            { accessorKey: 'waiting', header: 'WAITING' },
+            { accessorKey: 'timedWaiting', header: 'TIMED-WAITING' },
+            { accessorKey: 'terminated', header: 'TERMINATED' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "BLOCKED" and "WAITING" columns'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "BLOCKED" and "TIMED-WAITING" columns'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "WAITING" and "TERMINATED" columns'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "RUNNABLE" and "NEW" columns'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 6 possible states of a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'in Java. But 2 of the columns have had their definitions erroneously swapped. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Thread states',
+          data: [
+            {
+              _tableDataColId: '1',
+              new: 'Created but not yet started',
+              runnable: 'Started (thread.start())',
+              blocked: 'Waiting for a specified amount of time (thread.join(3000))',
+              waiting: 'Waiting indefinitely (thread.join() or thread.wait())',
+              timedWaiting: 'Waiting on some lock before continuing',
+              terminated: 'Finished',
+            },
+          ],
+          cols: [
+            { accessorKey: 'new', header: 'NEW' },
+            { accessorKey: 'runnable', header: 'RUNNABLE' },
+            { accessorKey: 'blocked', header: 'BLOCKED' },
+            { accessorKey: 'waiting', header: 'WAITING' },
+            { accessorKey: 'timedWaiting', header: 'TIMED-WAITING' },
+            { accessorKey: 'terminated', header: 'TERMINATED' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "BLOCKED" and "TIMED-WAITING" columns'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "RUNNABLE" and "WAITING" columns'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "WAITING" and "TERMINATED" columns'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "RUNNABLE" and "NEW" columns'],
           ],
         },
       ],

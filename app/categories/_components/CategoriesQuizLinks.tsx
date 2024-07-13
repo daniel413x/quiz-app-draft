@@ -1,5 +1,5 @@
 import Link from '@/components/ui/common/Link';
-import { QuizDataObject } from '@/lib/data/quiz-data';
+import { QuizDataObject } from '@/lib/data/types';
 
 interface CategoriesQuizLinksProps {
   quizzes: QuizDataObject[];
