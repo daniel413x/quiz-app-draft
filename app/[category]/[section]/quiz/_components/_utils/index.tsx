@@ -24,7 +24,8 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
 }) => qmd.map((tuple, i) => {
   if (tuple[0] === QuizMarkdownType.TEXT) {
     return (
-      <span key={i}>
+      // add whitespace-normal for iOS
+      <span className="whitespace-normal" key={i}>
         {tuple[1] as string}
       </span>
     );
