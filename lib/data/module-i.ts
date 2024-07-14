@@ -4688,6 +4688,393 @@ public class Main {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The following'],
+        [QuizMarkdownType.INLINE_CODE, 'try'],
+        [QuizMarkdownType.TEXT, 'block in the following code is known as a ___-____-____'],
+        [QuizMarkdownType.CODE, `import java.io.FileInputStream;
+import java.io.IOException;
+
+public class FileReadingExample {
+    public static void main(String[] args) {
+        try (FileInputStream fis = new FileInputStream("example.txt")) {
+            int byteData;
+            while ((byteData = fis.read()) != -1) {
+                System.out.print((char) byteData);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-resources'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-catch'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-stream'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-files'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following tables defining the employees, their roles, jobs, and states.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'employee_roles Table',
+          data: [
+            { _tableDataColId: '1', employee_id: 'E001', job_code: 'J01' },
+            { _tableDataColId: '2', employee_id: 'E001', job_code: 'J02' },
+            { _tableDataColId: '3', employee_id: 'E002', job_code: 'J02' },
+            { _tableDataColId: '4', employee_id: 'E002', job_code: 'J03' },
+          ],
+          cols: [
+            { accessorKey: 'employee_id', header: 'EMPLOYEE_ID' },
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'employees Table',
+          data: [
+            {
+              _tableDataColId: '1', id: 'E001', name: 'Alice', state_code: '26',
+            },
+            {
+              _tableDataColId: '2', id: 'E002', name: 'Bob', state_code: '56',
+            },
+          ],
+          cols: [
+            { accessorKey: 'id', header: 'ID' },
+            { accessorKey: 'name', header: 'NAME' },
+            { accessorKey: 'state_code', header: 'STATE_CODE' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'jobs Table',
+          data: [
+            { _tableDataColId: '1', job_code: 'J01', job: 'Chef' },
+            { _tableDataColId: '2', job_code: 'J02', job: 'Waiter' },
+            { _tableDataColId: '3', job_code: 'J03', job: 'Bartender' },
+          ],
+          cols: [
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+            { accessorKey: 'job', header: 'JOB' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'states Table',
+          data: [
+            { _tableDataColId: '1', state_code: '26', home_state: 'Michigan' },
+            { _tableDataColId: '2', state_code: '56', home_state: 'Wyoming' },
+          ],
+          cols: [
+            { accessorKey: 'state_code', header: 'STATE_CODE' },
+            { accessorKey: 'home_state', header: 'HOME_STATE' },
+          ],
+        }],
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true regarding the tables above?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'EMPLOYEE_ID and JOB_CODE form a composite primary key in the employee_roles table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'STATE_CODE in the employees table is a foreign key referencing the states table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'JOB_CODE in the employee_roles table is a foreign key referencing the jobs table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All of the above.'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following table?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Employee Jobs',
+          data: [
+            {
+              _tableDataColId: '1', id: 'E001', name: 'Alice', job_code: 'J01', job: 'Chef', state_code: '26', home_state: 'Michigan',
+            },
+            {
+              _tableDataColId: '2', id: 'E001', name: 'Alice', job_code: 'J02', job: 'Waiter', state_code: '26', home_state: 'Michigan',
+            },
+            {
+              _tableDataColId: '3', id: 'E002', name: 'Bob', job_code: 'J02', job: 'Waiter', state_code: '56', home_state: 'Wyoming',
+            },
+            {
+              _tableDataColId: '4', id: 'E002', name: 'Bob', job_code: 'J03', job: 'Bartender', state_code: '56', home_state: 'Wyoming',
+            },
+            {
+              _tableDataColId: '5', id: 'E003', name: 'Alice', job_code: 'J01', job: 'Chef', state_code: '56', home_state: 'Wyoming',
+            },
+          ],
+          cols: [
+            { accessorKey: 'id', header: 'ID' },
+            { accessorKey: 'name', header: 'NAME' },
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+            { accessorKey: 'job', header: 'JOB' },
+            { accessorKey: 'state_code', header: 'STATE_CODE' },
+            { accessorKey: 'home_state', header: 'HOME_STATE' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ID and JOB_CODE form a composite primary key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ID and JOB_CODE form a composite candidate key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The table is not in 2NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If a table does not contain a primary key, then it is not in ___'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '2NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '3NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BCNF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1NF'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the context of the First Normal Form (1NF), which of the following statements is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column must have only one value for each row in the table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell can hold more than one value.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table does not need a primary key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Duplicated rows are allowed as long as columns are unique.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a requirement for a table to comply with the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No duplicated rows or columns.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column can have multiple values for each row.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table must have more than one primary key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Rows can be duplicated, but columns cannot.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is atomicity in the context of the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell must not hold more than one value.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell can hold multiple values.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table must have a composite key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column must have a unique name.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is false regarding the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell can hold multiple values.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'There must be a primary key for identification.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No duplicated rows or columns are allowed.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column must have only one value for each row in the table.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following criteria must be met for a table to be in the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell must not hold more than one value (atomicity).'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'There must be a foreign key for identification.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Duplicated rows and columns are allowed.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column can have multiple values for each row in the table.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'When should you call the flush() method on a PrintWriter?'],
       ],
       answers: [
@@ -5643,7 +6030,7 @@ writer.close();`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'The following program will function as intended'],
+        [QuizMarkdownType.TEXT, 'The following lines of code will function as intended'],
         [QuizMarkdownType.CODE, `FileInputStream fis = new FileInputStream("example.bin");
 int data = fis.read();
 while (data != -1) {
@@ -5670,7 +6057,41 @@ fis.close();`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'The following program will function as intended'],
+        [QuizMarkdownType.TEXT, 'Assess: In order to read the bytes of a file with'],
+        [QuizMarkdownType.INLINE_CODE, 'FileInputStream'],
+        [QuizMarkdownType.TEXT, ', it is necessary to enclose the process in a try-catch block'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because FileInputStream operations can throw IOException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, it is not necessary to handle exceptions when reading files'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because all file operations must be enclosed in try-catch blocks'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, exceptions will be handled automatically by the JVM'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following lines of code will function as intended'],
         [QuizMarkdownType.CODE, `FileInputStream fis = new FileInputStream("example.bin");
 byte[] data = fis.readBytes();
 System.out.print(new String(data));
@@ -7448,19 +7869,19 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns could be candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE employees (
-  employee_id INT,
+  id INT,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   ssn VARCHAR(11),
   email VARCHAR(100),
-  PRIMARY KEY (employee_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'employee_id, ssn, email'],
+            [QuizMarkdownType.TEXT, 'id, ssn, email'],
           ],
         },
         {
@@ -7781,6 +8202,74 @@ for (iterator.hasNext(); String element = iterator.next()) {
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'email'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where are class variables (static variables) stored memory-wise in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the method area of the heap'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the stack'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the heap, along with instance variables'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the CPU registers'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Assess: In order to read the bytes of a file with'],
+        [QuizMarkdownType.INLINE_CODE, 'FileInputStream'],
+        [QuizMarkdownType.TEXT, ', is it necessary to enclose the process in a try-catch block'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because FileInputStream operations can throw'],
+            [QuizMarkdownType.INLINE_CODE, 'IOException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, it is not necessary to handle exceptions when reading files'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because all file operations must be enclosed in try-catch blocks'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, exceptions will be handled automatically by the JVM'],
           ],
         },
       ],
@@ -8189,6 +8678,106 @@ for (iterator.hasNext(); String element = iterator.next()) {
       ],
       correctAnswer: '0',
     },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is upcasting related to polymorphism in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, it enables a superclass reference to call subclass methods at runtime'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, upcasting and polymorphism are unrelated concepts'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, upcasting is the same as polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, upcasting is only related to inheritance'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an example of upcasting in Java?'],
+        [QuizMarkdownType.CODE, 'Animal myDog = new Dog();'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, this is an example of upcasting'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, this is not an example of upcasting'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, this is an example of downcasting'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, this is only an example of inheritance'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of the'],
+        [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As long as the object that contains them exists'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As long as the method in which they are declared exists'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Until the program terminates'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Until the variable goes out of scope'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'How long do instance variables live in Java?'],
@@ -8295,6 +8884,40 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'A functional interface such as'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'has only one abstract method, which must be implemented by the class that implements the interface. In terms of the principles of abstraction, a functional interface'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only shows what needs to be shown'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only shows clear implementations'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shows semantically ambiguous instructions'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shows half-implemented abstractions'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Where are class variables stored in memory compared to instance variables?'],
       ],
       answers: [
@@ -8359,6 +8982,218 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define how a thread will run'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To manage thread lifecycle methods like start and stop'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To provide advanced synchronization mechanisms'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To handle exceptions in a multithreaded environment'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a functional interface in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface with exactly one abstract method'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface with multiple abstract methods'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface with no methods'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface that extends another interface'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Why might you choose to use the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface over extending the'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it allows you to implement multiple interfaces and extend another class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it provides better performance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it offers more thread management methods'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it simplifies exception handling in threads'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many methods does the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface contain?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Two'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Three'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Four'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method must be implemented when using the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'start()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'execute()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'init()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the interface'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is a functional interface with the abstract method'],
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an interface with two abstract methods'],
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'lock()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an interface with the method'],
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+            [QuizMarkdownType.TEXT, 'and the field'],
+            [QuizMarkdownType.INLINE_CODE, 'status'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an interface with the field'],
+            [QuizMarkdownType.INLINE_CODE, 'status'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'How do instance variables differ in scope compared to class variables?'],
       ],
       answers: [
@@ -8416,6 +9251,42 @@ for (iterator.hasNext(); String element = iterator.next()) {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'must obtain a permit from a'],
+        [QuizMarkdownType.INLINE_CODE, 'Semaphore'],
+        [QuizMarkdownType.TEXT, 'to execute code, the thread\'s state is considered'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
           ],
         },
       ],
@@ -8546,13 +9417,18 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What happens if neither this() nor super() is explicitly called in a constructor?'],
+        [QuizMarkdownType.TEXT, 'What happens if neither'],
+        [QuizMarkdownType.INLINE_CODE, 'this()'],
+        [QuizMarkdownType.TEXT, 'nor'],
+        [QuizMarkdownType.INLINE_CODE, 'super()'],
+        [QuizMarkdownType.TEXT, 'is explicitly called in a constructor?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the superclass using super()'],
+            [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the superclass using'],
+            [QuizMarkdownType.INLINE_CODE, 'super()'],
           ],
         },
         {
