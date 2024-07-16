@@ -40,9 +40,11 @@ const DataTable = ({
       'mb-2': mbMargin,
     })}
     >
-      <div className="w-full border-b text-center py-3">
-        {tableData.name}
-      </div>
+      {!tableData.name ? null : (
+        <div className="w-full border-b text-center py-3">
+          {tableData.name}
+        </div>
+      )}
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

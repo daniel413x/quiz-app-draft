@@ -31,7 +31,8 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
     {...props}
   >
     <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-      <Circle className="h-max w-max fill-current text-purple-500 " />
+      {/* removed h-max and w-max for render fix in iOS */}
+      <Circle className="fill-current text-purple-500 " />
     </RadioGroupPrimitive.Indicator>
   </RadioGroupPrimitive.Item>
 ));

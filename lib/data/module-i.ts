@@ -1302,7 +1302,6 @@ public void readFile(String filePath) throws IOException {
         [QuizMarkdownType.TEXT, 'Consider the following code block:'],
         [QuizMarkdownType.CODE, `PrintWriter writer = new PrintWriter(new FileWriter("example.txt"));
 writer.print("Hello, World!");
-// Missing writer.flush();
 writer.close();`],
         [QuizMarkdownType.TEXT, 'What is the potential issue with the above code?'],
       ],
@@ -1310,7 +1309,7 @@ writer.close();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Some data might not be written to "example.txt" because flush() is not called'],
+            [QuizMarkdownType.TEXT, 'Some data might not be written to "example.txt"'],
           ],
         },
         {
@@ -1804,7 +1803,9 @@ FileOutputStream fos = new FileOutputStream(outputFile);`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What benefit does using the @Override annotation provide during compilation?'],
+        [QuizMarkdownType.TEXT, 'What benefit does using the'],
+        [QuizMarkdownType.INLINE_CODE, '@Override'],
+        [QuizMarkdownType.TEXT, 'annotation provide during compilation?'],
       ],
       answers: [
         {
@@ -2590,7 +2591,9 @@ public class Main {
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What is the purpose of the hashCode() method in Java?'],
+        [QuizMarkdownType.TEXT, 'What is the purpose of the'],
+        [QuizMarkdownType.INLINE_CODE, 'hashCode()'],
+        [QuizMarkdownType.TEXT, 'method in Java?'],
       ],
       answers: [
         {
@@ -2686,31 +2689,31 @@ public class Main {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What is the purpose of the equals() method in Java?'],
+        [QuizMarkdownType.TEXT, 'Which method is used to determine if two objects of a class are equivalent?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'To determine if two objects of a class are equivalent'],
+            [QuizMarkdownType.INLINE_CODE, 'equals()'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'To generate a unique hash value for an object'],
+            [QuizMarkdownType.INLINE_CODE, 'hashCode()'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'To convert an object into a string representation'],
+            [QuizMarkdownType.INLINE_CODE, 'is()'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'To clone an object'],
+            [QuizMarkdownType.INLINE_CODE, 'isEqual()'],
           ],
         },
       ],
@@ -4685,6 +4688,393 @@ public class Main {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The following'],
+        [QuizMarkdownType.INLINE_CODE, 'try'],
+        [QuizMarkdownType.TEXT, 'block in the following code is known as a ___-____-____'],
+        [QuizMarkdownType.CODE, `import java.io.FileInputStream;
+import java.io.IOException;
+
+public class FileReadingExample {
+    public static void main(String[] args) {
+        try (FileInputStream fis = new FileInputStream("example.txt")) {
+            int byteData;
+            while ((byteData = fis.read()) != -1) {
+                System.out.print((char) byteData);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-resources'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-catch'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-stream'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'try-with-files'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following tables defining the employees, their roles, jobs, and states.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'employee_roles Table',
+          data: [
+            { _tableDataColId: '1', employee_id: 'E001', job_code: 'J01' },
+            { _tableDataColId: '2', employee_id: 'E001', job_code: 'J02' },
+            { _tableDataColId: '3', employee_id: 'E002', job_code: 'J02' },
+            { _tableDataColId: '4', employee_id: 'E002', job_code: 'J03' },
+          ],
+          cols: [
+            { accessorKey: 'employee_id', header: 'EMPLOYEE_ID' },
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'employees Table',
+          data: [
+            {
+              _tableDataColId: '1', id: 'E001', name: 'Alice', state_code: '26',
+            },
+            {
+              _tableDataColId: '2', id: 'E002', name: 'Bob', state_code: '56',
+            },
+          ],
+          cols: [
+            { accessorKey: 'id', header: 'ID' },
+            { accessorKey: 'name', header: 'NAME' },
+            { accessorKey: 'state_code', header: 'STATE_CODE' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'jobs Table',
+          data: [
+            { _tableDataColId: '1', job_code: 'J01', job: 'Chef' },
+            { _tableDataColId: '2', job_code: 'J02', job: 'Waiter' },
+            { _tableDataColId: '3', job_code: 'J03', job: 'Bartender' },
+          ],
+          cols: [
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+            { accessorKey: 'job', header: 'JOB' },
+          ],
+        }],
+        [QuizMarkdownType.TABLE, {
+          name: 'states Table',
+          data: [
+            { _tableDataColId: '1', state_code: '26', home_state: 'Michigan' },
+            { _tableDataColId: '2', state_code: '56', home_state: 'Wyoming' },
+          ],
+          cols: [
+            { accessorKey: 'state_code', header: 'STATE_CODE' },
+            { accessorKey: 'home_state', header: 'HOME_STATE' },
+          ],
+        }],
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true regarding the tables above?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'EMPLOYEE_ID and JOB_CODE form a composite primary key in the employee_roles table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'STATE_CODE in the employees table is a foreign key referencing the states table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'JOB_CODE in the employee_roles table is a foreign key referencing the jobs table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All of the above.'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following table?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Employee Jobs',
+          data: [
+            {
+              _tableDataColId: '1', id: 'E001', name: 'Alice', job_code: 'J01', job: 'Chef', state_code: '26', home_state: 'Michigan',
+            },
+            {
+              _tableDataColId: '2', id: 'E001', name: 'Alice', job_code: 'J02', job: 'Waiter', state_code: '26', home_state: 'Michigan',
+            },
+            {
+              _tableDataColId: '3', id: 'E002', name: 'Bob', job_code: 'J02', job: 'Waiter', state_code: '56', home_state: 'Wyoming',
+            },
+            {
+              _tableDataColId: '4', id: 'E002', name: 'Bob', job_code: 'J03', job: 'Bartender', state_code: '56', home_state: 'Wyoming',
+            },
+            {
+              _tableDataColId: '5', id: 'E003', name: 'Alice', job_code: 'J01', job: 'Chef', state_code: '56', home_state: 'Wyoming',
+            },
+          ],
+          cols: [
+            { accessorKey: 'id', header: 'ID' },
+            { accessorKey: 'name', header: 'NAME' },
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+            { accessorKey: 'job', header: 'JOB' },
+            { accessorKey: 'state_code', header: 'STATE_CODE' },
+            { accessorKey: 'home_state', header: 'HOME_STATE' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ID and JOB_CODE form a composite primary key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ID and JOB_CODE form a composite candidate key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The table is not in 2NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If a table does not contain a primary key, then it is not in ___'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '2NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '3NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BCNF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1NF'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the context of the First Normal Form (1NF), which of the following statements is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column must have only one value for each row in the table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell can hold more than one value.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table does not need a primary key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Duplicated rows are allowed as long as columns are unique.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a requirement for a table to comply with the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No duplicated rows or columns.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column can have multiple values for each row.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table must have more than one primary key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Rows can be duplicated, but columns cannot.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is atomicity in the context of the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell must not hold more than one value.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell can hold multiple values.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A table must have a composite key.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column must have a unique name.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is false regarding the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell can hold multiple values.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'There must be a primary key for identification.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No duplicated rows or columns are allowed.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column must have only one value for each row in the table.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following criteria must be met for a table to be in the First Normal Form (1NF)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A single cell must not hold more than one value (atomicity).'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'There must be a foreign key for identification.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Duplicated rows and columns are allowed.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each column can have multiple values for each row in the table.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'When should you call the flush() method on a PrintWriter?'],
       ],
       answers: [
@@ -4885,7 +5275,7 @@ try (InputStream inputStream = new FileInputStream("file.txt")) {
       ],
       correctAnswer: '0',
     },
-    
+
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which design pattern helps mitigate high code coupling by allowing the creation of objects without specifying the exact class of object that will be created?'],
@@ -5308,11 +5698,11 @@ writer.close();`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'Evaluate: The code'],
-        [QuizMarkdownType.INLINE_CODE, `Class A extends B`],
+        [QuizMarkdownType.INLINE_CODE, 'Class A extends B'],
         [QuizMarkdownType.TEXT, 'is not possible if class'],
-        [QuizMarkdownType.INLINE_CODE, `B`],
+        [QuizMarkdownType.INLINE_CODE, 'B'],
         [QuizMarkdownType.TEXT, 'is modified by the'],
-        [QuizMarkdownType.INLINE_CODE, `final`],
+        [QuizMarkdownType.INLINE_CODE, 'final'],
         [QuizMarkdownType.TEXT, 'keyword'],
       ],
       answers: [
@@ -5334,11 +5724,11 @@ writer.close();`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'Evaluate: The code'],
-        [QuizMarkdownType.INLINE_CODE, `Class A extends B`],
-        [QuizMarkdownType.TEXT, 'is possible ven if class'],
-        [QuizMarkdownType.INLINE_CODE, `B`],
+        [QuizMarkdownType.INLINE_CODE, 'Class A extends B {}'],
+        [QuizMarkdownType.TEXT, 'is possible even if class'],
+        [QuizMarkdownType.INLINE_CODE, 'B'],
         [QuizMarkdownType.TEXT, 'is modified by the'],
-        [QuizMarkdownType.INLINE_CODE, `final`],
+        [QuizMarkdownType.INLINE_CODE, 'final'],
         [QuizMarkdownType.TEXT, 'keyword'],
       ],
       answers: [
@@ -5640,7 +6030,7 @@ writer.close();`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'The following program will function as intended'],
+        [QuizMarkdownType.TEXT, 'The following lines of code will function as intended'],
         [QuizMarkdownType.CODE, `FileInputStream fis = new FileInputStream("example.bin");
 int data = fis.read();
 while (data != -1) {
@@ -5667,7 +6057,41 @@ fis.close();`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'The following program will function as intended'],
+        [QuizMarkdownType.TEXT, 'Assess: In order to read the bytes of a file with'],
+        [QuizMarkdownType.INLINE_CODE, 'FileInputStream'],
+        [QuizMarkdownType.TEXT, ', it is necessary to enclose the process in a try-catch block'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because FileInputStream operations can throw IOException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, it is not necessary to handle exceptions when reading files'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because all file operations must be enclosed in try-catch blocks'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, exceptions will be handled automatically by the JVM'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following lines of code will function as intended'],
         [QuizMarkdownType.CODE, `FileInputStream fis = new FileInputStream("example.bin");
 byte[] data = fis.readBytes();
 System.out.print(new String(data));
@@ -5699,25 +6123,25 @@ fis.close();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, `.write()`],
+            [QuizMarkdownType.INLINE_CODE, '.write()'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, `.append()`],
+            [QuizMarkdownType.INLINE_CODE, '.append()'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, `.save()`],
+            [QuizMarkdownType.INLINE_CODE, '.save()'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, `.flush()`],
+            [QuizMarkdownType.INLINE_CODE, '.flush()'],
           ],
         },
       ],
@@ -6880,10 +7304,10 @@ for (iterator.hasNext(); String element = iterator.next()) {
       ],
       correctAnswer: '0',
     },
-    
+
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           name: 'Employee table',
           data: [
@@ -6968,7 +7392,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the assignments of employees to projects along with their project details. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7020,7 +7444,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing purchase orders. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7070,7 +7494,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the sales records. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7122,7 +7546,73 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1', validate: 'validate the project is correct and all necessary information is available',
+            },
+            {
+              _tableDataColId: '2', compile: 'compile the source code of the project',
+            },
+            {
+              _tableDataColId: '3', test: 'test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+            },
+            {
+              _tableDataColId: '4', package: 'take the compiled code and package it in its distributable format, such as a JAR',
+            },
+            {
+              _tableDataColId: '5', verify: 'run any checks on results of integration tests to ensure quality criteria are met',
+            },
+            {
+              _tableDataColId: '6', install: 'install the package into the local repository, for use as a dependency in other projects locally',
+            },
+            {
+              _tableDataColId: '7', deploy: 'done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 1NF'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 2NF'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Violation of 3NF'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of customers. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7172,7 +7662,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table showing the contact information of employees. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7222,7 +7712,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. This design pattern is a violation of which normal form??'],
+        [QuizMarkdownType.TEXT, 'Consider the following table of SQL data showing the enrollments of students in different courses along with their course details. This design pattern is a violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           data: [
             {
@@ -7287,7 +7777,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, email'],
+            [QuizMarkdownType.TEXT, 'id, email'],
           ],
         },
         {
@@ -7305,7 +7795,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, first_name'],
+            [QuizMarkdownType.TEXT, 'id, first_name'],
           ],
         },
       ],
@@ -7379,19 +7869,19 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns could be candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE employees (
-  employee_id INT,
+  id INT,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   ssn VARCHAR(11),
   email VARCHAR(100),
-  PRIMARY KEY (employee_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'employee_id, ssn, email'],
+            [QuizMarkdownType.TEXT, 'id, ssn, email'],
           ],
         },
         {
@@ -7485,46 +7975,15 @@ for (iterator.hasNext(); String element = iterator.next()) {
         },
       ],
       correctAnswer: '0',
-    }, {
-      question: [
-        [QuizMarkdownType.TEXT, 'Which of the following is an example of a candidate key?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'ssn'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, '(order_id, product_id)'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'email, phone_number'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'employee_id, department_id'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
     },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE shipments (
   id INT,
+  date DATE,
   order_id INT,
   product_id INT,
-  shipment_date DATE,
   PRIMARY KEY (id)
 );`],
       ],
@@ -7544,13 +8003,13 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, shipment_date'],
+            [QuizMarkdownType.TEXT, 'id, date'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, shipment_date'],
+            [QuizMarkdownType.TEXT, 'product_id, date'],
           ],
         },
       ],
@@ -7595,7 +8054,7 @@ for (iterator.hasNext(); String element = iterator.next()) {
   id INT,
   product_id INT,
   customer_id INT,
-  order_date DATE,
+  date DATE,
   PRIMARY KEY (id)
 );`],
       ],
@@ -7603,25 +8062,31 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, product_id, customer_id'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'product_id, customer_id'],
+            [QuizMarkdownType.INLINE_CODE, 'product_id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'customer_id'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, order_date'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'order_date'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'order_date, product_id'],
+            [QuizMarkdownType.INLINE_CODE, 'order_date'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'product_id'],
           ],
         },
       ],
@@ -7674,25 +8139,35 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, username, email'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'username'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'username, email'],
+            [QuizMarkdownType.INLINE_CODE, 'username'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, password'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'password'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'email, password'],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'password'],
           ],
         },
       ],
@@ -7706,25 +8181,95 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, '(order_id, product_id)'],
+            [QuizMarkdownType.INLINE_CODE, 'order_id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'product_id'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'employee_id'],
+            [QuizMarkdownType.INLINE_CODE, 'employee_id'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'ssn'],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'email'],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where are class variables (static variables) stored memory-wise in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the method area of the heap'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the stack'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the heap, along with instance variables'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the CPU registers'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Assess: In order to read the bytes of a file with'],
+        [QuizMarkdownType.INLINE_CODE, 'FileInputStream'],
+        [QuizMarkdownType.TEXT, ', is it necessary to enclose the process in a try-catch block'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because FileInputStream operations can throw'],
+            [QuizMarkdownType.INLINE_CODE, 'IOException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, it is not necessary to handle exceptions when reading files'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, because all file operations must be enclosed in try-catch blocks'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, exceptions will be handled automatically by the JVM'],
           ],
         },
       ],
@@ -7764,44 +8309,6 @@ for (iterator.hasNext(); String element = iterator.next()) {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
-        [QuizMarkdownType.CODE, `CREATE TABLE orders (
-  order_id INT,
-  customer_id INT,
-  order_date DATE,
-  PRIMARY KEY (order_id)
-);`],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id, customer_id'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'customer_id, order_date'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_id'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'order_date, order_id'],
-          ],
-        },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which answer correctly identifies the candidate keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE products (
   product INT,
@@ -7815,25 +8322,33 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, sku'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'sku'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'name, sku'],
+            [QuizMarkdownType.INLINE_CODE, 'name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'sku'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'sku, price'],
+            [QuizMarkdownType.INLINE_CODE, 'price'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'sku'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, price'],
+            [QuizMarkdownType.INLINE_CODE, 'price'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
       ],
@@ -7887,25 +8402,37 @@ for (iterator.hasNext(); String element = iterator.next()) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'id, ssn, email'],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'first_name, last_name, ssn'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'last_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'first_name, email'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'ssn, last_name'],
+            [QuizMarkdownType.INLINE_CODE, 'ssn'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'last_name'],
           ],
         },
       ],
@@ -7947,36 +8474,44 @@ for (iterator.hasNext(); String element = iterator.next()) {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following SQL table. Which columns form super keys?'],
         [QuizMarkdownType.CODE, `CREATE TABLE students (
-  student_id INT,
+  id INT,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
   email VARCHAR(100),
-  PRIMARY KEY (student_id)
+  PRIMARY KEY (id)
 );`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, email'],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'first_name, last_name'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'last_name'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'email, first_name'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'email'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'student_id, first_name'],
+            [QuizMarkdownType.INLINE_CODE, 'first_name'],
+            [QuizMarkdownType.TEXT, ','],
+            [QuizMarkdownType.INLINE_CODE, 'id'],
           ],
         },
       ],
@@ -8015,1088 +8550,2043 @@ for (iterator.hasNext(); String element = iterator.next()) {
       ],
       correctAnswer: '0',
     },
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is an instance variable in Java?'],
-  ],
-  answers: [
     {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A variable that is declared inside a class but outside any method, constructor, or block'],
+      question: [
+        [QuizMarkdownType.TEXT, 'What is an instance variable in Java?'],
       ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A variable that is declared inside a class but outside any method, constructor, or block'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A variable that is declared inside a method'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A variable that is declared as static'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A variable that is used to store constants'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A variable that is declared inside a method'],
+      question: [
+        [QuizMarkdownType.TEXT, 'Where are instance variables declared in a Java class?'],
       ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inside a class but outside any method, constructor, or block'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inside a method'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inside a constructor'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inside a static block'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A variable that is declared as static'],
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type int in Java?'],
       ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '0'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'null'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'undefined'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A variable that is used to store constants'],
+      question: [
+        [QuizMarkdownType.TEXT, 'Can instance variables have access modifiers in Java?'],
       ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Where are instance variables declared in a Java class?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Inside a class but outside any method, constructor, or block'],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, instance variables can have access modifiers'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, instance variables cannot have access modifiers'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only public access modifier is allowed'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only private access modifier is allowed'],
+          ],
+        },
       ],
+      correctAnswer: '0',
     },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Inside a method'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Inside a constructor'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Inside a static block'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type int in Java?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, '0'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'null'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, '1'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'undefined'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Can instance variables have access modifiers in Java?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Yes, instance variables can have access modifiers'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'No, instance variables cannot have access modifiers'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Only public access modifier is allowed'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Only private access modifier is allowed'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'How long do instance variables live in Java?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'As long as the object that contains them exists'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'As long as the method in which they are declared exists'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Until the program terminates'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Until the variable goes out of scope'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is the primary difference between a class variable and an instance variable in Java?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A class variable is shared among all instances of the class, while an instance variable is unique to each instance'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A class variable can only be declared in the main method, while an instance variable can be declared anywhere in the class'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A class variable is initialized only once, while an instance variable is reinitialized each time an instance is created'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A class variable can only hold primitive data types, while an instance variable can hold both primitive and object data types'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'How do you declare a class variable in Java?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By using the static keyword'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By using the final keyword'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By using the private keyword'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By using the public keyword'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Where are class variables stored in memory compared to instance variables?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Class variables are stored in the method area, while instance variables are stored in the heap'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Class variables are stored in the stack, while instance variables are stored in the heap'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Both class variables and instance variables are stored in the stack'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Both class variables and instance variables are stored in the heap'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Can class variables have different values for different instances of the class?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'No, class variables have the same value across all instances of the class'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Yes, class variables can have different values for different instances'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Yes, but only if they are declared as final'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'No, class variables are read-only and cannot be changed once set'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'How do instance variables differ in scope compared to class variables?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Instance variables are scoped to the object they belong to, while class variables are scoped to the class they are declared in'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Instance variables are accessible globally, while class variables are accessible only within the class'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Instance variables are static, while class variables are dynamic'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Instance variables must be initialized immediately, while class variables can be initialized later'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is the initial state of a thread when it is created but not yet started?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What must the first line of a constructor be in Java?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using'],
-        [QuizMarkdownType.INLINE_CODE, 'this()'],
-        [QuizMarkdownType.TEXT, 'or a call to the superclass constructor using'],
-        [QuizMarkdownType.INLINE_CODE, 'super()'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A declaration of an instance variable'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A method call'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'An initialization block'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'When an'],
-    [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
-    [QuizMarkdownType.TEXT, 'reaches its maximum capacity, by how much will it grow dynamically?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, '50%'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, '75%'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, '10%'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, '25%'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Evaluate: The first line of a constructor in Java must be a call to'],
-    [QuizMarkdownType.INLINE_CODE, 'super()'],
 
-  ],
-  answers: [
     {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'True'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'False'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What must the first line of a constructor be in Java if it is a superclass constructor?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using this() or a call to the superclass constructor using super()'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A call to the constructor of the subclass'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'A method call'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'An initialization block'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What happens if neither this() nor super() is explicitly called in a constructor?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the superclass using super()'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the subclass using this()'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The compiler throws a compile-time error'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The constructor will not compile'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What converts Java source code into Java bytecode?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Java Compiler (javac)'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Java Virtual Machine (JVM)'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Java Runtime Environment (JRE)'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Java Development Kit (JDK)'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What role does the JVM play in the execution of Java programs?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It interprets or compiles Java bytecode into native machine code for execution'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It converts Java source code into Java bytecode'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It provides the standard libraries for Java programs'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It compiles Java programs'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Is the JVM (Java Virtual Machine) part of the JDK (Java Development Kit)?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Yes, the JVM is included in the JDK'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'No, the JVM is separate from the JDK'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'No, the JVM is part of the JRE (Java Runtime Environment) only'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Yes, but it must be installed separately'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What does the JDK (Java Development Kit) include?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The JVM, Java compiler (javac), libraries, and other development tools'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Only the Java compiler (javac)'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Only the JVM and standard libraries'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Only the standard libraries and utilities'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Which state does a thread enter when it has been started using the start() method?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What causes a thread to enter the BLOCKED state?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Waiting to acquire a lock'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Completion of the thread\'s run method'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Calling thread.sleep()'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'Waiting indefinitely using thread.wait()'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Which state does a thread enter when it is waiting indefinitely for another thread to complete?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'How does a thread enter the TIMED-WAITING state?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By calling thread.join(milliseconds) or thread.sleep(milliseconds)'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By calling thread.join() without a timeout'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By waiting to acquire a lock'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'By calling thread.start()'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What happens when a thread completes its execution?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It enters the TERMINATED state'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It enters the WAITING state'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It enters the RUNNABLE state'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'It enters the BLOCKED state'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is the state of a thread that has been created but not yet started?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What method call can cause a thread to enter the WAITING state?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'thread.join()'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'thread.start()'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'thread.sleep(milliseconds)'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'thread.interrupt()'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'In which state is a thread when it is actively running and executing its task?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is the state of a thread that is waiting for a specified amount of time before continuing?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'Which thread state indicates that the thread has completed its execution?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TERMINATED'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting indefinitely for another thread to perform a particular action?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting to acquire a lock?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What does the RUNNABLE state signify in a thread\'s lifecycle?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The thread is ready to run and is waiting for CPU time'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The thread has been created but not yet started'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The thread is waiting indefinitely'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'The thread has completed its execution'],
-      ],
-    },
-  ],
-  correctAnswer: '0',
-},
-{
-  question: [
-    [QuizMarkdownType.TEXT, 'What is the state of a thread that has been started and is currently executing its task?'],
-  ],
-  answers: [
-    {
-      id: '0',
-      answer: [
-        [QuizMarkdownType.TEXT, 'RUNNABLE'],
-      ],
-    },
-    {
-      id: '1',
-      answer: [
-        [QuizMarkdownType.TEXT, 'NEW'],
-      ],
-    },
-    {
-      id: '2',
-      answer: [
-        [QuizMarkdownType.TEXT, 'WAITING'],
-      ],
-    },
-    {
-      id: '3',
-      answer: [
-        [QuizMarkdownType.TEXT, 'BLOCKED'],
-      ],
+      question: [
+        [QuizMarkdownType.TEXT, 'Is upcasting related to polymorphism in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, it enables a superclass reference to call subclass methods at runtime'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, upcasting and polymorphism are unrelated concepts'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, upcasting is the same as polymorphism'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, upcasting is only related to inheritance'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an example of upcasting in Java?'],
+        [QuizMarkdownType.CODE, 'Animal myDog = new Dog();'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, this is an example of upcasting'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, this is not an example of upcasting'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, this is an example of downcasting'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, this is only an example of inheritance'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of the'],
+        [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As long as the object that contains them exists'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As long as the method in which they are declared exists'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Until the program terminates'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Until the variable goes out of scope'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How long do instance variables live in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As long as the object that contains them exists'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As long as the method in which they are declared exists'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Until the program terminates'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Until the variable goes out of scope'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary difference between a class variable and an instance variable in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class variable is shared among all instances of the class, while an instance variable is unique to each instance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class variable can only be declared in the main method, while an instance variable can be declared anywhere in the class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class variable is initialized only once, while an instance variable is reinitialized each time an instance is created'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class variable can only hold primitive data types, while an instance variable can hold both primitive and object data types'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you declare a class variable in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+            [QuizMarkdownType.TEXT, 'keyword'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'final'],
+            [QuizMarkdownType.TEXT, 'keyword'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'private'],
+            [QuizMarkdownType.TEXT, 'keyword'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By using the'],
+            [QuizMarkdownType.INLINE_CODE, 'public'],
+            [QuizMarkdownType.TEXT, 'keyword'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A functional interface such as'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'has only one abstract method, which must be implemented by the class that implements the interface. In terms of the principles of abstraction, a functional interface'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only shows what needs to be shown'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only shows clear implementations'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shows semantically ambiguous instructions'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shows half-implemented abstractions'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where are class variables stored in memory compared to instance variables?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Class variables are stored in the method area, while instance variables are stored in the heap'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Class variables are stored in the stack, while instance variables are stored in the heap'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Both class variables and instance variables are stored in the stack'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Both class variables and instance variables are stored in the heap'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Can class variables have different values for different instances of the class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, class variables have the same value across all instances of the class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, class variables can have different values for different instances'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but only if they are declared as final'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, class variables are read-only and cannot be changed once set'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define how a thread will run'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To manage thread lifecycle methods like start and stop'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To provide advanced synchronization mechanisms'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To handle exceptions in a multithreaded environment'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a functional interface in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface with exactly one abstract method'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface with multiple abstract methods'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface with no methods'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An interface that extends another interface'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Why might you choose to use the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface over extending the'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it allows you to implement multiple interfaces and extend another class'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it provides better performance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it offers more thread management methods'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Because it simplifies exception handling in threads'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many methods does the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface contain?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Two'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Three'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Four'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method must be implemented when using the'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, 'interface?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'start()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'execute()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'init()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the interface'],
+        [QuizMarkdownType.INLINE_CODE, 'Runnable'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is a functional interface with the abstract method'],
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an interface with two abstract methods'],
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'lock()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an interface with the method'],
+            [QuizMarkdownType.INLINE_CODE, 'run()'],
+            [QuizMarkdownType.TEXT, 'and the field'],
+            [QuizMarkdownType.INLINE_CODE, 'status'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an interface with the field'],
+            [QuizMarkdownType.INLINE_CODE, 'status'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do instance variables differ in scope compared to class variables?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Instance variables are scoped to the object they belong to, while class variables are scoped to the class they are declared in'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Instance variables are accessible globally, while class variables are accessible only within the class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Instance variables are static, while class variables are dynamic'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Instance variables must be initialized immediately, while class variables can be initialized later'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the initial state of a thread when it is created but not yet started?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NEW'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'must obtain a permit from a'],
+        [QuizMarkdownType.INLINE_CODE, 'Semaphore'],
+        [QuizMarkdownType.TEXT, 'to execute code, the thread\'s state is considered'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What must the first line of a constructor be in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using'],
+            [QuizMarkdownType.INLINE_CODE, 'this()'],
+            [QuizMarkdownType.TEXT, 'or a call to the superclass constructor using'],
+            [QuizMarkdownType.INLINE_CODE, 'super()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A declaration of an instance variable'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method call'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An initialization block'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When an'],
+        [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+        [QuizMarkdownType.TEXT, 'reaches its maximum capacity, by how much will it grow dynamically?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '50%'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '75%'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '10%'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '25%'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The first line of a constructor in Java must be a call to'],
+        [QuizMarkdownType.INLINE_CODE, 'super()'],
+
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What must the first line of a constructor be in Java if it is a superclass constructor?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A call to another constructor of the same class using this() or a call to the superclass constructor using super()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A call to the constructor of the subclass'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A method call'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An initialization block'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens if neither'],
+        [QuizMarkdownType.INLINE_CODE, 'this()'],
+        [QuizMarkdownType.TEXT, 'nor'],
+        [QuizMarkdownType.INLINE_CODE, 'super()'],
+        [QuizMarkdownType.TEXT, 'is explicitly called in a constructor?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the superclass using'],
+            [QuizMarkdownType.INLINE_CODE, 'super()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The compiler inserts a call to the no-argument constructor of the subclass using'],
+            [QuizMarkdownType.INLINE_CODE, 'this()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The compiler throws a compile-time error'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The constructor will not compile'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What converts Java source code into Java bytecode?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Java Compiler ('],
+            [QuizMarkdownType.INLINE_CODE, 'javac'],
+            [QuizMarkdownType.TEXT, ')'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Java Virtual Machine ('],
+            [QuizMarkdownType.TEXT, 'JVM'],
+            [QuizMarkdownType.TEXT, ')'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Java Runtime Environment ('],
+            [QuizMarkdownType.TEXT, 'JRE'],
+            [QuizMarkdownType.TEXT, ')'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Java Development Kit ('],
+            [QuizMarkdownType.TEXT, 'JDK'],
+            [QuizMarkdownType.TEXT, ')'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What role does the JVM play in the execution of Java programs?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It interprets or compiles Java bytecode into native machine code for execution'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It converts Java source code into Java bytecode'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It provides the standard libraries for Java programs'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It compiles Java programs'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Identify the set of attributes that are the project coordinates of a'],
+        [QuizMarkdownType.INLINE_CODE, 'pom.xml'],
+        [QuizMarkdownType.TEXT, 'file.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `<groupId>com.skillstorm</groupId>
+  <artifactId>age-validator</artifactId>
+  <version>1.0.0</version>`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source> 
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `<project xmlns="..." xmlns:xsi="...">
+  <modelVersion>4.0.0</modelVersion>
+  ...
+</project>`],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the JVM (Java Virtual Machine) part of the JDK (Java Development Kit)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, the JVM is included in the JDK'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, the JVM is separate from the JDK'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No, the JVM is part of the JRE (Java Runtime Environment) only'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Yes, but it must be installed separately'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the JDK (Java Development Kit) include?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The JVM, Java compiler (javac), libraries, and other development tools'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only the Java compiler (javac)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only the JVM and standard libraries'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only the standard libraries and utilities'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which state does a thread enter when it has been started using the start() method?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NEW'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What causes a thread to enter the BLOCKED state?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Waiting to acquire a lock'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Completion of the thread\'s'],
+            [QuizMarkdownType.INLINE_CODE, 'run'],
+            [QuizMarkdownType.TEXT, 'method'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.sleep()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Waiting indefinitely using'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.wait()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which state does a thread enter when it is waiting indefinitely for another thread to complete?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does a thread enter the TIMED-WAITING state?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.join(milliseconds)'],
+            [QuizMarkdownType.TEXT, 'or'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.sleep(milliseconds)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.join()'],
+            [QuizMarkdownType.TEXT, 'without a timeout'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By waiting to acquire a lock'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'By calling'],
+            [QuizMarkdownType.INLINE_CODE, 'thread.start()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the state of a thread that has been created but not yet started?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NEW'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What method call can cause a thread to enter the WAITING state?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'thread.join()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'thread.start()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'thread.sleep(milliseconds)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'thread.interrupt()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which state is a thread when it is actively running and executing its task?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NEW'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the state of a thread that is waiting for a specified amount of time before continuing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NEW'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting indefinitely for another thread to perform a particular action?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What state does a thread enter when it is waiting on a lock before continuing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED-WAITING'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the state of a thread that has been started and is currently executing its task?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NEW'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'The Maven Build Lifecycle',
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Compile the source code of the project',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "verify" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "install" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Compile the source code of the project',
+              compile: 'Validate the project is correct and all necessary information is available',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "compile" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "install" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many possible states can a thread have in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Six'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Five'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Seven'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Four'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Compile the source code of the project',
+              test: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "test" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "install" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Compile the source code of the project',
+              test: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              package: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              verify: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "test" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "install" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "verify" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Compile the source code of the project',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              verify: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              install: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "package" and "install" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "deploy" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "test" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 7 stages of the Maven build lifecycle. But 2 of the columns have had their definitions swapped erroneously. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'The Maven Build Lifecycle',
+          data: [
+            {
+              _tableDataColId: '1',
+              validate: 'Validate the project is correct and all necessary information is available',
+              compile: 'Take the compiled code and package it in its distributable format, such as a JAR',
+              test: 'Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed',
+              package: 'Compile the source code of the project',
+              verify: 'Run any checks on results of integration tests to ensure quality criteria are met',
+              install: 'Install the package into the local repository, for use as a dependency in other projects locally',
+              deploy: 'Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.',
+            },
+          ],
+          cols: [
+            { accessorKey: 'validate', header: 'Validate' },
+            { accessorKey: 'compile', header: 'Compile' },
+            { accessorKey: 'test', header: 'Test' },
+            { accessorKey: 'package', header: 'Package' },
+            { accessorKey: 'verify', header: 'Verify' },
+            { accessorKey: 'install', header: 'Install' },
+            { accessorKey: 'deploy', header: 'Deploy' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "compile" and "package" stages'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "test" and "verify" stages'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "validate" and "verify" stages'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "deploy" and "install" stages'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Calling the method'],
+        [QuizMarkdownType.INLINE_CODE, 'join(3000)'],
+        [QuizMarkdownType.TEXT, 'method on a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'will put that thread into which of the following states?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Calling the method'],
+        [QuizMarkdownType.INLINE_CODE, 'join(3000)'],
+        [QuizMarkdownType.TEXT, 'on a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'will put that thread into which of the following states?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Calling the method'],
+        [QuizMarkdownType.INLINE_CODE, 'sleep(3000)'],
+        [QuizMarkdownType.TEXT, 'on a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'will put that thread into which of the following states?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TIMED_WAITING'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'WAITING'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'BLOCKED'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RUNNABLE'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 6 possible states of a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'in Java. But 2 of the columns have had their definitions erroneously swapped. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Thread states',
+          data: [
+            {
+              _tableDataColId: '1',
+              new: 'Created but not yet started',
+              runnable: 'Started (thread.start())',
+              blocked: 'Waiting indefinitely (thread.join() or thread.wait())',
+              waiting: 'Waiting on some lock before continuing',
+              timedWaiting: 'Waiting for a specified amount of time (thread.join(3000))',
+              terminated: 'Finished',
+            },
+          ],
+          cols: [
+            { accessorKey: 'new', header: 'NEW' },
+            { accessorKey: 'runnable', header: 'RUNNABLE' },
+            { accessorKey: 'blocked', header: 'BLOCKED' },
+            { accessorKey: 'waiting', header: 'WAITING' },
+            { accessorKey: 'timedWaiting', header: 'TIMED-WAITING' },
+            { accessorKey: 'terminated', header: 'TERMINATED' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "BLOCKED" and "WAITING" columns'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "BLOCKED" and "TIMED-WAITING" columns'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "WAITING" and "TERMINATED" columns'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "RUNNABLE" and "NEW" columns'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following table shows the 6 possible states of a'],
+        [QuizMarkdownType.INLINE_CODE, 'Thread'],
+        [QuizMarkdownType.TEXT, 'in Java. But 2 of the columns have had their definitions erroneously swapped. Which answer identifies those 2 columns?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Thread states',
+          data: [
+            {
+              _tableDataColId: '1',
+              new: 'Created but not yet started',
+              runnable: 'Started (thread.start())',
+              blocked: 'Waiting for a specified amount of time (thread.join(3000))',
+              waiting: 'Waiting indefinitely (thread.join() or thread.wait())',
+              timedWaiting: 'Waiting on some lock before continuing',
+              terminated: 'Finished',
+            },
+          ],
+          cols: [
+            { accessorKey: 'new', header: 'NEW' },
+            { accessorKey: 'runnable', header: 'RUNNABLE' },
+            { accessorKey: 'blocked', header: 'BLOCKED' },
+            { accessorKey: 'waiting', header: 'WAITING' },
+            { accessorKey: 'timedWaiting', header: 'TIMED-WAITING' },
+            { accessorKey: 'terminated', header: 'TERMINATED' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "BLOCKED" and "TIMED-WAITING" columns'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "RUNNABLE" and "WAITING" columns'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "WAITING" and "TERMINATED" columns'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The "RUNNABLE" and "NEW" columns'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
-  ],
-  correctAnswer: '0',
-},
   ],
 } as QuizDataObject;

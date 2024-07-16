@@ -16,7 +16,7 @@ import mlPrinciples from './ml-principles';
 import python from './python';
 import javascript from './javascript';
 import learnersPermit from './learners-permit';
-import { QuizDataObject, QuizMarkdownType } from './types';
+import { QuizDataObject } from './types';
 import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
@@ -68,7 +68,6 @@ const quizData: QuizData = {
       slug: 'test',
     },
     questions: [
-      
     ],
   },
 };

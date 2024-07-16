@@ -24,7 +24,8 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
 }) => qmd.map((tuple, i) => {
   if (tuple[0] === QuizMarkdownType.TEXT) {
     return (
-      <span key={i}>
+      // add whitespace-normal for iOS
+      <span className="whitespace-normal" key={i}>
         {tuple[1] as string}
       </span>
     );
@@ -32,7 +33,7 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
   if (tuple[0] === QuizMarkdownType.INLINE_KATEX) {
     return (
       <span
-        className={cn('px-0.5 text-black dark:text-white', {
+        className={cn('whitespace-normal px-0.5 text-black dark:text-white', {
           'dark:text-gray-900': params?.isCorrectAnswer,
         })}
         key={i}
@@ -49,7 +50,7 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
     return (
       <span
         className={cn('text-black dark:text-white', {
-          'dark:text-gray-900': params?.isCorrectAnswer,
+          'dark:text-gray-900 whitespace-normal': params?.isCorrectAnswer,
         })}
         key={i}
       >

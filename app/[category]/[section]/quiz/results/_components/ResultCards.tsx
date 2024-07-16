@@ -8,7 +8,7 @@ import {
 import Image from 'next/image';
 import { Button } from '@/components/ui/common/shadcn/button';
 import { Separator } from '@/components/ui/common/shadcn/separator';
-import { Question } from '@/lib/data/quiz-data';
+import { Question } from '@/lib/data/types';
 import Code from '../../_components/Code';
 import { renderMarkdown } from '../../_components/_utils';
 
