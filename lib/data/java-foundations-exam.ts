@@ -330,7 +330,7 @@ public int setVar(int a, int b, float c) {
           order: 8,
         },
       ],
-      correctAnswer: '0, 2, 4',
+      correctAnswer: '0',
     },
     {
       question: [
@@ -701,13 +701,13 @@ public class Test {
         test.incr();
     }
 }
-        `],
+        `], 
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Compilation failure'],
+            [QuizMarkdownType.TEXT, '1 1 1\n3 1 3'],
           ],
         },
         {
@@ -719,7 +719,7 @@ public class Test {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, '1 1 1\n3 1 3'],
+            [QuizMarkdownType.TEXT, 'Compilation failure'],
           ],
         },
         {
@@ -735,7 +735,7 @@ public class Test {
           ],
         },
       ],
-      correctAnswer: '4',
+      correctAnswer: '0',
     },
 
     {
@@ -799,10 +799,10 @@ public class Test {
 public class Test {
     public static void main(String[] args) {
         if (args[0].equals("open"))
-            if (args[1].equals("someone"))
-                System.out.println("Hello!");
-            else 
-                System.out.println("Go away " + args[1]);
+        if (args[1].equals("someone"))
+            System.out.println("Hello!");
+        else 
+            System.out.println("Go away " + args[1]);
     }
 }
         `],
@@ -1730,7 +1730,7 @@ public class Test {
           order: 3,
         },
       ],
-      correctAnswer: '2',
+      correctAnswer: '0',
     },
     {
       question: [
