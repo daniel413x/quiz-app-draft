@@ -10,7 +10,7 @@ export default {
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which of the following answers can output a random number between 0 and 10?'],
+        [QuizMarkdownType.TEXT, 'Which of the following answers can output a random number between 1 and 10?'],
       ],
       answers: [
         {
@@ -88,7 +88,7 @@ int d = r.nextInt(x);`],
 
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What can you do to make the following code print a number between 0 and 10? (Assume appropriate import statements.)'],
+        [QuizMarkdownType.TEXT, 'Which answer will NOT output a random number between 0 and 10?'],
         [QuizMarkdownType.CODE, `
 int x = 10;
 //insert code here
@@ -117,37 +117,44 @@ System.out.println(d);
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Random r = new Random(x); int d = (int) r.next() * 10;'],
-          ],
-        },
-        {
-          id: '4',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Random r = new Random(); r.setSeed(x); int d = (int) r.next() * 10;'],
-          ],
-        },
-        {
-          id: '5',
-          answer: [
             [QuizMarkdownType.TEXT, 'Random r = new Random(x); r.setSeed(x); int d = r.nextInt(x);'],
           ],
         },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a true statement regarding method overloading and the return types defined by overloaded methods?'],
+      ],
+      answers: [
         {
-          id: '6',
+          id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1, 3 and 5'],
+            [QuizMarkdownType.TEXT, 'A different return type doesn\'t mean a valid overload but a valid overload can define a different return type'],
           ],
-          order: 6,
         },
         {
-          id: '7',
+          id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1, 2 and 5'],
+            [QuizMarkdownType.TEXT, 'A different return type is not necessary to define a valid overload but a valid overload must define the same parameters'],
           ],
-          order: 7,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A different return type is necessary to define a valid overload in addition to defining a different set of parameters'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A different set of parameters is necessary to define a valid overload but the method body must remain unchanged'],
+          ],
         },
       ],
-      correctAnswer: '7',
+      correctAnswer: '0',
     },
 
     {
@@ -223,6 +230,78 @@ public class Test {
         },
       ],
       correctAnswer: '7',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is not a valid overload expression?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A redefined method body with a different return type'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A reordered set of parameters'],
+            [QuizMarkdownType.INLINE_CODE, 'float'],
+            [QuizMarkdownType.INLINE_CODE, 'int'],
+            [QuizMarkdownType.INLINE_CODE, 'int'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Omitting the first two parameters from the overload'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Omitting all of the parameters from the overload'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is not a valid overload for the following code?'],
+        [QuizMarkdownType.CODE, `public int setVar(int a, int b, float c) {
+  //valid code not shown
+}
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public float setVar(int a, int b, float c) { return c * a; }',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public int setVar(int a, float b, int c) { return setVar(a, c, b);'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public float setVar(int a) { return a; }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public int setVar(int a, int b, float c) { return Math.round(c);}'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -701,7 +780,7 @@ public class Test {
         test.incr();
     }
 }
-        `], 
+        `],
       ],
       answers: [
         {
