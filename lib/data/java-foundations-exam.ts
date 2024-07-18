@@ -10,6 +10,348 @@ export default {
 
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which answer is not a valid'],
+        [QuizMarkdownType.INLINE_CODE, 'main'],
+        [QuizMarkdownType.TEXT, 'method definition?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public static main(String[] args) {}'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public static void main(String args[]) {}'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'static public void main(String[] args) {}'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'final public static void main(String[] args) {}'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the following expression'],
+        [QuizMarkdownType.INLINE_CODE, 'int rate = 10; XXX amount = 1 - rate/100*1 - rate/100;'],
+        [QuizMarkdownType.TEXT, ', the type'],
+        [QuizMarkdownType.INLINE_CODE, 'XXX'],
+        [QuizMarkdownType.TEXT, 'could be an'],
+        [QuizMarkdownType.INLINE_CODE, 'int'],
+        [QuizMarkdownType.TEXT, ', '],
+        [QuizMarkdownType.INLINE_CODE, 'long'],
+        [QuizMarkdownType.TEXT, ', '],
+        [QuizMarkdownType.INLINE_CODE, 'float'],
+        [QuizMarkdownType.TEXT, ', or '],
+        [QuizMarkdownType.INLINE_CODE, 'double'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which is NOT a way to create a char literal corresponding to a lower-case'],
+        [QuizMarkdownType.INLINE_CODE, 'a'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '\'a\''],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '\'\\u0061\''],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '\\u0061'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '(char) 97'],
+          ],
+          order: 3,
+        },
+        {
+          id: '4',
+          answer: [
+            [QuizMarkdownType.TEXT, '\\141'],
+          ],
+          order: 4,
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following program?'],
+        [QuizMarkdownType.CODE, `System.out.println("1" + 2 + 3);
+System.out.println(1 + 2 + "3");`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `123
+33`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `33
+33`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `123
+123`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `33
+123`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which is true of the'],
+        [QuizMarkdownType.INLINE_CODE, '+'],
+        [QuizMarkdownType.TEXT, 'operator?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is left-associate, meaning it evaluates from left to right'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is right-associate, meaning it evaluates from right to left'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is relevant to the addition and subtraction of'],
+            [QuizMarkdownType.INLINE_CODE, 'Number'],
+            [QuizMarkdownType.TEXT, 'objects only'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An operation like'],
+            [QuizMarkdownType.INLINE_CODE, '1 + 5 + "33"'],
+            [QuizMarkdownType.TEXT, 'is impossible'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A static member cannot be accessed from a constructor.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which is true of the'],
+        [QuizMarkdownType.INLINE_CODE, '='],
+        [QuizMarkdownType.TEXT, 'operator?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It has the lowest precedence of any operator'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It has higher precedence than most other operators'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It has the same precedence as the'],
+            [QuizMarkdownType.INLINE_CODE, '='],
+            [QuizMarkdownType.TEXT, 'operator'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of the following program?'],
+        [QuizMarkdownType.CODE, `boolean b1 = false;
+boolean b2 = false;
+if (b2 != b1 = !b2) {
+    System.out.println("true");
+} else {
+    System.out.println("false");
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile because the statement'],
+            [QuizMarkdownType.INLINE_CODE, 'b2 != b1 = !b2'],
+            [QuizMarkdownType.TEXT, 'attempts to assign a value of'],
+            [QuizMarkdownType.INLINE_CODE, 'false'],
+            [QuizMarkdownType.TEXT, 'to'],
+            [QuizMarkdownType.INLINE_CODE, 'false'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print'],
+            [QuizMarkdownType.INLINE_CODE, 'true'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print'],
+            [QuizMarkdownType.INLINE_CODE, 'false'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will fail at runtime because it uses the'],
+            [QuizMarkdownType.INLINE_CODE, '='],
+            [QuizMarkdownType.TEXT, 'operator in an'],
+            [QuizMarkdownType.INLINE_CODE, 'if'],
+            [QuizMarkdownType.TEXT, 'statement'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of executing the following code?'],
+        [QuizMarkdownType.CODE, `boolean b1 = false;
+boolean b2 = false;
+if (b2 != b1 = !b2) {
+    System.out.println("true");
+} else {
+    System.out.println("false");
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation error'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'false'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'true'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Runtime error'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which of the following answers can output a random number between 1 and 10?'],
       ],
       answers: [
