@@ -755,6 +755,168 @@ public int setVar(int a, int b, float c) {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What will result from running the following code?'],
+        [QuizMarkdownType.CODE, `
+for (;;) {
+    System.out.println("Hello world");
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Infinite loop'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation error'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Runtime error'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Empty output'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of running the code below?'],
+        [QuizMarkdownType.CODE, `
+public class Main {
+    int[] arr;
+    public static void main(String... args) {
+        System.out.println(arr);
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation error'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Runtime error'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'null'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '[]'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of running the code below?'],
+        [QuizMarkdownType.CODE, `
+class Utility {
+    int[] arr;
+    public void print() {
+        System.out.println(arr);
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'null'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '[]'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation error'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Runtime error'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following code will compile and run:'],
+        [QuizMarkdownType.CODE, `
+int i = 0;
+for (;;) {
+    if (i >= 5) {
+        break;
+    }
+    System.out.println("i is " + i);
+    i++;
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What will the following code print?'],
         [QuizMarkdownType.CODE, `
 int x = 1;
