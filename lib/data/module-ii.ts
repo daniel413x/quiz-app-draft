@@ -7,6 +7,43 @@ export default {
     slug: 'programming',
   },
   questions: [
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________ is an interface used to indicate that a bean should run when it is contained within a SpringApplication. Multiple beans defined by this interface can be run in a defined order by using the ________ annotation.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'CommandLineRunner, @Order'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ApplicationRunner, @Order'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'CommandLineRunner, @Priority'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ApplicationRunner, @Priority'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'The following is an example of which AOP advice?'],
