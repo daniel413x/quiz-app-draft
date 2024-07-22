@@ -42,7 +42,6 @@ export default {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'In the following expression'],
@@ -74,7 +73,6 @@ export default {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which is NOT a way to create a char literal corresponding to a lower-case'],
@@ -256,7 +254,6 @@ System.out.println(1 + 2 + "3");`],
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following is true of the following program?'],
@@ -427,7 +424,6 @@ int d = r.nextInt(x);`],
       ],
       correctAnswer: '3',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which answer will NOT output a random number between 0 and 10?'],
@@ -465,7 +461,6 @@ System.out.println(d);
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following is a true statement regarding method overloading and the return types defined by overloaded methods?'],
@@ -498,7 +493,6 @@ System.out.println(d);
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Given the following code, which statements can be placed at the indicated position without causing compile and run time errors?'],
@@ -679,10 +673,88 @@ public class Test {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following method. Which of the following methods correctly overload the above method?'],
+        [QuizMarkdownType.TEXT, 'What will the following statement return?'],
         [QuizMarkdownType.CODE, `
-public int setVar(int a, int b, float c) {
-    //valid code not shown
+"    hello java guru   ".trim();
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '"hello java guru"'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '"hello java guru   "'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '"hellojavaguru"'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which is a true statement?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The Java development environment is set up when you download and install the JDK for your platform.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Both JDK and JRE are required for setting up the Java development environment.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The Java development environment is the combination of JDK, JRE, and IDE.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The Java development environment is installed by default for all major operating systems.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following class?'],
+        [QuizMarkdownType.CODE, `
+class Test {
+    public static void main(String[] args) {
+        int j = 1;
+        try {
+            int i = doIt() / (j = 2);
+        } catch (Exception e) {
+            System.out.println("j = " + j);
+        }
+    }
+    
+    public static int doIt() throws Exception {  
+        throw new Exception("FORGET IT");  
+    }
 }
         `],
       ],
@@ -690,65 +762,913 @@ public int setVar(int a, int b, float c) {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'public int setVar(int a, float b, int c) { return setVar(a, c, b); }'],
+            [QuizMarkdownType.TEXT, 'It will print j = 1;'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'public int setVar(int a, float b, int c) { return this(a, c, b); }'],
+            [QuizMarkdownType.TEXT, 'It will print j = 2;'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'public int setVar(int x, int y, float z) { return x + y; }'],
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'public float setVar(int a, int b, float c) { return c * a; }'],
+            [QuizMarkdownType.TEXT, 'It will fail at runtime.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following program?'],
+        [QuizMarkdownType.CODE, `
+public class TestClass {
+    public static void main(String[] args) {
+        int j = 2;
+        int i = 8 / (j = 4);
+        System.out.println("i = " + i + ", " + "j = " + j);
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'i = 2, j = 4'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'i = 4, j = 4'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'i = 8, j = 2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation error'],
           ],
           order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The maximum value that a char can take is 2^16 -1.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which order are the following operators evaluated?'],
+        [QuizMarkdownType.CODE, 'a + b * c - d'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Addition, multiplication, subtraction'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, addition, subtraction'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, subtraction, addition'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction, addition, multiplication'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which operator type has lower precedence than the multiplicative operators?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Unary (++expr)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Additive (-)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Postfix (expr++)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Relational (>=)'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which operator has the same precedence as the equality (==) operator?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Relational (>)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Additive (+)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Unary (-expr)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inequality (!=)'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the precedence of the instanceof operator?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Higher than relational operators'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Lower than additive operators'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Equal to relational operators'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Higher than equality operators'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the following expression, which operation is performed first?'],
+        [QuizMarkdownType.CODE, '3 + 5 * 2'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Addition (+)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication (*)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction (-)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division (/)'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which order are the following operators evaluated?'],
+        [QuizMarkdownType.CODE, 'x * y - z + w'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, subtraction, addition'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, addition, subtraction'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction, multiplication, addition'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Addition, multiplication, subtraction'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which order are the following operators evaluated?'],
+        [QuizMarkdownType.CODE, 'a - b * c / d'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction, multiplication, division'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, division, subtraction'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division, multiplication, subtraction'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction, division, multiplication'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which order are the following operators evaluated?'],
+        [QuizMarkdownType.CODE, 'm * n - o / p'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, subtraction, division'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, division, subtraction'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction, multiplication, division'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division, multiplication, subtraction'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true of dividing two integers?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In integer division, the fractional part is discarded, so '],
+            [QuizMarkdownType.INLINE_CODE, 'System.out.println(106 / 10);'],
+            [QuizMarkdownType.TEXT, ' will print 10.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In integer division, the fractional part is kept and the resulting value will be autoboxed as a double.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In integer division, the fractional part is rounded to the nearest whole number.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In integer division, an error will occur if there is a fractional part.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements will NOT correctly create and initialize an array of Strings to non-null elements?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'String[] sA = new String[1] { "aaa" };'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'String[] sA = new String[] { "aaa" };'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'String[] sA = { new String( "aaa") };'],
+          ],
+        },
+        {
+          question: [
+            [QuizMarkdownType.TEXT, 'In integer division, the fractional part is discarded. What will be the result of the following operation?'],
+            [QuizMarkdownType.INLINE_CODE, 'System.out.println(106 / 10);'],
+          ],
+          answers: [
+            {
+              id: '0',
+              answer: [
+                [QuizMarkdownType.INLINE_CODE, '10'],
+              ],
+            },
+            {
+              id: '1',
+              answer: [
+                [QuizMarkdownType.INLINE_CODE, '10.6'],
+              ],
+            },
+            {
+              id: '2',
+              answer: [
+                [QuizMarkdownType.INLINE_CODE, '11'],
+              ],
+            },
+            {
+              id: '3',
+              answer: [
+                [QuizMarkdownType.INLINE_CODE, '1060'],
+              ],
+            },
+          ],
+          correctAnswer: '0',
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'String[] sA = { "aaa" };'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which order are the following operators evaluated?'],
+        [QuizMarkdownType.CODE, 'x / y + z * w'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division, addition, multiplication'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiplication, division, addition'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division, multiplication, addition'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Addition, division, multiplication'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which order are the following operators evaluated?'],
+        [QuizMarkdownType.CODE, 'p - q / r + s'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Subtraction, division, addition'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division, subtraction, addition'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Division, addition, subtraction'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Addition, division, subtraction'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which operator has lower precedence than the relational operators?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Additive (+)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Equality (==)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Postfix (expr++)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Unary (~)'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which operator is evaluated after all other operators except assignment operators?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Equality (==)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Relational (<=)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Additive (+)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Ternary (? :)'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following method return if called with an argument of 7?'],
+        [QuizMarkdownType.CODE, `
+public int transformNumber(int n)
+{
+   int radix = 2;
+   int output = 0;
+   output += radix * n;
+   radix = output / radix;
+   if (output < 14)
+   {
+       return output;
+   }
+   else
+   {
+       output = output * radix / 2;
+       return output;
+   }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation fails.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '7'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '14'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '49'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following code, which of these statements is NOT true?'],
+        [QuizMarkdownType.CODE, `
+public class TestClass {
+    public static void main(String args[]) {
+        int k = 0;
+        int m = 0;
+        for (int i = 0; i <= 3; i++) {
+            k++;
+            if (i == 2) {
+                // line 1
+            }
+            m++;
+        }
+        System.out.println(k + ", " + m);
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 3, 2 when line 1 is replaced by continue.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 3, 2 when line 1 is replaced by break;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 4, 3 when line 1 is replaced by continue.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 3, 3 when line 1 is replaced by i = 4;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Every'],
+        [QuizMarkdownType.INLINE_CODE, 'array'],
+        [QuizMarkdownType.TEXT, 'has an implicit method named'],
+        [QuizMarkdownType.INLINE_CODE, 'length'],
+        [QuizMarkdownType.TEXT, 'which tells you the number of elements in the array.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements about an array is correct?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Element indexing for arrays as well as for Lists starts at 0.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Every array has a built in property named \'size\' which tells you the number of elements in the array.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Every array has an implicit method named \'length\' which tells you the number of elements in the array.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'An array can dynamically grow in size.'],
+          ],
         },
         {
           id: '4',
           answer: [
-            [QuizMarkdownType.TEXT, 'public float setVar(int a) { return a; }'],
+            [QuizMarkdownType.TEXT, 'Arrays can be created only for primitive types.'],
           ],
-          order: 4,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What would be the result of attempting to compile and run the following program?'],
+        [QuizMarkdownType.CODE, `
+class TestClass {
+    static TestClass ref;
+    String[] arguments;
+    public static void main(String args[]) {
+        ref = new TestClass();
+        ref.func(args);
+    }
+    public void func(String[] args) {
+        ref.arguments = args;
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The program will compile and run successfully.'],
+          ],
         },
         {
-          id: '5',
+          id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 2 and 4'],
+            [QuizMarkdownType.TEXT, 'The program will fail to compile, since method func is trying to assign to the non-static member variable \'arguments\' through the static member variable ref.'],
           ],
-          order: 5,
         },
         {
-          id: '6',
+          id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1 and 3'],
+            [QuizMarkdownType.TEXT, 'The program will fail to compile, since the argument args passed to the static method main cannot be passed on to the non-static method func.'],
           ],
-          order: 6,
         },
         {
-          id: '7',
+          id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1, 3 and 5'],
+            [QuizMarkdownType.TEXT, 'The program will fail to compile, since the static method main is trying to call the non-static method func.'],
           ],
-          order: 7,
         },
         {
-          id: '8',
+          id: '4',
           answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1, 2 and 4'],
+            [QuizMarkdownType.TEXT, 'The program will fail to compile, since the non-static method func cannot access the static member variable ref.'],
           ],
-          order: 8,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following program print?'],
+        [QuizMarkdownType.CODE, `
+public class TestClass {
+    public static void main(String[] args) {
+        for : for(int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (i + j > 10) break for;
+            }
+            System.out.println("hello");
+        }
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print "hello" 4 times.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print "hello" 2 times.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print "hello" 5 times.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is invalid?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'char c = 320;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'float f = 320;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'double d = 320;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'byte b = 320;'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Assuming a method'],
+        [QuizMarkdownType.INLINE_CODE, 'throwsException()'],
+        [QuizMarkdownType.TEXT, 'contains the line'],
+        [QuizMarkdownType.INLINE_CODE, 'throw new Exception("FORGET IT");'],
+        [QuizMarkdownType.TEXT, ', a line of code such as'],
+        [QuizMarkdownType.INLINE_CODE, 'int j = 0; int i = throwsException() / (j = 2);'],
+        [QuizMarkdownType.TEXT, 'will cause a compilation error.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: If evaluation of the left-hand operand of a binary operator completes abruptly, e.g.,'],
+        [QuizMarkdownType.INLINE_CODE, 'int j = 0; int i = throwsException() / (j = 2);'],
+        [QuizMarkdownType.TEXT, 'no part of the right-hand operand will be evaluated.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -794,7 +1714,453 @@ for (;;) {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ is backed by linked lists while an _______ is backed by an array.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'HashMap, ArrayList'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ArrayList, LinkedList'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'HashSet, ArrayList'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TreeMap, ArrayList'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: In the absence of a termination condition, such as in the code below, the condition is implicitly'],
+        [QuizMarkdownType.INLINE_CODE, 'true'],
+        [QuizMarkdownType.TEXT, '.'],
+        [QuizMarkdownType.CODE, `for (;;) {
+    System.out.println("Hello world");
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'ArrayList is a subclass of which class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'AbstractList'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'AbstractCollection'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Object'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Serializable'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following interfaces are implemented by ArrayList?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Serializable, Cloneable, Iterable<E>, Map<E>, List<E>, RandomAccess'],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Serializable, Cloneable, Set<E>, Collection<E>, List<E>, RandomAccess'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, SortedSet<E>'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following line of code?'],
+        [QuizMarkdownType.CODE, 'System.out.println(3 + 100/10*2-13);'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '7'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '10'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '20'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '0'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer(s) could substitute for the line at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'so that the program outputs'],
+        [QuizMarkdownType.INLINE_CODE, '10 20 100 100'],
+        [QuizMarkdownType.TEXT, 'when executed?'],
+        [QuizMarkdownType.CODE, `
+public class Account {
+    double balance;
+    public void update(int[] balances){
+        // 1
+    }
 
+    public static void main(String[] args) {
+        int[] balances = new int[2];
+        balances[0] = 10;
+        balances[1] = 20;
+        for(int bal : balances){
+            System.out.print(bal + " ");
+        }
+        Account a = new Account();
+        a.update(balances);
+        for(int bal : balances){
+            System.out.print(bal + " ");
+        }
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `balances[0] = 100;
+balances[1] = 100;`],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `for(int bal : balances){
+    bal = 100;
+};`],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 & 2'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A constructor can be'],
+        [QuizMarkdownType.INLINE_CODE, 'static'],
+        [QuizMarkdownType.TEXT, '.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following lines of code print?'],
+        [QuizMarkdownType.CODE, `
+String s = "java";
+s.replace('j', 'l');
+s = s.substring(0, 2);
+System.out.println(s);
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ja'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'java'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'la'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'lava'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How many string objects are created in the following code?'],
+        [QuizMarkdownType.CODE, `
+String s = "java";
+s.replace('j', 'l');
+s = s.substring(0, 2);
+System.out.println(s);
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '2'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '3'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '4'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT true of constructors in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor cannot take a parameter of its own operative type.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor cannot return anything, not even void.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor cannot be final or abstract.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor cannot be static.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given a class named Test, which of these would be valid definitions for the constructors for the class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test(Test b) { }'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test Test( ) { }'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'private final Test( ) { }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'void Test( ) { }'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed from running this program?'],
+        [QuizMarkdownType.CODE, `
+public class Account {
+    double balance;
+    public void update(int[] balances){
+        for(int bal : balances){
+            bal = 100;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] balances = new int[2];
+        balances[0] = 10;
+        balances[1] = 20;
+        for(int bal : balances){
+            System.out.print(bal + " ");
+        }
+        Account a = new Account();
+        a.update(balances);
+        for(int bal : balances){
+            System.out.print(bal + " ");
+        }
+    }
+}
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '10 20 10 20'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '10 20 100 100'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 0 100 100'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '10 20 0 0'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be the result of running the code below?'],
@@ -813,28 +2179,24 @@ public class Main {
           answer: [
             [QuizMarkdownType.TEXT, 'Compilation error'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, 'Runtime error'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
             [QuizMarkdownType.TEXT, 'null'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, '[]'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -857,28 +2219,24 @@ class Utility {
           answer: [
             [QuizMarkdownType.TEXT, 'null'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, '[]'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
             [QuizMarkdownType.TEXT, 'Compilation error'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'Runtime error'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -958,7 +2316,6 @@ System.out.println(answ);
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'An exception thrown outside a try block will be caught'],
@@ -1002,28 +2359,24 @@ if (flag = false) {
           answer: [
             [QuizMarkdownType.TEXT, '1'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, '2'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
             [QuizMarkdownType.TEXT, '3'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, '4'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '2',
@@ -1135,7 +2488,6 @@ for (int i = 0; i < 3; i++) {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'A'],
@@ -1260,7 +2612,6 @@ for (int i = 0; i < 3; i++) {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Given the following code, what will be the output?'],
@@ -1320,7 +2671,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Given the following code, what will be the output?'],
@@ -1374,7 +2724,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the following code. Which is true?'],
@@ -1458,7 +2807,6 @@ public class Test {
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type byte in Java?'],
@@ -1495,7 +2843,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type long in Java?'],
@@ -1568,7 +2915,6 @@ public class Test {
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type float in Java?'],
@@ -1605,7 +2951,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will happen if you try to use an uninitialized local variable in Java?'],
@@ -1642,7 +2987,6 @@ public class Test {
       ],
       correctAnswer: '2',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type boolean in Java?'],
@@ -1679,7 +3023,6 @@ public class Test {
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the default value of an instance variable of type int in Java?'],
@@ -1716,7 +3059,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.INLINE_CODE, '1 + Math.round(Math.random() * 9)'],
@@ -1740,7 +3082,29 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.INLINE_CODE, '1 + Math.round(Math.random() * 9)'],
+        [QuizMarkdownType.TEXT, 'will give you a random number between 0 and 10'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+          order: 1,
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.INLINE_CODE, 'Math.round(Math.random()*10) will return a random number between 1 and 10'],
@@ -1764,7 +3128,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.INLINE_CODE, '1 + Math.round(Math.random() * 9'],
@@ -1788,7 +3151,6 @@ public class Test {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following statements about the'],
@@ -1871,7 +3233,6 @@ public class Test {
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'A Java class such as'],
@@ -1951,11 +3312,10 @@ public class Test {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Why does the expression'],
+        [QuizMarkdownType.TEXT, 'Evaluate: The line'],
         [QuizMarkdownType.INLINE_CODE, 'balances1 == balances2'],
-        [QuizMarkdownType.TEXT, 'evaluate to true in the following code?'],
-        [QuizMarkdownType.CODE, `
-public class Test {
+        [QuizMarkdownType.TEXT, 'evaluates to true in the following code.'],
+        [QuizMarkdownType.CODE, `public class Test {
     public static void main(String[] args) {
         int[] balances1 = new int[2];
         balances1[0] = 10;
@@ -1966,37 +3326,32 @@ public class Test {
         
         System.out.print(balances1 == balances2);
     }
-}
-        `],
+}`],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Because both balances1 and balances2 point to the same array in memory.'],
+            [QuizMarkdownType.TEXT, 'Yes, because both balances1 and balances2 point to the same array in memory.'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Because balances1 and balances2 are different arrays with the same values.'],
+            [QuizMarkdownType.TEXT, 'Yes, because balances1 and balances2 are different arrays with the same values.'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Because the == operator compares the values inside the arrays.'],
+            [QuizMarkdownType.TEXT, 'Yes, because the == operator compares the values inside the arrays.'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Because balances2 is a copy of balances1.'],
+            [QuizMarkdownType.TEXT, 'Yes, because balances2 is a deep copy of balances1.'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -2164,7 +3519,6 @@ System.out.println(str.length());
       ],
       correctAnswer: '2',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Local variables in Java are automatically initialized to their default values.'],
@@ -2187,7 +3541,6 @@ System.out.println(str.length());
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Instance variables in Java are automatically initialized to their default values.'],
@@ -2228,31 +3581,367 @@ public class Test {
           answer: [
             [QuizMarkdownType.TEXT, '0'],
           ],
-          order: 0,
         },
         {
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, 'null'],
           ],
-          order: 1,
         },
         {
           id: '2',
           answer: [
             [QuizMarkdownType.TEXT, 'Compilation error'],
           ],
-          order: 2,
         },
         {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'undefined'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following code, how many object references will be created?'],
+        [QuizMarkdownType.CODE,
+          `class References 
+{
+  String s1;
+  String s2 = null;
+  Integer i1 = new Integer();
+  int i2;
+  File f;
+  Object b = f;
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '3'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '4'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '5'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '6'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements about implicit narrowing in Java is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Implicit narrowing conversion happens when a value of a larger primitive type is automatically converted to a smaller primitive type without explicit casting.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Implicit narrowing conversion happens when a value of a smaller primitive type is automatically converted to a larger primitive type without explicit casting.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Implicit narrowing conversion is allowed between all primitive types without any data loss.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Implicit narrowing conversion is not supported in Java.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following code, which answer is NOT true?'],
+        [QuizMarkdownType.CODE,
+          `class References 
+{
+  String s1;
+  String s2 = null;
+  Integer i1 = new Integer();
+  int i2;
+  File f;
+  Object b = f;
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member'],
+            [QuizMarkdownType.INLINE_CODE, 'i2'],
+            [QuizMarkdownType.TEXT, 'results in an object reference being created'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member'],
+            [QuizMarkdownType.INLINE_CODE, 's1'],
+            [QuizMarkdownType.TEXT, 'results in an object reference being created'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member'],
+            [QuizMarkdownType.INLINE_CODE, 'i1'],
+            [QuizMarkdownType.TEXT, 'results in an object reference being created'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The member'],
+            [QuizMarkdownType.INLINE_CODE, 'f'],
+            [QuizMarkdownType.TEXT, 'results in an object reference being created'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following code print when compiled and run?'],
+        [QuizMarkdownType.CODE,
+          `import java.util.*;
+public class TestClass {
+    public static void main(String[] args) throws Exception {
+        List list = new ArrayList();
+        list.add("val1"); //1
+        list.add(2, "val2"); //2
+        list.add(1, "val3"); //3
+        System.out.println(list);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw an exception at run time because of line //2'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw an exception at run time because of line //1'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw an exception at run time because of line //3'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The order of keywords for a static import must always be '],
+        [QuizMarkdownType.INLINE_CODE, 'import static'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.INLINE_CODE, 'ArrayList'],
+        [QuizMarkdownType.TEXT, 'is imported via the line'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.ArrayList;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.*;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.ArrayList;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.collections.ArrayList;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following code. Which answer correctly initializes the static variables '],
+        [QuizMarkdownType.INLINE_CODE, 'MAX'],
+        [QuizMarkdownType.TEXT, ' and '],
+        [QuizMarkdownType.INLINE_CODE, 'CLASS_GUID'],
+        [QuizMarkdownType.TEXT, '?'],
+        [QuizMarkdownType.CODE,
+          `class Widget {
+   static int MAX;     //1
+   static final String CLASS_GUID;   // 2
+   Widget() {
+       //3
+   }
+   Widget(int k) {
+       //4
+   }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'At //2, insert '],
+            [QuizMarkdownType.INLINE_CODE, 'static { MAX = 111; CLASS_GUID = "XYZ123"; }'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'At //1, insert '],
+            [QuizMarkdownType.INLINE_CODE, 'MAX = 111; CLASS_GUID = "XYZ123";'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'At //3, insert '],
+            [QuizMarkdownType.INLINE_CODE, 'static { MAX = 111; CLASS_GUID = "XYZ123"; }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'At //4, insert '],
+            [QuizMarkdownType.INLINE_CODE, 'MAX = 111; CLASS_GUID = "XYZ123";'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Java, a '],
+        [QuizMarkdownType.INLINE_CODE, '________'],
+        [QuizMarkdownType.TEXT, ' is a 64-bit type while a '],
+        [QuizMarkdownType.INLINE_CODE, '________'],
+        [QuizMarkdownType.TEXT, ' is a 32-bit type.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'double, float'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int, short'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'long, int'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'char, byte'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer will result in implicit narrowing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'short s = 12;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int i = 12L;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'long l = 12;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'float f = 12.0;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -2278,7 +3967,6 @@ public class Test {
             [QuizMarkdownType.INLINE_CODE, 'i'],
             [QuizMarkdownType.TEXT, 'won\'t'],
           ],
-          order: 0,
         },
         {
           id: '1',
@@ -2288,7 +3976,6 @@ public class Test {
             [QuizMarkdownType.INLINE_CODE, 'anInt'],
             [QuizMarkdownType.TEXT, 'won\'t'],
           ],
-          order: 1,
         },
         {
           id: '2',
@@ -2299,7 +3986,6 @@ public class Test {
             [QuizMarkdownType.INLINE_CODE, 'anInt'],
             [QuizMarkdownType.TEXT, 'will be assigned a default value'],
           ],
-          order: 2,
         },
         {
           id: '3',
@@ -2310,7 +3996,6 @@ public class Test {
             [QuizMarkdownType.INLINE_CODE, 'anInt'],
             [QuizMarkdownType.TEXT, 'will be assigned a default value'],
           ],
-          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -2352,7 +4037,28 @@ System.out.printf("I scored %d marks in the %s exam!", exam, marks);
       ],
       correctAnswer: '2',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In integer division, any fractional part is discarded by rounding up, so '],
+        [QuizMarkdownType.INLINE_CODE, 'System.out.println(106 / 10);'],
+        [QuizMarkdownType.TEXT, ' will print 11.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What would be the result of trying to compile and run the following program?'],
@@ -2397,7 +4103,6 @@ public class Test {
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which integral type in Java has a range from'],
@@ -2583,7 +4288,6 @@ public class TestClass {
           ],
           order: 4,
         },
-
         {
           id: '4',
           answer: [
@@ -2591,7 +4295,6 @@ public class TestClass {
           ],
           order: 5,
         },
-
         {
           id: '5',
           answer: [
@@ -2601,6 +4304,1112 @@ public class TestClass {
         },
       ],
       correctAnswer: '4',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How can an '],
+        [QuizMarkdownType.INLINE_CODE, 'int'],
+        [QuizMarkdownType.TEXT, ' variable be assigned the following value? '],
+        [QuizMarkdownType.INLINE_CODE, 'double dl = 12L;'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl = (int) dl;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl = dl;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl = (long) dl;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl = Double.valueOf(dl);'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of a '],
+        [QuizMarkdownType.INLINE_CODE, 'short'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: -32,768 to 32,767'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 8 bits, Range: -128 to 127'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: 0 to 65,535'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of a '],
+        [QuizMarkdownType.INLINE_CODE, 'char'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: 0 to 65,535'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 8 bits, Range: -128 to 127'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: -32,768 to 32,767'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of a '],
+        [QuizMarkdownType.INLINE_CODE, 'float'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: Approximately ±1.4E-45 to ±3.4E38'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 64 bits, Range: Approximately ±4.9E-324 to ±1.8E308'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: -32,768 to 32,767'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of a '],
+        [QuizMarkdownType.INLINE_CODE, 'double'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 64 bits, Range: Approximately ±4.9E-324 to ±1.8E308'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: Approximately ±1.4E-45 to ±3.4E38'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 64 bits, Range: -2^63 to 2^63 - 1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of a '],
+        [QuizMarkdownType.INLINE_CODE, 'long'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 64 bits, Range: -2^63 to 2^63 - 1'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 64 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -32,768 to 32,767'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'For which variable in the following code is explicit casting unnecessary?'],
+        [QuizMarkdownType.CODE,
+          `double xd = 10.0d;
+float xf = 10.0f;
+double dl = 12L;
+short sh = 12;
+int idl = (int) dl;
+int idl2 = (int) xf;
+int idl3 = (int) xd;
+int idl4 = (int) sh;`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'sh'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'idl'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'idl2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'idl3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate casting in the following code.'],
+        [QuizMarkdownType.CODE,
+          `double xd = 10.0d;
+float xf = 10.0f;
+double dl = 12L;
+short sh = 12;
+int idl = (int) dl;
+int idl2 = (int) xf;
+int idl3 = (int) xd;
+int idl4 = sh;`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl4 = sh;'],
+            [QuizMarkdownType.TEXT, 'does not require explicit casting because'],
+            [QuizMarkdownType.INLINE_CODE, 'int idl4 = sh;'],
+            [QuizMarkdownType.TEXT, 'is an implicit widening conversion.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl = (int) dl;'],
+            [QuizMarkdownType.TEXT, 'requires explicit casting because'],
+            [QuizMarkdownType.INLINE_CODE, 'int idl = (int) dl;'],
+            [QuizMarkdownType.TEXT, 'is a widening conversion.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl2 = (int) xf;'],
+            [QuizMarkdownType.TEXT, 'requires explicit casting because'],
+            [QuizMarkdownType.INLINE_CODE, 'int idl2 = (int) xf;'],
+            [QuizMarkdownType.TEXT, 'is a widening conversion.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int idl3 = (int) xd;'],
+            [QuizMarkdownType.TEXT, 'requires explicit casting because'],
+            [QuizMarkdownType.INLINE_CODE, 'int idl3 = (int) xd;'],
+            [QuizMarkdownType.TEXT, 'is a widening conversion.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement describes a widening conversion?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The integer'],
+            [QuizMarkdownType.INLINE_CODE, '-123'],
+            [QuizMarkdownType.TEXT, 'is assigned to a reference variable'],
+            [QuizMarkdownType.INLINE_CODE, 'float f'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The integer'],
+            [QuizMarkdownType.INLINE_CODE, '12'],
+            [QuizMarkdownType.TEXT, 'is assigned to a reference variable'],
+            [QuizMarkdownType.INLINE_CODE, 'short s'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The boolean'],
+            [QuizMarkdownType.INLINE_CODE, 'false'],
+            [QuizMarkdownType.TEXT, 'is assigned to a reference variable'],
+            [QuizMarkdownType.INLINE_CODE, 'int i'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The double'],
+            [QuizMarkdownType.INLINE_CODE, '0 * 1.5'],
+            [QuizMarkdownType.TEXT, 'is assigned to a reference variable'],
+            [QuizMarkdownType.INLINE_CODE, 'float d'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of an '],
+        [QuizMarkdownType.INLINE_CODE, 'int'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: -32,768 to 32,767'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^63 to 2^63 - 1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 64 bits, Range: -2^63 to 2^63 - 1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'While compiling a Java file, you want the compiler to generate the class file in a particular directory. Which '],
+        [QuizMarkdownType.INLINE_CODE, 'javac'],
+        [QuizMarkdownType.TEXT, ' option will you use?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '-d'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '-dest'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '-output'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '-target'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of attempting to compile and run the following class?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass
+{
+    public static void main(String args[ ] )
+    {
+        int i = 1;
+        int[] iArr = {3};
+        incr(i) ;
+        incr(iArr) ;
+        System.out.println( "i = " + i + "  iArr[0] = " + iArr [ 0 ] ) ;
+    }
+
+    public static void incr(int   n ) { n++ ; }
+
+    public static void incr(int[ ] n ) {
+        n = new int[1];
+        n[0]++;
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 1 iArr[0] = 3'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 1 iArr[0] = 4'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 2 iArr[0] = 2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 2 iArr[0] = 1'],
+          ],
+        },
+        {
+          id: '4',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will not compile.'],
+          ],
+          order: 4,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Java SE is used for'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Building applications that feature a GUI'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Building enterprise software'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creating embedded applications for Raspberry PI'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Any back-end project'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Java EE is used for'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Building enterprise back-end software'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Building applications that feature a GUI'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creating embedded applications for Raspberry PI'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creating applications for mobile devices'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following will NOT return true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"hello world".compareTo("Hello world") < 0'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"Hello world".toLowerCase().equals("hello world")'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"hello".concat(" world").trim().equals("hello world")'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"HELLO world".equalsIgnoreCase("hello world")'],
+          ],
+        },
+        {
+          id: '4',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"hello world".equals("hello world")'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be output by the following code?'],
+        [QuizMarkdownType.CODE, `String myStr = "good";
+char[] myCharArr = {'g', 'o', 'o', 'd'};
+
+String newStr = null;
+for (char ch : myCharArr) {
+    newStr = newStr + ch;
+}
+System.out.println(newStr);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'nullgood'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'good'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '103 111 111 100'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '0 1 2 3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following program, what will be printed if executed?'],
+        [QuizMarkdownType.CODE,
+          `package strings;
+public class StringFromChar {
+    
+    public static void main(String[] args) {
+        String myStr = "good";
+        char[] myCharArr = {'g', 'o', 'o', 'd'};
+        
+        String newStr = null;
+        for (char ch : myCharArr) {
+            newStr = newStr + ch;
+        }
+
+        System.out.println((newStr == myStr) + " " + (newStr.equals(myStr)));
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'false false'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'true false'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'false true'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'true true'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following code print if executed?'],
+        [QuizMarkdownType.CODE,
+          'System.out.printf("This is %s %s", "what", "it", "is");'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is what it'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'This is it is'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Exception will be thrown at run time because the number of arguments and the number of format specifiers in the input string do not match.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation failure'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed as a result of executing the following code?'],
+        [QuizMarkdownType.CODE, `public class Mambo {
+  static int m = 10, n = 20;
+  public static void main(String args[]){
+    int m = 0, n = 10;
+    Mambo mb = new Mambo();
+    while(m<3) {
+      m++; n--;
+    }
+    System.out.println(m+", "+n);
+  }
+}
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '3, 7'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '10, 20'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '9, 19'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of these.'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the result of executing the following code when the value of'],
+        [QuizMarkdownType.INLINE_CODE, 'i'],
+        [QuizMarkdownType.TEXT, 'is'],
+        [QuizMarkdownType.INLINE_CODE, '5'],
+        [QuizMarkdownType.TEXT, '?'],
+        [QuizMarkdownType.CODE, `switch (i)
+{
+    default:
+    case 1:
+        System.out.println(1);
+    case 0:
+        System.out.println(0);
+    case 2:
+        System.out.println(2);
+        break;
+    case 3:
+        System.out.println(3);
+}
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '1 0 2'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '1 0 2 3'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation error'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '1 0'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The size of an array can be specified either on the right-hand or (rarely) the left-hand side of the declaration statement.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The code'],
+        [QuizMarkdownType.INLINE_CODE, 'String[ ] sa = new String[3]{ "a", "b", "c"};'],
+        [QuizMarkdownType.TEXT, 'will correctly initialize an array of size 3.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following does NOT declare a variable which can hold an array of 10 integers?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[10] iA;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[ ] iA;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int iA[ ];'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'int[] iA = new int[10];'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Java ME is used for'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creating embedded applications for Raspberry PI'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Building enterprise back-end software'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Building applications that feature a GUI'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Creating applications for mobile devices'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of attempting to compile and run the following class?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+    public static void main(String args[] ) {
+       int i = 1;
+       int[] iArr = {1};
+       incr(i);
+       incr(iArr);
+       System.out.println("i = " + i + "  iArr[0] = " + iArr[0]);
+    }
+
+    public static void incr(int n) { n++; }
+
+    public static void incr(int[] n) { n[0]++; }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 1 iArr[0] = 2'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 1 iArr[0] = 1'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 2 iArr[0] = 2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will print i = 2 iArr[0] = 1'],
+          ],
+        },
+        {
+          id: '4',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The code will not compile.'],
+          ],
+          order: 4,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How can the following program be changed so that it can be compiled?'],
+        [QuizMarkdownType.CODE,
+          `class Test
+{
+  public static void main(String[] args)
+  {
+    short s = 10; // 1
+    char c = s; // 2
+    s = c; // 3
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Change '],
+            [QuizMarkdownType.INLINE_CODE, 's'],
+            [QuizMarkdownType.TEXT, ' in line 2 to '],
+            [QuizMarkdownType.INLINE_CODE, '(char) s'],
+            [QuizMarkdownType.TEXT, ' and change '],
+            [QuizMarkdownType.INLINE_CODE, 'c'],
+            [QuizMarkdownType.TEXT, ' in line 3 to '],
+            [QuizMarkdownType.INLINE_CODE, '(short) c'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Change '],
+            [QuizMarkdownType.INLINE_CODE, 's'],
+            [QuizMarkdownType.TEXT, ' in line 1 to '],
+            [QuizMarkdownType.INLINE_CODE, 'char'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Change '],
+            [QuizMarkdownType.INLINE_CODE, 'c'],
+            [QuizMarkdownType.TEXT, ' in line 2 to '],
+            [QuizMarkdownType.INLINE_CODE, 'int'],
+            [QuizMarkdownType.TEXT, ' and '],
+            [QuizMarkdownType.INLINE_CODE, 's'],
+            [QuizMarkdownType.TEXT, ' in line 3 to '],
+            [QuizMarkdownType.INLINE_CODE, 'int'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No changes are needed, the program will compile as is'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The assignment '],
+        [QuizMarkdownType.INLINE_CODE, 'long g = 012;'],
+        [QuizMarkdownType.TEXT, ' is considered a widening conversion because it is assigning a primitive type of a '],
+        [QuizMarkdownType.TEXT, '________'],
+        [QuizMarkdownType.TEXT, ' range to a primitive type of a '],
+        [QuizMarkdownType.TEXT, '________'],
+        [QuizMarkdownType.TEXT, ' range.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'smaller, larger'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'larger, smaller'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'equal, equal'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'different, similar'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the size and range of a '],
+        [QuizMarkdownType.INLINE_CODE, 'byte'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 8 bits, Range: -128 to 127'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 16 bits, Range: -32,768 to 32,767'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 8 bits, Range: 0 to 255'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Size: 32 bits, Range: -2^31 to 2^31 - 1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following code will fail to compile.'],
+        [QuizMarkdownType.CODE, `double xd = 10.0d;
+double xD = 10.0D;
+float xf = 10.0f;
+double xF = 10.0F;
+System.out.println(xd);
+System.out.println(xD);
+System.out.println(xf);
+System.out.println(xF);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -2623,7 +5432,6 @@ public class TestClass {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following statements regarding'],
@@ -2854,7 +5662,6 @@ public class TestClass {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Assuming that the following are the complete contents of'],
@@ -2954,13 +5761,981 @@ public class TestClass {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'How do you import a static method from a class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import static java.lang.Math.max;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.Math.max;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.static.Math.max;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import static java.lang.*;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The division operator / has the same precedence as the multiplication operator'],
+        [QuizMarkdownType.INLINE_CODE, '/'],
+        [QuizMarkdownType.TEXT, 'has the same precedence as the multiplication operator'],
+        [QuizMarkdownType.INLINE_CODE, '*'],
+        [QuizMarkdownType.TEXT, '.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which import statement will NOT import the'],
+        [QuizMarkdownType.INLINE_CODE, 'Collections'],
+        [QuizMarkdownType.TEXT, 'interface'],
+        [QuizMarkdownType.INLINE_CODE, 'HashMap'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.System.*;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.*;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.Collections;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.HashMap;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the correct import statement for the Collections class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.Collections;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.collection.Collections;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.Collection;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.util.Collections.*;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you import a static method from a class in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import static java.lang.Math.max;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.Math.max;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import java.lang.static.Math.max;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import static java.lang.*;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a valid way to import the public static field '],
+        [QuizMarkdownType.INLINE_CODE, 'MAX_VALUE'],
+        [QuizMarkdownType.TEXT, ' from the '],
+        [QuizMarkdownType.INLINE_CODE, 'java.lang.Integer'],
+        [QuizMarkdownType.TEXT, ' class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'static import Integer.MAX_VALUE;'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import static java.lang.Integer.*;'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'import static java.lang.System.*;'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All answers are valid'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT true about the "default" constructor?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is provided by the compiler if the class does not define a \'no-args\' constructor.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is provided by the compiler only if the class does not define any constructor.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It calls the default \'no-args\' constructor of the super class.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed as a result of running the following program?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+    public void update(int[] a, int offset) {
+        a[0] = a[0] + offset;
+    }
+
+    public void update(int a, int offset) {
+        a = a + offset;
+    }
+
+    public static void main(String[] args) {
+        TestClass u = new TestClass();
+        int a = 99;
+        int[] iA = {a};
+        u.update(iA, 111);
+        u.update(a, 111);
+        System.out.println("a: " + a + ", " + "iA[0]: " + iA[0]);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 210, iA[0]: 210'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 99, iA[0]: 210'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 99, iA[0]: 99'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 210, iA[0]: 99'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed as a result of running the following program?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+    public void update(int[] a, int offset) {
+        a[0] = a[0] + offset;
+    }
+
+    public void update(int a, int offset) {
+        a = a + offset;
+    }
+
+    public static void main(String[] args) {
+        TestClass u = new TestClass();
+        int a = 99;
+        int[] iA = {a};
+        int[] iA2 = iA;
+        u.update(iA, 111);
+        u.update(iA2, 1);
+        System.out.println("a: " + a + ", " + "iA[0]: " + iA[0]);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 99, iA[0]: 211'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 211, iA[0]: 211'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 99, iA[0]: 100'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 100, iA[0]: 100'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed as a result of running the following program?'],
+        [QuizMarkdownType.CODE,
+          `import java.util.ArrayList;
+import java.util.List;
+
+public class TestClass {
+
+    public void update(Integer a, int offset) {
+        a = a + offset;
+    }
+
+    public static void main(String[] args) {
+        TestClass u = new TestClass();
+        Integer a = 99;
+        List<Integer> iL = new ArrayList<>();
+        iL.add(a);
+        u.update(a, 111);
+        System.out.println("a: " + iL.get(0));
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 210'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 99'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 111'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'a: 0'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Java source code is converted to binary code using an interpreter.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following class declaration is valid:'],
+        [QuizMarkdownType.CODE, 'class Hello throws Exception'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following program print?'],
+        [QuizMarkdownType.CODE,
+          `class Test {
+   public static void main(String args[]) {
+      int var = 20, i = 0;
+      do {
+         while (true) {
+            if (i++ > var) break;
+         }
+      } while (i < var--);
+      System.out.println(var);
+   }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '19'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '20'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '21'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will enter an infinite loop'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT true of constructors?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor must define a return type,'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor must have the same name as the class'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor is used to initialize objects of the class'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A constructor cannot be modified by the keyword'],
+            [QuizMarkdownType.INLINE_CODE, 'static'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following program will compile and run'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+    long l1;
+    public void TestClass(long pLong) { l1 = pLong ; }  //1
+    public static void main(String args[]) {
+        TestClass a, b ;
+        a = new TestClass();  //2
+        b = new TestClass(5);  //3
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following code print?'],
+        [QuizMarkdownType.CODE,
+          `void crazyLoop() {
+   int c = 0;
+   JACK: while (c < 8) {
+      JILL: System.out.println(c);
+      if (c > 3) break JILL; else c++;
+   }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print numbers from 0 to 8'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print numbers from 0 to 3'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print numbers from 0 to 4'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a true statement?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is not necessary for a Java file to have a public class.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Java file must contain at least one public class.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Java file can only have one class.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A Java file must always be named after one of the classes it contains.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following class can be imported by a different class in the project via the import statement '],
+        [QuizMarkdownType.INLINE_CODE, 'import com.cool;'],
+        [QuizMarkdownType.TEXT, '.'],
+        [QuizMarkdownType.CODE, `package com.cool;
+
+public class Cooler {
+  public void doCool(){
+    System.out.println("cooling...");
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following code print when run without any arguments?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+
+    public static int m1(int i) {
+        return ++i;
+    }
+    
+    public static void main(String[] args) {
+        int k = m1(args.length);
+        k += 3 + ++k;
+        System.out.println(k);
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '6'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '4'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '7'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of these.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following code will print which answer?'],
+        [QuizMarkdownType.CODE,
+          `int k = 1;
+k += 3 + ++k;
+System.out.println(k);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '6'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '4'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '5'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '7'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed from executing the following code?'],
+        [QuizMarkdownType.CODE, `int[] balances1 = new int[]{ 10, 20 };
+int[] balances2 = balances1;
+int[] balances3 = new int[2];
+balances3[0] = balances2[0];
+balances3[1] = balances2[1];
+System.out.print(balances1 == balances3);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'false'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'true'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed from executing the following code?'],
+        [QuizMarkdownType.CODE, `int[] balances1 = new int[]{ 10, 20 };
+int[] balances2 = balances1;
+balances2[1] = balances1[0];
+System.out.print(balances1 == balances2);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'true'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'false'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be printed from executing the following code?'],
+        [QuizMarkdownType.CODE, `int[] balances1 = new int[]{ 10, 20 };
+int[] balances2 = balances1;
+balances1 = new int[]{ 100 };
+System.out.print(balances1 == balances2);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'false'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'true'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following class can be imported by a different class in the project via the import statement '],
+        [QuizMarkdownType.INLINE_CODE, 'import com.cool.*;'],
+        [QuizMarkdownType.TEXT, '.'],
+        [QuizMarkdownType.CODE, `package com.cool;
+
+public class Cooler {
+  public void doCool(){
+    System.out.println("cooling...");
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following class can be imported by a different class in the project via the import statements '],
+        [QuizMarkdownType.INLINE_CODE, 'import com.cool.Cooler;'],
+        [QuizMarkdownType.TEXT, ','],
+        [QuizMarkdownType.INLINE_CODE, 'import com.cool.*;'],
+        [QuizMarkdownType.TEXT, ' or '],
+        [QuizMarkdownType.INLINE_CODE, 'import com.cool;'],
+        [QuizMarkdownType.TEXT, '.'],
+        [QuizMarkdownType.CODE, `package com.cool;
+
+public class Cooler {
+  public void doCool(){
+    System.out.println("cooling...");
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the range of values for a '],
+        [QuizMarkdownType.INLINE_CODE, 'char'],
+        [QuizMarkdownType.TEXT, ' in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '0 to (2^16 - 1)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^31 to 2^31 - 1'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^63 to 2^63 - 1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^15 to 2^15 - 1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following program?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+    public static void main(String[] args) {
+        System.out.println(new IntUtility().IntUtility());
+    }
+}
+
+class IntUtility {
+    int IntUtility() {
+        IntUtility IntUtility = new IntUtility();
+        return IntUtility.IntUtility(7);
+    }
+
+    int IntUtility(int i) {
+        return i;
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '7'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw a compilation error.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw a runtime exception.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '0'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following program?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+    public static void main(String[] args) {
+        System.out.println(new IntUtility().IntUtility());
+    }
+}
+
+class IntUtility {
+    int IntUtility() {
+        return IntUtility(6);
+    }
+
+    int IntUtility(int i) {
+        return i;
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '6'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw a compilation error.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw a runtime exception.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '0'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which of the following statements are true regarding naming rules in Java?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'You can use the same name for a class, variable, or method.'],
+            [QuizMarkdownType.TEXT, 'You can use the same name cross-scope for a class, variable, or method.'],
           ],
           order: 0,
         },
@@ -3103,7 +6878,6 @@ class TestClass {
       ],
       correctAnswer: '6',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'How many string objects are created in the following code fragment?'],
@@ -3142,7 +6916,6 @@ c = a + b;
       ],
       correctAnswer: '2',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following will give an error at compile time and run time?'],
