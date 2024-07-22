@@ -7,7 +7,229 @@ export default {
     slug: 'programming',
   },
   questions: [
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The size of a long in Java is 64 bits. This means that it represents a range of '],
+        [QuizMarkdownType.TEXT, '__________'],
+        [QuizMarkdownType.TEXT, ' values or '],
+        [QuizMarkdownType.TEXT, '__________'],
+        [QuizMarkdownType.TEXT, ' distinct integers.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^63 to 2^63 - 1, 2^64'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^31 to 2^31 - 1, 2^32'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^15 to 2^15 - 1, 2^16'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^7 to 2^7 - 1, 2^8'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The size of an integer in Java is 32 bits. This means that it represents a range of '],
+        [QuizMarkdownType.TEXT, '__________'],
+        [QuizMarkdownType.TEXT, ' values or '],
+        [QuizMarkdownType.TEXT, '__________'],
+        [QuizMarkdownType.TEXT, ' distinct integers.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^31 to 2^31 - 1, 2^32'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^15 to 2^15 - 1, 2^16'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^7 to 2^7 - 1, 2^8'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '-2^63 to 2^63 - 1, 2^64'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which integral types in Java have a range of 2^16 integers? OR Which integral types in Java can represent exactly 2^16 distinct integers?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'short and char'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int and char'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'int and short'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'long and short'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following method, which is called with an argument of 7. What will it print?'],
+        [QuizMarkdownType.CODE,
+          `public void method1(int i) {
+       int j = (i * 30 - 2) / 100;
+       
+       POINT1: for (; j < 10; j++) {
+           boolean flag = false;
+           while (!flag) {
+               if (Math.random() > 0.5) break POINT1;
+           }
+       }
+    
+       while (j > 0) {
+           System.out.println(j--);
+           if (j == 4) break POINT1;
+       }
+    }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will throw an exception at runtime.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 1 and 2.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 1 to N where N is a random number.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following code, which method declaration CANNOT be inserted at line 1 without causing a problem?'],
+        [QuizMarkdownType.CODE,
+          `public class OverloadTest {
+        public int sum(int i1, int i2) { return i1 + i2; }
+        // 1
+    }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public long sum(int i1, int i2) { return i1 + i2; }'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public long sum(long i1, int i2) { return i1 + i2; }'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public int sum(int i1, long i2) { return (int) i2; }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'public int sum(long i1, long i2) { return (int) i1; }'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given a class named '],
+        [QuizMarkdownType.INLINE_CODE, 'Test'],
+        [QuizMarkdownType.TEXT, ', which of these would be valid definitions for the constructors for the class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Test(Test b) { }'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Test Test( ) { }'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'private final Test( ) { }'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'void Test( ) { }'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which answer is not a valid'],
@@ -733,6 +955,58 @@ public class Test {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'The Java development environment is installed by default for all major operating systems.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of attempting to run the following program?'],
+        [QuizMarkdownType.CODE,
+          `public class TestClass {
+        int x = 5;
+        int getX() { return x; }
+    
+        public static void main(String args[]) throws Exception {
+            TestClass tc = new TestClass();
+            tc.looper();
+            System.out.println(tc.x);
+        }
+        
+        public void looper() {
+            int x = 0;
+            while ((x = getX()) != 0) {
+                for (int m = 10; m >= 0; m--) {
+                    x = m;
+                }
+            }
+        }
+    }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will never terminate.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 5.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print 0.'],
           ],
         },
       ],
@@ -3826,6 +4100,46 @@ public class TestClass {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What will the following code print?'],
+        [QuizMarkdownType.CODE,
+          `void crazyLoop() {
+       int c = 0;
+       JACK: while (c < 8) {
+          JILL: System.out.println(c);
+          if (c > 3) break JILL; else c++;
+       }
+    }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will not compile'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print numbers from 0 to 3'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print numbers from 0 to 4'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It will print numbers from 0 to 8'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Consider the following code. Which answer correctly initializes the static variables '],
         [QuizMarkdownType.INLINE_CODE, 'MAX'],
         [QuizMarkdownType.TEXT, ' and '],
@@ -5137,7 +5451,7 @@ public class StringFromChar {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which of the following does NOT declare a variable which can hold an array of 10 integers?'],
+        [QuizMarkdownType.TEXT, 'Which of the following does NOT legitimately declare a variable which can hold an array of 10 integers?'],
       ],
       answers: [
         {

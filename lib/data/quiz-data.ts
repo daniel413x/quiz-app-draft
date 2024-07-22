@@ -25,6 +25,7 @@ import javaIi from './java-ii';
 import moduleI from './module-i';
 import moduleIi from './module-ii';
 import javaFoundationsExam from './java-foundations-exam';
+import javaFoundationsExamIi from './java-foundations-exam-ii';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -57,6 +58,7 @@ const quizData: QuizData = {
   'principles-of-programming': principlesOfProgramming,
   'principles-of-cybersecurity': principlesOfCybersecurity,
   'java-foundations-exam': javaFoundationsExam,
+  'java-foundations-exam-ii': javaFoundationsExamIi,
   'principles-ui-ux': uiUx,
   'data-structures': dataStructures,
   special,
@@ -95,6 +97,7 @@ const categories = [
       quizData['principles-of-programming'],
       quizData.sql,
       quizData['java-foundations-exam'],
+      quizData['java-foundations-exam-ii'],
       quizData.special,
     ],
   },
