@@ -10,6 +10,160 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which is true of the call stack?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'While processing tasks in the task queue, any number of jobs can be added to the jobs queue']], order: 1 },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'While processing jobs in the jobs queue, any number of jobs can be added to the jobs queue']], order: 2 },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'While processing tasks in the task queue, any number of tasks can be added to the tasks queue']], order: 3 },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All of the above']], order: 4 },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Queueing tasks to the tasks queue while a task is being executed will cummulatively extend the execution of tasks before any queued jobs are executed.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: The event loop can go idle (after finishing the execution of all operations) on a macrotask or a microtask alike.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer correctly illustrates a sequence for executing microtasks (jobs) and macrotasks (tasks) in the event loop?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'task, job, job, task, job, job, job, job, job, job, task, job, task, ...']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'task, job, job, task, task, job, job, task, job, job, task, task, ...']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'task, task, task, job, task, task, job, job, task, task, job, job, ...']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All of the above']], order: 3 },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer correctly illustrates a sequence for executing microtasks (jobs) and macrotasks (tasks) in the event loop?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'task, job, job, task, job, task, job, job, job, task, task, task, ...']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'task, job, job, task, task, job, job, task, job, job, task, task, ...']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'task, task, task, job, task, task, job, job, task, task, job, job, ...']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All of the above']], order: 3 },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the event loop?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Any number of tasks and jobs can be added while the current task is processing, but all jobs must be processed before the next task is processed']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Any number of tasks and jobs can be added while the current task is processing and all of them will be processed in the order they are added']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Any number of tasks and jobs can be added while the current task is processing and either is cummulatively processed in order before the others are processed']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'None of the above']], order: 3 },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Assuming an execution context of microtasks and macrotasks where no microtask or macrotask defines its own execution context in which there are additional microtasks or macrotasks, the event loop will execute all microtasks and then all macrotasks.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: In the event loop, any number of microtasks can be chain added and processed before the next macrotask will be processed.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: In the event loop, jobs and tasks are batch processed in the order they are added.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your application is executing a task in the tasks queue. During this, it queues a task to the tasks queue and then queues two jobs to the jobs queue. The current task finishes executing. What happens next?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The two jobs are executed']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The task is executed']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'One job is executed, then the task, then the other job']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'None of the above']], order: 3 },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is true about the output of the following code?'],
+        [QuizMarkdownType.CODE, `console.log('Synchronous code');
+
+Promise.resolve().then(() => {
+  console.log('Job 1');
+});
+
+Promise.resolve().then(() => {
+  console.log('Job 2');
+  setTimeout(() => {
+    console.log('Job 2 Task 1');
+    Promise.resolve().then(() => {
+      console.log('Job 2 Task 1 Job 1');
+    });
+  }, 0);
+});
+
+setTimeout(() => {
+  console.log('Task 2');
+}, 0);
+
+setTimeout(() => {
+  console.log('Task 3');
+  Promise.resolve().then(() => {
+    console.log('Task 3 Job 1');
+  });
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('Job 3');
+});
+
+console.log('Synchronous code');`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'Task 3 Job 1'], [QuizMarkdownType.TEXT, 'will be logged before'], [QuizMarkdownType.INLINE_CODE, 'Job 2 Task 1 Job 1']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Job 2 Task 1 Job 1'], [QuizMarkdownType.TEXT, 'will be logged before'], [QuizMarkdownType.INLINE_CODE, 'Task 3 Job 1']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'Job 2 Task 1 Job 1'], [QuizMarkdownType.TEXT, 'will be logged before'], [QuizMarkdownType.INLINE_CODE, 'Job 2 Task 1']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Task 3'], [QuizMarkdownType.TEXT, 'will be logged after'], [QuizMarkdownType.INLINE_CODE, 'Job 2 Task 1 Job 1']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which algorithm is used by React to efficiently update the DOM?'],
       ],
       answers: [
@@ -6515,16 +6669,14 @@ ReactDOM.render(<App />, document.getElementById('root'));`,
         ],
       ],
       code: `var promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-      resolve('promise win')
-  }, 4000)
+    resolve('promise win')
 })
 promise.then((result) => {
     console.log(result)
 })
 setTimeout(() => {
     console.log('setTimeout win')
-}, 4000)`,
+}, 0)`,
       answers: [
         {
           id: '0',

@@ -26,7 +26,7 @@ beagle.eat();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Eating...'"],
+            [QuizMarkdownType.TEXT, '\'Eating...\''],
           ],
         },
         {
@@ -101,7 +101,7 @@ console.log(obj.toString());`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'[object Object]'"],
+            [QuizMarkdownType.TEXT, '\'[object Object]\''],
           ],
         },
         {
@@ -143,7 +143,7 @@ beagle.eat();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Eating...'"],
+            [QuizMarkdownType.TEXT, '\'Eating...\''],
           ],
         },
         {
@@ -186,7 +186,7 @@ tesla.drive();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Driving...'"],
+            [QuizMarkdownType.TEXT, '\'Driving...\''],
           ],
         },
         {
@@ -275,7 +275,7 @@ child.greet();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Hello from Parent'"],
+            [QuizMarkdownType.TEXT, '\'Hello from Parent\''],
           ],
         },
         {
@@ -362,7 +362,7 @@ mgr.work();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Working...'"],
+            [QuizMarkdownType.TEXT, '\'Working...\''],
           ],
         },
         {
@@ -404,7 +404,7 @@ myComputer.start();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Machine starting...'"],
+            [QuizMarkdownType.TEXT, '\'Machine starting...\''],
           ],
         },
         {
@@ -511,25 +511,25 @@ alice.sayHello();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Hello, my name is Alice'"],
+            [QuizMarkdownType.TEXT, '\'Hello, my name is Alice\''],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, "'Hello, my name is undefined'"],
+            [QuizMarkdownType.TEXT, '\'Hello, my name is undefined\''],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, "'Hello, my name is [object Object]'"],
+            [QuizMarkdownType.TEXT, '\'Hello, my name is [object Object]\''],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, "'Hello, my name is'"],
+            [QuizMarkdownType.TEXT, '\'Hello, my name is\''],
           ],
         },
       ],
@@ -687,25 +687,25 @@ alice.sayHello();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, "Uncaught TypeError"],
+            [QuizMarkdownType.INLINE_CODE, 'Uncaught TypeError'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, "'Hello, my name is undefined'"],
+            [QuizMarkdownType.INLINE_CODE, '\'Hello, my name is undefined\''],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, "'Hello, my name is [object Object]'"],
+            [QuizMarkdownType.INLINE_CODE, '\'Hello, my name is [object Object]\''],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, "'Hello, my name is Alice'"],
+            [QuizMarkdownType.INLINE_CODE, '\'Hello, my name is Alice\''],
           ],
         },
       ],
@@ -757,13 +757,13 @@ beagle.eat();`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be the result of the following expression?\n\n'],
-        [QuizMarkdownType.CODE, `null ?? 'default'`],
+        [QuizMarkdownType.CODE, 'null ?? \'default\''],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'default'"],
+            [QuizMarkdownType.TEXT, '\'default\''],
           ],
         },
         {
@@ -781,7 +781,7 @@ beagle.eat();`],
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, "''"],
+            [QuizMarkdownType.TEXT, '\'\''],
           ],
         },
       ],
@@ -871,7 +871,7 @@ z ??= 'default';`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'default'"],
+            [QuizMarkdownType.TEXT, '\'default\''],
           ],
         },
         {
@@ -1252,7 +1252,7 @@ Animal.showKingdom();`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'Animalia'"],
+            [QuizMarkdownType.TEXT, '\'Animalia\''],
           ],
         },
         {
@@ -1357,19 +1357,19 @@ if (x === null || undefined) {
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be the result of the following expression in JavaScript?\n\n'],
-        [QuizMarkdownType.CODE, `console.log('5' + 3);`],
+        [QuizMarkdownType.CODE, 'console.log(\'5\' + 3);'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, "'53'"],
+            [QuizMarkdownType.TEXT, '\'53\''],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, "'8'"],
+            [QuizMarkdownType.TEXT, '\'8\''],
           ],
         },
         {
@@ -1390,7 +1390,7 @@ if (x === null || undefined) {
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be the result of the following expression in JavaScript?\n\n'],
-        [QuizMarkdownType.CODE, `console.log('5' - 3);`],
+        [QuizMarkdownType.CODE, 'console.log(\'5\' - 3);'],
       ],
       answers: [
         {
@@ -1402,7 +1402,7 @@ if (x === null || undefined) {
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, "'53'"],
+            [QuizMarkdownType.TEXT, '\'53\''],
           ],
         },
         {
@@ -1423,7 +1423,7 @@ if (x === null || undefined) {
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be logged to the console?\n\n'],
-        [QuizMarkdownType.CODE, `console.log(true + false);`],
+        [QuizMarkdownType.CODE, 'console.log(true + false);'],
       ],
       answers: [
         {
@@ -1633,25 +1633,25 @@ z ??= 30;`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, `'5' * 1`],
+            [QuizMarkdownType.TEXT, '\'5\' * 1'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, `Number('5')`],
+            [QuizMarkdownType.TEXT, 'Number(\'5\')'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, `String(5)`],
+            [QuizMarkdownType.TEXT, 'String(5)'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, `parseInt('5')`],
+            [QuizMarkdownType.TEXT, 'parseInt(\'5\')'],
           ],
         },
       ],
@@ -1660,7 +1660,7 @@ z ??= 30;`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be the result of the following comparison?\n\n'],
-        [QuizMarkdownType.CODE, `console.log(5 == '5');`],
+        [QuizMarkdownType.CODE, 'console.log(5 == \'5\');'],
       ],
       answers: [
         {
@@ -1904,7 +1904,6 @@ test();`],
       ],
       correctAnswer: '0',
     },
-
 
     {
       question: [
