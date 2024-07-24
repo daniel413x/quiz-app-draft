@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
@@ -7,6 +8,297 @@ export default {
     slug: 'programming',
   },
   questions: [
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?\n\n'],
+        [QuizMarkdownType.CODE, `let arr = [true, true, true, true, true, true];
+    let [, ...middle, ignore] = arr;
+    console.log(middle.findIndex((bool) => bool == true));`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SyntaxError'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'TypeError'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '0'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a valid loop construct in JavaScript?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for each...in'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for...of'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'for...in'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'do...while'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?\n\n'],
+        [QuizMarkdownType.CODE, `console.log(hoistedVar);
+    var hoistedVar = "theString";
+    console.log(hoistedVar);`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `undefined
+theString`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `null
+theString`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'ReferenceError: hoistedVar is not defined'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `theString
+theString`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the result of running the following code?\n\n'],
+        [QuizMarkdownType.CODE, `arrow();
+    let arrow = () => {
+        console.log("an expression");
+    }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ReferenceError: Cannot access \'arrow\' before initialization'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'TypeError: arrow is not a function'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'undefined'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'an expression'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of the following code?\n\n'],
+        [QuizMarkdownType.CODE, `console.log("1" - 10);
+    console.log("1" + 10);
+    console.log(10 + "1");
+    console.log(10 - "1");`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `-9
+110
+101
+9`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `NaN
+110
+101
+NaN`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `-9
+110
+101
+-9`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `NaN
+NaN
+NaN
+NaN`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the following code output?'],
+        [QuizMarkdownType.CODE, `var aName = null;
+    
+    console.log((aName ?? "unknown").toUpperCase());`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'UNKNOWN'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'unknown'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'TypeError: Cannot read property \'toUpperCase\' of null'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'undefined'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following statement will print...'],
+        [QuizMarkdownType.CODE, 'console.log(typeof null);'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'object'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'null'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'undefined'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'boolean'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will be the output of this code?'],
+        [QuizMarkdownType.CODE, `let aName = null;
+    console.log(aName.toUpperCase());`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'TypeError: Cannot read property \'toUpperCase\' of null'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'null'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'undefined'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"" (empty string)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be logged to the console?\n\n'],

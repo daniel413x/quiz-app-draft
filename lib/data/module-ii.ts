@@ -7,7 +7,6 @@ export default {
     slug: 'programming',
   },
   questions: [
-
     {
       question: [
         [QuizMarkdownType.TEXT, '__________ is an interface used to indicate that a bean should run when it is contained within a SpringApplication. Multiple beans defined by this interface can be run in a defined order by using the ________ annotation.'],
