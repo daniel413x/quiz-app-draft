@@ -26,6 +26,7 @@ import moduleI from './module-i';
 import moduleIi from './module-ii';
 import javaFoundationsExam from './java-foundations-exam';
 import javaFoundationsExamIi from './java-foundations-exam-ii';
+import moduleIii from './module-iii';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -42,6 +43,7 @@ const quizData: QuizData = {
   java,
   'module-i': moduleI,
   'module-ii': moduleIi,
+  'module-iii': moduleIii,
   // ===========
   'comptia-network-plus': comptiaNetworkPlus,
   'aws-cloud-practitioner': awsCloudPractitioner,
@@ -90,6 +92,7 @@ const categories = [
       quizData.python,
       quizData['module-i'],
       quizData['module-ii'],
+      quizData['module-iii'],
       quizData.java,
       quizData['java-ii'],
       quizData['shell-scripting'],
