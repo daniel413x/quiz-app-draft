@@ -387,6 +387,5 @@ export default {
       correctAnswer: '0',
     },
 
-
   ],
 } as QuizDataObject;
