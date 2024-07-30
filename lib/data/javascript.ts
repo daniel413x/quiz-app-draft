@@ -88,6 +88,18 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Macrotask A queues microtasks A and B to the jobs queue and macrotask B to the tasks queue. Microtask A queues macrotasks C and D to the tasks queue. Which of the following is true?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Macrotask B is executed before macrotasks C and D']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Macrotasks C and D are executed before macrotask B']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Macrotasks C and D are executed before microtask B']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Macrotask B is executed before microtasks A and B']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Evaluate: In the event loop, any number of microtasks can be chain added and processed before the next macrotask will be processed.'],
       ],
       answers: [
