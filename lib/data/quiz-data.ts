@@ -16,7 +16,7 @@ import mlPrinciples from './ml-principles';
 import python from './python';
 import javascript from './javascript';
 import learnersPermit from './learners-permit';
-import { QuizDataObject } from './types';
+import { QuizDataObject, QuizMarkdownType } from './types';
 import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
@@ -74,6 +74,129 @@ const quizData: QuizData = {
       slug: 'test',
     },
     questions: [
+
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'The following table illustrates ________'],
+          [QuizMarkdownType.TABLE, {
+            name: 'Car Insurance Approval Rules',
+            data: [
+              {
+                _tableDataColId: '1', rule: 'Rule 1', over_18: 'T', licensed: 'T', has_car: 'T', insurance_granted: 'T',
+              },
+              {
+                _tableDataColId: '2', rule: 'Rule 2', over_18: 'F', licensed: 'T', has_car: 'T', insurance_granted: '-',
+              },
+              {
+                _tableDataColId: '3', rule: 'Rule 3', over_18: 'T', licensed: 'F', has_car: 'T', insurance_granted: '-',
+              },
+              {
+                _tableDataColId: '4', rule: 'Rule 4', over_18: 'F', licensed: 'F', has_car: 'T', insurance_granted: '-',
+              },
+              {
+                _tableDataColId: '5', rule: 'Rule 5', over_18: 'T', licensed: 'T', has_car: 'F', insurance_granted: '-',
+              },
+              {
+                _tableDataColId: '6', rule: 'Rule 6', over_18: 'F', licensed: 'T', has_car: 'F', insurance_granted: '-',
+              },
+              {
+                _tableDataColId: '7', rule: 'Rule 7', over_18: 'T', licensed: 'F', has_car: 'F', insurance_granted: '-',
+              },
+              {
+                _tableDataColId: '8', rule: 'Rule 8', over_18: 'F', licensed: 'F', has_car: 'F', insurance_granted: '-',
+              },
+            ],
+            cols: [
+              { accessorKey: 'rule', header: 'RULE' },
+              { accessorKey: 'over_18', header: 'OVER 18' },
+              { accessorKey: 'licensed', header: 'LICENSED' },
+              { accessorKey: 'has_car', header: 'HAS CAR' },
+              { accessorKey: 'insurance_granted', header: 'INSURANCE GRANTED' },
+            ],
+          }],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Decision table testing'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Boundary value testing'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Equivalence partitioning'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Unit testing'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Based on the following table, which statement is true about the boundary values?'],
+          [QuizMarkdownType.TABLE, {
+            name: 'Bank Savings Account Interest Rates',
+            data: [
+              {
+                _tableDataColId: '1', balance_range: '< 0.00', interest_rate: 'Invalid', boundary_type: 'Below Minimum',
+              },
+              {
+                _tableDataColId: '2', balance_range: '0.00 - 50.00', interest_rate: '2%', boundary_type: 'Valid 2%',
+              },
+              {
+                _tableDataColId: '3', balance_range: '50.01 - 999.99', interest_rate: '3%', boundary_type: 'Valid 3%',
+              },
+              {
+                _tableDataColId: '4', balance_range: '> 999.99', interest_rate: '5%', boundary_type: 'Valid 5%',
+              },
+            ],
+            cols: [
+              { accessorKey: 'balance_range', header: 'BALANCE RANGE' },
+              { accessorKey: 'interest_rate', header: 'INTEREST RATE' },
+              { accessorKey: 'boundary_type', header: 'BOUNDARY TYPE' },
+            ],
+          }],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Boundary values include 0.00, 50.00, 50.01, and 999.99'],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, 'All boundary values are within the range 0.00 - 50.00'],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Boundary values are not important in this analysis'],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, 'Boundary values include only 50.00 and 999.99'],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
     ],
   },
 };

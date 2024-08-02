@@ -974,6 +974,125 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a disadvantage of the V-Model?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is very complex in implementation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No scope for risk management'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It cannot be used in complex projects'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Regular updates are required if the project changes'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What kind of SDLC model would an MMORPG like World of Warcraft (WoW) follow where there are patches, dungeon releases, and the development process is indefinite?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Incremental and iterative model'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Waterfall model'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'V-model'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Iterative model'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Based on the following table, which statement is true about the boundary values?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Bank Savings Account Interest Rates',
+          data: [
+            {
+              _tableDataColId: '1', balance_range: '< 0.00', interest_rate: 'Invalid', boundary_type: 'Below Minimum',
+            },
+            {
+              _tableDataColId: '2', balance_range: '0.00 - 50.00', interest_rate: '2%', boundary_type: 'Valid 2%',
+            },
+            {
+              _tableDataColId: '3', balance_range: '50.01 - 999.99', interest_rate: '3%', boundary_type: 'Valid 3%',
+            },
+            {
+              _tableDataColId: '4', balance_range: '> 999.99', interest_rate: '5%', boundary_type: 'Valid 5%',
+            },
+          ],
+          cols: [
+            { accessorKey: 'balance_range', header: 'BALANCE RANGE' },
+            { accessorKey: 'interest_rate', header: 'INTEREST RATE' },
+            { accessorKey: 'boundary_type', header: 'BOUNDARY TYPE' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Boundary values include 0.00, 50.00, 50.01, and 999.99'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All boundary values are within the range 0.00 - 50.00'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Boundary values are not important in this analysis'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Boundary values include only 50.00 and 999.99'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What type of acceptance testing is typically performed by the customer at their own site?'],
       ],
       answers: [
