@@ -22,6 +22,11 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
   isAnsweredCorrectly?: boolean;
   isCorrectAnswer?: boolean;
 }) => qmd.map((tuple, i) => {
+  if (tuple[0] === QuizMarkdownType.BREAK) {
+    return (
+      <br key={i} />
+    );
+  }
   if (tuple[0] === QuizMarkdownType.TEXT) {
     return (
       // add whitespace-normal for iOS
