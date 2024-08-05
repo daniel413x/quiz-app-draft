@@ -3623,5 +3623,1947 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Let the branch coverage metric be defined as BCov = (X / Y) * 100%. What do X and Y represent in this formula?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'X = number of decision outcomes exercised by the test cases',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Y = total number of decision outcomes in the code',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'X = number of conditional branches exercised by the test cases',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Y = total number of branches in the code',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'X = number of branches exercised by the test cases',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Y = total number of branches in the code',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'X = number of conditional branches exercised by the test cases',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Y = total number of decision outcomes in the code',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a web application that allows users to SEARCH for products, VIEW product details, ADD products to a shopping cart, and place an ORDER.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'You have prepared the following five test cases, which you want to execute according to their priorities:',
+        ],
+        [
+          QuizMarkdownType.TABLE,
+          {
+            data: [
+              {
+                _tableDataColId: '1', test_case: 'TC1', description: 'SEARCH product A', priority: 'medium',
+              },
+              {
+                _tableDataColId: '2', test_case: 'TC2', description: 'VIEW product A details', priority: 'low',
+              },
+              {
+                _tableDataColId: '3', test_case: 'TC3', description: 'ADD product B to a shopping cart', priority: 'medium',
+              },
+              {
+                _tableDataColId: '4', test_case: 'TC4', description: 'ADD product C to a shopping cart', priority: 'high',
+              },
+              {
+                _tableDataColId: '5', test_case: 'TC5', description: 'place an ORDER', priority: 'high',
+              },
+            ],
+            cols: [
+              { accessorKey: 'test_case', header: 'Test Case' },
+              { accessorKey: 'description', header: 'Description' },
+              { accessorKey: 'priority', header: 'Priority' },
+            ],
+          },
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'You also identified the following logical dependencies between test cases:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• SEARCH functionality must be tested before VIEW functionality can be tested, as product details rely on search functionality.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• VIEW functionality must be tested before ADD functionality, as adding products relies on the availability of accurate product details.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• ADD functionality must be tested before ORDER functionality, as placing an order relies on the availability of accurate shopping cart information.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which test case should be executed as the fourth one?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TC3',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TC1',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TC2',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TC4',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a product quality metric?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Mean time to failure',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Number of defects found',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Requirements coverage',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Defect detection percentage',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a coverage metric?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Mean time to failure',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Number of defects found',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Requirements coverage',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Defect detection percentage',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are a member of a test team located in North America, developing a product for a client located in Europe. The team is agile, follows the DevOps approach, and uses a continuous integration/continuous delivery pipeline.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is the LEAST effective way to communicate test progress to the customer?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Face-to-face',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Dashboards',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Email',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Video conferencing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following BEST describes an example of how configuration management (CM) supports testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Having the version number of the environment, the CM tool can retrieve the version numbers of libraries, stubs, and drivers used in that environment',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Having a record of the values of the test inputs, the CM tool can execute the test cases for these configurations and calculate test coverage',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Having data about the date of purchase of a software license, the CM tool automatically generates information about the fact that the product license is coming to an end',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Having the version number of the test case, the CM tool can automatically generate test data for this test case',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          '_______ are the consequence of ________, which are the result of ________.',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Failures, defects, error',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Defects, failures, error',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Error, failures, defects',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Failures, error, defects',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Read clockwise, the four sides of the testing quadrants are:',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Business-facing, product-critiquing, technology-facing, supporting the team',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Product-critiquing, business-facing, technology-facing, supporting the team',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technology-facing, product-critiquing, business-facing, supporting the team',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Business-facing, supporting the team, technology-facing, product-critiquing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Tools from which of the following categories help with the organization of test cases, detected defects, and configuration management?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test execution and coverage tools',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test design and implementation tools',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Defect management tools',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test management tools',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is NOT an example of how configuration management supports testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All commits to the repository are uniquely identified and version controlled',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All changes in the test environment elements are tracked',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All requirement specifications are referenced unambiguously in test plans',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All identified defects have an assigned status',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is an example of how product risk analysis may influence the thoroughness and scope of testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Continuous risk monitoring allows us to identify emerging risks as soon as possible',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Risk identification allows us to implement risk mitigation activities and reduce the risk level',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The assessed risk level helps us to select the rigor of testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Risk analysis allows us to derive coverage items',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the relationship between the testing quadrants, test levels, and test types?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Testing quadrants represent particular combinations of test levels and test types, defining their location in the software development lifecycle',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Testing quadrants describe the degree of granularity of individual test types performed at each test level',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Testing quadrants assign the test types that can be performed to the test levels',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Testing quadrants group test levels and test types by several criteria such as targeting specific stakeholders',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following user story is best-suited for __________'],
+        [QuizMarkdownType.TEXT, 'As a Regular or Special user, I want to be able to use my electronic floor card, to access specific floors.'],
+        [QuizMarkdownType.TEXT, 'Acceptance Criteria:'],
+        [QuizMarkdownType.TEXT, 'AC1: Regular users have access to floors 1 to 3'],
+        [QuizMarkdownType.TEXT, 'AC2: Floor 4 is only accessible to Special users'],
+        [QuizMarkdownType.TEXT, 'AC3: Special users have all the access rights of Regular users'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Acceptance test-driven development'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shift-right testing'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Exploratory testing'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Consider the following list:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• Correct input not accepted',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• Incorrect input accepted',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• Wrong output format',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• Division by zero',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'What test technique is MOST PROBABLY used by the tester who uses this list when performing testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Exploratory testing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Fault attack',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Checklist-based testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Boundary value analysis',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'How can white-box testing be useful in support of black-box testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'White-box coverage measures can help testers evaluate black-box tests in terms of the code coverage achieved by these black-box tests',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'White-box coverage analysis can help testers identify unreachable fragments of the source code',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Branch testing subsumes black-box test techniques, so achieving full branch coverage guarantees achieving full coverage of any black-box technique',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'White-box test techniques can provide coverage items for black-box techniques',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Why is it important to use white-box coverage measures in addition to black-box testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'White-box coverage measures provide an objective measurement of code coverage',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Black-box testing alone can detect all possible defects in the code',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'White-box testing only focuses on functional requirements',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Black-box testing provides a measure of actual code coverage without needing white-box testing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'A developer was asked to implement the following business rule:',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          `INPUT: value (integer number)
+IF (value ≤ 100 OR value ≥ 200) THEN write “value incorrect”
+ELSE write “value OK”`,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'You design the test cases using 2-value boundary value analysis. Which of the following sets of test inputs achieves the greatest coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '100, 150, 200, 201',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '99, 100, 200, 201',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '98, 99, 100, 101',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '101, 150, 199, 200',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What are the valid equivalence partitions for the following business rule?',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          `INPUT: value (integer number)
+IF (value ≤ 100 OR value ≥ 200) THEN write “value incorrect”
+ELSE write “value OK”`,
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '{..., 99, 100}, {101, 102, ..., 198, 199}, {200, 201, ...}',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '{..., 99, 101}, {101, 102, ..., 198, 199}, {201, 201, ...}',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '{..., 99}, {101, 102, ..., 198, 199}, {201, ...}',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '{...99, 100}, {101, 102, ..., 198, 199}, {200, 201, ...}',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a PIN validator, which accepts valid PINs and rejects invalid PINs. A PIN is a sequence of digits. A PIN is valid if it consists of four digits, at least two of which are different. You have identified the following valid equivalence partitions:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Variable: PIN code length',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• The partition “length correct” - four-digit PINs',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• The partition “length incorrect” - PINs with length other than 4',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Variable: Number of different digits',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• The partition “number of different digits correct” - PINs with at least two different digits',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• The partition “number of different digits incorrect” - PINs with all digits being the same',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a MINIMUM set of input test data that covers all identified equivalence partitions?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1, 1111, 1234',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '111, 1111, 1112',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1, 12345',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '12345, 1234',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a factor that contributes to a successful review?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Ensure management participate as reviewers',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Split large work products into smaller parts',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Set reviewer evaluation as an objective',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Plan to cover one document per review',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which type of review is performed by technically qualified reviewers and led by a moderator?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technical review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Informal review',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Inspection',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Walkthrough',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Validation is concerned with meeting ____________, while verification is concerned with meeting ____________, so this would be correct if we replaced “validating” with “verifying.”',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'user requirements and expectations; specified requirements',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'specified requirements; user requirements and expectations',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'debugging goals; testing goals',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'testing goals; debugging goals',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'The "absence-of-defects fallacy" is one of the principles of testing. Which of the following is an example of addressing this principle in practice?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Explaining that it is not possible for testing to show the absence of defects',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Supporting the end users to perform acceptance testing',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Ensuring that no implementation defects remain in the delivered system',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Modifying tests that cause no failures to ensure few defects remain',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Evaluate: The testing role is primarily responsible for test monitoring and control, while the test management role is primarily responsible for test planning and test completion.',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'False',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'True',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following statements about the independence of testing is CORRECT?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Independent testers will find defects due to their different technical perspective from developers, but their independence may lead to an adversarial relationship with the developers',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Developers’ familiarity with their own code means they only find a few defects in it, however their shared software background with testers means these defects would also be found by the testers',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Independent testing requires testers who are outside the developer’s team and ideally from outside the organization, however these testers find it difficult to understand the application domain',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Testers from outside the developer’s team are more independent than testers from within the team, but the testers from within the team are more likely to be blamed for delays in product release',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the main objective of an informal review?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Evaluating quality and building confidence',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Detecting anomalies',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Generating new ideas',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Motivating authors to improve',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which review type is the most formal and follows the complete generic review process?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technical review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Informal review',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Inspection',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Walkthrough',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In which review type is the author not allowed to act as the review leader or scribe?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technical review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Informal review',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Inspection',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Walkthrough',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which review type is led by the author and serves various objectives such as generating new ideas and motivating authors to improve?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technical review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Informal review',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Inspection',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Walkthrough',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which type of review focuses primarily on detecting anomalies and does not require formal documented output?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technical review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Informal review',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Inspection',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Walkthrough',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is one of the objectives of a technical review?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Collecting metrics for the SDLC',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Gaining consensus and making decisions on technical problems',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Providing a platform for informal discussion',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Documenting all anomalies found',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which review type has the primary objective of finding the most anomalies and also collects metrics to enhance the SDLC?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Technical review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Informal review',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Inspection',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Walkthrough',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is one of the objectives of a walkthrough?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Detecting anomalies without formal documentation',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Educating reviewers and building consensus',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Documenting metrics to improve the inspection process',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Implementing technical solutions immediately',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'While working on a certain project, you must exclude system integration testing from testing, although the test strategy requires this test level. This deviation should be documented in the project ________.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test plan'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'User requirements'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Exit criteria'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Agile Manifesto'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a purpose of a test plan?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define test data and expected results for component tests and component integration tests'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define as exit criteria from the component test level that “100% statement coverage and 100% branch coverage must be achieved”'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To describe what fields the test progress report shall contain and what should be the form of this report'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To explain why system integration testing will be excluded from testing, although the test strategy requires this test level'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following activities in the test process makes the MOST use of test progress reports?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test design',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test completion',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test analysis',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test planning',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'When is a test completion report typically prepared?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During test completion',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During test analysis',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Before test planning is finalized',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During the test design phase',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What sources of information does a test completion report typically use?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test progress reports and other relevant data',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Project planning documents and schedules',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Defect logs and incident reports only',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

@@ -6596,6 +6596,227 @@ export default {
     },
     {
       question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Consider the following acceptance criteria for a user story written from the perspective of an online store owner.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Given that the user is logged in and on the homepage,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'When the user clicks on the "Add Item" button,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Then the "Create Item" form should appear,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'And the user should be able to input a name and price for the new item.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'In what format is this acceptance criteria written?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Rule-oriented',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scenario-oriented',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Product-oriented',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Process-oriented',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your team follows a process that uses the DevOps delivery pipeline. The first three steps of this process are:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '(1) Code development',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '(2) Submit code into a version control system and merge it into the “test” branch',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '(3) Perform component testing for the submitted code',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is BEST suited to be the entry criterion for step (2) of this pipeline?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Static analysis returns no high severity warnings for the submitted code',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'System version control reports no conflicts when merging code into the “test” branch',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Component tests are compiled and ready to be executed',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Statement coverage is at least 80%',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'According to the testing quadrants model, which of the following falls into quadrant Q1 (“technology facing” and “support the team”)?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Usability testing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Functional testing',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'User acceptance testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Component integration testing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which type of coverage ensures that all possible branches in the code are executed?'],
       ],
       answers: [
