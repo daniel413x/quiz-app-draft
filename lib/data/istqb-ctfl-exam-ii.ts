@@ -737,26 +737,34 @@ export default {
           QuizMarkdownType.TEXT,
           'The reviews being used in your organization have the following attributes:',
         ],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
         [
           QuizMarkdownType.TEXT,
           '• There is the role of a scribe',
         ],
+        [QuizMarkdownType.BREAK],
         [
           QuizMarkdownType.TEXT,
           '• The main purpose is to evaluate quality',
         ],
+        [QuizMarkdownType.BREAK],
         [
           QuizMarkdownType.TEXT,
           '• The meeting is led by the author of the work product',
         ],
+        [QuizMarkdownType.BREAK],
         [
           QuizMarkdownType.TEXT,
           '• There is individual preparation',
         ],
+        [QuizMarkdownType.BREAK],
         [
           QuizMarkdownType.TEXT,
           '• A review report is produced',
         ],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
         [
           QuizMarkdownType.TEXT,
           'Which of the following review types is MOST likely being used?',
@@ -3591,7 +3599,9 @@ export default {
       question: [
         [QuizMarkdownType.TEXT, 'Customers of the TestWash car wash chain have cards with a record of the number of washes they have bought so far. The initial value is 0. After entering the car wash, the system increases the number on the card by one. This value represents the number of the current wash. Based on this number the system decides what discount the customer is entitled to.'],
         [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'For every tenth wash, the system gives a 10% discount, and for every twentieth wash, the system gives a further 40% discount (i.e., a 50% discount in total).'],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'Which of the following sets of input data (understood as the numbers of the current wash) achieves the highest equivalence partition coverage?'],
       ],
@@ -4299,10 +4309,18 @@ export default {
     {
       question: [
         [QuizMarkdownType.TEXT, 'The following user story is best-suited for __________'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'As a Regular or Special user, I want to be able to use my electronic floor card, to access specific floors.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'Acceptance Criteria:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'AC1: Regular users have access to floors 1 to 3'],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'AC2: Floor 4 is only accessible to Special users'],
+        [QuizMarkdownType.BREAK],
         [QuizMarkdownType.TEXT, 'AC3: Special users have all the access rights of Regular users'],
       ],
       answers: [
@@ -4328,6 +4346,1290 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '"Test design" is a process that can involve _________.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The identification of coverage items'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Defining the test objectives'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Prioritizing associated test conditions'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Scope creep'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test design includes elaborating the test conditions into test cases and other testware (e.g., test charters). This activity often involves the identification of coverage items, which serve as a guide to specify test case inputs.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test planning consists of defining the test objectives and then selecting an approach that best achieves the objectives within the constraints imposed by the overall context.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test design consists of defining the test objectives and then selecting an approach that best achieves the objectives within the constraints imposed by the overall context.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a product risk?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Poor architecture'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Cost-cutting'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Scope creep'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Poor tool support'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'For a given risk, its risk level is $1,000 and its risk likelihood is estimated as 50%. What is the risk impact?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '$500'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '$2,000'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '$50,000'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '$200'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT anticipated by the tester while applying error guessing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The developer misunderstood the formula in the user story for calculating the interest'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The developer wrote “FA = A*(1+IR^N)” instead of “FA = A*(1+IR)^N” in the source code'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The developer missed the seminar on new compound interest rate legislation'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The accuracy of the interest calculated by the system is not precise enough'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which collaborative user story writing practice enables the team to achieve a collective understanding of what needs to be delivered?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Planning poker, so that a team can achieve consensus on the effort needed to implement a user story'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Reviews, so that a team can detect inconsistencies and contradictions in a user story'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Iteration planning, so that user stories with the highest business value for a customer can be prioritized for implementation'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Conversation, so that team members can understand how the software will be used'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer missed the seminar on new compound interest rate legislation, and there is an incorrect calculation in their program where compound interest is calculated. Given this account, a _________ can be identified.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Root cause'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test report'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Error'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Risk'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your test suite S for a program P achieves 100% statement coverage. It consists of three test cases, each of which achieves 50% statement coverage. Which of the following statements is CORRECT?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Executing S will cause all possible failures in P'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'S achieves 100% branch coverage for P'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Every executable statement in P containing a defect has been run at least once during the execution of S'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'After removing one test case from S, the remaining two test cases will still achieve 100% statement coverage'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are applying state transition testing to the hotel room reservation system modeled by the following state transition table, with 4 states and 5 different events. Assuming all test cases start in the "Requesting" state, which of the following test cases, represented as sequences of events, achieves the highest valid transitions coverage?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Events',
+          data: [
+            {
+              _tableDataColId: '1', state: 'S1: Requesting', available: 'S2', not_available: 'S3', change_room: '', cancel: '', pay: '',
+            },
+            {
+              _tableDataColId: '2', state: 'S2: Confirmed', available: '', not_available: '', change_room: 'S1', cancel: 'S4', pay: 'S4',
+            },
+            {
+              _tableDataColId: '3', state: 'S3: Waiting list', available: 'S2', not_available: '', change_room: '', cancel: 'S4', pay: '',
+            },
+            {
+              _tableDataColId: '4', state: 'S4: End', available: '', not_available: '', change_room: '', cancel: '', pay: '',
+            },
+          ],
+          cols: [
+            { accessorKey: 'state', header: 'State' },
+            { accessorKey: 'available', header: 'Available' },
+            { accessorKey: 'not_available', header: 'Not Available' },
+            { accessorKey: 'change_room', header: 'Change Room' },
+            { accessorKey: 'cancel', header: 'Cancel' },
+            { accessorKey: 'pay', header: 'Pay' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NotAvailable, Available, ChangeRoom, NotAvailable, Cancel'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Available, ChangeRoom, NotAvailable, Available, Pay'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Available, ChangeRoom, Available, ChangeRoom, NotAvailable'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'NotAvailable, Cancel, ChangeRoom, Available, Pay'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are testing a temperature control system for a horticultural cold storage facility. The system receives the temperature (in full degrees Celsius) as the input. If the temperature is between 0 and 2 degrees inclusive, the system displays the message “temperature OK”. For lower temperatures, the system displays the message "temperature too low" and for higher temperatures, it displays the message “temperature too high”.'],
+        [QuizMarkdownType.TEXT, 'Using two-value boundary value analysis, which of the following sets of test inputs provides the highest level of boundary value coverage?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '–1, 3'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '0, 2'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '–1, 0, 2, 3'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '–2, 0, 2, 4'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are designing test cases based on the following decision table. So far you have designed the following test cases:'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Decision Table',
+          data: [
+            {
+              _tableDataColId: '1', rule: 'R1', age: '0-18', experience: '-', registered: 'NO', category: 'A',
+            },
+            {
+              _tableDataColId: '2', rule: 'R2', age: '19-65', experience: '0-4', registered: 'NO', category: 'A',
+            },
+            {
+              _tableDataColId: '3', rule: 'R3', age: '19-65', experience: '>4', registered: 'NO', category: 'B',
+            },
+            {
+              _tableDataColId: '4', rule: 'R4', age: '>65', experience: '-', registered: 'NO', category: 'B',
+            },
+            {
+              _tableDataColId: '5', rule: 'R5', age: '0-18', experience: '-', registered: 'YES', category: 'B',
+            },
+            {
+              _tableDataColId: '6', rule: 'R6', age: '19-65', experience: '-', registered: 'YES', category: 'D',
+            },
+            {
+              _tableDataColId: '7', rule: 'R7', age: '>65', experience: '-', registered: 'YES', category: 'C',
+            },
+          ],
+          cols: [
+            { accessorKey: 'rule', header: 'Rule' },
+            { accessorKey: 'age', header: 'C1: Age' },
+            { accessorKey: 'experience', header: 'C2: Experience' },
+            { accessorKey: 'registered', header: 'C3: Registered?' },
+            { accessorKey: 'category', header: 'Category' },
+          ],
+        }],
+        [QuizMarkdownType.TEXT, 'TC1: 19-year-old, unregistered man with no experience; expected result: category A'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'TC2: 65-year-old, unregistered woman with 5 years of experience; expected result: category B'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'TC3: 66-year-old, registered man with no experience; expected result: category C'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'TC4: 65-year-old, registered woman with 4 years of experience; expected result: category D'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following test cases, when added to the existing set of test cases, will increase the decision table coverage?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '66-year-old, unregistered man with no experience; expected result: category B'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '55-year-old, unregistered woman with 2 years of experience; expected result: category A'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '19-year-old, registered woman with 5 years of experience; expected result: category D'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'No additional test case can increase the already achieved decision table coverage'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a trigger for maintenance testing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A service exhibiting slow response times'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Modifications, such as planned enhancements'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Upgrades or migrations of the operational environment'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Retirement of an application'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following set of testing actions,'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. Check that the sort function puts the elements of the list or array in ascending order'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. Check whether the sort function completes sorting within one second of starting'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. Check how easily the sort function can be changed from sorting ascending to sorting descending'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. Checks that the sort function still functions correctly when moved from a 32-bit to a 64-bit architecture'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'and the test types,'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Non-functional maintainability testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Portability testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Non-functional testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Functional testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which answer correctly maps testing actions to test types?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A4 B3 C1 D2'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A4 B3 C2 D1'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A2 B4 C3 D1'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A2 B1 C4 D3'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is MOST likely to be a challenge encountered when implementing DevOps?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Making sure that non-functional quality characteristics are not overlooked'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Managing continuously changing test environments'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The need for more manual testers with suitable experience'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Setting up the test automation as part of the delivery pipeline'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Test completion is the responsibility of the'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test management role'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test role'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Scrum master'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Facilitator'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an activity carried out by a test management role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test planning'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Evaluate test basis and test object'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Define test environment requirements'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Assess testability of test object'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a responsibility of the testing role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Evaluating the test basis'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test monitoring and control'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test planning'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test management'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a responsibility of the testing role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test design'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test monitoring and control'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test planning'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test management'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a responsibility of the testing role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test planning'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test analysis'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test design'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test implementation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The testing role is primarily responsible for the technical and engineering aspects of testing, such as ___________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'test analysis, test design, test implementation, and test execution'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'test planning, test monitoring and control, and test completion'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'test analysis, test design, and test monitoring and control'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'test analysis and test completion'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following test tasks:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Derive test cases from test conditions'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Identify reusable testware'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Organize test cases into test procedures'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Evaluate test basis and test object'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'And the following test activities:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. Test analysis'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. Test design'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. Test implementation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. Test completion'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST matches the tasks with the activities?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2A, 3D, 4C'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2D, 3C, 4A'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2A, 3B, 4D'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2D, 3A, 4B'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following testware:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'i. Test completion report'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'ii. Data held in a database used for test inputs and expected results'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'iii. The list of elements needed to build the test environment'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'iv. Documented sequences of test cases in execution order'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'v. Test cases'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST shows the testware produced as a result of performing test implementation?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'ii, iv'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'iii, v'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'i, ii, v'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'i, iii, iv'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is MOST likely to describe a task performed by someone in a test management role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Evaluate test basis and test object'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Define test environment requirements'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Assess testability of test object'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Create test completion report'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a good testing practice that applies to all software development lifecycles?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each test level has specific and distinct test objectives'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test implementation and execution for a given test level should start during the corresponding development phase'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Testers should start test design as soon as drafts of the relevant work products become available'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Every dynamic testing activity has a corresponding static testing activity'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is MOST likely to be a trigger that leads to maintenance testing of a currency exchange system?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The developers reported that changing the currency exchange system was difficult and the testers decided to check if this was true'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The refund option of the currency exchange system was removed as it did not always repay the correct amount to customers'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The agile team has started developing a user story that adds a new customer loyalty feature to the currency exchange system'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The currency exchange system was reconfigured to support both English and local language currency transactions'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements about the value of static testing is CORRECT?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The defect types found by static testing are different from the defect types that can be found by dynamic testing'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic testing can detect the defect types that can be found by static testing plus some additional defect types'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic testing can identify some of the defects that can be found by static testing but not all of them'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static testing can identify the defect types that can be found by dynamic testing as well as some extra defect types'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following descriptions of review activities:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Detected anomalies are deliberated upon, and determinations are reached regarding their status, ownership, and any further steps needed'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Issues are recorded, and any needed updates are addressed prior to the acceptance of the work product'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Reviewers employ techniques to come up with suggestions and questions about the work product and to spot anomalies'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. The objective of the review and its schedule are established to ensure a focused and efficient review'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '5. Participants are provided with access to the item being reviewed'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following is the CORRECT sequence in the review process of the activities that correspond to the descriptions?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '4 – 3 – 5 – 2 – 1'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '4 – 5 – 3 – 1 – 2'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '5 – 4 – 1 – 3 – 2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '5 – 4 – 3 – 2 – 1'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A document of requirements for a test object on which you are working only details the behavior of the test object. Therefore, __________ will be most helpful in designing test cases.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Black-box test techniques'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'White-box test techniques'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Experience-based test techniques'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Risk-based test techniques'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The team wants to estimate the time needed for one tester to execute four test cases for a software component. The team has gathered the following measures of the effort used to execute a single test case:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Best-case scenario: 1 hour'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Worst-case scenario: 8 hours'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Most likely scenario: 3 hours'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Given that the three-point estimation technique is being used, what is the final estimate of the time needed to execute all four test cases?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '14 hours'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '3.5 hours'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '16 hours'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '12 hours'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The table shows the traceability matrix from test cases to requirements. "X" means that a given test case covers the corresponding requirement. You want to prioritize the test cases following the additional coverage prioritization technique. You execute all four test cases. Which test case should be executed as the LAST one?'],
+        [QuizMarkdownType.TABLE, {
+          data: [
+            {
+              _tableDataColId: '1', test_case: 'TC1', req1: 'X', req2: 'X', req3: '', req4: '', req5: '', req6: '', req7: 'X',
+            },
+            {
+              _tableDataColId: '2', test_case: 'TC2', req1: '', req2: '', req3: 'X', req4: '', req5: 'X', req6: '', req7: 'X',
+            },
+            {
+              _tableDataColId: '3', test_case: 'TC3', req1: '', req2: 'X', req3: '', req4: 'X', req5: '', req6: '', req7: '',
+            },
+            {
+              _tableDataColId: '4', test_case: 'TC4', req1: '', req2: '', req3: '', req4: '', req5: '', req6: 'X', req7: '',
+            },
+          ],
+          cols: [
+            { accessorKey: 'test_case', header: 'Test Case' },
+            { accessorKey: 'req1', header: 'Req1' },
+            { accessorKey: 'req2', header: 'Req2' },
+            { accessorKey: 'req3', header: 'Req3' },
+            { accessorKey: 'req4', header: 'Req4' },
+            { accessorKey: 'req5', header: 'Req5' },
+            { accessorKey: 'req6', header: 'Req6' },
+            { accessorKey: 'req7', header: 'Req7' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC1'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC2'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC3'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC4'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'For a given risk impact of $2,000 and a risk likelihood of 50%, what is the risk level?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '$1,000'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '$10,000'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '$4,000'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '$3,000'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a product risk?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Response time too long'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Cost-cutting'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Scope creep'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Poor tool support'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a valid purpose for a test report?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Tracking test progress and identifying areas that require further attention'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Providing information on the tests executed, their results, and any issues or defects found'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Providing information about each defect, such as the steps to reproduce it'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Providing information on testing planned for the next period'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test planning includes elaborating the test conditions into test cases and other testware (e.g., test charters). This activity often involves the identification of coverage items, which serve as a guide to specify test case inputs.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
           ],
         },
       ],

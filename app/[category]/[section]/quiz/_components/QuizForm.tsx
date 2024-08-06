@@ -51,6 +51,9 @@ const QuizForm = () => {
   const section = useParams().section as string;
   const category = useParams().category as string;
   const [questions] = useState<QuestionType[]>(shuffleQuestions(quizData[section].questions));
+  useEffect(() => {
+    console.log(questions);
+  }, []);
   const searchParams = useSearchParams();
   const qNum = Number(searchParams.get('qNum')) || 0;
   const question = questions[qNum];
