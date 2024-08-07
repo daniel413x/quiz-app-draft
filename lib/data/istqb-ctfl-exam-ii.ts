@@ -1,3 +1,4 @@
+import stateTransiton1 from '@/public/state-transition-1.png';
 import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
@@ -814,7 +815,36 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'You are testing a simplified apartment search form which has only two search criteria: floor (with three possible options: ground floor; first floor; second or higher floor) and garden type (with three possible options: no garden; small garden; large garden). Only apartments on the ground floor have gardens. The form has a built-in validation mechanism that will not allow you to use the search criteria which violate this rule. Each test has two input values: floor and garden type. You want to apply equivalence partitioning (EP) to cover each floor and each garden type in your tests. What is the minimal number of test cases to achieve 100% EP coverage?',
+          'You are testing a simplified apartment search form which has only two search criteria:',
+        ],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [
+          QuizMarkdownType.TEXT,
+          'floor (with three possible options: ground floor; first floor; second or higher floor)',
+        ],
+        [QuizMarkdownType.BREAK],
+        [
+          QuizMarkdownType.TEXT,
+          'garden type (with three possible options: no garden; small garden; large garden)',
+        ],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [
+          QuizMarkdownType.TEXT,
+          'Only apartments on the ground floor have gardens. The form has a built-in validation mechanism that will not allow you to use the search criteria which violate this rule.',
+        ],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [
+          QuizMarkdownType.TEXT,
+          'Each test has two input values: floor and garden type. You want to apply equivalence partitioning (EP) to cover each floor and each garden type in your tests.',
+        ],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [
+          QuizMarkdownType.TEXT,
+          'What is the minimal number of test cases to achieve 100% EP coverage?',
         ],
       ],
       answers: [
@@ -852,6 +882,269 @@ export default {
               QuizMarkdownType.TEXT,
               '6',
             ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In an inspection, the author of the project leads the process.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a benefit of static testing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Having less expensive defect management due to the ease of detecting defects later in the SDLC'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Fixing defects found during static testing is generally much less expensive than fixing defects found during dynamic testing'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Finding coding defects that might not have been found by only performing dynamic testing'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Detecting gaps and inconsistencies in requirements'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a walkthrough, the main purpose is to __________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Evaluate quality and educate reviewers'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Detect anomalies and generate new ideas'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Conduct tests and produce a report'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Motivate authors to improve'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements BEST describes the acceptance test-driven development (ATDD) approach?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In ATDD, acceptance criteria are typically created based on the given/when/then format'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In ATDD, test cases are mainly created at component testing and are code-oriented'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In ATDD, tests are created, based on acceptance criteria to drive the development of the related software'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In ATDD, tests are based on the desired behavior of the software, which makes it easier for team members to understand them'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is a VALID task of a testing role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Configure test environments'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Create the test plan'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Maintain the product backlog'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Design solutions to new requirements'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is a VALID task of a testing role?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Report on achieved coverage'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Create the test plan'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Maintain the product backlog'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Design solutions to new requirements'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which types of failures (1-4) fit which test levels (A-D) BEST?'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Failures in system behavior as it deviates from the user’s business needs'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Failures in communication between components'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Failures in logic in a module'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Failures in not correctly implemented business rules'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. Component testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. Component integration testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. System testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. Acceptance testing'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1D, 2B, 3A, 4C'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1D, 2B, 3C, 4A'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2A, 3D, 4C'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2B, 3A, 4D'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The most formal type of review is a ___________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Inspection'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Walkthrough'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Technical review'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Scrum'],
           ],
         },
       ],
@@ -6246,7 +6539,6 @@ ELSE write “value OK”`,
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [
@@ -6670,7 +6962,6 @@ ELSE write “value OK”`,
       ],
       correctAnswer: '1',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'While working on a certain project, you must exclude system integration testing from testing, although the test strategy requires this test level. This deviation should be documented in the project ________.'],
@@ -6861,6 +7152,781 @@ ELSE write “value OK”`,
             [
               QuizMarkdownType.TEXT,
               'Defect logs and incident reports only',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which test activity does a data preparation tool support?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test monitoring and control'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test analysis and design'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test implementation and execution'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test completion'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which item correctly identifies a potential risk of performing test automation?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It may introduce unknown regressions in production'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sufficient efforts to maintain testware may not be properly allocated'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Testing tools and associated testware may not be sufficiently relied upon'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It may reduce the time allocated for manual testing'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'During risk analysis the team considered the following risk: “The system allows too high a discount for a customer”. The team estimated the risk impact to be very high.'],
+        [QuizMarkdownType.TEXT, 'What can one say about the risk likelihood?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is also very high. High risk impact always implies high risk likelihood'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is very low. High risk impact always implies low risk likelihood'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One cannot say anything about risk likelihood. Risk impact and risk likelihood are independent.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Risk likelihood is not important with such a high-risk impact. One does not need to define it.'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You test a system whose lifecycle is modeled by the state transition diagram shown below. Thesystem starts in the INIT state and ends its operation in the OFF state. What is the MINIMAL number of test cases to achieve valid transitions coverage?'],
+      ],
+      image: stateTransiton1,
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '4'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '2'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '7'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '3'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your team uses planning poker to estimate the test effort for a newly required feature. There is a rule in your team that if there is no time to reach full agreement and the variation in the results is small, applying rules like "accept the number with the most votes" can be applied.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'After two rounds, the consensus was not reached, so the third round was initiated. You can see the test estimation results in the table below.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TABLE,
+          {
+            name: 'Team members\' estimations',
+            data: [
+              { _tableDataColId: '1', round: 'Round 1', estimations: '21, 2, 5, 34, 13, 8, 2' },
+              { _tableDataColId: '2', round: 'Round 2', estimations: '13, 8, 8, 34, 13, 8, 5' },
+              { _tableDataColId: '3', round: 'Round 3', estimations: '13, 8, 13, 13, 13, 13, 8' },
+            ],
+            cols: [
+              { accessorKey: 'round', header: 'Round' },
+              { accessorKey: 'estimations', header: 'Estimations' },
+            ],
+          },
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is the BEST example of the next step?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The product owner has to step in and make a final decision',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Accept 13 as the final test estimate as this has most of the votes',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'No further action is needed. Consensus has been reached',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Remove the new feature from the current release because consensus has not been reached',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Consider the following part of a test plan:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Testing will be performed using component testing and component integration testing. The regulations require demonstrating that 100% branch coverage is achieved for each component classified as critical.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which part of the test plan does this part belong to?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Communication',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Risk register',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Context of testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test approach',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following statements about branch testing is CORRECT?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'If a program includes only unconditional branches, then 100% branch coverage can be achieved without executing any test cases',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'If the test cases exercise all unconditional branches in the code, then 100% branch coverage is achieved',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'If 100% statement coverage is achieved, then 100% branch coverage is also achieved',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'If 100% branch coverage is achieved, then all decision outcomes in each decision statement in the code are exercised',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Decide which of the following statements (i-v) are true for static testing.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'i. Abnormal external behaviors are easier to identify with this testing',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'ii. Discrepancies from a coding standard are easier to find with this testing',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'iii. It identifies failures caused by defects when the software is run',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'iv. Its test objective is to identify defects as early as possible',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'v. Missing coverage for critical security requirements is easier to find and fix',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'a) i, iv, v are true for static testing',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'b) i, iii, iv are true for static testing',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'c) ii, iii are true for static testing',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'd) ii, iv, v are true for static testing',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'a) i, iv, v are true for static testing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'b) i, iii, iv are true for static testing',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'c) ii, iii are true for static testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'd) ii, iv, v are true for static testing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are working as a tester in a team that follows the V-model. The choice of software development lifecycle (SDLC) model impacts the timing of testing. Which of the following statements is NOT true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Dynamic testing can be performed early in the SDLC',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Static testing can be performed early in the SDLC',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test planning can be performed early in the SDLC',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Acceptance testing can be performed early in the SDLC',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is the BEST example of how traceability supports testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Performing the impact analysis of a change will give information about the completion of the tests',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Analyzing the traceability between test cases and test results will give information about the estimated level of residual risk',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Performing the impact analysis of a change will help select the right test cases for regression testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Analyzing the traceability between the test basis, the test objects, and the test cases will help in selecting test data to achieve the assumed coverage of the test object',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'A phone ringing in a neighboring cubicle distracts a programmer, causing him to improperly program the logic that checks the upper boundary of an input variable. Later, during system testing, a tester notices that this input field accepts invalid input values. Which of the following correctly describes an incorrectly coded upper bound?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The root cause',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A failure',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'An error',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A defect',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In many software organizations, the test department is called the Quality Assurance (QA) department. Is this sentence correct or not, and why?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is correct. Testing and QA mean exactly the same thing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is correct. These names can be used interchangeably because both testing and QA focus their activities on the same quality issues',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is not correct. Testing is something more; testing includes all activities with regard to quality. QA focuses on quality-related processes',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is not correct. QA is focused on quality-related processes while testing concentrates on demonstrating that a component or system is fit for purpose and to detect defects',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What task may management take on during a formal review?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Taking overall responsibility for the review',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Deciding what is to be reviewed',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Ensuring the effective running of review meetings, and mediating, if necessary',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Recording review information such as review decisions',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'A wine storage system uses a control device that measures the wine cell temperature T (measured in °C, rounded to the nearest degree) and alarms the user if it deviates from the optimal value of 12, according to the following rules:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• if T = 12, the system says, "optimal temperature"',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• if T < 12, the system says, "temperature is too low!"',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• if T > 12, the system says, "temperature is too high!"',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'You want to use the 3-point boundary value analysis (BVA) to verify the behavior of the control device. A test input is a temperature in °C provided by the device.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'What is the MINIMAL set of test inputs that achieves 100% of the desired coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '11, 12, 13',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '10, 12, 14',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '10, 11, 12, 13, 14',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '10, 11, 13, 14',
             ],
           ],
         },
