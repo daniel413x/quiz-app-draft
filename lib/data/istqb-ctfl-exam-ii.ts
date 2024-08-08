@@ -5017,7 +5017,7 @@ export default {
           ],
         },
       ],
-      correctAnswer: '0',
+      correctAnswer: '1',
     },
     {
       question: [
