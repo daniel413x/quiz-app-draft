@@ -5,6 +5,7 @@ import {
 import shuffle from 'lodash/shuffle';
 import { BlockMath, InlineMath } from 'react-katex';
 import { cn } from '@/lib/utils';
+import Image, { StaticImageData } from 'next/image';
 import { numOfQuestions } from '../../_consts';
 import Code from '../Code';
 import InlineCode from '../InlineCode';
@@ -22,6 +23,15 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
   isAnsweredCorrectly?: boolean;
   isCorrectAnswer?: boolean;
 }) => qmd.map((tuple, i) => {
+  if (tuple[0] === QuizMarkdownType.IMAGE) {
+    return (
+      <Image
+        className="py-6 m-auto"
+        src={tuple[1] as StaticImageData}
+        alt="Question image"
+      />
+    );
+  }
   if (tuple[0] === QuizMarkdownType.BREAK) {
     return (
       <br key={i} />

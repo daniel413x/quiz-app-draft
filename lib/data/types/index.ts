@@ -4,7 +4,7 @@ export enum QuizMarkdownType {
   INLINE_KATEX, KATEX, INLINE_CODE, CODE, TEXT, IMAGE, TABLE, BREAK,
 }
 
-export type QuizMarkdownTuple = [QuizMarkdownType, string | TableData] | [QuizMarkdownType];
+export type QuizMarkdownTuple = [QuizMarkdownType, string | TableData | StaticImageData] | [QuizMarkdownType];
 
 export type Answer = {
   answer: QuizMarkdownTuple[];

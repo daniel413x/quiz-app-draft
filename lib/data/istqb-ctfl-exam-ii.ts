@@ -1,4 +1,8 @@
 import stateTransiton1 from '@/public/state-transition-1.png';
+import stateTransiton2 from '@/public/state-transition-2.png';
+import estimatedEffort1 from '@/public/estimated-effort-1.png';
+import decisionTable1 from '@/public/decision-table-1.png';
+import testExecutionSchedule1 from '@/public/test-execution-schedule-1.png';
 import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
@@ -8,6 +12,222 @@ export default {
     slug: 'programming',
   },
   questions: [
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'According to the testing quadrants model, which of the following falls into quadrant Q1 (“technology facing” and “support the team”)?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Usability testing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Functional testing',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'User acceptance testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Component integration testing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your team follows a process that uses the DevOps delivery pipeline. The first three steps of this process are:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '(1) Code development',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '(2) Submit code into a version control system and merge it into the “test” branch',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '(3) Perform component testing for the submitted code',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is BEST suited to be the entry criterion for step (2) of this pipeline?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Static analysis returns no high severity warnings for the submitted code',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'System version control reports no conflicts when merging code into the “test” branch',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Component tests are compiled and ready to be executed',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Statement coverage is at least 80%',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Consider the following acceptance criteria for a user story written from the perspective of an online store owner.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Given that the user is logged in and on the homepage,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'When the user clicks on the "Add Item" button,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Then the "Create Item" form should appear,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'And the user should be able to input a name and price for the new item.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'In what format is this acceptance criteria written?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Rule-oriented',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scenario-oriented',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Product-oriented',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Process-oriented',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which activity is part of test execution?'],
@@ -4223,7 +4443,6 @@ export default {
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -5406,6 +5625,276 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Prioritized test conditions would be determined during _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test analysis'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test design'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test completion'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test implementation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Coverage items would be determined during _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test design'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test analysis'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test completion'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test implementation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The test execution schedule would be determined during _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test implementation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test analysis'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test completion'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test design'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Given the following testware:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '1. Coverage items',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '2. Change requests',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '3. Test execution schedule',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '4. Prioritized test conditions',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'And the following test activities:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'A. Test analysis',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'B. Test design',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'C. Test implementation',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'D. Test completion',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following BEST shows the testware produced by the activities?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1B, 2D, 3C, 4A',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1B, 2D, 3A, 4C',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1D, 2C, 3A, 4B',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1D, 2C, 3B, 4A',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following test activities are MOST likely to involve the application of boundary value analysis and equivalence partitioning?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test implementation or test planning',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test design or test analysis',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test execution and test completion',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test monitoring and control',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Given the following test tasks:'],
         [QuizMarkdownType.BREAK],
         [QuizMarkdownType.BREAK],
@@ -5936,7 +6425,6 @@ export default {
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -5944,7 +6432,6 @@ export default {
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -5952,7 +6439,6 @@ export default {
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -5960,7 +6446,6 @@ export default {
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -5968,7 +6453,6 @@ export default {
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6118,7 +6602,9 @@ export default {
         [
           QuizMarkdownType.CODE,
           `INPUT: value (integer number)
+
 IF (value ≤ 100 OR value ≥ 200) THEN write “value incorrect”
+
 ELSE write “value OK”`,
         ],
         [
@@ -6212,7 +6698,7 @@ ELSE write “value OK”`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              '{...99, 100}, {101, 102, ..., 198, 199}, {200, 201, ...}',
+              '{..., 98, 99, 100}, {101, 102, ..., 198, 199}, {200, 201, ...}',
             ],
           ],
         },
@@ -6227,7 +6713,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6235,7 +6720,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6243,7 +6727,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6251,7 +6734,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6259,7 +6741,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6267,7 +6748,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6275,7 +6755,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -6996,6 +7475,38 @@ ELSE write “value OK”`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which of the following BEST describes how using checklist-based testing can result in increased coverage?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Checklist items can be defined at a sufficiently low level of detail, so the tester can implement and execute detailed test cases based on these items'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Checklists can be automated, so each time an automated test execution covers the checklist items, it results in additional coverage'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Each checklist item should be tested separately and independently, so the elements cover different areas of the software'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Two testers designing and executing tests based on the same high-level checklist items will typically perform the testing in slightly different ways'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which of the following is NOT a purpose of a test plan?'],
       ],
       answers: [
@@ -7072,6 +7583,66 @@ ELSE write “value OK”`,
         },
       ],
       correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test progress reports are mostly used during test analysis'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test progress reports are mostly used during test completion and test monitoring and control'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Test progress reports are mostly used during test design'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -7290,17 +7861,378 @@ ELSE write “value OK”`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'A storage system can store up to three elements and is modeled by the following state transition diagram. The variable N represents the number of currently stored elements. '],
+        [QuizMarkdownType.IMAGE, stateTransiton2],
+        [QuizMarkdownType.TEXT, 'Which of the following test cases, represented as sequences of events, achieves the highest level of valid transitions coverage?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Add, Remove, Add, Add, Add'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Add, Add, Add, Add, Remove, Remove'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Add, Add, Add, Remove, Remove'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Add, Add, Add, Remove, Add'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working on a project to develop a system to analyze driving test results. You have been asked to design test cases based on the following decision table. '],
+        [QuizMarkdownType.IMAGE, decisionTable1],
+        [QuizMarkdownType.TEXT, 'What test data will show that there are contradictory rules in the decision table?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'C1 = T, C2 = T, C3 = F'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'C1 = T, C2 = F, C3 = T'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'C1 = T, C2 = T, C3 = T and C1 = F, C2 = T, C3 = T'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'C1 = F, C2 = F, C3 = F'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the test pyramid model show?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'That tests may have different priorities'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'That tests may have different granularity'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'That tests may require different coverage criteria'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'That tests may depend on other tests'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are preparing a test execution schedule for executing seven test cases TC 1 to TC 7.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The following figure includes the priorities of these test cases (1=highest priority, 3 = lowest priority).'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The figure also shows the dependencies between test cases using arrows. For instance, the arrow from TC 4 to TC 5 means that TC 5 can only be executed if TC 4 was previously executed.'],
+        [QuizMarkdownType.IMAGE, testExecutionSchedule1],
+        [QuizMarkdownType.TEXT, 'Which test case should be executed sixth?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC 3'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC 5'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC 6'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'TC 2'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'The role that takes overall responsibility for the review, such as organizing when and where the review will take place, is that of the ____',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scribe',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Review leader',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Facilitator',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Manager',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Given the following task descriptions:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '1. The quality characteristics to be evaluated and the exit criteria are selected',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '2. Everyone has access to the work product',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '3. Anomalies are identified in the work product',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '4. Anomalies are discussed',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'And the following review activities:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'A. Individual review',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'B. Review initiation',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'C. Planning',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'D. Communication and analysis',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following BEST matches the task descriptions and activities?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1B, 2C, 3D, 4A',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1B, 2D, 3C, 4A',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1C, 2A, 3B, 4D',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1C, 2B, 3A, 4D',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'The role that decides what is to be reviewed and provides resources, such as staff and time for the review, is that of the _______',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scribe',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Review leader',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Facilitator',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Manager',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
         [
           QuizMarkdownType.TEXT,
           'Your team uses planning poker to estimate the test effort for a newly required feature. There is a rule in your team that if there is no time to reach full agreement and the variation in the results is small, applying rules like "accept the number with the most votes" can be applied.',
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7308,7 +8240,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TABLE,
@@ -7327,7 +8258,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7496,7 +8426,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7504,7 +8433,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7512,7 +8440,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7520,7 +8447,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7528,7 +8454,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7536,7 +8461,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7544,7 +8468,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7552,7 +8475,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7560,7 +8482,6 @@ ELSE write “value OK”`,
         ],
         [
           QuizMarkdownType.BREAK,
-          '',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -7696,6 +8617,38 @@ ELSE write “value OK”`,
               QuizMarkdownType.TEXT,
               'Analyzing the traceability between the test basis, the test objects, and the test cases will help in selecting test data to achieve the assumed coverage of the test object',
             ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the MAIN difference between black-box test techniques and experience-based test techniques?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The test object'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The test level at which the test technique is used'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The test basis'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The software development lifecycle (SDLC) in which the test technique can be used'],
           ],
         },
       ],
@@ -7932,6 +8885,50 @@ ELSE write “value OK”`,
         },
       ],
       correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'At the beginning of each iteration, the team estimates the amount of work (in person-days) they will need to complete during the iteration. Let '],
+        [QuizMarkdownType.INLINE_KATEX, 'E(n)'],
+        [QuizMarkdownType.TEXT, ' be the estimated amount of work for iteration '],
+        [QuizMarkdownType.INLINE_KATEX, 'n'],
+        [QuizMarkdownType.TEXT, ', and let '],
+        [QuizMarkdownType.INLINE_KATEX, 'A(n)'],
+        [QuizMarkdownType.TEXT, ' be the actual amount of work done in iteration '],
+        [QuizMarkdownType.INLINE_KATEX, 'n'],
+        [QuizMarkdownType.TEXT, '. From the third iteration, the team uses the following estimation model based on extrapolation:'],
+        [QuizMarkdownType.KATEX, 'E(n) = \\frac{3 \\cdot A(n - 1) + A(n - 2)}{4}'],
+        [QuizMarkdownType.TEXT, 'The estimated and actual amount of work (in person-days) for the first four iterations:'],
+        [QuizMarkdownType.IMAGE, estimatedEffort1],
+        [QuizMarkdownType.TEXT, 'What is the estimated amount of work for iteration #5?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '10.5 person-days'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '8.25 person-days'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '6.5 person-days'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '9.4 person-days'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
     },
   ],
 } as QuizDataObject;
