@@ -8928,7 +8928,7 @@ ELSE write “value OK”`,
           ],
         },
       ],
-      correctAnswer: '1',
+      correctAnswer: '2',
     },
   ],
 } as QuizDataObject;
