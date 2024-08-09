@@ -5017,7 +5017,7 @@ export default {
           ],
         },
       ],
-      correctAnswer: '1',
+      correctAnswer: '0',
     },
     {
       question: [
@@ -5050,6 +5050,384 @@ export default {
         },
       ],
       correctAnswer: '2',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are frequently asked to participate in reviews of requirements. Unfortunately, you usually receive the document to be reviewed the night before the review meeting will be held. This is resulting in your not doing a thorough review and having to work significant overtime to get the review done. What review success factor is missing from this process?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Management support for the overall review process',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Reviewing only small chunks at a time',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Training for the proper performance in the meetings',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Allowing adequate time to conduct the review',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your team has just completed a retrospective. They have discussed what was successful and should be retained, and they discussed what improvements are needed. What else do they need to discuss in order to recognize process improvements?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'What will be retained or changed for the future',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Who is to blame for the shortcomings of the project',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'How much money was spent that could have been saved',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Why changes were not made earlier in the project',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which development approach captures the requirements in a simple test case format?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TDD',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'BDD',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'ATDD',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'TBD',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is an example of a good testing practice?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Different test levels should have specific test objectives',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Testers should have development experience',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Developers should determine the order of test execution in the test procedures',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test design should begin when the code is complete to avoid changes',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your team has conducted a quality risk analysis and has determined the likelihood, impact, and mitigation plan for each identified risk. This information should be captured in what work product?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test strategy',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test plan',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Risk register',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Risk plan',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are working with a junior tester who has been given a user story to test. They have created only one positive path test for the story. You know there are more areas that should be tested for this story, including negative scenarios.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following generic skills do they appear to be lacking?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Communication',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Curiosity',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Confidence',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Creativity',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'The risk register is found in which document?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test plan',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test strategy',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'User requirements',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test completion report',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'If you need to provide a report showing test case execution coverage of the requirements, what do you need to track?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Traceability between the test cases and the requirements',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Coverage of the risk items by test case',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Traceability between the requirements and the risk items',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Coverage of the requirements by the test cases that have been designed',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -5846,7 +6224,233 @@ export default {
         },
       ],
       correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are estimating the testing time required for a new project. You have gathered information from three experts and they have given you the following numbers in days:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TABLE,
+          {
+            name: 'Expert Estimates',
+            data: [
+              {
+                _tableDataColId: '1', expert: 'Expert 1', optimistic: '20', likely: '40', pessimistic: '60',
+              },
+              {
+                _tableDataColId: '2', expert: 'Expert 2', optimistic: '40', likely: '55', pessimistic: '75',
+              },
+              {
+                _tableDataColId: '3', expert: 'Expert 3', optimistic: '30', likely: '70', pessimistic: '90',
+              },
+              {
+                _tableDataColId: '4', expert: 'Average', optimistic: '30', likely: '55', pessimistic: '75',
+              },
+            ],
+            cols: [
+              { accessorKey: 'expert', header: 'Expert' },
+              { accessorKey: 'optimistic', header: 'Optimistic' },
+              { accessorKey: 'likely', header: 'Likely' },
+              { accessorKey: 'pessimistic', header: 'Pessimistic' },
+            ],
+          },
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Using the average numbers from the table above and applying the three-point estimation technique, what is the estimate?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '325 ± 45',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '81.25 ± 8',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '54.17 ± 7.5',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '40 ± 2',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are working on a project and have determined that exploratory testing is the best test technique to apply. Which testing quadrant are you using?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q1',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q2',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q3',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q4',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is an example of a good exit criterion from system testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All tests should be completed',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The project budget should be spent',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All defects should be fixed',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All severity 1 defects must be resolved',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
     }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Good exit criteria is governed by what ________ be done.',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'must',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'should',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'can',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'has yet to',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
       question: [
         [
           QuizMarkdownType.TEXT,
@@ -6125,6 +6729,133 @@ export default {
     },
     {
       question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is an example of a tool that supports static testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A tool that assists with tracking the results of reviews',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A defect tracking tool',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A test automation tool',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A tool that helps design test cases for security testing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your team is using Planning Poker to estimate the effort for a story.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TABLE,
+          {
+            data: [
+              {
+                _tableDataColId: '1', vote: 'First vote', developer: '3', tester: '8',
+              },
+              {
+                _tableDataColId: '2', vote: 'Second vote', developer: '5', tester: '8',
+              },
+              {
+                _tableDataColId: '3', vote: 'Third vote', developer: '5', tester: '5',
+              },
+            ],
+            cols: [
+              { accessorKey: 'vote', header: '' },
+              { accessorKey: 'developer', header: 'Developer Vote' },
+              { accessorKey: 'tester', header: 'Tester Vote' },
+            ],
+          },
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Although three votes were taken to reach consensus, how many story points should be allocated to the story?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '10 because that’s the sum of the points',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '8 because that was the highest number',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '3 because that was the lowest number',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '5 because that was the consensus',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Given the following descriptions of review activities:'],
         [QuizMarkdownType.BREAK],
         [QuizMarkdownType.BREAK],
@@ -6242,6 +6973,291 @@ export default {
         },
       ],
       correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing an e-commerce transaction that has the following states and transitions:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '1. Login (invalid) > Login',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '2. Login > Search',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '3. Search > Search',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '4. Search > Shopping Cart',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '5. Shopping Cart > Search',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '6. Shopping Cart > Checkout',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '7. Checkout > Search',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '8. Checkout > Logout',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'For a state transition diagram, how many transitions should be shown?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '4',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '6',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '8',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '16',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a banking application that allows a customer to withdraw 20, 100, or 500 dollars in a single transaction. The values are chosen from a drop-down list and no other values may be entered. How many equivalence partitions need to be tested to achieve 100% equivalence partition coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '2',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '3',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '4',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are writing some acceptance criteria for a story. You have decided to make a list of all the likely inputs to the code and the expected outputs based on those inputs. What format are you using?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'IPO chart',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Acceptance-based',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Rules-oriented',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Behavior-driven',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a scale system that determines shipping rates for a regional web-based auto parts distributor. Due to regulations, shipments cannot exceed 100 lbs. You want to include boundary value analysis as part of your black-box test design.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'How many tests will you need to execute to achieve 100% two-value boundary value analysis?',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TABLE,
+          {
+            data: [
+              { _tableDataColId: '1', weight: '0 to 10 lbs.', cost: '$5.00' },
+              { _tableDataColId: '2', weight: '11 to 25 lbs.', cost: '$7.50' },
+              { _tableDataColId: '3', weight: '26 to 50 lbs.', cost: '$12.00' },
+              { _tableDataColId: '4', weight: '51 to 100 lbs.', cost: '$17.00' },
+            ],
+            cols: [
+              { accessorKey: 'weight', header: 'Weight' },
+              { accessorKey: 'cost', header: 'Shipping Cost' },
+            ],
+          },
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '4',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '8',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '10',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '12',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
     },
     {
       question: [
@@ -8925,6 +9941,980 @@ ELSE write “value OK”`,
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, '9.4 person-days'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following variances should be explained in the Test Summary Report?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The variances between the weekly status reports and the test exit criteria',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The variances between the defects found and the defects fixed',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The variances between what was planned for testing and what was actually tested',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The variances between the test cases executed and the total number of test cases',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'By convention the Agile Testing Quadrants are denoted with the following orientation:',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q2 Q3',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Q1 Q4',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q1 Q3',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Q2 Q4',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q3 Q2',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Q3 Q1',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Q1 Q2',
+            ],
+            [
+              QuizMarkdownType.BREAK,
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'Q3 Q4',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are working in a team of testers who are all writing test cases. You have noticed that there is a significant inconsistency with the length and amount of detail in the different test cases. Where should the criteria for test case writing be documented?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The test plan',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The test approach',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The test case template',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The project plan',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'A metric that tracks the number of test cases passed is gathered during which activity in the test process?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Planning',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Implementation',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Execution',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Reporting',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You have been given the following requirement:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'A user must log in to the system with a valid username and password. If they fail to enter the correct combination three times, they will receive an error and will have to wait 10 minutes before trying again. The test terminates when the user successfully logs in.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'How many test cases are needed to provide 100% state transition coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '2',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '4',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '5',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    }, {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a thermostat for a heating/air conditioning system. You have been given the following requirements:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• When the temperature is below 70 degrees, turn on the heating system',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• When the temperature is above 75 degrees, turn on the air conditioning system',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '• When the temperature is between 70 and 75 degrees, inclusive, turn on fan only',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is the minimum set of test temperature values to achieve 100% two-value boundary value analysis coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '70, 75',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '65, 72, 80',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '69, 70, 75, 76',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '70, 71, 74, 75, 76',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a machine that scores exam papers and assigns grades. Based on the score achieved, the grades are as follows: 1-49 = F, 50-59 = D-, 60-69 = D, 70-79 = C, 80-89 = B, 90-100 = A.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'If you apply equivalence partitioning, how many test cases will you need to achieve minimum test coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '6',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '8',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '10',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '12',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'The 3 C\'s technique stands for ______',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Card, Conversation, Confirmation',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Create, Collaborate, Confirm',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Code, Compile, Commit',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Communicate, Coordinate, Control',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'When using the 3 C’s technique for user story development, what is the work product that is created for the Confirmation aspect?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test Approach',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Acceptance Criteria',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Entry Criteria',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Exit Criteria',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a good reason to use experience-based testing?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You can find defects that might be missed by more formal techniques',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You can test for defects that only experienced users would encounter',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You can target the developer’s efforts to the areas that users will be more likely to use',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is supported by strong tools and can be automated',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'If you have a section of code that has one simple IF statement, how many tests will be needed to achieve 100% branch coverage?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '2',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '5',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Unknown with this information',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You have two sections of code. One has a simple if statement: { if (...) { ... } } and the other has an if/else statement: { if (...) { ... } else { ... } }. How many tests will be needed to achieve 100% branch coverage in each section?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '2 in the first section, 2 in the second section',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1 in the first section, 2 in the second section',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '2 in the first section, 3 in the second section',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Unknown with this information',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'For a formal review, at what point in the process are the exit criteria defined?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Planning',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Review initiation',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Individual review',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Fixing and reporting',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer is CORRECT concerning non-functional tests?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Non-functional tests can and should be executed at all levels of testing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Non-functional tests should be executed during integration, system, and acceptance testing only',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Non-functional tests should be executed during unit and integration testing only',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Non-functional tests can only be performed in the context of system performance testing',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is the activity that compares the planned test progress to the actual test progress?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test monitoring',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test planning',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test closure',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test control',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are taking actions to correct issues observed during monitoring after your project\'s very first tests. This means you are performing ______',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test control',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test analysis',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test planning',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Test completion',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'When following a standard test process, when should the test control activity take place?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During the planning activities',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During the implementation and execution activities',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During the monitoring activities',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'During all the activities',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is a correct statement?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A developer makes a mistake which causes a defect that may be seen as a failure during dynamic testing',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A developer makes an error which results in a failure that may be seen as a fault when the software is executed',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A developer has introduced a failure which results in a defect that may be seen as a mistake during dynamic testing',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A developer makes a mistake which causes a bug that may be seen as a defect when the software is executed',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'When the tester verifies the test basis while designing tests early in the lifecycle, which test objective is being achieved?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Gaining confidence',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Finding defects',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Evaluating work products',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Providing information for decision making',
+            ],
           ],
         },
       ],
