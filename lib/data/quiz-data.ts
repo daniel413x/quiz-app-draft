@@ -29,6 +29,7 @@ import javaFoundationsExamIi from './java-foundations-exam-ii';
 import moduleIii from './module-iii';
 import istqbCtflExam from './istqb-ctfl-exam';
 import istqbCtflExamIi from './istqb-ctfl-exam-ii';
+import moduleV from './module-v';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -46,6 +47,7 @@ const quizData: QuizData = {
   'module-i': moduleI,
   'module-ii': moduleIi,
   'module-iii': moduleIii,
+  'module-v': moduleV,
   'istqb-ctfl-exam': istqbCtflExam,
   'istqb-ctfl-exam-ii': istqbCtflExamIi,
   // ===========
@@ -96,6 +98,7 @@ const categories = [
       quizData['module-i'],
       quizData['module-ii'],
       quizData['module-iii'],
+      quizData['module-v'],
       quizData['istqb-ctfl-exam'],
       quizData['istqb-ctfl-exam-ii'],
       quizData.java,
