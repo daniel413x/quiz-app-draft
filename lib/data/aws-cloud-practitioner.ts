@@ -9,6 +9,529 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of Amazon VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To manage data in a database']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To create isolated network environments']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To store large amounts of data']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To automate server deployments']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which component of a VPC allows you to divide a VPC into multiple isolated sections?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Security Groups']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Subnets']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Route Tables']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Internet Gateways']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the function of a Security Group in a VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To store data in a secure environment']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To provide a firewall for controlling inbound and outbound traffic']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To manage DNS entries']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To establish network connectivity']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does an Internet Gateway function within a VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It blocks all internet traffic']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It connects a VPC to the internet']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It provides DNS services']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It manages data encryption']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement best describes a VPC peering connection?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A direct connection to a data center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A link between two VPCs to route traffic between them']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A service that provides VPN connectivity']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A storage optimization feature']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the maximum number of VPCs you can create per AWS account per region by default?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '5']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '10']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '20']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '50']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes an Elastic IP address in the context of VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A static IPv4 address designed for dynamic cloud computing']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'An IP address that changes automatically']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An internal IP address within a VPC']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'An address used solely for DNS services']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What role does a Network ACL play in a VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stores encrypted data']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Controls access to subnets within a VPC']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Routes traffic within the VPC']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Provides a VPN connection']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following table regarding VPC components?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'VPC Components',
+          data: [
+            { _tableDataColId: '1', component: 'Security Group', function: 'Firewall for inbound/outbound rules' },
+            { _tableDataColId: '2', component: 'Subnet', function: 'Divide VPC into isolated sections' },
+            { _tableDataColId: '3', component: 'Route Table', function: 'Determine how traffic is directed' },
+            { _tableDataColId: '4', component: 'Internet Gateway', function: 'Connect VPC to the internet' },
+          ],
+          cols: [
+            { accessorKey: 'component', header: 'Component' },
+            { accessorKey: 'function', header: 'Function' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Subnets provide DNS services']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Security Groups manage storage']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Route Tables determine traffic direction']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Internet Gateways act as firewalls']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of a NAT Gateway in a VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To provide encryption for data at rest']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To enable instances in a private subnet to access the internet']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To route traffic between VPCs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To manage DNS entries within the VPC']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary benefit of using cloud computing over traditional on-premises IT infrastructure?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Higher security']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Faster access to hardware']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Pay-as-you-go pricing']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Complete control over data']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a responsibility of the cloud customer?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Physical security of the data centers']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Managing user identities and permissions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Maintaining the cloud infrastructure']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cooling and power supply']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service is used for object storage?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon DynamoDB']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main purpose of AWS Lambda?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Store and retrieve data']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Run code without provisioning servers']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Manage databases']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Monitor application performance']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides a content delivery network (CDN)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon SNS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon SQS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service is used to launch and manage virtual machines?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service helps in building and deploying machine learning models?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon SageMaker']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon DynamoDB']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Redshift']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a key advantage of using AWS CloudFormation?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It provides automatic backups of data.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It allows for infrastructure as code.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It offers a pay-as-you-go pricing model.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It simplifies database management.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service can be used to track API requests made to AWS services?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides DNS management?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Route 53']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Shield']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS WAF']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a benefit of AWS Auto Scaling?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Manual resource allocation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Improved application availability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reduced storage costs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Enhanced network security']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which service is used for deploying applications in Docker containers on AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon ECS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the AWS Shared Responsibility Model dictate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS manages all security for the customer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Security and compliance are shared between AWS and the customer']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The customer is responsible for physical security']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS handles software development for the customer']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides real-time data streaming capabilities?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Kinesis']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Redshift']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service allows you to build conversational interfaces using voice and text?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service is designed to help users analyze log data?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[
+            QuizMarkdownType.TEXT, 'AWS CloudTrail']],
+        },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch Logs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CodePipeline']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides a virtual network that closely resembles a traditional network?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Lambda']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Route 53']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service is used to create and manage encryption keys?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS KMS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Secrets Manager']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Shield']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service allows for the secure, durable, and low-cost storage of archive data?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 Standard']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 Glacier']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service is used for monitoring AWS infrastructure and applications?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of a Security Group in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To control traffic to and from AWS resources']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To manage user identities and permissions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To provide VPN connectivity']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To monitor API requests']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of traffic does a Security Group in AWS control by default?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Both inbound and outbound traffic']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Inbound traffic only']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic only']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Traffic between subnets only']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'By default, what is the rule for inbound traffic in a newly created Security Group?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All inbound traffic is allowed']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All inbound traffic is denied']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Inbound traffic from the same VPC is allowed']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Inbound traffic is allowed for public IPs only']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the default behavior of outbound traffic in a Security Group?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is allowed']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is denied']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is allowed to the same VPC']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is restricted to a whitelist']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Can a Security Group be applied to multiple instances in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Yes, it can be applied to multiple instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'No, it can only be applied to one instance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Yes, but only within the same VPC']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'No, it can only be applied to one subnet']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens if no outbound rules are specified in a Security Group?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is denied']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is allowed to the internet only']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is denied except to other resources in the VPC']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is allowed by default']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which protocol and port should you allow in a Security Group to enable HTTP traffic?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'TCP, Port 22']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'TCP, Port 443']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'TCP, Port 80']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'UDP, Port 53']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is true regarding changes to Security Group rules in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Changes to Security Group rules apply immediately']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Changes to Security Group rules require a reboot of instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Changes to Security Group rules apply after 24 hours']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Changes to Security Group rules require a new instance launch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the effect of removing all rules from an AWS Security Group?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All inbound and outbound traffic is blocked']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Only outbound traffic is allowed']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Only inbound traffic is allowed']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The Security Group is disabled']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does a Security Group differ from a Network ACL in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Security Groups are stateless, Network ACLs are stateful']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Security Groups operate at the instance level, while Network ACLs operate at the subnet level']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Network ACLs are applied to specific instances, Security Groups are applied to entire subnets']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Security Groups must be manually updated for each instance, while Network ACLs update automatically']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following table?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'AWS Service Characteristics',
+          data: [
+            { _tableDataColId: '1', service: 'Amazon EC2', characteristic: 'Compute' },
+            { _tableDataColId: '2', service: 'Amazon S3', characteristic: 'Storage' },
+            { _tableDataColId: '3', service: 'Amazon RDS', characteristic: 'Database' },
+            { _tableDataColId: '4', service: 'Amazon VPC', characteristic: 'Networking' },
+            { _tableDataColId: '5', service: 'AWS IAM', characteristic: 'Security' },
+          ],
+          cols: [
+            { accessorKey: 'service', header: 'Service' },
+            { accessorKey: 'characteristic', header: 'Characteristic' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 is used for compute']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC is a storage service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS IAM is a networking service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2 is used for compute']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What does S3 stand for in AWS?'],
       ],
       answers: [

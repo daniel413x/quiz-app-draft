@@ -30,6 +30,7 @@ import moduleIii from './module-iii';
 import istqbCtflExam from './istqb-ctfl-exam';
 import istqbCtflExamIi from './istqb-ctfl-exam-ii';
 import moduleV from './module-v';
+import moduleVi from './module-vi';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -48,6 +49,7 @@ const quizData: QuizData = {
   'module-ii': moduleIi,
   'module-iii': moduleIii,
   'module-v': moduleV,
+  'module-vi': moduleVi,
   'istqb-ctfl-exam': istqbCtflExam,
   'istqb-ctfl-exam-ii': istqbCtflExamIi,
   // ===========
