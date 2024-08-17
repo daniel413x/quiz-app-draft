@@ -620,6 +620,150 @@ export default {
       ],
       correctAnswer: '1',
     },
-
+    /* ****************************** */
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary goal of high availability in cloud computing?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To ensure that an application can handle high traffic loads efficiently']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To minimize downtime and ensure continuous operation of services']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To reduce storage costs and optimize resource usage']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To provide a secure environment for sensitive data']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is an Availability Zone in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A data center located within a specific region']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A region-wide network used for high-speed data transfers']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A virtual machine instance type']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A global AWS service for managing security groups']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Why is it recommended to deploy resources across multiple Availability Zones?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To increase cost efficiency']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To improve application performance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To achieve high availability and fault tolerance']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To reduce network latency between regions']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How are Availability Zones connected to each other within an AWS region?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Via dedicated high-speed, low-latency fiber optic networks']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Via public internet connections']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Via satellite communication links']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Through VPN connections established by customers']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary benefit of having multiple Availability Zones in an AWS region?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows for a better utilization of AWS pricing plans']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It enhances redundancy and data replication within the same region']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It allows AWS to offer more services in different regions']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It ensures that AWS can scale the infrastructure quickly']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service helps you replicate data across multiple Availability Zones automatically for high availability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFront']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS WAF']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of AWS Edge Locations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To provide a physical location for storing data backups']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To reduce latency by caching content closer to users']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To offer disaster recovery services']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To host virtual private clouds (VPCs)']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service primarily uses edge locations to deliver content globally?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFront']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do edge locations improve user experience in content delivery?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By encrypting all content automatically']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By allowing users to store data locally']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By reducing latency through local caching of frequently requested data']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By managing traffic between different AWS regions']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of AWS Edge Locations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To provide redundancy for AWS regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To cache content closer to end users for lower latency']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To host applications and databases']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To manage network traffic between Availability Zones']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service primarily uses Edge Locations to deliver content?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Lambda']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Shield']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do Edge Locations contribute to improving the performance of applications for end users?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By caching frequently accessed data closer to users']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By managing user permissions more efficiently']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By reducing the number of API calls to backend services']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By providing direct access to AWS data centers']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
