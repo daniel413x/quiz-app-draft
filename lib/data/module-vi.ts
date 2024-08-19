@@ -765,5 +765,388 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do Edge Locations contribute to improving the performance of applications for end users?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By caching frequently accessed data closer to users']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By managing user permissions more efficiently']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By reducing the number of API calls to backend services']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By providing direct access to AWS data centers']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary role of etcd in a Kubernetes cluster?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It serves as the key-value store for all cluster data and configuration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It schedules Pods on available nodes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It manages the container runtime engine']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It provides network connectivity between Pods']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes how etcd stores data in a Kubernetes cluster?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It stores data as key-value pairs in a distributed database']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It stores data as relational tables in a SQL database']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It stores data in an object storage format']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It stores data as a JSON document']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens if etcd fails in a Kubernetes cluster?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The cluster becomes unavailable, and no new resources can be created or modified until etcd is restored']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The containers stop running immediately']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The cluster automatically switches to a backup key-value store']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The nodes automatically reschedule all Pods']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does etcd ensure consistency in a Kubernetes cluster?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By using a consensus algorithm called Raft to replicate data across the cluster']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By periodically backing up data to a central database']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By storing data in a distributed NoSQL database']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By running data validation checks after each write operation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following components in a Kubernetes cluster communicates directly with etcd?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'kube-apiserver']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'kube-controller-manager']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'kube-scheduler']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'kubelet']] },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary role of a Service in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To expose a set of Pods as a network service within or outside the cluster']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To manage the lifecycle of Pods']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To store the state of the cluster in etcd']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To schedule Pods onto nodes based on available resources']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of Service in Kubernetes is used to expose a Pod to external traffic?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'NodePort']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'ClusterIP']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'LoadBalancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'ExternalName']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a ClusterIP Service in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A Service that exposes Pods only within the cluster, using an internal IP address']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A Service that allows external traffic to access Pods via a specific port on each node']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A Service that forwards traffic from external clients directly to Pods without going through the cluster network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A Service that automatically assigns IP addresses to Pods']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does a Kubernetes Service find and communicate with the correct set of Pods?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By using label selectors to identify the targeted Pods']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By using IP addresses defined in the Service definition']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By manually specifying the list of Pods in the Service configuration']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By using the Pod’s name as a reference in the Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Service type in Kubernetes maps a Service to an external DNS name?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ExternalName']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'LoadBalancer']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ClusterIP']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'NodePort']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of a Deployment in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To manage the lifecycle of Pods by creating and updating ReplicaSets']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To expose Pods to external traffic and manage ConfigMaps']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To store data used by the Pods in the cluster by leveraging the control plane']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To ensure the network connectivity between Pods']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which command would you use to create a Deployment in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'kubectl create deployment']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'kubectl apply deployment']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'kubectl run deployment']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'kubectl create pod']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens when you update a Deployment in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Kubernetes automatically updates the ReplicaSet and rolls out new Pods gradually, replacing the old ones']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All Pods are immediately terminated and replaced with new ones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The Deployment restarts all Pods simultaneously']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The Deployment is deleted and a new one is created with the updated configuration']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does Kubernetes ensure that a Deployment is fully rolled out?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By monitoring the status of the Deployment and verifying that the desired number of Pods are running and healthy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By restarting the Deployment periodically until all Pods are replaced']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By scaling the Deployment to zero Pods and then back to the desired number']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By sending success notifications to the administrator']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which feature of Deployments allows you to roll back to a previous version of the application?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Deployment revision history']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Pod template rollback']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReplicaSet scaling']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Namespace resetting']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Formally stated, a Kubernetes cluster is composed of _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A control plane and a data plane']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A set of deployments and config maps']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An kube-controller-manager and a kube scheduler']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A kube-apiserver and sets of pods']] },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the "desired state" in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The state defined by the user in a manifest file, representing how the cluster should look like']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The state of the cluster at runtime, representing the actual state of all resources']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The state of the application after it has completed execution']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The network configuration of the Kubernetes cluster']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the role of controllers in Kubernetes regarding the desired and actual states?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'They constantly monitor the actual state of the cluster and take action to make it match the desired state']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'They are responsible for scheduling Pods based on deviations between the desired state and the actual state']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'They apply security policies to match the desired state']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'They store cluster configuration and data for future deployments']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does Kubernetes ensure the actual state of the cluster matches the desired state?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Kubernetes uses controllers, which constantly monitor the cluster and take corrective actions when the actual state diverges from the desired state']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The kube-scheduler reassigns Pods to nodes until the desired state is achieved']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It uses automated scaling to adjust the number of Pods according to resource usage']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Kubernetes automatically restarts the entire cluster to ensure consistency']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Kubernetes component stores the desired state of the cluster?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'etcd']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'kube-apiserver']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'kube-scheduler']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'kube-controller-manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens when the actual state of the cluster diverges from the desired state in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Kubernetes controllers take actions to converge the actual state back to the desired state']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The cluster constantly scales up resources to reduce divergence, stopping when overshoot is achieved']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Kubernetes notifies the administrator but does not take any corrective action']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Kubernetes triggers a full system reboot to reset the cluster state']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the "actual state" in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The current state of all objects and resources in the cluster at a given moment']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The initial state of the cluster after it has been created']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The state of the cluster after an update has been applied']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The desired state as defined by the user in the configuration files']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How often do Kubernetes controllers check the actual state against the desired state?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuously, as part of a reconciliation loop']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Once a day']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Every time a node is added to the cluster']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Only when an administrator manually triggers it']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What term is used to describe the Kubernetes process of comparing actual state and desired state and making adjustments?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reconciliation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Replication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Scheduling']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Provisioning']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The desired state of a Kubernetes runtime is described in ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '.yaml files']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The replication block of a deployment config in a .yaml file']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'etcd']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The data plane']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A Kubernetes administrator runs the command'],
+        [QuizMarkdownType.INLINE_CODE, 'scale deployment/nginx-deployment --replicas=10'],
+        [QuizMarkdownType.TEXT, ', but the Kubernetes runtime returns to 5 replicas as per the .yaml file. This is most accurately an example of ___________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Imperative vs. declarative approaches']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Programming vs. manual work']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A correct vs. an incorrect approach']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The control plane and the data planes']] },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of a StatefulSet in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To provide guarantees about the ordering and uniqueness of Pods']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To expose a set of Pods to external traffic']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To manage temporary storage volumes for a set of Pods']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To perform rolling updates on a set of Pods']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does a StatefulSet differ from a Deployment in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'StatefulSets maintain the identity and storage of Pods across restarts, while Deployments do not']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'StatefulSets scale Pods automatically, while Deployments do not']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Deployments guarantee the ordering of Pods, while StatefulSets do not']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'StatefulSets manage temporary storage volumes for Pods, while Deployments manage persistent volumes']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which feature is unique to StatefulSets in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Each Pod in a StatefulSet gets a unique identifier that persists across rescheduling']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'StatefulSets automatically reschedule Pods on new nodes without downtime']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'StatefulSets automatically create persistent storage for all Pods']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Each Pod in a StatefulSet is identical and stateless across rescheduling']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does a StatefulSet handle Pod scaling in Kubernetes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Pods are scaled sequentially, maintaining their identity and ordering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All Pods are scaled simultaneously, with no regard to ordering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Pods are randomly assigned to nodes as they scale']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Pods are scaled based on resource utilization only']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What kind of applications typically benefit from being deployed as a StatefulSet? Assume the term "applications" refers to containers within Kubernetes pods.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Applications that require persistent storage and ordered deployment, like databases']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Stateless applications that require load balancing or automatic scaling']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Applications that require high availability but no persistent storage']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Applications that require scaling based on CPU and memory usage']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
