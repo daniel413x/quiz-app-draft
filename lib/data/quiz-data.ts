@@ -31,6 +31,8 @@ import istqbCtflExam from './istqb-ctfl-exam';
 import istqbCtflExamIi from './istqb-ctfl-exam-ii';
 import moduleV from './module-v';
 import moduleVi from './module-vi';
+import moduleViii from './module-viii';
+import moduleIx from './module-ix';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -50,6 +52,8 @@ const quizData: QuizData = {
   'module-iii': moduleIii,
   'module-v': moduleV,
   'module-vi': moduleVi,
+  'module-vii': moduleViii,
+  'module-ix': moduleIx,
   'istqb-ctfl-exam': istqbCtflExam,
   'istqb-ctfl-exam-ii': istqbCtflExamIi,
   // ===========
@@ -101,6 +105,7 @@ const categories = [
       quizData['module-ii'],
       quizData['module-iii'],
       quizData['module-v'],
+      quizData['module-ix'],
       quizData['istqb-ctfl-exam'],
       quizData['istqb-ctfl-exam-ii'],
       quizData.java,
