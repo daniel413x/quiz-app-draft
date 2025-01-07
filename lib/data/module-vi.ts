@@ -958,7 +958,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Formally stated, a Kubernetes cluster is composed of _______'],
+        [QuizMarkdownType.TEXT, 'At the highest level, a Kubernetes cluster is composed of _______'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'A control plane and a data plane']] },

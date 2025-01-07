@@ -958,6 +958,7 @@ console.log(myCar.wheels);`],
           answer: [
             [QuizMarkdownType.TEXT, 'All of the above'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '3',
@@ -1277,7 +1278,7 @@ z ??= 'default';`],
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '??'],
+            [QuizMarkdownType.INLINE_CODE, '!!'],
           ],
         },
       ],

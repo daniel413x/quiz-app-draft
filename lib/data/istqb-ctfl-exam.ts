@@ -1593,6 +1593,7 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'All of the above'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '3',
@@ -1625,6 +1626,7 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'All of the above'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -1689,6 +1691,7 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'All of the above'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -1785,6 +1788,7 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'All of the above'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -1881,6 +1885,7 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'None of the above'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '0',
@@ -9136,6 +9141,39 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'Finalization phase'],
           ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'JaCoCo is a library that provides code coverage by attaching a Java agent to the Java Virtual Machine while the application or tests are running. This makes it a _________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dynamic Analysis Tool'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static Analysis Tool'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Compilation tool'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
         },
       ],
       correctAnswer: '0',

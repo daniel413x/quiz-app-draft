@@ -605,136 +605,134 @@ export default {
       ],
       correctAnswer: '0',
     },
-    [
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is a key benefit of horizontal scaling in microservices architecture?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It allows adding more instances of a service to handle increased load.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It increases the memory and CPU resources of existing instances.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It reduces the number of services running at any given time.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'It requires tightly coupled services to function properly.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which of the following is a challenge when scaling down microservices?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Ensuring that no in-progress requests are dropped.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Adding more instances to the system.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Maintaining synchronous communication.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Reducing system security when scaling down.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the main advantage of auto-scaling in a microservices environment?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Automatically adjusting service capacity based on traffic demand.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Manually deploying more instances of the service.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Scaling the database to accommodate more users.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Eliminating the need for service discovery.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Which of the following can be a bottleneck when scaling up a microservices architecture?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'A shared database limiting the scaling of individual services.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Adding more service instances to handle increased requests.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Distributing traffic evenly across instances.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'Using a stateless approach for services.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-    ],
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a key benefit of horizontal scaling in microservices architecture?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It allows adding more instances of a service to handle increased load.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It increases the memory and CPU resources of existing instances.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It reduces the number of services running at any given time.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It requires tightly coupled services to function properly.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a challenge when scaling down microservices?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Ensuring that no in-progress requests are dropped.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Adding more instances to the system.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Maintaining synchronous communication.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Reducing system security when scaling down.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main advantage of auto-scaling in a microservices environment?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Automatically adjusting service capacity based on traffic demand.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Manually deploying more instances of the service.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Scaling the database to accommodate more users.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Eliminating the need for service discovery.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following can be a bottleneck when scaling up a microservices architecture?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A shared database limiting the scaling of individual services.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Adding more service instances to handle increased requests.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Distributing traffic evenly across instances.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Using a stateless approach for services.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the primary purpose of service discovery in a microservices architecture?'],
@@ -991,72 +989,70 @@ export default {
       ],
       correctAnswer: '0',
     },
-    [
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What is the role of a fallback plan in the context of a circuit breaker in microservice architecture?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To provide an alternative response or action when the circuit breaker detects a failure.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To restart the failing service automatically.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To cache requests until the service is back online.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'To stop all requests from reaching the microservice until it is fixed.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'What happens when a circuit breaker opens and a fallback plan is triggered?'],
-        ],
-        answers: [
-          {
-            id: '0',
-            answer: [
-              [QuizMarkdownType.TEXT, 'The system returns a predefined response or routes the request to an alternative service.'],
-            ],
-          },
-          {
-            id: '1',
-            answer: [
-              [QuizMarkdownType.TEXT, 'The system retries the request immediately.'],
-            ],
-          },
-          {
-            id: '2',
-            answer: [
-              [QuizMarkdownType.TEXT, 'The failing service is scaled down to reduce load.'],
-            ],
-          },
-          {
-            id: '3',
-            answer: [
-              [QuizMarkdownType.TEXT, 'The system logs the failure and waits indefinitely for the service to recover.'],
-            ],
-          },
-        ],
-        correctAnswer: '0',
-      },
-    ],
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the role of a fallback plan in the context of a circuit breaker in microservice architecture?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To provide an alternative response or action when the circuit breaker detects a failure.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To restart the failing service automatically.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To cache requests until the service is back online.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To stop all requests from reaching the microservice until it is fixed.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens when a circuit breaker opens and a fallback plan is triggered?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The system returns a predefined response or routes the request to an alternative service.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The system retries the request immediately.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The failing service is scaled down to reduce load.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The system logs the failure and waits indefinitely for the service to recover.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'In which scenario is a circuit breaker most likely triggered?'],
@@ -1088,6 +1084,328 @@ export default {
         },
       ],
       correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Spring AMQP with RabbitMQ, which class will allow a consumer to read messages from the RabbitMQ broker?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RabbitListener'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RabbitTemplate'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'MessageConverter'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'DirectExchange'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a responsibility of an API gateway?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sending heartbeat requests'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Global CORS handling'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SSL termination'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Routing'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following frameworks is leveraged for creating API gateways?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Spring Cloud'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Eureka'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Service Bus'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RabbitMQ'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'AMQP stands for _____'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Advanced Message Queuing Protocol'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Asynchronous Messaging Queue Protocol'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Application Messaging Queue Process'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Advanced Messaging Queue Processor'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the key characteristic of a direct exchange in RabbitMQ?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are routed based on a specific routing key.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are broadcast to all bound queues.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are delivered to only one consumer.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are routed randomly to any queue.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In RabbitMQ, which of the following best describes a fanout exchange?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are broadcast to all queues bound to the exchange.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are routed based on a matching routing key.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are sent to one specific queue only.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Messages are routed using a priority-based algorithm.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When should a direct exchange be used in RabbitMQ?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When messages need to be routed to a specific queue based on a routing key.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When all queues should receive the same message.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When messages should be routed randomly to any queue.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When messages should be prioritized based on queue size.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the difference between direct and fanout exchanges in RabbitMQ?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Direct exchanges use routing keys to send messages to specific queues, while fanout exchanges broadcast messages to all bound queues.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Fanout exchanges use routing keys, while direct exchanges broadcast messages.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Direct exchanges route messages based on a topic, while fanout exchanges use headers.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'There is no functional difference between the two.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A direct exchange can be described as _________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Point-to-point'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Broadcast'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Topic-based'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-many'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A fanout exchange can be described as _________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One-to-many'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Broadcast'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Topic-based'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Point-to-point'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
 
   ],

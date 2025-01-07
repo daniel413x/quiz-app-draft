@@ -5,13 +5,28 @@ import {
 import shuffle from 'lodash/shuffle';
 import { BlockMath, InlineMath } from 'react-katex';
 import { cn } from '@/lib/utils';
+import {
+  Open_Sans,
+} from 'next/font/google';
 import Image, { StaticImageData } from 'next/image';
 import { numOfQuestions } from '../../_consts';
 import Code from '../Code';
 import InlineCode from '../InlineCode';
 import DataTable from '../DataTable';
 
-const shuffleAnswers = (answers: Answer[]) => shuffle(answers).slice().sort((a, b) => ((a.order && !b.order) || (a.order && b.order && a.order > b.order) ? 1 : 0));
+const openSans = Open_Sans({ subsets: ['latin'], weight: '400' });
+
+const shuffleAnswers = (answers: Answer[]) => shuffle(answers).slice().sort((a, b) => {
+  const aa = a.order === 0 || undefined ? 0 : a.order;
+  const bb = b.order === 0 || undefined ? 0 : b.order;
+  if (aa! > bb!) {
+    return 1;
+  }
+  if (bb! > aa!) {
+    return -1;
+  }
+  return 0;
+});
 
 export const shuffleQuestions = (questions: Question[]) => shuffle(questions.map((q) => {
   const answers = shuffleAnswers(q.answers);
@@ -43,6 +58,13 @@ export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
       <span className="whitespace-normal" key={i}>
         {tuple[1] as string}
       </span>
+    );
+  }
+  if (tuple[0] === QuizMarkdownType.BLOCK_QUOTE) {
+    return (
+      <div className={cn(openSans.className, 'w-full text-sm text-emerald-800 text-xs border-l-8 border-stone-200 text-black dark:border-slate-700 bg-black/5 dark:bg-slate-800/20 dark:text-slate-300 mt-4 mb-1 py-12 px-14  tracking-wider')}>
+        {tuple[1] as string}
+      </div>
     );
   }
   if (tuple[0] === QuizMarkdownType.INLINE_KATEX) {

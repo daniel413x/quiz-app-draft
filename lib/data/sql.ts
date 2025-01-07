@@ -2553,5 +2553,111 @@ CREATE TABLE student_courses (
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A prime attribute is an attribute that is part of any __________ for the relationship with the primary key.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Candidate key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Foreign key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1st Normal Form'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '2nd Normal Form'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a table with the attributes studentID, courseID, and enrollmentDate, which attribute is NOT a prime attribute?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'enrollmentDate'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'studentID'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'courseID'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following tables defining the employees, their roles, jobs, and states.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'table CourseEnrollment',
+          data: [
+            {
+              _tableDataColId: '1', studentId: '101', courseId: '101', studentName: 'J01', courseName: 'J01',
+            },
+            { _tableDataColId: '2', studentId: '101', studentName: 'J02' },
+            { _tableDataColId: '3', employee_id: 'E002', job_code: 'J02' },
+            { _tableDataColId: '4', employee_id: 'E002', job_code: 'J03' },
+          ],
+          cols: [
+            { accessorKey: 'employee_id', header: 'EMPLOYEE_ID' },
+            { accessorKey: 'job_code', header: 'JOB_CODE' },
+          ],
+        }],
+        [QuizMarkdownType.TEXT, 'Which of the following statements is true regarding the tables above?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'EMPLOYEE_ID and JOB_CODE form a composite primary key in the employee_roles table.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'STATE_CODE in the employees table is a foreign key referencing the states table.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'JOB_CODE in the employee_roles table is a foreign key referencing the jobs table.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'All of the above.'],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
   ],
 } as QuizDataObject;

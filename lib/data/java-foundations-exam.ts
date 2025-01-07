@@ -715,80 +715,81 @@ System.out.println(d);
       ],
       correctAnswer: '0',
     },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Given the following code, which statements can be placed at the indicated position without causing compile and run time errors?'],
-        [QuizMarkdownType.CODE, `
-public class Test {
-    int i1;
-    static int i2;
-    public void method1() {
-        int i;
-        // ... insert statements here
-    }
-}
-        `],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'i = this.i1;'],
-          ],
-          order: 1,
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'i = this.i2;'],
-          ],
-          order: 2,
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'this.i = 4;'],
-          ],
-          order: 3,
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'this.i1 = i2;'],
-          ],
-          order: 4,
-        },
-        {
-          id: '4',
-          answer: [
-            [QuizMarkdownType.TEXT, 'this.i1 = i2;'],
-          ],
-          order: 5,
-        },
-        {
-          id: '5',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
-          ],
-          order: 6,
-        },
-        {
-          id: '6',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1, 3 and 2'],
-          ],
-          order: 7,
-        },
-        {
-          id: '7',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Answers 1, 2 and 5'],
-          ],
-          order: 8,
-        },
-      ],
-      correctAnswer: '7',
-    },
+    // order is fucked?
+    //     {
+    //       question: [
+    //         [QuizMarkdownType.TEXT, 'Given the following code, which statements can be placed at the indicated position without causing compile and run time errors?'],
+    //         [QuizMarkdownType.CODE, `
+    // public class Test {
+    //     int i1;
+    //     static int i2;
+    //     public void method1() {
+    //         int i;
+    //         // ... insert statements here
+    //     }
+    // }
+    //         `],
+    //       ],
+    //       answers: [
+    //         {
+    //           id: '0',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'i = this.i1;'],
+    //           ],
+    //           order: 1,
+    //         },
+    //         {
+    //           id: '1',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'i = this.i2;'],
+    //           ],
+    //           order: 2,
+    //         },
+    //         {
+    //           id: '2',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'this.i = 4;'],
+    //           ],
+    //           order: 3,
+    //         },
+    //         {
+    //           id: '3',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'this.i1 = i2;'],
+    //           ],
+    //           order: 4,
+    //         },
+    //         {
+    //           id: '4',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'this.i1 = i2;'],
+    //           ],
+    //           order: 5,
+    //         },
+    //         {
+    //           id: '5',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'Answers 1 and 2'],
+    //           ],
+    //           order: 6,
+    //         },
+    //         {
+    //           id: '6',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'Answers 1, 3 and 2'],
+    //           ],
+    //           order: 7,
+    //         },
+    //         {
+    //           id: '7',
+    //           answer: [
+    //             [QuizMarkdownType.TEXT, 'Answers 1, 2 and 5'],
+    //           ],
+    //           order: 8,
+    //         },
+    //       ],
+    //       correctAnswer: '7',
+    //     },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which of the following is not a valid overload expression?'],
@@ -4333,7 +4334,7 @@ System.out.printf("I scored %d marks in the %s exam!", exam, marks);
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'I scored 0 marks in the null exam!'],
+            [QuizMarkdownType.TEXT, 'Runtime exception'],
           ],
         },
         {
@@ -4349,7 +4350,7 @@ System.out.printf("I scored %d marks in the %s exam!", exam, marks);
           ],
         },
       ],
-      correctAnswer: '2',
+      correctAnswer: '1',
     },
     {
       question: [
@@ -4420,9 +4421,9 @@ public class Test {
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which integral type in Java has a range from'],
-        [QuizMarkdownType.INLINE_KATEX, '-2^31'],
+        [QuizMarkdownType.INLINE_KATEX, '-2^{31}'],
         [QuizMarkdownType.TEXT, 'to'],
-        [QuizMarkdownType.INLINE_KATEX, '2^31-1'],
+        [QuizMarkdownType.INLINE_KATEX, '2^{31}-1'],
         [QuizMarkdownType.TEXT, '?'],
       ],
       answers: [

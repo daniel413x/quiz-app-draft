@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 export enum QuizMarkdownType {
-  INLINE_KATEX, KATEX, INLINE_CODE, CODE, TEXT, IMAGE, TABLE, BREAK,
+  INLINE_KATEX, KATEX, INLINE_CODE, CODE, TEXT, IMAGE, TABLE, BREAK, BLOCK_QUOTE,
 }
 
 export type QuizMarkdownTuple = [QuizMarkdownType, string | TableData | StaticImageData] | [QuizMarkdownType];

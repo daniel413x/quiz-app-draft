@@ -8350,6 +8350,38 @@ class Dog extends Animal {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is NOT true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class can extend multiple classes.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class cannot extend multiple classes.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class can extend a class that implements multiple interfaces.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class can implement multiple interfaces.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
 
   ],
 } as QuizDataObject;

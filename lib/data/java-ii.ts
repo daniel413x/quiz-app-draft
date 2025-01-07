@@ -234,7 +234,7 @@ export default {
           ],
         },
       ],
-      correctAnswer: '2',
+      correctAnswer: '1',
     },
     {
       question: [

@@ -432,6 +432,38 @@ print(make_sound(cat))`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which package manager is commonly used with Python to manage packages and dependencies?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'npm (Node Package Manager)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'pip'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'composer'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'gem'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
         [
           QuizMarkdownType.TEXT,
           'What is the main advantage of using the Keras library?',

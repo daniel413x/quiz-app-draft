@@ -16,7 +16,7 @@ import mlPrinciples from './ml-principles';
 import python from './python';
 import javascript from './javascript';
 import learnersPermit from './learners-permit';
-import { QuizDataObject } from './types';
+import { QuizDataObject, QuizMarkdownType } from './types';
 import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
@@ -33,6 +33,11 @@ import moduleV from './module-v';
 import moduleVi from './module-vi';
 import moduleViii from './module-viii';
 import moduleIx from './module-ix';
+import moduleX from './module-x';
+import jenkins from './jenkins';
+import kubernetes from './kubernetes';
+import git from './git';
+import mlPrinciplesIi from './ml-principles-ii';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -45,8 +50,11 @@ const quizData: QuizData = {
   python,
   // ===========
   'ml-principles': mlPrinciples,
+  'ml-principles-ii': mlPrinciplesIi,
   // ===========
   java,
+  jenkins,
+  kubernetes,
   'module-i': moduleI,
   'module-ii': moduleIi,
   'module-iii': moduleIii,
@@ -54,6 +62,7 @@ const quizData: QuizData = {
   'module-vi': moduleVi,
   'module-vii': moduleViii,
   'module-ix': moduleIx,
+  'module-x': moduleX,
   'istqb-ctfl-exam': istqbCtflExam,
   'istqb-ctfl-exam-ii': istqbCtflExamIi,
   // ===========
@@ -74,6 +83,7 @@ const quizData: QuizData = {
   'java-foundations-exam': javaFoundationsExam,
   'java-foundations-exam-ii': javaFoundationsExamIi,
   'principles-ui-ux': uiUx,
+  git,
   'data-structures': dataStructures,
   special,
   sql,
@@ -83,7 +93,21 @@ const quizData: QuizData = {
     category: {
       slug: 'test',
     },
-    questions: [],
+    questions: [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Consider the following application for machine learning work. Which answer best describes the solution for implementing that application?'],
+          [QuizMarkdownType.BLOCK_QUOTE, 'Forecasting your company’s revenue next year, based on many performance metrics'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'This is a regression task']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'This is reinforcement learning']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'This is anomaly detection']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'This is clustering']] },
+        ],
+        correctAnswer: '0',
+      },
+    ],
   },
 };
 
@@ -101,11 +125,13 @@ const categories = [
     quizzes: [
       quizData.javascript,
       quizData.python,
+      quizData.kubernetes,
       quizData['module-i'],
       quizData['module-ii'],
       quizData['module-iii'],
       quizData['module-v'],
       quizData['module-ix'],
+      quizData['module-x'],
       quizData['istqb-ctfl-exam'],
       quizData['istqb-ctfl-exam-ii'],
       quizData.java,
@@ -117,6 +143,7 @@ const categories = [
       quizData['java-foundations-exam'],
       quizData['java-foundations-exam-ii'],
       quizData.special,
+      quizData.git,
     ],
   },
   {
@@ -124,6 +151,7 @@ const categories = [
     slug: 'machine-learning',
     quizzes: [
       quizData['ml-principles'],
+      quizData['ml-principles-ii'],
       quizData.tensorflow,
     ],
   },

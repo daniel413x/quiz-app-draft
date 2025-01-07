@@ -2588,7 +2588,7 @@ Epoch 5/5
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Increase the model’s complexity by adding more layers and neurons',
+              'Increase the model’s training data',
             ],
           ],
         },
@@ -2606,7 +2606,7 @@ Epoch 5/5
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Decrease the learning rate',
+              'Increase the model’s complexity by adding more layers and neurons',
             ],
           ],
         },
