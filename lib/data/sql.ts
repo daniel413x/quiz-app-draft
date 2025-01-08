@@ -2613,41 +2613,57 @@ CREATE TABLE student_courses (
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Consider the following tables defining the employees, their roles, jobs, and states.'],
+        [QuizMarkdownType.TEXT, 'Consider the following table describing the table CourseEnrollment. CourseEnrollment is in violation of which normal form?'],
         [QuizMarkdownType.TABLE, {
           name: 'table CourseEnrollment',
           data: [
             {
-              _tableDataColId: '1', studentId: '101', courseId: '101', studentName: 'J01', courseName: 'J01',
+              _tableDataColId: '1',
+              studentId: '101',
+              courseId: 'CSE101',
+              studentName: 'Alice',
+              courseName: 'Computer Science',
             },
-            { _tableDataColId: '2', studentId: '101', studentName: 'J02' },
-            { _tableDataColId: '3', employee_id: 'E002', job_code: 'J02' },
-            { _tableDataColId: '4', employee_id: 'E002', job_code: 'J03' },
+            {
+              _tableDataColId: '2',
+              studentId: '101',
+              courseId: 'MTH101',
+              studentName: 'Alice',
+              courseName: 'Mathematics',
+            },
+            {
+              _tableDataColId: '3',
+              studentId: '102',
+              courseId: 'CSE101',
+              studentName: 'Bob',
+              courseName: 'Computer Science',
+            },
           ],
           cols: [
-            { accessorKey: 'employee_id', header: 'EMPLOYEE_ID' },
-            { accessorKey: 'job_code', header: 'JOB_CODE' },
+            { accessorKey: 'studentId', header: 'Student ID' },
+            { accessorKey: 'studentName', header: 'Student Name' },
+            { accessorKey: 'courseName', header: 'Course Name' },
+            { accessorKey: 'courseId', header: 'Course ID' },
           ],
         }],
-        [QuizMarkdownType.TEXT, 'Which of the following statements is true regarding the tables above?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'EMPLOYEE_ID and JOB_CODE form a composite primary key in the employee_roles table.'],
+            [QuizMarkdownType.TEXT, '1NF'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'STATE_CODE in the employees table is a foreign key referencing the states table.'],
+            [QuizMarkdownType.TEXT, '2NF'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'JOB_CODE in the employee_roles table is a foreign key referencing the jobs table.'],
+            [QuizMarkdownType.TEXT, '3NF'],
           ],
         },
         {
@@ -2655,6 +2671,7 @@ CREATE TABLE student_courses (
           answer: [
             [QuizMarkdownType.TEXT, 'All of the above.'],
           ],
+          order: 3,
         },
       ],
       correctAnswer: '3',

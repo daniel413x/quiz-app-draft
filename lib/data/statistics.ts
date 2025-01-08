@@ -13,6 +13,28 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Broadly speaking, in a linear regression model, '],
+        [QuizMarkdownType.INLINE_KATEX, '\\sigma'],
+        [QuizMarkdownType.TEXT, 'allows you to measure how precise the estimate is'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Data scientists are studying the relationship between monthly advertising spend and sales revenue for a retail company. They expect a strong positive linear relationship between the two variables. What value of '],
         [QuizMarkdownType.INLINE_KATEX, 'r'],
         [QuizMarkdownType.TEXT, ' would indicate such a relationship?'],
@@ -1581,7 +1603,7 @@ export default {
           ],
         },
       ],
-      correctAnswer: '2',
+      correctAnswer: '0',
     },
     {
       question: [
@@ -2620,5 +2642,143 @@ export default {
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are testing a user story with three acceptance criteria: AC1, AC2, and AC3. AC1 is covered by test case TC1, AC2 by TC2, and AC3 by TC3. The test feature history had three test runs on three consecutive versions of the software as follows:'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Test Execution History',
+          data: [
+            {
+              _tableDataColId: '1', feature: 'Execution 1', r: 'Failed (1)',
+            },
+            {
+              _tableDataColId: '2', feature: 'Execution 2', r: 'Passed (2)',
+            },
+          ],
+          cols: [
+            { accessorKey: 'feature', header: 'Execution' },
+            { accessorKey: 'r', header: 'r' },
+          ],
+        }],
+        [QuizMarkdownType.TEXT, 'Tests are repeated once you are informed that all defects found in the test run are corrected and a new version of the software is available. Which of the above tests are executed as regression tests?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only 5, 7'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only 5, 6'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only 4, 6, 8, 9'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only 4, 7, 8, 9'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the table below, r is the standard correlation coefficient for'],
+        [QuizMarkdownType.INLINE_CODE, 'median_house_value'],
+        [QuizMarkdownType.TEXT, 'and the features included in the predictive model for that value. Which answer draws the proper conclusion?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'corr()',
+          data: [
+            {
+              _tableDataColId: '1', feature: 'median_house_value', r: '1.000000',
+            },
+            {
+              _tableDataColId: '2', feature: 'median_income', r: '0.687151',
+            },
+            {
+              _tableDataColId: '3', feature: 'total_rooms', r: '0.135140',
+            },
+            {
+              _tableDataColId: '4', feature: 'housing_median_age', r: '0.114146',
+            },
+            {
+              _tableDataColId: '5', feature: 'households', r: '0.064590',
+            },
+            {
+              _tableDataColId: '6', feature: 'total_bedrooms', r: '0.047781',
+            },
+            {
+              _tableDataColId: '7', feature: 'population', r: '-0.026882',
+            },
+            {
+              _tableDataColId: '8', feature: 'longitude', r: '-0.047466',
+            },
+            {
+              _tableDataColId: '9', feature: 'latitude', r: '-0.142673',
+            },
+          ],
+          cols: [
+            { accessorKey: 'feature', header: 'Feature' },
+            { accessorKey: 'r', header: 'r' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'median_income'],
+            [QuizMarkdownType.TEXT, 'is most strongly correlated with'],
+            [QuizMarkdownType.INLINE_CODE, 'median_house_value'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'latitude'],
+            [QuizMarkdownType.TEXT, 'is most strongly correlated with'],
+            [QuizMarkdownType.INLINE_CODE, 'median_house_value'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'total_bedrooms'],
+            [QuizMarkdownType.TEXT, 'is most strongly correlated with'],
+            [QuizMarkdownType.INLINE_CODE, 'median_house_value'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'population'],
+            [QuizMarkdownType.TEXT, 'is most strongly correlated with'],
+            [QuizMarkdownType.INLINE_CODE, 'median_house_value'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A US pollster is trying to ensure that 1,000 people polled are representative of the whole population. The US population is 51.3% females and 48.7% males, so the sample includes 513 females and 487 males. This is called __________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Stratified sampling']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Random sampling']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Covariate sampling']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Distributed sampling']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

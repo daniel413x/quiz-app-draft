@@ -3601,5 +3601,57 @@ print(result)`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which sequence of commands correctly sets up a virtual environment and installs dependencies in it?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `python3 -m venv env
+source env/bin/activate
+python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn`,
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `python3 -m env venv
+source env/bin/activate
+python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn`,
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `python3 -m env venv
+source bin/env/activate
+python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn`,
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `python3 -m venv env
+source bin/env/activate
+python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn`,
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;

@@ -1472,5 +1472,32 @@ export default {
       ],
       correctAnswer: '0',
     },
+    [
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'What is the primary purpose of Scikit-Learn’s OrdinalEncoder class?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'To convert categorical text attributes into numerical values.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'To handle missing values in a dataset.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'To reduce the dimensionality of a dataset.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'To normalize numerical attributes to a specific range.']] },
+        ],
+        correctAnswer: '0',
+      },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Which of the following would be a valid use case for Scikit-Learn’s OrdinalEncoder?'],
+        ],
+        answers: [
+          { id: '0', answer: [[QuizMarkdownType.TEXT, 'Converting string attributes into numerical values.']] },
+          { id: '1', answer: [[QuizMarkdownType.TEXT, 'Scaling a numeric attribute to a range of 0 to 1.']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'Replacing missing values in an attribute.']] },
+          { id: '3', answer: [[QuizMarkdownType.TEXT, 'One-hot encoding attributes.']] },
+        ],
+        correctAnswer: '0',
+      },
+    ],
+
   ],
 } as QuizDataObject;

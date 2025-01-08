@@ -1392,7 +1392,7 @@ Epoch 5/5
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'a. time-series, speech, or text data; b. tabular data or image data']], order: 0 },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'a. tabular data or image data; b. tabular data or image data']], order: 1 },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'a. tabular data or image data; b. time-series, speech, or text data']], order: 1 },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'None of the above']], order: 2 },
       ],
       correctAnswer: '0',

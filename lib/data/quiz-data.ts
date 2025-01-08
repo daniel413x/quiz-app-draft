@@ -16,7 +16,7 @@ import mlPrinciples from './ml-principles';
 import python from './python';
 import javascript from './javascript';
 import learnersPermit from './learners-permit';
-import { QuizDataObject, QuizMarkdownType } from './types';
+import { QuizDataObject } from './types';
 import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
@@ -94,19 +94,7 @@ const quizData: QuizData = {
       slug: 'test',
     },
     questions: [
-      {
-        question: [
-          [QuizMarkdownType.TEXT, 'Consider the following application for machine learning work. Which answer best describes the solution for implementing that application?'],
-          [QuizMarkdownType.BLOCK_QUOTE, 'Forecasting your company’s revenue next year, based on many performance metrics'],
-        ],
-        answers: [
-          { id: '0', answer: [[QuizMarkdownType.TEXT, 'This is a regression task']] },
-          { id: '1', answer: [[QuizMarkdownType.TEXT, 'This is reinforcement learning']] },
-          { id: '2', answer: [[QuizMarkdownType.TEXT, 'This is anomaly detection']] },
-          { id: '3', answer: [[QuizMarkdownType.TEXT, 'This is clustering']] },
-        ],
-        correctAnswer: '0',
-      },
+
     ],
   },
 };

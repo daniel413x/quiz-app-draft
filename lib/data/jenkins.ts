@@ -292,7 +292,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              '1 Groovy 2 Groovy 3 Shell 4 Shell',
+              '1 Groovy, 2 Groovy, 3 Shell, 4 Shell',
             ],
           ],
         },
@@ -301,7 +301,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              '1 Shell 2 Shell 3 Groovy 4 Groovy',
+              '1 Shell, 2 Shell, 3 Groovy, 4 Groovy',
             ],
           ],
         },
@@ -310,7 +310,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              '1 Groovy 2 Shell 3 Shell 4 Groovy',
+              '1 Groovy, 2 Shell, 3 Shell, 4 Groovy',
             ],
           ],
         },
@@ -319,7 +319,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              '1 Groovy 2 Shell 3 Shell 4 Shell',
+              '1 Groovy, 2 Shell, 3 Shell, 4 Shell',
             ],
           ],
         },
