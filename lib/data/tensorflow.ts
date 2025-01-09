@@ -1497,6 +1497,37 @@ export default {
         ],
         correctAnswer: '0',
       },
+      {
+        question: [
+          [QuizMarkdownType.TEXT, 'Assume'],
+          [QuizMarkdownType.INLINE_CODE, 'y'],
+          [QuizMarkdownType.TEXT, 'is a'],
+          [QuizMarkdownType.INLINE_CODE, 'np.array'],
+          [QuizMarkdownType.TEXT, 'object (NumPy array) of random numbers. What will be the output of the following code?'],
+          [QuizMarkdownType.CODE, `y_train, y_test = y[:60000], y[60000:]
+y_train_5 = (y_train == 5)
+print(y_train)`],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'True'],
+              [QuizMarkdownType.TEXT, 'for all 5s, '],
+              [QuizMarkdownType.INLINE_CODE, 'False'],
+              [QuizMarkdownType.TEXT, 'for all other digits.'],
+            ],
+          },
+          { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'SyntaxError']] },
+          { id: '2', answer: [[QuizMarkdownType.TEXT, 'A new array containing all 5s']] },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.INLINE_CODE, 'False']],
+          },
+        ],
+        correctAnswer: '0',
+      },
     ],
 
   ],

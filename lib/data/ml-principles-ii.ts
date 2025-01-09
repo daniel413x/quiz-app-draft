@@ -1095,6 +1095,9 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
     {
       question: [
         [QuizMarkdownType.TEXT, californiaCensusPrompt],
+        [
+          QuizMarkdownType.BREAK,
+        ],
         [QuizMarkdownType.TEXT, 'Assume the median prices range between $120,000 and $265,000. You are using a regression model. You run the following code. What judgment can you make?'],
         [QuizMarkdownType.CODE, `>>> from sklearn.metrics import mean_squared_error
 >>> housing_predictions = lin_reg.predict(housing_prepared)
@@ -1114,6 +1117,9 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
     {
       question: [
         [QuizMarkdownType.TEXT, californiaCensusPrompt],
+        [
+          QuizMarkdownType.BREAK,
+        ],
         [QuizMarkdownType.TEXT, 'With data prepared, you run the following code, which trains the model and samples some of the instances\' predictions with their labels (expected output). Which answer describes an accurate assessment of the output?'],
         [QuizMarkdownType.CODE, `...
 lin_reg = LinearRegression()
@@ -1139,6 +1145,9 @@ instances from the training set:
     {
       question: [
         [QuizMarkdownType.TEXT, californiaCensusPrompt],
+        [
+          QuizMarkdownType.BREAK,
+        ],
         [QuizMarkdownType.TEXT, 'With the model trained, you run the following code, which indicates the relative importance of each attribute for making accurate predictions. Assume'],
         [QuizMarkdownType.INLINE_CODE, 'INLAND'],
         [QuizMarkdownType.TEXT, ', '],
@@ -1199,8 +1208,8 @@ sorted(zip(feature_importances, attributes), reverse=True)
         [QuizMarkdownType.TEXT, 'In the course of developing a machine learning model, fine-tuning a model occurs ______'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'After it has been trained.']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Before the data is preprocessed.']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'After the model has been trained.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Before the model has been trained.']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Before splitting the dataset into training and testing sets.']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'After the test set is evaluated.']] },
       ],
@@ -1211,9 +1220,9 @@ sorted(zip(feature_importances, attributes), reverse=True)
         [QuizMarkdownType.TEXT, 'In the course of developing a machine learning model, splitting the dataset into training and testing sets is typically done ______'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Before training the model.']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'After the model is fine-tuned.']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Before preprocessing the data.']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Before training the model and after pre-processing the data.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'After preprocessing the data and the model is fine-tuned.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'After preprocessing the data and after training the model.']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'After the model has been deployed.']] },
       ],
       correctAnswer: '0',
@@ -1249,10 +1258,23 @@ sorted(zip(feature_importances, attributes), reverse=True)
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Before training the model.']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'After evaluating the model on the test set.']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'After fine-tuning the model.']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'While training the model.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'After splitting the Dataset into Training and Testing Sets.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'None of the above']], order: 3 },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You receive approval to launch a Scikit-Learn model you developed, but first you must save your trained model. Which of the following libraries provides a means to do this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'joblib']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'matplotlib']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'pandas']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'seaborn']] },
       ],
       correctAnswer: '0',
     },
+
   ],
 } as QuizDataObject;
