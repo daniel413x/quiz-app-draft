@@ -117,7 +117,7 @@ const categories = [
     name: 'Programming',
     slug: 'programming',
     quizzes: [
-      quizData.javaThreads,
+      quizData['java-threads'],
       quizData.javascript,
       quizData.python,
       quizData.kubernetes,

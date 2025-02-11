@@ -4,7 +4,7 @@ export default {
   name: 'Multithreading',
   slug: 'multithreading',
   category: {
-    slug: 'multithreading',
+    slug: 'computer-science',
   },
   questions: [{
     question: [
