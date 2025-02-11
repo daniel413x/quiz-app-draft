@@ -345,7 +345,7 @@ decoded_token = jwt.decode(
 )`,
         ],
         [
-          QuizMarkdownType.CODE, `const decodedJwt = jwt.verify(token, process.env.SECRET_KEY);`,
+          QuizMarkdownType.CODE, 'const decodedJwt = jwt.verify(token, process.env.SECRET_KEY);',
         ],
       ],
       answers: [
