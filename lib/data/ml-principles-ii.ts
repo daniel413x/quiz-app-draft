@@ -1275,6 +1275,53 @@ sorted(zip(feature_importances, attributes), reverse=True)
       ],
       correctAnswer: '0',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The purpose of the following code is to be a customizable _______'],
+        [QuizMarkdownType.CODE, `from sklearn.model_selection import StratifiedKFold
+from sklearn.base import clone
+skfolds = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
+for train_index, test_index in skfolds.split(X_train, y_train_5):
+ clone_clf = clone(sgd_clf)
+ X_train_folds = X_train.iloc[train_index]
+ y_train_folds = y_train_5.iloc[train_index]
+ X_test_fold = X_train.iloc[test_index]
+ y_test_fold = y_train_5.iloc[test_index]
+ clone_clf.fit(X_train_folds, y_train_folds)
+ y_pred = clone_clf.predict(X_test_fold)
+ n_correct = sum(y_pred == y_test_fold)
+ print(n_correct / len(y_pred))`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Fold Cross Validation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Data Preprocessor']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Training/Test Set Splitter']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In machine learning, a fold refers to _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A subset of data used during cross-validation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A subset of data consisting of segments that are consistent across runtimes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A subset of data used during training']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A subset of data that is only seen once by the model']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What MUST be true of the test set?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The test set cannot contain data overlap with the validation set']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The test set may contain data overlap with the validation set']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Some data from the validation set will be seen when testing the model']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

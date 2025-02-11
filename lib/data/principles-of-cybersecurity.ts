@@ -7,12 +7,143 @@ export default {
     slug: 'cybersecurity',
   },
   questions: [
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which JWT signing algorithm uses the same key for both signing and verification?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HS256'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'RS256'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ES256'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'PS256'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In the context of JWT signing, which key is used to sign tokens when using the'],
+        [QuizMarkdownType.INLINE_CODE, 'RS256'],
+        [QuizMarkdownType.TEXT, 'algorithm?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A shared secret key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A private key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A public key'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A symmetric key'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is required to verify a JWT signed using the'],
+        [QuizMarkdownType.INLINE_CODE, 'HS256'],
+        [QuizMarkdownType.TEXT, 'algorithm?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A private key'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A public key'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The same secret key used for signing'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A certificate'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which JWT signing algorithm involves sharing a public key for signature verification?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HS256'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'RS256'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'PS256'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ES256'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
     {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'What does the term "RWX Memory" mean?',
+          'Using the RS256 JWT signing algorithm, a _____ must be used to sign the token, while a ________ must be used to verify it.',
         ],
       ],
       answers: [
@@ -21,7 +152,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Read Write Execute',
+              'private key, public key',
             ],
           ],
         },
@@ -30,7 +161,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Read Write Cross-Authentication',
+              'public key, private key',
             ],
           ],
         },
@@ -39,7 +170,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Ram Write Execute',
+              'RS256 algorithm, HS256 algorithm',
             ],
           ],
         },
@@ -48,7 +179,261 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Read Wide Execute',
+              'HS256 algorithm, RS256 algorithm',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Using the RS256 JWT signing algorithm, a private key must be used to ______ the token, while a public key must be used to _____ it.',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'sign, verify',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'verify, sign',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'encode, decode',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Answers 1 & 3',
+            ],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Using an asymmetric JWT signing algorithm,',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A private key must be used to sign the token, while a public key is used to verify it',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A private key must be used to verify the token, while a public key is used to sign it',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The token is signed and verified using the same key',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The token is signed using a public key but does not require a key for verification',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Using a symmetric JWT signing algorithm,',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The token is signed and verified using the same key',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A private key must be used to verify the token, while a public key is used to sign it',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A private key must be used to sign the token, while a public key is used to verify it',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The token is signed using a public key but does not require a key for verification',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Given the two code snippets, which answer must be true?',
+        ],
+        [
+          QuizMarkdownType.CODE, `algorithms = ["..."]
+decoded_token = jwt.decode(
+    token,
+    public_key,
+    algorithms,
+    audience=audience,
+    issuer=issuer,
+)`,
+        ],
+        [
+          QuizMarkdownType.CODE, `const decodedJwt = jwt.verify(token, process.env.SECRET_KEY);`,
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The value of',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'algorithms',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'must be equal to',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '["RS256"]',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The value of',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'algorithms',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'must be equal to',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '["HS256"]',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'decoded_token',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'is decoded using an HS256 algorithm, while',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'decodedJwt',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'is decoded using an RS256 algorithm',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Both',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'decoded_token',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'decodedJwt',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'are decoded using an RS256 algorithm',
             ],
           ],
         },

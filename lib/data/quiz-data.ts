@@ -38,12 +38,16 @@ import jenkins from './jenkins';
 import kubernetes from './kubernetes';
 import git from './git';
 import mlPrinciplesIi from './ml-principles-ii';
+import javaThreads from './java-threads';
+import httpFundamentals from './http-fundamentals';
+import multithreading from './multithreading';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  'http-fundamentals': httpFundamentals,
   'learners-permit': learnersPermit,
   // ===========
   javascript,
@@ -55,6 +59,8 @@ const quizData: QuizData = {
   java,
   jenkins,
   kubernetes,
+  multithreading,
+  'java-threads': javaThreads,
   'module-i': moduleI,
   'module-ii': moduleIi,
   'module-iii': moduleIii,
@@ -111,6 +117,7 @@ const categories = [
     name: 'Programming',
     slug: 'programming',
     quizzes: [
+      quizData.javaThreads,
       quizData.javascript,
       quizData.python,
       quizData.kubernetes,
@@ -188,6 +195,20 @@ const categories = [
     slug: 'english',
     quizzes: [
       quizData['english-ii'],
+    ],
+  },
+  {
+    name: 'Web Development',
+    slug: 'web-development',
+    quizzes: [
+      quizData['http-fundamentals'],
+    ],
+  },
+  {
+    name: 'Computer Science',
+    slug: 'computer-science',
+    quizzes: [
+      quizData.multithreading,
     ],
   },
 ];
