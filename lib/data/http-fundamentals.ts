@@ -9,13 +9,13 @@ export default {
   questions: [
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What HTTP method is typically used for retrieving a resource in a RESTful API?'],
+        [QuizMarkdownType.TEXT, 'A successful GET request should return a ___ status code.'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'GET']] },
-        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'POST']] },
-        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'PUT']] },
-        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'DELETE']] },
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '200']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '201']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '204']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '100']] },
       ],
       correctAnswer: '0',
     },
@@ -39,8 +39,8 @@ export default {
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'It updates an existing resource or creates one if it does not exist']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It retrieves a resource']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It deletes a resource']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It deletes and recreates an existing resource with updated fields']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It updates an existing resource without changing its modification date or versioning']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'It applies a partial update to a resource']] },
       ],
       correctAnswer: '0',
@@ -78,8 +78,8 @@ export default {
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'It retrieves allowed HTTP methods for a resource']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'It applies partial modifications to a resource']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It deletes a resource']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It updates an existing resource']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It authenticates the request before running any methods']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It acknowledges the method to be called by the request']] },
       ],
       correctAnswer: '0',
     },
@@ -157,13 +157,13 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which HTTP method should be used to delete a resource?'],
+        [QuizMarkdownType.TEXT, 'Which status code should be returned to a successful DELETE request?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'DELETE']] },
-        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'REMOVE']] },
-        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'PURGE']] },
-        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'CLEAR']] },
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '204']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '200']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '201']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '100']] },
       ],
       correctAnswer: '0',
     },
@@ -296,6 +296,333 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'It ensures requests are stateless']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'It enforces strong authentication mechanisms']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'It allows caching responses for performance optimization']] },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does statelessness mean in a RESTful API?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Each request must contain all the necessary information to process it']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Each request is stored on the server for future reference']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Session data is maintained between client and server']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The server can maintain user authentication state across requests']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes why statelessness is beneficial in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It improves scalability by avoiding session management on the server']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It allows the server to store client state for efficiency']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It reduces the number of requests needed for authentication']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It forces all clients to use cookies for authentication']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How should a RESTful API handle authentication while maintaining statelessness?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By using tokens such as JWT or API keys with each request']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By storing user sessions on the server']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By requiring the client to send cookies for state tracking']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By using server-side session identifiers']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following violates the statelessness principle in a RESTful API?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Maintaining user sessions on the server']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using API keys for authentication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Including request parameters in the URL']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using caching for GET requests']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which HTTP status code is returned when authentication is required but not provided in a stateless API?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '401']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '403']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '404']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '500']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a best practice in REST api design?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Avoiding accepting and responding with JSON']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Avoiding stateful api patterns']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using nouns instead of verbs in endpoint paths']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using logical nesting on endpoints']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An authenticated user calls the endpoint /api/store/3 where "3" is a store id identifier. However, the server determines that the store with id "3" does not belong to this user. The appropriate status code to return is _____'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '403']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '404']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '401']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '405']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a recommended HTTP status code usage in REST APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using 200 for all successful responses']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using 201 for successful resource creation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using 404 when a requested resource is not found']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using 401 when authentication is required but missing']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a best practice for handling authentication in REST APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using session-based authentication']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using token-based authentication like JWT']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Requiring authentication headers for protected endpoints']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using OAuth for third-party authentication']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a best practice when designing REST API endpoints?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using verbs in resource URLs like /getUser']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using plural nouns for collections, e.g., /users']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Avoiding deep nesting of resources']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using HTTP methods to define operations instead of URL names']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a recommended approach for API versioning in RESTful services?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Embedding the version in query parameters like ?v=1']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using versioning in the URL path, e.g., /v1/resources']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using the Accept header to specify the API version']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using content negotiation to handle API versioning']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a best practice for error handling in REST APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Returning 500 for all failures']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Providing meaningful error messages with error codes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using appropriate HTTP status codes for different errors']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Including an error message field in JSON responses']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are tasked with designing API routing that reflects logical nesting. That is, if one object can contain another object, then the endpoint should reflect that. Which answer best reflects this scheme for an endpoint where there are articles and an article can have comments?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '/articles/:articleId/comments']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '/comments/:articleId']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '/:articleId/comments']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '/articles/comments/:articleId']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are tasked with designing API routing that reflects logical nesting. That is, if one object can contain another object, then the endpoint should reflect that. Which answer best reflects this scheme for an endpoint where there are quizzes and an quiz can have quiz questions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '/quizzes/:quizId/quiz-questions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '/:quizId/quiz-questions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '/quiz-questions/:quizId']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '/quiz-questions/quizzes/:quizId']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____ are typically used to identify or retrieve a specific resource. _____  are more suitable for sorting the request data.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'parameters, query parameters']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'query parameters, parameters']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'UUIDs, slugs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'slugs, UUIDs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following answers reflects PROPER versioning in an API endpoint?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '/v1/books']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '/books/v1']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '/books?v=1']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '/v=1/books']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT an advantage of API versioning?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Provide new features only on specific object domains such as /books/v2']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Provide backward compatibility to third-party applications']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Provide an avenue for clients who prefer previous versions\' API']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Provide an avenue to mix and match all previous versions of an API']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main advantage of using HATEOAS in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows clients to navigate API resources dynamically']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It improves authentication security']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It eliminates the need for API documentation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It reduces API response times']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a common caching strategy used in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Session-based caching']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Client-side caching']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Proxy caching']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Server-side caching']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which HTTP header is used to control caching behavior in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'Cache-Control']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Authorization']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'Content-Type']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Accept']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In RESTful API security, what is the main advantage of using OAuth 2.0 over API keys?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'OAuth provides scoped access and token expiration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'OAuth requires fewer requests to authenticate']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'OAuth does not require a client secret']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'OAuth uses HTTP cookies to store authentication data']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which RESTful API architectural style allows different representations of the same resource?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Content Negotiation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'HATEOAS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Statelessness']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Layered System']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main benefit of using JSON:API in RESTful API design?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It standardizes how clients and servers exchange data']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It forces all responses to be in XML format']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It eliminates the need for authentication']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It only works with GraphQL APIs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a downside of using long-lived access tokens in REST API security?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'They increase the risk of unauthorized access if leaked']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'They require more server storage']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'They slow down API response times']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'They are not compatible with OAuth 2.0']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a correct use case for the HTTP'],
+        [QuizMarkdownType.INLINE_CODE, 'LINK'],
+        [QuizMarkdownType.TEXT, 'method in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To associate a resource with another resource']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To retrieve a list of linked resources']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To delete a linked resource']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To create a new resource']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In RESTful APIs, what is the advantage of using pagination with'],
+        [QuizMarkdownType.INLINE_CODE, 'Link'],
+        [QuizMarkdownType.TEXT, 'headers?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows clients to navigate pages efficiently']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It reduces server memory usage']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It improves response speed for large payloads']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It eliminates the need for query parameters']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a reason to use rate limiting in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To restrict access to premium users only']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To prevent denial-of-service (DoS) attacks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To manage server load and optimize performance']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To enforce API usage policies per user']] },
       ],
       correctAnswer: '0',
     },

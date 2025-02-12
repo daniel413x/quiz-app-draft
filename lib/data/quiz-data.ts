@@ -41,12 +41,14 @@ import mlPrinciplesIi from './ml-principles-ii';
 import javaThreads from './java-threads';
 import httpFundamentals from './http-fundamentals';
 import multithreading from './multithreading';
+import blockchains from './blockchains';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  blockchains,
   'http-fundamentals': httpFundamentals,
   'learners-permit': learnersPermit,
   // ===========
@@ -209,6 +211,13 @@ const categories = [
     slug: 'computer-science',
     quizzes: [
       quizData.multithreading,
+    ],
+  },
+  {
+    name: 'Decentralized Tech',
+    slug: 'decentralized-tech',
+    quizzes: [
+      quizData.blockchains,
     ],
   },
 ];
