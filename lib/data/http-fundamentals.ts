@@ -626,5 +626,113 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT a recommended way to structure REST API endpoints?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using deeply nested URLs, such as /users/123/orders/456/items/789']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using query parameters for filtering results']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using path parameters for identifying resources']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using HTTP methods to indicate operations rather than in URL paths']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which response format is generally considered a bad practice for RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Returning XML instead of JSON without an option for JSON']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Returning JSON with meaningful status codes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using pagination for large datasets']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Including hypermedia links in responses']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a poor REST API security practice?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Returning detailed stack traces in API responses']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using HTTPS for all API communication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Implementing rate limiting to prevent abuse']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using API gateways for security filtering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a bad practice when handling pagination in RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Returning all records without pagination']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using limit and offset parameters for paginated responses']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Providing a Link header for pagination navigation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using default limits to prevent excessive data loads']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes an advantage of RESTful APIs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Encapsulating legacy systems']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Usage of verbs in API route paths']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Handling communication between devices in a stateful way']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Foregoing caching in a performative way']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'According to RESTful pioneer Roy Fielding, which feature is unique to REST compared to other architectural styles?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The concept of resources']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Client-server communication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Caching mechanisms']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Layered architecture']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'According to RESTful pioneer Roy Fielding, embedding session information in URIs a violation of REST principles because _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It negatively affects shared caching and server scalability']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It makes APIs routes more difficult to read']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It introduces needless server-side string parsing']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It improves URL readability but at the expense of privacy']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A basic reason HTTP cookies violate REST constraints is because ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'They can become out of sync with the browser’s application state']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'They stay out of sync with the browser’s application state']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'They stay in sync with the browser’s application state']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'They enhance security and scalability at the expense of privacy']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Why are architectural styles considered independent of specific implementations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Because they define constraints rather than implementations']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Because they only apply to Web-based systems']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Because they must be rewritten for each new protocol']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Because they are tied to specific programming languages']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

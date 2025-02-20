@@ -42,12 +42,14 @@ import javaThreads from './java-threads';
 import httpFundamentals from './http-fundamentals';
 import multithreading from './multithreading';
 import blockchains from './blockchains';
+import cppI from './cpp-i';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  'cpp-i': cppI,
   blockchains,
   'http-fundamentals': httpFundamentals,
   'learners-permit': learnersPermit,
@@ -140,6 +142,7 @@ const categories = [
       quizData['java-foundations-exam'],
       quizData['java-foundations-exam-ii'],
       quizData.special,
+      quizData['cpp-i'],
       quizData.git,
     ],
   },

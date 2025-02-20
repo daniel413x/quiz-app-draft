@@ -1836,7 +1836,7 @@ print(make_sound(cat))`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'var variableName = value',
+              'var variable_name = value',
             ],
           ],
         },
@@ -1845,7 +1845,7 @@ print(make_sound(cat))`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'let variableName = value',
+              'def variable_name = value',
             ],
           ],
         },
@@ -1854,7 +1854,7 @@ print(make_sound(cat))`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'variableName = value',
+              'variable_name = value',
             ],
           ],
         },
@@ -1863,7 +1863,7 @@ print(make_sound(cat))`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'define variableName = value',
+              'define variable_name = value',
             ],
           ],
         },
