@@ -43,6 +43,7 @@ import httpFundamentals from './http-fundamentals';
 import multithreading from './multithreading';
 import blockchains from './blockchains';
 import cppI from './cpp-i';
+import springCertifiedProfessionalExam from './spring-certified-professional-exam';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -95,6 +96,7 @@ const quizData: QuizData = {
   'principles-ui-ux': uiUx,
   git,
   'data-structures': dataStructures,
+  'spring-certified-professional-exam': springCertifiedProfessionalExam,
   special,
   sql,
   test: {
@@ -138,6 +140,7 @@ const categories = [
       quizData['shell-scripting'],
       quizData['principles-ui-ux'],
       quizData['principles-of-programming'],
+      quizData['spring-certified-professional-exam'],
       quizData.sql,
       quizData['java-foundations-exam'],
       quizData['java-foundations-exam-ii'],

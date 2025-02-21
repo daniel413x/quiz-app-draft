@@ -1243,7 +1243,7 @@ export default {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Ripple'],
+            [QuizMarkdownType.TEXT, 'Solana'],
           ],
         },
         {

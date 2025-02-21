@@ -3652,6 +3652,5 @@ python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn`,
       ],
       correctAnswer: '0',
     },
-
   ],
 } as QuizDataObject;
