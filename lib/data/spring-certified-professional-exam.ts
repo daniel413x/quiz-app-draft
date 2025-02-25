@@ -2877,6 +2877,70 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'In testing, ____ is used when the Spring context is not needed.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Mock'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Mockito'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@MockBean'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'MockMVC'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In testing, ____ is used when the Spring context is needed.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@MockBean'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Mockito'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Mock'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'MockMVC'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'You are writing unit tests for a service class. Which of the following tools would you use to stub the service class?'],
       ],
       answers: [
@@ -2902,6 +2966,74 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'MockMVC'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the test class below. Which annotation is missing at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@MockBean'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Mockito'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Mock'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'MockMVC'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The annotation'],
+        [QuizMarkdownType.INLINE_CODE, '@DataJpaTest'],
+        [QuizMarkdownType.TEXT, 'is most applicable to testing which type of component?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Repository'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Service'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Controller'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'View'],
           ],
         },
       ],
@@ -2977,6 +3109,800 @@ return ResponseEntity.status(201).body(location)`],
           answer: [
             [QuizMarkdownType.CODE, `URI location = URI.create(String.format("http://shop.io/store/orders/%s/items/%s", 123, 234));
 return ResponseEntity.status(200).body(location)`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the following chain of arguments. These arguments are passed into which testing method?'],
+        [QuizMarkdownType.CODE, `get("/accounts/{acctId}", "123456001")
+.accept(MediaType.APPLICATION.JSON)
+.andExpect(status().isOk())
+.andExpect(content().contentType("application/json"))`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'mockMvc.perform()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'when()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'assertEquals()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'verify()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working with the following test code. Which answer can be chained at the comment // 1 to check for the presence of a Location header?'],
+        [QuizMarkdownType.CODE, `@Test
+  public void createAccount() throws Exception {
+
+    Account testAccount = new Account("1234512345", "Mary Jones");
+    testAccount.setEntityId(21L);
+
+    given(accountManager.save(testAccount))
+      .willReturn(testAccount);
+
+      mockMvc.perform(post("/accounts")
+      .contentType(MediaType.APPLICATION_JSON)
+      .content(objectMapper.writeValueAsString(testAccount)))
+        .andExpect(status().isCreated())
+         // 1
+        .andExpect(header().string("Location", "http://localhost/accounts/21"));
+
+    verify(accountManager).save(testAccount);
+
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'andExpect(header().exists("Location"))'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'andExpect(header("Location").exists())'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'andExpect(header().exists())'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'andExpect(header.exists())'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which annotation is used to secure methods in Spring Security?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@PreAuthorize'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Secured'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@EnableSecurity'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@SecurityConfig'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which class is used to configure HTTP security in Spring Boot?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SecurityFilterChain'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'HttpSecurityConfigurer'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SpringSecurityConfig'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'WebSecurityAdapter'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you disable CSRF protection in Spring Security?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.csrf().disable();'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.disableCsrf();'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.csrf().enabled(false);'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.security().csrf(false);'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which annotation is used to enable Spring Security in a configuration class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@EnableWebSecurity'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@EnableSecurity'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@EnableAuthentication'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@EnableGlobalSecurity'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Spring Security feature ensures that only authenticated users can access a REST API endpoint?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'http.authorizeHttpRequests()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'http.enableAuth()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'http.secureEndpoints()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'http.protect()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which authentication provider does Spring Security use by default?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'DaoAuthenticationProvider'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'OAuth2AuthenticationProvider'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'JwtAuthenticationProvider'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'LdapAuthenticationProvider'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which authentication method does Spring Security use for securing REST APIs with JWT?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Token-based authentication'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Session-based authentication'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Basic authentication'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'LDAP authentication'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary role of'],
+        [QuizMarkdownType.INLINE_CODE, 'SecurityContextPersistenceFilter'],
+        [QuizMarkdownType.TEXT, 'in Spring Security?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It ensures that the security context is loaded and stored across multiple requests'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It validates the user credentials during authentication'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It processes JWT tokens for authentication'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It handles password encryption and hashing'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where does'],
+        [QuizMarkdownType.INLINE_CODE, 'SecurityContextPersistenceFilter'],
+        [QuizMarkdownType.TEXT, 'store the security context by default?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In the'],
+            [QuizMarkdownType.INLINE_CODE, 'HttpSession'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In a browser cookie'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In a database table'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In a JWT token'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How can you disable'],
+        [QuizMarkdownType.INLINE_CODE, 'SecurityContextPersistenceFilter'],
+        [QuizMarkdownType.TEXT, 'in a Spring Security configuration?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.securityContext().disable();'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.disableSecurityContextPersistence();'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.sessionManagement().disable();'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.remove(SecurityContextPersistenceFilter.class);'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary role of'],
+        [QuizMarkdownType.INLINE_CODE, 'UsernamePasswordAuthenticationFilter'],
+        [QuizMarkdownType.TEXT, 'in Spring Security?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It handles username and password authentication'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It verifies JWT tokens for authentication'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It logs out users and invalidates their session'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It restricts access to protected resources based on roles'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'By default, which HTTP endpoint does'],
+        [QuizMarkdownType.INLINE_CODE, 'UsernamePasswordAuthenticationFilter'],
+        [QuizMarkdownType.TEXT, 'listen for login requests?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/login'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/authenticate'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/auth'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/signin'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How can you configure the logout URL in Spring Security using'],
+        [QuizMarkdownType.INLINE_CODE, 'LogoutFilter'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.logout().logoutUrl("/logout");'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.logout("/custom-logout");'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.configureLogout("/signout");'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'http.disableLogout("/logout");'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You must convert SpringSecurity exceptions into HTTP responses. Which filter do you use?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ExceptionTranslationFilter'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'UsernamePasswordAuthenticationFilter'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'AuthorizationFilter'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SecurityContextPersistenceFilter'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the'],
+        [QuizMarkdownType.INLINE_CODE, 'SecurityFilterChain'],
+        [QuizMarkdownType.TEXT, 'below. Which lines of code can be inserted at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'so that users with the roles'],
+        [QuizMarkdownType.INLINE_CODE, '"USER"'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.INLINE_CODE, '"ADMIN"'],
+        [QuizMarkdownType.TEXT, 'can access the paths at'],
+        [QuizMarkdownType.INLINE_CODE, '/accounts/**'],
+        [QuizMarkdownType.TEXT, '?'],
+        [QuizMarkdownType.CODE, `@Bean
+public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+  http.authorizeHttpRequests((authz) ->
+    .requestMatchers("/signup", "/about").permitAll()
+    .requestMatchers(HttpMethod.PUT, "/accounts/edit*").hasRole("ADMIN")
+    // 1
+
+    .anyRequest().authenticated());
+  return http.build();
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, '.requestMatchers("/accounts/**").hasAnyRole("USER","ADMIN")'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, '.requestMatchers("/accounts/**").hasRole("USER","ADMIN")'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `.requestMatchers("/accounts/**")
+.hasRole("USER")
+.hasRole("ADMIN")`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `.requestMatchers("/accounts/**")
+.hasRole("ADMIN")`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the'],
+        [QuizMarkdownType.INLINE_CODE, 'WebSecurityCustomizer'],
+        [QuizMarkdownType.TEXT, 'below. How can the line at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'be modified so that the paths'],
+        [QuizMarkdownType.INLINE_CODE, '/static1'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, '/static2'],
+        [QuizMarkdownType.TEXT, 'are ignored completely by Spring Security?'],
+        [QuizMarkdownType.CODE, `@Bean
+public WebSecurityCustomizer webSecurityCustomizer() {
+  // 1
+
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'return (web) -> web.ignoring().requestMatchers("/static1", "/static2");'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'return (web) -> web.ignoring().requestMatchers("/static1", "/static2").permitAll();'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'return () -> requestMatchers("/static1", "/static2").permitAll();'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'return (web) -> web.ignoring().requestMatchers("/static1", "/static2");'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the'],
+        [QuizMarkdownType.INLINE_CODE, 'SecurityFilterChain'],
+        [QuizMarkdownType.TEXT, 'below. What lines can be added at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'so that a form login is used at the page'],
+        [QuizMarkdownType.INLINE_CODE, '"/login"'],
+        [QuizMarkdownType.TEXT, '?'],
+        [QuizMarkdownType.CODE, `@Bean
+public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+  // 1
+  http.authorizeHttpRequests((authz) -> 
+    authz
+      .requestMatchers("/accounts/**").hasRole("USER")
+  )
+  // 1
+
+  .logout(logout ->
+    logout
+      .logoutSuccessUrl("/")
+      .permitAll()
+  );
+  return http.build();
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `.formLogin(form ->
+  form
+    .loginPage("/login")
+    .permitAll()
+)`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `.formLogin(form ->
+  form
+    .loginPage("/login")
+)`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `.formLogin(form ->
+  form
+    .permitAll()
+)`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `.formLogin(form ->
+  form("/login")
+    .permitAll()
+)`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the'],
+        [QuizMarkdownType.INLINE_CODE, 'OrderItemService'],
+        [QuizMarkdownType.TEXT, 'below. How can the comparison in the annotation'],
+        [QuizMarkdownType.INLINE_CODE, '@PreAuthorize("hasRole(\'MEMBER\')  &&  " + "#order.owner.name == _________")'],
+        [QuizMarkdownType.TEXT, 'at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'be completed so that a user getting an order item can only do so if the order belongs to them?'],
+        [QuizMarkdownType.CODE, `import org.springframework.security.annotation.PreAuthorize;
+
+public class OrderItemService {
+  // 1
+  @PreAuthorize("hasRole('MEMBER')  &&  " + "#order.owner.name == _________")
+  public OrderItem getOrderItem(Order order, long orderItemId) {
+    // fetch logic
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'principal.username'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'user.username'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'owner.username'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'springsecurity.username'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'At what layer should endpoints be protected using Spring Security?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The service layer'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The controller layer'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The data access layer'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The infrastructure layer'],
           ],
         },
       ],
