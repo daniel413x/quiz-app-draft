@@ -504,5 +504,175 @@ export default {
       ],
       correctAnswer: '1',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the primary purpose of'],
+        [QuizMarkdownType.INLINE_CODE, 'ThreadLocal'],
+        [QuizMarkdownType.TEXT, 'in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To share data between multiple threads efficiently'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To store thread-specific data that is isolated from other threads'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To manage thread synchronization automatically'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To limit the number of active threads in a pool'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method is used to retrieve the value stored in a'],
+        [QuizMarkdownType.INLINE_CODE, 'ThreadLocal'],
+        [QuizMarkdownType.TEXT, 'variable?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'get()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'retrieve()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'fetch()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'access()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What happens when a thread terminates with a'],
+        [QuizMarkdownType.INLINE_CODE, 'ThreadLocal'],
+        [QuizMarkdownType.TEXT, 'variable?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The ThreadLocal variable remains accessible to other threads'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The ThreadLocal variable is automatically garbage collected'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The ThreadLocal variable is reset to its default value'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The thread’s value remains in memory indefinitely'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method should be called to prevent memory leaks when using'],
+        [QuizMarkdownType.INLINE_CODE, 'ThreadLocal'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'remove()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'clear()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'destroy()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'invalidate()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which scenario is a typical use case for'],
+        [QuizMarkdownType.INLINE_CODE, 'ThreadLocal'],
+        [QuizMarkdownType.TEXT, 'in Java?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sharing a database connection across multiple threads'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Storing user-specific data in a web application without synchronization'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Enforcing thread safety on a shared counter'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Handling inter-process communication'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
   ],
 } as QuizDataObject;

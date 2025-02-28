@@ -922,7 +922,7 @@ export default {
     {
       question: [
         [QuizMarkdownType.TEXT, 'What will be the output of running'],
-        [QuizMarkdownType.TEXT, 'mvn package'],
+        [QuizMarkdownType.INLINE_CODE, 'mvn package'],
         [QuizMarkdownType.TEXT, 'in your application\'s root directory?'],
       ],
       answers: [
@@ -1574,12 +1574,12 @@ yourapp-0.0.1-SNAPSHOT.jar.original`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'In a project where there are files as described below, which answer is NOT true?'],
-        [QuizMarkdownType.CODE, `# RewardsApplication.java
+        [QuizMarkdownType.CODE, `// RewardsApplication.java
 
 @SpringBootApplication
 @EnableConfigurationProperties(ConnectionSettings.class)
 public class RewardsApplication { ... }`],
-        [QuizMarkdownType.CODE, `# ConnectionSettings.java
+        [QuizMarkdownType.CODE, `// ConnectionSettings.java
 
 @Component
 @ConfigurationProperties(prefix="rewards.client")
@@ -2025,11 +2025,13 @@ public class ConnectionSettings { ... }`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In the following code snippet, what is the name for the part of code indicated by the comment?'],
+        [QuizMarkdownType.TEXT, 'In the following code snippet, what is the name for the part of code indicated by the comment at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1?'],
+        [QuizMarkdownType.TEXT, '?'],
         [QuizMarkdownType.CODE, `@Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
-    # value = "SELECT ..."
+    // 1
     @Query(value = "SELECT c FROM Customer WHERE c.email NOT LIKE '%@%'")
     public List<Customer> findInvalidEmails();
 }`],
@@ -2068,7 +2070,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
         [QuizMarkdownType.CODE, `@Repository
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
-    # Which answer is true of the following line?
+    // Which answer is true of the following line?
     @Query(value = "SELECT c FROM Customer WHERE c.email NOT LIKE '%@%'")
     public List<Customer> findInvalidEmails();
 }`],
@@ -2753,47 +2755,13 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '100'],
+            [QuizMarkdownType.INLINE_CODE, '204'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '204'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '500'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '404'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'What status code will be returned on a successful request to an endpoint whose handler is annotated with'],
-        [QuizMarkdownType.INLINE_CODE, '@ResponseStatus(HttpStatus.NO_CONTENT)'],
-        [QuizMarkdownType.TEXT, '?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
             [QuizMarkdownType.INLINE_CODE, '100'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '204'],
           ],
         },
         {
@@ -2960,40 +2928,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
           id: '2',
           answer: [
             [QuizMarkdownType.INLINE_CODE, '@MockBean'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'MockMVC'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Consider the test class below. Which annotation is missing at'],
-        [QuizMarkdownType.INLINE_CODE, '// 1'],
-        [QuizMarkdownType.TEXT, '?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '@MockBean'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'Mockito'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'Mock'],
           ],
         },
         {
@@ -3903,6 +3837,392 @@ public class OrderItemService {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'The infrastructure layer'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Spring Security, once authentication is successful, the security context is maintained in the ________ during the processing of a request.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ThreadLocal'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Thread'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ThreadLocalRandom'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'InheritableThreadLocal'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Consider the security configuration below. What line of code can be added at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'so that any user with the roles'],
+        [QuizMarkdownType.INLINE_CODE, 'USER'],
+        [QuizMarkdownType.TEXT, ','],
+        [QuizMarkdownType.INLINE_CODE, 'ADMIN'],
+        [QuizMarkdownType.TEXT, ', or'],
+        [QuizMarkdownType.INLINE_CODE, 'SUPERADMIN'],
+        [QuizMarkdownType.TEXT, 'can perform a GET request to the resource at'],
+        [QuizMarkdownType.INLINE_CODE, '/accounts'],
+        [QuizMarkdownType.TEXT, 'or any of its sub-resources?'],
+        [QuizMarkdownType.CODE, `package config;
+
+@Configuration
+@EnableMethodSecurity
+public class RestSecurityConfig {
+
+  @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests((authz) -> authz
+                // 1
+                
+                .anyRequest().denyAll())
+            .httpBasic(withDefaults())
+            .csrf(CsrfConfigurer::disable);
+        return http.build();
+    }
+
+  @Bean
+    public InMemoryUserDetailsManager userDetailsService(PasswordEncoder passwordEncoder) {
+    UserDetails user = User.withUsername("user").password(passwordEncoder.encode("user")).roles("USER").build();
+    UserDetails admin = User.withUsername("admin").password(passwordEncoder.encode("admin")).roles("USER", "ADMIN").build();
+    UserDetails superAdmin = User.withUsername("superadmin").password(passwordEncoder.encode("superadmin")).roles("USER", "ADMIN", "SUPERADMIN").build();
+
+    return new InMemoryUserDetailsManager(user, admin, superAdmin);
+  }
+    
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+      return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.requestMatchers(HttpMethod.GET, "/accounts/**").hasAnyRole("USER", "ADMIN", "SUPERADMIN")'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.requestMatchers(HttpMethod.GET, "/accounts/*").hasAnyRole()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.requestMatchers(HttpMethod.GET, "/accounts/**").hasRole("USER").hasRole("ADMIN").hasRole("SUPERADMIN")'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '.requestMatchers(HttpMethod.GET, "/accounts").hasAnyRole("USER", "ADMIN", "SUPERADMIN")'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the default base path for all Actuator endpoints in Spring Boot 2.x and 3.x?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/monitor'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/admin'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/health'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which property can be set to expose all Actuator endpoints?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'management.endpoints.web.exposure.include=*'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'spring.actuator.enabled=true'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'actuator.all.enabled=true'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'management.web.include=all'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Actuator endpoint provides application health information?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/health'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/env'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which property can be set to customize the base path for Actuator endpoints?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'management.endpoints.web.base-path=/management'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'spring.actuator.base=/admin'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'server.management.path=/status'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'endpoints.base-url=/monitor'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Spring Boot Actuator endpoint provides the following information?'],
+        [QuizMarkdownType.CODE, `{
+  "build": {
+    "version": "5.3.23",
+    "artifact": "37-actuator",
+    "name": "37-actuator",
+    "group": "io.spring.training.core-spring",
+    "time": "2022-03-25T22:06:18.311Z",
+  }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/health'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/beans'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Spring Boot Actuator endpoint provides the following information?'],
+        [QuizMarkdownType.CODE, `{
+  "status": "UP"
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/health'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/conditions'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Spring Boot Actuator endpoint provides the following information?'],
+        [QuizMarkdownType.CODE, `{
+  "names": [
+    "jvm.memory.max",
+    "jvm.gc.memory.promoted",
+    "http.server.requests",
+    "system.cpu.usage",
+    "hikaricp.connections.active",
+    "process.start.time",
+    "reward.summary",
+    ...
+  ]
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/health'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/mappings'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'For security reasons, Spring Boot Actuator exposes only one endpoint by default. Which endpoint is that?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/health'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/mappings'],
           ],
         },
       ],
