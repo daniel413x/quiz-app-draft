@@ -4228,5 +4228,234 @@ public class RestSecurityConfig {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You have a set of Spring Boot Actuator endpoints whose base path often changes during the course of development. What arguments can be passed into the'],
+        [QuizMarkdownType.INLINE_CODE, 'requestMatchers'],
+        [QuizMarkdownType.TEXT, 'at the comments'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, '// 2'],
+        [QuizMarkdownType.TEXT, 'to make the request matcher base path-agnostic?'],
+        [QuizMarkdownType.CODE, `@Bean
+        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+          http.authorizeHttpRequests((authz) ->
+            // 1
+            .requestMatchers(  ...  ).permitAll()
+            // 2
+            .requestMatchers(  ...  ).hasRole("ACTUATOR")
+            .anyRequest().authenticated());
+          return http.build();
+        }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `EndpointRequest.to(HealthEndpoint.class)
+EndpointRequest.toAnyEndpoint()`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `"/actuator/health"
+"/actuator/**"`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `"**/actuator/health"
+"**/actuator/**"`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `EndpointRequest.to("/actuator/health")
+EndpointRequest.to("/actuator/**")`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an example use case for'],
+        [QuizMarkdownType.INLINE_CODE, 'DistributionSummary'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Tracking the size of uploaded files'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Counting the number of active sessions'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Measuring database query execution time'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Logging exceptions in real-time'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which types of statistics does a Micrometer'],
+        [QuizMarkdownType.INLINE_CODE, 'Timer'],
+        [QuizMarkdownType.TEXT, 'typically expose?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Count, total time, max time, and percentiles'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only the average duration'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Error rate and success rate'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Database connection pool size'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Examine the following code. Which answer is NOT true?'],
+        [QuizMarkdownType.CODE, `public class OrderController {
+    private Timer timer;
+
+    public OrderController(MeterRegistry registry) {
+        this.timer = registry.timer("orders.submit");
+    }
+
+    // 1
+    @PostMapping("/orders")
+    public Order placeOrder( ... ) {
+        return timer.record(() -> { ... });
+    }
+
+    // 2
+    @GetMapping("/orders")
+    @Timed("orders.summary")
+    public List<Order> orderSummary() { ... }
+
+    // 3
+    @PutMapping("/orders/{id}")
+    public void editOrder(@PathVariable Long id) { ... }
+
+    // 4
+    @DeleteMapping("/orders/{id}")
+    @Timed("orders.summary")
+    public void deleteOrder(@PathVariable Long id) { ... }
+}`],
+        [QuizMarkdownType.TEXT, 'typically expose?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'editOrder'],
+            [QuizMarkdownType.TEXT, 'will be included in timed method execution performance metrics'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'orderSummary'],
+            [QuizMarkdownType.TEXT, 'will be included in timed method execution performance metrics'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'deleteOrder'],
+            [QuizMarkdownType.TEXT, 'will be included in timed method execution performance metrics'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'placeOrder'],
+            [QuizMarkdownType.TEXT, 'will be included in timed method execution performance metrics'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You add a build info goal to your'],
+        [QuizMarkdownType.INLINE_CODE, 'pom.xml'],
+        [QuizMarkdownType.TEXT, 'file as per below. In which Spring Boot Actuator endpoint can you find this information?'],
+        [QuizMarkdownType.CODE, `<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>build-info</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/health'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/env'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
