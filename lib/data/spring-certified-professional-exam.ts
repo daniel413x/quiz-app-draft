@@ -4457,5 +4457,308 @@ EndpointRequest.to("/actuator/**")`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Assuming no changes have been made to'],
+        [QuizMarkdownType.INLINE_CODE, 'application.properties'],
+        [QuizMarkdownType.TEXT, ', at which endpoint can you find a list of available actuator endpoints?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/endpoints'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/env'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/info'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In your application, you want to expose the actuator endpoints for'],
+        [QuizMarkdownType.INLINE_CODE, 'beans'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'metrics'],
+        [QuizMarkdownType.TEXT, 'only. What value can be set for the property'],
+        [QuizMarkdownType.INLINE_CODE, 'management.endpoints.web.exposure.include'],
+        [QuizMarkdownType.TEXT, 'to accomplish this?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'beans,metrics'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"beans,metrics"'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '*'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/*'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In your application, you want to expose all actuator endpoints. What value can be set for the property'],
+        [QuizMarkdownType.INLINE_CODE, 'management.endpoints.web.exposure.include'],
+        [QuizMarkdownType.TEXT, 'to accomplish this?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '*'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '"*"'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'all'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '**'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your Spring Boot Actuator includes a metric under the'],
+        [QuizMarkdownType.INLINE_CODE, '/metrics'],
+        [QuizMarkdownType.TEXT, 'endpoint which has the description, "The maximum amount of memory in bytes that can be used for memory management." Assuming no changes to the actuator\'s paths, at which endpoint can this metric be found?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics/jvm.memory.max'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics/jvm-memory-max'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics/jvm/memory/max'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/actuator/metrics/jvm%20memory%20max'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT true of the'],
+        [QuizMarkdownType.INLINE_CODE, '@Timed'],
+        [QuizMarkdownType.TEXT, 'annotation?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A'],
+            [QuizMarkdownType.INLINE_CODE, 'MeterRegistry'],
+            [QuizMarkdownType.TEXT, 'object must be injected into the controller object for'],
+            [QuizMarkdownType.INLINE_CODE, '@Timed'],
+            [QuizMarkdownType.TEXT, 'to function properly'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is not necessary to inject a'],
+            [QuizMarkdownType.INLINE_CODE, 'MeterRegistry'],
+            [QuizMarkdownType.TEXT, 'into the controller object for'],
+            [QuizMarkdownType.INLINE_CODE, '@Timed'],
+            [QuizMarkdownType.TEXT, 'to function properly'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Timed'],
+            [QuizMarkdownType.TEXT, 'takes a parameter'],
+            [QuizMarkdownType.INLINE_CODE, 'value'],
+            [QuizMarkdownType.TEXT, 'which defines the endpoint where the metric information will be found'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Timed'],
+            [QuizMarkdownType.TEXT, 'takes a parameter'],
+            [QuizMarkdownType.INLINE_CODE, 'extraTags'],
+            [QuizMarkdownType.TEXT, 'which adds additional context to the metric collected'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are tasked with configuring Spring Boot Actuator the following way:'],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.TEXT, '1. Create 3 groups:'],
+        [QuizMarkdownType.INLINE_CODE, 'system'],
+        [QuizMarkdownType.TEXT, ','],
+        [QuizMarkdownType.INLINE_CODE, 'web'],
+        [QuizMarkdownType.TEXT, ', and'],
+        [QuizMarkdownType.INLINE_CODE, 'application'],
+        [QuizMarkdownType.TEXT, 'as following:'],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.TEXT, 'The system group includes the'],
+        [QuizMarkdownType.INLINE_CODE, 'diskSpace'],
+        [QuizMarkdownType.TEXT, ', and'],
+        [QuizMarkdownType.INLINE_CODE, 'db'],
+        [QuizMarkdownType.TEXT, 'health indicators'],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.TEXT, '2. For'],
+        [QuizMarkdownType.INLINE_CODE, 'system'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'application'],
+        [QuizMarkdownType.TEXT, 'groups, configure'],
+        [QuizMarkdownType.INLINE_CODE, 'show-details'],
+        [QuizMarkdownType.TEXT, 'with'],
+        [QuizMarkdownType.INLINE_CODE, 'always'],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.BREAK, ''],
+        [QuizMarkdownType.TEXT, 'Which answer reflects the implementation as specified?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `management.endpoint.health.group.system.include=diskSpace,db
+management.endpoint.health.group.system.show-details=always
+
+management.endpoint.health.group.web.include=ping
+
+management.endpoint.health.group.application.include=restaurantHealthCheck
+management.endpoint.health.group.application.show-details=always`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `management.endpoint.health.group.system.include="diskSpace,db"
+management.endpoint.health.group.system.show-details=always
+
+management.endpoint.health.group.web.include="ping"
+
+management.endpoint.health.group.application.include="restaurantHealthCheck"
+management.endpoint.health.group.application.show-details=always`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `management.endpoint.health.group.system.include=diskSpace,db
+
+management.endpoint.health.group.web.include=ping
+
+management.endpoint.health.group.application.include=restaurantHealthCheck`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `actuator.health.group.system.include=diskSpace,db
+actuator.health.group.system.show-details=always
+
+actuator.health.group.web.include=ping
+
+actuator.health.group.application.include=restaurantHealthCheck
+actuator.health.group.application.show-details=always`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'AOP generally solves issues related to the _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Single Responsibility Principle'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Open/Closed Principle'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Liskov Substitution Principle'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Interface Segregation Principle'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
