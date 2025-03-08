@@ -1901,25 +1901,25 @@ public class ConnectionSettings { ... }`],
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.CODE, '@EntityScan("com.example.models")\n@SpringBootApplication\npublic class MyApp {}'],
+            [QuizMarkdownType.CODE, '@EntityScan("com.taxservice.models")\n@SpringBootApplication\npublic class MyApp {}'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.CODE, '@ComponentScan("com.example.models")\n@SpringBootApplication\npublic class MyApp {}'],
+            [QuizMarkdownType.CODE, '@ComponentScan("com.taxservice.models")\n@SpringBootApplication\npublic class MyApp {}'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.CODE, '@EntityScan(basePackage = "com.example.models")\n@Configuration\npublic class Config {}'],
+            [QuizMarkdownType.CODE, '@EntityScan(basePackage = "com.taxservice.models")\n@Configuration\npublic class Config {}'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.CODE, '@SpringBootApplication(scanEntities = "com.example.models")\npublic class MyApp {}'],
+            [QuizMarkdownType.CODE, '@SpringBootApplication(scanEntities = "com.taxservice.models")\npublic class MyApp {}'],
           ],
         },
       ],
@@ -6250,5 +6250,726 @@ String message = (String) exp.getValue();`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working on a banking application where every service needs to log certain actions. Which Spring feature can be used to implement this concern most efficiently?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Spring Boot Starter AOP'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Spring Boot Starter Web'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Spring Boot Starter Actuator'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Spring Boot Starter Security'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are implementing aspects for a microservice where every method in the service classes needs to log actions before and after the methods run. Which answer indicates the line(s) that can be inserted at'],
+        [QuizMarkdownType.INLINE_CODE, '// 1'],
+        [QuizMarkdownType.TEXT, 'to accomplish this?'],
+        [QuizMarkdownType.CODE, `@Aspect
+@Component
+public class LoggingAspect {
+
+    // 1
+    
+    public Object logBeforeAndAfter(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("Before method execution");
+        Object result = joinPoint.proceed();
+        System.out.println("After method execution");
+        return result;
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, '@Around("execution(* com.taxservice.service.*.*(..))")'],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `@Before("execution(* com.taxservice.service.*.*(..))")
+@After("execution(* com.taxservice.service.*.*(..))")`],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, '@After("execution(* com.taxservice.service.*.*(..))")'],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Answers 1 or 2'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working on software that needs to log information about service method failures should they occur. Which Spring AOP annotation can be used to implement this concern most efficiently?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@AfterThrowing'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@AfterReturning'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@After'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Around'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working on software that needs to log information about service method that return successfully without throwing any exceptions. Which Spring AOP annotation can be used to implement this concern most efficiently?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@AfterReturning'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@AfterThrowing'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@After'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Around'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is NOT considered "advice" in Spring AOP?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Pointcut'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@AfterThrowing'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Before'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Around'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Spring AOP, the primary purpose of a pointcut is _________.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define where advice should be applied'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To execute advice logic itself'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To configure transactional boundaries'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'To define custom exception handling for beans'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a valid example of AspectJ Pointcut Expression in Spring AOP?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.taxservice.service.*.*(..))'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'pointcut("com.taxservice.service.*.*")'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'around(com.taxservice.*)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, '@Before("com.taxservice.*")'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In AspectJ Pointcut Expression, what does the symbol'],
+        [QuizMarkdownType.INLINE_CODE, '*'],
+        [QuizMarkdownType.TEXT, 'represent?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Matches any method name or return type, depending on where it appears'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Matches only public methods, depending on where they appear'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Matches only methods with no arguments, depending on where they appear'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Matches classes but not methods, depending on where they appear'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In AspectJ Pointcut Expression, if you want to match all methods inside a specific package, which keyword should you use?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'within'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'execution'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'target'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'args'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In an application you are working on, you must use AOP features to intercept and interrupt a method during execution to perform a certain check before proceeding with the execution method. Choose the pairing of AOP features that can accomplish this.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Around'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '@ProceedingJoinPoint'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Before'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '@JoinPoint'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Around'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '@JoinPoint'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Before'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '@ProceedingJoinPoint'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are implementing a class'],
+        [QuizMarkdownType.INLINE_CODE, 'LoggingAspect'],
+        [QuizMarkdownType.TEXT, '. How can the comments?'],
+        [QuizMarkdownType.INLINE_CODE, '/* 1 */'],
+        [QuizMarkdownType.TEXT, ', '],
+        [QuizMarkdownType.INLINE_CODE, '/* 2 */'],
+        [QuizMarkdownType.TEXT, ', and'],
+        [QuizMarkdownType.INLINE_CODE, '/* 3 */'],
+        [QuizMarkdownType.TEXT, 'be replaced so that the aspect works properly?'],
+        [QuizMarkdownType.CODE, `@Aspect
+@Component
+public class LoggingAspect {
+
+    @Pointcut("execution(* com.taxservice.service.*.*(..))")
+    /* 1 */
+
+    @Before(/* 2 */)
+    public void logBefore(JoinPoint joinPoint) {
+      ...
+    }
+
+    @After(/* 3 */)
+    public void logAfter(JoinPoint joinPoint) {
+      ...
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `/* 1 */
+public void serviceMethods() {}
+
+/* 2 */
+"serviceMethods()"
+
+/* 3 */
+"serviceMethods()"`],
+          ],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `/* 1 */
+public void pointcut() {}
+
+/* 2 */
+"serviceMethods()"
+
+/* 2 */
+"serviceMethods()""`],
+          ],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `/* 1 */
+public void serviceMethods() {}
+
+/* 2 */
+"execution(* serviceMethods.*.*(..))"
+
+/* 3 */
+"execution(* serviceMethods.*.*(..))"`],
+          ],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `/* 1 */
+public void serviceMethods() {}
+
+/* 2 */
+"execution(* com.taxservice.service.*.*(..))"
+
+/* 3 */
+"execution(* com.taxservice.service.*.*(..))"`],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Given the following definitions:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '1. Where the action should be applied',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '2. Definitions of advice and pointcuts',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '3. An action to be applied before',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '4. An action to be applied after',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'And the following annotations:',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'A.',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '@Before',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'B.',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '@Aspect',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'C.',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '@Pointcut',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'D.',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '@After',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.BREAK,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following BEST matches the definitions and annotations?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1C 2B 3A 4D',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1C 2B 3D 4A',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1C 2D 3B 4A',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1D 2C 3B 4A',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Spring AOP, a _____ allows you to intercept a method call and determine whether it executes or does not.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ProceedingJoinPoint'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'JoinPoint'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@Transactional'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '@ProceedingJoinPoint'],
+            [QuizMarkdownType.TEXT, 'or'],
+            [QuizMarkdownType.INLINE_CODE, '@JoinPoint'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Spring AOP, a method call intercepted by advice defined by the'],
+        [QuizMarkdownType.INLINE_CODE, '@Around'],
+        [QuizMarkdownType.TEXT, 'annotation will not proceed unless'],
+        [QuizMarkdownType.INLINE_CODE, 'proceedingJoinPoint.proceed()'],
+        [QuizMarkdownType.TEXT, 'is called.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which pointcut expression correctly matches a method named'],
+        [QuizMarkdownType.INLINE_CODE, 'processOrder'],
+        [QuizMarkdownType.TEXT, 'with a single'],
+        [QuizMarkdownType.INLINE_CODE, 'String'],
+        [QuizMarkdownType.TEXT, 'parameter in the'],
+        [QuizMarkdownType.INLINE_CODE, 'com.example.service.OrderService'],
+        [QuizMarkdownType.TEXT, 'class?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(void com.example.service.OrderService.processOrder(String))'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.OrderService.processOrder(..))'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.OrderService.processOrder(String, ..))'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.OrderService.processOrder())'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How would you define a pointcut that matches only the overloaded version of'],
+        [QuizMarkdownType.INLINE_CODE, 'calculateTotal'],
+        [QuizMarkdownType.TEXT, 'in'],
+        [QuizMarkdownType.INLINE_CODE, 'BillingService'],
+        [QuizMarkdownType.TEXT, 'that takes both'],
+        [QuizMarkdownType.INLINE_CODE, 'int'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'double'],
+        [QuizMarkdownType.TEXT, 'parameters?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.BillingService.calculateTotal(int, double))'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.BillingService.calculateTotal(..))'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.BillingService.calculateTotal(double, int))'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'execution(* com.example.service.BillingService.calculateTotal(int))'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;
