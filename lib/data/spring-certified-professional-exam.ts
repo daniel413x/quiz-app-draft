@@ -1723,14 +1723,14 @@ public class ConnectionSettings { ... }`],
           id: '2',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'application.properties'],
-            [QuizMarkdownType.TEXT, 'does not pertain to such an application'],
+            [QuizMarkdownType.TEXT, 'is not relevant to such an application'],
           ],
         },
         {
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_CODE, '@SpringBootApplication'],
-            [QuizMarkdownType.TEXT, 'has pertinence to such an application'],
+            [QuizMarkdownType.TEXT, 'is relevant to such an application'],
           ],
         },
       ],
@@ -3703,16 +3703,15 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
       question: [
         [QuizMarkdownType.TEXT, 'Consider the'],
         [QuizMarkdownType.INLINE_CODE, 'OrderItemService'],
-        [QuizMarkdownType.TEXT, 'below. How can the comparison in the annotation'],
-        [QuizMarkdownType.INLINE_CODE, '@PreAuthorize("hasRole(\'MEMBER\')  &&  " + "#order.owner.name == _________")'],
-        [QuizMarkdownType.TEXT, 'at'],
-        [QuizMarkdownType.INLINE_CODE, '// 1'],
-        [QuizMarkdownType.TEXT, 'be completed so that a user getting an order item can only do so if the order belongs to them?'],
+        [QuizMarkdownType.TEXT, 'below. Which answer can replace the comment'],
+        [QuizMarkdownType.INLINE_CODE, '/* 1 */'],
+        [QuizMarkdownType.TEXT, 'in the parameter to the annotation'],
+        [QuizMarkdownType.INLINE_CODE, '@PreAuthorize'],
+        [QuizMarkdownType.TEXT, 'so that a user getting an order item can only do so if the order belongs to them?'],
         [QuizMarkdownType.CODE, `import org.springframework.security.annotation.PreAuthorize;
 
 public class OrderItemService {
-  // 1
-  @PreAuthorize("hasRole('MEMBER')  &&  " + "#order.owner.name == _________")
+  @PreAuthorize("hasRole('MEMBER')  &&  " + "#order.owner.name == /* 1 */")
   public OrderItem getOrderItem(Order order, long orderItemId) {
     // fetch logic
   }
@@ -5759,10 +5758,6 @@ String message = (String) exp.getValue();`],
     {
       question: [
         [QuizMarkdownType.TEXT, '__________ works on bean definitions, __________ works on actual bean instances'],
-        [QuizMarkdownType.INLINE_CODE, 'BeanFactoryPostProcessor'],
-        [QuizMarkdownType.TEXT, 'and'],
-        [QuizMarkdownType.INLINE_CODE, 'BeanPostProcessor'],
-        [QuizMarkdownType.TEXT, '?'],
       ],
       answers: [
         {
@@ -6598,7 +6593,7 @@ public class LoggingAspect {
           ],
         },
       ],
-      correctAnswer: '1',
+      correctAnswer: '0',
     },
     {
       question: [
@@ -6970,6 +6965,176 @@ public void serviceMethods() {}
       ],
       correctAnswer: '0',
     },
+    // {
+    //   question: [
+    //     [QuizMarkdownType.TEXT, 'You are writing an aspect that includes a method annotated with'],
+    //     [QuizMarkdownType.INLINE_CODE, '@Before'],
+    //     [QuizMarkdownType.TEXT, 'that will execute on a method in a class that implements one or more interfaces. The underlying proxy on which this advice operates is the _________'],
+    //   ],
+    //   answers: [
+    //     {
+    //       id: '0',
+    //       answer: [
+    //         [QuizMarkdownType.INLINE_CODE, 'java.lang.reflect.InvocationHandler'],
+    //       ],
+    //     },
+    //     {
+    //       id: '1',
+    //       answer: [
+    //         [QuizMarkdownType.INLINE_CODE, 'execution(* com.example.service.BillingService.calculateTotal(..))'],
+    //       ],
+    //     },
+    //     {
+    //       id: '2',
+    //       answer: [
+    //         [QuizMarkdownType.INLINE_CODE, 'execution(* com.example.service.BillingService.calculateTotal(double, int))'],
+    //       ],
+    //     },
+    //     {
+    //       id: '3',
+    //       answer: [
+    //         [QuizMarkdownType.INLINE_CODE, 'execution(* com.example.service.BillingService.calculateTotal(int))'],
+    //       ],
+    //     },
+    //   ],
+    //   correctAnswer: '0',
+    // },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A method annotated with'],
+        [QuizMarkdownType.INLINE_CODE, '@PostConstruct'],
+        [QuizMarkdownType.TEXT, 'will execute before a method defined as a'],
+        [QuizMarkdownType.INLINE_CODE, 'CommandLineRunner'],
+        [QuizMarkdownType.TEXT, 'regardless of where these methods are defined.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A method annotated with'],
+        [QuizMarkdownType.INLINE_CODE, '@PreDestroy'],
+        [QuizMarkdownType.TEXT, 'will execute before a method defined as a'],
+        [QuizMarkdownType.INLINE_CODE, 'CommandLineRunner'],
+        [QuizMarkdownType.TEXT, 'regardless of where these methods are defined.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A'],
+        [QuizMarkdownType.INLINE_CODE, 'BeanPostProcessor'],
+        [QuizMarkdownType.TEXT, 'can modify a bean definition before the bean is instantiated.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A method annotated with'],
+        [QuizMarkdownType.INLINE_CODE, '@PreDestroy'],
+        [QuizMarkdownType.TEXT, 'is always executed when the Spring application shuts down, regardless of the bean scope.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A method annotated with'],
+        [QuizMarkdownType.INLINE_CODE, '@PostConstruct'],
+        [QuizMarkdownType.TEXT, 'executes before the constructor of the bean is called.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Using'],
+        [QuizMarkdownType.INLINE_CODE, '@DependsOn'],
+        [QuizMarkdownType.TEXT, 'ensures that a bean is instantiated before another bean that depends on it.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
