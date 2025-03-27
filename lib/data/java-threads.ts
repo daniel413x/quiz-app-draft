@@ -674,5 +674,170 @@ export default {
       ],
       correctAnswer: '1',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a realistic scenario for a traditional servlet Java application running on a machine with 4 CPU cores that is experiencing high traffic and spawning hundreds of threads?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only ~4-8 threads can truly run in parallel'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only ~40-80 threads can truly run in parallel'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Only ~150-250 threads can truly run in parallel'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'As many threads can be run in parallel as can be spawned'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true for a Spring WebFlux application running on a machine with 4 CPU cores that is experiencing high traffic and spawning hundreds of threads?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The application handles all requests using ~8 event loop threads'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The application spawns one thread per request for up to 500 threads'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The application can process 4–8 requests concurrently'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The application can spawn a virtually unlimited number of threads and process all of them in parallel'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following threads are NOT started automatically?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'ExecutorService'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Finalizer'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'CompilerThread'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'main'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        // the JVM creates threads for things like GC, Finalizer, main itself etc
+        // https://chatgpt.com/c/67ddcf58-7944-8005-aa22-657b401036fe
+        [QuizMarkdownType.TEXT, 'Assume you run the command'],
+        [QuizMarkdownType.INLINE_CODE, 'java Main'],
+        [QuizMarkdownType.TEXT, 'which runs the simple program shown below. Which answer is true of the runtime of the command as a whole?'],
+        [QuizMarkdownType.CODE, `public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiple threads are spawned'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One thread is spawned'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        // running a java program implicitly runs multiple threads by virtue of things like GC threads, the main thread itself, etc. however, threads must be explcitly defined for the code itself to utilize multiple threads
+        [QuizMarkdownType.TEXT, 'You run the command'],
+        [QuizMarkdownType.INLINE_CODE, 'java Fibonacci'],
+        [QuizMarkdownType.TEXT, 'on a file that contains cpu-intensive Fibonacci computation code as shown below. Disregarding all processes outside of the code itself, how many threads are spawned by running this program?'],
+        [QuizMarkdownType.CODE, `public class Fibonacci {
+    public static void main(String[] args) {
+      // ...
+    }
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Not enough information to answer'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'One thread is spawned'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiple threads are spawned'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Two-three threads are spawned'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

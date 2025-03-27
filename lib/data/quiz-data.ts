@@ -44,6 +44,8 @@ import multithreading from './multithreading';
 import blockchains from './blockchains';
 import cppI from './cpp-i';
 import springCertifiedProfessionalExam from './spring-certified-professional-exam';
+import selenium from './selenium';
+import sdlc from './sdlc';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -63,6 +65,8 @@ const quizData: QuizData = {
   // ===========
   java,
   jenkins,
+  selenium,
+  sdlc,
   kubernetes,
   multithreading,
   'java-threads': javaThreads,
@@ -145,6 +149,7 @@ const categories = [
       quizData['java-foundations-exam'],
       quizData['java-foundations-exam-ii'],
       quizData.special,
+      quizData.selenium,
       quizData['cpp-i'],
       quizData.git,
     ],
@@ -217,6 +222,13 @@ const categories = [
     slug: 'computer-science',
     quizzes: [
       quizData.multithreading,
+    ],
+  },
+  {
+    name: 'Software Development Lifecycle (CDLC)',
+    slug: 'sdlc',
+    quizzes: [
+      quizData.sdlc,
     ],
   },
   {
