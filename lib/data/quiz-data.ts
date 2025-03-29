@@ -152,6 +152,7 @@ const categories = [
       quizData.selenium,
       quizData['cpp-i'],
       quizData.git,
+      quizData.sdlc,
     ],
   },
   {
@@ -222,13 +223,6 @@ const categories = [
     slug: 'computer-science',
     quizzes: [
       quizData.multithreading,
-    ],
-  },
-  {
-    name: 'Software Development Lifecycle (CDLC)',
-    slug: 'sdlc',
-    quizzes: [
-      quizData.sdlc,
     ],
   },
   {
