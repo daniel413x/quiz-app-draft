@@ -3083,7 +3083,7 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'An application server needs to communicate with a database server within the same VPC. How should you configure the security groups to allow this communication?',
+          'An application server needs to communicate with a database server within the same VPC. Assuming default settings, how should you configure the security groups to allow this communication?',
         ],
       ],
       answers: [
