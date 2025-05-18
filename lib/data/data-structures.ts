@@ -2,6 +2,7 @@ import circularLinkedList from '@/public/circular-linked-list.png';
 import doubleEndedQueue from '@/public/double-ended-queue.png';
 import singlyLinkedList from '@/public/singly-linked-list.png';
 import doublyLinkedList from '@/public/doubly-linked-list.png';
+import squareIllustrationLinkedList from '@/public/square-illustration-linked-list.png';
 import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
@@ -884,7 +885,7 @@ export default {
           order: 3,
         },
       ],
-      correctAnswer: '3',
+      correctAnswer: '0',
     },
     {
       question: [
@@ -1178,7 +1179,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In JavaScript, an object can store key-value pairs, making implement the concept of a'],
+        [QuizMarkdownType.TEXT, 'In JavaScript, an object can store key-value pairs, making them similar to ______'],
       ],
       answers: [
         {
@@ -4110,6 +4111,135 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_KATEX, 'O(n^2)'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following illustration could be representative of a ________'],
+      ],
+      image: squareIllustrationLinkedList,
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Linked list'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Stack'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Hash table'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'HashMap'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following data structure patterns is most vulnerable to fragmentation?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contiguous memory'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Linked list'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Non-contiguous memory'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'HashMap'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In your custom data structure, nodes are connected by references (pointers). This means your data structure is based on'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Non-contiguous memory'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Circular memory'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contiguous memory'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Arrays'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In C++, the speed of accessing an array element by index is _____'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'O(1)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'O(n)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'O(0)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'O(log n)'],
           ],
         },
       ],
