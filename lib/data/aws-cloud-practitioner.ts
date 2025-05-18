@@ -3835,7 +3835,7 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'Your service needs to make requests to Google Maps API. ',
+          'Your service needs to make requests to Google Maps API. How should you change your security group rules?',
         ],
       ],
       answers: [
@@ -4295,6 +4295,460 @@ export default {
             [
               QuizMarkdownType.TEXT,
               'All inbound traffic is allowed and all outbound traffic is allowed',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which statement is true regarding AWS Elastic Load Balancer (ELB)endpoints?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'All answers are true',
+            ],
+          ],
+          order: 3,
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'ELB endpoints are accessible via their raw DNS names',
+            ],
+          ],
+          order: 2,
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'ELB endpoints are accessible via A record aliases',
+            ],
+          ],
+          order: 1,
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'ELB endpoints can be set up with an AWS CloudFront distribution',
+            ],
+          ],
+          order: 0,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    // https://chatgpt.com/c/682969bf-5d38-8005-b0dd-f2621665e57a
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer correctly labels the constituents of a AWS Elastic Load Balancer endpoint URL (e.g. its DNS name)?',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          'k8s-<1>-<2>-<3>.<4>.elb.amazonaws.com',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. namespace 2. service 3. random-id 4. region',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. service 2. namespace 3. random-id 4. region',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. region 2. namespace 3. service 4. random-id',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1.random-id 2. namespace 3. service 4. region',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You have an AWS Elastic Load Balancer endpoint, e.g. *.elb.amazonaws.com. To map a domain registered in your name to this endpoint, which type of Route 53 record is required?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'AAAA',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'CNAME',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'MX',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which type of AWS resource is accepted by AWS CloudFront for serving static sites?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'S3',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Route 53 A Record',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'EKS',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Route 53 AAAA Record',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Assume you are working on a project where the following subdomains exist and are hosted on AWS infrastructure. What answer is most likely a correct assumption about the infrastructure used?',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          `// Staging
+
+https://staging.frontend.skillstorm-congo.com/
+https://staging.api.skillstorm-congo.com/
+
+// Production
+
+https://frontend.skillstorm-congo.com/
+https://api.skillstorm-congo.com/`,
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 A record exists for the subdomain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'https://staging.frontend.skillstorm-congo.com/ ',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'An AWS CloudFront distribution exists for the subdomain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'https://staging.api.skillstorm-congo.com/ ',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 hosted zone exists for',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'https://frontend.skillstorm-congo.com/',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 AAAA Record exists for the subdomain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'https://staging.api.skillstorm-congo.com/ ',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Assume you are working on a project where the following subdomains exist and are hosted on AWS infrastructure. What answer is most likely a correct assumption about the infrastructure used?',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          `// Staging
+
+https://staging.frontend.skillstorm-congo.com/
+https://staging.api.skillstorm-congo.com/
+
+// Production
+
+https://frontend.skillstorm-congo.com/
+https://api.skillstorm-congo.com/`,
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 hosted zone exists for the domain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'skillstorm-congo.com',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 hosted zone exists for the subdomain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'api.skillstorm-congo.com',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 hosted zone exists for the subdomain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'frontend.skillstorm-congo.com',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 AAAA Record exists for the subdomain',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'staging',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Assume you are working on a project where the following subdomains exist and are hosted on AWS infrastructure. What answer is most likely a correct assumption about the infrastructure used?',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          `// Staging
+
+https://staging.frontend.skillstorm-congo.com/
+https://staging.api.skillstorm-congo.com/
+
+// Production
+
+https://frontend.skillstorm-congo.com/
+https://api.skillstorm-congo.com/`,
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Separate Route 53 A records exist for the subdomains',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'frontend.skillstorm-congo.com',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'staging.frontend.skillstorm-congo.com',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 A record exists for the subdomains',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'frontend.skillstorm-congo.com',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'staging.frontend.skillstorm-congo.com',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A Route 53 AAAA record exists for the subdomains',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'frontend.skillstorm-congo.com',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'staging.frontend.skillstorm-congo.com',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Separate AAAA records exist for the subdomains',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'frontend.skillstorm-congo.com',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'staging.frontend.skillstorm-congo.com',
             ],
           ],
         },
