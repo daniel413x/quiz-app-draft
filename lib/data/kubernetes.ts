@@ -554,7 +554,7 @@ kubectl apply -f ./deployment-user-service.yaml -n staging`,
           answer: [
             [
               QuizMarkdownType.INLINE_CODE,
-              'LimitRange',
+              'Secret',
             ],
           ],
         },

@@ -4758,15 +4758,37 @@ https://api.skillstorm-congo.com/`,
     // /home/daniel413x/VirtualBox VMs/shared/project 3/presentation
     {
       question: [
-        [QuizMarkdownType.TEXT, 'You are working with an API gateway microservice deployed on an EKS cluster. How does this component integrate with an elastic load balancer (ELB)?'],
+        [QuizMarkdownType.TEXT, 'You are working with an elastic load balancer (ELB) and an API gateway microservice deployed on an EKS cluster. Your ELB is responsible for distributing traffic evenly across all microservices. Which answer is true with regards to how the API gateway can be integrated with the ELB?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The API gateway is exposed to internet traffic via the ELB']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The API gateway is exposed to internet traffic that is routed from the ELB']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'The API gateway directs traffic to the ELB, which evenly directs it to other microservices']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'The API gateway is directly exposed to internet traffic without the ELB']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cooling and power supply']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The API gateway and the ELB have no working relationship']] },
       ],
-      correctAnswer: '1',
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An elastic load balancer is an ingress.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working with an EKS cluster. You need to store Docker images to be pulled by services as defined by your yaml configs. Which AWS service do you use to store the images?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ECR']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'ECS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EKS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S2']] },
+      ],
+      correctAnswer: '0',
     },
   ],
 } as QuizDataObject;
