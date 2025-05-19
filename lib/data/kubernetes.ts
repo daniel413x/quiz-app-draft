@@ -467,5 +467,99 @@ kubectl apply -f ./deployment-user-service.yaml -n staging`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In terms of Kubernetes resource allocations, what value is equivalent to 0.1 of a CPU core?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '100m',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '10m',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '1000m',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '0.1m',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Kubernetes pod must initialize data in a database. In which type of Kubernetes configuration should this be defined?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'ConfigMap',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Service',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Pod',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'LimitRange',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

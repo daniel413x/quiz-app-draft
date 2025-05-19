@@ -4755,5 +4755,18 @@ https://api.skillstorm-congo.com/`,
       ],
       correctAnswer: '0',
     },
+    // /home/daniel413x/VirtualBox VMs/shared/project 3/presentation
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working with an API gateway microservice deployed on an EKS cluster. How does this component integrate with an elastic load balancer (ELB)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The API gateway is exposed to internet traffic via the ELB']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The API gateway directs traffic to the ELB, which evenly directs it to other microservices']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The API gateway is directly exposed to internet traffic without the ELB']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cooling and power supply']] },
+      ],
+      correctAnswer: '1',
+    },
   ],
 } as QuizDataObject;
