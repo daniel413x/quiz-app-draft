@@ -446,18 +446,6 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What happens if no outbound rules are specified in a Security Group?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is denied']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is allowed to the internet only']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is denied except to other resources in the VPC']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is allowed by default']] },
-      ],
-      correctAnswer: '3',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Which protocol and port should you allow in a Security Group to enable HTTP traffic?'],
       ],
       answers: [
@@ -620,7 +608,7 @@ export default {
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Lambda'],
+            [QuizMarkdownType.TEXT, 'ECR (Elastic Container Registry)'],
           ],
         },
       ],
@@ -4736,7 +4724,7 @@ https://api.skillstorm-congo.com/`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Separate AAAA records exist for the subdomains',
+              'Separate Route 53 AAAA records exist for the subdomains',
             ],
             [
               QuizMarkdownType.INLINE_CODE,
@@ -4827,6 +4815,21 @@ https://api.skillstorm-congo.com/`,
       ],
       correctAnswer: '0',
     },
+    // k8s-staging-ingress...* has to resolve to an unreadable IP address. so k8s-staging-ingress...* must already be an A name record.
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An AWS ingress controller provisions you with an elastic load balancer with the address'],
+        [QuizMarkdownType.INLINE_CODE, 'k8s-staging-ingress-af7115ad11-1821985949.us-east-1.elb.amazonaws.com'],
+        [QuizMarkdownType.TEXT, '. This address must be tied to which type of record?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'An A record']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A CNAME record']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An AAAA record']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A hosted zone']] },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'An AWS Load Balancer Controller must be provisioned in addition to a separate ingress controller like NGINX.'],
@@ -4836,6 +4839,16 @@ https://api.skillstorm-congo.com/`,
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
       ],
       correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An A record can reference the address of another A record and map it to a custom domain.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '1',
     },
   ],
 } as QuizDataObject;

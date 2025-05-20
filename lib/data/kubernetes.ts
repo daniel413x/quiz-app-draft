@@ -383,7 +383,7 @@ kubectl apply -f ./deployment-user-service.yaml -n staging`,
         ],
         [
           QuizMarkdownType.TEXT,
-          'will return information about the resources defined in the aforementioned yaml files.',
+          'will return information about the resources applied in the aforementioned commands.',
         ],
       ],
       answers: [
