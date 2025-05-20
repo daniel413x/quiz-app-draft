@@ -4770,7 +4770,7 @@ https://api.skillstorm-congo.com/`,
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'An elastic load balancer is an ingress.'],
+        [QuizMarkdownType.TEXT, 'An elastic load balancer is a type of ingress.'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
@@ -4787,6 +4787,53 @@ https://api.skillstorm-congo.com/`,
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'ECS']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'EKS']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'S2']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You deploy an ingress resource. Which of the following services or components is reponsible for provisioning an elastic load balancer according to the ingress rules?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Ingress controller']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'EKS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'NAT Gateway']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Routing table']] },
+      ],
+      correctAnswer: '0',
+    },
+    // you define the set of rules, we provision the ELB implementing those rules
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following resources is a set of rules for routing external HTTP and HTTPS traffic?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Ingress controller']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Elastic Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'NAT Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following resources can be described as a configuration layer?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Ingress controller']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Elastic Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'NAT Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An AWS Load Balancer Controller must be provisioned in addition to a separate ingress controller like NGINX.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
       ],
       correctAnswer: '0',
     },

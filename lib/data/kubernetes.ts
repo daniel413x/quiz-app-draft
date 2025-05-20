@@ -561,5 +561,129 @@ kubectl apply -f ./deployment-user-service.yaml -n staging`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following resources can be described as operating at the configuration layer?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Ingress controller']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'NAT Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following resources can be described as operating at the application layer?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Deployment']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Ingress controller']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following Kubernetes assets can be described as service discovery?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CoreDNS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Ingress controller']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Deployment']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A ______ is the simplest type of resource that exposes your an application running inside a Kubernetes cluster to external clients.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'NodePort']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CoreDNS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Deployment']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need to expose an API gateway microservice to external traffic. Which of the following resources CANNOT be used to accomplish this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ClusterIP']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'NodePort']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are a defining a microservice to be accessible only by other microservices within your Kubernetes cluster. Which of the following types of resources is appropriate for this constraint?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ClusterIP']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'NodePort']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A service defined as a ClusterIP can only be accessed internally by other services within the Kubernetes cluster.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A service defined as a ClusterIP can be accessed externally from outside the Kubernetes cluster.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A service defined as a NodePort can be accessed externally from outside the Kubernetes cluster.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A service defined as a NodePort can only be accessed internally by other services within the Kubernetes cluster.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The default type of any service in Kubernetes is a ________.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ClusterIP']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'NodePort']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Load Balancer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Ingress']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
