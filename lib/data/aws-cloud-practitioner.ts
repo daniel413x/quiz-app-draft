@@ -398,42 +398,6 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which type of traffic does a Security Group in AWS control by default?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Both inbound and outbound traffic']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Inbound traffic only']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic only']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Traffic between subnets only']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'By default, what is the rule for inbound traffic in a newly created Security Group?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All inbound traffic is allowed']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All inbound traffic is denied']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Inbound traffic from the same VPC is allowed']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Inbound traffic is allowed for public IPs only']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'What is the default behavior of outbound traffic in a Security Group?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is allowed']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All outbound traffic is denied']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is allowed to the same VPC']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Outbound traffic is restricted to a whitelist']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Can a Security Group be applied to multiple instances in AWS?'],
       ],
       answers: [
@@ -3118,6 +3082,53 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
+          'An application server needs to communicate with a database server within the same security group. Assuming default settings, how should you configure the security groups to allow this communication?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The security group does not need to be configured.',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Allow outbound traffic from the application server’s security group to the database server’s security group on the database port.',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Allow inbound traffic from the database server’s security group to the application server’s security group on the database port.',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Allow inbound traffic from the application server’s security group to the database server’s security group on the database port.',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
           'A web application needs to connect to an external API over HTTPS. How should the security group be configured?',
         ],
       ],
@@ -3161,53 +3172,53 @@ export default {
       ],
       correctAnswer: '0',
     },
-    {
-      question: [
-        [
-          QuizMarkdownType.TEXT,
-          'A company wants to ensure their application servers can communicate with each other while blocking all other inbound traffic. What should they do?',
-        ],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Configure the security group to allow inbound traffic from instances assigned to the same security group.',
-            ],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Configure the security group to allow inbound traffic on all ports from all IP addresses.',
-            ],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Block all outbound traffic from the application servers.',
-            ],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Allow inbound traffic on port 80 (HTTP) and port 443 (HTTPS) from all IP addresses.',
-            ],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
+    // {
+    //   question: [
+    //     [
+    //       QuizMarkdownType.TEXT,
+    //       'A company wants to ensure their application servers can communicate with each other while blocking all other inbound traffic. What should they do?',
+    //     ],
+    //   ],
+    //   answers: [
+    //     {
+    //       id: '0',
+    //       answer: [
+    //         [
+    //           QuizMarkdownType.TEXT,
+    //           'Configure the security group to allow inbound traffic from instances assigned to the same security group.',
+    //         ],
+    //       ],
+    //     },
+    //     {
+    //       id: '1',
+    //       answer: [
+    //         [
+    //           QuizMarkdownType.TEXT,
+    //           'Configure the security group to allow inbound traffic on all ports from all IP addresses.',
+    //         ],
+    //       ],
+    //     },
+    //     {
+    //       id: '2',
+    //       answer: [
+    //         [
+    //           QuizMarkdownType.TEXT,
+    //           'Block all outbound traffic from the application servers.',
+    //         ],
+    //       ],
+    //     },
+    //     {
+    //       id: '3',
+    //       answer: [
+    //         [
+    //           QuizMarkdownType.TEXT,
+    //           'Allow inbound traffic on port 80 (HTTP) and port 443 (HTTPS) from all IP addresses.',
+    //         ],
+    //       ],
+    //     },
+    //   ],
+    //   correctAnswer: '0',
+    // },
     {
       question: [
         [
@@ -4273,7 +4284,8 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'All inbound traffic is allowed and all outbound traffic is denied',
+              // https://docs.aws.amazon.com/vpc/latest/userguide/default-security-group.html
+              'All inbound traffic from all resources that are assigned to the security group is allowed and all outbound traffic is denied',
             ],
           ],
         },
@@ -4282,7 +4294,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'All inbound traffic is allowed and all outbound traffic is allowed',
+              'All inbound traffic from all resources that are assigned to the security group is allowed and all outbound traffic is allowed',
             ],
           ],
         },
@@ -4312,7 +4324,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'ELB endpoints are accessible via their raw DNS names',
+              'ELB endpoints are accessible via a raw IP address',
             ],
           ],
           order: 2,
@@ -4849,6 +4861,18 @@ https://api.skillstorm-congo.com/`,
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
       ],
       correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes a route table configuration for a public subnet?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '0.0.0.0/0 → Internet Gateway']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '0.0.0.0/0 → NAT Gateway']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '10.0.0.0/16 → local']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '192.168.0.0/16 → Virtual Private Gateway (VGW)']] },
+      ],
+      correctAnswer: '0',
     },
   ],
 } as QuizDataObject;

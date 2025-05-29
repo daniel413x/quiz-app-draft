@@ -16,7 +16,7 @@ import mlPrinciples from './ml-principles';
 import python from './python';
 import javascript from './javascript';
 import learnersPermit from './learners-permit';
-import { QuizDataObject } from './types';
+import { QuizDataObject, QuizMarkdownType } from './types';
 import principlesOfProgramming from './principles-of-programming';
 import sql from './sql';
 import dataStructures from './data-structures';
@@ -110,7 +110,62 @@ const quizData: QuizData = {
       slug: 'test',
     },
     questions: [
-
+      // https://chatgpt.com/c/682d8882-9b18-8005-89d3-071c942fec30
+      {
+        question: [
+          [QuizMarkdownType.TEXT, ''],
+          [QuizMarkdownType.TABLE, {
+            name: 'Route Tables',
+            data: [
+              {
+                _tableDataColId: '1', col0: '1', col1: '0.0.0.0/0', col2: 'Internet Gateway',
+              },
+              {
+                _tableDataColId: '2', col0: '2', col1: '0.0.0.0/0', col2: 'NAT Gateway',
+              },
+              {
+                _tableDataColId: '3', col0: '3', col1: '10.0.0.0/16', col2: 'local',
+              },
+              {
+                _tableDataColId: '4', col0: '4', col1: '172.31.0.0/16', col2: 'VPC Peering Connection',
+              },
+            ],
+            cols: [
+              { accessorKey: 'col0', header: '' },
+              { accessorKey: 'col1', header: 'Destination' },
+              { accessorKey: 'col2', header: 'Target' },
+            ],
+          }],
+          [QuizMarkdownType.TEXT, ''],
+        ],
+        answers: [
+          {
+            id: '0',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '1',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '2',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+          {
+            id: '3',
+            answer: [
+              [QuizMarkdownType.TEXT, ''],
+            ],
+          },
+        ],
+        correctAnswer: '0',
+      },
     ],
   },
 };

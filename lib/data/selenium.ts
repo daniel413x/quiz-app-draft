@@ -394,5 +394,47 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the following pattern called in a Cucumber'],
+        [QuizMarkdownType.INLINE_CODE, '.feature'],
+        [QuizMarkdownType.TEXT, 'file?'],
+        [QuizMarkdownType.CODE, `@axe-core
+Feature: axe-core results for any page
+
+  Scenario: Axecore generates results
+    Given I am on the route "<route>"
+    When I assess the axe-core violations labeled "<route>" in Extent reports
+    Then there should be no violations
+
+    Examples:
+      | route          |
+      | /          |
+      | /about          |
+      | /features          |
+      | /pricing          |
+      | /contact          |
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Scenario outline']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Scenario template']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Test outline']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Test template']],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

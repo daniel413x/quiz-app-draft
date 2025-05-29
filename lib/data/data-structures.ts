@@ -1057,18 +1057,21 @@ export default {
           answer: [
             [QuizMarkdownType.TEXT, 'The queue is full'],
           ],
+          order: 0,
         },
         {
           id: '1',
           answer: [
             [QuizMarkdownType.TEXT, 'The queue is empty'],
           ],
+          order: 1,
         },
         {
           id: '2',
           answer: [
             [QuizMarkdownType.TEXT, 'The queue is realized erroneously'],
           ],
+          order: 2,
         },
         {
           id: '3',
@@ -1078,7 +1081,7 @@ export default {
           order: 3,
         },
       ],
-      correctAnswer: '3',
+      correctAnswer: '0',
     },
     {
       question: [

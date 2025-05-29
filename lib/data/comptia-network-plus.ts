@@ -9290,5 +9290,33 @@ export default {
 256
 254<-correct
       */
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What conclusion can be drawn from a subnet (CIDR block) with the suffix'],
+        [QuizMarkdownType.INLINE_CODE, '/28'],
+        [QuizMarkdownType.TEXT, 'in terms of the number of addresses it can contain?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It is a very small subset']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It is a regular-sized subset']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It is a relatively small subset']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It is a VPC-sized subset']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What conclusion can be drawn from a subnet (CIDR block) with the suffix'],
+        [QuizMarkdownType.INLINE_CODE, '/16'],
+        [QuizMarkdownType.TEXT, 'in terms of the number of addresses it can contain?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It is a relatively large subset']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It is a regular-sized subset']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It is subset containing an invalid suffix']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It is a very small subset']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
