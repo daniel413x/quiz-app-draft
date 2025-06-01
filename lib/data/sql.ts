@@ -669,27 +669,31 @@ export default {
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM employees WHERE department != \'HR\''],
           ],
+          order: 0,
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM employees WHERE department = \'HR\''],
+            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM employees WHERE department <> \'HR\''],
           ],
+          order: 1,
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM employees WHERE department IS NOT \'HR\''],
+            [QuizMarkdownType.TEXT, 'Answers 1 & 2'],
           ],
+          order: 2,
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM employees WHERE department <> \'HR\''],
+            [QuizMarkdownType.TEXT, 'None of the above'],
           ],
+          order: 3,
         },
       ],
-      correctAnswer: '0',
+      correctAnswer: '2',
     },
     {
       question: [
@@ -765,31 +769,43 @@ export default {
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM tasks WHERE completed = TRUE'],
           ],
+          order: 0,
         },
         {
           id: '1',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM tasks WHERE completed IS TRUE'],
           ],
+          order: 1,
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM tasks WHERE completed = FALSE'],
+            [QuizMarkdownType.TEXT, 'Answers 1 & 2'],
           ],
+          order: 2,
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM tasks WHERE completed IS NOT TRUE'],
+            [QuizMarkdownType.TEXT, 'None of the above'],
           ],
+          order: 3,
         },
       ],
-      correctAnswer: '0',
+      correctAnswer: '2',
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which query retrieves all rows from "payments" where "method" is either "cash" or "credit"?'],
+        [QuizMarkdownType.TEXT, 'Which query retrieves all rows from table'],
+        [QuizMarkdownType.INLINE_CODE, 'payments'],
+        [QuizMarkdownType.TEXT, 'where the column'],
+        [QuizMarkdownType.INLINE_CODE, 'method'],
+        [QuizMarkdownType.TEXT, 'is either of the strings'],
+        [QuizMarkdownType.INLINE_CODE, 'cash'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.INLINE_CODE, 'credit'],
+        [QuizMarkdownType.TEXT, '?'],
       ],
       answers: [
         {
@@ -814,6 +830,46 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM payments WHERE method LIKE \'cash\' OR \'credit\''],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You have a table'],
+        [QuizMarkdownType.INLINE_CODE, 'payments'],
+        [QuizMarkdownType.TEXT, '. Which answer does NOT contain valid syntax for finding tables where the column'],
+        [QuizMarkdownType.INLINE_CODE, 'method'],
+        [QuizMarkdownType.TEXT, 'is either of the strings'],
+        [QuizMarkdownType.INLINE_CODE, 'cash'],
+        [QuizMarkdownType.TEXT, 'or'],
+        [QuizMarkdownType.INLINE_CODE, 'credit'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM payments WHERE method LIKE \'cash\' OR \'credit\''],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM payments WHERE method = \'cash\' OR method = \'credit\''],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM payments WHERE method LIKE \'cash\' OR method LIKE \'credit\''],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SELECT * FROM payments WHERE method LIKE \'cash\' OR method = \'credit\''],
           ],
         },
       ],
@@ -886,7 +942,13 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What is the correct query to find all products that have never been ordered?'],
+        [QuizMarkdownType.TEXT, 'You have a table'],
+        [QuizMarkdownType.INLINE_CODE, 'products'],
+        [QuizMarkdownType.TEXT, 'and a table'],
+        [QuizMarkdownType.INLINE_CODE, 'order_items'],
+        [QuizMarkdownType.TEXT, 'that is in a N:1 relationship to'],
+        [QuizMarkdownType.INLINE_CODE, 'products'],
+        [QuizMarkdownType.TEXT, '. What is the correct query to find all products that have never been ordered?'],
       ],
       answers: [
         {
@@ -2039,7 +2101,13 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'How do you select all customers who have placed at least one order?'],
+        [QuizMarkdownType.TEXT, 'You have a table'],
+        [QuizMarkdownType.INLINE_CODE, 'customers'],
+        [QuizMarkdownType.TEXT, 'and a table'],
+        [QuizMarkdownType.INLINE_CODE, 'orders'],
+        [QuizMarkdownType.TEXT, 'that is in a N:1 relationship to'],
+        [QuizMarkdownType.INLINE_CODE, 'customers'],
+        [QuizMarkdownType.TEXT, '. How do you select all customers who have placed at least one order?'],
       ],
       answers: [
         {
