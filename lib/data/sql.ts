@@ -591,7 +591,13 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What is the correct syntax to select all rows from "payments" where "date" is after "2023-01-01"?'],
+        [QuizMarkdownType.TEXT, 'What is the correct syntax to select all rows from the table'],
+        [QuizMarkdownType.INLINE_CODE, 'payments'],
+        [QuizMarkdownType.TEXT, 'where date column'],
+        [QuizMarkdownType.INLINE_CODE, 'date'],
+        [QuizMarkdownType.TEXT, 'is after'],
+        [QuizMarkdownType.INLINE_CODE, '2023-01-01'],
+        [QuizMarkdownType.TEXT, '?'],
       ],
       answers: [
         {
@@ -1437,32 +1443,32 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'How many unique customers have placed orders?'],
-        [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(DISTINCT customer_id) FROM orders'],
+        [QuizMarkdownType.TEXT, 'What is the purpose of the following SQL?'],
+        [QuizMarkdownType.CODE, 'SELECT COUNT(DISTINCT customer_id) FROM orders'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Counts the number of unique customer IDs in the orders table'],
+            [QuizMarkdownType.TEXT, 'To count the number of unique customer IDs in the orders table'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Counts the total number of customer orders'],
+            [QuizMarkdownType.TEXT, 'To count the total number of customer orders'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Lists all customers who have placed orders'],
+            [QuizMarkdownType.TEXT, 'To list all customers who have placed orders'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Counts the number of customers with more than one order'],
+            [QuizMarkdownType.TEXT, 'To count the number of customers with more than one order'],
           ],
         },
       ],
@@ -1496,39 +1502,6 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'Counts the number of unique products in the orders table'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'How do you find the total number of orders placed in 2023?'],
-        [QuizMarkdownType.INLINE_CODE, 'SELECT COUNT(*) FROM orders WHERE order_date BETWEEN \'2023-01-01\' AND \'2023-12-31\''],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Counts the number of orders placed in the year 2023'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Counts the number of orders placed in December 2023'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Lists all orders placed in the year 2023'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Groups orders by month for the year 2023'],
           ],
         },
       ],
@@ -1635,8 +1608,8 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'How many orders were shipped to each city?'],
-        [QuizMarkdownType.INLINE_CODE, 'SELECT city, COUNT(*) FROM orders GROUP BY city'],
+        [QuizMarkdownType.TEXT, 'Generalize the purpose of the following SQL:'],
+        [QuizMarkdownType.CODE, 'SELECT city, COUNT(*) FROM orders GROUP BY city'],
       ],
       answers: [
         {
@@ -1998,7 +1971,11 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'How would you find the average order total from the "orders" table?'],
+        [QuizMarkdownType.TEXT, 'You are working with a table'],
+        [QuizMarkdownType.INLINE_CODE, 'orders'],
+        [QuizMarkdownType.TEXT, 'that has a column'],
+        [QuizMarkdownType.INLINE_CODE, 'total'],
+        [QuizMarkdownType.TEXT, '. How do you find the average of the values of this column?'],
       ],
       answers: [
         {

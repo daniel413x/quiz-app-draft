@@ -1544,53 +1544,6 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'Which service can you use to create a Virtual Private Network (VPN) connection between your corporate data center and your VPC?',
-        ],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Amazon CloudFront',
-            ],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Amazon VPC',
-            ],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'AWS Direct Connect',
-            ],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'AWS VPN',
-            ],
-          ],
-        },
-      ],
-      correctAnswer: '3',
-    },
-    {
-      question: [
-        [
-          QuizMarkdownType.TEXT,
           'Which AWS service enables you to quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications?',
         ],
       ],
@@ -3035,7 +2988,7 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'An application server needs to communicate with a database server within the same VPC. Assuming default settings, how should you configure the security groups to allow this communication?',
+          'An application server needs to communicate with a database server within the same VPC. Assuming the application server and the database server are assigned to seperate security groups on default settings, how should you configure the security groups to allow this communication?',
         ],
       ],
       answers: [
@@ -4832,7 +4785,7 @@ https://api.skillstorm-congo.com/`,
       question: [
         [QuizMarkdownType.TEXT, 'An AWS ingress controller provisions you with an elastic load balancer with the address'],
         [QuizMarkdownType.INLINE_CODE, 'k8s-staging-ingress-af7115ad11-1821985949.us-east-1.elb.amazonaws.com'],
-        [QuizMarkdownType.TEXT, '. This address must be tied to which type of record?'],
+        [QuizMarkdownType.TEXT, '. You will register a record in Route 53 that points to this address. Which type of record should you register?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'An A record']] },
