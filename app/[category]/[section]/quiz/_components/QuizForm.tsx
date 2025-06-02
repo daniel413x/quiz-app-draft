@@ -199,34 +199,44 @@ const QuizForm = () => {
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            {renderMarkdown(question.question)}
-            {question.image ? (
-              <Image
-                className="py-6 m-auto"
-                width={500}
-                src={question.image}
-                alt="Question image"
+          <div className="relative">
+            {!isAnsweredCorrectly ? null : (
+              <Button
+                variant="blank"
+                onClick={handlePressNextButton}
+                className="absolute w-full h-full"
+                tabIndex={-1}
               />
+            )}
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              {renderMarkdown(question.question)}
+              {question.image ? (
+                <Image
+                  className="py-6 m-auto"
+                  width={500}
+                  src={question.image}
+                  alt="Question image"
+                />
+              ) : null}
+            </div>
+            {question.code ? (
+              <Code code={question.code} />
             ) : null}
+            {question.katex ? (
+              <BlockMath>{question.katex}</BlockMath>
+            ) : null}
+            <QuizFormFields
+              ref={fieldRefs}
+              answers={answers}
+              isAnsweredCorrectly={isAnsweredCorrectly}
+              isAnsweredIncorrectly={isAnsweredIncorrectly}
+              form={form}
+              formAnswer={formAnswer}
+              submittedAnswer={submittedAnswer}
+              handleChangeAnswer={handleChangeAnswer}
+              submitRef={submitRef}
+            />
           </div>
-          {question.code ? (
-            <Code code={question.code} />
-          ) : null}
-          {question.katex ? (
-            <BlockMath>{question.katex}</BlockMath>
-          ) : null}
-          <QuizFormFields
-            ref={fieldRefs}
-            answers={answers}
-            isAnsweredCorrectly={isAnsweredCorrectly}
-            isAnsweredIncorrectly={isAnsweredIncorrectly}
-            form={form}
-            formAnswer={formAnswer}
-            submittedAnswer={submittedAnswer}
-            handleChangeAnswer={handleChangeAnswer}
-            submitRef={submitRef}
-          />
           <div className="grid gap-2">
             <Button
               className={cn({
