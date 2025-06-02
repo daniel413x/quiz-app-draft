@@ -5,7 +5,9 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/common/shadcn/radio-
 import { Answer } from '@/lib/data/types';
 import { cn } from '@/lib/utils';
 import { UseFormReturn } from 'react-hook-form';
-import { forwardRef, useImperativeHandle, useRef } from 'react';
+import {
+  forwardRef, RefObject, useImperativeHandle, useRef,
+} from 'react';
 import { renderMarkdown } from './_utils';
 
 interface QuizFormFieldsProps {
@@ -18,6 +20,7 @@ interface QuizFormFieldsProps {
   handleChangeAnswer: (val: string) => void;
   formAnswer: string;
   submittedAnswer: string | null;
+  submitRef: RefObject<HTMLButtonElement>;
 }
 
 const QuizFormFields = forwardRef(({
@@ -28,6 +31,7 @@ const QuizFormFields = forwardRef(({
   handleChangeAnswer,
   formAnswer,
   submittedAnswer,
+  submitRef,
 }: QuizFormFieldsProps, ref) => {
   const radioGroupRef = useRef<HTMLDivElement>(null);
   const firstRadioButtonRef = useRef<HTMLButtonElement>(null);
@@ -64,6 +68,13 @@ const QuizFormFields = forwardRef(({
                   })}
                   htmlFor={answer.id}
                   key={answer.id}
+                  // onClick in this context conflicts with the way React updates state and will cause the form to submit instantly in this implementation
+                  // onMouseUp avoids the conflict
+                  onMouseUp={() => {
+                    if (answer.id === formAnswer) {
+                      submitRef.current?.click();
+                    }
+                  }}
                 >
                   <span className={cn('absolute -left-5 text-gray-600 dark:text-gray-500 text-xs flex', {
                     'dark:text-gray-400': isAnsweredCorrectly,
