@@ -13068,5 +13068,85 @@ onmessage = function(event) {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following React component will render as intended.'],
+        [QuizMarkdownType.CODE, `import React from 'react';
+
+const ButtonList = () => {
+  const items = [
+    { id: 1, label: 'First' },
+    { id: 2, label: 'Second' },
+    { id: 3, label: 'Third' },
+  ];
+  return (
+    <div>
+      {items.map((item) => (
+        <button key={item.id} onClick={() => null}>
+          {item.label}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default ButtonList;`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following React component will render as intended.'],
+        [QuizMarkdownType.CODE, `import React from 'react';
+
+const ButtonList = () => {
+  const items = [
+    { id: 1, label: 'First' },
+    { id: 2, label: 'Second' },
+    { id: 3, label: 'Third' },
+  ];
+  return (
+    <div>
+      {items.map((item) => {
+        <button key={item.id} onClick={() => null}>
+          {item.label}
+        </button>
+      })}
+    </div>
+  );
+};
+
+export default ButtonList;`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
