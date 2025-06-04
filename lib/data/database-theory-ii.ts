@@ -891,6 +891,18 @@ export default {
       ],
       correctAnswer: '2',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following Amazon services is a columnar databse?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Redshift']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Neptune']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon DynamoDB']] },
+      ],
+      correctAnswer: '0',
+    },
 
   ],
 } as QuizDataObject;
