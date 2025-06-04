@@ -4,7 +4,7 @@ export default {
   name: 'SQL',
   slug: 'sql',
   category: {
-    slug: 'programming',
+    slug: 'databases',
   },
   questions: [
     {
@@ -2720,6 +2720,20 @@ CREATE TABLE student_courses (
         },
       ],
       correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the term '],
+        [QuizMarkdownType.INLINE_CODE, 'referential integrity'],
+        [QuizMarkdownType.TEXT, 'mean in database theory?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Data is encrypted at rest']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'All foreign keys must match primary keys']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Queries must execute in order']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Backups must be periodically tested']] },
+      ],
+      correctAnswer: '1',
     },
   ],
 } as QuizDataObject;

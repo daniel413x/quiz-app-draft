@@ -4815,15 +4815,27 @@ https://api.skillstorm-congo.com/`,
       ],
       correctAnswer: '1',
     },
+    // {
+    //   question: [
+    //     [QuizMarkdownType.TEXT, 'Which answer describes a route table configuration for a public subnet?'],
+    //   ],
+    //   answers: [
+    //     { id: '0', answer: [[QuizMarkdownType.TEXT, '0.0.0.0/0 → Internet Gateway']] },
+    //     { id: '1', answer: [[QuizMarkdownType.TEXT, '0.0.0.0/0 → NAT Gateway']] },
+    //     { id: '2', answer: [[QuizMarkdownType.TEXT, '10.0.0.0/16 → local']] },
+    //     { id: '3', answer: [[QuizMarkdownType.TEXT, '192.168.0.0/16 → Virtual Private Gateway (VGW)']] },
+    //   ],
+    //   correctAnswer: '0',
+    // },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer describes a route table configuration for a public subnet?'],
+        [QuizMarkdownType.TEXT, 'Which AWS service is used for managed graph databases?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, '0.0.0.0/0 → Internet Gateway']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, '0.0.0.0/0 → NAT Gateway']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, '10.0.0.0/16 → local']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, '192.168.0.0/16 → Virtual Private Gateway (VGW)']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Neptune']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon DynamoDB']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Redshift']] },
       ],
       correctAnswer: '0',
     },

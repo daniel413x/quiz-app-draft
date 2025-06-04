@@ -46,12 +46,14 @@ import cppI from './cpp-i';
 import springCertifiedProfessionalExam from './spring-certified-professional-exam';
 import selenium from './selenium';
 import sdlc from './sdlc';
+import databaseTheoryIi from './database-theory-ii';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  'database-theory-ii': databaseTheoryIi,
   'cpp-i': cppI,
   blockchains,
   'http-fundamentals': httpFundamentals,
@@ -200,7 +202,6 @@ const categories = [
       quizData['principles-ui-ux'],
       quizData['principles-of-programming'],
       quizData['spring-certified-professional-exam'],
-      quizData.sql,
       quizData['java-foundations-exam'],
       quizData['java-foundations-exam-ii'],
       quizData.special,
@@ -278,6 +279,14 @@ const categories = [
     slug: 'computer-science',
     quizzes: [
       quizData.multithreading,
+    ],
+  },
+  {
+    name: 'Databases',
+    slug: 'databases',
+    quizzes: [
+      quizData['database-theory-ii'],
+      quizData.sql,
     ],
   },
   {
