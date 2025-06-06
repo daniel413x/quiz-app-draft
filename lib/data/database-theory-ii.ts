@@ -628,18 +628,6 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What happens when you want to store new information in an SQL database?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It adjusts automatically']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It allows dynamic addition of fields']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The schema must be updated, possibly taking the DB offline']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It replicates the existing data model']] },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Which database system uses object-based APIs for querying?'],
       ],
       answers: [
@@ -647,18 +635,6 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'NoSQL']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Relational']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Hierarchical']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Which type of database can handle cloud servers and hardware clusters more efficiently?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'SQL']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'NoSQL']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Relational']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'In-memory']] },
       ],
       correctAnswer: '1',
     },
