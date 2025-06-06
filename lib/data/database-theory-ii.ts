@@ -561,8 +561,8 @@ export default {
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Data must be stored on a single server']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Data is distributed across multiple servers']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Scaling is limited to hardware upgrades']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Performance decreases with data volume']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Scaling is limited by hardware upgrades']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Performance may decrease with data volume']] },
       ],
       correctAnswer: '1',
     },
