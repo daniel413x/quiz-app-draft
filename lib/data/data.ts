@@ -176,7 +176,7 @@ export default {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'They automate the process of extracting, transforming, and loading data.'],
+            [QuizMarkdownType.TEXT, 'They are used for automation.'],
           ],
         },
         {
