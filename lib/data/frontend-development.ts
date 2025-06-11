@@ -1,12 +1,53 @@
 import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
-  name: 'Web Development Foundations',
-  slug: 'web-development-foundations',
+  // rename this Frontend Development
+  name: 'Frontend Development',
+  slug: 'frontend-development',
   category: {
     slug: 'web-development',
   },
   questions: [
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a feature that is common to the libraries'],
+        [QuizMarkdownType.INLINE_CODE, 'react-redux'],
+        [QuizMarkdownType.TEXT, ', '],
+        [QuizMarkdownType.INLINE_CODE, '@apollo/client'],
+        [QuizMarkdownType.TEXT, ', '],
+        [QuizMarkdownType.INLINE_CODE, '@tanstack/react-query'],
+        [QuizMarkdownType.TEXT, ', and'],
+        [QuizMarkdownType.INLINE_CODE, 'swr'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Cache invalidation'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Type inferrence'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'RPC'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Tree shaking'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'Which process is responsible for restoring server-rendered HTML with client-side interactivity?'],
