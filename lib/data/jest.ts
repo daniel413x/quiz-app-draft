@@ -12,12 +12,18 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'You get the error: ',
+          'You run the command',
         ],
         [
-          QuizMarkdownType.CODE, `
-
-Matcher error: received value must be a mock or spy function`,
+          QuizMarkdownType.INLINE_CODE,
+          'npx test',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. In the output, you find an error: ',
+        ],
+        [
+          QuizMarkdownType.CODE, 'Matcher error: received value must be a mock or spy function',
         ],
         [
           QuizMarkdownType.TEXT,

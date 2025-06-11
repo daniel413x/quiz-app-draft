@@ -48,6 +48,7 @@ import selenium from './selenium';
 import sdlc from './sdlc';
 import databaseTheoryIi from './database-theory-ii';
 import frontendDevelopment from './frontend-development';
+import jest from './jest';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -55,6 +56,7 @@ type QuizData = {
 
 const quizData: QuizData = {
   'database-theory-ii': databaseTheoryIi,
+  jest,
   'frontend-development': frontendDevelopment,
   'cpp-i': cppI,
   blockchains,
@@ -188,6 +190,7 @@ const categories = [
     quizzes: [
       quizData['java-threads'],
       quizData.javascript,
+      quizData.jest,
       quizData.python,
       quizData.kubernetes,
       quizData['module-i'],
