@@ -47,6 +47,7 @@ import springCertifiedProfessionalExam from './spring-certified-professional-exa
 import selenium from './selenium';
 import sdlc from './sdlc';
 import databaseTheoryIi from './database-theory-ii';
+import webDevelopmentFoundations from './web-development-foundations';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -54,6 +55,7 @@ type QuizData = {
 
 const quizData: QuizData = {
   'database-theory-ii': databaseTheoryIi,
+  'web-development-foundations': webDevelopmentFoundations,
   'cpp-i': cppI,
   blockchains,
   'http-fundamentals': httpFundamentals,
@@ -272,6 +274,7 @@ const categories = [
     slug: 'web-development',
     quizzes: [
       quizData['http-fundamentals'],
+      quizData['web-fevelopment-foundations'],
     ],
   },
   {

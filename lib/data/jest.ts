@@ -69,6 +69,76 @@ Matcher error: received value must be a mock or spy function`,
       question: [
         [
           QuizMarkdownType.TEXT,
+          'In a next.js application that uses the app router, what should be the value of',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE, 'moduleNameMapper',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'in the jest config file (e.g. ',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE, 'jest.config.mjs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          ') if you must access resources outside the',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'app',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'folder?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '"^@/(.*)$": "<rootDir>/src/$1"',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '"^@/(.*)$": "<rootDir>/src/app/$1"',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '"^@/(.*)$": "<rootDir>/src',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '"^@/(.*)$": "<rootDir>/$1',
+            ],
+          ],
+          order: 0,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
           'You attempt to run tests, but some of them fail. In your console output, you see: ',
         ],
         [
