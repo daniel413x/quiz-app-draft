@@ -8,6 +8,40 @@ export default {
     slug: 'web-development',
   },
   questions: [
+    // {
+    //   question: [
+    //     [QuizMarkdownType.TEXT, 'You need to prefetch the contents of a page'],
+    //     [QuizMarkdownType.INLINE_CODE, '/user'],
+    //     [QuizMarkdownType.TEXT, '. Which answer describes a way in which this can be accomplished?'],
+    //   ],
+    //   answers: [
+    //     {
+    //       id: '0',
+    //       answer: [
+    //         [QuizMarkdownType.TEXT, 'Define a '],
+    //       ],
+    //     },
+    //     {
+    //       id: '1',
+    //       answer: [
+    //         [QuizMarkdownType.TEXT, 'Type inferrence'],
+    //       ],
+    //     },
+    //     {
+    //       id: '2',
+    //       answer: [
+    //         [QuizMarkdownType.TEXT, 'RPC'],
+    //       ],
+    //     },
+    //     {
+    //       id: '3',
+    //       answer: [
+    //         [QuizMarkdownType.TEXT, 'Tree shaking'],
+    //       ],
+    //     },
+    //   ],
+    //   correctAnswer: '0',
+    // },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is a feature that is common to the libraries'],

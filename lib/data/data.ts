@@ -167,7 +167,6 @@ export default {
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'What is the main advantage of using ETL tools in data warehousing?'],
