@@ -1374,6 +1374,39 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which of the following queries refers to a set of objects in a many-to-many relationship?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'SELECT student_id, COUNT(course_id) FROM enrollments GROUP BY student_id'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT customers.name, orders.order_date FROM customers JOIN orders ON customers.id = orders.customer_id'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT * FROM employees WHERE department_id = (SELECT department_id FROM employees WHERE id = 5)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT a.author_name, b.book_title FROM authors a, books b WHERE a.name LIKE \'%John%\' AND b.title IS NOT NULL AND a.id = b.id;'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Generalize what the following SQL query is supposed to accomplish:'],
         [QuizMarkdownType.INLINE_CODE, 'SELECT employee_id, department_id FROM employees WHERE employee_id IN (SELECT manager_id FROM departments)'],
       ],
