@@ -1404,6 +1404,38 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following queries does NOT refer to a set of objects in a many-to-many relationship?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT students.name, courses.title FROM students JOIN enrollments ON students.id = enrollments.student_id JOIN courses ON courses.id = enrollments.course_id'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT books.title, authors.name FROM books JOIN book_authors ON books.id = book_authors.book_id JOIN authors ON authors.id = book_authors.author_id'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT employees.name, departments.name FROM employees JOIN departments ON employees.department_id = departments.id'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'SELECT users.username, roles.role_name FROM users JOIN user_roles ON users.id = user_roles.user_id JOIN roles ON roles.id = user_roles.role_id'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
 
     {
       question: [
