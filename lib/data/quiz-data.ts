@@ -47,8 +47,8 @@ import springCertifiedProfessionalExam from './spring-certified-professional-exa
 import selenium from './selenium';
 import sdlc from './sdlc';
 import databaseTheoryIi from './database-theory-ii';
-import frontendDevelopment from './frontend-development';
 import jest from './jest';
+import restfulApis from './restful-apis';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -57,10 +57,10 @@ type QuizData = {
 const quizData: QuizData = {
   'database-theory-ii': databaseTheoryIi,
   jest,
-  'frontend-development': frontendDevelopment,
+  'http-fundamentals': httpFundamentals,
   'cpp-i': cppI,
   blockchains,
-  'http-fundamentals': httpFundamentals,
+  'restful-apis': restfulApis,
   'learners-permit': learnersPermit,
   // ===========
   javascript,
@@ -276,8 +276,8 @@ const categories = [
     name: 'Web Development',
     slug: 'web-development',
     quizzes: [
+      quizData['restful-apis'],
       quizData['http-fundamentals'],
-      quizData['frontend-development'],
     ],
   },
   {
