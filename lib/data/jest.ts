@@ -199,5 +199,107 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You are testing a React component',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'SearchInput',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'that uses a hook',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'useQuery',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'from the library',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '@tanstack/react-query',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. You run a Jest test and see output below. Which answer solves this issue?',
+        ],
+        [
+          QuizMarkdownType.CODE, `TypeError: Cannot read properties of undefined (reading 'session')
+
+      21 |   const trpc = useTRPC();
+      22 |   console.log(trpc);
+    > 23 |   const session = useQuery(trpc.auth.session.queryOptions());
+         |                                      ^
+      24 |   const openSidebar = () => {
+      25 |     setIsSidebarOpen(true);
+      26 |   };`,
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `jest.mock("@/trpc/client", () => ({
+  useTRPC: () => ({
+    auth: {
+      session: {
+        queryOptions: () => {},
+      },
+    },
+  }),
+}));`,
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `jest.mock("useTRPC", () => ({
+  auth: {
+    session: {
+      queryOptions: () => {},
+    },
+  },
+}));`,
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `jest.mock("@/trpc/client", () => ({
+  jest.mock("useTRPC", () => ({
+    auth: {
+      session: {
+        queryOptions: () => {},
+      },
+    },
+  }))
+}));`,
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `jest.mock("@/trpc/client", () => ({
+  useTRPC: jest.fn(),
+}));`,
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
