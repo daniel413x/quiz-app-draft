@@ -49,6 +49,7 @@ import sdlc from './sdlc';
 import databaseTheoryIi from './database-theory-ii';
 import jest from './jest';
 import restfulApis from './restful-apis';
+import nextJs from './next-js';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -57,6 +58,7 @@ type QuizData = {
 const quizData: QuizData = {
   'database-theory-ii': databaseTheoryIi,
   jest,
+  'next-js': nextJs,
   'http-fundamentals': httpFundamentals,
   'cpp-i': cppI,
   blockchains,
@@ -188,6 +190,7 @@ const categories = [
     name: 'Programming',
     slug: 'programming',
     quizzes: [
+      quizData['next-js'],
       quizData['java-threads'],
       quizData.javascript,
       quizData.jest,
