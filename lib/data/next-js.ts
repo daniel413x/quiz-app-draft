@@ -48,10 +48,105 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Partial server-side rendering"',
+              'Partial server-side rendering',
             ],
           ],
           order: 0,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer correctly defines the directive to force a page to render dynamically?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'export const dynamic = "force-dynamic";',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'export const dynamic = "dynamic";',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'export const dynamic = "dynamic-rendering";',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'export const dynamic = "rendering-dynamic";',
+            ],
+          ],
+          order: 0,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer is true of pages that are rendered statically?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'They constitute a smaller bundle size',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'They constitute a larger bundle size',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is unnecessary to perform hydration on statically rendered pages',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Query parameters cannot be retreived in statically rendered pages',
+            ],
+          ],
         },
       ],
       correctAnswer: '0',
@@ -96,7 +191,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Dynamic rendering"',
+              'Dynamic rendering',
             ],
           ],
           order: 0,
