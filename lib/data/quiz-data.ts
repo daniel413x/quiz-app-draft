@@ -59,9 +59,11 @@ const quizData: QuizData = {
   'database-theory-ii': databaseTheoryIi,
   jest,
   'next-js': nextJs,
+  // ===========
   'http-fundamentals': httpFundamentals,
   'cpp-i': cppI,
   blockchains,
+  // ===========
   'restful-apis': restfulApis,
   'learners-permit': learnersPermit,
   // ===========
