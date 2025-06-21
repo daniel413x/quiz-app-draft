@@ -51,7 +51,6 @@ export default {
               'Partial server-side rendering',
             ],
           ],
-          order: 0,
         },
       ],
       correctAnswer: '0',
@@ -99,7 +98,6 @@ export default {
               'export const dynamic = "rendering-dynamic";',
             ],
           ],
-          order: 0,
         },
       ],
       correctAnswer: '0',
@@ -194,7 +192,6 @@ export default {
               'Dynamic rendering',
             ],
           ],
-          order: 0,
         },
       ],
       correctAnswer: '0',
@@ -274,7 +271,164 @@ export default {
               '@/trpc/server',
             ],
           ],
-          order: 0,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In a client component, you must access data that has NOT already been prefetched. Which of the following objects can accomplish this?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'useQuery',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@tanstack/react-query',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'useSuspenseQuery',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@tanstack/react-query',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'caller',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@/trpc/server',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'getQueryClient',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@/trpc/server',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In a server component, you must access data that has already been prefetched. Which of the following objects can accomplish this?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'caller',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@/trpc/server',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'useSuspenseQuery',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@tanstack/react-query',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'useQuery',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@tanstack/react-query',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'getQueryClient',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'from',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '@/trpc/server',
+            ],
+          ],
         },
       ],
       correctAnswer: '0',
