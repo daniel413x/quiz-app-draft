@@ -13036,6 +13036,45 @@ onmessage = function(event) {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which answer best characterizes the following code?'],
+        [QuizMarkdownType.CODE, `const handleClickOnClear = () => {
+  const resetObject = 
+  Object.fromEntries(
+    Object.keys(filters).map((key) => [key, null])
+  );
+  setFilters(resetObject);
+};`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is a dynamic solution to a problem'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is a static solution to a problem'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is a hacking solution to a problem'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is an inefficient solution to a problem'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'An array declared as an array literal would be'],
         [QuizMarkdownType.INLINE_CODE, '          '],
         [QuizMarkdownType.TEXT, '.'],
