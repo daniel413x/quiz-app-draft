@@ -50,6 +50,7 @@ import databaseTheoryIi from './database-theory-ii';
 import jest from './jest';
 import restfulApis from './restful-apis';
 import nextJs from './next-js';
+import react from './react';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -57,6 +58,7 @@ type QuizData = {
 
 const quizData: QuizData = {
   'database-theory-ii': databaseTheoryIi,
+  react,
   jest,
   'next-js': nextJs,
   // ===========
@@ -189,6 +191,13 @@ const categories = [
     ],
   },
   {
+    name: 'Software Development',
+    slug: 'software-development',
+    quizzes: [
+      quizData.sdlc,
+    ],
+  },
+  {
     name: 'Programming',
     slug: 'programming',
     quizzes: [
@@ -196,6 +205,7 @@ const categories = [
       quizData['java-threads'],
       quizData.javascript,
       quizData.jest,
+      quizData.react,
       quizData.python,
       quizData.kubernetes,
       quizData['module-i'],
