@@ -12876,5 +12876,52 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer is true of The Porter Stemmer?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It is primarily designed for the English language',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It works equally well for all languages',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It can work with languages other than English but only with significant modifications',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Stemming is only useful for English text',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
