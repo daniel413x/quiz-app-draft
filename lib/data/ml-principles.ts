@@ -1975,10 +1975,10 @@ Epoch 5/5
     {
       question: [[QuizMarkdownType.TEXT, 'How can the use of a validation set improve model generalization?']],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By providing feedback on the model’s performance on unseen data, allowing for adjustments that prevent overfitting']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By evaluating the model’s performance on unseen data']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'By increasing the number of training examples']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By reducing the computational cost']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By visualizing the training process']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By evaluating the model’s performance on labeled data']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By increasing the model\'s complexity']] },
       ],
       correctAnswer: '0',
     },
@@ -12833,7 +12833,7 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
       question: [
         [
           QuizMarkdownType.TEXT,
-          'Evaluate: The Porter Stemmer can be used for words in languages other than English, such as Russian or Arabic',
+          'Which answer is true of The Porter Stemmer?',
         ],
       ],
       answers: [
@@ -12842,7 +12842,7 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'No, it is primarily designed for the English language and may not perform well on other languages',
+              'It is primarily designed for the English language',
             ],
           ],
         },
@@ -12851,7 +12851,7 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Yes, it works equally well for all languages',
+              'It works equally well for all languages',
             ],
           ],
         },
@@ -12860,7 +12860,7 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Yes, but with significant modifications',
+              'It can work with languages other than English but only with significant modifications',
             ],
           ],
         },
@@ -12869,7 +12869,7 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'No, stemming is only useful for English text',
+              'Stemming is only useful for English text',
             ],
           ],
         },
