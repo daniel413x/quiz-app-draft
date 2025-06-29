@@ -2904,5 +2904,75 @@ export default ButtonList;`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which of the following scenarios is'],
+        [QuizMarkdownType.INLINE_CODE, 'useInfiniteQuery'],
+        [QuizMarkdownType.TEXT, 'from'],
+        [QuizMarkdownType.INLINE_CODE, '@tanstack/react-query'],
+        [QuizMarkdownType.TEXT, 'most suited?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In a list of objects continuously fetched via scrolling'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In a page for a single object'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In a list of objects that is static and unlikely to change'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'In any query that does not require caching'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You have a components folder'],
+        [QuizMarkdownType.INLINE_CODE, 'views'],
+        [QuizMarkdownType.TEXT, '. What kind of components does this folder hold?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Presentational components'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Behavior-focused components'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Layout components'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Provider components'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
