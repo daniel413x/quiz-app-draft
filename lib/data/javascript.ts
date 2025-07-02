@@ -10311,7 +10311,7 @@ onmessage = function(event) {
         ],
         [
           QuizMarkdownType.TEXT,
-          '. Which of the following is assumed to be true?',
+          '. Which of the following is true?',
         ],
       ],
       answers: [
@@ -10362,7 +10362,7 @@ onmessage = function(event) {
         ],
         [
           QuizMarkdownType.INLINE_CODE,
-          'jest.config.js',
+          'jest.config.mjs',
         ],
         [
           QuizMarkdownType.TEXT,
@@ -10374,7 +10374,7 @@ onmessage = function(event) {
         ],
         [
           QuizMarkdownType.TEXT,
-          '. Which of the following is assumed to be true?',
+          '. Which of the following is true?',
         ],
       ],
       answers: [
@@ -10383,7 +10383,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using ES6 modules',
+              'Your file is using ES6 modules',
             ],
           ],
         },
@@ -10392,7 +10392,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using CommonJS modules',
+              'Your file is using CommonJS modules',
             ],
           ],
         },
@@ -10401,7 +10401,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using obsolete syntax',
+              'Your file is using obsolete syntax',
             ],
           ],
         },
@@ -10410,7 +10410,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using experimental syntax',
+              'Your file contains statements that conflict with the file extension',
             ],
           ],
         },
@@ -10437,7 +10437,7 @@ onmessage = function(event) {
         ],
         [
           QuizMarkdownType.TEXT,
-          '. Which of the following is assumed to be true?',
+          '. Which of the following is true?',
         ],
       ],
       answers: [
@@ -10446,7 +10446,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using CommonJS modules',
+              'Your file is using CommonJS modules',
             ],
           ],
         },
@@ -10455,7 +10455,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using ES6 modules',
+              'Your file is using ES6 modules',
             ],
           ],
         },
@@ -10464,7 +10464,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using obsolete syntax',
+              'Your file is using obsolete syntax',
             ],
           ],
         },
@@ -10473,7 +10473,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using experimental syntax',
+              'Your file contains statements that conflict with the file extension',
             ],
           ],
         },
@@ -10500,7 +10500,7 @@ onmessage = function(event) {
         ],
         [
           QuizMarkdownType.TEXT,
-          '. Which of the following is assumed to be true?',
+          '. Which of the following is true?',
         ],
       ],
       answers: [
@@ -10509,7 +10509,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using CommonJS modules',
+              'Your file is using CommonJS modules, and they do not conflict with the file extension',
             ],
           ],
         },
@@ -10518,7 +10518,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using ES6 modules',
+              'Your file is using ES6 modules, and they do not conflict with the file extension',
             ],
           ],
         },
@@ -10527,7 +10527,7 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using obsolete syntax',
+              'Your file is using CommonJS modules, but they conflict with the file extension',
             ],
           ],
         },
@@ -10536,7 +10536,259 @@ onmessage = function(event) {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Your project is using experimental syntax',
+              'Your file is using ES6 modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.cjs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the export statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'module.exports = {...};',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.mjs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the export statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'module.exports = {...};',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.js',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the export statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'export default {...};',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.cjs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the export statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'export default {...};',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, and they do not conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using CommonJS modules, but they conflict with the file extension',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your file is using ES6 modules, and they do not conflict with the file extension',
             ],
           ],
         },
