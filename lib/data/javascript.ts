@@ -10291,5 +10291,257 @@ onmessage = function(event) {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'package.json',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the line',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '"type": "module"',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is assumed to be true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using ES6 modules',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using CommonJS modules',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using obsolete syntax',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using experimental syntax',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.js',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the import statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'import nextJest from "next/jest.js";',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is assumed to be true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using ES6 modules',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using CommonJS modules',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using obsolete syntax',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using experimental syntax',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.js',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the import statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'const nextJest = require("next/jest");',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is assumed to be true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using CommonJS modules',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using ES6 modules',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using obsolete syntax',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using experimental syntax',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your Jest config file',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jest.config.js',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'contains the export statement',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'module.exports = {...};',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which of the following is assumed to be true?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using CommonJS modules',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using ES6 modules',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using obsolete syntax',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your project is using experimental syntax',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
