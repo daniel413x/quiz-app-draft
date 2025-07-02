@@ -24,6 +24,7 @@ export default {
               'CSS',
             ],
           ],
+          order: 0,
         },
         {
           id: '1',
@@ -33,6 +34,7 @@ export default {
               'JavaScript',
             ],
           ],
+          order: 1,
         },
         {
           id: '2',
@@ -42,6 +44,7 @@ export default {
               'Icons',
             ],
           ],
+          order: 2,
         },
         {
           id: '3',

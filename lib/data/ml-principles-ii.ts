@@ -1323,5 +1323,17 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is true of K-fold cross-validation?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By the third training run, two folds will have been validation sets']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'In the last training run,each fold is a validation set']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By the last training run,no fold will have been a validation set']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'In the third training run, two folds will be validation sets']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
