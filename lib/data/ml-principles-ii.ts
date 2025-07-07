@@ -854,9 +854,9 @@ export default {
         [QuizMarkdownType.TEXT, 'How can noise in a dataset be reduced before training a machine learning model?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By manually cleaning and correcting the data']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By deleting objects with erroneous columns']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By increasing the amount of correct data']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By manually cleaning and correcting the data']], order: 0 },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By deleting objects with erroneous columns']], order: 1 },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By increasing the amount of correct data']], order: 2 },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'All of the above']], order: 3 },
       ],
       correctAnswer: '3',
@@ -1256,12 +1256,12 @@ sorted(zip(feature_importances, attributes), reverse=True)
         [QuizMarkdownType.TEXT, 'In the course of developing a machine learning model, preprocessing the data is performed ______'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Before training the model.']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'After evaluating the model on the test set.']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'After splitting the Dataset into Training and Testing Sets.']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Before training the model.']], order: 0 },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'After evaluating the model on the test set.']], order: 1 },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'After splitting the Dataset into Training and Testing Sets.']], order: 2 },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'None of the above']], order: 3 },
       ],
-      correctAnswer: '3',
+      correctAnswer: '0',
     },
     {
       question: [
@@ -1332,6 +1332,516 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'In the last training run,each fold is a validation set']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'By the last training run,no fold will have been a validation set']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'In the third training run, two folds will be validation sets']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the following terms:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. fitting'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. validation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. testing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. preprocessing'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'And the following tasks:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. training the model'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. preparing data'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. evaluating performance against unseen data'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. tuning hyperparameters'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST matches the terms to the tasks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2D, 3C, 4B'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2D, 3C, 4A'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2D, 3B, 4C'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2D, 3A, 4B'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main purpose of embeddings in machine learning?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To convert high-dimensional or categorical data into dense numerical vectors.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To normalize input features to a specific range.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To increase the dimensionality of input features.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To generate synthetic data from noise.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a typical use case for word embeddings?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Representing the meaning of words in a vector space.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Scaling word frequencies between 0 and 1.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Sorting words alphabetically.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Counting the number of characters in each word.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How are embeddings different from one-hot encoding?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Embeddings create dense vectors with meaningful relationships between categories.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Embeddings use binary vectors with a single 1.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Embeddings are only used for numerical data.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Embeddings increase the number of features.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the tasks:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Speech recognition'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Object detection'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Summarization'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Image generation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'And the following models:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. GAN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. RNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. CNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. LLM'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST matches the models to the tasks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2C, 3D, 4A'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2C, 3D, 4B'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2D, 3B, 4C'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2B, 3C, 4D'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the tasks:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Time series prediction'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Deepfake generation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Coding'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Image classification'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'And the following models:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. LLM'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. GAN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. CNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. RNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST matches the models to the tasks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1D, 2B, 3A, 4C'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1D, 2C, 3A, 4B'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2D, 3A, 4C'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2B, 3C, 4D'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the tasks:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Sequence data modeling'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Spatial data modeling'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Text generation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Image generation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'And the following models:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. CNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. RNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. LLM'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. GAN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST matches the models to the tasks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2A, 3C, 4D'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2B, 3C, 4D'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2B, 3A, 4D'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2B, 3D, 4A'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Given the tasks:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '1. Sequence data modeling'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '2. Spatial data modeling'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '3. Text generation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, '4. Image generation'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'And the following models:'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A. CNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'B. RNN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'C. LLM'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'D. GAN'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Which of the following BEST matches the models to the tasks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '1B, 2A, 3C, 4D'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '1A, 2B, 3C, 4D'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2B, 3A, 4D'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1C, 2B, 3D, 4A'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a task of LLMs (Large Language Models)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Speech recognition']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Text generation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Summarization']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Coding']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a task of CNNs (Convolutional Neural Networks)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Sequence data modeling']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Spatial data modeling']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Image classification']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Object detection']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a task of RNNs (Recurrent Neural Networks)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Spatial data modeling']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sequence data modeling']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Speech recognition']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Time series prediction']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning model uses probabilistic weights as a core architecture?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Bayesian Neural Networks']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Large Language Models']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning model uses convolutions and pooling as its core architectural idea?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning model uses recurrence and memory mechanisms as its core design?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNN / LSTM / GRU']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which model architecture relies on self-attention and feedforward networks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformer / LLM']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GNNs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which model type uses an encoder-latent-decoder structure for compression or anomaly detection?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RL Model']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which architecture is based on a generator and discriminator competing with each other?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'GAN (Generative Adversarial Network)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Capsule Network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which model uses message passing between nodes in graph data?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Graph Neural Networks (GNNs)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of model uses an ensemble of decision trees for learning from tabular data?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Bayesian Neural Networks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which model type learns a policy or value function based on rewards from the environment?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reinforcement Learning (RL) Models']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which neural network architecture uses capsules and dynamic routing to model spatial hierarchies?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Capsule Networks']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GNNs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning model uses probabilistic weights as a core architecture?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Bayesian Neural Networks']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Large Language Models']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which model uses shared-weight networks to compare two inputs for similarity?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which model type is based on minimizing energy functions to find optimal configurations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Energy-Based Models']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Capsule Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Bayesian Neural Networks']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reinforcement Learning Models']] },
       ],
       correctAnswer: '0',
     },

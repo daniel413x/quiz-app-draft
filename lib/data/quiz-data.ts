@@ -51,12 +51,14 @@ import jest from './jest';
 import restfulApis from './restful-apis';
 import nextJs from './next-js';
 import react from './react';
+import scikitLearn from './scikit-learn';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  'scikit-learn': scikitLearn,
   'database-theory-ii': databaseTheoryIi,
   react,
   jest,
@@ -238,6 +240,7 @@ const categories = [
       quizData['ml-principles'],
       quizData['ml-principles-ii'],
       quizData.tensorflow,
+      quizData['scikit-learn'],
     ],
   },
   {

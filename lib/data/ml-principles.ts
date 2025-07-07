@@ -13590,5 +13590,15 @@ a_{n1} & a_{n2} & \\cdots & a_{nn}
       ],
       correctAnswer: '0',
     },
+    {
+      question: [[QuizMarkdownType.TEXT, 'How is the validation set typically used in model training?']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To evaluate model performance at the end of each epoch and adjust hyperparameters']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To initialize the model weights']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To split the dataset into smaller parts']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To generate new features from the data']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
