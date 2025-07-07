@@ -433,5 +433,68 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In which of the following scenarios is',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'dynamic',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'from',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'next/dynamic',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'a solution?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To solve hydration issues',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To achieve a smaller bundle size',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To better adhere to the single responsibility principle',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'To force server-side rendering',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
