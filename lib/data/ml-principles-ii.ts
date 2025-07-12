@@ -1845,5 +1845,138 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning task for image processing concerns distinguishing between individual objects of the same class (e.g., two dogs get separate masks).?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Instance Segmentation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Semantic Segmentation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Object Localization']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Object Detection']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning task involves finding the best-fitting line through a set of points?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Classification']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dimensionality reduction']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which linear algebra operation is most associated with transforming data in Principal Component Analysis (PCA)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Eigen decomposition']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Gradient descent']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Forward propagation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Activation function']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Matrix multiplication is most commonly used in which part of a neural network?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear transformation of inputs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Non-linear activation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Loss calculation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Gradient clipping']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which machine learning method typically involves computing dot products to measure similarity between vectors?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Random Forests']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a typical linear algebra operation used in calculating word embeddings?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Vector projection']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Data shuffling']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision pruning']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Bootstrap aggregation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which linear algebra concept is used to measure distance between data points in clustering algorithms like k-means?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Euclidean distance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Jacobian matrix']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Covariance matrix']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'LU decomposition']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which machine learning task is the inverse of a matrix often used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Solving normal equations in linear regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Training random forests']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Backpropagation in neural networks']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Computing entropy in classification']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What linear algebra structure is most commonly used to represent datasets in machine learning?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Matrix']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Scalar']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Graph']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Tree']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which linear algebra technique is essential to Singular Value Decomposition (SVD) used in recommendation systems?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Matrix factorization']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Feature scaling']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Batch normalization']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Data binning']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which concept is used to reduce redundancy by identifying the most important directions in data?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Principal Components']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Activation functions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Loss functions']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Bagging estimators']] },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;
