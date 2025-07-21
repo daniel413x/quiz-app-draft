@@ -52,12 +52,14 @@ import restfulApis from './restful-apis';
 import nextJs from './next-js';
 import react from './react';
 import scikitLearn from './scikit-learn';
+import genetics from './genetics';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  genetics,
   'scikit-learn': scikitLearn,
   'database-theory-ii': databaseTheoryIi,
   react,
@@ -185,6 +187,13 @@ const quizData: QuizData = {
 };
 
 const categories = [
+  {
+    name: 'Biology',
+    slug: 'biology',
+    quizzes: [
+      quizData.genetics,
+    ],
+  },
   {
     name: 'Cars',
     slug: 'cars',

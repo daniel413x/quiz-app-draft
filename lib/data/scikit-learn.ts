@@ -1183,6 +1183,62 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes an invalid concept when speaking of modifying linear models such as'],
+        [QuizMarkdownType.INLINE_CODE, 'LogisticRegression'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Adding neurons']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Adjusting regularization parameters']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Adjusting class weights']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Feature engineering']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes an invalid concept when speaking of modifying neural networks such as'],
+        [QuizMarkdownType.INLINE_CODE, 'MLPRegressor'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Adding neurons']],
+          order: 0,
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Adjusting regularization parameters']],
+          order: 1,
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Adjusting class weights']],
+          order: 2,
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'None of the above']],
+          order: 3,
+        },
+      ],
+      correctAnswer: '3',
+    },
 
   ],
 } as QuizDataObject;
