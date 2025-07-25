@@ -54,12 +54,16 @@ import react from './react';
 import scikitLearn from './scikit-learn';
 import genetics from './genetics';
 import uipath from './uipath';
+import windows from './windows';
+import linux from './linux';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  linux,
+  windows,
   uipath,
   genetics,
   'scikit-learn': scikitLearn,
@@ -208,6 +212,14 @@ const categories = [
     slug: 'software-development',
     quizzes: [
       quizData.sdlc,
+    ],
+  },
+  {
+    name: 'Operating Systems',
+    slug: 'os',
+    quizzes: [
+      quizData.windows,
+      quizData.windows,
     ],
   },
   {
