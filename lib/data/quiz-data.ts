@@ -53,12 +53,14 @@ import nextJs from './next-js';
 import react from './react';
 import scikitLearn from './scikit-learn';
 import genetics from './genetics';
+import uipath from './uipath';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  uipath,
   genetics,
   'scikit-learn': scikitLearn,
   'database-theory-ii': databaseTheoryIi,
@@ -214,6 +216,7 @@ const categories = [
     quizzes: [
       quizData['next-js'],
       quizData['java-threads'],
+      quizData.uipath,
       quizData.javascript,
       quizData.jest,
       quizData.react,
