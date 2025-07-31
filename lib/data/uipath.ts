@@ -692,18 +692,6 @@ export default {
       ],
       correctAnswer: '0',
     },
-    // {
-    //   question: [
-    //     [QuizMarkdownType.TEXT, 'Scenario: A Business Analyst wants to confirm that process variations do not break a workflow. They provide 10 sample inputs. How should you implement this in UiPath?'],
-    //   ],
-    //   answers: [
-    //     { id: '0', answer: [[QuizMarkdownType.TEXT, 'Link the inputs as a data-driven source to the test case']] },
-    //     { id: '1', answer: [[QuizMarkdownType.TEXT, 'Create ten separate basic test cases']] },
-    //     { id: '2', answer: [[QuizMarkdownType.TEXT, 'Hardcode each input into the workflow']] },
-    //     { id: '3', answer: [[QuizMarkdownType.TEXT, 'Use storage buckets to store the data']] },
-    //   ],
-    //   correctAnswer: '0',
-    // },
     {
       question: [
         [QuizMarkdownType.TEXT, 'You have a component that calls an external payment API. How can you test the workflow logic without making actual API calls?'],
@@ -718,38 +706,25 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'When viewing results in the Test Explorer Panel, which detail can help diagnose a failed test case?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The exception message and activity where the error occurred']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The robot license type used']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The trigger schedule for the job']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The storage bucket name']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'A team created a basic test case but later decided to feed it 100 different data inputs. What should they do to avoid duplicating the test case 100 times?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convert the basic test case into a data-driven test case']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Publish the test case to Orchestrator']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Implement a mock for the API call and run the test case']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Manually rerun the same test case 100 times']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Manually rerun the test case']] },
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'A developer runs the Workflow Analyzer on a project and sees several validation errors. What is the purpose of using Workflow Analyzer at the project level?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To enforce best practices and detect design issues before publishing']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To enforce best practices and detect design issues']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'To automatically fix all selectors without review']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'To create Orchestrator triggers for scheduled jobs']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To change arguments to global variables automatically']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To change arguments to global variables']] },
       ],
       correctAnswer: '0',
     },
@@ -758,7 +733,7 @@ export default {
         [QuizMarkdownType.TEXT, 'Scenario: A workflow runs but fails silently in production. Reviewing the Analyzer settings, you notice rule severity is set to “Info” instead of “Error”. What should you do?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reconfigure the Workflow Analyzer rules to flag critical issues as errors']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reconfigure the Workflow Analyzer rules']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Publish the workflow again without changes']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Disable the Workflow Analyzer completely']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Convert the workflow into a queue trigger']] },
@@ -782,7 +757,7 @@ export default {
         [QuizMarkdownType.TEXT, 'You are asked to adjust rules in the Workflow Analyzer to allow certain naming conventions for arguments. Where can you do this?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'In the Workflow Analyzer settings within UiPath Studio']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'In the Workflow Analyzer settings']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'In the Orchestrator asset configuration']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'In the Test Explorer Panel']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'In the project.json file only']] },
@@ -834,18 +809,6 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'The process will stop running in Orchestrator']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Studio will not allow publishing']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'It will delete the variables from the PDD']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Scenario: A project team wants to enforce naming rules for arguments, variables, and workflows. How can they ensure this before deployment?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Configure Workflow Analyzer rules to validate naming conventions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Rely on Orchestrator queues to enforce naming']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Use the Test Explorer Panel to edit variable names']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Change them only in the project.json file']] },
       ],
       correctAnswer: '0',
     },
