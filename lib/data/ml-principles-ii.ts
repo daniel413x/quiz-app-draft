@@ -1977,6 +1977,221 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You’re building a spam filter that needs to classify emails as spam or not. Which model is most suitable for this binary classification task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You’re building a system to recognize handwritten digits from images. Which type of neural network is most suitable?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Network (CNN)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Network (RNN)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You’re analyzing stock prices over time and want to predict future prices based on past trends. What model should you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Network (RNN)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Network (CNN)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forest Classifier']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to reduce the number of features in a high-dimensional gene expression dataset while preserving as much variance as possible. Which technique is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machine']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to build a recommendation system that suggests new products to users based on their past behavior. Which model is a good starting point?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Matrix Factorization or Collaborative Filtering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forest Classifier']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You’re developing a system to translate speech to text in real time. Which model type is best suited for this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Network (RNN) or Transformer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to detect fraudulent credit card transactions based on subtle anomalies. Which model is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Isolation Forest']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are trying to generate realistic images of faces based on random input noise. Which model should you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Generative Adversarial Network (GAN)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Network (RNN)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machine (SVM)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need to group customers based on similar purchasing behavior but do not have labeled data. Which algorithm should you choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forest']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to compress input data to a smaller representation and then reconstruct it with minimal loss. What model should you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of CNNs and GANs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'GANs incorporate CNNs as part of their core architecture']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNNs incorporate GANs as part of their core architecture']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GANs are architecturally equivalent to CNNs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'There is no relationship between CNNs and GANs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which part of a GAN typically uses a CNN to classify images as real or fake?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Discriminator']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Generator']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Encoder']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which architectural component in a GAN upsamples noise into synthetic images?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Generator']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Discriminator']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Capsule layer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Attention head']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do CNNs contribute to autoencoders?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'They form the encoder and decoder layers.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'They classify the outputs as real or fake.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'They replace all convolutional layers.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'They are used to compute loss functions.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the relationship between Decision Trees and Boosted Trees?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees are ensembles of Decision Trees.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees are ensembles of Boosted Trees.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Trees are derived from LSTMs.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Trees correct errors in Boosted Trees.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Siamese networks are built using ______ as an architectural component'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Shared-weight CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Multiple Transformers']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Ensembles of Decision Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Independent RNNs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do Graph Neural Networks (GNNs) relate to CNNs and RNNs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'They generalize CNNs/RNNs to non-Euclidean data.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'They use pooling layers instead of convolutions.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'They are only used for binary classification.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'They replace trees in ensemble methods.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The discriminator in a GAN is essential to training the generator in that it __________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Provides feedback by detecting whether generated images look realistic.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Compresses the generator’s output into a latent code.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Preserves spatial hierarchies using capsules and dynamic routing.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Generalize CNNs/RNNs to non-Euclidean data like graphs.']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
