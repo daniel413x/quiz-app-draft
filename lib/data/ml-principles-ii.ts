@@ -1706,9 +1706,9 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
         [QuizMarkdownType.TEXT, 'Which machine learning model uses convolutions and pooling as its core architectural idea?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks (CNNs)']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks (RNNs)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
       ],
       correctAnswer: '0',
@@ -2193,5 +2193,799 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The discriminator in a GAN is essential to training the generator in that it __________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Provides feedback by detecting whether generated images look realistic.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Compresses the generator’s output into a latent code.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Preserves spatial hierarchies using capsules and dynamic routing.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Generalize CNNs/RNNs to non-Euclidean data like graphs.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer can be termed a proper neural network?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Stable Diffusion']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'MusicLM']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a neural network, but rather a generative model framework?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'LSTM']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a neural network, but rather a generative model framework?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Generative Adversarial Network']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Bayesian Neural Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Siamese Network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes a neural network as opposed to a generative model framework?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Generative Adversarial Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Stable Diffusion']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boltzmann Machines']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    /// ///////////
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are developing a model to predict the next word in a sentence as a user types. Which type of model is most suitable?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to analyze financial time series data to predict stock market trends. What model is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Random Forests']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An app developer wants to build a keyboard that learns user typing patterns and suggests the next character. Which model is best suited for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are building a weather forecasting system based on hourly meteorological readings. What type of model should you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need to model and generate music sequences that preserve rhythm and melody over time. Which model is the most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Capsule Networks']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You’re working on a project that translates speech to text in real-time. What model architecture is suited for capturing temporal dependencies in audio?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Graph Neural Networks']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to analyze customer support transcripts and generate automatic summaries. What model should be used to understand the sequence of text?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are building a predictive model for user activity based on their past browsing behavior over time. Which model best captures the sequential pattern?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A smart assistant app needs to process user commands spoken over time. Which type of neural network is best for this temporal task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Capsule Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forests']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to detect anomalies in a network by analyzing sequences of network traffic over time. What type of model is best suited for this time-dependent task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are building an application that identifies objects in photos taken by a mobile phone camera. What type of model is best suited for this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to create a model that detects faces in security camera footage. Which type of neural network is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reinforcement Learning Models']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A hospital wants to detect tumors in MRI scan images using an AI system. What type of model should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are building a self-driving car system that recognizes lane markings and road signs from camera input. Which model is best suited?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SVMs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to classify handwritten digits in scanned documents. What type of model is most effective for this image-based classification task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are designing a system to identify plant diseases by analyzing leaf photographs. Which model type should you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An e-commerce platform wants to automatically categorize product images into types (e.g., shoes, shirts, accessories). What model is best suited?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forests']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You’re designing a mobile app that applies artistic filters to selfies. Which type of model can best learn visual patterns for this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A construction company wants to analyze drone images to detect cracks in buildings. What type of neural network should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SVMs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to create a model that can detect whether an X-ray image is normal or abnormal. Which type of model should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNNs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reinforcement Learning Models']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A marketing team wants to divide customers into distinct groups based on purchasing behavior, without any prior labels. Which algorithm is most suitable?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A telecom company wants to identify different user segments based on how customers use their mobile data and calls. What algorithm should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Random Forest Classifier']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A real estate website wants to automatically group neighborhoods with similar housing prices, sizes, and proximity to landmarks. Which algorithm is best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machine']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A wildlife biologist wants to identify species groups based on patterns in animal movement data, but has no labeled examples. Which algorithm fits best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Capsule Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A movie streaming service wants to group users with similar viewing patterns for content recommendation, but without any predefined categories. What should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Siamese Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An e-commerce company wants to segment products based on price, size, and popularity to optimize their warehouse layout. What algorithm should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A city planner wants to group neighborhoods based on population density, crime rates, and income levels to guide zoning policies. What model is best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A hospital system wants to categorize patients into similar risk profiles based on symptoms and lab results, but there are no labeled outcomes yet. What algorithm fits?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A news aggregator wants to group articles into clusters of similar topics without relying on categories or labels. What is the most appropriate technique?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Transformer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A gym wants to identify different user fitness profiles from sensor data collected during workouts, without labeled categories. What algorithm should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forests']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SVM Classifier']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A business analyst wants to estimate next quarter’s revenue based on historical sales figures. Which model is most suitable?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Random Forest Classifier']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A medical researcher wants to predict a patient’s blood pressure based on age, weight, and activity level. Which algorithm should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An economist is modeling how interest rates affect housing demand. Which technique should be used to quantify the relationship?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A weather application wants to predict tomorrow’s temperature based on current weather conditions. Which model is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Classification Tree']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Clustering Model']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An online retailer wants to estimate shipping time based on distance, delivery method, and package weight. Which algorithm should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Nearest Neighbors Classifier']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Random Forest Classifier']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A ride-sharing company wants to predict the fare amount based on trip duration and distance. What model should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Clustering Algorithm']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SVM with RBF Kernel']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A college admissions department wants to build an application that predicts students’ GPA based on study hours, attendance, and test scores. What’s the right model?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting Classifier']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Siamese Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A manufacturing company wants to build an application that predicts the energy consumption of machines based on operating conditions. Which model should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Isolation Forest']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial advisor wants to build an application that estimates a client’s future savings based on income, expenses, and investment returns. What model should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A bank wants to build a system that predicts whether a loan applicant is likely to default based on income, debt, and credit score. Which model is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An email filtering system needs to classify incoming messages as "spam" or "not spam" using features like word frequency. What model should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A hospital wants to develop a model that predicts whether a tumor is malignant or benign based on patient data. What algorithm should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An HR department wants to predict whether a job candidate will accept an offer based on features like years of experience, location, and salary. Which model should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A software company wants to build a classifier that predicts whether a user will click on an advertisement or not. Which algorithm is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A clinic wants to identify whether a patient is at risk of having diabetes (yes or no) based on glucose level, weight, and age. What model should be applied?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A political analyst wants to predict whether a voter will vote for Candidate A or Candidate B based on demographic data. What model fits this binary classification?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A social media platform wants to predict whether a post will go viral (yes or no) based on early engagement metrics. What model is best suited for this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Capsule Network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An airline company wants to determine if a flight will be delayed based on current weather, crew availability, and maintenance status. Which model should they consider?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Siamese Network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A university wants to predict whether a student will pass or fail a course using features like attendance, previous grades, and hours studied. What model should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Feature scaling takes place during ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Data preprocessing']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Model evaluation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Model deployment']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Hyperparameter tuning']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A bank wants to decide whether to approve a loan application based on income, credit score, and past defaults. Which model is a good fit for this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A healthcare provider wants to create an interpretable model that predicts patient risk based on symptoms and medical history. What model is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reinforcement Learning']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A marketing team wants to segment customer behavior and explain decisions using a clear set of rules. Which model should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Principal Component Analysis']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machines']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RNNs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An educator wants to build a model that explains student performance based on attendance and assignment scores in a simple, tree-like form. What model should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'LSTMs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An HR department needs a model that predicts employee attrition and provides understandable logic for each prediction. Which model is ideal?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Neural Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Siamese Networks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An e-commerce platform wants a quick and interpretable model to predict product return likelihood based on user reviews and past purchases. Which model is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Transformer']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A small business needs to classify products into categories using a model that works well without extensive data preprocessing. What model should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'K-Means']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GANs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An environmental agency wants to create a model to predict water contamination risk based on location and environmental features, with easy-to-explain output. What model is best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Variational Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to build a fraud detection system for bank transactions where the logic must be easy to audit and understand. Which model should you start with?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Capsule Networks']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Graph Neural Networks']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer needs a model that can make decisions based on yes/no conditions and can be visualized easily. What is the best option?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Decision Trees']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Nearest Neighbors']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoders']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Transformers']] },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;
