@@ -1994,7 +1994,7 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
         [QuizMarkdownType.TEXT, 'You’re building a system to recognize handwritten digits from images. Which type of neural network is most suitable?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Network (CNN)']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Network (RNN)']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
@@ -2007,7 +2007,7 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recurrent Neural Network (RNN)']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convolutional Neural Network (CNN)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forest Classifier']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
       ],
@@ -2733,7 +2733,6 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
-
     {
       question: [
         [QuizMarkdownType.TEXT, 'A bank wants to build a system that predicts whether a loan applicant is likely to default based on income, debt, and credit score. Which model is most appropriate?'],
@@ -2986,6 +2985,245 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A researcher is analyzing high-dimensional genetic expression data and wants to visualize how samples cluster in 2D. What technique should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Random Forest']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An ML engineer wants to visualize the latent features learned by a neural network in a 2D scatter plot to identify natural clusters. Which method is ideal?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Lasso Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'DBSCAN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data scientist wants to explore customer behavior data with hundreds of features and spot visual groupings. What should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Gradient Boosting']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A bioinformatics team wants to project 300-dimensional SNP data into a format that can be plotted in 2D for exploratory visualization. Which technique is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Random Forest']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer uses word embeddings from a neural model and wants to display how similar words are spatially grouped. What visualization method should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Naive Bayes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'XGBoost']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Hierarchical Clustering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'After training a deep model on image data, a scientist extracts the last hidden layer and wants to visualize the results. What technique is ideal?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'LSTM']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A finance analyst wants to see how similar financial products cluster when encoded using dozens of derived features. Which algorithm helps in visualization?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Random Forest']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A neuroscientist uses fMRI data with 500 features per scan and needs to reduce it to two dimensions for visualization. What’s the best choice?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'To visualize high-dimensional embeddings from a trained model, a machine learning engineer wants a technique that emphasizes local similarity. What should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GNN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'K-Means']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a customer segmentation project, a team creates high-dimensional feature vectors and wants to visualize natural clusters in a 2D space. What algorithm is best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 't-SNE']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A genomics lab wants to classify gene expression profiles to distinguish between cancerous and non-cancerous cells. What machine learning model is suitable for this classification task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Support Vector Machine']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Researchers want to compress high-dimensional gene expression data into fewer dimensions while preserving structure. Which technique is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Boosting']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A biotech firm wants to generate synthetic protein sequences that resemble real sequences to expand their training data. Which model can be used for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'KNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Capsule Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'To detect mutations in DNA sequences over time, a bioinformatics team is analyzing long, sequential genome data. Which model is best suited for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Decision Tree']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is studying gene-disease associations in a graph structure, connecting genes to traits via biological pathways. What model would be best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'GNN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Siamese Network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A research group wants to predict the 3D structure of a protein from its amino acid sequence. Which class of models is most likely to be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transformer-based model']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'K-Means']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Random Forest']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Biologists want to identify outliers in gene expression data that may indicate rare diseases. What technique should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Isolation Forest']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'GAN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A geneticist wants to cluster patient DNA samples into similar groups to discover unknown subtypes of a disorder. Which method should they apply?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'K-Means Clustering']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Linear Regression']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Boosted Trees']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'To classify microscopy images of cell types for automated diagnosis, what kind of neural network would be most effective?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CNN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SVM']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A biotech firm wants to use patient data to predict the likelihood of drug response (yes or no). What model should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Logistic Regression']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'PCA']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Autoencoder']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RNN']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
