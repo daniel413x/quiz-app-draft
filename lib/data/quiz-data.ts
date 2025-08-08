@@ -56,12 +56,14 @@ import genetics from './genetics';
 import uipath from './uipath';
 import windows from './windows';
 import linux from './linux';
+import performanceTesting from './performance-testing';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  'performance-testing': performanceTesting,
   linux,
   windows,
   uipath,
@@ -219,13 +221,14 @@ const categories = [
     slug: 'os',
     quizzes: [
       quizData.windows,
-      quizData.windows,
+      quizData.linux,
     ],
   },
   {
     name: 'Programming',
     slug: 'programming',
     quizzes: [
+      quizData['performance-testing'],
       quizData['next-js'],
       quizData['java-threads'],
       quizData.uipath,

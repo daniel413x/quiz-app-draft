@@ -10920,5 +10920,52 @@ ELSE write “value OK”`,
       ],
       correctAnswer: '2',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'A ____ ____ is written within the scope of a ____ ____',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'test case, test plan',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'test plan, test case',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'smoke test, negative test',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'negative test, smoke test',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
