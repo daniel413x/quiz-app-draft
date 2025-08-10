@@ -713,5 +713,337 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of timer is best for simulating how many users would behave in a real-world scenario?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Uniform Random Timer']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Constant Timer']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'JSR223 Timer']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Constant Throughput Timer']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In your JMeter test, you need to extract the'],
+        [QuizMarkdownType.INLINE_CODE, 'id'],
+        [QuizMarkdownType.TEXT, 'of an object you create from a POST request. Which object can assist with obtaining the'],
+        [QuizMarkdownType.INLINE_CODE, 'id'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'JSON Extractor']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Random Variable']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'JSON Assertion']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Boundary Extractor']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following items does NOT fall under a SLA (Service Level Agreement)?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Frequency of Feature Updates']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Mean Time to Resolution (MTTR)']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Response Time / Latency']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Service Restoration Commitments']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You notice an increase in response times (in MS) the longer your endurance test executes. What is the most likely cause?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Memory leaks']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Load balancer failure']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Database bottleneck']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Service Restoration Commitments']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Assess: Soak Testing is synonymous with Endurance Testing.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of testing is the LEAST effective for detecting bottlenecks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of testing is the MOST effective for detecting bottlenecks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of testing is the MOST effective for detecting memory leaks?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your performance tests intentionally brought the system to total failure. Which type of testing are you performing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The best type of test for measuring stable throughput is _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The best type of test for measuring the most possible throughput is _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The best type of test for measuring business SLA throughput is _______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Spike Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Stress testing CANNOT be conducted without an evaluation of the ability of a system to recover following total failure.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Stress testing CAN be conducted without an evaluation of the ability of a system to recover following total failure.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Stress testing CAN be conducted without an evaluation of the ability of a system to recover following total failure.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
