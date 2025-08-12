@@ -975,7 +975,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'The best type of test for measuring business SLA throughput is _______'],
+        [QuizMarkdownType.TEXT, 'The best type of test for measuring whether throughput measures up to SLA specifications is _______'],
       ],
       answers: [
         {
@@ -996,6 +996,34 @@ export default {
         },
       ],
       correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Under which of the following categories does Performance Testing fall?'],
+      ],
+      answers: [
+        {
+          order: 0,
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Operational Acceptance Testing']],
+        },
+        {
+          order: 1,
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'User Acceptance Testing']],
+        },
+        {
+          order: 2,
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Functional Testing']],
+        },
+        {
+          order: 3,
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'None of the above']],
+        },
+      ],
+      correctAnswer: '3',
     },
     {
       question: [
@@ -1041,6 +1069,140 @@ export default {
         {
           id: '1',
           answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Stress testing CAN be conducted without an evaluation of the ability of a system to recover following total failure.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: User acceptance testing falls within the scope of performance testing.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of ramp-up time?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'A ramp-up time that is defined too high may result in the test never achieving peak load']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'A ramp-up time that is defined too low may result in the test never achieving peak load']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'A ramp-up time that is defined higher than the number of threads in the group can be efficient']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'A ramp-up time that is defined lower than the number of threads in the group cannot be efficient']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of testing can be used to best determine whether or not the system\'s computing power (CPU, RAM) overfits or underfits its expected needs?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Stress Testing']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Load Testing']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Volume Testing']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Endurance/Soak Testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which of the following situations is parameterization useful?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'A thread group user enters an arbitrary string in a login form field']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'A thread group user performs a GET request and the API returns many objects']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'A thread group user performs a static PUT request on a static endpoint']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'A thread group user enters the string "admin_user" in a login form field']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your project contains the following text file'],
+        [QuizMarkdownType.INLINE_CODE, 'Credentials'],
+        [QuizMarkdownType.TEXT, '. Which element can be added to a transaction controller in order to use the values as parameterized variables?'],
+        [QuizMarkdownType.CODE, `Username,Password
+one,one
+two2,two2
+three3,three3`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'CSV Data Set Config']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Counter']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'HTTP Authorization Manager']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Keystore Configuration']],
         },
       ],
       correctAnswer: '0',
