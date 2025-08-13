@@ -1155,7 +1155,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In which of the following situations is parameterization useful?'],
+        [QuizMarkdownType.TEXT, 'In which of the following situations is parameterization in JMeter useful?'],
       ],
       answers: [
         {
@@ -1203,6 +1203,54 @@ three3,three3`],
         {
           id: '3',
           answer: [[QuizMarkdownType.TEXT, 'Keystore Configuration']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of a transaction that contains an extractor step that extracts a value and assigns it to a variable?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'The variable can be referenced in the transaction where it was assigned immediately after the extractor step and in subsequent transactions']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'The variable cannot be referenced in the transaction where it was assigned, but it can be referenced in all subsequent transactions']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'The variable can only be referenced in the transaction where it was assigned, as long as it is referenced after the extractor step']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'The variable can only be referenced in the transaction where it was assigned and it can be referenced before and after the extractor step']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a meeting with stakeholders, you outline a series of basic steps your virtual users will perform in your JMeter tests. Which of the following objects best corresponds to those steps?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Transaction Controller']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Critical Section Controller']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'While Controller']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Simple Controller']],
         },
       ],
       correctAnswer: '0',
