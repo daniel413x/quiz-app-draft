@@ -1,0 +1,33 @@
+.
+├── app
+│   ├── categories
+│   │   └── _components
+│   ├── [category]
+│   │   ├── _components
+│   │   └── [section]
+│   │       ├── _components
+│   │       └── quiz
+│   │           ├── _components
+│   │           │   └── _utils
+│   │           ├── _consts
+│   │           ├── _hooks
+│   │           └── results
+│   │               └── _components
+│   ├── _components
+│   ├── (root)
+│   │   └── _components
+│   └── special
+├── components
+│   ├── providers
+│   └── ui
+│       └── common
+│           └── shadcn
+├── lib
+│   ├── data
+│   │   └── types
+│   ├── hooks
+│   └── utils
+└── public
+    └── root
+
+30 directories

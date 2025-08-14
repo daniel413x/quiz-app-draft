@@ -1304,24 +1304,91 @@ three3,three3`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In which scenario can a JMeter Open Model Thread Group help?'],
+        [QuizMarkdownType.TEXT, 'Which type of JMeter thread group allows you to define load in the following way?'],
+        [QuizMarkdownType.CODE, 'pause(5 sec) rate(1000/hour) random_arrivals(1 min) pause(5 sec)'],
       ],
       answers: [
         {
           id: '0',
-          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a required number of hits']],
+          answer: [[QuizMarkdownType.TEXT, 'Open Model Thread Group']],
         },
         {
           id: '1',
-          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a required number of thoroughput']],
+          answer: [[QuizMarkdownType.TEXT, 'Ultimate Model Thread Group']],
         },
         {
           id: '2',
-          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a maximum response time']],
+          answer: [[QuizMarkdownType.TEXT, 'Arrivals Thread Group']],
         },
         {
           id: '3',
-          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a maximum latency']],
+          answer: [[QuizMarkdownType.TEXT, 'Concurrency Thread Group']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your Arrivals Thread Group is parameterized the following way. What should be the total estimated arrivals?'],
+        [QuizMarkdownType.CODE, `Target Rate (arrivals/min): 300
+Ramp-Up Time (min):
+Ramp-Up Steps Count:
+Hold Target Rate Time (min): 60`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, '~18000 total arrivals']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, '~1800 total arrivals']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, '~300 total arrivals']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, '~36000 total arrivals']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your Arrivals Thread Group is parameterized the following way:'],
+        [QuizMarkdownType.CODE, `Target Rate (arrivals/sec): 10
+Ramp-Up Time (sec): (blank)
+Ramp-Up Steps Count: (blank)
+Hold Target Rate Time (sec): 60`],
+        [QuizMarkdownType.TEXT, 'It contains a Simple Controller which contains two samplers:'],
+        [QuizMarkdownType.CODE, `Scenario 1 - Search
+  └─Simple Controller
+    ├─01_01_ClickEnterTheStore
+    └─01_02_Search"Amazon"`],
+        [QuizMarkdownType.TEXT, 'Both'],
+        [QuizMarkdownType.INLINE_CODE, '01_01_ClickEnterTheStore'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, '01_02_Search"Amazon"'],
+        [QuizMarkdownType.TEXT, 'contain a sampler that makes a request to a single endpoint. In a Summary Report, how many total samples should be recorded after executing the complete test plan?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, '~2400 samples']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, '~600 samples']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, '~1200 samples']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, '~3600 samples']],
         },
       ],
       correctAnswer: '0',
