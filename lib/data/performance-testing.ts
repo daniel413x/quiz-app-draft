@@ -1233,24 +1233,95 @@ three3,three3`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In a meeting with stakeholders, you outline a series of basic steps your virtual users will perform in your JMeter tests. Which of the following objects best corresponds to those steps?'],
+        [QuizMarkdownType.TEXT, 'Which answer is true of a transaction that contains an extractor step that extracts a value and assigns it to a variable?'],
       ],
       answers: [
         {
           id: '0',
-          answer: [[QuizMarkdownType.TEXT, 'Transaction Controller']],
+          answer: [[QuizMarkdownType.TEXT, 'The variable can be referenced in the transaction where it was assigned immediately after the extractor step and in subsequent transactions']],
         },
         {
           id: '1',
-          answer: [[QuizMarkdownType.TEXT, 'Critical Section Controller']],
+          answer: [[QuizMarkdownType.TEXT, 'The variable cannot be referenced in the transaction where it was assigned, but it can be referenced in all subsequent transactions']],
         },
         {
           id: '2',
-          answer: [[QuizMarkdownType.TEXT, 'While Controller']],
+          answer: [[QuizMarkdownType.TEXT, 'The variable can only be referenced in the transaction where it was assigned, as long as it is referenced after the extractor step']],
         },
         {
           id: '3',
-          answer: [[QuizMarkdownType.TEXT, 'Simple Controller']],
+          answer: [[QuizMarkdownType.TEXT, 'The variable can only be referenced in the transaction where it was assigned and it can be referenced before and after the extractor step']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are working with a jp@gc Ultimate Thread Group. Which field is equivalent to ramp-up time?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'jp@gc - Ultimate Thread Group',
+          data: [
+            {
+              _tableDataColId: '1', startThreadsCount: '', initialDelaySec: '', startupTimeSec: '', holdTimeForSec: '', shutdownTime: '',
+            },
+          ],
+          cols: [
+            { accessorKey: 'startThreadsCount', header: 'Start Threads Count' },
+            { accessorKey: 'initialDelaySec', header: 'Initial Delay, sec' },
+            { accessorKey: 'startupTimeSec', header: 'Startup Time, sec' },
+            { accessorKey: 'holdTimeForSec', header: 'Hold Time For, sec' },
+            { accessorKey: 'shutdownTime', header: 'Shutdown Time' },
+          ],
+        }],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Startup Time, sec'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Initial Delay, sec'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Hold Time For, sec'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Start Threads Count'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which scenario can a JMeter Open Model Thread Group help?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a required number of hits']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a required number of thoroughput']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a maximum response time']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'You need to run tests with a maximum latency']],
         },
       ],
       correctAnswer: '0',
