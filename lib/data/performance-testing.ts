@@ -1393,5 +1393,205 @@ Hold Target Rate Time (sec): 60`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of JMeter thread group is most similar to imperative programming in implementation?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Basic Thread Group']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Ultimate Thread Group']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Concurrency Thread Group']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Open Model Thread Group']],
+        },
+        {
+          id: '4',
+          answer: [[QuizMarkdownType.TEXT, 'Arrivals Thread Group']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of JMeter thread group allows the tester to declaratively define the desired number of threads to run in a test?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Ultimate Thread Group']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Basic Thread Group']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Concurrency Thread Group']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Open Model Thread Group']],
+        },
+        {
+          id: '4',
+          answer: [[QuizMarkdownType.TEXT, 'Arrivals Thread Group']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which type of JMeter thread group allows the tester to declaratively define the desired number of users to run in a test?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Arrivals Thread Group']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Basic Thread Group']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Concurrency Thread Group']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Open Model Thread Group']],
+        },
+        {
+          id: '4',
+          answer: [[QuizMarkdownType.TEXT, 'Ultimate Thread Group']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Concurrency Thread Group, target concurrency refers to ________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'The number of simultaneous users']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'The number of simultaneous threads']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'The number of steps']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'The duration of the test']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Concurrency Thread Group, your parameters are defined as follows. How many threads are estimated to run 7 minutes into executing your test?'],
+        [QuizMarkdownType.CODE, `Target Concurrency: 300
+Ramp-Up Time (min): 10
+Ramp-Up Steps Count: 10
+Hold Target Rate Time (min): 60`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, '~240']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, '~270']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, '~300']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, '~150']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Concurrency Thread Group, your parameters are defined as follows. How long will your test run including ramp-up time?'],
+        [QuizMarkdownType.CODE, `Target Concurrency: 300
+Ramp-Up Time (min): 6
+Ramp-Up Steps Count: 6
+Hold Target Rate Time (min): 60`],
+      ],
+      answers: [
+        {
+          id: '0',
+          order: 0,
+          answer: [[QuizMarkdownType.TEXT, '1:06:00']],
+        },
+        {
+          id: '1',
+          order: 1,
+          answer: [[QuizMarkdownType.TEXT, '1:00:00']],
+        },
+        {
+          id: '2',
+          order: 2,
+          answer: [[QuizMarkdownType.TEXT, '1:12:00']],
+        },
+        {
+          id: '3',
+          order: 3,
+          answer: [[QuizMarkdownType.TEXT, 'Not enough information']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Concurrency Thread Group, your parameters are defined as follows. How long will your test run at its target concurrency?'],
+        [QuizMarkdownType.CODE, `Target Concurrency: 300
+Ramp-Up Time (min): 6
+Ramp-Up Steps Count: 6
+Hold Target Rate Time (min): 60`],
+      ],
+      answers: [
+        {
+          id: '0',
+          order: 0,
+          answer: [[QuizMarkdownType.TEXT, '1:00:00']],
+        },
+        {
+          id: '1',
+          order: 1,
+          answer: [[QuizMarkdownType.TEXT, '1:06:00']],
+        },
+        {
+          id: '2',
+          order: 2,
+          answer: [[QuizMarkdownType.TEXT, '1:12:00']],
+        },
+        {
+          id: '3',
+          order: 3,
+          answer: [[QuizMarkdownType.TEXT, 'Not enough information']],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
