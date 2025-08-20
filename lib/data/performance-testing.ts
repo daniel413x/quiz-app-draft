@@ -1593,5 +1593,217 @@ Hold Target Rate Time (min): 60`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which JMeter element is it possible to evaluate Java code?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          order: 0,
+          answer: [[QuizMarkdownType.TEXT, 'JSR223 Sampler']],
+        },
+        {
+          id: '1',
+          order: 1,
+          answer: [[QuizMarkdownType.TEXT, 'User Defined Variables']],
+        },
+        {
+          id: '2',
+          order: 2,
+          answer: [[QuizMarkdownType.TEXT, 'If Controller']],
+        },
+        {
+          id: '3',
+          order: 3,
+          answer: [[QuizMarkdownType.TEXT, 'All of the above']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which JMeter element is Groovy code written exclusively?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          order: 0,
+          answer: [[QuizMarkdownType.TEXT, 'JSR223 Sampler']],
+        },
+        {
+          id: '1',
+          order: 1,
+          answer: [[QuizMarkdownType.TEXT, 'User Defined Variables']],
+        },
+        {
+          id: '2',
+          order: 2,
+          answer: [[QuizMarkdownType.TEXT, 'If Controller']],
+        },
+        {
+          id: '3',
+          order: 3,
+          answer: [[QuizMarkdownType.TEXT, 'All of the above']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: in the JMeter config element User Defined Variables, it is possible to define a value using JMeter\'s native functions, Groovy or Java code.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          order: 0,
+          answer: [[QuizMarkdownType.TEXT, 'True']],
+        },
+        {
+          id: '1',
+          order: 1,
+          answer: [[QuizMarkdownType.TEXT, 'False']],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Consider the following JMeter config element User Defined Variables. Which scripting language can be observed in the values?',
+        ],
+        [
+          QuizMarkdownType.TABLE, {
+            name: 'User Defined Variables',
+            data: [
+              {
+                _tableDataColId: '1', name: 'var1', value: 'Hello', description: '',
+              },
+              {
+                // eslint-disable-next-line no-template-curly-in-string
+                _tableDataColId: '2', name: 'var2', value: '${var} World', description: '',
+              },
+            ],
+            cols: [
+              { accessorKey: 'name', header: 'Name:' },
+              { accessorKey: 'value', header: 'Value:' },
+              { accessorKey: 'description', header: 'Description:' },
+            ],
+          },
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'JMeter Native Functions',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Java',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Groovy',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'BeanShell',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In JMeter, a User Defined Variables object is evaluated ________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'When the test tree is built']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'When a thread is created']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'When its variables are required dynamically']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'When a sampler is sequentially executed']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In JMeter, which answer is NOT possible?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Accessing the value of a Random Variable from a User Defined Variables']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Accessing values of a User Defined Variables from a Random Variable']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Accessing values of a User Defined Variables from a JSR223 Sampler']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Accessing the value of a Random Variable from a JSR223 Sampler']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In your JMeter test plan scenario, you intend for every user to enter random numbers to a minimum and maximum price filter widget. Which object CANNOT be used to implement this scenario?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'User Defined Variables']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Random Variable']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'If Controller']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'JSR223 Sampler']],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
