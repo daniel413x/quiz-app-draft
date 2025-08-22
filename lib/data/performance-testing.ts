@@ -1805,5 +1805,103 @@ Hold Target Rate Time (min): 60`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In your JMeter test plan scenario, your request returns the following JSON. What JSON Path Expression matches the url?'],
+        [QuizMarkdownType.CODE, `[
+    {
+        "result": {
+            "data": {
+                "json": {
+                    "url": "https://checkout.stripe.com/..."
+                }
+            }
+        }
+    }
+]`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, '$[0].result.data.json.url']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, '$.result.data.json.url']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, '[0].result.data.json.url']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'result.data.json.url']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your JMeter test scenario is structured the following way. Which answer is true about this code?'],
+        [QuizMarkdownType.CODE, `Test Plan
+├── Thread Group A
+│   ├── Simple Controller A
+│   │   ├── Transaction Controller A
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── Transaction Controller B
+│   │   │   ├── ...
+│   │   │   └── JSON Extractor
+│   │   ├── Transaction Controller C
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   └── ...
+│   ├── Simple Controller B
+│   │   ├── Transaction Controller X
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── Transaction Controller Y
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── Transaction Controller Z
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+├── Thread Group B
+│   ├── Simple Controller C
+│   │   ├── Transaction Controller D
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── ...
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── ...
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+└── ...`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'The value assigned to the variable in Transaction Controller B is accessible to Transaction Controllers C, X, Y and Z']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'The value assigned to the variable in Transaction Controller B is accessible to Transaction Controllers A, B and C']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'The value assigned to the variable in Transaction Controller B is accessible to any subsequent Transaction Controller in the test plan']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'The value assigned to the variable in Transaction Controller B is accessible to Transaction Controller C only']],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
