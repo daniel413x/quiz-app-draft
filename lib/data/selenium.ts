@@ -396,6 +396,36 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Your Selenium/Cucumber project supporting functional testing efforts for a healthcare enterprise follows the Page Object Model and contains the classes'],
+        [QuizMarkdownType.INLINE_CODE, 'pages/PatientProfilePage.java'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'steps/PatientProfilePageSteps.java'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'runners/PatientProfilePageRunner.java'],
+        [QuizMarkdownType.TEXT, '. Which statement is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.INLINE_CODE, 'PatientProfilePage'], [QuizMarkdownType.TEXT, 'is initialized in'], [QuizMarkdownType.INLINE_CODE, 'PatientProfilePageSteps']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.INLINE_CODE, 'PatientProfilePageSteps'], [QuizMarkdownType.TEXT, 'is initialized in'], [QuizMarkdownType.INLINE_CODE, 'PatientProfilePage']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.INLINE_CODE, 'PatientProfilePageSteps'], [QuizMarkdownType.TEXT, 'is initialized in'], [QuizMarkdownType.INLINE_CODE, 'PatientProfilePageRunner']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.INLINE_CODE, 'PatientProfilePage'], [QuizMarkdownType.TEXT, 'is initialized in'], [QuizMarkdownType.INLINE_CODE, 'PatientProfilePageRunner']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What is the following pattern called in a Cucumber'],
         [QuizMarkdownType.INLINE_CODE, '.feature'],
         [QuizMarkdownType.TEXT, 'file?'],

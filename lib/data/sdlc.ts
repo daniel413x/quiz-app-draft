@@ -248,5 +248,29 @@ export default {
       ],
       correctAnswer: '2',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which role best serves as a liaison between the business stakeholders and the development team?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Business Analyst']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Senior Developer']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Product Owner']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Project Lead']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Under most continuous delivery models, deployments to production are _______ when the new build passes an automated testing pipeline, and under most continuous deployment models, deployments to production are _______ when the new build passes an automated testing pipeline.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'manually approved, automatic']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'automatic, manually approved']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'automatic, automatic']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'also tested, manually approved']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

@@ -1807,6 +1807,54 @@ Hold Target Rate Time (min): 60`],
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'InfluxDB is used as a link between ______ and _______ for the purpose of ________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'JMeter, Grafana, reporting metrics']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'JMeter, Jenkins, parsing'], [QuizMarkdownType.INLINE_CODE, '.jtl'], [QuizMarkdownType.TEXT, 'files']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Grafana, Jenkins, reporting metrics']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Grafana, DynamoDB, parsing'], [QuizMarkdownType.INLINE_CODE, '.jtl'], [QuizMarkdownType.TEXT, 'files']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes a task that a Backend Listener can accomplish?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'Assisting in reporting metrics']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Failing a test pipeline based on a condition']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Performing a new set of instructions based on a condition']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Performing distributed load testing']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'In your JMeter test plan scenario, your request returns the following JSON. What JSON Path Expression matches the url?'],
         [QuizMarkdownType.CODE, `[
     {
@@ -1842,7 +1890,7 @@ Hold Target Rate Time (min): 60`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Your JMeter test scenario is structured the following way. Which answer is true about this code?'],
+        [QuizMarkdownType.TEXT, 'Your JMeter test scenario is structured the following way. Transaction Controller B contains a JSON Extractor. Which answer is a true statement?'],
         [QuizMarkdownType.CODE, `Test Plan
 ├── Thread Group A
 │   ├── Simple Controller A
