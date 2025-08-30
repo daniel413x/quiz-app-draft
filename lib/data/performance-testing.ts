@@ -1855,6 +1855,30 @@ Hold Target Rate Time (min): 60`],
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The main two factors that define the type of test executed (Load, Stress, Soak/Endurance, Spike) are _____ and ______'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'threads (the number of users), test duration']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'threads (the number of users), ramp-up time']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'ramp-up time, test duration']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'ramp-up time, threads (the number of users)']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'In your JMeter test plan scenario, your request returns the following JSON. What JSON Path Expression matches the url?'],
         [QuizMarkdownType.CODE, `[
     {
@@ -1947,6 +1971,30 @@ Hold Target Rate Time (min): 60`],
         {
           id: '3',
           answer: [[QuizMarkdownType.TEXT, 'The value assigned to the variable in Transaction Controller B is accessible to Transaction Controller C only']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are collecting metrics such as CPU and memory usage. This would called be the performance monitoring of a _________'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.TEXT, 'System']],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'Application']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'Subroutine']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'System Integration']],
         },
       ],
       correctAnswer: '0',

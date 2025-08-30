@@ -2780,5 +2780,29 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If you are a data scientist and you are making an argument for a linear relationship between multiple variables, which of the following is most likely to throw doubt on your argument?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Your variables display high multicolinearity']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Your variables display low multicolinearity']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Your variables display high standard deviation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Your variables display low standard deviation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If you are a data scientist and you are making an argument for a linear relationship between multiple variables, which of the following is LEAST likely to throw doubt on your argument?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Your variables display low homoscedasticity']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Your variables display high multicolinearity']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Your variables display heteroscedasticity']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Your variables display a covariance equal to zero']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
