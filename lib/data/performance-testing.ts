@@ -1999,5 +1999,61 @@ Hold Target Rate Time (min): 60`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which JMeter Uniform Random Timer represent a user think time where the user takes at least 12 seconds and anywhere between 0 and 4 seconds to complete an action?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 12000
+Constant Delay Offset (in milliseconds): 4000`]],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
+Constant Delay Offset (in milliseconds): 12000`]],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 16000
+Constant Delay Offset (in milliseconds): 4000`]],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
+Constant Delay Offset (in milliseconds): 16000`]],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A payment page displays a payment form that has an autocomplete feature, which allows some users to complete the form in between four to seven seconds while other users complete the form in up to twenty-five seconds. Which JMeter Uniform Random Timer values represent a suitable user think time for this scenario?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 21000
+Constant Delay Offset (in milliseconds): 4000`]],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 25000
+Constant Delay Offset (in milliseconds): 4000`]],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
+Constant Delay Offset (in milliseconds): 25000`]],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
+Constant Delay Offset (in milliseconds): 21000`]],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
