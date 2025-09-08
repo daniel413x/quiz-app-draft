@@ -685,5 +685,320 @@ kubectl apply -f ./deployment-user-service.yaml -n staging`,
       ],
       correctAnswer: '0',
     },
+    // k9s to find out the answer
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You want to achieve isolated Kubernetes environments for your staging and production applications such that performance issues occuring on one side do not affect the other. To that end, staging and development applications should exist in separate _____',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Clusters',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Namespaces',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Contexts',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Node Controllers',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'While developing your project, you want to reinitialize a service with new initialization data, but your service is attached to a persistent volume claim (PVC). At what point is your service free of the stale data?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You delete the PVC',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You scale down the service',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You destroy all replicas of the service',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You move the PVC to a different namespaces',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Your container natively runs on port 3000, however you wish to map that port to port 8087 and have nginx direct traffic to that port. Which answer represents a',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'ports',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'block in a',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'Service',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'configuration to accomplish this?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `port: 8087
+targetPort: 3000`,
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `port: 3000
+targetPort: 8087`,
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `port: 8087
+targetPort: 8087`,
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.CODE, `port: 3000
+targetPort: 3000`,
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which command lists all DaemonSets in the kube-system namespace?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get ds -n kube-system'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get deployments -n kube-system'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl describe ds -n kube-system'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get ds'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which command lists all Ingress resources across all namespaces?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get ingress -A'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get svc -A'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl describe ingress -A'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get ingress'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which command lists all CustomResourceDefinitions (CRDs) installed on the cluster?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get crd'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get apiservices'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get api-resources'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, 'kubectl get customresources -A'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Choose the answer that properly fill in the blanks: ________ provides host-level CPU, memory, disk, and network metrics for Kubernetes nodes (commonly scraped by _________)',
+        ],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'node_exporter, Prometheus']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Prometheus, kube-state-metrics']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'cAdvisor (via kubelet), node_exporter']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'prometheus-adapter, Prometheus']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'To use ',
+        ],
+        [QuizMarkdownType.INLINE_CODE, 'kubectl top nodes/pods'],
+        [
+          QuizMarkdownType.TEXT,
+          ' in a cluster, which component must be deployed?',
+        ],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'metrics-server']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Prometheus']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'kube-state-metrics']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'node_exporter']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In a Prometheus Operator setup, which CRD do you create to have Prometheus automatically scrape a Kubernetes Service exposing a ',
+        ],
+        [QuizMarkdownType.INLINE_CODE, '/metrics'],
+        [QuizMarkdownType.TEXT, ' endpoint?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ServiceMonitor']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'PodMonitor']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'PrometheusRule']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AlertmanagerConfig']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

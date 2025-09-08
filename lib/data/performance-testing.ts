@@ -2006,13 +2006,13 @@ Hold Target Rate Time (min): 60`],
       answers: [
         {
           id: '0',
-          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 12000
-Constant Delay Offset (in milliseconds): 4000`]],
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
+Constant Delay Offset (in milliseconds): 12000`]],
         },
         {
           id: '1',
-          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
-Constant Delay Offset (in milliseconds): 12000`]],
+          answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 12000
+Constant Delay Offset (in milliseconds): 4000`]],
         },
         {
           id: '2',
@@ -2052,6 +2052,42 @@ Constant Delay Offset (in milliseconds): 25000`]],
           answer: [[QuizMarkdownType.CODE, `Random Delay Maximum (in milliseconds: 4000
 Constant Delay Offset (in milliseconds): 21000`]],
         },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The express purpose of ______ is to provide systems and service monitoring.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Prometheus']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'InfluxDB']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Grafana']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Redshift']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Metrics related to API performance is exported by _______, stored in _______, and is retrieved and visualized by _______.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'JMeter, InfluxDB, Grafana']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'JMeter, InfluxDB, Grafana']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'node-exporter, Prometheus, Grafana']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Prometheus, InfluxDB, Grafana']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Metrics related to hardware and system performance is exported by _______, stored in _______, and is retrieved and visualized by _______.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'node-exporter, Prometheus, Grafana']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Prometheus, InfluxDB, Grafana']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'node-exporter, InfluxDB, Grafana']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Prometheus, InfluxDB, Prometheus']] },
       ],
       correctAnswer: '0',
     },

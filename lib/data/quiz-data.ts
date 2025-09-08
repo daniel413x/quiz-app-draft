@@ -57,6 +57,7 @@ import uipath from './uipath';
 import windows from './windows';
 import linux from './linux';
 import performanceTesting from './performance-testing';
+import docker from './docker';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -115,6 +116,7 @@ const quizData: QuizData = {
   'english-ii': englishIi,
   'probability-theory': probabilityTheory,
   tensorflow,
+  docker,
   statistics,
   'java-ii': javaIi,
   'principles-of-programming': principlesOfProgramming,
@@ -176,6 +178,7 @@ const categories = [
       quizData['next-js'],
       quizData['java-threads'],
       quizData.uipath,
+      quizData.docker,
       quizData.javascript,
       quizData.jest,
       quizData.react,
