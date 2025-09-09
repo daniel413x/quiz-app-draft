@@ -2091,5 +2091,22 @@ Constant Delay Offset (in milliseconds): 21000`]],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In'],
+        [QuizMarkdownType.INLINE_CODE, 'prometheus.yml'],
+        [QuizMarkdownType.TEXT, ', a _______ can be defined under'],
+        [QuizMarkdownType.INLINE_CODE, 'scape_configs'],
+        [QuizMarkdownType.TEXT, 'to expose per-pod/container metrics with labels according to deployments\''],
+        [QuizMarkdownType.INLINE_CODE, 'spec.template.metadata.labels.app'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'kubelet-cadvisor']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'kubelet']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'node_exporter']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'prometheus']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
