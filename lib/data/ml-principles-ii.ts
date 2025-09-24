@@ -3225,5 +3225,151 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a benefit of using batch normalization?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Faster convergence during training']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Simplified feature selection']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reduces model size']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Normalized layer output']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does batch normalization affect the learning rate during training?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows higher learning rates']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It tunes hyperparameters']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It reduces the model\'s complexity']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It is irrelevant to the learning rate']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following activation functions is most commonly used in hidden layers of deep neural networks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ReLU (Rectified Linear Unit)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sigmoid']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Tanh']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Softmax']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which activation function outputs values in the range (0, 1)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Sigmoid']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Tanh']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReLU (Rectified Linear Unit)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Leaky ReLU']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which activation function is best suited for multi-class classification problems?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Softmax']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sigmoid']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ReLU (Rectified Linear Unit)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Tanh']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What problem can occur when using sigmoid or tanh activation functions in deep networks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Vanishing gradients']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Exploding outputs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Too many parameters']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Slow inference time']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which activation function allows a small gradient when the unit is not active?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Leaky ReLU']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'ReLU (Rectified Linear Unit)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Softmax']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Step function']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of loss function is typically used for binary classification tasks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Binary Cross-Entropy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Mean Squared Error']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Categorical Cross-Entropy']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Huber Loss']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which loss function is best suited for multi-class classification problems?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Categorical Cross-Entropy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Mean Absolute Error']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Hinge Loss']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Mean Squared Logarithmic Error']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which loss function is commonly used for regression problems with outliers?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Huber Loss']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Cross-Entropy Loss']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Categorical Cross-Entropy']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Hinge Loss']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which loss function is often used in support vector machines (SVMs)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Hinge Loss']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Binary Cross-Entropy']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'MAE']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'MSLE']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What type of loss is best for predicting continuous values?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Mean Squared Error']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Cross-Entropy Loss']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Hinge Loss']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'KL Divergence']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
