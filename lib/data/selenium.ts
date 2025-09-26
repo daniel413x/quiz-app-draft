@@ -38,7 +38,7 @@ export default {
       answers: [
         {
           id: '0',
-          answer: [[QuizMarkdownType.TEXT, 'It reduces the number of locators required']],
+          answer: [[QuizMarkdownType.TEXT, 'It separates test steps from annotations']],
         },
         {
           id: '1',
@@ -46,7 +46,7 @@ export default {
         },
         {
           id: '2',
-          answer: [[QuizMarkdownType.TEXT, 'It speeds up the browser execution']],
+          answer: [[QuizMarkdownType.TEXT, 'It separates object locators from object interaction logic']],
         },
         {
           id: '3',
@@ -134,11 +134,11 @@ export default {
       answers: [
         {
           id: '0',
-          answer: [[QuizMarkdownType.TEXT, 'Only the element locators']],
+          answer: [[QuizMarkdownType.TEXT, 'The locators for elements on the page only']],
         },
         {
           id: '1',
-          answer: [[QuizMarkdownType.TEXT, 'Only the test assertions']],
+          answer: [[QuizMarkdownType.TEXT, 'Test assertions, element locators, and element interaction methods']],
         },
         {
           id: '2',
@@ -146,7 +146,7 @@ export default {
         },
         {
           id: '3',
-          answer: [[QuizMarkdownType.TEXT, 'The Gherkin steps']],
+          answer: [[QuizMarkdownType.TEXT, 'The \'Given When Then\' annotated steps and test execution logic']],
         },
       ],
       correctAnswer: '2',

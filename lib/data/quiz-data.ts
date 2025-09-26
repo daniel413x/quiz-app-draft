@@ -58,6 +58,7 @@ import windows from './windows';
 import linux from './linux';
 import performanceTesting from './performance-testing';
 import docker from './docker';
+import cSharp from './c-sharp';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -84,6 +85,7 @@ const quizData: QuizData = {
   // ===========
   javascript,
   python,
+  cSharp,
   // ===========
   'ml-principles': mlPrinciples,
   'ml-principles-ii': mlPrinciplesIi,
@@ -183,6 +185,8 @@ const categories = [
       quizData.jest,
       quizData.react,
       quizData.python,
+      quizData.jenkins,
+      quizData.cSharp,
       quizData.kubernetes,
       quizData['module-i'],
       quizData['module-ii'],

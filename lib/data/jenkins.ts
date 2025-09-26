@@ -586,7 +586,7 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'In your Jenkins deployment, you need to mount a volume',
+          'In your Jenkins deployment, you need to mount a volume mapped to the folder',
         ],
         [
           QuizMarkdownType.INLINE_CODE,
@@ -624,7 +624,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'The existing volume',
+              'The existing volume mapped to',
             ],
             [
               QuizMarkdownType.INLINE_CODE,
@@ -632,7 +632,7 @@ export default {
             ],
             [
               QuizMarkdownType.TEXT,
-              'would be overwriten by the volume',
+              'would be overwriten by the volume mapped to',
             ],
             [
               QuizMarkdownType.INLINE_CODE,
@@ -649,7 +649,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'The contents of a volume',
+              'The contents of a volume mapped to',
             ],
             [
               QuizMarkdownType.INLINE_CODE,
@@ -695,7 +695,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'The existing volume',
+              'The existing volume mapped to',
             ],
             [
               QuizMarkdownType.INLINE_CODE,
@@ -703,7 +703,7 @@ export default {
             ],
             [
               QuizMarkdownType.TEXT,
-              'would not be overwriten by the volume',
+              'would not be overwriten by the volume mapped to',
             ],
             [
               QuizMarkdownType.INLINE_CODE,
