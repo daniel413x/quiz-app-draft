@@ -466,5 +466,29 @@ Feature: axe-core results for any page
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Gherkin Scenario, what keyword is typically used to describe an action taken by the user?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'When']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Then']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'Given']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'And']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Gherkin file, what keyword is used to define reusable context executed before each Scenario?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'Given']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Background']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'BeforeEach']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Setup']] },
+      ],
+      correctAnswer: '1',
+    },
   ],
 } as QuizDataObject;
