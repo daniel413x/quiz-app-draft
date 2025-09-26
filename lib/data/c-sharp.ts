@@ -2,7 +2,7 @@ import { QuizDataObject, QuizMarkdownType } from './types';
 
 export default {
   name: 'C#',
-  slug: 'c-sharp',
+  slug: 'csharp',
   category: {
     slug: 'programming',
   },

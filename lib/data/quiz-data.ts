@@ -85,7 +85,7 @@ const quizData: QuizData = {
   // ===========
   javascript,
   python,
-  cSharp,
+  csharp: cSharp,
   // ===========
   'ml-principles': mlPrinciples,
   'ml-principles-ii': mlPrinciplesIi,
@@ -186,7 +186,7 @@ const categories = [
       quizData.react,
       quizData.python,
       quizData.jenkins,
-      quizData.cSharp,
+      quizData.csharp,
       quizData.kubernetes,
       quizData['module-i'],
       quizData['module-ii'],
