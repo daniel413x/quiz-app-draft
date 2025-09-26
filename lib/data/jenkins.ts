@@ -329,5 +329,394 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'A 1._____ is mapped to a 2.______ in a 3.______, while a 4.______ is mapped to a 5.______ in a 6.______',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. volume 2. folder path 3.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumeMounts',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block 4. volume 5. data definition 6.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumes',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. volume 2. folder path 3.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumes',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block 4. volume 5. data definition 6.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumeMounts',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. folder path 2. volume 3.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'data',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block 4. volume 5. data definition 6.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumeMounts',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1. folder path 2. volume 3.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumes',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block 4. folder path 5. data definition 6.',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumeMounts',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You need to mount a volume to your deployed Jenkins service such that a folder',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '/var/jenkins_home/casc_configs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'exists when the service is initialized. Which answer is NOT a true statement?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your solution may involve modifying a',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Service',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'object',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your solution will involve modifying a',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumes',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your solution will involve modifying a',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'volumeMounts',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'block',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Your solution may involve modifying a',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'ConfigMap',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'object',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You need to mount a volume to your deployed Jenkins service such that a folder',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '/var/jenkins_home/casc_configs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'exists when the service is initialized. This will mainly involve modifying a _______ object',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Deployment',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'ConfigMap',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Service',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'ServiceAccount',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In your Jenkins deployment, you need to mount a volume',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '/var/jenkins_home/casc_configs',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'in a',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'volumeMounts',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'block. Your config looks like this:',
+        ],
+        [
+          QuizMarkdownType.CODE, `
+  volumeMounts:
+    - name: jenkins-home # A persistent volume claim
+      mountPath: /var/jenkins_home
+    - name: jenkins-casc
+      mountPath: /var/jenkins_home/casc_configs
+      readOnly: true`,
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer is a FALSE statement?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The existing volume',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '/var/jenkins_home',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'would be overwriten by the volume',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '/var/jenkins_home/casc_configs',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and data would be lost',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The contents of a volume',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '/var/jenkins_home/casc_configs',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'can be defined in a',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'ConfigMap',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'object',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'It would be best practice to add a',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'ConfigMap',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'as opposed to modifying the existing',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'PersistentVolumeClaim',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'The existing volume',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '/var/jenkins_home',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'would not be overwriten by the volume',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              '/var/jenkins_home/casc_configs',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'and no data would be lost',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
