@@ -59,6 +59,7 @@ import linux from './linux';
 import performanceTesting from './performance-testing';
 import docker from './docker';
 import cSharp from './c-sharp';
+import aspNetCore from './asp-net-core';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -70,6 +71,7 @@ const quizData: QuizData = {
   windows,
   uipath,
   genetics,
+  'asp-net-core': aspNetCore,
   'scikit-learn': scikitLearn,
   'database-theory-ii': databaseTheoryIi,
   react,
@@ -179,6 +181,7 @@ const categories = [
       quizData['performance-testing'],
       quizData['next-js'],
       quizData['java-threads'],
+      quizData['asp-net-core'],
       quizData.uipath,
       quizData.docker,
       quizData.javascript,
