@@ -1970,7 +1970,7 @@ ReactDOM.render(<App />, document.getElementById('root'));`,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'React.memo',
+              'useMemo',
             ],
           ],
         },
@@ -2789,40 +2789,6 @@ ReactDOM.render(<App />, document.getElementById('root'));`,
         },
       ],
       correctAnswer: '2',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'An array declared as an array literal would be'],
-        [QuizMarkdownType.INLINE_CODE, '          '],
-        [QuizMarkdownType.TEXT, '.'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'const bytes = [80, 65, 78];'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'const bytes = new Array(80, 65, 78);'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'const bytes = [80, 65, 78].map((b) => b);'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, 'const str = "80 65 78"; const bytes = str.split(" ");'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
     },
     {
       question: [
