@@ -8054,5 +8054,15 @@ public void serviceMethods() {}
       ],
       correctAnswer: '0',
     },
+    {
+      question: [[QuizMarkdownType.TEXT, 'The default location of the local repository is __________.']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '~/.m2/repository']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Your Spring Tool Suite workspace folder']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '~/maven/repository']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '~/Java']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

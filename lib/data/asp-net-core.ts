@@ -219,5 +219,65 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your navigation bar component contains the following item. Which answer must be true?'],
+        [QuizMarkdownType.CODE, `<li class="nav-item">
+  <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="ShowSearchForm">Products</a>
+</li>`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Your project has a file'], [QuizMarkdownType.INLINE_CODE, '/Controllers/ProductsController.cs']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Your project has a file'], [QuizMarkdownType.INLINE_CODE, '/Actions/ShowSearchForm.cs']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Your project has a file'], [QuizMarkdownType.INLINE_CODE, '/Actions/Products.cs']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Your project has a file'], [QuizMarkdownType.INLINE_CODE, '/Controllers/Actions/Products.cs']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your view contains the following navigation bar item. If it navigates to a route'],
+        [QuizMarkdownType.INLINE_CODE, '/Products/ShowSearchForm'],
+        [QuizMarkdownType.TEXT, 'and products data exists, which part of your project must be changed for the intended data to be returned?'],
+        [QuizMarkdownType.CODE, `<li class="nav-item">
+  <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="ShowSearchForm">Products</a>
+</li>`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '/Controllers/ProductsController.cs']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '/wwwroot/js/']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '/Models/Products.cs']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '/wwwroot/lib/']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which subfolder is NOT found in the folder'],
+        [QuizMarkdownType.INLINE_CODE, '/wwwroot'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '/html']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '/js']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '/css']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '/lib']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Project dependencies are listed in a file ending with the'],
+        [QuizMarkdownType.INLINE_CODE, '________'],
+        [QuizMarkdownType.TEXT, 'extension'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '.csproj']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '.cs']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '.proj']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '.project']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

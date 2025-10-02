@@ -3661,5 +3661,25 @@ void testMethod() {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [[QuizMarkdownType.TEXT, 'In what order do multiple @Before annotated methods run?']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Recent first']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Oldest first']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Based on the number of arguments']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Randomly']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [[QuizMarkdownType.TEXT, 'A method annotated with __________ will be executed before each test method in a class.']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Before']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'After']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Test']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'BeforeClass']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
