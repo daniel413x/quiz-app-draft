@@ -279,5 +279,45 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An object prefixed with'],
+        [QuizMarkdownType.INLINE_CODE, 'I'],
+        [QuizMarkdownType.TEXT, ', such as'],
+        [QuizMarkdownType.INLINE_CODE, 'IActionResult'],
+        [QuizMarkdownType.TEXT, 'denotes an _________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'interface']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'ideal']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'identifier']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'icon']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In ASP.Net Core, transactions are handled ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using a method'], [QuizMarkdownType.INLINE_CODE, 'BeginTransaction()']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using a configuration'], [QuizMarkdownType.INLINE_CODE, 'appsettings.json']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using an attribute'], [QuizMarkdownType.INLINE_CODE, '[Transactional]']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using .NET events']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '________ is a validation attribute'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '[Range]']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '[HttpGet]']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '[ApiController]']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '[Authorize]']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
