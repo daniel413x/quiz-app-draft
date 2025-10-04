@@ -319,5 +319,44 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer describes a best practice to avoid request matching conflicts?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'You should explicitly define method verbs with attributes such as'], [QuizMarkdownType.INLINE_CODE, '[HttpGet]']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'You should explicitly define method return types with generics such as'], [QuizMarkdownType.INLINE_CODE, 'Task<IActionResult>']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'You should avoid naming views files after methods in your Controller classes such as'], [QuizMarkdownType.INLINE_CODE, 'APageController.ShowSearchResults'], [QuizMarkdownType.TEXT, 'and'], [QuizMarkdownType.INLINE_CODE, '/Views/APage/ShowSearchResults.cshtml']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'You should explicitly define web security with attributes such as'], [QuizMarkdownType.INLINE_CODE, '[Authorize]']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In ASP.Net Core, '],
+        [QuizMarkdownType.INLINE_CODE, 'String'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, 'string'],
+        [QuizMarkdownType.TEXT, 'are functionally equivalent.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of the following code?'],
+        [QuizMarkdownType.CODE, 'ControllerD : ControllerC'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'ControllerD'], [QuizMarkdownType.TEXT, 'inherits from'], [QuizMarkdownType.INLINE_CODE, 'ControllerC']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'ControllerC'], [QuizMarkdownType.TEXT, 'inherits from'], [QuizMarkdownType.INLINE_CODE, 'ControllerD']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'ControllerD'], [QuizMarkdownType.TEXT, 'implements an interface called'], [QuizMarkdownType.INLINE_CODE, 'ControllerC']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'ControllerC'], [QuizMarkdownType.TEXT, 'has a superclass'], [QuizMarkdownType.INLINE_CODE, 'ControllerD']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
