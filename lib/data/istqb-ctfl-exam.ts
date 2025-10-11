@@ -6603,7 +6603,7 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'Consider the following acceptance criteria for a user story written from the perspective of an online store owner.',
+          'Consider the following user story written from the perspective of an online store owner.',
         ],
         [
           QuizMarkdownType.BREAK,
@@ -6651,7 +6651,7 @@ export default {
         ],
         [
           QuizMarkdownType.TEXT,
-          'In what format is this acceptance criteria written?',
+          'In what format is this written?',
         ],
       ],
       answers: [
@@ -6660,7 +6660,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Rule-oriented',
+              'Rule-oriented acceptance critera',
             ],
           ],
         },
@@ -6669,7 +6669,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Scenario-oriented',
+              'Scenario-oriented acceptance critera',
             ],
           ],
         },
@@ -6678,7 +6678,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Product-oriented',
+              'Product-oriented test case',
             ],
           ],
         },
@@ -6687,7 +6687,7 @@ export default {
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Process-oriented',
+              'Process-oriented test case',
             ],
           ],
         },
@@ -8411,13 +8411,13 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'What type of acceptance testing is typically performed by the customer at their own site?'],
+        [QuizMarkdownType.TEXT, 'What type of testing is typically performed by the customer at their own site?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'User acceptance testing (UAT)'],
+            [QuizMarkdownType.TEXT, 'User acceptance testing'],
           ],
         },
         {
@@ -8443,13 +8443,13 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which document outlines the criteria for acceptance testing?'],
+        [QuizMarkdownType.TEXT, 'Which document would outline criteria for acceptance testing?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Acceptance test plan'],
+            [QuizMarkdownType.TEXT, 'Test plan'],
           ],
         },
         {
@@ -9172,6 +9172,134 @@ export default {
           id: '3',
           answer: [
             [QuizMarkdownType.TEXT, 'None of the above'],
+          ],
+          order: 3,
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Consider the following user story written from the perspective of an online store owner.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Given that the user is logged in and on the homepage,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'When the user clicks on the "Add Item" button,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'Then the "Create Item" form should appear,',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'And the user should be able to input a name and price for the new item.',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.BREAK,
+          '',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'In what format is this written?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Rule-oriented test plan',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Scenario-oriented acceptance criteria',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Product-oriented test plan',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Process-oriented acceptance criteria',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer can be described as acceptance criteria?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'User story'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Static analysis'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Test plan'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Acceptance testing'],
           ],
           order: 3,
         },

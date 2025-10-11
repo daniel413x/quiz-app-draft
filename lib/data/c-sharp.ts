@@ -199,5 +199,17 @@ export default {
       ],
       correctAnswer: '1',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following two statements are functionally equivalent'],
+        [QuizMarkdownType.CODE, 'var controller = new ProductsController();'],
+        [QuizMarkdownType.CODE, 'ProductsController controller = new ProductsController();'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

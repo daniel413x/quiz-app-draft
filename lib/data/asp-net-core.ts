@@ -358,5 +358,82 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The objects _____ and _____ are from NUnit.Framework'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'Assert'], [QuizMarkdownType.TEXT, ', '], [QuizMarkdownType.INLINE_CODE, 'Is']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Assert'], [QuizMarkdownType.TEXT, ', '], [QuizMarkdownType.INLINE_CODE, 'ViewResult']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'Assert'], [QuizMarkdownType.TEXT, ', '], [QuizMarkdownType.INLINE_CODE, 'ApplicationDbContext']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Assert'], [QuizMarkdownType.TEXT, ', '], [QuizMarkdownType.INLINE_CODE, 'RedirectToActionResult']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are writing unit tests in the NUnit framework using an in-memory database. Which answer is a solution that can manage your in-memory database?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'EF Core']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'OData']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'GraphQL']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Redis']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '________ is a validation attribute'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '[Range]']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '[HttpGet]']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '[ApiController]']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '[Authorize]']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You add a new model'],
+        [QuizMarkdownType.INLINE_CODE, 'UserRoles'],
+        [QuizMarkdownType.TEXT, 'to your project. In which file does a corresponding change need to be made so that your database is aware of this model?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'AppDbContext']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Program.cs']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'appsettings.json']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are using an in-memory database to generate data for NUnit tests. Which keyword is used to ensure resources are released when a test finishes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'using']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '[Range]']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'nameof']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '[Test]']] },
+      ],
+      correctAnswer: '0',
+    },
+    // in personnel-mgmt, project A would be ServerLibrary and project B would be BaseLibrary
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your ASP.Net Core solution ('],
+        [QuizMarkdownType.TEXT, '.sln'],
+        [QuizMarkdownType.TEXT, ') contains two project: A and B. For a namespace from project A to be available to project B, which answer is true?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Project A is added dependency is added as a dependency to Project B']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Project B is added dependency is added as a dependency to Project A']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Project A and project B are both added to each other as dependencies']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Neither project A nor project B need to add each as dependencies']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

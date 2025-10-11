@@ -2788,15 +2788,31 @@ CREATE TABLE student_courses (
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which command drops all rows in the table'],
+        [QuizMarkdownType.INLINE_CODE, 'SystemRoles'],
+        [QuizMarkdownType.TEXT, 'such that the next entity created in that table will have the id'],
+        [QuizMarkdownType.INLINE_CODE, '0'],
+        [QuizMarkdownType.TEXT, '?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'TRUNCATE TABLE [dbo].[UserRoles];']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'DELETE FROM [dbo].[UserRoles];']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'DELETE FROM userRoles;']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'ALTER SEQUENCE [dbo].[SystemRoles] RESTARTS WITH 1']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'What does the term '],
         [QuizMarkdownType.INLINE_CODE, 'referential integrity'],
         [QuizMarkdownType.TEXT, 'mean in database theory?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Data is encrypted at rest']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'All primary keys must match a candidate key']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'All foreign keys must match primary keys']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Queries must execute in order']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Backups must be periodically tested']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'All foreign keys must reference other foreign keys']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All candidate keys must match a super key']] },
       ],
       correctAnswer: '1',
     },
