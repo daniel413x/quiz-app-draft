@@ -4949,6 +4949,12 @@ https://api.skillstorm-congo.com/`,
       ],
       correctAnswer: '0',
     },
+
+    //
+    //
+    //
+    //
+
     {
       question: [
         [
@@ -5784,6 +5790,30 @@ https://api.skillstorm-congo.com/`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT true of NACLs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'NACLs are used to enhance security at the instance level']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'NACLs are used to enhance security at the subnet level']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'NACLs are evaluated in reverse numerical order']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'NACLs allow all inbound and outbound traffic by default']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT true of security groups?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'SGs are used to enhance security at the subnet level']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'SGs are used to enhance security at the instance level']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SGs control traffic to and from specific resources']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SGs deny all inbound traffic and allow all outbound traffic by default']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, '____________ is a set of hybrid cloud storage services that provide on-premises access to virtually unlimited cloud storage.'],
       ],
       answers: [
@@ -5865,6 +5895,702 @@ https://api.skillstorm-congo.com/`,
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'All in with cloud/cloud native']] },
       ],
       correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, cost optimization, peformance, operational excellence, fault tolerance, and _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'service limits']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, cost optimization, peformance, operational excellence, fault tolerance, and _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'service limits']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The two engines Elasticache provides are ________ and ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'redis, memcached']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'redcache, redis']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'redcache, memcached']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'memcached, elasticload']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, service limits, peformance, operational excellence, fault tolerance, and _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'cost optimization']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A solutions architect needs to design a highly available and fault-tolerant web application on AWS. Which service provides automated application scaling, load balancing, and health monitoring?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ASG']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'ELB']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EC2']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A solutions architect needs to design a highly available and fault-tolerant web application on AWS. Which service provides automated application scaling, load balancing, and health monitoring?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'ASG']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'ELB']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EC2']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the subnet associated with this route table public or private?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Route Table',
+          data: [
+            {
+              _tableDataColId: '1', destination: '0.0.0.0/0', target: 'igw-0464b73b2b8d1db22', status: 'Active', propagated: 'No',
+            },
+            {
+              _tableDataColId: '1', destination: '192.168.0.0/16', target: 'local', status: 'Active', propagated: 'No',
+            },
+          ],
+          cols: [
+            { accessorKey: 'destination', header: 'Destination' },
+            { accessorKey: 'target', header: 'Target' },
+            { accessorKey: 'status', header: 'Status' },
+            { accessorKey: 'propagated', header: 'Propagated' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Public']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Private']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What traffic will be allowed based on the ACL rules defined below?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1',
+              ruleNumber: '94',
+              type: 'SSH (22)',
+              protocol: 'TCP (6)',
+              portRange: '22',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '2',
+              ruleNumber: '95',
+              type: 'Custom TCP',
+              protocol: 'TCP (6)',
+              portRange: '0',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3',
+              ruleNumber: '96',
+              type: 'Custom TCP',
+              protocol: 'TCP (6)',
+              portRange: '0',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '4',
+              ruleNumber: '*',
+              type: 'All traffic',
+              protocol: 'All',
+              portRange: 'All',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'all traffic is denied']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'all traffic except port 22 is allowed']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'all traffic is allowed']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'the rules are conflicting so everything will be denied']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is a true statement about the ACL rules defined below?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1',
+              ruleNumber: '94',
+              type: 'SSH (22)',
+              protocol: 'TCP (6)',
+              portRange: '22',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '2',
+              ruleNumber: '95',
+              type: 'Custom TCP',
+              protocol: 'TCP (6)',
+              portRange: '0',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3',
+              ruleNumber: '96',
+              type: 'Custom TCP',
+              protocol: 'TCP (6)',
+              portRange: '0',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '4',
+              ruleNumber: '*',
+              type: 'All traffic',
+              protocol: 'All',
+              portRange: 'All',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'rule 96 cannot be reached']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'there are no conflicting rules']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'all traffic is allowed']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'rule 94 cannot be reached']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Based on the ACL rules defined below, which type of traffic will be allowed?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1',
+              ruleNumber: '90',
+              type: 'HTTP (80)',
+              protocol: 'TCP (6)',
+              portRange: '80',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2',
+              ruleNumber: '91',
+              type: 'HTTPS (443)',
+              protocol: 'TCP (6)',
+              portRange: '443',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3',
+              ruleNumber: '92',
+              type: 'SSH (22)',
+              protocol: 'TCP (6)',
+              portRange: '22',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '4',
+              ruleNumber: '*',
+              type: 'All traffic',
+              protocol: 'All',
+              portRange: 'All',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Only HTTP and HTTPS traffic will be allowed']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Only SSH traffic will be allowed']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'All traffic is allowed']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'All traffic is denied']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the subnet associated with this route table public or private?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Route Table',
+          data: [
+            {
+              _tableDataColId: '1', destination: '10.0.0.0/16', target: 'local', status: 'Active', propagated: 'No',
+            },
+            {
+              _tableDataColId: '2', destination: '0.0.0.0/0', target: 'nat-06d3f3e2b8cd6c9e0', status: 'Active', propagated: 'No',
+            },
+          ],
+          cols: [
+            { accessorKey: 'destination', header: 'Destination' },
+            { accessorKey: 'target', header: 'Target' },
+            { accessorKey: 'status', header: 'Status' },
+            { accessorKey: 'propagated', header: 'Propagated' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Public']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Private']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the subnet associated with this route table public or private?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Route Table',
+          data: [
+            {
+              _tableDataColId: '1', destination: '172.31.0.0/16', target: 'local', status: 'Active', propagated: 'No',
+            },
+            {
+              _tableDataColId: '2', destination: '0.0.0.0/0', target: 'igw-0aa4b78ef29d4abc9', status: 'Active', propagated: 'No',
+            },
+          ],
+          cols: [
+            { accessorKey: 'destination', header: 'Destination' },
+            { accessorKey: 'target', header: 'Target' },
+            { accessorKey: 'status', header: 'Status' },
+            { accessorKey: 'propagated', header: 'Propagated' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Public']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Private']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the subnet associated with this route table public or private?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Route Table',
+          data: [
+            {
+              _tableDataColId: '1', destination: '10.0.1.0/24', target: 'local', status: 'Active', propagated: 'No',
+            },
+          ],
+          cols: [
+            { accessorKey: 'destination', header: 'Destination' },
+            { accessorKey: 'target', header: 'Target' },
+            { accessorKey: 'status', header: 'Status' },
+            { accessorKey: 'propagated', header: 'Propagated' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Public']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Private']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the subnet associated with this route table public or private?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Route Table',
+          data: [
+            {
+              _tableDataColId: '1', destination: '192.168.1.0/24', target: 'local', status: 'Active', propagated: 'No',
+            },
+            {
+              _tableDataColId: '2', destination: '0.0.0.0/0', target: 'igw-0b2a55c778deaadf1', status: 'Active', propagated: 'No',
+            },
+          ],
+          cols: [
+            { accessorKey: 'destination', header: 'Destination' },
+            { accessorKey: 'target', header: 'Target' },
+            { accessorKey: 'status', header: 'Status' },
+            { accessorKey: 'propagated', header: 'Propagated' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Public']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Private']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Is the subnet associated with this route table public or private?'],
+        [QuizMarkdownType.TABLE, {
+          name: 'Route Table',
+          data: [
+            {
+              _tableDataColId: '1', destination: '172.31.0.0/16', target: 'local', status: 'Active', propagated: 'No',
+            },
+            {
+              _tableDataColId: '2', destination: '0.0.0.0/0', target: 'nat-0f6cbb7a7e9cbf264', status: 'Active', propagated: 'No',
+            },
+          ],
+          cols: [
+            { accessorKey: 'destination', header: 'Destination' },
+            { accessorKey: 'target', header: 'Target' },
+            { accessorKey: 'status', header: 'Status' },
+            { accessorKey: 'propagated', header: 'Propagated' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Public']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Private']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial company needs to back up its on-premises application data to the AWS Cloud without changing existing backup workflows. Which AWS service can integrate with their on-premises storage systems to seamlessly extend them to AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS DataSync']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Snowball']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A media production studio wants to store large video files locally for editing, but also ensure that older files are automatically moved to low-cost cloud storage while remaining accessible. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A hospital’s on-premises servers must store patient imaging data locally but also replicate it securely to AWS for long-term archiving and compliance. Which service allows them to integrate their on-prem storage directly with S3 for this purpose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS DataSync']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Snowcone']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'There are conflicting rules in the following ACL rules table below.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1',
+              ruleNumber: '100',
+              type: 'HTTP (80)',
+              protocol: 'TCP (6)',
+              portRange: '80',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2',
+              ruleNumber: '110',
+              type: 'HTTPS (443)',
+              protocol: 'TCP (6)',
+              portRange: '443',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3',
+              ruleNumber: '120',
+              type: 'SSH (22)',
+              protocol: 'TCP (6)',
+              portRange: '22',
+              source: '203.0.113.0/24',
+              allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '4',
+              ruleNumber: '130',
+              type: 'Custom TCP',
+              protocol: 'TCP (6)',
+              portRange: '1024-65535',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'There are conflicting rules in the following ACL rules table below.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1', ruleNumber: '100', type: 'HTTP (80)', protocol: 'TCP (6)', portRange: '80', source: '0.0.0.0/0', allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2', ruleNumber: '105', type: 'Custom TCP', protocol: 'TCP (6)', portRange: '80', source: '0.0.0.0/0', allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'There are conflicting rules in the following ACL rules table below.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1',
+              ruleNumber: '*',
+              type: 'All traffic',
+              protocol: 'All',
+              portRange: 'All',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2', ruleNumber: '110', type: 'SSH (22)', protocol: 'TCP (6)', portRange: '22', source: '203.0.113.0/24', allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3', ruleNumber: '111', type: 'Custom TCP', protocol: 'TCP (6)', portRange: '80', source: '0.0.0.0/0', allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '4', ruleNumber: '112', type: 'SSH (22)', protocol: 'TCP (6)', portRange: '22', source: '203.0.113.0/24', allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'There are conflicting rules in the following ACL rules table below.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1',
+              ruleNumber: '99',
+              type: 'HTTP (80)',
+              protocol: 'TCP (6)',
+              portRange: '80',
+              source: '0.0.0.0/0',
+              allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2', ruleNumber: '100', type: 'All traffic', protocol: 'All', portRange: 'All', source: '0.0.0.0/0', allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '3', ruleNumber: '101', type: 'HTTPS (443)', protocol: 'TCP (6)', portRange: '443', source: '0.0.0.0/0', allowDeny: 'Allow',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'There are conflicting rules in the following ACL rules table below.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1', ruleNumber: '100', type: 'HTTP (80)', protocol: 'TCP (6)', portRange: '80', source: '0.0.0.0/0', allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2', ruleNumber: '110', type: 'HTTPS (443)', protocol: 'TCP (6)', portRange: '443', source: '0.0.0.0/0', allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '2', ruleNumber: '115', type: 'RDP (3389)', protocol: 'TCP (6)', portRange: '3389', source: '192.168.1.0/24', allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3',
+              ruleNumber: '*',
+              type: 'All traffic',
+              protocol: 'All',
+              portRange: 'All',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'There are conflicting rules in the following ACL rules table below.'],
+        [QuizMarkdownType.TABLE, {
+          name: 'ACL Rules',
+          data: [
+            {
+              _tableDataColId: '1', ruleNumber: '105', type: 'SSH (22)', protocol: 'TCP (6)', portRange: '22', source: '10.0.0.0/8', allowDeny: 'Deny',
+            },
+            {
+              _tableDataColId: '2', ruleNumber: '115', type: 'RDP (3389)', protocol: 'TCP (6)', portRange: '3389', source: '192.168.1.0/24', allowDeny: 'Allow',
+            },
+            {
+              _tableDataColId: '3',
+              ruleNumber: '*',
+              type: 'All traffic',
+              protocol: 'All',
+              portRange: 'All',
+              source: '0.0.0.0/0',
+              allowDeny: 'Deny',
+            },
+          ],
+          cols: [
+            { accessorKey: 'ruleNumber', header: 'Rule number' },
+            { accessorKey: 'type', header: 'Type' },
+            { accessorKey: 'protocol', header: 'Protocol' },
+            { accessorKey: 'portRange', header: 'Port range' },
+            { accessorKey: 'source', header: 'Source' },
+            { accessorKey: 'allowDeny', header: 'Allow/Deny' },
+          ],
+        }],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
     },
 
   ],
