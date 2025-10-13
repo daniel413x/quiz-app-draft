@@ -3035,53 +3035,6 @@ export default {
       question: [
         [
           QuizMarkdownType.TEXT,
-          'An application server needs to communicate with a database server within the same security group. Assuming default settings, how should you configure the security groups to allow this communication?',
-        ],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'The security group does not need to be configured.',
-            ],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Allow outbound traffic from the application server’s security group to the database server’s security group on the database port.',
-            ],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Allow inbound traffic from the database server’s security group to the application server’s security group on the database port.',
-            ],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Allow inbound traffic from the application server’s security group to the database server’s security group on the database port.',
-            ],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [
-          QuizMarkdownType.TEXT,
           'A web application needs to connect to an external API over HTTPS. How should the security group be configured?',
         ],
       ],
@@ -3542,53 +3495,6 @@ export default {
             [
               QuizMarkdownType.TEXT,
               'To increase the number of open ports for better connectivity.',
-            ],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [
-          QuizMarkdownType.TEXT,
-          'Which of the following is a best practice for configuring inbound rules in a security group?',
-        ],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Allow only the minimum required ports and IP addresses.',
-            ],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Allow all inbound traffic by default.',
-            ],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Disable all inbound traffic rules.',
-            ],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [
-              QuizMarkdownType.TEXT,
-              'Enable inbound traffic on all ports for faster access.',
             ],
           ],
         },
@@ -4122,6 +4028,7 @@ export default {
       answers: [
         {
           id: '0',
+          order: 0,
           answer: [
             [
               QuizMarkdownType.TEXT,
@@ -4131,6 +4038,7 @@ export default {
         },
         {
           id: '1',
+          order: 1,
           answer: [
             [
               QuizMarkdownType.TEXT,
@@ -4140,6 +4048,7 @@ export default {
         },
         {
           id: '2',
+          order: 2,
           answer: [
             [
               QuizMarkdownType.TEXT,
@@ -4149,15 +4058,16 @@ export default {
         },
         {
           id: '3',
+          order: 3,
           answer: [
             [
               QuizMarkdownType.TEXT,
-              'Because it is costlier to use.',
+              'None of the above',
             ],
           ],
         },
       ],
-      correctAnswer: '0',
+      correctAnswer: '3',
     },
     {
       question: [
@@ -4925,6 +4835,18 @@ https://api.skillstorm-congo.com/`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'A _____ can contain multiple ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'availability zone, edge locations']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'availability zone, regions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'edge location, availability zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'edge location, regions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'An example of horizontal scaling would be _________'],
       ],
       answers: [
@@ -5189,7 +5111,7 @@ https://api.skillstorm-congo.com/`,
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Accelerated Computing']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Compute Optimized']] },
       ],
-      correctAnswer: '1',
+      correctAnswer: '3',
     },
     {
       question: [
@@ -5536,7 +5458,7 @@ https://api.skillstorm-congo.com/`,
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Memory Optimized']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'General Purpose']] },
       ],
-      correctAnswer: '0',
+      correctAnswer: '1',
     },
     {
       question: [
@@ -5621,6 +5543,42 @@ https://api.skillstorm-congo.com/`,
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3']] },
       ],
       correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_______ are storage objects that persist independently of the instance. They are slightly higher latency than the storage that is physically attached to the host machine.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'EBS volumes']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'instance stores']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EFS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need a storage medium that will persist across instance termination. Which AWS object can provide this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'EBS volumes']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Instance stores']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EFS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The root volume (e.g. /dev/xvda) of an EC2 instance is usually a _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'EBS volume']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Instance store']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EFS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3']] },
+      ],
+      correctAnswer: '0',
     },
     {
       question: [
@@ -6591,6 +6549,137 @@ https://api.skillstorm-congo.com/`,
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
       ],
       correctAnswer: '1',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Usage of a _______ implies the underlying instances cannot receive inbound internet traffic',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NAT Gateway',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Internet Gateway',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'NACL',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'AWS Network Firewall',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A fintech company is deploying a critical payment processing application that must remain available even if one data center goes down. Which AWS cloud component accounts ensures that their application is replicated across isolated, fault-tolerant zones within a single region?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to launch EC2 instances in multiple physical data centers within the same region to ensure high availability. Which AWS infrastructure component allows them to do this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is deploying a PostgreSQL database using Amazon RDS and wants to ensure automatic failover in case of infrastructure failure. Which AWS infrastructure component does RDS use to replicate data for high availability within the same region?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A media studio located in a large U.S. city wants to edit and process high-resolution video with low-latency access to cloud compute resources. They want to minimize lag while staying connected to AWS services without managing local data centers. Which AWS infrastructure component accounts for these concerns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A healthcare analytics company wants to process patient imaging data in compliance with strict data residency laws. They need compute, database, and storage services close to their city while keeping everything integrated with AWS. Which AWS infrastructure component accounts for these concerns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A video game development company needs to run latency-sensitive rendering workloads near its teams based in Los Angeles. They want to keep most of the infrastructure in the cloud but need compute and storage closer to their location to reduce latency. Which AWS infrastructure component accounts for these concerns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company live-streaming a sports event wants to minimize buffering for viewers worldwide by delivering video content through AWS locations closest to users. Which AWS infrastructure component supports this use case?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '3',
     },
 
   ],
