@@ -6681,6 +6681,138 @@ https://api.skillstorm-congo.com/`,
       ],
       correctAnswer: '3',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to allow a third-party user to access AWS resources temporarily using an external identity provider. Which service should they use to issue temporary credentials?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which service is used by the AssumeRole API to allow one AWS service or user to temporarily take on the permissions of another role?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon SSO']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Directory Service']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An application running in Account A needs to access resources in Account B. Which service enables cross-account role assumption using temporary credentials?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Secrets Manager']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise uses AWS Organizations and needs to assign and manage user access to multiple AWS accounts from a central place. Which service is best suited for this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service enables federated identity users to access AWS applications and resources while maintaining centralized auditing of access patterns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS WAF']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Macie']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants users to log in once and gain access to the AWS Console, as well as third-party SaaS apps like Salesforce and Office 365. Which AWS service enables this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Roles']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following architecture will function as intended.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'An application server is placed in a private subnet (no direct route to the internet).'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A NAT Gateway is placed in a public subnet (has a route to an Internet Gateway).'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Your application server is placed in a private subnet (no direct route to the internet).'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The private subnet’s route table points all outbound internet traffic (0.0.0.0/0) to the NAT Gateway.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The application server should be able to communicate in outbound traffic and all inbound traffic should be forbidden.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Roles']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following architecture will function as intended.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'An application server is placed in a private subnet.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A NAT Gateway is placed in a public subnet.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The private subnet’s route table points all outbound internet traffic (0.0.0.0/0) to the NAT Gateway.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The application server should be able to communicate in outbound traffic and all inbound traffic should be forbidden.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following architecture will function as intended.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'An application server is placed in a private subnet.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'A NAT Gateway is placed in the same subnet.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The subnet’s route table points all outbound internet traffic (0.0.0.0/0) to the NAT Gateway.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'The application server should be able to communicate in outbound traffic and all inbound traffic should be forbidden.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
