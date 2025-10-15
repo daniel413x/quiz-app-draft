@@ -5628,42 +5628,6 @@ https://api.skillstorm-congo.com/`,
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, '_________________ are a type of infrastructure deployment that places compute, storage, database, and other select AWS services close to large population and industry centers.'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'availability zones']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'edge locations']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'local zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'regions']] },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, '_________________ are isolated locations within a region that host AWS resources and are designed to provide high availability and fault tolerance.'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, '_________________ are used by Amazon CloudFront to cache content and deliver data to users with low latency from locations closest to them.'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Which AWS service provides a fully managed database service?'],
       ],
       answers: [
@@ -5851,54 +5815,6 @@ https://api.skillstorm-congo.com/`,
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Multi-cloud']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'On-premises']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'All in with cloud/cloud native']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, cost optimization, peformance, operational excellence, fault tolerance, and _______'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'service limits']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, cost optimization, peformance, operational excellence, fault tolerance, and _______'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'service limits']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'The two engines Elasticache provides are ________ and ________'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'redis, memcached']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'redcache, redis']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'redcache, memcached']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'memcached, elasticload']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, service limits, peformance, operational excellence, fault tolerance, and _______'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'cost optimization']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
       ],
       correctAnswer: '0',
     },
@@ -6599,97 +6515,13 @@ https://api.skillstorm-congo.com/`,
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'A fintech company is deploying a critical payment processing application that must remain available even if one data center goes down. Which AWS cloud component accounts ensures that their application is replicated across isolated, fault-tolerant zones within a single region?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A company wants to launch EC2 instances in multiple physical data centers within the same region to ensure high availability. Which AWS infrastructure component allows them to do this?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A company is deploying a PostgreSQL database using Amazon RDS and wants to ensure automatic failover in case of infrastructure failure. Which AWS infrastructure component does RDS use to replicate data for high availability within the same region?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A media studio located in a large U.S. city wants to edit and process high-resolution video with low-latency access to cloud compute resources. They want to minimize lag while staying connected to AWS services without managing local data centers. Which AWS infrastructure component accounts for these concerns?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A healthcare analytics company wants to process patient imaging data in compliance with strict data residency laws. They need compute, database, and storage services close to their city while keeping everything integrated with AWS. Which AWS infrastructure component accounts for these concerns?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A video game development company needs to run latency-sensitive rendering workloads near its teams based in Los Angeles. They want to keep most of the infrastructure in the cloud but need compute and storage closer to their location to reduce latency. Which AWS infrastructure component accounts for these concerns?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A company live-streaming a sports event wants to minimize buffering for viewers worldwide by delivering video content through AWS locations closest to users. Which AWS infrastructure component supports this use case?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
-      ],
-      correctAnswer: '3',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'A company wants to allow a third-party user to access AWS resources temporarily using an external identity provider. Which service should they use to issue temporary credentials?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
       ],
       correctAnswer: '2',
     },
@@ -6700,7 +6532,7 @@ https://api.skillstorm-congo.com/`,
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon SSO']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Directory Service']] },
       ],
       correctAnswer: '1',
@@ -6723,7 +6555,7 @@ https://api.skillstorm-congo.com/`,
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
       ],
@@ -6734,7 +6566,7 @@ https://api.skillstorm-congo.com/`,
         [QuizMarkdownType.TEXT, 'Which AWS service enables federated identity users to access AWS applications and resources while maintaining centralized auditing of access patterns?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS WAF']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Macie']] },
@@ -6746,7 +6578,7 @@ https://api.skillstorm-congo.com/`,
         [QuizMarkdownType.TEXT, 'A company wants users to log in once and gain access to the AWS Console, as well as third-party SaaS apps like Salesforce and Office 365. Which AWS service enables this capability?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Roles']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
@@ -6769,7 +6601,7 @@ https://api.skillstorm-congo.com/`,
         [QuizMarkdownType.TEXT, 'The application server should be able to communicate in outbound traffic and all inbound traffic should be forbidden.'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Roles']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },

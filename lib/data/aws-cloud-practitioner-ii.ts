@@ -81,6 +81,42 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Cloud Adoption Framework (CAF) perspective focuses on preparing the organization’s workforce for cloud adoption by addressing roles, skills, and change management?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'People perspective']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Business perspective']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Governance perspective']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Platform perspective']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to ensure its employees are trained in cloud technologies and that new roles are defined for operating in the cloud. Which AWS CAF perspective provides guidance for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'People perspective']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Operations perspective']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Security perspective']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Business perspective']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'According to the AWS Cloud Adoption Framework (CAF), which perspective helps organizations identify skills gaps and implement training programs to support cloud readiness?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'People perspective']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Governance perspective']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Operations perspective']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Platform perspective']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which AWS CAF perspective focuses on aligning cloud adoption with business value, outcomes, and KPIs?'],
       ],
       answers: [
@@ -1077,7 +1113,7 @@ export default {
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
       ],
@@ -1127,7 +1163,7 @@ export default {
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
       ],
       correctAnswer: '0',
     },
@@ -1259,9 +1295,511 @@ export default {
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS SSO']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
       ],
       correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, cost optimization, peformance, operational excellence, fault tolerance, and _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'service limits']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, cost optimization, peformance, operational excellence, fault tolerance, and _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'service limits']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The two engines Elasticache provides are ________ and ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'redis, memcached']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'redcache, redis']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'redcache, memcached']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'memcached, elasticload']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The (6) things Trusted Advisor observes are: security, service limits, peformance, operational excellence, fault tolerance, and _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'cost optimization']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'sustainability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'reliability']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'fault tolerance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A fintech company is deploying a critical payment processing application that must remain available even if one data center goes down. Which AWS cloud component accounts ensures that their application is replicated across isolated, fault-tolerant zones within a single region?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to launch EC2 instances in multiple physical data centers within the same region to ensure high availability. Which AWS infrastructure component allows them to do this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is deploying a PostgreSQL database using Amazon RDS and wants to ensure automatic failover in case of infrastructure failure. Which AWS infrastructure component does RDS use to replicate data for high availability within the same region?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A media studio located in a large U.S. city wants to edit and process high-resolution video with low-latency access to cloud compute resources. They want to minimize lag while staying connected to AWS services without managing local data centers. Which AWS infrastructure component accounts for these concerns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A healthcare analytics company wants to process patient imaging data in compliance with strict data residency laws. They need compute, database, and storage services close to their city while keeping everything integrated with AWS. Which AWS infrastructure component accounts for these concerns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A video game development company needs to run latency-sensitive rendering workloads near its teams based in Los Angeles. They want to keep most of the infrastructure in the cloud but need compute and storage closer to their location to reduce latency. Which AWS infrastructure component accounts for these concerns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company live-streaming a sports event wants to minimize buffering for viewers worldwide by delivering video content through AWS locations closest to users. Which AWS infrastructure component supports this use case?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________________ are a type of infrastructure deployment that places compute, storage, database, and other select AWS services close to large population and industry centers.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'availability zones']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'edge locations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'local zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'regions']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________________ are isolated locations within a region that host AWS resources and are designed to provide high availability and fault tolerance.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________________ are used by Amazon CloudFront to cache content and deliver data to users with low latency from locations closest to them.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides single-sign on access to AWS accounts and applications?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Management Console']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An AWS cloud architect intends to handle user permissions purely by defining roles and policies in AWS without using any SSO solutions or identity federation. Which service are they using?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS STS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Management Console']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is best practice for handling the root user account?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Use the root user to perform tasks that only the root user can perform']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Use the root user to solve permissions issues or policy conflicts']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Use the root user to configure organizational policies through AWS Config ']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Use the root user to establish security groups, NACLs, and services such as AWS Network Firewall']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes high availability in the AWS Cloud?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The ability of a system to remain operational even if a component fails']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The ability to increase resources automatically during peak demand']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The ability to deploy infrastructure as code']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The ability to store large amounts of data in S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS feature or design principle helps ensure that applications stay online even during failures?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Deploying workloads across multiple availability zones']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Caching content and delivering data to users with low latency from locations closest to them via edge locations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using multiple regions for redundancy']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Automatically adding or removing resources based on demand']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes elasticity in the AWS Cloud?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Automatically adding or removing resources based on demand']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using multiple Regions for redundancy']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Deploying workloads across multiple availability zones']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Caching content and delivering data to users with low latency from locations closest to them via edge locations']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service helps applications automatically scale their resources based on incoming traffic or usage patterns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Auto Scaling']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does the AWS Cloud improve an organization’s agility?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By allowing quick provisioning and deployment of resources on demand']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By requiring long-term hardware purchases before deployment']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By caching content and delivering data to users with low latency from locations closest to them via edge locations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By endorsing conventions such as "Bring Your Own License"']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following AWS services supports high availability by automatically distributing traffic across multiple targets?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Elastic Load Balancing (ELB)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS architecture principle helps systems recover quickly from failure and minimize downtime?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Design for failure and nothing will fail']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Deliver cached content from locations closest to the end user']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Use manual deployments only']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Automatically add or remove resources based on demand']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS feature enables customers to automatically increase or decrease compute capacity to meet variable workload demands?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Elasticity']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'High availability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Data redundancy']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Security groups']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best demonstrates agility in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'An organization can quickly launch new environments for testing and development']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'An organization\'s web infrastructure can quickly recover from server failure']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An organization is entitled to conventions such as "Bring Your Own License"']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'An organization is able to use multiple regions for redundancy']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which benefit of the AWS cloud allows businesses to quickly respond to changing market conditions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'High availability']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Agility']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Global reach']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Scalability']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Maintaining the ________ is an example of security OF the cloud, while maintaining the ________ is an example of security IN the cloud.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'hardware, network security']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'network security, hardware']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'infrastructure software, hardware']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'hardware, infrastructure software']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An architect wants to ensure all S3 buckets are encrypted and uses AWS Config to set a Config Rule to check encryption status. Which concept is demonstrated through the architect\'s actions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Governance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Compliance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Security']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Guardrails']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company download reports from AWS Artifact to provide to auditors. Which concept is demonstrated or satisfied through the company\'s actions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Compliance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Governance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Security']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Guardrails']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise uses AWS Organizations to create rules controlling what users and accounts can do in AWS. Which concept is demonstrated or satisfied through the enterprise\'s actions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Governance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Compliance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Security']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Guardrails']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS feature essentially limits the permissions that any identity can be granted?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Policies']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization wants to migrate its on-premises databases to AWS while keeping the source database fully operational during the migration. Which AWS service supports this requirement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS DataSync']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon RDS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Snowmobile']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which IAM component defines permissions using JSON documents to specify allowed or denied actions on AWS resources?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Policies']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which IAM entity represents a person or application that interacts directly with AWS using long-term credentials?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Groups']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which IAM entity is designed to grant temporary access permissions to AWS resources for applications, services, or users in another account?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Policies']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which IAM feature allows AWS services like EC2 or Lambda to access other AWS resources securely without storing credentials?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Policies']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which IAM entity should be created for an individual employee who needs direct access to the AWS Management Console?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Policies']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which policy type in AWS Organizations can be used to restrict certain services or actions across all accounts in an organization?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Inline Policies']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Managed Policies']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which IAM feature should a developer use to allow an application running on an EC2 instance to temporarily access S3 without using hardcoded credentials?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Roles']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Users']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Policies']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Service Control Policies']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A federeted SSO solution handles ______ as opposed to _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'authentication, authorization']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'authorization, authentication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Users, IAM Roles']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Roles, IAM Users']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Assess: If using a federated SSO solution, there is no need to handle roles or permissions in AWS IAM because they will be handled externally'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
     },
   ],
 } as QuizDataObject;
