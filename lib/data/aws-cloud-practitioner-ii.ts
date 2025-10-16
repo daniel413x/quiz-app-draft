@@ -2575,7 +2575,7 @@ export default {
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System, AWS Storage Gateway']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway, Amazon Elastic File System']] },
       ],
-      correctAnswer: '0',
+      correctAnswer: '1',
     },
     {
       question: [
@@ -2642,8 +2642,8 @@ export default {
         [QuizMarkdownType.TEXT, '_______ answers the question, "Which accounts can access this resource?" while ______ answers the question, "What actions can this user/role perform on this resource?"'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management, AWS Resource Access Manager']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Resource Access Manager, AWS Identity and Access Management']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Resource Access Manager, AWS Identity and Access Management']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management, AWS Resource Access Manager']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management, AWS IAM Identity Center']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center, AWS Identity and Access Management']] },
       ],
