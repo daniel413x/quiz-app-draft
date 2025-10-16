@@ -714,25 +714,25 @@ export default {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'SNS (Simple Notification Service)'],
+            [QuizMarkdownType.TEXT, 'Amazon SNS (Simple Notification Service)'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'SQS (Simple Queue Service)'],
+            [QuizMarkdownType.TEXT, 'Amazon SQS (Simple Queue Service)'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'SES (Simple Email Service)'],
+            [QuizMarkdownType.TEXT, 'Amazon SES (Simple Email Service)'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.TEXT, 'Lambda'],
+            [QuizMarkdownType.TEXT, 'AWS Lambda'],
           ],
         },
       ],

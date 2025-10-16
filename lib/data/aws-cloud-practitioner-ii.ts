@@ -9,6 +9,30 @@ export default {
   questions: [
     {
       question: [
+        [QuizMarkdownType.TEXT, 'A startup wants to deploy its workloads closer to its users in Europe for better performance. It must choose the specific AWS area that contains multiple data centers and meets EU compliance. What should it select?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS construct is designed to allow customers to choose where their workloads and data are physically located around the world?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Regions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Availability Zones']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Edge Locations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Local Zones']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which pillar of the AWS Well-Architected Framework focuses on running and monitoring systems to deliver business value and continuously improve processes?'],
       ],
       answers: [
@@ -744,6 +768,18 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a feature offered by AWS Artifact?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Automatically audit AWS accounts for compliance violations']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Provide on-demand access to AWS compliance reports such as SOC and ISO certifications']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Allow customers to accept and manage AWS agreements (e.g., Business Associate Addendum)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Provide a central resource for viewing AWS compliance documentation']] },
       ],
       correctAnswer: '0',
     },
@@ -1798,6 +1834,2441 @@ export default {
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which EC2 pricing option is best for applications with predictable, steady workloads that require long-term commitment for cost savings?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Savings Plans']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company runs a batch processing workload that can be interrupted and restarted without issue. Which EC2 pricing model offers the lowest cost for this scenario?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Hosts']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which EC2 pricing model allows customers to pay for compute capacity by the second or hour with no long-term commitments?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Savings Plans']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which EC2 instance type provides the highest discount—up to 90% off—compared to On-Demand pricing, but may be reclaimed by AWS when capacity is needed?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Savings Plans']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Instances']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A startup runs unpredictable workloads and needs flexibility to scale up or down at any time without long-term contracts. Which EC2 pricing option should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Hosts']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which EC2 pricing model provides a discount in exchange for committing to a one-year or three-year usage term?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Hosts']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data analytics company needs compute resources that can handle intermittent, non-critical workloads and wants to minimize cost. Which EC2 option is ideal?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Hosts']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which EC2 instance type is best suited for mission-critical workloads that must not be interrupted and require predictable performance?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Savings Plans']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which EC2 pricing model automatically terminates instances when AWS needs the capacity, making it suitable only for fault-tolerant workloads?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Spot Instances']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'On-Demand Instances']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Reserved Instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Hosts']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A new AWS customer wants to ask technical questions and get answers from both AWS experts and the broader community. Which answer is an AWS service or platform they can use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Artifact']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An engineer wants to troubleshoot a deployment issue in AWS CloudFormation and prefers to post the question publicly for community feedback. Which answer is an AWS platform that is designed for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A team wants a centralized, AWS-managed Q&A platform where they can share knowledge, get expert answers, and follow specific AWS topics. Which answer is an AWS service they can use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Chime']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is seeking help from an external organization with expertise in migrating workloads to AWS. Which AWS program connects them with certified consulting and technology partners?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS IQ']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Support Plans']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A government agency needs to find an AWS-certified partner experienced in security and compliance to help design a cloud architecture. Which AWS program can they use to find such partners?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IQ']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service enables users to find, buy, and immediately start using software solutions from third-party vendors in their AWS environment?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS OpsWorks']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A new AWS user encounters an issue setting up Amazon S3 permissions and wants to find official step-by-step troubleshooting guidance from AWS. Where should they look first?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Whitepapers']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS resource provides a searchable collection of articles with official AWS answers to common technical and account-related questions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Documentation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS re:Invent']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An administrator wants to find official AWS guidance for troubleshooting IAM permission errors without opening a support case. Which AWS resource should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A user wants to quickly resolve a billing issue by searching through official AWS articles rather than contacting support. Which AWS resource should they consult?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to find official AWS troubleshooting steps for failed EC2 instance launches. Where should they go to find curated AWS answers written by AWS experts?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Marketplace']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A customer wants to open a technical support case to get help from AWS engineers about a configuration issue with Amazon EC2. Which AWS resource should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Support Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An AWS customer needs to check the status of a recent billing inquiry submitted to AWS Support. Where should they go?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Support Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Billing Console']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A business wants to open a case to request a service quota increase for EC2 instances. Which AWS tool or console should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Support Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A customer using a Developer Support plan wants to communicate directly with AWS engineers about a technical issue. Where can they initiate this contact?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Support Center']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Partner Network']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization wants step-by-step instructions and best practices for migrating applications to AWS in a secure and efficient way. Which AWS resource provides this type of detailed guidance?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Prescriptive Guidance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Knowledge Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Framework']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS re:Post']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A cloud architect is looking for migration strategies, best practices, and implementation patterns to modernize workloads on AWS. Which AWS resource should they consult?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Prescriptive Guidance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Framework']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Support Center']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Artifact']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A development team wants to follow AWS-recommended methods for cloud adoption, migration, and modernization, complete with reference architectures. Which AWS resource provides this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Prescriptive Guidance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Service Catalog']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Framework']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The AWS Prescriptive Guidance has a targer audience of ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cloud architects']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Stakeholders']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Application developers']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Partners']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT an end goal of the service offered by AWS Professional Services?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Maintaining network security']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Becoming migration ready']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Adopting a cloud operating model']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Act according to AWS Prescriptive Guidance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Support plan is free and provides access to customer service, AWS documentation, whitepapers, and limited Trusted Advisor checks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A small development team is testing new workloads in a non-production environment and needs general technical guidance during business hours. Which AWS Support plan is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Support plan provides 24×7 access to Cloud Support Engineers and a 1-hour response time for production system outages?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise customer with mission-critical workloads wants access to a Technical Account Manager (TAM) and 15-minute response times for critical system outages. Which AWS Support plan should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Support plan includes access to the AWS Support API for automation and integration with support case management tools?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Support plan is intended for mission-critical workloads that require operations reviews and a Technical Account Manager (TAM)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A startup running production workloads wants 24×7 access to Cloud Support Engineers and third-party software support, but does not need a Technical Account Manager. Which plan fits best?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Support plan provides general guidance within 24 hours and system-impaired response within 12 hours?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are running AWS infrastructure at the "Business" level and your production system is down. In how long can you expect a response from AWS engineers?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '~1 hour']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '~15 minutes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '~12 hours']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '~24 hours']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are running AWS infrastructure at the "Enterprise" level and your production system is down. In how long can you expect a response from AWS engineers?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '~15 minutes']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '~1 hour']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '~12 hours']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '~24 hours']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A large enterprise wants proactive guidance through Well-Architected reviews, operational support, and concierge assistance. Which AWS Support plan offers these features?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Enterprise Support']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Business Support']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Developer Support']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Basic Support']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your infrastructure is intended for a non-production/testing environment. Which AWS Support Plan is best suited for this workload?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Developer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Enterprise']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Basic']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Business']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service is used for real-time messaging and event-driven computing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Amazon SNS (Simple Notification Service)'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Amazon SQS (Simple Queue Service)'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Amazon SES (Simple Email Service)'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'AWS Lambda'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '______ is a single dashboard that aggregates findings from services such as Amazon GuardDuty, AWS Config, and Amazon Inspector. Which AWS service provides this unified view?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization wants to continuously monitor its AWS environment against security best practices and compliance standards such as CIS AWS Foundations. Which AWS service can automatically perform these checks?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Artifact']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Inspector']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs to consolidate and prioritize security alerts coming from multiple AWS accounts and Regions into a single place for investigation. Which service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Shield Advanced']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is a valid choice for running a long-running container in a serverless capacity?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Fargate']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS EKS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Lambda']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Beanstalk']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs a fully managed file storage service that provides compatibility with Windows Server features such as SMB protocol support and Active Directory integration. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An engineering team needs a high-performance, managed file system for Windows-based applications that require shared file access and integration with Active Directory. Which AWS service meets this requirement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A media company needs a fully managed file system optimized for workloads like Windows applications and Lustre-based high-performance computing. Which service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A development team needs a scalable, serverless file system that multiple EC2 instances can access concurrently within the same Region. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An analytics workload requires a shared, elastic file system that can automatically grow and shrink as data is added or removed, without manual capacity management. Which AWS service is the best fit?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A web application running across multiple EC2 instances in different Availability Zones needs a shared file system for storing session data. Which AWS service should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An EC2 instance running a database application requires low-latency, high-performance storage that supports snapshots for backup and recovery. Which AWS storage option should be used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer needs persistent storage that remains available even if an EC2 instance is stopped or restarted. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EBS']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EFS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon FSx']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise needs a solution that continuously replicates on-premises servers to AWS to enable fast recovery of applications after an outage. Which service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A healthcare company must meet strict business continuity requirements and ensure critical systems can be rapidly restored in AWS after an unexpected data center failure. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A healthcare company must meet strict business continuity requirements and ensure critical systems can be rapidly restored in AWS after an unexpected data center failure. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your organization needs on-premises, full-system recovery readiness. Which AWS service can provide for this need?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your organization needs full-system recovery readiness for fast failover. Which AWS service can provide for this need?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '______ provides data backup in the form of file- or resource-level snapshots, while ______ provides data backup in the form of proactive, constant replications'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery, AWS Backup']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Backup, AWS Elastic Disaster Recovery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System, AWS Storage Gateway']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway, Amazon Elastic File System']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A stakeholder communicates to you, in layman\'s terms, that the company needs a hot standby copy of its entire on-premises system ready to boot if the main one dies. Which AWS service can handle this need?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Disaster Recovery']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Backup']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Storage Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial company stores millions of customer records in S3. Which AWS service can scan all their S3 buckets, identify which ones contain sensitive data, and flag those that are publicly accessible or unencrypted?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Macie']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Resource Access Manager']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial company stores millions of customer records in S3. Which AWS service can scan all their S3 buckets, identify which ones contain sensitive data, and flag those that are publicly accessible or unencrypted?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Macie']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Resource Access Manager']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company stores large amounts of sensitive customer data in Amazon S3 and wants to automatically discover and protect personally identifiable information (PII) such as names and credit card numbers. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Macie']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS GuardDuty']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS WAF']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A compliance officer needs to identify and classify sensitive data stored in Amazon S3 buckets to ensure the company meets data privacy regulations such as GDPR. Which AWS service can help with this task?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Macie']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Audit Manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_______ answers the question, "Which accounts can access this resource?" while ______ answers the question, "What actions can this user/role perform on this resource?"'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management, AWS Resource Access Manager']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Resource Access Manager, AWS Identity and Access Management']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Identity and Access Management, AWS IAM Identity Center']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center, AWS Identity and Access Management']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A security analyst needs to investigate unusual login patterns and network activity detected by Amazon GuardDuty. Which AWS service helps visualize and analyze these findings to identify the root cause?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Detective']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Inspector']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'After AWS Security Hub reports multiple findings related to potential compromised credentials, a security engineer wants to trace related API calls and user behavior over time. Which service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Detective']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudWatch']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company’s security team wants an AWS service that automatically collects and organizes data from GuardDuty, CloudTrail, and VPC Flow Logs to make it easier to perform root cause analysis of security incidents. Which service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Detective']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Audit Manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to integrate its on-premises Microsoft Active Directory with AWS to allow users to log in to AWS applications using their existing corporate credentials. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Directory Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Secrets Manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization is migrating its Windows-based applications to AWS and needs a managed Active Directory environment for authentication and group policy management. Which AWS service fulfills this requirement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Directory Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'An organization wants to establish a private, secure connection to an AWS VPC from multiple on-premises locations. What should they implement?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'AWS VPN',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'VPC Peering',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'AWS Direct Connect',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'AWS Transit Gateway',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company operates multiple Amazon VPCs and on-premises networks that need to communicate efficiently. They want to simplify their network architecture by using a single hub to manage all connections. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Transit Gateway']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Site-to-Site VPN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Route 53 Resolver']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise with dozens of VPCs across multiple Regions wants to simplify VPC-to-VPC communication and reduce the complexity of managing peering connections. Which AWS service provides this centralized connectivity solution?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Transit Gateway']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'VPC Peering']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect Gateway']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Network Firewall']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs to connect multiple VPCs and its on-premises data center through a single gateway to enable centralized routing and monitoring. Which AWS service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Transit Gateway']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS PrivateLink']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS VPN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company’s remote employees need to securely connect to their AWS VPC from their personal laptops using VPN software. ______ is an AWS offering specifically for this task.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Client VPN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Site-to-Site VPN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS VPN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization wants to provide its employees with secure remote access to AWS and on-premises resources through VPN connections from any location. ______ is an AWS offering specifically for this task.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Client VPN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS VPN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Site-to-Site VPN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Transit Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer working remotely needs a secure, local VPN connection to access resources inside a private subnet of an AWS VPC. ______ is an AWS offering specifically for this task.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Client VPN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS VPN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Site-to-Site VPN']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '________ improves application performance for users worldwide by using the AWS global network to route traffic to the optimal AWS Region.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Global Accelerator']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Route 53']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Transit Gateway']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise wants to access AWS services and third-party applications from within its VPC without exposing its traffic to the public internet. Which solution provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS PrivateLink']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Site-to-Site VPN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'VPC Peering']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service allows customers to privately access supported AWS services and VPC endpoint services using private IP addresses rather than public ones?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS PrivateLink']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Route 53 Resolver']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Transit Gateway']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A security-conscious company wants to ensure that traffic between its VPC and Amazon S3 does not leave the AWS network. Which feature should they implement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS PrivateLink']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS VPN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'VPC Peering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs to connect its on-premises network to Amazon VPN. Which AWS VPN solution does this concern?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Site-to-Site VPN']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Client VPN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________ is an AWS service that can be managed centrally by AWS Firewall Manager to enforce network protection policies across multiple accounts.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS WAF']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Inspector']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________ is an AWS service that can be managed centrally by AWS Firewall Manager to automatically apply DDoS protection policies across AWS accounts.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Shield Advanced']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________ is an AWS service that can be managed centrally by AWS Firewall Manager.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC Security Groups']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Inspector']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs a reliable way to decouple components of a distributed application so that messages are stored until they can be processed, ensuring that none are lost. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to ensure that tasks sent between microservices are delivered once and processed asynchronously, even if one of the services becomes temporarily unavailable. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An ecommerce company needs a way to queue order requests from its website so that backend systems can process them at their own pace without losing messages. Which AWS service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A retail company wants to build an event-driven architecture that reacts to changes across AWS services, such as when an item is added to an S3 bucket or a new user is created in IAM. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to connect multiple AWS services and SaaS applications so that certain business workflows are triggered automatically when specific events occur. Which AWS service enables this integration?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A logistics company wants to route events from multiple applications to different AWS Lambda functions based on specific event patterns and rules. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to coordinate multiple AWS Lambda functions into a defined workflow where each function runs in sequence and handles errors automatically. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer needs to design a workflow that visually represents business logic across multiple AWS services, such as invoking Lambda functions and handling retries. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An ecommerce application needs to manage a multi-step order processing workflow that involves validation, payment, and shipment. The workflow should automatically retry failed steps and maintain state. Which AWS service is best suited for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A retail company wants to build an event-driven architecture that reacts to changes across AWS services, such as when an item is added to an S3 bucket or a new user is created in IAM. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to connect multiple AWS services and SaaS applications so that certain business workflows are triggered automatically when specific events occur. Which AWS service enables this integration?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A logistics company wants to route events from multiple applications to different AWS Lambda functions based on specific event patterns and rules. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs a reliable way to decouple components of a distributed application so that messages are stored until they can be processed, ensuring that none are lost. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to ensure that tasks sent between microservices are delivered once and processed asynchronously, even if one of the services becomes temporarily unavailable. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An ecommerce company needs a way to queue order requests from its website so that backend systems can process them at their own pace without losing messages. Which AWS service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Queue Service (Amazon SQS)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Simple Notification Service (Amazon SNS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EventBridge']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data analyst needs to run ad-hoc SQL queries directly on data stored in Amazon S3 without loading it into a database. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A marketing team stores large amounts of structured and unstructured data in Amazon S3 and wants to quickly query it using standard SQL syntax without managing servers. Which AWS service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants a serverless solution to analyze log data stored in Amazon S3 using SQL queries and pay only for the queries they run. Which AWS service fulfills this requirement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data engineering team needs a fully managed ETL (extract, transform, load) service to prepare and clean data stored in Amazon S3 before loading it into a data warehouse. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to automate the discovery, cataloging, and transformation of raw data into structured formats for analytics. Which AWS service provides a data catalog and serverless ETL capabilities for this purpose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data analyst wants to create an automated job that extracts data from multiple sources, transforms it, and loads it into Amazon Redshift for reporting. Which AWS service should they use to build and schedule this job?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data science team needs to process large-scale datasets using open-source frameworks like Apache Spark and Hadoop on a managed cluster. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A research organization needs to analyze petabytes of genomic data using a scalable cluster that supports tools like Apache Hive and Presto. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to build a big data platform that runs distributed processing workloads with full control over the underlying cluster configuration. Which AWS service is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A business analyst wants to create interactive dashboards and visual reports from data stored in Amazon Redshift and S3, without writing SQL queries. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A marketing team needs a serverless business intelligence tool that can automatically generate visualizations and share reports with other AWS users. Which AWS service meets this requirement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An executive team wants to view key performance metrics in real-time dashboards generated from data stored in AWS. Which AWS service should they use to create these visual analytics?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A development team needs a managed service to search, analyze, and visualize log data from applications in near real time. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A security team needs to index and search VPC Flow Logs and CloudTrail logs to detect unusual network activity. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch Logs Insights']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to build a dashboard that allows users to perform full-text searches and visualize operational metrics from log data stored in AWS. Which service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to build a dashboard that allows users to perform full-text searches and visualize operational metrics from log data stored in AWS. Which service should they choose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A development team wants to automate the process of compiling source code, running unit tests, and producing software packages. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CodeBuild']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CodePipeline']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A DevOps engineer needs a fully managed continuous integration service that can build and test code in a scalable environment without managing build servers. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CodeBuild']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CodePipeline']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A software team wants to automatically compile and test their source code every time a change is pushed to the main branch in AWS CodeCommit. Which AWS service performs this build process?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CodeBuild']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CodePipeline']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A DevOps team wants to automate their software release process, integrating steps like source retrieval, build, testing, and deployment into a single workflow. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CodePipeline']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CodeBuild']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An engineering team wants to orchestrate multiple stages in their software delivery process — including build, test, and deploy — using a visual interface. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CodePipeline']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CodeBuild']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer needs to trace requests as they move through a distributed application to identify performance bottlenecks and pinpoint where latency is occurring. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CLI']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An operations team wants to analyze and visualize the flow of requests across multiple microservices in a production environment to troubleshoot errors. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CLI']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is experiencing latency issues in its serverless application and needs to identify which AWS Lambda function or API call is causing the delay. Which AWS service provides request tracing and performance analysis?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CLI']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is experiencing latency issues in its serverless application and needs to identify which AWS Lambda function or API call is causing the delay. Which AWS service provides request tracing and performance analysis?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CLI']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In functionality, AWS X-Ray is most similar to ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS QuickSight']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS S3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In functionality, AWS QuickSight is most similar to ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Grafana']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Prometheus']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A research organization needs to run thousands of batch computing jobs that can automatically scale based on the number of pending tasks. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Amazon Simple Queue Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A pharmaceutical company needs to run high-performance computing jobs that can be queued and executed automatically across a dynamically scaled compute environment. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Amazon Simple Queue Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data analytics team needs a managed service to efficiently run hundreds of containerized batch processing jobs without managing servers or manually provisioning compute resources. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Batch']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Step Functions']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Amazon Simple Queue Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Amazon Lightsail is a service for ________.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'simplified deployment and management of virtual private servers for web applications']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'building machine learning models integrated with AWS SageMaker at scale']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'running high-performance batch computing workloads']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'analyzing large datasets stored in Amazon S3 using Amazon Athena SQL queries']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides a fully managed service for hosting and deploying web applications?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Lambda']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Beanstalk']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon EC2']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon S3']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Amazon AppStream 2.0 allows end users to ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'stream desktop applications from AWS to any device using just a web browser']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'install desktop applications from AWS remotely and securely through a VPN']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'install desktop applications stored on a secured device']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'stream desktop applications from AWS to any device through AWS Client VPN']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A software company wants to deliver desktop applications to users through a web browser without requiring installation on local machines. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon AppStream 2.0']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces Secure Browser']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company needs to provide employees with persistent cloud-based Windows desktops that can be accessed securely from any device. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon AppStream 2.0']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces Secure Browser']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial firm wants to enable its employees to use fully managed, persistent virtual desktops in the cloud instead of traditional office PCs. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon AppStream 2.0']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces Secure Browser']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization wants to give contractors secure access to internal web applications without allowing them to download data or install software on their local devices. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces Secure Browser']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon AppStream 2.0']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A government agency needs to enable secure, isolated access to web-based tools and intranet portals for remote users without exposing its internal network. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces Secure Browser']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon WorkSpaces']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon AppStream 2.0']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____________ is an example of AWS IoT Core at work.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A network of smart home thermostats sending real-time temperature data to AWS for monitoring and automation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A web application deployed on AWS Elastic Beanstalk']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A company using Amazon S3 to store static website assets']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A developer using AWS Lambda to run scheduled tasks']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____________ is an example of AWS IoT Core at work.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A fleet of delivery trucks transmitting GPS and engine data to the cloud for predictive maintenance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A mobile app storing images in Amazon S3 buckets']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An e-commerce site hosted on Amazon EC2 instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A developer debugging an application using AWS X-Ray']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____________ is an example of AWS IoT Core at work.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A factory monitoring system where sensors send production line metrics to AWS for analysis']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A user streaming video content from Amazon CloudFront']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A company running Kubernetes workloads on Amazon EKS']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A database migration using AWS DMS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____________ is an example of AWS IoT Core at work.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A smart agriculture system where soil sensors send data to AWS for irrigation control']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A static website served from an S3 bucket']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An AWS Batch job processing large amounts of data']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'An internal web app deployed with AWS Elastic Beanstalk']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_____________ is an example of AWS IoT Core at work.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A city traffic management system collecting live data from connected traffic lights and sensors']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A user analyzing logs with Amazon OpenSearch Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A company using Amazon RDS for a transactional database']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A static blog hosted with AWS Amplify']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A frontend developer wants to quickly build, host, and deploy a scalable web application with continuous integration from GitHub. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Amplify']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Beanstalk']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS AppRunner']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A startup wants to quickly create a full-stack application with a hosted React frontend and a serverless backend powered by AWS services like API Gateway and DynamoDB. Which AWS service simplifies this process?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Amplify']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS AppSync']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Beanstalk']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Lightsail']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A news organization wants to automatically identify the sentiment (positive, negative, neutral) of thousands of customer feedback emails. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Translate']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A legal firm wants to extract key phrases, entities, and topics from thousands of contract documents stored in Amazon S3. Which AWS AI service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Textract']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Translate']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A social media analytics company needs to determine the overall mood of user comments and identify common topics discussed. Which AWS service enables natural language processing for this use case?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Translate']] },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise wants to create an intelligent search engine that can find accurate answers from documents stored across SharePoint, S3, and internal knowledge bases. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A support team wants a natural language search solution that allows employees to ask questions like “How do I reset my VPN?” and receive precise answers from corporate documentation. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A law firm needs to implement an AI-powered search solution that understands natural language queries and retrieves relevant case files from their document repository. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Textract']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to build a customer support chatbot that can understand natural language and respond conversationally to users. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A bank wants to create a voice-enabled virtual assistant that helps customers check account balances and recent transactions securely. Which AWS AI service enables this feature?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A retail company wants to automate its customer service chat system by enabling users to type or speak to a virtual agent that understands intent and context. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+      ],
+      correctAnswer: '0',
+    }, {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to convert dynamic text content from a website into lifelike speech to improve accessibility for visually impaired users. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company developing an e-learning platform wants to generate natural-sounding audio narration for online training materials. Which AWS AI service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Translate']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to create a voice-enabled news reader application that converts daily news articles into spoken words with different voice styles.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '________ is a generative AI assistant that can answer questions about the AWS environment, write code snippets, and help troubleshoot issues directly in the AWS Management Console.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Q']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Bedrock']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CodeWhisperer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon SageMaker']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________ is an AI-powered assistant to get contextual explanations and guidance about AWS services and configurations within the AWS Management Console.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Q']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CodeCatalyst']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Bedrock']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_________ is an AI assistant that can automatically summarize AWS documentation, recommend configurations, and assist with CLI commands inside the AWS Console.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Q']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon SageMaker']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CodeWhisperer']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A media company wants to automatically detect objects, scenes, and faces in millions of images uploaded by users. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Textract']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A security company wants to build a real-time video monitoring system that can recognize faces and detect suspicious activity in camera feeds. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Kinesis Video Streams']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Textract']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A social media app wants to automatically detect and filter inappropriate or unsafe images uploaded by users. Which AWS service provides this capability through machine learning?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Textract']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Kendra']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A customer service company wants to automatically convert recorded phone conversations into text so they can analyze customer sentiment and agent performance. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Lex']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A video platform wants to generate subtitles for uploaded videos automatically by converting the spoken audio into text. Which AWS AI service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Translate']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A healthcare company needs to convert doctor-patient voice recordings into accurate medical transcripts for documentation purposes. Which AWS service is best suited for this use case?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Transcribe']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Textract']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend Medical']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to identify underutilized Amazon EC2 instances and receive recommendations for more cost-efficient instance types. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Compute Optimizer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Cost Explorer']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An IT team wants to optimize performance and cost by right-sizing Amazon EC2, Auto Scaling groups, and EBS volumes based on utilization metrics. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Compute Optimizer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Budgets']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Cost Explorer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A startup wants machine learning-based recommendations to improve compute efficiency for its workloads running on Amazon EC2 and Lambda. Which AWS service provides these insights?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Compute Optimizer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Cost Explorer']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise wants to set up and govern a secure multi-account AWS environment following AWS best practices automatically. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Control Tower']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A large company needs a service that can automatically set up new AWS accounts with preconfigured guardrails for security, compliance, and governance. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Control Tower']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Service Catalog']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is expanding its AWS footprint and wants to centrally manage multiple accounts with built-in blueprints for logging, auditing, and compliance. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Control Tower']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A system administrator wants to monitor the operational status of AWS services in their Region and receive alerts when AWS experiences outages that might impact their resources. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Health Dashboard']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A business wants personalized alerts about maintenance events and service disruptions that specifically affect its AWS account resources. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Health Dashboard']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Security Hub']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A cloud administrator wants to view and manage the maximum number of Amazon EC2 instances that can be launched in a specific Region. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Service Quotas']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An IT team wants to request an increase to the number of Amazon S3 buckets allowed per account through the AWS Management Console. Which AWS service allows them to make this request?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Service Quotas']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Support Center']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Compute Optimizer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to programmatically monitor and receive alerts when an AWS resource is approaching its usage limit. Which AWS service should they integrate with Amazon CloudWatch for this purpose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Service Quotas']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A DevOps team wants to remotely manage and automate operational tasks such as patching, configuration management, and running scripts on EC2 instances. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An operations team needs a centralized service to view and manage EC2 and on-premises instances, automate patching, and store operational parameters securely. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A system administrator wants to automate the application of OS patches across multiple EC2 instances and generate reports on compliance status. Which AWS service enables this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Systems Manager']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Inspector']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A solutions architect wants to evaluate an existing cloud architecture against AWS best practices and receive recommendations for improvement. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Tool']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A development team wants to review their workloads using the five pillars of the AWS Well-Architected Framework and document improvement plans directly in the AWS Management Console. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Tool']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Control Tower']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company’s architecture review board wants to ensure that all workloads are evaluated for operational excellence, reliability, performance efficiency, cost optimization, and security. Which AWS service helps perform these reviews?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Tool']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Audit Manager']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Artifact']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company planning a large-scale cloud migration wants to identify all applications running on its on-premises servers, along with their dependencies and resource utilization. Which AWS service provides this capability?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Before migrating workloads to AWS, an enterprise wants to gather data about server configurations, network dependencies, and performance profiles in its data center. Which AWS service helps with this assessment?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An IT department needs to collect detailed information about existing on-premises applications to build a migration strategy and estimate total cost of ownership (TCO) in AWS. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A global enterprise wants a single place to track the progress of all application migrations to AWS, regardless of which migration tools are being used. Which AWS service provides this functionality?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization is migrating several applications to AWS using multiple tools and wants to monitor migration status, performance, and progress in a centralized dashboard. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is using both AWS Application Migration Service and AWS DMS for its migration projects but wants to track and consolidate the progress of all migrations in one place. Which AWS service should it use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to lift and shift its on-premises virtual machines to AWS with minimal changes to the applications. Which AWS service should they use to automate this process?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An IT team wants to rehost its legacy applications on AWS by replicating on-premises servers to EC2 instances automatically. Which AWS service simplifies this migration?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A data center modernization project requires the replication of entire application servers to AWS EC2 while maintaining minimal downtime. Which AWS service is best suited for this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service (AWS DMS)']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company wants to estimate the potential cost savings of moving its on-premises workloads to AWS before starting the migration. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Pricing Calculator']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An enterprise wants a detailed report analyzing its current on-premises infrastructure to determine the most cost-effective migration strategy and right-sized AWS instance types. Which AWS service provides this analysis?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Application Migration Service']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Schema Conversion Tool (AWS SCT)']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Cost Explorer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Before moving to AWS, a business wants to assess its existing compute and storage usage and receive a data-driven estimate of future AWS costs and savings. Which AWS service can generate this assessment?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Pricing Calculator']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_______ is a tool that should be used before migration begins, and _______ is a tool that can be used to monitor a migration\'s progress.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator, AWS Migration Hub']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub, Migration Evaluator']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Migration Hub, AWS Trusted Advisor']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Migration Evaluator, AWS Trusted Advisor']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service can be used to create APIs that act as a “front door” for applications to access data, business logic, or functionality from backend services?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon API Gateway']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS App Mesh']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service supports both RESTful APIs and WebSocket APIs for building real-time, two-way communication applications?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon API Gateway']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS AppSync']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS IoT Core']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront']] },
       ],
       correctAnswer: '0',
     },
