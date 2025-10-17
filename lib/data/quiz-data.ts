@@ -61,6 +61,7 @@ import docker from './docker';
 import cSharp from './c-sharp';
 import aspNetCore from './asp-net-core';
 import awsCloudPractitionerIi from './aws-cloud-practitioner-ii';
+import awsSolutionsArchitect from './aws-solutions-architect';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -114,6 +115,7 @@ const quizData: QuizData = {
   'comptia-network-plus': comptiaNetworkPlus,
   'aws-cloud-practitioner': awsCloudPractitioner,
   'aws-cloud-practitioner-ii': awsCloudPractitionerIi,
+  'aws-solutions-architect': awsSolutionsArchitect,
   'linear-algebra': linearAlgebra,
   data,
   'shell-scripting': shellScripting,
@@ -237,6 +239,7 @@ const categories = [
     name: 'Cloud Certifications',
     slug: 'cloud-certifications',
     quizzes: [
+      quizData['aws-solutions-architect'],
       quizData['aws-cloud-practitioner'],
       quizData['aws-cloud-practitioner-ii'],
     ],
