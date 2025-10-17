@@ -4272,5 +4272,192 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following AWS features CANNOT be used to grant permissions such as creating S3 buckets or scaling a cluster?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Service Control Policy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Group']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM User']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Role']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ is attached to a _______; never the other way around'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'policy, role']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'role, policy']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SCP, role']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'role, SCP']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ is dependent on a _______ to achieve an intended permissions effect'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Policy, IAM Role']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Role, IAM Policy']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SCP, IAM Role']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Role, SCP']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ is dependent on a _______ to achieve an intended permissions effect'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM Group, IAM Policy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Role, IAM Group']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Group, IAM Role']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Role, SCP']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ cannot be attached to a _______; only the other way around'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'role, policy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'policy, role']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SCP, role']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'role, SCP']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ cannot be attached to a _______; only the other way around'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'group, policy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'policy, role']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'group, role']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'role, SCP']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A SCP is attached to a _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'IAM User']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'IAM Role']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM Group']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'None of the above']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A SCP cannot be attached to a _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'User']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Root']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Account']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'OU']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'AWS STS allows users to assume a _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Role']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Policy']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Group']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SCP']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'To achieve a permissions effect, the ARN of an IAM Policy must be referenced in your call to AWS STS.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'To achieve a permissions effect, the ARN of an IAM Role must be referenced in your call to AWS STS.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A call to AWS STS involes referencing the ARN of a _____ in order to achieve a permissions effect.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Role']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Policy']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'SCP']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements about IAM Roles is true?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'An IAM Role is dependent on an IAM Policy except in the case of using an IAM Inline Policy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'An IAM Role can be used to affect permissions ']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Group']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'SCP']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following statements about IAM Roles is true?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'An IAM Role is dependent on an IAM Policy except in the case of using an IAM Inline Policy']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'An IAM Role can be used to affect permissions even if no policy is attached to it']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An IAM Role can be used to grant permissions but it cannot be used to deny permissions']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'An IAM Role is the sole means by which an IAM User can be granted permissions']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following actions is NOT possible?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Deleting a policy that is attached to a role']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Attaching multiple policies to a role']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Attaching a policy to multiple roles']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Modifying a policy to include more permissions after it has been attached to a role']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Two existing policies in an AWS IAM setup have conflicting rules. One is defined \'Effect: "Deny"\' and the other is defined \'Effect: "Allow"\'. Which answer is true?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '\'Effect: "Deny"\' takes precedent over \'Effect: "Allow"\'']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '\'Effect: "Allow"\' takes precedent over \'Effect: "Deny"\'']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'There is no guarantee which effect is applied first']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A rule conflict will result in an implicit deny']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
