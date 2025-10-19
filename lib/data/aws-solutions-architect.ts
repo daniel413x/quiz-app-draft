@@ -766,5 +766,68 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'An Amazon EC2 administrator created the following IAM policy associated with a group containing several users:',
+        ],
+        [QuizMarkdownType.CODE, `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ec2:TerminateInstances",
+      "Resource": "*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "10.100.100.0/24"
+        }
+      }
+    },
+    {
+      "Effect": "Deny",
+      "Action": "ec2:*",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "ec2:Region": "us-east-1"
+        }
+      }
+    }
+  ]
+}`],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'What is the effect of this policy?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Users can terminate an EC2 instance in any AWS Region except us-east-1.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Users can terminate an EC2 instance with the IP address 10.100.100.1 in the us-east-1 Region.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Users can terminate an EC2 instance in the us-east-1 Region when the user’s source IP is 10.100.100.254.'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Users cannot terminate an EC2 instance in the us-east-1 Region when the user’s source IP is 10.100.100.254.'],
+          ],
+        },
+      ],
+      correctAnswer: '2',
+    },
+
   ],
 } as QuizDataObject;

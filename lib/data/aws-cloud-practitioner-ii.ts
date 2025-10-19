@@ -4082,6 +4082,18 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service automatically sets up guardrails for security, compliance, and governance when creating new AWS accounts?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Control Tower']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Organizations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS IAM Identity Center']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Tool']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'A company’s architecture review board wants to ensure that all workloads are evaluated for operational excellence, reliability, performance efficiency, cost optimization, and security. Which AWS service helps perform these reviews?'],
       ],
       answers: [
@@ -4456,6 +4468,100 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, '\'Effect: "Allow"\' takes precedent over \'Effect: "Deny"\'']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'There is no guarantee which effect is applied first']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'A rule conflict will result in an implicit deny']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A solutions architect wants to evaluate an existing cloud architecture against AWS best practices and receive recommendations for improvement. Which AWS service should they use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Well-Architected Tool']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Trusted Advisor']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Config']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Control Tower']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Select the answer that correctly assigns features offered by AWS Trusted Advisor per level of support plan.'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Basic 1. ______'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Developer 2. ______'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Business 3. ______'],
+        [QuizMarkdownType.BREAK],
+        [QuizMarkdownType.TEXT, 'Enterprise 4. ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '1. Limited 2. Limited 3. Full 4. Full + proactive guidance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '1. Limited 2. Full 3. Full + proactive guidance 4. Full + proactive guidance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '1. None 2. Limited 3. Full 4. Full + proactive guidance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '1. None 2. None 3. Limited 4. Full + proactive guidance']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS service provides unified visibility into AWS resource performance through metrics, logs, and events to maintain system health?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudWatch']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS X-Ray']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A cloud architect needs to find out why EC2 instance costs are spiking. Which AWS feature can help solve this problem?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cost Explorer']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Budgets']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Billing and Cost Management']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon OpenSearch Service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Amazon S3 feature speeds up data uploads and downloads by routing traffic over the AWS global network instead of the public internet?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'S3 Transfer Acceleration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'S3 Cross-Region Replication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'S3 Multipart Upload']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3 Intelligent-Tiering']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which Amazon S3 feature allows users around the world to upload data to a centralized S3 bucket faster by using Amazon CloudFront’s globally distributed edge locations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'S3 Transfer Acceleration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'S3 Glacier Deep Archive']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'S3 Cross-Region Replication']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3 Versioning']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which S3 feature would you enable to improve the upload performance of large files to an S3 bucket from geographically distant locations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'S3 Transfer Acceleration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'S3 Replication']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'S3 Lifecycle Rules']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3 Object Lock']] },
       ],
       correctAnswer: '0',
     },
