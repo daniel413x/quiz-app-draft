@@ -4565,5 +4565,29 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In best practice, a target group represents ________'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'instances of an identical type']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'instances of any type']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EC2 instances']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Elastic or Network Load Balancers']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A _______ is a first-class resource type that is referenced by Load Balancers and Auto Scaling Groups'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'target group']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'launch template']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IOPS SSD']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'IAM Policy']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
