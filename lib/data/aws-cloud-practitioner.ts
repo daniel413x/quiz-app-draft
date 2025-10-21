@@ -6646,5 +6646,73 @@ https://api.skillstorm-congo.com/`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A Cloudfront Distribution can only accept static content as an origin.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A Cloudfront Distribution can accept dynamic content as an origin.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'False']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'True']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A ______ CANNOT serve as the endpoint to an AWS Global Accelerator.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'S3 Bucket']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Elastic IP']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ALB']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'EC2 Instance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A ______ CANNOT serve as the endpoint to an AWS Global Accelerator.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cloudfront Distribution']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Elastic IP']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ALB']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'EC2 Instance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which object CAN serve as the endpoint to an AWS Global Accelerator.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cloudfront Distribution']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Elastic IP']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'ALB']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'EC2 Instance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are engineering an inspection VPC. Which type of load balancer are you likely working with to receive incoming packets and forward the packets to a virtual firewall appliance?'],
+      ],
+      answers: [
+        { id: '0', order: 0, answer: [[QuizMarkdownType.TEXT, 'Gateway Load Balancer']] },
+        { id: '1', order: 1, answer: [[QuizMarkdownType.TEXT, 'Network Load Balancer']] },
+        { id: '2', order: 2, answer: [[QuizMarkdownType.TEXT, 'Application Load Balancer']] },
+        { id: '3', order: 3, answer: [[QuizMarkdownType.TEXT, 'None of the above']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
