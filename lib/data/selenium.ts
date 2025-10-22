@@ -2469,6 +2469,69 @@ Feature: axe-core results for any page
       question: [
         [
           QuizMarkdownType.TEXT,
+          'Your test fails just after the browser barely launches because it cannot find a',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'WebElement',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'annotated with',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          '@FindBy(...)',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. Which class can help most directly with this issue?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'AjaxElementLocatorFactory',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'WebDriver',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'PageFactory',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'ExpectedConditions',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
           'Evaluate: Selenium is a dependency of TestNG.',
         ],
       ],
