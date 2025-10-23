@@ -7,6 +7,39 @@ export default {
     slug: 'programming',
   },
   questions: [
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the concept of abstraction in Java entail?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction involves showing only what needs to be shown'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction involves creating concrete classes that can be instantiated'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction involves running multiple threads simultaneously'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Abstraction involves managing the memory allocation of objects'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     {
       question: [
         [QuizMarkdownType.TEXT, 'What does the term "modularity" refer to in programming?'],
@@ -3123,7 +3156,7 @@ class OrderService {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'To improve the performance by converting bytecode into native machine code at runtime'],
+            [QuizMarkdownType.TEXT, 'To convert bytecode into native machine code at runtime'],
           ],
         },
         {

@@ -1931,7 +1931,7 @@ public class Main {
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Abstraction involves showing only what needs to be shown, hiding the implementation details'],
+            [QuizMarkdownType.TEXT, 'Abstraction involves showing only what needs to be shown'],
           ],
         },
         {

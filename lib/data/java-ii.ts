@@ -3681,5 +3681,15 @@ void testMethod() {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [[QuizMarkdownType.TEXT, 'Java platform independence is conditional on _______']],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The availability of a JVM on the platform']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The ability of a platform to read bytecode']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The availability of the Java SDK on the platform']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Nothing; Java can be run on any platform']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
