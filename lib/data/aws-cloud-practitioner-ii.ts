@@ -7281,6 +7281,523 @@ export default {
       ],
       correctAnswer: '3',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which option is a use case of Amazon Route 53?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Manages global application traffic through a variety of routing types.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Detects configuration changes in the AWS environment.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Provides infrastructure security optimization recommendations.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Make synchronous replication of your data possible.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which option is a use case of Amazon EMR?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Enables you to analyze and process extremely large amounts of data in a timely manner.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Enables you to backup extremely large amounts of data at very low costs.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Enables you to easily run and manage Docker containers.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Enables you to move Exabyte-scale data from on-premises datacenters into AWS.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '________ is server-based'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon EMR']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon DynamoDB']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Lambda']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Fargate']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer best characterizes AWS CloudFormation?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It allows you to model your entire infrastructure in just a text file']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It compiles and builds application code in a timely manner']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It applies advanced IAM security features automatically']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It helps AWS customers deploy their applications without worrying about the underlying infrastructure']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is an advantage of using AWS as a cloud computing provider?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Enables customers to trade their capital expenses for operational expenses']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Provides custom hardware to meet any specification']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Manages all the compliance and auditing tasks']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Eliminates the need to monitor servers and applications']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'At the AWS _____ Support Plan, the customer receives access to the Infrastructure Event Management (IEM) feature for an additional fee.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Business']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Enterprise']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Basic']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Developer']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is true regarding the AWS Availability Zones and edge locations?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Edge locations are located in separate Availability Zones worldwide to serve global customers.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'An availability zone exists within an edge location to distribute content globally with low latency.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An Availability Zone is a geographic location where AWS provides multiple, physically separated and isolated edge locations.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'An AWS Availability Zone is an isolated location within an AWS Region, however edge locations are located in multiple cities worldwide.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is developing a mobile application and wants to allow users to use their Amazon, Apple, Facebook, or Google identities to authenticate to the application. Which AWS Service should the company use for this purpose?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon GuardDuty.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Personalize.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Cognito.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS IAM.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Service allows customers to create a template that programmatically defines policies and configurations of all AWS resources as code and so that the same template can be reused among multiple projects?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Config.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Auto Scaling.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS Service can perform health checks on Amazon EC2 instances?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Route 53.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Chime.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Aurora.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is developing an application that will leverage facial recognition to automate photo tagging. Which AWS Service should the company use for facial recognition?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS IAM.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Polly.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Rekognition.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company’s AWS workflow requires that it periodically perform large-scale image and video processing jobs. The customer is seeking to minimize cost and has stated that the amount of time it takes to process these jobs is not critical, but that cost minimization is the most important factor in designing the solution. Which EC2 instance class is best suited for this processing?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'EC2 On-Demand Instances.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'EC2 Reserved Instances - No Upfront.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'EC2 Spot Instances.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'EC2 Reserved Instances - All Upfront.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'There is a requirement to grant a DevOps team full administrative access to all resources in an AWS account. Who can grant them these permissions?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS account owner.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS technical account manager.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS security team.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS cloud support engineers.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need to migrate a large number of on-premises workloads to AWS. Which AWS service is the most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS File Transfer Acceleration.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Server Migration Service.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Database Migration Service.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Application Discovery Service.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a cloud computing deployment model that connects infrastructure and applications between cloud-based resources and existing resources not located in the cloud?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'On-premises.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Mixed.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Hybrid.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cloud.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is hosting business critical workloads in an AWS Region. To protect against data loss and ensure business continuity, a mirror image of the current AWS environment should be created in another AWS Region. Company policy requires that the standby environment must be available in minutes in case of an outage in the primary AWS Region. Which AWS service can be used to meet these requirements?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'CloudEndure Disaster Recovery.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'CloudEndure Migration.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Backup.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following S3 storage classes is most appropriate to host static assets for a popular e-commerce website with stable access patterns?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'S3 Standard-IA.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'S3 Intelligent-Tiering.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'S3 Glacier Deep Archive.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'S3 Standard.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to create a backup of your data in another geographical location. Where should you create this backup?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'In another Edge location.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'In another Region.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'In another VPC.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'In another Availability Zone.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is true in relation to the security of Amazon EC2?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'You should use instance store volumes to store login data.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'You should regularly patch the operating system and applications on your EC2 instances.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'You should deploy critical components of your application in the Availability Zone that you trust.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'You can track all API calls using Amazon Athena.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does AWS Cost Explorer provide to help manage your AWS spend?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Cost comparisons between AWS Cloud environments and on-premises environments.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Accurate estimates of AWS service costs based on your expected usage.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Consolidated billing.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Highly accurate cost forecasts for up to 12 months ahead.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is a feature of Amazon RDS that performs automatic failover when the primary database fails to respond?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'RDS Single-AZ.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'RDS Write Replica.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'RDS Snapshots.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'RDS Multi-AZ.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You are using several on-demand EC2 Instances to run your development environment. What is the best way to reduce your charges when these instances are not in use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Deleting all EBS volumes attached to the instances.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'You cannot minimize charges for on-demand instances.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Terminating the instances.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Stopping the instances.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following strategies helps protect your AWS root account?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Delete root user access keys if you do not need them.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Apply MFA for the root account and use it for all of your work.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Access the root account only from your personal Mobile Phone.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Only share your AWS account password or access keys with trusted persons.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You have just set up your AWS environment and have created six IAM user accounts for the DevOps team. What is the AWS recommendation when granting permissions to these IAM accounts?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Attach a separate IAM policy for each individual account.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Apply the Principle of Least Privilege.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'For security purposes, you should not grant any permission to the DevOps team.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Create six different IAM passwords.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Who from the following will get the largest discount?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A user who chooses to buy On-demand, Convertible, Partial upfront instances.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A user who chooses to buy Reserved, Convertible, All upfront instances.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A user who chooses to buy Reserved, Standard, No upfront instances.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A user who chooses to buy Reserved, Standard, All upfront instances.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following is an available option when purchasing Amazon EC2 instances?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The ability to bid to get the lowest possible prices.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The ability to register EC2 instances to get volume discounts on every hour the instances are running.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The ability to buy Dedicated Instances for up to 90% discount.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The ability to pay upfront to get lower hourly costs.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What does the term “Economies of scale” mean?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It means that you save more when you consume more.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It means as more time passes using AWS, you pay more for its services.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It means that AWS will continuously lower costs as it grows.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It means that you have the ability to pay as you go.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company experiences fluctuations in traffic patterns to their e-commerce website when running flash sales. What service can help the company dynamically match the required compute capacity to handle spikes in traffic during flash sales?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Auto Scaling.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic Compute Cloud.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Elastic File System.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon ElastiCache.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the below options is true of Amazon VPC?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC allows customers to control user interactions with all other AWS resources.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Customers have complete control over their Amazon VPC virtual networking environment.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS is responsible for all the management and configuration details of Amazon VPC.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon VPC helps customers to review their AWS architecture and adopt best practices.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which tool can a non-AWS customer use to compare the cost of on-premises environment resources to AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Cost Explorer.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Pricing Calculator.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Budgets.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS TCO Calculator.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following AWS services uses Puppet to automate how EC2 instances are configured?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS OpsWorks.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS CloudFormation.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Quick Starts.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CloudTrail.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization uses a hybrid cloud architecture to run their business. Which AWS service enables them to deploy their applications to any AWS or on-premises server?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Kinesis.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon QuickSight.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CodeDeploy.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your CTO has asked you to contact AWS support using the chat feature to ask for guidance related to EBS. However, when you open the AWS support center you can’t see a way to contact support via Chat. What should you do?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'There is no chat feature in AWS support.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The chat feature is available for all plans for an additional fee, but you have to request it first.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'At a minimum, upgrade to Business support plan.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Upgrade from the Basic Support plan to Developer Support.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A developer wants to quickly deploy and manage his application in the AWS Cloud, but he doesn’t have any experience with cloud computing. Which of the following AWS services would help the developer achieve his goal?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Fargate.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Batch.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon Personalize.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Elastic Beanstalk.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement best describes the AWS Pay-As-You-Go pricing model?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'With AWS, you replace low upfront expenses with large variable payments.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'With AWS, you replace low upfront expenses with large fixed payments.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'With AWS, you replace large upfront expenses with low fixed payments.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'With AWS, you replace large capital expenses with low variable payments.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following strategies help analyze costs in AWS?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using tags to group resources.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using AWS CloudFormation to automate the deployment of resources.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Deploying resources of the same type in different regions.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Configuring Amazon Inspector to automatically analyze costs and email reports.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A media company has an application that requires the transfer of large data sets to and from AWS every day. This data is business critical and should be transferred over a consistent connection. Which AWS service should the company use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Direct Connect.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Comprehend.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Snowmobile.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS VPN.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main benefit of the AWS Storage Gateway service?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It automates the process of building, maintaining, and running ETL jobs.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It provides physical devices to migrate data from on premises to AWS.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It allows integration of on-premises IT environments with Cloud Storage.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It provides hardware-based key storage for regulatory compliance.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'To protect against data loss, you need to backup your database regularly. What is the most cost-effective storage option that provides immediate retrieval of your backups?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 Glacier Deep Archive.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 Standard-Infrequent Access.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 Glacier.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Instance Store.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which service can you use to route traffic to the endpoint that provides the best application performance for your users worldwide?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Global Accelerator.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Data Pipeline.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS DAX Accelerator.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Transfer Acceleration.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Why are Serverless Architectures more economical than Server-based Architectures?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Serverless Architectures use new powerful computing devices.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'With the Server-based Architectures, compute resources continue to run all the time but with serverless architecture, compute resources are only used when code is being executed.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'When you reserve serverless capacity, you will get large discounts compared to server reservation.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'With Serverless Architectures you have the ability to scale automatically up or down as demand changes.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to transfer 200 Terabytes of data from on-premises locations to the AWS Cloud, which of the following can do the job in a cost-effective way?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Snowmobile.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Import/Export.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS DMS.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Snowball.']] },
+      ],
+      correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You have a real-time IoT application that requires sub-millisecond latency. Which of the following services should you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon Redshift.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Amazon Athena.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS Cloud9.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Amazon ElastiCache for Redis.']] },
+      ],
+      correctAnswer: '3',
+    },
 
   ],
 } as QuizDataObject;

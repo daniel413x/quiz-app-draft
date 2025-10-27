@@ -1000,5 +1000,260 @@ targetPort: 3000`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'What is the primary responsibility of ',
+        ],
+        [QuizMarkdownType.INLINE_CODE, 'kube-proxy'],
+        [
+          QuizMarkdownType.TEXT,
+          ' in a Kubernetes cluster?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Programs node-level networking rules (e.g., iptables/IPVS) so Service virtual IPs forward traffic to healthy Pod endpoints',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Assigns IP addresses to Pods and sets up CNI routes between nodes',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Terminates TLS and performs L7 routing for HTTP/HTTPS traffic into the cluster',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Encrypts all inter-Pod traffic with mTLS and rotates certificates',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which proxy/backends are valid operating modes for '],
+        [QuizMarkdownType.INLINE_CODE, 'kube-proxy'],
+        [QuizMarkdownType.TEXT, ' today?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'iptables and IPVS (userspace is legacy/deprecated)',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.TEXT, 'eBPF only']],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.TEXT, 'NAT64 and DNS64']],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.TEXT, 'Envoy and HAProxy']],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Where does ',
+        ],
+        [QuizMarkdownType.INLINE_CODE, 'kube-proxy'],
+        [
+          QuizMarkdownType.TEXT,
+          ' run and how is it typically deployed on EKS?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Runs on every worker node and is deployed as a DaemonSet',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Runs only on control-plane nodes as a static Pod managed by the API server',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Runs centrally as a single Deployment behind a ClusterIP Service',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Is an optional CLI plugin that runs on the kubectl client machine',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which control plane component is the front door to the cluster, handling authentication, authorization, admission, and all API requests?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-apiserver']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-scheduler']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'kubelet']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-proxy']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Where is the authoritative cluster state (objects like Deployments, Services, Secrets) stored in a Kubernetes control plane?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'etcd']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-controller-manager']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'containerd']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'coredns']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which control plane component is responsible for binding unscheduled Pods to suitable Nodes?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-scheduler']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-apiserver']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-controller-manager']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'cloud-controller-manager']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which control plane process runs controllers (e.g., Deployment, ReplicaSet, Node, ServiceAccount controllers) that continuously reconcile desired vs. current state?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-controller-manager']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-scheduler']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'kubelet']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-proxy']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Admission control (mutating/validating) occurs in which part of the control plane?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Inside the '], [QuizMarkdownType.INLINE_CODE, 'kube-apiserver'], [QuizMarkdownType.TEXT, ' via admission plugins and webhooks']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Inside the '], [QuizMarkdownType.INLINE_CODE, 'kube-controller-manager']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Inside each node’s '], [QuizMarkdownType.INLINE_CODE, 'kubelet']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Inside the cluster DNS service']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'For high availability of the control plane, which approach is most appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Run multiple '], [QuizMarkdownType.INLINE_CODE, 'kube-apiserver'], [QuizMarkdownType.TEXT, ' replicas behind a load balancer and use an odd-sized '], [QuizMarkdownType.INLINE_CODE, 'etcd'], [QuizMarkdownType.TEXT, ' cluster spread across failure domains']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Run a single large '], [QuizMarkdownType.INLINE_CODE, 'kube-apiserver'], [QuizMarkdownType.TEXT, ' with daily backups of '], [QuizMarkdownType.INLINE_CODE, 'etcd']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Use one '], [QuizMarkdownType.INLINE_CODE, 'etcd'], [QuizMarkdownType.TEXT, ' node and two schedulers without leader election']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Switch to a larger instance type for control plane components only']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the Kubernetes API Aggregation Layer used for in the control plane?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Extending the core API by registering aggregated API servers via '], [QuizMarkdownType.INLINE_CODE, 'APIService'], [QuizMarkdownType.TEXT, ' objects']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Sending logs from control plane components to external systems']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Replacing '], [QuizMarkdownType.INLINE_CODE, 'etcd'], [QuizMarkdownType.TEXT, ' with a SQL database']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Serving container images directly from the API server']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which pair of control plane components participates in leader election so only one instance is active at a time?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, ''], [QuizMarkdownType.INLINE_CODE, 'kube-controller-manager'], [QuizMarkdownType.TEXT, ' and '], [QuizMarkdownType.INLINE_CODE, 'kube-scheduler']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, ''], [QuizMarkdownType.INLINE_CODE, 'kube-apiserver'], [QuizMarkdownType.TEXT, ' and '], [QuizMarkdownType.INLINE_CODE, 'etcd']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, ''], [QuizMarkdownType.INLINE_CODE, 'kube-proxy'], [QuizMarkdownType.TEXT, ' and '], [QuizMarkdownType.INLINE_CODE, 'kubelet']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, ''], [QuizMarkdownType.INLINE_CODE, 'cloud-controller-manager'], [QuizMarkdownType.TEXT, ' and '], [QuizMarkdownType.INLINE_CODE, 'CoreDNS']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which control plane component performs authentication and authorization checks for incoming client requests?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-apiserver']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-scheduler']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-controller-manager']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'etcd']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Amazon EKS, which parts of the control plane are managed by AWS by default?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, ''], [QuizMarkdownType.INLINE_CODE, 'kube-apiserver'], [QuizMarkdownType.TEXT, ', '], [QuizMarkdownType.INLINE_CODE, 'etcd'], [QuizMarkdownType.TEXT, ', and supporting control plane infrastructure (highly available)']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Worker node '], [QuizMarkdownType.INLINE_CODE, 'kubelet'], [QuizMarkdownType.TEXT, ' and CNI plugins only']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Ingress controllers and DNS (CoreDNS) only']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Cluster add-ons like metrics-server and dashboard only']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
