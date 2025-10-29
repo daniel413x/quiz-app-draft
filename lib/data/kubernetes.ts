@@ -1255,5 +1255,60 @@ targetPort: 3000`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which command can be used to set the context of',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'kubectl',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'kubectl config use-context ecommerce-staging',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'kubectl config set-context ecommerce-staging',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'kubectl context set-context ecommerce-staging',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'kubectl context use-context ecommerce-staging',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

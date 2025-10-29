@@ -9,7 +9,6 @@ import {
   Open_Sans,
 } from 'next/font/google';
 import Image, { StaticImageData } from 'next/image';
-import { numOfQuestions } from '../../_consts';
 import Code from '../Code';
 import InlineCode from '../InlineCode';
 import DataTable from '../DataTable';
@@ -31,7 +30,7 @@ const shuffleAnswers = (answers: Answer[]) => shuffle(answers).slice().sort((a, 
 export const shuffleQuestions = (questions: Question[]) => shuffle(questions.map((q) => {
   const answers = shuffleAnswers(q.answers);
   return { ...q, answers };
-})).slice(0, numOfQuestions);
+}));
 
 export const renderMarkdown = (qmd: QuizMarkdownTuple[], params?: {
   isAnsweredIncorrectly?: boolean;

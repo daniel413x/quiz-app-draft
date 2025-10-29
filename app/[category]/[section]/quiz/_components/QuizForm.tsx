@@ -31,6 +31,7 @@ import Code from './Code';
 import QuizFormFields from './QuizFormFields';
 import IssueModal from './IssueModal';
 import useActiveElement from '../_hooks/useActiveElement';
+import useNumberOfQuestions from '../_hooks/useNumberOfQuestions';
 
 const formSchema = z.object({
   answer: z.string(),
@@ -50,7 +51,8 @@ const QuizForm = () => {
   const router = useRouter();
   const section = useParams().section as string;
   const category = useParams().category as string;
-  const [questions] = useState<QuestionType[]>(shuffleQuestions(quizData[section].questions));
+  const numOfQuestions = useNumberOfQuestions();
+  const [questions] = useState<QuestionType[]>(shuffleQuestions(quizData[section].questions).slice(0, numOfQuestions));
   const searchParams = useSearchParams();
   const qNum = Number(searchParams.get('qNum')) || 0;
   const question = questions[qNum];

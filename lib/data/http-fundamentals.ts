@@ -489,6 +489,18 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'With ______, after the initial handshake, communication no longer includes _______.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'WebSockets, headers']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'GraphQL, origins']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'gRPC, caching']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'REST, HTTP']] },
+      ],
+      correctAnswer: '0',
+    },
 
   ],
 } as QuizDataObject;

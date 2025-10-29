@@ -5,13 +5,14 @@ import quizData from '@/lib/data/quiz-data';
 import { useParams, useRouter } from 'next/navigation';
 import { QUIZ_ROUTE } from '@/lib/data/routes';
 import { useTimer } from '../_hooks/useTimer';
-import { numOfQuestions } from '../_consts';
+import useNumberOfQuestions from '../_hooks/useNumberOfQuestions';
 
 const QuizPrompt = () => {
   const category = useParams().category as string;
   const section = useParams().section as string;
   const router = useRouter();
   const quiz = quizData[section];
+  const actualNumOfQuestions = useNumberOfQuestions();
   const {
     handleStartTimer,
   } = useTimer();
@@ -26,7 +27,7 @@ const QuizPrompt = () => {
           {`${quiz.name} Quiz`}
         </h1>
         <span className="text-center text-purple-500">
-          {`(${numOfQuestions} questions)`}
+          {`(${actualNumOfQuestions} questions)`}
         </span>
         <span className="text-center mb-4">
           Once you press start, the timer will begin. You have within the alotted time to complete the quiz.

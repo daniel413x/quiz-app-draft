@@ -2,9 +2,10 @@
 
 import { cn } from '@/lib/utils';
 import useUserQuizData from '../_hooks/useUserQuizData';
-import { numOfQuestions } from '../_consts';
+import useNumberOfQuestions from '../_hooks/useNumberOfQuestions';
 
 const Progress = () => {
+  const numOfQuestions = useNumberOfQuestions();
   const {
     progress,
   } = useUserQuizData();
