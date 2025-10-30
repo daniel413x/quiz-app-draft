@@ -3253,5 +3253,194 @@ decoded_token = jwt.decode(
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer best describes preventing Cross-Site Request Forgery (CSRF)?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Ensure your frontend includes the CSRF token in forms or headers. For APIs, use stateless alternatives (JWT, etc.).',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You can do nothing in most cases — but avoid disabling CSRF protection unless you have a strong reason.',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'In your backend servers, always sanitize and validate data that can appear in templates.',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Always use HTTPS. Set',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'secure',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'cookies and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Strict-Transport-Security',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'headers (HSTS).',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer best describes preventing Cross-Site Scripting (XSS)?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Ensure your frontend includes the CSRF token in forms or headers. For APIs, use stateless alternatives (JWT, etc.).',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You can do nothing in most cases — but avoid disabling CSRF protection unless you have a strong reason.',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'In your backend servers, always sanitize and validate data that can appear in templates.',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Always use HTTPS. Set',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'secure',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'cookies and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Strict-Transport-Security',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'headers (HSTS).',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer best describes preventing Man-in-the-Middle attacks?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Ensure your frontend includes the CSRF token in forms or headers. For APIs, use stateless alternatives (JWT, etc.).',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'You can do nothing in most cases — but avoid disabling CSRF protection unless you have a strong reason.',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'In your backend servers, always sanitize and validate data that can appear in templates.',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'Always use HTTPS. Set',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'secure',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'cookies and',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'Strict-Transport-Security',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'headers (HSTS).',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '3',
+    },
   ],
 } as QuizDataObject;

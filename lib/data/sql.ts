@@ -2816,5 +2816,31 @@ CREATE TABLE student_courses (
       ],
       correctAnswer: '1',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your project contains the following model. Which answer is true?'],
+        [QuizMarkdownType.CODE, `@Entity
+@Table(name = "models")
+public class Model {
+
+    // Fields not shown
+
+    @ManyToOne
+    @JoinColumn(name = "make_id", nullable = false)
+    private Make make;
+
+    @OneToMany(mappedBy = "model")
+    @JsonBackReference
+    private List<Car> cars;
+}`],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'Model'], [QuizMarkdownType.TEXT, 'is in a N:1 relationship to'], [QuizMarkdownType.INLINE_CODE, 'Make'], [QuizMarkdownType.TEXT, 'and a 1:N relation to'], [QuizMarkdownType.INLINE_CODE, 'Car']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'Model'], [QuizMarkdownType.TEXT, 'is in a 1:N relationship to'], [QuizMarkdownType.INLINE_CODE, 'Make'], [QuizMarkdownType.TEXT, 'and a N:1 relation to'], [QuizMarkdownType.INLINE_CODE, 'Car']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'Model'], [QuizMarkdownType.TEXT, 'is in a 1:1 relationship to'], [QuizMarkdownType.INLINE_CODE, 'Make'], [QuizMarkdownType.TEXT, 'and a N:1 relation to'], [QuizMarkdownType.INLINE_CODE, 'Car']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'Model'], [QuizMarkdownType.TEXT, 'is in a N:1 relationship to'], [QuizMarkdownType.INLINE_CODE, 'Make'], [QuizMarkdownType.TEXT, 'and a 1:1 relation to'], [QuizMarkdownType.INLINE_CODE, 'Car']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
