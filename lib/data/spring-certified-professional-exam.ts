@@ -8055,12 +8055,133 @@ public void serviceMethods() {}
       correctAnswer: '0',
     },
     {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is true of dependency injection in Spring?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is for managing object instances (beans) — i.e., non-static classes whose lifecycle Spring controls.'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'It is for managing classes that are independent of any particular instantiation.'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Beans access other beans or resources programmatically'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'When the container shuts down, Spring calls'],
+            [QuizMarkdownType.INLINE_CODE, '@PostConstruct'],
+            [QuizMarkdownType.TEXT, ', then'],
+            [QuizMarkdownType.INLINE_CODE, 'DisposableBean.destroy()'],
+            [QuizMarkdownType.TEXT, ', then any custom destroy-method.'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
       question: [[QuizMarkdownType.TEXT, 'The default location of the local repository is __________.']],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, '~/.m2/repository']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Your Spring Tool Suite workspace folder']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, '~/maven/repository']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, '~/Java']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [[QuizMarkdownType.TEXT, 'Which method will propagate an exception upstream such that it can be handled by a global exception handler?']],
+      answers: [
+        {
+          id: '0',
+          order: 0,
+          answer: [[QuizMarkdownType.CODE, `public void aMethod() {
+try {
+  ...
+} catch (Throwable e) {
+  throw new Exception(...);
+}}`]],
+        },
+        {
+          id: '1',
+          order: 1,
+          answer: [[QuizMarkdownType.CODE, `public void aMethod() {
+try {
+  throw new Exception(...);
+} catch (Throwable e) {
+  ...
+}}`]],
+        },
+        {
+          id: '2',
+          order: 2,
+          answer: [[QuizMarkdownType.CODE, `public void aMethod() {
+try {
+  ...
+} catch (Throwable e) {
+  ...
+}}`]],
+        },
+        { id: '3', order: 3, answer: [[QuizMarkdownType.TEXT, 'All of the above']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You have a class'],
+        [QuizMarkdownType.INLINE_CODE, 'PatientMapper'],
+        [QuizMarkdownType.TEXT, 'that has a static method'],
+        [QuizMarkdownType.INLINE_CODE, 'toDTO(Patient patient)'],
+        [QuizMarkdownType.TEXT, 'and you have a class'],
+        [QuizMarkdownType.INLINE_CODE, 'PatientService'],
+        [QuizMarkdownType.TEXT, 'that needs to use the static method to return a '],
+        [QuizMarkdownType.INLINE_CODE, 'List'],
+        [QuizMarkdownType.TEXT, 'of'],
+        [QuizMarkdownType.INLINE_CODE, 'PatientDTO'],
+        [QuizMarkdownType.TEXT, 'Which answer is true?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'PatientMapper'],
+            [QuizMarkdownType.TEXT, 'should not be a dependency injection to'],
+            [QuizMarkdownType.INLINE_CODE, 'PatientService'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'PatientMapper'],
+            [QuizMarkdownType.TEXT, 'must be a dependency injection to'],
+            [QuizMarkdownType.INLINE_CODE, 'PatientService'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'toDTO(Patient patient)'],
+            [QuizMarkdownType.TEXT, 'will not be usable in this way'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'PatientService'],
+            [QuizMarkdownType.TEXT, 'must be a static class'],
+          ],
+        },
       ],
       correctAnswer: '0',
     },

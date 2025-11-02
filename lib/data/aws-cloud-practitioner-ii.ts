@@ -5060,7 +5060,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a benefit of Amazon S3?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a benefit of Amazon S3?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 can run any type of application or backend system']] },
@@ -5072,7 +5072,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a benefit of Amazon S3?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a benefit of Amazon S3?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon S3 stores any number of objects, but with object size limits']] },
@@ -5084,7 +5084,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a feature found on the AWS Health Dashboard?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a feature found on the AWS Health Dashboard?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'A detailed troubleshooting guidance to address AWS events impacting your resources']] },
@@ -5602,7 +5602,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which of the following IS an important design principles you should adopt when designing systems on AWS?'],
+        [QuizMarkdownType.TEXT, 'Which of the following is an important design principles you should adopt when designing systems on AWS?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Remove single points of failure']] },
@@ -5626,7 +5626,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS an advantage of using Cloud Computing over using traditional data centers?'],
+        [QuizMarkdownType.TEXT, 'Which answer is an advantage of using Cloud Computing over using traditional data centers?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Eliminating Single Points of Failure']] },
@@ -5817,7 +5817,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a benefit of using the Amazon Relational Database Service?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a benefit of using the Amazon Relational Database Service?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Lower administrative burden']] },
@@ -5829,7 +5829,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a benefit of using the Amazon Relational Database Service?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a benefit of using the Amazon Relational Database Service?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Resizable compute capacity']] },
@@ -6347,7 +6347,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a benefit of using DynamoDB?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a benefit of using DynamoDB?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Offers extremely low (single-digit millisecond) latency']] },
@@ -6359,7 +6359,7 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which answer IS a benefit of using DynamoDB?'],
+        [QuizMarkdownType.TEXT, 'Which answer is a benefit of using DynamoDB?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Automatically scales to meet required throughput capacity']] },
@@ -10077,6 +10077,173 @@ export default {
       ],
       correctAnswer: '1',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An e-commerce company needs a file storage service that is scalable and compatible with Server Message Block (SMB) protocol. Which AWS offering suits the company\'s needs?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS FSx']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS EFS']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS EBS.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS S3.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the AWS Cloud Development Kit (CDK)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'An extension of AWS CLI that includes AWS CloudFormation-like functionality.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'An SDK for developing AWS web applications in JavaScript.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An open-source framework for defining AWS infrastructure using familiar programming languages.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A visualization tool for monitoring AWS resources in real time.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which programming languages are supported by the AWS Cloud Development Kit (CDK)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Only Java and Python.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Assembly languages.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'High-level programming languages.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Java, Python, C# and JavaScript.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the purpose of the "cdk synth" command in the AWS Cloud Development Kit (CDK)?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'It compiles the CDK code into an AWS Lambda function.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'It deploys resources directly to AWS.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'It generates an AWS CloudFormation template from the CDK code.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'It packages and uploads artifacts to Amazon S3.']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which AWS tool can reduce the incidence of human manual error?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'AWS Cloud Development Kit']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS Software Development Kit']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'AWS CLI']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS CodeCommit']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A mobile application needs to fetch data from multiple AWS sources, including DynamoDB, Lambda, and RDS, and merge the responses into a single API call. Which AWS service provides a managed GraphQL API to achieve this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Amazon API Gateway.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'AWS AppSync.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Amazon CloudFront.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'AWS Glue.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company is building a real-time chat application that requires instant message updates across connected users. Which feature of AWS AppSync can best support this use case?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'GraphQL Subscriptions.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Schema Caching.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'API Caching.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Query Resolvers.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following best describes the core purpose of AWS AppSync?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To create REST APIs for web and mobile apps.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To simplify data retrieval by managing GraphQL APIs and connecting multiple data sources.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To perform ETL (Extract, Transform, Load) operations on data stored in S3 buckets.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To simplify communication between applications or databases deployed on different VPCs.']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An organization purchased Convertible Reserved Instances but wants to switch to a different instance family with more memory. What must they ensure before making the exchange?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'The new Reserved Instances must be of equal or greater value than the original ones.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'The exchange can only happen after the first year of the reservation.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'They must first cancel their existing Convertible RIs.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'They must contact AWS Support to approve the exchange.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which of the following instance attributes can be modified when exchanging Convertible Reserved Instances?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Instance family, operating system, tenancy, or payment option.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Region, Edge Location, Local Zone, or Availability Zone.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'IAM policies attached to the instance.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Security group, NACL configuration, and subnet configuration.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company running long-term, predictable workloads wants flexibility to change instance types if its application requirements change. Which EC2 pricing option best fits this use case?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convertible Reserved Instances.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Standard Reserved Instances.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Spot Instances.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Dedicated Hosts.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does the discount level of Convertible Reserved Instances generally compare to Standard Reserved Instances?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Convertible RIs offer a lower discount because of their exchange flexibility.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Convertible RIs offer a higher discount because they require longer commitments.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Convertible RIs offer the same discount as Standard RIs.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Convertible RIs do not offer any discount compared to On-Demand Instances.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What can AWS edge locations be used for?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Reducing traffic on the server by caching responses.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Running NoSQL database caching services.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Hosting applications.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Sending notification messages to end users.']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What can AWS edge locations be used for?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Delivering content closer to users.']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Running NoSQL database caching services.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Hosting applications.']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Sending notification messages to end users.']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
