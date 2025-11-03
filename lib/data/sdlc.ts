@@ -4,7 +4,7 @@ export default {
   name: 'Software Development Lifecycle (SDLC)',
   slug: 'sdlc',
   category: {
-    slug: 'programming',
+    slug: 'software-development',
   },
   questions: [
     {

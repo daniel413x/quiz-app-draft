@@ -62,6 +62,7 @@ import cSharp from './c-sharp';
 import aspNetCore from './asp-net-core';
 import awsCloudPractitionerIi from './aws-cloud-practitioner-ii';
 import awsSolutionsArchitect from './aws-solutions-architect';
+import qa from './qa';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -98,6 +99,7 @@ const quizData: QuizData = {
   jenkins,
   selenium,
   sdlc,
+  qa,
   kubernetes,
   multithreading,
   'java-threads': javaThreads,
@@ -168,6 +170,7 @@ const categories = [
     slug: 'software-development',
     quizzes: [
       quizData.sdlc,
+      quizData.qa,
     ],
   },
   {
@@ -215,7 +218,6 @@ const categories = [
       quizData.selenium,
       quizData['cpp-i'],
       quizData.git,
-      quizData.sdlc,
     ],
   },
   {
