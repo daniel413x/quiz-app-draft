@@ -3691,5 +3691,31 @@ void testMethod() {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [[QuizMarkdownType.TEXT, 'Which set of commands clears the Maven cache and rebuilds the project?']],
+      answers: [
+        {
+          id: '0',
+          answer: [[QuizMarkdownType.CODE, `mvn clean
+mvn compile`]],
+        },
+        {
+          id: '1',
+          answer: [[QuizMarkdownType.CODE, `mvn clean
+mvn package`]],
+        },
+        {
+          id: '2',
+          answer: [[QuizMarkdownType.CODE, `mvn compile
+mvn install`]],
+        },
+        {
+          id: '3',
+          answer: [[QuizMarkdownType.CODE, `mvn validate
+mvn compile`]],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

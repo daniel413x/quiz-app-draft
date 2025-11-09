@@ -8185,5 +8185,37 @@ try {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which scenario can Spring Security\'s CSRF protection be disabled?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The Spring server is behind an API gateway'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Your client application includes a CSRF token'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You are sanitizing input as part of the business logic of your application'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You are using session cookies with'], [QuizMarkdownType.INLINE_CODE, 'secure'], [QuizMarkdownType.TEXT, 'set to true'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
