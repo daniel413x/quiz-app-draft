@@ -2717,38 +2717,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Your Accounts Service receives a POST request where the user has chosen a name that already exists in a column in the accounts table. What is the appropriate status code to return?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '409'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '400'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '500'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.INLINE_CODE, '403'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'You are writing unit tests for a controller class. Which of the following tools would you use to interact directly with the controller class?'],
       ],
       answers: [
@@ -8217,5 +8185,273 @@ try {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your Spring Cloud api gateway service contains the following code. Which answer must be true for your api gateway to validate JWT tokens on each request to the patient service route?'],
+        [QuizMarkdownType.CODE, `spring:
+  cloud:
+    gateway:
+      routes:
+        - id: patient-service-route
+          uri: http://patients-service:4000
+          predicates:
+            - Path=/api/patients/**
+          filters:
+            - StripPrefix=1
+            - JwtValidation
+`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You must define a class'],
+            [QuizMarkdownType.INLINE_CODE, 'JwtValidationGatewayFilterFactory'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You must define a class'],
+            [QuizMarkdownType.INLINE_CODE, 'JwtValidationGatewayFilter'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You must define a class'],
+            [QuizMarkdownType.INLINE_CODE, 'JwtValidation'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'You must define a class'],
+            [QuizMarkdownType.INLINE_CODE, 'JwtValidationFilterFactory'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which file is commonly used by Spring Boot to load external configuration properties?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'application.properties']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'config.xml']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'spring-config.json']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'pom.xml']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the correct code to inject a property value from'],
+        [QuizMarkdownType.INLINE_CODE, 'application.properties'],
+        [QuizMarkdownType.TEXT, 'into a Spring component?'],
+      ],
+      answers: [
+        // eslint-disable-next-line no-template-curly-in-string
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '@Value("${property.name}")']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '@Inject("property.name")']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '@Config("property.name")']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '@Property("property.name")']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Evaluate: Spring Boot checks for environment variables and command-line arguments before reading'],
+        [QuizMarkdownType.INLINE_CODE, 'application.properties'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How do you activate a Spring Boot profile named'],
+        [QuizMarkdownType.INLINE_CODE, 'dev'],
+        [QuizMarkdownType.TEXT, 'using the command line?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '-Dspring.profiles.active=dev']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '--profile=dev']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '-Dprofile=dev']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'spring.profile.dev=true']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.INLINE_CODE, '@Profile("dev")'],
+        [QuizMarkdownType.TEXT, 'can modify a @Bean _______ to make it only active when the "dev" profile is active'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'method']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'class']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'constructor parameter']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'factory']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which method in a Spring bean is typically called immediately after dependency injection but before the bean is ready for use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'destroy()']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'afterPropertiesSet()']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'init()']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'contextInitialized()']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the main purpose of a'],
+        [QuizMarkdownType.INLINE_CODE, 'BeanFactoryPostProcessor'],
+        [QuizMarkdownType.TEXT, 'in the Spring Bean lifecycle?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To modify bean instances after initialization']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To modify bean definitions before any beans are instantiated']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To manage application context events']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To handle exceptions during bean destruction']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which two methods must be implemented by a class that implements the'],
+        [QuizMarkdownType.INLINE_CODE, 'BeanPostProcessor'],
+        [QuizMarkdownType.TEXT, 'interface?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'postProcessBeforeInitialization'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'postProcessAfterInitialization'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'init'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'destroy'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'preProcessBean'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'postProcessBean'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'beforeInit'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'afterInit'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When using Spring AOP, runtime behavior is added to beans primarily through which mechanism?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Dynamic proxies']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Custom annotations']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'XML configuration']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Reflection API only']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Spring creates proxies at runtime using which class when the bean implements interfaces?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'CglibProxyFactory']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'JdkDynamicAopProxy']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'ProxyCreatorSupport']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'AspectWeaver']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'How does Spring determine the order in which beans are created when dependencies exist between them?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'By the order they appear in the configuration file']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'By alphabetical order of bean names']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'By dependency relationships and initialization requirements']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'By random selection']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When multiple beans of the same type exist, how can ambiguity be resolved during dependency injection?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Using the'], [QuizMarkdownType.INLINE_CODE, '@Primary'], [QuizMarkdownType.TEXT, 'annotation']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Using the'], [QuizMarkdownType.INLINE_CODE, '@Lazy'], [QuizMarkdownType.TEXT, 'annotation']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Using the'], [QuizMarkdownType.INLINE_CODE, '@Deprecated'], [QuizMarkdownType.TEXT, 'annotation']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Using the'], [QuizMarkdownType.INLINE_CODE, '@PostConstruct'], [QuizMarkdownType.TEXT, 'annotation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What is the role of the'],
+        [QuizMarkdownType.INLINE_CODE, 'DisposableBean'],
+        [QuizMarkdownType.TEXT, 'interface in the Spring Bean lifecycle?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'To define logic executed after bean initialization']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'To define logic executed before bean initialization']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'To define logic executed during bean destruction']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'To control dependency injection']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which interface allows custom logic to run right after all bean properties have been set by Spring?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'InitializingBean']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'DisposableBean']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'ApplicationListener']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'SmartLifecycle']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When injecting beans by type, what issue may occur if multiple beans share the same type?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Spring throws a'], [QuizMarkdownType.INLINE_CODE, 'NoUniqueBeanDefinitionException']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Spring throws a'], [QuizMarkdownType.INLINE_CODE, 'BeanCurrentlyInCreationException']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Spring ignores duplicate beans and injects the first one']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Spring automatically merges the beans into one']] },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;
