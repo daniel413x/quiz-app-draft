@@ -7124,7 +7124,7 @@ public void serviceMethods() {}
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Destruction'],
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
           ],
         },
         {
@@ -7144,19 +7144,19 @@ public void serviceMethods() {}
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'Initialization'],
+            [QuizMarkdownType.TEXT, 'Instantiation'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.TEXT, 'Instantiation'],
+            [QuizMarkdownType.TEXT, 'Initialization'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'Destruction'],
+            [QuizMarkdownType.TEXT, 'Encapsulation'],
           ],
         },
         {

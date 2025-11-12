@@ -2990,109 +2990,13 @@ class OrderService {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'Which feature of Java ensures that errors are caught and handled during runtime?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Exception Handling'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Garbage Collection'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Multithreading'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Object-Oriented Programming'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'What is the role of the garbage collector in Java?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'To automatically manage memory by reclaiming memory used by objects that are no longer reachable'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'To compile Java code to machine code'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'To handle exceptions during runtime'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'To manage multithreaded applications'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'Which principle of Java focuses on allowing the creation of robust and error-free code?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Reliability'],
-          ],
-        },
-        {
-          id: '1',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Simplicity'],
-          ],
-        },
-        {
-          id: '2',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Security'],
-          ],
-        },
-        {
-          id: '3',
-          answer: [
-            [QuizMarkdownType.TEXT, 'Portability'],
-          ],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'How does Java ensure code portability across different platforms?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.TEXT, 'By using bytecode that can be interpreted by the JVM on any platform'],
+            [QuizMarkdownType.TEXT, 'By using bytecode that can be interpreted by the JVM'],
           ],
         },
         {
@@ -3104,7 +3008,7 @@ class OrderService {
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.TEXT, 'By compiling directly to native machine code'],
+            [QuizMarkdownType.TEXT, 'By the JVM compiling directly to native machine code'],
           ],
         },
         {
@@ -3755,6 +3659,166 @@ class OrderService {
         },
       ],
       correctAnswer: '3',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'According to ________, it is possible for a method to return a subtype where a supertype is expected'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Invariance'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dependency Inversion'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'According to ________, it is possible for a method to return a supertype where a subtype is expected'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Contravariance'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Covariance'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Invariance'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dependency Inversion'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A superclass Bird has a method fly() that returns a string "This bird flies." What would be a violation of the Liskov Substitution Principle?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class Penguin overrides fly() to throw an UnsupportedOperationException'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class Penguin overrides fly() to return "This bird does not fly"'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class Penguin overloads fly() to return "This bird now flies" if a boolean "jetpack" is true'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A class Penguin inherits the method fly() and does not override or overload it'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A programmer defines a class that extends a superclass. The programmer decides to override an inherited method to simply throw an error in lieu of an implementation for the method. In this case, the ________ has been violated.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Liskov Substitution Principle'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Open/Closed Principle'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dependency Inversion'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Interface Segregation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'If Cat is a subclass of Animal, which answer is true according to covariance?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'List<Cat> ⊆ List<Animal>'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Consumer<Animal> ⊆ Consumer<Cat>'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'List<Cat> and List<Animal> are unrelated'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'List<Object> ⊆ List<Animal>'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
   ],
 } as QuizDataObject;

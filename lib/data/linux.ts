@@ -491,6 +491,38 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to move an executable file'],
+        [QuizMarkdownType.INLINE_CODE, 'coolprogram'],
+        [QuizMarkdownType.TEXT, 'so that it runs from your CLI via the command'],
+        [QuizMarkdownType.INLINE_CODE, 'coolprogram'],
+        [QuizMarkdownType.TEXT, '. To which folder should you move the file?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '/usr/local/bin']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '/usr/bin']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '/bin']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '/opt/coolprogram']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You want to move an executable file'],
+        [QuizMarkdownType.TEXT, 'coolprogram'],
+        [QuizMarkdownType.TEXT, 'so that it runs from your CLI via the command'],
+        [QuizMarkdownType.TEXT, 'coolprogram'],
+        [QuizMarkdownType.TEXT, '. To which folder should you move the file?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '/usr/local/bin']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '/usr/bin']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '/bin']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '/opt/coolprogram']] },
+      ],
+      correctAnswer: '0',
+    },
 
   ],
 } as QuizDataObject;
