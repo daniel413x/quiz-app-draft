@@ -93,6 +93,20 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'You build a Docker image with the command'],
+        [QuizMarkdownType.INLINE_CODE, 'docker build'],
+        [QuizMarkdownType.TEXT, 'and it is now part of your local repository. Which command deletes the image you built?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'docker rmi [CONTAINER ID]']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'docker kill [CONTAINER ID]']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'docker rm postgres:latest']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'docker delete [CONTAINER ID]']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Your'],
         [QuizMarkdownType.INLINE_CODE, 'docker-compose.yml'],
         [QuizMarkdownType.TEXT, 'file contains the following block. Which answer is true for the'],

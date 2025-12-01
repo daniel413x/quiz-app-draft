@@ -8452,6 +8452,31 @@ try {
       ],
       correctAnswer: '0',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need to define an access-control SpEL expression which will be evaluated after a method has been invoked. Which annotation is appropriate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, '@PostAuthorize']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, '@PreAuthorize']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, '@PreFilter']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, '@PostFilter']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a service method that finds and returns an object based on a associated id?'],
+        [QuizMarkdownType.INLINE_CODE, 'user_id'],
+        [QuizMarkdownType.TEXT, ', you need to validate that the returned object belongs to the user that invokes the method. Which Spring Security annotation can handle this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'PostAuthorize']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'PreAuthorize']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'PreFilter']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'PostFilter']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;

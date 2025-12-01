@@ -1149,6 +1149,19 @@ targetPort: 3000`,
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'The control plane component responsible for validating all API requests against RBAC rules is'],
+        [QuizMarkdownType.INLINE_CODE, '_______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-apiserver']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-scheduler']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'kubelet']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'kube-proxy']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Where is the authoritative cluster state (objects like Deployments, Services, Secrets) stored in a Kubernetes control plane?'],
       ],
       answers: [
@@ -1304,6 +1317,93 @@ targetPort: 3000`,
             [
               QuizMarkdownType.INLINE_CODE,
               'kubectl context use-context ecommerce-staging',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In your deployed service',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jmeter-orchestrator',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          ', you run the command',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'kubectl scale deployment jmeter-agents --replicas=0',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'and you receive the following error. Which block of code should be added to the',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'Role',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'associated with',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'jmeter-orchestrator',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'in order to resolve the error?',
+        ],
+        [
+          QuizMarkdownType.CODE,
+          'Error from server (Forbidden): deployments.apps "jmeter-agents" is forbidden: User "system:serviceaccount:default:jenkins" cannot patch resource "deployments/scale" in API group "apps" in the namespace "default"',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.CODE,
+              `  - apiGroups: ["apps"]
+    resources: ["deployments/scale"]
+    verbs: ["patch"]`,
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            QuizMarkdownType.CODE,
+            `  - apiGroups: [""]
+    resources: ["deployments/scale"]
+    verbs: ["patch"]`,
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            QuizMarkdownType.CODE,
+            `  - apiGroups: [""]
+    resources: ["deployments"]
+    verbs: ["update"]`,
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.CODE,
+              `  - apiGroups: ["apps"]
+    resources: ["deployments/scale"]
+    verbs: ["update"]`,
             ],
           ],
         },
