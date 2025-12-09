@@ -63,12 +63,14 @@ import aspNetCore from './asp-net-core';
 import awsCloudPractitionerIi from './aws-cloud-practitioner-ii';
 import awsSolutionsArchitect from './aws-solutions-architect';
 import qa from './qa';
+import tcpIp from './tcp-ip';
 
 type QuizData = {
   [key: string]: QuizDataObject;
 };
 
 const quizData: QuizData = {
+  'tcp-ip': tcpIp,
   'performance-testing': performanceTesting,
   linux,
   windows,
@@ -307,6 +309,13 @@ const categories = [
     slug: 'decentralized-tech',
     quizzes: [
       quizData.blockchains,
+    ],
+  },
+  {
+    name: 'Networking',
+    slug: 'networking',
+    quizzes: [
+      quizData['tcp-ip'],
     ],
   },
 ];
