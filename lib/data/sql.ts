@@ -2842,5 +2842,20 @@ public class Model {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer indicates the correct syntax to create a table'],
+        [QuizMarkdownType.INLINE_CODE, 'category'],
+        [QuizMarkdownType.TEXT, 'only if it does not exist?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'create table if not exists category (...)']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'create table where not exists category (...)']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'create table category if not exists (...)']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'create table category where not exists (...)']] },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;

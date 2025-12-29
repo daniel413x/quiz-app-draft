@@ -6997,6 +6997,50 @@ java HelloWorld.java`],
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'You write a small Java program meant to show multithreading in action where'],
+        [QuizMarkdownType.INLINE_CODE, 'DoingLaundry.java'],
+        [QuizMarkdownType.TEXT, 'serves as the program\'s main class. Which commands will compile and run this program successfully?'],
+        [QuizMarkdownType.CODE, `.
+├── DoingLaundry.java
+├── Dryer.java
+├── Folder.java
+├── Laundry.java
+└── Washer.java`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `javac *.java
+java DoingLaundry`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `javac *.java
+java DoingLaundry.java`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `javac *.java
+java *.java`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `javac DoingLaundry.java
+java DoingLaundry.java`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'How do you write a Hello World script in Java?'],
       ],
       answers: [

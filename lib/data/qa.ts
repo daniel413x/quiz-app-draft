@@ -847,5 +847,215 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A development team commits code changes multiple times per day, triggering automatic builds and unit tests after each commit. Which practice is this an example of?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A company’s build pipeline automatically tests and packages code, then deploys it to a staging environment for manual approval before production release. What practice does this describe?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A SaaS company’s CI/CD pipeline automatically deploys every passing build directly to production without human intervention. Which practice is being used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An e-commerce platform uses Jenkins to run automated unit tests whenever a developer merges code into the main branch. No code is deployed yet. What phase of CI/CD does this represent?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial services team runs automated end-to-end tests and performance checks on each build. Once approved by QA, the same artifact can be manually pushed to production at any time. What process is being used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A mobile app development team automatically pushes new code to production servers as soon as it passes all automated tests, without requiring any manual approval. Which DevOps practice is this?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Developers frequently merge their local branches to the main repository, and each merge automatically runs tests to ensure compatibility with other code. What practice is being applied here?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A DevOps team has set up pipelines where code is automatically built, tested, and deployed to staging. A manager must click “Approve” before production deployment. What is this an example of?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An online game development company deploys new server patches multiple times a day, automatically and without human intervention, as soon as all pipeline checks succeed. Which stage of CI/CD does this illustrate?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a healthcare system project, developers push new code daily to a shared repository. Each change is automatically compiled and tested. What is this process called?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which practice focuses on automatically building and testing code after each commit?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which practice ensures that the codebase is always in a deployable state but requires manual approval before release?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which approach automatically deploys every change that passes automated tests into production without human intervention?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In which stage of the CI/CD pipeline do developers most often detect and fix integration errors early?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________ relies heavily on automated pipelines to push code through staging and testing environments before release'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________ eliminates the need for manual release approvals entirely'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________ primarily focuses on automating the merge and test process rather than the release process'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________  typically comes immediately after Continuous Integration in a DevOps pipeline'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________ is a stage that emphasizes ensuring code is ready for deployment at any time, even if deployment itself is not automatic'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
   ],
 } as QuizDataObject;
