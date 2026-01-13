@@ -1083,8 +1083,6 @@ yourapp-0.0.1-SNAPSHOT.jar.original`],
     {
       question: [
         [QuizMarkdownType.TEXT, 'The "entry point" of a Spring Boot application is _____'],
-        [QuizMarkdownType.INLINE_CODE, 'spring-boot-dependencies'],
-        [QuizMarkdownType.TEXT, 'BOM to manage dependency versions?'],
       ],
       answers: [
         {

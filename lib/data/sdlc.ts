@@ -272,5 +272,29 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Jira, you must create work for a new project and select a work type that represents an abstract view of the software you are creating for your client. The most appropriate type to choose is ____'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Epic']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Story']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Subtask']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Task']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Jira, you have a project named GEOPS and must create work for a new feature. What is the appropriate course of action?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Click "+Create." In the Project dropdown, select "GEOPS." In the "Work type" dropdown, select "task."']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Click "+Create." In the "Work type" dropdown, select "task." Reference the GEOPS project ID in the form.']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Click "+Create." In the Project dropdown, select "GEOPS." In the "Work type" dropdown, select "story."']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Click "+Create." In the "Work type" dropdown, select "story." Reference the GEOPS project ID in the form.']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
