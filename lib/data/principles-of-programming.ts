@@ -3820,5 +3820,45 @@ class OrderService {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A class imports a module'],
+        [QuizMarkdownType.INLINE_CODE, 'Cooler'],
+        [QuizMarkdownType.TEXT, 'via the statement'],
+        [QuizMarkdownType.INLINE_CODE, 'import com.cool.*;'],
+        [QuizMarkdownType.TEXT, 'where the wildcard character'],
+        [QuizMarkdownType.INLINE_CODE, '*'],
+        [QuizMarkdownType.TEXT, 'imports all members contained in that package. Assuming the class only needs'],
+        [QuizMarkdownType.INLINE_CODE, 'Cooler'],
+        [QuizMarkdownType.TEXT, ', the __________ would be violated in this case.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Interface Segregation Principle'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Single Responsibility Principle'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Dependency Inversion Principle'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Liskov Substitution Principle'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
