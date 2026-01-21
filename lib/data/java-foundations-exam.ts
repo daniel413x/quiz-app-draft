@@ -7233,6 +7233,43 @@ c = a + b;
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'How many string objects are created in the following code fragment?'],
+        [QuizMarkdownType.CODE, `String a, b, c;
+a = new String("hello");
+b = new String("hello");
+c = a + b;
+        `],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, '4'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, '3'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, '2'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, '1'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which of the following will give an error at compile time and run time?'],
       ],
       answers: [
