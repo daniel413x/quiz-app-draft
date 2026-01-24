@@ -11713,6 +11713,146 @@ for (int i = 0; i < 5; i++) {
       ],
       correctAnswer: '1',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which of the following is true about static classes in Java?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A static class cannot create objects in the heap memory',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A static class can create objects in the heap memory',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A static class can be mocked more easily than a non-static class',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A static class can be configured more easily than a non-static class',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'You have the following class:',
+        ],
+        [QuizMarkdownType.CODE, `@Service
+  public class UtilService { }`],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'UtilService',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'is passed in via dependency injection to classes',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'A',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'and',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'B',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          ':',
+        ],
+        [QuizMarkdownType.CODE, `@Service
+public class A {
+    public A(UtilService util) { ... }
+}
 
+@Service
+public class B {
+    public B(UtilService util) { ... }
+}`],
+        [
+          QuizMarkdownType.TEXT,
+          'The number of instances of',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'UtilService',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'created will be __ and will be in the _______ pattern',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1, singleton',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '2, prototype',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '0, static',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              '1, prototype',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
