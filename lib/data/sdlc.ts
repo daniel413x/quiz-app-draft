@@ -455,5 +455,108 @@ export default {
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer illustrates a valid example of JQL?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'project = "PAY" AND createdDate >= startOfMonth()']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'project EQ "PAY" AND createdDate GT startOfMonth()']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'project IS "PAY" AND createdDate IS startOfMonth()']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'project = "PAY" & createdDate >= startOfMonth()']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'You need to find issues assigned to you using JQL. Which query can you use?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'assignee = currentUser()']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'project = currentUser()']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'assignee = currentUser']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'project = currentUser']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        // these are in the same project (refer to project key DBE)
+        [QuizMarkdownType.TEXT, 'Taylor is working on subtask DBE-12: Validate fields. Kim is working on task DBE-3: Finalize API contract. is it likely Taylor can create a link stating DBE-12 is blocked by DBE-3?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Taylor can create a link stating DBE-12 is blocked by DBE-3']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Kim can create a link stating DBE-3 is blocked by DBE-12']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Taylor can create a link stating DBE-12 is caused by DBE-3']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Kim can create a link stating DBE-3 is caused by DBE-12']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Jira, a ____ can be used to express how two issues are related semantically, not hierarchically.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Link']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Task']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Project']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Subtask']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a Jira project, ISS-40 is an Epic, ISS-41 is a Story, and ISS-42 is a Bug. Which of the following actions can be performed?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Creating a link stating that ISS-41 duplicates ISS-42']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Creating a link stating that ISS-42 duplicates ISS-41']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Assigning ISS-42 to the Epic ISS-40']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Moving ISS-41 out of ISS-40 so that ISS-42 can be linked to it']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is TRUE about sprints in Jira?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A sprint can contain issues from more than one project']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A sprint belongs directly to a project']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Every project has its own sprints']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Moving an issue to a sprint changes its project']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is FALSE about sprints in Jira?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Moving an issue to a sprint changes its project']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A sprint can contain issues from more than one project']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'An issue can be in only one sprint at a time']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'An issue must match the board’s filter to appear in a sprint']] },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In Jira, every ______ has its own backlog'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Project']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Board']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Epic']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Story']] },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;
