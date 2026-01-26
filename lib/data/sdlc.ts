@@ -482,7 +482,7 @@ export default {
     {
       question: [
         // these are in the same project (refer to project key DBE)
-        [QuizMarkdownType.TEXT, 'Taylor is working on subtask DBE-12: Validate fields. Kim is working on task DBE-3: Finalize API contract. is it likely Taylor can create a link stating DBE-12 is blocked by DBE-3?'],
+        [QuizMarkdownType.TEXT, 'Taylor is working on subtask DBE-12: Validate fields. Kim is working on task DBE-3: Finalize API contract. If the fields Taylor is working on for DBE-12 depends on the finalized API contract, which answer is a logical course of action the team can take?'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Taylor can create a link stating DBE-12 is blocked by DBE-3']] },
@@ -502,19 +502,6 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Task']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Project']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Subtask']] },
-      ],
-      correctAnswer: '0',
-    },
-
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'In a Jira project, ISS-40 is an Epic, ISS-41 is a Story, and ISS-42 is a Bug. Which of the following actions can be performed?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Creating a link stating that ISS-41 duplicates ISS-42']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Creating a link stating that ISS-42 duplicates ISS-41']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Assigning ISS-42 to the Epic ISS-40']] },
-        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Moving ISS-41 out of ISS-40 so that ISS-42 can be linked to it']] },
       ],
       correctAnswer: '0',
     },
