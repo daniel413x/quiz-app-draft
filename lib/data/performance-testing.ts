@@ -1623,34 +1623,6 @@ Hold Target Rate Time (min): 60`],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In which JMeter element is Groovy code written exclusively?'],
-      ],
-      answers: [
-        {
-          id: '0',
-          order: 0,
-          answer: [[QuizMarkdownType.TEXT, 'JSR223 Sampler']],
-        },
-        {
-          id: '1',
-          order: 1,
-          answer: [[QuizMarkdownType.TEXT, 'User Defined Variables']],
-        },
-        {
-          id: '2',
-          order: 2,
-          answer: [[QuizMarkdownType.TEXT, 'If Controller']],
-        },
-        {
-          id: '3',
-          order: 3,
-          answer: [[QuizMarkdownType.TEXT, 'All of the above']],
-        },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'Evaluate: in the JMeter config element User Defined Variables, it is possible to define a value using JMeter\'s native functions, Groovy or Java code.'],
       ],
       answers: [
