@@ -766,5 +766,93 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A backend web application has the URIs'],
+        [QuizMarkdownType.INLINE_CODE, '/api/v1/products'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, '/api/v1/orders'],
+        [QuizMarkdownType.TEXT, '. In the next sprint, the development team will make changes to the API behind the products endpoint and will not make changes to the API behind the orders endpoint. What set of URIs should be made available?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/products'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v1/orders'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/products'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/orders'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/api/v1/products'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/orders'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '/api/v1/products'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v1/orders'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A backend web application has the URIs'],
+        [QuizMarkdownType.INLINE_CODE, '/api/v1/products'],
+        [QuizMarkdownType.TEXT, 'and'],
+        [QuizMarkdownType.INLINE_CODE, '/api/v1/orders'],
+        [QuizMarkdownType.TEXT, '. In the next sprint, the development team will make changes to database schema that is used by both the API behind the products endpoint and the API behind the orders endpoint. The changes include new required fields that must be validated in the application business logic. What course of action should the team make if the proposed changes are made?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Update the API handlers and make available the URIs'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/products'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/orders'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'If the schema changes relate to a product model in the database, update the products endpoint API handler and make available the URI'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/products'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'If the schema changes relate to an order model in the database, update the orders endpoint API handler and make available the URI'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v2/orders'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Leave the URIs as'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v1/products'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, '/api/v1/orders'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
