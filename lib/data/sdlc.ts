@@ -545,5 +545,38 @@ export default {
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________ primarily focuses on automating the merge and test process rather than the release process'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '__________  typically comes immediately after Continuous Integration in a DevOps pipeline'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which practice focuses on automatically building and testing code after each commit?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
