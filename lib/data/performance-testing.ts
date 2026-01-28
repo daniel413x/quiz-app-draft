@@ -2092,5 +2092,65 @@ Constant Delay Offset (in milliseconds): 21000`]],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'TPS stands for ______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Transactions per second']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Threads per second']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Throughput per second']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Tasks per second']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In JMeter .jtl output, you read a P95 latency of 800 ms. Which statement is correct?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '95 out of 100 users get responses in ≤ 800 ms']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '95 out of 100 users get responses in ≥ 800 ms']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '5 out of 100 users get responses in ≤ 800 ms']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '5 out of 100 users get responses in ≥ 800 ms']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In JMeter .jtl output, you read a P90 latency of 600 ms. Which statement is correct?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, '90 out of 100 users get responses in ≤ 600 ms']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, '90 out of 100 users get responses in ≥ 600 ms']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, '10 out of 100 users get responses in ≤ 600 ms']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, '10 out of 100 users get responses in ≥ 600 ms']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The _____ metric can be described as the "worst-case user experience"'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'P99']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'P95']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'P50']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'P90']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The _____ metric can be described as the "median user experience"'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'P99']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'P95']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'P50']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'P90']] },
+      ],
+      correctAnswer: '2',
+    },
   ],
 } as QuizDataObject;
