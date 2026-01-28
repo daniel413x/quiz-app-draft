@@ -751,39 +751,6 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'A SaaS company’s CI/CD pipeline automatically deploys every passing build directly to production without human intervention. Which practice is being used?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
-      ],
-      correctAnswer: '2',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'An e-commerce platform uses Jenkins to run automated unit tests whenever a developer merges code into the main branch. No code is deployed yet. What phase of CI/CD does this represent?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
-      ],
-      correctAnswer: '0',
-    },
-    {
-      question: [
-        [QuizMarkdownType.TEXT, 'A financial services team runs automated end-to-end tests and performance checks on each build. Once approved by QA, the same artifact can be manually pushed to production at any time. What process is being used?'],
-      ],
-      answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
-        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
-      ],
-      correctAnswer: '1',
-    },
-    {
-      question: [
         [QuizMarkdownType.TEXT, 'A mobile app development team automatically pushes new code to production servers as soon as it passes all automated tests, without requiring any manual approval. Which DevOps practice is this?'],
       ],
       answers: [
@@ -903,6 +870,104 @@ export default {
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
       ],
       correctAnswer: '1',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer illustrates an instance of negative testing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A backend service must handle an integer input that is outside of allowed values'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The P95 latency must be less than or equal to 600 ms'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'The response time must be < 300 ms under normal load'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A backend service must process an order when it receives a request containing the necessary information'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT an instance of negative testing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A frontend application must render a document inline in the browser if a query parameter is present'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A full-stack solution must process an order only once if the user clicks "Submit" repeatedly'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A backend service must handle an integer input that is outside of allowed values'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A backend service must handle inputs that are not formatted according to the controller class\'s expectation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT an instance of positive testing?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A full-stack solution must process an order only once if the user clicks "Submit" repeatedly'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A frontend application must render a document inline in the browser if a query parameter is present'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A frontend application must render a document inline in the browser if a query parameter is present'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A backend service must process an order when it receives a request containing the necessary information'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
     },
   ],
 } as QuizDataObject;

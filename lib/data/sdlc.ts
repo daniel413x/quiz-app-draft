@@ -578,5 +578,38 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A SaaS company’s CI/CD pipeline automatically deploys every passing build directly to production without human intervention. Which practice is being used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '2',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'An e-commerce platform uses Jenkins to run automated unit tests whenever a developer merges code into the main branch. No code is deployed yet. What phase of CI/CD does this represent?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A financial services team runs automated end-to-end tests and performance checks on each build. Once approved by QA, the same artifact can be manually pushed to production at any time. What process is being used?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Continuous Integration']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Continuous Delivery']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Continuous Deployment']] },
+      ],
+      correctAnswer: '1',
+    },
   ],
 } as QuizDataObject;
