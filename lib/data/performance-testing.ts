@@ -2082,7 +2082,7 @@ Constant Delay Offset (in milliseconds): 21000`]],
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'In JMeter, the operative component of a distributed workload is a controller/node system that runs via ________.'],
+        [QuizMarkdownType.TEXT, 'In JMeter distributed testing, a main controller node uses agent nodes in a setup that runs on ________ to execute a distributed workload.'],
       ],
       answers: [
         { id: '0', answer: [[QuizMarkdownType.TEXT, 'Java RMI']] },
