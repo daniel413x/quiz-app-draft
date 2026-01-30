@@ -8298,6 +8298,20 @@ try {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Your project includes a line'],
+        [QuizMarkdownType.INLINE_CODE, '@Profile("dev")'],
+        [QuizMarkdownType.TEXT, '. Which answer can be assumed to be true?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Your project contains a file'], [QuizMarkdownType.INLINE_CODE, 'application-test.yml']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Your project contains a file'], [QuizMarkdownType.INLINE_CODE, 'profile-test.yml']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Your project contains a file'], [QuizMarkdownType.INLINE_CODE, 'test.yml']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Your project contains a file'], [QuizMarkdownType.INLINE_CODE, 'application-test-profile.yml']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which method in a Spring bean is typically called immediately after dependency injection but before the bean is ready for use?'],
       ],
       answers: [
