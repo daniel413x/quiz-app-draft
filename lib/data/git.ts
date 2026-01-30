@@ -171,7 +171,39 @@ git commit -m "add InventoryByCategory tests"`,
       question: [
         [
           QuizMarkdownType.TEXT,
-          'The URL to obtain an access token is derived from the _______.',
+          'In the event of a critical issue discovered in production, a development team\'s protocol is to create a hotfix branch in the production branch',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'main',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'and merge the hotfix branch directly to it. They also use a development branch',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'dev',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. If a hotfix branch',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'hotfix/security-vulnerability',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'is merged to',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'main',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          ', which answer must be true before development work can resume?',
         ],
       ],
       answers: [
@@ -180,7 +212,15 @@ git commit -m "add InventoryByCategory tests"`,
           answer: [
             [
               QuizMarkdownType.INLINE_CODE,
-              'Installation ID',
+              'main',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dev',
             ],
           ],
         },
@@ -189,7 +229,15 @@ git commit -m "add InventoryByCategory tests"`,
           answer: [
             [
               QuizMarkdownType.INLINE_CODE,
-              'App ID',
+              'dev',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'main',
             ],
           ],
         },
@@ -198,7 +246,15 @@ git commit -m "add InventoryByCategory tests"`,
           answer: [
             [
               QuizMarkdownType.INLINE_CODE,
-              'JWT',
+              'hotfix/security-vulnerability',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dev',
             ],
           ],
         },
@@ -207,7 +263,150 @@ git commit -m "add InventoryByCategory tests"`,
           answer: [
             [
               QuizMarkdownType.INLINE_CODE,
-              'PEM file',
+              'dev',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'hotfix/security-vulnerability',
+            ],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'In the development branch',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'dev',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          ', there are the feature branches',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'feature/file-upload',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'and',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'feature/filtered-search',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '. If',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'feature/file-upload',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'is merged to',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'dev',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          'before',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'feature/filtered-search',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          ', which answer must be true before work can resume on',
+        ],
+        [
+          QuizMarkdownType.INLINE_CODE,
+          'feature/filtered-search',
+        ],
+        [
+          QuizMarkdownType.TEXT,
+          '?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dev',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'feature/filtered-search',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'dev',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'feature/file-upload',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'feature/file-upload',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'feature/filtered-search',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'feature/filtered-search',
+            ],
+            [
+              QuizMarkdownType.TEXT,
+              'will have to be merged into',
+            ],
+            [
+              QuizMarkdownType.INLINE_CODE,
+              'feature/file-upload',
             ],
           ],
         },
