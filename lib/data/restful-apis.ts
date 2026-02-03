@@ -854,5 +854,19 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In a certain business sector, a new set of regulations require records to be retained for a period of time during which they must not be physically deleted. To simulate deletion functionality so that "deleted" objects are excluded from search queries, the development team for a company defines a path in the API that modifies objects\''],
+        [QuizMarkdownType.INLINE_CODE, 'logicalDelete'],
+        [QuizMarkdownType.TEXT, 'field. Which verb should define this path?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'PATCH']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'PUT']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'POST']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'DELETE']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
