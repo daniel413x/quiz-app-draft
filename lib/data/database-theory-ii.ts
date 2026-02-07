@@ -1120,6 +1120,106 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Database sharding increases _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Write scalability']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Read availability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Write performance']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Read performance']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a characteristic of database sharding?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Increased read performance']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increased write scalability']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Horizontal scaling']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Fault isolation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a characteristic of database replication?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Increased write scalability']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increased read performance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Horizontal scaling']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Fault isolation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a characteristic of database replication?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Increased write scalability']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Increased read performance']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Horizontal scaling']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Fault isolation']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In databasd sharding, each shard has unique data.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In databasd sharding, each shard has identical data.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In database replication, each replica has the same data.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In database replication, each replica does not have the same data.'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'True']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'False']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer correctly diagrams the flow of a database query involving sharding?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Query → Shard Router → Correct Shard → Index → Row']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Query → Shard Router → Correct Shard → Row → Index']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Query → Index → Shard Router → Correct Shard → Row']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Query → Shard Router → Index → Correct Shard → Row']] },
+      ],
+      correctAnswer: '0',
+    },
 
   ],
 } as QuizDataObject;
