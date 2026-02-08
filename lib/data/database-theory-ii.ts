@@ -896,9 +896,10 @@ export default {
         [QuizMarkdownType.TEXT, 'You observe uneven load across shards due to skewed values. What is the best mitigation?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Choose a higher-cardinality shard key that distributes writes more evenly']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Choose a higher-cardinality shard key']] },
+        // { id: '0', answer: [[QuizMarkdownType.TEXT, 'Choose a higher-cardinality shard key that distributes writes more evenly']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Disable caching so traffic hits all shards equally']] },
-        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Increase connection pools on the busiest shard only']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Increase connection pools on the busy shards']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Turn off replication to reduce hot spots']] },
       ],
       correctAnswer: '0',
@@ -1089,7 +1090,7 @@ export default {
         [QuizMarkdownType.TEXT, 'You need multi-writer capability across regions with minimal conflicts. Which approach reduces write conflicts most?'],
       ],
       answers: [
-        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Single-writer per partition (leader–follower) with well-defined partitioning']] },
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Single-writer per partition']] },
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Last-write-wins across all regions for every key']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Randomly assign leaders per request']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Disable replication to avoid conflicts']] },
@@ -1217,6 +1218,60 @@ export default {
         { id: '1', answer: [[QuizMarkdownType.TEXT, 'Query → Shard Router → Correct Shard → Row → Index']] },
         { id: '2', answer: [[QuizMarkdownType.TEXT, 'Query → Index → Shard Router → Correct Shard → Row']] },
         { id: '3', answer: [[QuizMarkdownType.TEXT, 'Query → Shard Router → Index → Correct Shard → Row']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer correctly describes high selectivity?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Very few rows match']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Many rows match']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'At least one row matches']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Zero rows match']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer correctly describes low selectivity?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Very few rows match']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Many rows match']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'At least one row matches']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Zero rows match']] },
+      ],
+      correctAnswer: '1',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Indexes are more effective when _______'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Selectivity is high']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Selectivity is low']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'The database is sharded']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'The database is not sharded']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which line of SQL code is most likely have high selectivity?'],
+      ],
+      answers: [
+        {
+          id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE email = \'erin@google.com\'']]
+        },
+        {
+          id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE country = \'US\'']]
+        },
+        {
+          id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE is_active = true']]
+        },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE status = \'COMPLIANT\'']] },
       ],
       correctAnswer: '0',
     },
