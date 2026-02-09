@@ -8502,5 +8502,25 @@ try {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your project includes javadoc documentation generation. Which type of comment will be included in generated documentation?'],
+      ],
+      answers: [
+        {
+          id: '0', answer: [[QuizMarkdownType.CODE, `/**
+  * Comment
+  */`]]
+        },
+        {
+          id: '1', answer: [[QuizMarkdownType.CODE, `/*
+  Comment
+*/`]]
+        },
+        { id: '2', answer: [[QuizMarkdownType.CODE, `// Comment`]] },
+        { id: '3', answer: [[QuizMarkdownType.CODE, `var a = 'a'; // Comment`]] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
