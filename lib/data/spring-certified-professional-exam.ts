@@ -8522,5 +8522,19 @@ try {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which'],
+        [QuizMarkdownType.INLINE_CODE, 'mvn'],
+        [QuizMarkdownType.TEXT, 'command will NOT encounter compile-time errors (if present) when executed in a Spring Boot project?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'mvn validate']] },
+        { id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'mvn compile']] },
+        { id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'mvn install']] },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'mvn verify']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
