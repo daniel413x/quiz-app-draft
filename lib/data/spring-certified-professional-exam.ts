@@ -8508,17 +8508,19 @@ try {
       ],
       answers: [
         {
-          id: '0', answer: [[QuizMarkdownType.CODE, `/**
+          id: '0',
+          answer: [[QuizMarkdownType.CODE, `/**
   * Comment
-  */`]]
+  */`]],
         },
         {
-          id: '1', answer: [[QuizMarkdownType.CODE, `/*
+          id: '1',
+          answer: [[QuizMarkdownType.CODE, `/*
   Comment
-*/`]]
+*/`]],
         },
-        { id: '2', answer: [[QuizMarkdownType.CODE, `// Comment`]] },
-        { id: '3', answer: [[QuizMarkdownType.CODE, `var a = 'a'; // Comment`]] },
+        { id: '2', answer: [[QuizMarkdownType.CODE, '// Comment']] },
+        { id: '3', answer: [[QuizMarkdownType.CODE, 'var a = \'a\'; // Comment']] },
       ],
       correctAnswer: '0',
     },

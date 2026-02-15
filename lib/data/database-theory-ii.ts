@@ -1263,13 +1263,13 @@ export default {
       ],
       answers: [
         {
-          id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE email = \'erin@google.com\'']]
+          id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE email = \'erin@google.com\'']],
         },
         {
-          id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE country = \'US\'']]
+          id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE country = \'US\'']],
         },
         {
-          id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE is_active = true']]
+          id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE is_active = true']],
         },
         { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'WHERE status = \'COMPLIANT\'']] },
       ],
