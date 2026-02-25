@@ -1259,6 +1259,18 @@ export default {
     },
     {
       question: [
+        [QuizMarkdownType.TEXT, 'Which answer is an untrue statement?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'A sharded collection can have multiple shard keys']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'A sharded collection can have multiple indexes']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'A sharded collection requires a shard key']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'A sharded collection must have a minimum of two indexes']] },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
         [QuizMarkdownType.TEXT, 'Which line of SQL code is most likely have high selectivity?'],
       ],
       answers: [
@@ -1276,5 +1288,23 @@ export default {
       correctAnswer: '0',
     },
 
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which field would have the LEAST cardinality as a shard key for a sharded database collection?'],
+      ],
+      answers: [
+        {
+          id: '0', answer: [[QuizMarkdownType.INLINE_CODE, 'mileage']],
+        },
+        {
+          id: '1', answer: [[QuizMarkdownType.INLINE_CODE, 'year']],
+        },
+        {
+          id: '2', answer: [[QuizMarkdownType.INLINE_CODE, 'user_id']],
+        },
+        { id: '3', answer: [[QuizMarkdownType.INLINE_CODE, 'email']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
