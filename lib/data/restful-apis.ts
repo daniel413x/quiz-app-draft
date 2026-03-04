@@ -868,5 +868,19 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A backend API offers users the option of bulk updating a certain resource. If that resource is identified in a path'],
+        [QuizMarkdownType.INLINE_CODE, 'records'],
+        [QuizMarkdownType.TEXT, 'which approach should define this path?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'PUT /api/records with a request body of update objects']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'POST /api/records with a request body of update objects']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'PUT /api/records/{...} where {...} is a series of ID\'s']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'POST /api/records/{...} where {...} is a series of ID\'s']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
