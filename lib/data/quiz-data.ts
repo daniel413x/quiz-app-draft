@@ -64,6 +64,7 @@ import awsCloudPractitionerIi from './aws-cloud-practitioner-ii';
 import awsSolutionsArchitect from './aws-solutions-architect';
 import qa from './qa';
 import tcpIp from './tcp-ip';
+import mongodb from './mongodb';
 
 type QuizData = {
   [key: string]: QuizDataObject;
@@ -141,6 +142,7 @@ const quizData: QuizData = {
   'spring-certified-professional-exam': springCertifiedProfessionalExam,
   special,
   sql,
+  mongodb,
   test: {
     name: 'test',
     slug: 'test',
@@ -302,6 +304,7 @@ const categories = [
     quizzes: [
       quizData['database-theory-ii'],
       quizData.sql,
+      quizData.mongodb,
     ],
   },
   {
