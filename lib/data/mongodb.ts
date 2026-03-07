@@ -201,5 +201,133 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which MongoDB method is used to update multiple documents that match a filter?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'updateMany()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'updateAll()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'modifyMany()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'replaceMany()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What MongoDB feature distributes data across multiple machines to support horizontal scaling?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sharding'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Replication'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Partitioning'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Mirroring'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which MongoDB command is used to delete multiple documents that match a filter?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'deleteMany()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'removeMany()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'dropMany()'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'eraseMany()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which MongoDB aggregation pipeline stage is used to filter documents based on specified criteria?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '$match'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '$filter'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '$where'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, '$search'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
