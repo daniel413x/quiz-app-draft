@@ -329,5 +329,37 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which object is instrumental in implementing cursor batching in a MongoDB query?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'batchSize()'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'limit()'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Sorts.ascending("_id")'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.INLINE_CODE, 'Filters'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
