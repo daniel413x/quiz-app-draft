@@ -425,6 +425,56 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Your schema has the following indexes. Which answer is true?'],
+        [QuizMarkdownType.TEXT, `{ blueField: 1 }
+{ redField: 1 }
+{ purpleField: 1 }`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A write operation on'],
+            [QuizMarkdownType.INLINE_CODE, 'blueField'],
+            [QuizMarkdownType.TEXT, 'will update all indexes of'],
+            [QuizMarkdownType.INLINE_CODE, 'blueField'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A write operation on'],
+            [QuizMarkdownType.INLINE_CODE, 'redField'],
+            [QuizMarkdownType.TEXT, 'will update the indexes of'],
+            [QuizMarkdownType.INLINE_CODE, 'redField'],
+            [QuizMarkdownType.TEXT, ', '],
+            [QuizMarkdownType.INLINE_CODE, 'blueField'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'purpleField'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A write operation on'],
+            [QuizMarkdownType.INLINE_CODE, 'blueField'],
+            [QuizMarkdownType.TEXT, 'will update the indexes of'],
+            [QuizMarkdownType.INLINE_CODE, 'redField'],
+            [QuizMarkdownType.TEXT, 'and'],
+            [QuizMarkdownType.INLINE_CODE, 'purpleField'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'A write operation will not require updating any indexes'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
     // db["a-collection"].find({...}).explain("executionStats")
     // you want to see IXSCAN not COLLSCAN
   ],
