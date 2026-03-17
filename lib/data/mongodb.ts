@@ -475,7 +475,106 @@ export default {
       ],
       correctAnswer: '0',
     },
-    // db["a-collection"].find({...}).explain("executionStats")
-    // you want to see IXSCAN not COLLSCAN
+    {
+      question: [
+        [QuizMarkdownType.TEXT, '_______ is the component responsible for routing shards amongst the cluster.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'mongos'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'mongod replica set'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'mongod'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'mongosh'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.INLINE_CODE, 'shardCollection'],
+        [QuizMarkdownType.TEXT, 'must proceed'],
+        [QuizMarkdownType.INLINE_CODE, 'createIndex'],
+        [QuizMarkdownType.TEXT, 'to implement sharding.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'When executing'],
+        [QuizMarkdownType.INLINE_CODE, 'shardCollection'],
+        [QuizMarkdownType.TEXT, ', the command will verify that a compatible index exists.'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'A shard key must exist for the following command to succeed.'],
+        [QuizMarkdownType.CODE, `db.myCollection.createIndex(
+  { orangeField: 1, _id: "hashed" },
+  { name: "orangeField_1__id_hashed" }
+)`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'False'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'True'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
