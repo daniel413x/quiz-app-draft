@@ -662,5 +662,37 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which MongoDB feature provides atomicity across multiple documents?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Transactions'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Indexes'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Sharding'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Aggregation'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
