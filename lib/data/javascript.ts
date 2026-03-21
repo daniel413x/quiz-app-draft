@@ -10829,5 +10829,107 @@ onmessage = function(event) {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the output of the following code be?'],
+        [QuizMarkdownType.CODE, `try {
+  console.log("1");
+  console.log("2");
+  throw new Error("3");
+  console.log("4");
+} catch (e) {
+  console.log("5");
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+5`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+3
+5`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+3
+4
+5`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, '4'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'What will the output of the following code be?'],
+        [QuizMarkdownType.CODE, `try {
+  console.log("1");
+  console.log("2");
+  throw new Error("3");
+  console.log("4");
+} catch (e) {
+  throw new Error("5");
+  console.log("6");
+}`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+4`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+3
+5
+6`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+3`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `1
+2
+3
+5
+6`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
