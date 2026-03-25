@@ -758,5 +758,72 @@ export default {
       ],
       correctAnswer: '0',
     },
+
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which condition causes a MongoDB transaction to become a distributed transaction?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Ops across multiple shards'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiple ops on unsharded collections'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'DDL operations'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Any operation falling under'],
+            [QuizMarkdownType.INLINE_CODE, 'startTransaction()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which condition causes a MongoDB transaction to become a distributed transaction?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Updates broadcast to multiple shards'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Multiple ops on unsharded collections'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'DDL operations'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Any operation falling under'],
+            [QuizMarkdownType.INLINE_CODE, 'startTransaction()'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
