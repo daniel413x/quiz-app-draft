@@ -825,5 +825,37 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which statement is MOST accurate?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shards store chunks'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Collections store chunks'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Chunks store shards'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Collections are shards'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
