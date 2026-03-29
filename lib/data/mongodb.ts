@@ -908,5 +908,46 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'In an update operation, a record must be routed to an appropriate chunk. If a shardKey'],
+        [QuizMarkdownType.INLINE_CODE, 'shardKey'],
+        [QuizMarkdownType.TEXT, 'can be defined as'],
+        [QuizMarkdownType.INLINE_CODE, '{\'meta.orangeField\': \'s\', _id: Long(\'-676946465243817389\')}'],
+        [QuizMarkdownType.TEXT, ', which answer represents a viable set of filters for finding an appropriate chunk?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `min: { $lte: shardKey },
+max: { $gt: shardKey }`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `min: { $lt: shardKey },
+max: { $gt: shardKey }`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `min: { $lt: shardKey },
+max: { $gte: shardKey }`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `min: { $lte: shardKey },
+max: { $gte: shardKey }`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
+
   ],
 } as QuizDataObject;
