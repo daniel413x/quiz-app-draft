@@ -857,5 +857,56 @@ export default {
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'The following object is a ______'],
+        [QuizMarkdownType.CODE, `{
+  _id: ObjectId('69c5e0c2eb017217d5f0a637'),
+  uuid: UUID('28439244-edec-410e-b3ab-07e5dd7100ab'),
+  min: { 'metadata.geography': MinKey(), _id: MinKey() },
+  max: { 'metadata.geography': 'e', _id: Long('-3757056892001451372') },
+  shard: 'shard3',
+  lastmod: Timestamp({ t: 2, i: 0 }),
+  onCurrentShardSince: Timestamp({ t: 1774575815, i: 2659 }),
+  history: [
+    {
+      validAfter: Timestamp({ t: 1774575815, i: 2659 }),
+      shard: 'shard3'
+    },
+    {
+      validAfter: Timestamp({ t: 1774575810, i: 17068 }),
+      shard: 'shard5'
+    }
+  ]
+},`],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Chunk'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Shard'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Index'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'Transaction'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
