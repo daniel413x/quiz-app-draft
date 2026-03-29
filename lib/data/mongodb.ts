@@ -948,6 +948,37 @@ max: { $gte: shardKey }`],
       ],
       correctAnswer: '0',
     },
-
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer correctly expresses the comparison requirements for finding a chunk that can be used to determine a shard to which to write?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.TEXT, 'min <= shardKey < max'],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.TEXT, 'max <= shardKey < min'],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.TEXT, 'min < shardKey < max'],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.TEXT, 'min <= shardKey <= max'],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
