@@ -922,35 +922,39 @@ export default {
     },
     {
       question: [
-        [QuizMarkdownType.TEXT, 'If the ASCII value of the letter'],
-        [QuizMarkdownType.INLINE_CODE, 'C'],
-        [QuizMarkdownType.TEXT, 'is 67, what will be the ASCII value of the letter'],
-        [QuizMarkdownType.INLINE_CODE, 'X'],
+        [QuizMarkdownType.TEXT, 'If the ASCII value of a particular alphabet is known, then the ASCII value of another alphabet can be estimated. For example, the ASCII value of'],
+        [QuizMarkdownType.INLINE_CODE, 'a'],
+        [QuizMarkdownType.TEXT, 'is 97, then the ASCII value of'],
+        [QuizMarkdownType.INLINE_CODE, 'z'],
+        [QuizMarkdownType.TEXT, 'will be'],
+        [QuizMarkdownType.INLINE_CODE, '97 + 25 = 122'],
+        [QuizMarkdownType.TEXT, '. What will be the ASCII value of'],
+        [QuizMarkdownType.INLINE_CODE, 'x'],
         [QuizMarkdownType.TEXT, '?'],
       ],
       answers: [
         {
           id: '0',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '88'],
+            [QuizMarkdownType.INLINE_CODE, '97 + 23 = 120'],
           ],
         },
         {
           id: '1',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '90'],
+            [QuizMarkdownType.INLINE_CODE, '97 + 24 = 121'],
           ],
         },
         {
           id: '2',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '85'],
+            [QuizMarkdownType.INLINE_CODE, '97 + 22 = 119'],
           ],
         },
         {
           id: '3',
           answer: [
-            [QuizMarkdownType.INLINE_CODE, '80'],
+            [QuizMarkdownType.INLINE_CODE, '97 + 26 = 123'],
           ],
         },
       ],
