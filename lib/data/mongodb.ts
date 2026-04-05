@@ -980,5 +980,44 @@ max: { $gte: shardKey }`],
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which series of commands successfully lists the indexes in a certain collection?'],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [QuizMarkdownType.CODE, `db.getSiblingDB("thedb")
+  .getCollection("thecollection")
+  .getIndexes()`],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [QuizMarkdownType.CODE, `db["thedb"]
+  .getCollection("thecollection")
+  .getIndexes()`],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [QuizMarkdownType.CODE, `db.getSiblingDB("thedb")["thecollection"]
+  .getIndexes()`],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [QuizMarkdownType.CODE, `const coll = db.getSiblingDB("config").collections.findOne({
+  _id: DB_NAME + ".thecollection"
+});`],
+          ],
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
