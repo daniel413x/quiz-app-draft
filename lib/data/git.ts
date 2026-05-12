@@ -413,5 +413,53 @@ git commit -m "add InventoryByCategory tests"`,
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [
+          QuizMarkdownType.TEXT,
+          'Which answer is NOT true of actions and workflows in GitHub Actions?',
+        ],
+      ],
+      answers: [
+        {
+          id: '0',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A workflow can be called in a step',
+            ],
+          ],
+        },
+        {
+          id: '1',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A workflow must be called at the job level',
+            ],
+          ],
+        },
+        {
+          id: '2',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A workflow can call actions',
+            ],
+          ],
+        },
+        {
+          id: '3',
+          answer: [
+            [
+              QuizMarkdownType.TEXT,
+              'A workflow can call other workflows',
+            ],
+          ],
+          order: 0,
+        },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
