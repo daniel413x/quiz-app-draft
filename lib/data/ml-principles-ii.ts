@@ -3371,5 +3371,17 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
       ],
       correctAnswer: '0',
     },
+    {
+      question: [
+        [QuizMarkdownType.TEXT, 'Which answer is NOT a major limitation of generative AI?'],
+      ],
+      answers: [
+        { id: '0', answer: [[QuizMarkdownType.TEXT, 'Inability to interpret complex text']] },
+        { id: '1', answer: [[QuizMarkdownType.TEXT, 'Lack of contextual understanding']] },
+        { id: '2', answer: [[QuizMarkdownType.TEXT, 'Inability to adapt to unforeseen situations']] },
+        { id: '3', answer: [[QuizMarkdownType.TEXT, 'Limited creativity and intuition']] },
+      ],
+      correctAnswer: '0',
+    },
   ],
 } as QuizDataObject;
